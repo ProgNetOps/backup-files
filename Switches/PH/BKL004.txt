@@ -1,0 +1,292 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:25.17 ? ? /home/mobaxterm ? telnet 10.248.249.184
+Connected to 10.248.249.184.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-BKL-004>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-BKL-004]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       ACCESS BANK ABAKALIKI
+Eth0/0/2                      up      up       DICNET/ESBS ABAKALIKI
+Eth0/0/3                      up      up       VDT ABAKALIKI
+Eth0/0/4                      up      up       UNION BANK-abakaliki
+Eth0/0/5                      up      up       ARROFAST ABAKALIKI 100MB INTERNET
+Eth0/0/6                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/6 Interface
+Eth0/0/7                      down    down     IBAAS NIGERIA COMPANY
+Eth0/0/8                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/8 Interface
+Eth0/0/9                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/9 Interface
+Eth0/0/10                     up      up       HUAWEI, Quidway Series, Ethernet0
+                                               /0/10 Interface
+Eth0/0/11                     up      up       GLOSHOP ABAKALIKI
+Eth0/0/12                     up      up       GLOBUS BANK-ABAKALIKI-BKL0006-G1|
+                                               4MBS
+Eth0/0/13                     up      up       HUAWEI, Quidway Series, Ethernet0
+                                               /0/13 Interface
+Eth0/0/14                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/14 Interface
+Eth0/0/15                     up      up       HUAWEI, Quidway Series, Ethernet0
+                                               /0/15 Interface
+Eth0/0/16                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/16 Interface
+Eth0/0/17                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/17 Interface
+Eth0/0/18                     up      up       HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     up      up       TPGS-EBONYI-TEU041-GE4@BKL006
+Eth0/0/20                     up      up       HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/24 Interface
+GE0/0/1                       down    down     HUAWEI, Quidway Series, GigabitEt
+                                               hernet0/0/1 Interface
+GE0/0/2                       up      up       UPLINK TO DCN IP/MPLS GE1/0/4
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+[BS-BKL-004]     dis cur
+#
+!Software Version V100R006C03
+ sysname BS-BKL-004
+#
+ vlan batch 803 1194 1419 1487 1493 to 1496 1498 1500 to 1501 1503 1554 1560
+ vlan batch 1565 to 1566 1591 1640 1733 2059 2792 2912 3126 3141 3319
+ vlan batch 3515 3602 3918
+#
+ lldp enable
+#
+ undo http server enable
+#
+vlan 803
+ description FOR MGT
+vlan 1194
+ description TPGS-EBONYI
+vlan 1419
+ description IBASS-NIG-COMP
+vlan 1487
+ description NEW CERAGON MGMT
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1494
+ description NERA MGMT
+vlan 1495
+ description NERA-MGT-2
+vlan 1496
+ description Ceragon-mgt-vlan
+vlan 1498
+ description BS-CERAGON-1-MGT
+vlan 1500
+ description radio-mgmt
+vlan 1501
+ description BS-MGT
+vlan 1503
+ description GLO1-NERA-MGT
+vlan 1554
+ description ARROFAST ABAKALIKI
+vlan 1560
+ description SETRACO-AMASIRI
+vlan 1565
+ description INTERRA-NETWORK-ABAKALIKI
+vlan 1566
+ description VDT ABAKALIKI
+vlan 1591
+ description UNION BANK-ABAKALIKI
+vlan 1640
+ description ACCESS BANK-ABAKALIKI
+vlan 1733
+ description DISCNET-ESBS-ABAKALIKI
+vlan 2059
+ description TPGS-EBONYI
+vlan 2792
+ description GLOBUS BANK ABAKALIKI
+vlan 2912
+ description SWIFTTALK_ABAKALIKI
+vlan 3126
+ description DIAMND -VPLS
+vlan 3141
+ description EBONYI-STATE-GOVT
+vlan 3319
+ description ZINOX FEERAL UNIV NDUFU-ALIKE-IKWO
+vlan 3515
+ description NNPC RETAIL-STATION-ABAKALIKI
+vlan 3602
+ description EVANGEL UNIVERSITY
+vlan 3918
+ description GLOWORLD ABAKALIKI
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %$%$I6.ASV)hJET,p"Dn.YM%3aXO%$%$
+ local-user admin service-type http
+ local-user bsnoc password cipher %$%$O~WdVNl3IK/GC;+':{fVXlcZ%$%$
+ local-user bsnoc privilege level 3
+ local-user fabian password cipher %$%$U^m@7e\XB%B(Vd+ID;.AXD;2%$%$
+ local-user fabian privilege level 3
+ local-user huawei password cipher %$%$sUh/D{L%<-`R-2KNmx#0Z:1(%$%$
+ local-user huawei privilege level 3
+ local-user huawei service-type telnet terminal ssh ftp
+#
+interface Vlanif1
+#
+interface Vlanif1501
+ ip address 10.248.249.184 255.255.255.0
+#
+interface Ethernet0/0/1
+ description ACCESS BANK ABAKALIKI
+ port link-type access
+ port default vlan 1640
+#
+interface Ethernet0/0/2
+ description DICNET/ESBS ABAKALIKI
+ port link-type access
+ port default vlan 1733
+#
+interface Ethernet0/0/3
+ description VDT ABAKALIKI
+ port link-type access
+ port default vlan 1566
+#
+interface Ethernet0/0/4
+ description UNION BANK-abakaliki
+ port link-type access
+ port default vlan 1591
+#
+interface Ethernet0/0/5
+ description ARROFAST ABAKALIKI 100MB INTERNET
+ port link-type access
+ port default vlan 1554
+#
+interface Ethernet0/0/6
+ port link-type access
+#
+interface Ethernet0/0/7
+ description IBAAS NIGERIA COMPANY
+ port link-type trunk
+ port trunk allow-pass vlan 1419 1497
+#
+interface Ethernet0/0/8
+ port link-type access
+#
+interface Ethernet0/0/9
+ port link-type trunk
+#
+interface Ethernet0/0/10
+ port link-type access
+#
+interface Ethernet0/0/11
+ description GLOSHOP ABAKALIKI
+ port link-type trunk
+ port trunk allow-pass vlan 3918
+#
+interface Ethernet0/0/12
+ description GLOBUS BANK-ABAKALIKI-BKL0006-G1|4MBS
+ port link-type trunk
+ port trunk allow-pass vlan 2792
+#
+interface Ethernet0/0/13
+ port link-type access
+#
+interface Ethernet0/0/14
+#
+interface Ethernet0/0/15
+#
+interface Ethernet0/0/16
+#
+interface Ethernet0/0/17
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+ description TPGS-EBONYI-TEU041-GE4@BKL006
+ port link-type trunk
+ port trunk allow-pass vlan 1194
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+ port link-type trunk
+#
+interface Ethernet0/0/24
+ shutdown
+#
+interface GigabitEthernet0/0/1
+ port link-type access
+ port media type fiber
+     undo negotiation auto
+ combo-port auto
+#
+interface GigabitEthernet0/0/2
+ description UPLINK TO DCN IP/MPLS GE1/0/4
+ port link-type trunk
+ port trunk allow-pass vlan 1194 1501 1566 1591 1640 1733 2059 2792 2912 3515
+ port trunk allow-pass vlan 3918
+ stp bpdu-filter enable
+ port media type fiber
+     undo negotiation auto
+ combo-port copper
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100000B6A
+ snmp-agent community read cipher %$%$t)cQ5w03#<1y6:NKtimAN7.%%$%$
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode password
+ set authentication password cipher %$%$R[_fJ,):;S,m(.P'^e4B,&zqK5"(S-}K`MOBg%8y3tiE8,#{%$%$
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[BS-BKL-004]

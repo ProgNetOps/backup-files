@@ -1,0 +1,373 @@
+#
+lldp enable
+#
+vlan 23
+ description test
+vlan 100
+ description ACCESS-TDM
+vlan 133
+ description NIBSS-APN
+vlan 150
+ description MGT
+vlan 155
+ description CGG-Internet
+vlan 160
+ description Q-Life-Family-Internet
+vlan 170
+ description CISCON-INTERNET-LAGOS
+vlan 179
+ description BS_53_LAN
+vlan 180
+ description test2
+vlan 184
+ description TECPOINT-GLOBAL-SOLUTIONS
+vlan 231
+ description FIRS-AWOLOWO-IKOYI
+vlan 252
+ description GTB
+vlan 510
+ description SARO
+vlan 513
+ description IHS-APN
+vlan 560
+ description ORANGE-ECOBANK
+vlan 595
+ description MOBIL-100M-INTERNET-SECONDARY
+vlan 602
+ description ECOBANK-SWITCH-MGT
+vlan 807
+ description MOTADATA-POC-SWITCH
+vlan 810
+ description GEREGU-LL
+vlan 813
+ description FORTE-OIL-INTERNET
+vlan 901
+ description ORANGE AT & T
+vlan 1034
+ description TPGS-KFC
+vlan 1093
+ description PILLAR-OIL-LAGOS
+vlan 1096
+ description LADOL-APAPA-INT
+vlan 1114
+ description FORTE-OIL-INTERNET
+vlan 1115
+ description GTBank VPLS
+vlan 1224
+ description SARO-INT
+vlan 1225
+ description ECOBANK-INTERNET
+vlan 1229
+ description Afrosunshine Global
+vlan 1239
+ description SARO-LAGOS-INTERNET
+vlan 1265
+ description BRICKTELL-TERRACESS-INT
+vlan 1320
+ description EMADEC_LAGOS
+vlan 1321
+ description passage
+vlan 1322
+ description DOLPHIN(ODEKU-BANANA)
+vlan 1405
+ description TPGS Saka Jojo2-5Mbps
+vlan 1411
+ description TPGS Ikoyi-4
+vlan 1421
+ description TPGS AKIN ADESOLA
+vlan 1423
+ description IO-TECH-004-LAG944
+vlan 1425
+ description Lafayette
+vlan 1428
+ description IO-TEC-V/I-LAGOS-INT
+vlan 1473
+ description IOTECH-LAGOS-2
+vlan 1489
+ description CERAGON-MGT
+vlan 1492
+ description NERA-MGT-3
+vlan 1493
+ description NERA_MGT
+vlan 1494
+ description BS-NNPC-NERA-MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1496
+ description MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1498
+ description GERAGON_MGT
+vlan 1501
+ description MGT_VLAN
+vlan 1503
+ description nera
+vlan 1504
+ description IOTECH-RADIO-MGT
+vlan 1637
+ description NEWS CENTRAL MEDIA
+vlan 1640
+ description ACCESS-BANK-MPLS
+vlan 1668
+ description ARDOVA MD
+vlan 1682
+ description Avante Fly
+vlan 1684
+ description ORANGE GE
+vlan 1685
+ description ORANGE-SIEMENS
+vlan 1717
+ description COOLLINK-IDEJO
+vlan 1785
+ description HYPERIA-KOFO
+vlan 1786
+ description HYPERIA-CRESTVIEW
+vlan 1874
+ description PAC_HOLDINGS
+vlan 1877
+ description SKY CAPITAL
+vlan 1906
+ description MOBIL-EKET-LINK
+vlan 1978
+ description TPGS Saka Jojo
+vlan 2015
+ description Satellite-l2vpn-Saka18
+vlan 2022
+ description NEW-CROSS-LEASE LINE
+vlan 2206
+ description MOBIL-HQ-TO-ABUJA
+vlan 2416
+ description NIIA-KOFO
+vlan 2422
+ description INDORAMA_PH_LL
+vlan 2749
+ description NIGERIA ARMY (DADP) BONNY CAMP
+vlan 2820
+ description IPEXPRESS AHMADU BELLO WAY INTERNET
+vlan 2826
+ description FILE_SOLUTION
+vlan 3034
+ description STERLING-VPLS
+vlan 3121
+ description NIBBS
+vlan 3406
+ description NNPC-ATLAS-COVE-TERMINAL
+vlan 3415
+ description NNPC-NETCO-PRI
+vlan 3419
+ description NNPC-NGC/REFINERY-LIASON-OFFICE-IDEJO
+vlan 3842
+ description ORANGE-VISA-IDOWU-TAYLOR
+vlan 3844
+ description ORANGE-ETRANSACT
+vlan 3848
+ description ORANGE-ZENITH-HQ-VISA
+vlan 3849
+ description ORANGE-MICROSOFT
+vlan 4005
+ description SENTIENT-INTERNET
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@@"}R")"{F,~h88$yAS="S|K%%@%@
+ local-user bsnoc privilege level 15
+ local-user moses password cipher %@%@&jTb::PeNLOfAJ3>:r(DT#\V%@%@
+ local-user moses privilege level 15
+
+#
+interface Vlanif1
+#
+interface Vlanif807
+ ip address 10.248.245.10 255.255.255.0
+#
+interface Vlanif810
+ ip address 10.7.4.200 255.255.255.0
+#
+interface Vlanif1501
+ ip address 10.248.249.86 255.255.255.0
+#
+interface Ethernet0/0/1
+ description BRICKTELL-TERRACESS-INT | 10M
+ port link-type access
+ port default vlan 1265
+#
+interface Ethernet0/0/2
+ description IO-TEC-V/I-LAGOS-INT
+ port link-type access
+ port default vlan 1428
+#
+interface Ethernet0/0/3
+ description IOTECH VI-1 INTERNET | VLAN 1428 | 130MB
+ port link-type access
+ port default vlan 1428
+#
+interface Ethernet0/0/4
+ description Avante Fly 5MB Internet
+ port link-type trunk
+ port trunk allow-pass vlan 1497 1682
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/5
+ description SARO HQ-LM-HUAWEI-RTN910
+ port link-type trunk
+ port trunk allow-pass vlan 510 1239
+#
+interface Ethernet0/0/6
+ description BS-CERAGON-MGT
+ port link-type access
+ port default vlan 1498
+#
+interface Ethernet0/0/7
+ description HYPERIA-KOFO-ABAYOMI(vlan 1785)
+ port link-type access
+ port default vlan 1785
+ jumboframe enable 4000
+#
+interface Ethernet0/0/8
+ description GEREGU POWER PLC TRUNK | LADOL-APAPA
+ port link-type trunk
+ port trunk allow-pass vlan 810 1096 1114 1489 1492
+#
+interface Ethernet0/0/9
+ description NIBBS RADIO
+ port link-type trunk
+ port trunk allow-pass vlan 1489 3121
+#
+interface Ethernet0/0/10
+ description TPGS Ikoyi-4-20M-INT
+ port link-type access
+ port default vlan 1411
+#
+interface Ethernet0/0/11
+ description TPGS AKIN ADESOLA 10MB INTERNET
+ port link-type access
+ port default vlan 1421
+#
+#
+interface Ethernet0/0/12
+ description faulty port
+ port link-type access
+ jumboframe enable 13296
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/13
+ description NNPC REFINERY LIASON OFFICE
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3419
+#
+interface Ethernet0/0/14
+ description IP-EXPRESS-INTERNET-AHMADU-BELLO-WAY || 20Mb
+ port link-type trunk
+ port trunk allow-pass vlan 1503 2820
+#
+interface Ethernet0/0/15
+ description NNPC ATLAS COVE
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3406
+#
+interface Ethernet0/0/16
+ description IOTECH-RADIO-MGT
+ port link-type access
+ port default vlan 1504
+#
+interface Ethernet0/0/17
+ description NEWS CENTRAL MEDIA
+ port link-type access
+ port default vlan 1637
+ undo negotiation auto
+ speed 100
+##
+interface Ethernet0/0/18
+ description IOTECH VI-2 INTERNET | VLAN-1473 | 20MB
+ port link-type access
+ port default vlan 1473
+#
+interface Ethernet0/0/19
+ description NIIA INTERNET FIBER | 20MB
+ port link-type access
+ port default vlan 2416
+ stp bpdu-filter enable
+ jumboframe enable 4000
+#
+interface Ethernet0/0/20
+ description NIGERIA ARMY (DADP) BONNY CAMP | 20MB | SWIFTTALK RADIO
+ port link-type access
+ port default vlan 2749
+#
+interface Ethernet0/0/21
+ description TPGS-KFC
+ port link-type access
+ port default vlan 1034
+#
+interface Ethernet0/0/22
+ description SWITCH-MGT
+ port link-type access
+ port default vlan 1501
+#
+interface Ethernet0/0/23
+ description TPGS_SAKA_JOJO2-5M-INTERNET
+ port link-type access
+ port default vlan 1405
+#
+interface Ethernet0/0/24
+ description POC for Satellite-l2vpn-Saka18/25/17
+ port link-type trunk
+ port trunk allow-pass vlan 807 2015
+ jumboframe enable 13296
+ undo negotiation auto
+ speed 100
+#
+interface GigabitEthernet0/0/1
+ description UPLINK TO DCN IP/MPLS  LAG944-UPE-M8-GE0/2/1
+ port link-type trunk
+ port trunk allow-pass vlan 184 810 813 901 1034 1096 1114 1229 1265 1320
+ port trunk allow-pass vlan 1405 1411 1421 1423 1425 1428 1473 1492 to 1494 1501 1503 to 1504
+ port trunk allow-pass vlan 1637 1640 1668 1682 1684 to 1685 1717 1785 2416 2749 2820
+ port trunk allow-pass vlan 3121 3406 3415 3419 3842 3844 3848 to 3849 4005
+#
+interface GigabitEthernet0/0/2
+ description COOLLINK-IHS-IDEJO FIBRE | VLAN 1717
+ port link-type access
+ port default vlan 1717
+#
+interface GigabitEthernet0/0/3
+ description FAULTY PORT
+ shutdown
+ port link-type trunk
+ jumboframe enable 4000
+#
+#
+interface GigabitEthernet0/0/4
+ description FAULTY PORT
+ shutdown
+ port link-type trunk
+ port media type copper
+     undo negotiation auto
+ combo-port auto
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F0000010000778C
+ snmp-agent community read cipher %@%@sK;'A's*kGZ+:b)+;-E%SHW`rjk3Ajadu"16-$<4Dro9HWcS9x*M*]X4`WNYHrK@M/lXWlSH%@%@
+ snmp-agent community read cipher %@%@6;a9M88ke*b'F#(dOAX6U|eZzX_]%h8[-R{&ZqFZ@d&%|e]U{wTb#YnV+NdM-c=k.z&&efU|%@%@
+ snmp-agent community read cipher %@%@B]wq@@JvMK6&V@Hx"h-IU|1\m0e;TF{]&.KWx\-^IeN-|1_Ual@s611eo,KN5wG3~k8V1hU|%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+authentication-mode aaa
+user privilege level 15
+user-interface vty 0 4
+authentication-mode aaa
+#

@@ -1,0 +1,356 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 08:18.39 ? ? /home/mobaxterm ? telnet 10.248.246.22
+Connected to 10.248.246.22.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<2ND-LAG109-HU-SW>sys
+Enter system view, return user view with Ctrl+Z.
+[2ND-LAG109-HU-SW]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       WALTERSMITH IKOYI BACKHAUL KEFFI
+Eth0/0/2                      down    down     MR PATRICK ILODIANYA
+Eth0/0/3                      down    down     FRENCH EMBASSY
+Eth0/0/4                      up      up       GLOBENODE IKOYI 8MB INTERNET
+Eth0/0/5                      up      up       NPDC ALRED REWANI IKOYI
+Eth0/0/6                      *down   down     ADEKUNLE HASSAN 10MB INTERNET
+Eth0/0/7                      down    down     TPGS IKOYI 90MB INTERNET-CLIENT-R
+                                               ADIO-LM-DIRECT
+Eth0/0/8                      down    down     SAMAILA ZUBAIRU 4MB INTERNET
+Eth0/0/9                      up      up       MONTEGO IKOYI  40MB INTERNET
+Eth0/0/10                     down    down     IPEXPRESS-IKOYI-2
+Eth0/0/11                     up      up       SHELL2 MD's HOUSE(53 IKOYI INT)
+Eth0/0/12                     down    down     GREENSPRING IKOYI |25MB INTERNET
+Eth0/0/13                     down    down     IOTECH IKOYI KINGS TOWER-2 50MB I
+                                               NTERNET
+Eth0/0/14                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/14 Interface
+Eth0/0/15                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/15 Interface
+Eth0/0/16                     *down   down     GTEL |8MB INTERNET
+Eth0/0/17                     down    down     GTEL-CERAGONIP20-MGT
+Eth0/0/18                     up      up       TPGS-KFC-Lag-NNPC-Ikoyi-INTERNET-
+                                               5M
+Eth0/0/19                     up      up       IPEXPRESS-IKOYI-2
+Eth0/0/20                     up      up       VASCOM7-DNAIT NCMB | 20MB INT FIB
+                                               ER LM
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     SWITCH-MGT
+GE0/0/1                       up      up       COOLLINK SOULE PARKVIEW | 25Mbps
+GE0/0/2                       up      up       MADAM-BELLA-DISU-HOUSE-PRIMARY
+GE0/0/3                       up      up       IOTECH IKOYI-1 MOSAFEJO | 155MB
+GE0/0/4                       up      up       UPLINK TO HUAWEI SWITCH ONE
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif805                     up      up       HUAWEI, Quidway Series, Vlanif805
+                                                Interface
+Vlanif1287                    up      up       HUAWEI, Quidway Series, Vlanif128
+                                               7 Interface
+Vlanif1501                    up      down     HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+[2ND-LAG109-HU-SW]    dis cur
+#
+!Software Version V100R006C05
+ sysname 2ND-LAG109-HU-SW
+#
+ vlan batch 805 1043 1116 1287 1318 1330 1343 to 1344 1353 1360 to 1361 1367 to 1368
+ vlan batch 1449 1489 1496 1500 to 1501 1503 1551 1661 1692 1779 1889
+ vlan batch 1906 1979 1988 2641 3038 to 3039 3042 3274 3643 3916
+#
+lldp enable
+#
+vlan 805
+ description SWITCH-MGT
+vlan 1043
+ description TPGS-KFC-Lag-NNPC-Ikoyi-INTERNET-5M
+vlan 1116
+ description TPGS IKOYI
+vlan 1287
+ description SHELL1-SHELL44-BOURDILLION-LEASED-LINE
+vlan 1318
+ description VASCOM7-DNAIT-NCMB
+vlan 1330
+ description 3WAY COMMUNICATIONS
+vlan 1343
+ description IO Tech Ikoyi (kings Tower)
+vlan 1344
+ description IOTECH-MOSAFEJO
+vlan 1353
+ description UNI-ILORIN-COUNCIL
+vlan 1360
+ description Shell2 MD's house
+vlan 1361
+ description SHELL CCH (53 Bourdillon)
+vlan 1367
+ description Madam BELLA_DISU_50MB_PRY
+vlan 1368
+ description Madam_Bella_Disu_Primary
+vlan 1449
+ description COOLLINK SOULE LAMBERT
+vlan 1489
+ description CERAGON MGT
+vlan 1496
+ description CERAGON-IP-10-MGT
+vlan 1500
+ description CERAGON-RADIO-MGT
+vlan 1501
+ description SWITCH-MGT
+vlan 1503
+ description NERA-MGT
+vlan 1551
+ description MONTEGO IKOYI
+vlan 1661
+ description GLOBENODE IKOYI
+vlan 1692
+ description GTEL-INT-8MB
+vlan 1779
+ description IPEXPRESS-IKOYI-2
+vlan 1889
+ description FRENCH-EMBASSY
+vlan 1906
+ description SAMAILA ZUBAIRU
+vlan 1979
+ description GREENSPRING IKOYI
+vlan 1988
+ description adekunle Hassan Internet
+vlan 2641
+ description Total Banana Island
+vlan 3038
+ description WALTERSMITH_INTERNET
+vlan 3039
+ description WALTERSMITH LLC
+vlan 3042
+ description WALTER_SMITH
+vlan 3274
+ description FINCRA-TECH
+vlan 3643
+ description NPDC Alfred Rewani Ikoyi
+vlan 3916
+ description MR-PATRICK
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@LO:S5c>{y=bP#R-7.`/2S;ES%@%@
+ local-user bsnoc privilege level 15
+ local-user idrisoye password cipher %@%@&~8,F.lGq@~WjV:@*vR@,.2n%@%@
+ local-user idrisoye privilege level 3
+ local-user idrisoye service-type telnet terminal ssh ftp
+#
+interface Vlanif1
+#
+interface Vlanif805
+ ip address 10.248.246.22 255.255.255.0
+#
+interface Vlanif1287
+ ip address 15.15.15.3 255.255.255.0
+#
+interface Vlanif1501
+#
+interface Ethernet0/0/1
+ description WALTERSMITH IKOYI BACKHAUL KEFFI
+ port link-type trunk
+ port trunk allow-pass vlan 3038 to 3039
+#
+interface Ethernet0/0/2
+ description MR PATRICK ILODIANYA
+ port link-type access
+ port default vlan 3916
+#
+interface Ethernet0/0/3
+ description FRENCH EMBASSY
+ port link-type access
+ port default vlan 1889
+#
+interface Ethernet0/0/4
+ description GLOBENODE IKOYI 8MB INTERNET
+ port link-type access
+ port default vlan 1661
+#
+interface Ethernet0/0/5
+ description NPDC ALRED REWANI IKOYI
+ port link-type trunk
+ port trunk allow-pass vlan 1489 3643
+#
+interface Ethernet0/0/6
+ description ADEKUNLE HASSAN 10MB INTERNET
+ shutdown
+ port link-type access
+ port default vlan 1988
+#
+interface Ethernet0/0/7
+ description TPGS IKOYI 90MB INTERNET-CLIENT-RADIO-LM-DIRECT
+ port link-type access
+ port default vlan 1116
+#
+interface Ethernet0/0/8
+ description SAMAILA ZUBAIRU 4MB INTERNET
+ port link-type access
+ port default vlan 1906
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/9
+ description MONTEGO IKOYI  40MB INTERNET
+ port link-type access
+ port default vlan 1551
+#
+interface Ethernet0/0/10
+ description IPEXPRESS-IKOYI-2
+ port link-type trunk
+ port trunk allow-pass vlan 1500 1503 1779
+#
+interface Ethernet0/0/11
+ description SHELL2 MD's HOUSE(53 IKOYI INT)
+ port link-type access
+ port default vlan 1360
+#
+interface Ethernet0/0/12
+ description GREENSPRING IKOYI |25MB INTERNET
+ port link-type access
+ port default vlan 1979
+#
+interface Ethernet0/0/13
+ description IOTECH IKOYI KINGS TOWER-2 50MB INTERNET
+ port link-type access
+ port default vlan 1343
+#
+interface Ethernet0/0/14
+ port link-type trunk
+ undo port trunk allow-pass vlan 1
+#
+interface Ethernet0/0/15
+#
+interface Ethernet0/0/16
+ description GTEL |8MB INTERNET
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1489 1692
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/17
+ description GTEL-CERAGONIP20-MGT
+ port link-type access
+ port default vlan 1496
+#
+interface Ethernet0/0/18
+ description TPGS-KFC-Lag-NNPC-Ikoyi-INTERNET-5M
+ port link-type access
+ port default vlan 1043
+#
+interface Ethernet0/0/19
+ description IPEXPRESS-IKOYI-2
+ port link-type trunk
+ port trunk allow-pass vlan 1503 1779
+ stp edged-port enable
+ jumboframe enable 13296
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/20
+ description VASCOM7-DNAIT NCMB | 20MB INT FIBER LM
+ port link-type access
+ port default vlan 1318
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ description SWITCH-MGT
+ port link-type access
+ port default vlan 805
+#
+interface GigabitEthernet0/0/1
+ description COOLLINK SOULE PARKVIEW | 25Mbps
+ port link-type access
+ port default vlan 1449
+ stp edged-port enable
+ jumboframe enable 13296
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/2
+ description MADAM-BELLA-DISU-HOUSE-PRIMARY
+ port link-type access
+ port default vlan 1368
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/3
+ description IOTECH IKOYI-1 MOSAFEJO | 155MB
+ port link-type access
+ port default vlan 1344
+ stp edged-port enable
+ jumboframe enable 13296
+ port media type copper
+     undo negotiation auto
+ port media type fiber
+     undo negotiation auto
+ combo-port copper
+#
+interface GigabitEthernet0/0/4
+ description UPLINK TO HUAWEI SWITCH ONE
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+ jumboframe enable 13296
+ undo negotiation auto
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100000D0F
+ snmp-agent community read cipher %@%@krgGI.NT+0rILb4z_I4+\3;<-hoe)OA1+Uaqc"-"9%&-3;~\Q|Xk<lD"!Kf#TH6so{<E;H\3%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[2ND-LAG109-HU-SW]

@@ -1,0 +1,275 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 08:18.49 ? ? /home/mobaxterm ? telnet 10.248.246.117
+Connected to 10.248.246.117.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:Entering character mode
+Escape character is '^]'.
+bsnoc
+Password:
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2024-04-23 08:39:44+00:00.
+Info: Lastest accessed IP: 192.168.6.5  Time: 2024-04-21 08:20:23  Password will expire in: -
+
+Info: Smart-upgrade is currently disabled. Enable Smart-upgrade to get recommended version information.
+<ENT-IBD031-H-5700-SW>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-IBD031-H-5700-SW]dis int des
+PHY: Physical
+*down: administratively down
+#down: LBDT down
+-down: link flap down
+(l): loopback
+(s): spoofing
+(E): E-Trunk down
+(b): BFD down
+(e): ETHOAM down
+(dl): DLDP down
+(lb): LBDT block
+(o): Observe-port forwarding down
+Interface                     PHY     Protocol Description
+GE0/0/1                       up      up       IOTECH-RADIO-LINK-TO-IITA
+GE0/0/2                       down    down
+GE0/0/3                       up      up       IPEXPRESS-BIOTEC-IITA[VLAN-1774]|80Mbps
+GE0/0/4                       down    down
+GE0/0/5                       down    down
+GE0/0/6                       down    down
+GE0/0/7                       down    down
+GE0/0/8                       down    down
+GE0/0/9                       down    down
+GE0/0/10                      down    down
+GE0/0/11                      down    down
+GE0/0/12                      down    down
+GE0/0/13                      down    down
+GE0/0/14                      down    down
+GE0/0/15                      down    down
+GE0/0/16                      down    down
+GE0/0/17                      down    down
+GE0/0/18                      down    down
+GE0/0/19                      down    down
+GE0/0/20                      down    down
+GE0/0/21                      down    down
+GE0/0/22                      down    down
+GE0/0/23                      down    down
+GE0/0/24                      down    down     SWITCH MGT
+NULL0                         up      up(s)
+Vlanif1                       up      down
+Vlanif804                     up      up
+XGE0/0/1                      up      up       UPLINK TO DCN ROUTER
+XGE0/0/2                      down    down     IITA-IBADAN-PRIMARY-FIBER | i GIG
+XGE0/0/3                      up      up       FREE
+XGE0/0/4                      down    down     FREE
+[ENT-IBD031-H-5700-SW]     dis cur
+!Software Version V200R022C00SPC500
+#
+sysname ENT-IBD031-H-5700-SW
+#
+vlan batch 804 1183 1502 1774 1811 to 1813
+#
+stp mode stp
+stp instance 0 root primary
+stp pathcost-standard legacy
+#
+authentication-profile name default_authen_profile
+authentication-profile name dot1x_authen_profile
+authentication-profile name dot1xmac_authen_profile
+authentication-profile name mac_authen_profile
+authentication-profile name multi_authen_profile
+authentication-profile name portal_authen_profile
+#
+telnet server enable
+telnet server-source all-interface
+#
+radius-server template default
+#
+pki realm default
+ certificate-check none
+#
+free-rule-template name default_free_rule
+#
+portal-access-profile name portal_access_profile
+#
+vlan 804
+ description MGT-VLAN
+vlan 1502
+ description IOTECH-MGT-VLAN
+vlan 1774
+ description IPEXPRESS BIOTEC IITA
+vlan 1811
+ description IITA-MICROWAVE-TERTIARY-LINK
+vlan 1812
+ description IITA-FIBER
+vlan 1813
+ description IITA-PRIMARY-FIBER
+#
+aaa
+ authentication-scheme default
+  authentication-mode local
+ authentication-scheme radius
+  authentication-mode radius
+ authorization-scheme default
+  authorization-mode local
+ accounting-scheme default
+  accounting-mode none
+ local-aaa-user password policy administrator
+  password history record number 0
+  password expire 0
+ domain default
+  authentication-scheme radius
+  accounting-scheme default
+  radius-server default
+ domain default_admin
+  authentication-scheme default
+  accounting-scheme default
+ local-user bsnoc password irreversible-cipher $1c$Y5g%<3YUn&$/#ic0L<MKI@J0VNnyp12B|oIH_'bR@fO\-34[AGF$
+ local-user bsnoc privilege level 3
+ local-user bsnoc service-type telnet terminal ssh ftp
+ local-user fabian password irreversible-cipher $1c$L)7s6<@)1F$i)rTQ\#SW60b=4,5FdHLH93RP.nY2AyS'I0y;;k5$
+ local-user fabian privilege level 3
+ local-user fabian service-type telnet terminal ssh ftp
+#
+interface Vlanif1
+#
+interface Vlanif804
+ ip address 10.248.246.117 255.255.255.192
+#
+interface GigabitEthernet0/0/1
+ description IOTECH-RADIO-LINK-TO-IITA
+ port link-type trunk
+ port trunk allow-pass vlan 804 1502 1811
+ stp instance 0 cost 10000
+#
+interface GigabitEthernet0/0/2
+ port link-type access
+#
+interface GigabitEthernet0/0/3
+ description IPEXPRESS-BIOTEC-IITA[VLAN-1774]|80Mbps
+ port link-type access
+ port default vlan 1774
+#
+interface GigabitEthernet0/0/4
+#
+interface GigabitEthernet0/0/5
+#
+interface GigabitEthernet0/0/6
+#
+interface GigabitEthernet0/0/7
+#
+interface GigabitEthernet0/0/8
+#
+interface GigabitEthernet0/0/9
+#
+interface GigabitEthernet0/0/10
+#
+interface GigabitEthernet0/0/11
+#
+interface GigabitEthernet0/0/12
+#
+interface GigabitEthernet0/0/13
+#
+interface GigabitEthernet0/0/14
+#
+interface GigabitEthernet0/0/15
+#
+interface GigabitEthernet0/0/16
+#
+interface GigabitEthernet0/0/17
+#
+interface GigabitEthernet0/0/18
+#
+interface GigabitEthernet0/0/19
+#
+interface GigabitEthernet0/0/20
+#
+interface GigabitEthernet0/0/21
+#
+interface GigabitEthernet0/0/22
+#
+interface GigabitEthernet0/0/23
+#
+interface GigabitEthernet0/0/24
+ description SWITCH MGT
+ port link-type access
+ port default vlan 804
+#
+interface XGigabitEthernet0/0/1
+ description UPLINK TO DCN ROUTER
+ port link-type trunk
+ port trunk allow-pass vlan 804 1502 1774 1811 1813
+#
+interface XGigabitEthernet0/0/2
+ description IITA-IBADAN-PRIMARY-FIBER | i GIG
+ port link-type trunk
+ port trunk allow-pass vlan 804 1502 1774 1811 1813
+ stp instance 0 cost 200
+#
+interface XGigabitEthernet0/0/3
+ description FREE
+#
+interface XGigabitEthernet0/0/4
+ description FREE
+#
+interface NULL0
+#
+undo icmp name timestamp-request receive
+#
+ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+snmp-agent
+snmp-agent local-engineid 8000DDED033CC786AAF370
+snmp-agent community read cipher %^%#bja-U}!'J=,v&$S@`PFUGaBwB6H>YAeG<MY2ac1:hU$vLXgiOIcpI]GM/4R~h$+hJ][Yc'qUf0Q5$[,U%^%#
+snmp-agent sys-info version all
+snmp-agent protocol source-status all-interface
+undo snmp-agent protocol source-status ipv6 all-interface
+#
+ssh server cipher aes256_ctr aes128_ctr
+ssh server hmac sha2_256
+ssh server key-exchange dh_group16_sha512 dh_group15_sha512 dh_group14_sha256 dh_group_exchange_sha256
+ssh client cipher aes256_ctr aes128_ctr
+ssh client hmac sha2_256
+ssh client key-exchange dh_group16_sha512 dh_group15_sha512 dh_group14_sha256 dh_group_exchange_sha256
+ssh server dh-exchange min-len 2048
+ssh server publickey rsa_sha2_512 rsa_sha2_256
+#
+telnet client-source -i Vlanif804
+#
+user-interface con 0
+ authentication-mode password
+ set authentication password cipher $1a$G8^\HSG6^~$`s>F0GUne-R9>d>PQdq5+*`43nAko'3Ic\>;O8VX$
+user-interface vty 0 4
+ authentication-mode aaa
+ user privilege level 3
+ protocol inbound telnet
+user-interface vty 16 20
+#
+dot1x-access-profile name dot1x_access_profile
+#
+mac-access-profile name mac_access_profile
+#
+ops
+#
+remote-unit
+#
+return
+[ENT-IBD031-H-5700-SW]
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                                                   ?
+
+ ? 2025-11-13 ? ? 08:30.45 ? ? /home/mobaxterm ?

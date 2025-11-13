@@ -1,0 +1,247 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:54.07 ? ? /home/mobaxterm ? telnet 10.248.249.242
+Connected to 10.248.249.242.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+ENTERPRISE-CBN-ABUJA>en
+Password:
+ENTERPRISE-CBN-ABUJA#sh int des
+Interface                      Status         Protocol Description
+Vl1                            up             down
+Vl1501                         up             up
+Fa0/1                          admin down     down     CBN ABUJA INTERNET
+Fa0/2                          down           down     GLO MOBILE NODE B
+Fa0/3                          down           down
+Fa0/4                          down           down
+Fa0/5                          down           down
+Fa0/6                          down           down
+Fa0/7                          down           down
+Fa0/8                          down           down
+Fa0/9                          down           down
+Fa0/10                         down           down
+Fa0/11                         down           down
+Fa0/12                         down           down
+Fa0/13                         down           down
+Fa0/14                         down           down
+Fa0/15                         down           down
+Fa0/16                         down           down
+Fa0/17                         down           down
+Fa0/18                         down           down
+Fa0/19                         down           down
+Fa0/20                         down           down
+Fa0/21                         down           down
+Fa0/22                         down           down
+Fa0/23                         down           down
+Fa0/24                         down           down
+Gi0/1                          up             up       GLO MOBILE NODE B-ABJ501-RTN-905-IDU-GE-06
+Gi0/2                          up             up       UPLINK TO GLO NETWORK
+Lo0                            up             up
+ENTERPRISE-CBN-ABUJA# sh run
+Building configuration...
+
+Current configuration : 4117 bytes
+!
+! Last configuration change at 00:00:50 UTC Mon Mar 1 1993
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+service unsupported-transceiver
+!
+hostname ENTERPRISE-CBN-ABUJA
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$Aoeq$Zsze8wHXsHnZBNyuprSI3.
+!
+no aaa new-model
+system mtu routing 1500
+vtp mode transparent
+!
+!
+!
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-1838147200
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1838147200
+ revocation-check none
+ rsakeypair TP-self-signed-1838147200
+!
+!
+crypto pki certificate chain TP-self-signed-1838147200
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 31383338 31343732 3030301E 170D3933 30333031 30303030
+  35365A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 38333831
+  34373230 3030819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  8100AE53 EBB2C01E 49A56D41 32F1EB9F 1032E8E8 7CBEF453 EDC43C76 A8F230C5
+  EC1FA0DF FD6A65E9 D3211321 DB7C10B8 345E88D7 1DAD1A02 BE1E1349 703D23FD
+  636A3D24 829D81AE 63462F10 622EA315 9E00FE8F ABC4379D FA9002E4 AAF599C2
+  31D6F585 66A4C05E B7772068 CB883B2A 341C01A9 2AF9423B FBA71F91 2E605ED9
+  FF070203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603
+  551D2304 18301680 141D754B F2C2BDA4 924554F0 FC67ADE0 F2DC1384 EF301D06
+  03551D0E 04160414 1D754BF2 C2BDA492 4554F0FC 67ADE0F2 DC1384EF 300D0609
+  2A864886 F70D0101 05050003 81810022 C87A784F 125D9016 E20B33F2 398D0241
+  EEAB6E51 5935B96C 73FA304E 4A78B5FA 633CD5FA 6F7D8C28 97D8CDA9 62701FF2
+  6F73C5E6 00308C0F F392CDC4 89D03EC9 FD9324C7 87DC82AA 9B2F5839 098782F2
+  F4677ECD 6514CBFF D79E50B7 71C2133A BB9CF406 585AAE6B 4A44C1AB 7DD5F325
+  86B3FBF1 EA27E1EF EC352537 2A27FC
+        quit
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 259
+ name GLOMOBILE-NODE-B
+!
+vlan 950
+ name CBN-INTERNET
+!
+vlan 1107
+ name LTE-4
+!
+vlan 1501
+ name SWITCH-MGT
+!
+vlan 1840
+ name CBN-ABUJA
+!
+vlan 3601
+ name LTE-1
+!
+vlan 3701
+ name LTE-2
+!
+vlan 4001
+ name MW-SUPERVISION
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 10.10.10.1 255.255.255.255
+!
+interface FastEthernet0/1
+ description CBN ABUJA INTERNET
+ switchport access vlan 1840
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/2
+ description GLO MOBILE NODE B
+ switchport access vlan 259
+ switchport trunk allowed vlan 259,1107,3601,3701,4001
+ switchport mode trunk
+!
+interface FastEthernet0/3
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+ switchport trunk allowed vlan 259,3604,3704,4001
+ switchport mode trunk
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+ description GLO MOBILE NODE B-ABJ501-RTN-905-IDU-GE-06
+ switchport trunk allowed vlan 259,1107,3601,3701,4001
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet0/2
+ description UPLINK TO GLO NETWORK
+ switchport trunk allowed vlan 259,950,1107,1501,1840,3601,3701,4001
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan1501
+ ip address 10.248.249.242 255.255.255.0
+!
+ip default-gateway 10.248.249.1
+ip http server
+ip http secure-server
+!
+snmp-server community globacom RO
+!
+!
+line con 0
+ password 7 022B05490A080A2D405F
+ login
+line vty 0 4
+ password 7 022B05490A080A2D405F
+ login
+line vty 5 15
+ login
+!
+end
+
+ENTERPRISE-CBN-ABUJA#

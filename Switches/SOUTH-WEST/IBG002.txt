@@ -1,0 +1,396 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 08:50.39 ? ? /home/mobaxterm ? telnet 10.248.246.125
+Connected to 10.248.246.125.
+Maranello
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+GLO1-2960-IBG02-ASW>en
+Password:
+GLO1-2960-IBG02-ASW#sh int des
+Interface                      Status         Protocol Description
+Vl1                            admin down     down
+Vl804                          up             up
+Vl1338                         up             up
+Vl1352                         up             up
+Vl1496                         up             up
+Vl1503                         admin down     down
+Vl1762                         up             up
+Vl1884                         up             up
+Vl4004                         up             up
+Fa0/1                          down           down     TRUNK-TO-GLOMOBILE || GE0/2/2 spare
+Fa0/2                          admin down     down     TPGS SHIMAWA |10MB INTERNET
+Fa0/3                          admin down     down     VDT OYO 2 | 20MB INTERNET IBG7-IBG6-IBG2
+Fa0/4                          down           down     TPGS SHIMAWA |10MB INTERNET
+Fa0/5                          down           down     TPGS SAGAMU 9MB INTERNET 2MB !! Leasedline- Ota
+Fa0/6                          admin down     down     Data Visibility - MERITOS
+Fa0/7                          admin down     down     RCC SHAGAMU IBG7-IBG6-IBG2
+Fa0/8                          up             up       ATLANTIC FALK PRIME IPARA IBG6-IBG2
+Fa0/9                          up             up       GATEWAY POLY FIBER-LM
+Fa0/10                         down           down     MACHPHERSON-UNIV
+Fa0/11                         up             up
+Fa0/12                         down           down     IPEXPRESS MAKUN-SIMAWA | 50M
+Fa0/13                         up             up       AGRIRA-WEST-AFRICA-INT | 50M
+Fa0/14                         down           down     IOTECH-IBAFO-IBG002 | 20M
+Fa0/15                         up             up       TATA_OLAM-FLOWERGATE_SAGAMU|2255|25MB
+Fa0/16                         down           down
+Fa0/17                         down           down
+Fa0/18                         down           down
+Fa0/19                         down           down
+Fa0/20                         down           down
+Fa0/21                         down           down     JULIUS-BERG-CER-RAD-MGT
+Fa0/22                         up             up       JULIUS-BERGER-KM40-INT10M-R-CERAGON-DIRECT-IP
+Fa0/23                         down           down
+Fa0/24                         down           down     COOLLINK-SHAGAMU
+Gi0/1                          admin down     down     TRUNK-TO-GLOMOBILE || GE0/2/2
+Gi0/2                          up             up       TRUNK-TO-GLOMOBILE || GE0/2/2
+GLO1-2960-IBG02-ASW# sh run
+Building configuration...
+
+Current configuration : 6968 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname GLO1-2960-IBG02-ASW
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$v4ig$SQfEOSfyl.WO5K6XYlA7l0
+enable password CIsco
+!
+no aaa new-model
+system mtu routing 1500
+vtp domain coollink.us
+vtp mode transparent
+ip subnet-zero
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-208797440
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-208797440
+ revocation-check none
+ rsakeypair TP-self-signed-208797440
+!
+!
+crypto pki certificate chain TP-self-signed-208797440
+ certificate self-signed 01
+  3082024A 308201B3 A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  30312E30 2C060355 04031325 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 32303837 39373434 30301E17 0D393330 33303130 30303035
+  325A170D 32303031 30313030 30303030 5A303031 2E302C06 03550403 1325494F
+  532D5365 6C662D53 69676E65 642D4365 72746966 69636174 652D3230 38373937
+  34343030 819F300D 06092A86 4886F70D 01010105 0003818D 00308189 02818100
+  DAFB60E7 93E05BBE 35FC2F1F B533A468 D3CDE489 805E758D D62E2321 93C2D48E
+  7CB49993 3CA4E5DB 2E37F58F DBBAC5F2 804E8FDA 92DE8EEB 047F0537 C5F82D9B
+  6D077642 FE907535 C9754C32 CA4D7443 8C11153F 6019719F DB132328 326B0C5A
+  08E10DC3 AED19E7B CA2EF7D7 993B78DB 277B7B21 54F3F4F1 CDEDDBDD 1F5B7A17
+  02030100 01A37430 72300F06 03551D13 0101FF04 05300301 01FF301F 0603551D
+  11041830 16821447 4C4F312D 32393630 2D494247 30322D41 53572E30 1F060355
+  1D230418 30168014 86C59F17 9A1B24C4 66439A61 FCCC5112 D3A5DA3B 301D0603
+  551D0E04 16041486 C59F179A 1B24C466 439A61FC CC5112D3 A5DA3B30 0D06092A
+  864886F7 0D010104 05000381 81009F43 8B21BA07 E7B264B2 6EAF3CB3 3AACFCED
+  5C4B746A F86819AE 55DC9C33 B8693D8C 15E70D88 9CB49B26 80587BB8 C0B5ABDE
+  A6EFA7D3 BF8E8FD5 50F61923 8EE798F1 4730A258 CF514C0C 794AB05D 07C16A98
+  58A4892C 56A0F3BB 9220AE50 AC182500 0C148D01 DC864348 AC33E5C3 5478BF75
+  62D67FF8 591AB7C2 092E2F90 7793
+  quit
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+no spanning-tree vlan 128-233,255,349,352,401-410,771,774,777-778,888,1103,1232
+no spanning-tree vlan 1285,1338,1393,1492-1493,1500,1757,1762,1953,1974,2255
+no spanning-tree vlan 2358,2428,3433,3843,4005,4059
+!
+vlan internal allocation policy ascending
+!
+vlan 2-59
+!
+vlan 60
+ name VLAN60
+!
+vlan 61-89,94,96-104
+!
+vlan 105
+ name VLAN105
+!
+vlan 106-233,255,349,352,401-410,771,774,777-778
+!
+vlan 804
+ name SWT-MNT
+!
+vlan 888
+!
+vlan 1103
+ name VDT-OYO-2
+!
+vlan 1232
+ name MACHEPHEN-UNIV
+!
+vlan 1285
+ name Data-Visibility-Giboligi
+!
+vlan 1338
+ name TPGS-SAGAMU-INT
+!
+vlan 1352
+ name JULIUS-BERGER-KM38/KM40-LL-IJORA
+!
+vlan 1393
+ name TPGS-SHIMAWA
+!
+vlan 1492
+ name MANAGEMENT
+!
+vlan 1493
+ name NERA-MGT
+!
+vlan 1496
+ name JULIUS-BERG-CER-RAD-MGT
+!
+vlan 1500
+ name GLO1-CERAGON-MGMT
+!
+vlan 1503
+!
+vlan 1757
+ name GATEWAY-POLY
+!
+vlan 1762
+ name TPGS-Sagamu-LL
+!
+vlan 1884
+ name TPGS-JARO-IND-LL
+!
+vlan 1953
+ name IPEXPRESS_MAKUN-SIMAWA
+!
+vlan 1974
+ name AGRIRA-WEST-AFRICA-INT
+!
+vlan 2255
+ name TATA-OLAM-FLOWERGATE
+!
+vlan 2358
+ name IOTECH-IBG002
+!
+vlan 2428
+ name IBG002-LAG394-JBN-EXPRESSWAY
+!
+vlan 3433
+ name RCC-SHAGAMU
+!
+vlan 4004
+ name COOLL-SHANGAMU
+!
+vlan 4005
+!
+vlan 4059
+ name FALK-PRIME
+!
+!
+!
+interface FastEthernet0/1
+ description TRUNK-TO-GLOMOBILE || GE0/2/2 spare
+ switchport mode trunk
+!
+interface FastEthernet0/2
+ description TPGS SHIMAWA |10MB INTERNET
+ switchport access vlan 1393
+ switchport mode access
+ shutdown
+ speed 100
+ duplex full
+!
+interface FastEthernet0/3
+ description VDT OYO 2 | 20MB INTERNET IBG7-IBG6-IBG2
+ switchport access vlan 1103
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/4
+ description TPGS SHIMAWA |10MB INTERNET
+ switchport access vlan 1393
+ switchport mode access
+ speed 100
+ duplex full
+!
+interface FastEthernet0/5
+ description TPGS SAGAMU 9MB INTERNET 2MB !! Leasedline- Ota
+ switchport trunk allowed vlan 1338,1762
+ switchport mode trunk
+!
+interface FastEthernet0/6
+ description Data Visibility - MERITOS
+ switchport access vlan 1285
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/7
+ description RCC SHAGAMU IBG7-IBG6-IBG2
+ switchport trunk allowed vlan 1493,3433
+ switchport mode trunk
+ shutdown
+!
+interface FastEthernet0/8
+ description ATLANTIC FALK PRIME IPARA IBG6-IBG2
+ switchport trunk allowed vlan 1492,4059
+ switchport mode trunk
+!
+interface FastEthernet0/9
+ description GATEWAY POLY FIBER-LM
+ switchport access vlan 1757
+ switchport mode access
+!
+interface FastEthernet0/10
+ description MACHPHERSON-UNIV
+ switchport access vlan 1232
+ switchport mode access
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+ description IPEXPRESS MAKUN-SIMAWA | 50M
+ switchport access vlan 1953
+ switchport mode access
+!
+interface FastEthernet0/13
+ description AGRIRA-WEST-AFRICA-INT | 50M
+ switchport access vlan 1974
+ switchport mode access
+!
+interface FastEthernet0/14
+ description IOTECH-IBAFO-IBG002 | 20M
+ switchport access vlan 2358
+ switchport mode access
+!
+interface FastEthernet0/15
+ description TATA_OLAM-FLOWERGATE_SAGAMU|2255|25MB
+ switchport trunk allowed vlan 1500,2255
+ switchport mode trunk
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+ description JULIUS-BERG-CER-RAD-MGT
+ switchport access vlan 1496
+ switchport mode access
+!
+interface FastEthernet0/22
+ description JULIUS-BERGER-KM40-INT10M-R-CERAGON-DIRECT-IP
+ switchport access vlan 1352
+ switchport mode access
+!
+interface FastEthernet0/23
+ switchport access vlan 4005
+ switchport mode access
+!
+interface FastEthernet0/24
+ description COOLLINK-SHAGAMU
+ switchport mode trunk
+!
+interface GigabitEthernet0/1
+ description TRUNK-TO-GLOMOBILE || GE0/2/2
+ switchport mode trunk
+ shutdown
+!
+interface GigabitEthernet0/2
+ description TRUNK-TO-GLOMOBILE || GE0/2/2
+ switchport mode trunk
+!
+interface Vlan1
+ ip address 192.168.21.2 255.255.255.0
+ no ip route-cache
+ shutdown
+!
+interface Vlan804
+ ip address 10.248.246.125 255.255.255.192
+ no ip route-cache
+!
+interface Vlan1338
+ no ip address
+ no ip route-cache
+!
+interface Vlan1352
+ no ip address
+ no ip route-cache
+!
+interface Vlan1496
+ no ip address
+ no ip route-cache
+!
+interface Vlan1503
+ ip address 10.155.186.254 255.255.255.0
+ no ip route-cache
+ shutdown
+!
+interface Vlan1762
+ ip address 15.15.15.15 255.255.255.0
+ no ip route-cache
+!
+interface Vlan1884
+ no ip address
+ no ip route-cache
+!
+interface Vlan4004
+ ip address 192.168.29.125 255.255.255.248
+ no ip route-cache
+!
+ip default-gateway 10.248.246.65
+ip http server
+ip http secure-server
+snmp-server community globacom RO
+!
+control-plane
+!
+!
+line con 0
+ password 7 132816000A020126272B
+ logging synchronous
+ login
+line vty 0 4
+ password 7 132816000A020126272B
+ logging synchronous
+ login
+line vty 5 15
+ password 7 022B05490A080A2D4041
+ logging synchronous
+ login
+!
+end
+
+GLO1-2960-IBG02-ASW#

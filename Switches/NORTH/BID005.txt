@@ -1,0 +1,232 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:47.10 ? ? /home/mobaxterm ? telnet 10.248.246.226
+Connected to 10.248.246.226.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<ENT-BID-005>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-BID-005]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      *down   down     UBA KUTIGI (JBR802-JBR803-BID005)
+                                                - UBIQUITY
+Eth0/0/2                      down    down     CAMPSUFI Federal Polytechnic,85MB
+                                                 Bida
+Eth0/0/3                      down    down     SENTIENT-FBN-BIDA-LL |8M
+Eth0/0/4                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/4 Interface
+Eth0/0/5                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/5 Interface
+Eth0/0/6                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/6 Interface
+Eth0/0/7                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/7 Interface
+Eth0/0/8                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/8 Interface
+Eth0/0/9                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/9 Interface
+Eth0/0/10                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/10 Interface
+Eth0/0/11                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/11 Interface
+Eth0/0/12                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/12 Interface
+Eth0/0/13                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/13 Interface
+Eth0/0/14                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/14 Interface
+Eth0/0/15                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/15 Interface
+Eth0/0/16                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/16 Interface
+Eth0/0/17                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/17 Interface
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/24 Interface
+GE0/0/1                       *down   down     HIQOS TECHNOLOGIES BIDA
+GE0/0/2                       up      up       UPINK TO DCN -UPE-M8-GE0/2/6
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif802                     up      up       HUAWEI, Quidway Series, Vlanif802
+                                                Interface
+Vlanif3042                    up      up       HUAWEI, Quidway Series, Vlanif304
+                                               2 Interface
+[ENT-BID-005]    dis cur
+#
+!Software Version V100R006C05
+ sysname ENT-BID-005
+#
+ vlan batch 802 1143 1387 1487 1495 3042 3516
+#
+ undo http server enable
+ undo http secure-server enable
+#
+vlan 802
+ description BS-NEW-SWITCH
+vlan 1143
+ description SENTIENT-FBN-BIDA
+vlan 1387
+ description Federal Polytechnic, Bida
+vlan 1487
+ description Federal Polytechnic, Bida
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 3042
+ description UBA-VPLS
+vlan 3516
+ description HIQOS-TECH
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@b2)1@rS2BNepk)Cit8gLMZb:%@%@
+ local-user bsnoc privilege level 15
+ local-user bsnoc service-type telnet terminal ftp
+ local-user huawei password cipher %@%@`B_1>im1vFOfwL<$05S*SS1Y%@%@
+ local-user huawei privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif802
+ ip address 10.248.246.226 255.255.255.192
+#
+interface Vlanif3042
+ ip address 10.10.10.1 255.255.255.0
+#
+interface Ethernet0/0/1
+ description UBA KUTIGI (JBR802-JBR803-BID005) - UBIQUITY
+ shutdown
+ port link-type access
+ port default vlan 3042
+#
+interface Ethernet0/0/2
+ description CAMPSUFI Federal Polytechnic,85MB  Bida
+ port link-type access
+ port default vlan 1487
+#
+interface Ethernet0/0/3
+ description SENTIENT-FBN-BIDA-LL |8M
+ port link-type trunk
+ port trunk allow-pass vlan 1143
+#
+interface Ethernet0/0/4
+#
+interface Ethernet0/0/5
+#
+interface Ethernet0/0/6
+#
+interface Ethernet0/0/7
+#
+interface Ethernet0/0/8
+#
+interface Ethernet0/0/9
+#
+interface Ethernet0/0/10
+#
+interface Ethernet0/0/11
+#
+interface Ethernet0/0/12
+#
+interface Ethernet0/0/13
+#
+interface Ethernet0/0/14
+#
+interface Ethernet0/0/15
+#
+interface Ethernet0/0/16
+#
+interface Ethernet0/0/17
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ port link-type access
+ port default vlan 802
+#
+interface GigabitEthernet0/0/1
+ description HIQOS TECHNOLOGIES BIDA
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1495 3516
+#
+interface GigabitEthernet0/0/2
+ description UPINK TO DCN -UPE-M8-GE0/2/6
+ port link-type trunk
+ port trunk allow-pass vlan 802 1143 1487 1495 3042 3516
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.193
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100001DE7
+ snmp-agent community read cipher %@%@QEK$8HPK34~H#C'1z`N!cz<|0@m6Ey;zo+eV*r6N4D)Tz<"c,NoFT5|1t4c4pDZU!@0'<+cz%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+port-group link-type
+#
+return
+[ENT-BID-005]

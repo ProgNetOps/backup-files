@@ -1,0 +1,709 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 08:09.36 ? ? /home/mobaxterm ? telnet 10.248.246.168
+Connected to 10.248.246.168.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+GLO1_OWR901_3750>en
+Password:
+GLO1_OWR901_3750#sh int des
+Interface                      Status         Protocol Description
+Vl1                            up             up
+Vl7                            up             up       OWR901-ADNET-SW-MGT-.10
+Vl803                          up             up       SW-MANAGEMENT
+Vl950                          up             up
+Vl989                          admin down     down
+Vl1361                         down           down
+Vl1435                         admin down     down
+Vl1487                         up             up
+Vl1492                         up             up
+Vl1495                         up             up
+Vl1503                         up             up
+Vl1531                         up             up
+Vl1577                         up             up
+Vl1631                         up             up
+Vl1733                         down           down
+Vl1735                         up             up
+Vl1761                         up             up       MANAGEMENT
+Vl1881                         admin down     down
+Vl1999                         admin down     down
+Vl2056                         up             up
+Vl2057                         up             up
+Vl2179                         up             up
+Vl2305                         up             up       DOTMAC-OWERRI
+Vl2429                         up             up
+Vl2970                         up             up
+Vl3035                         down           down
+Vl3039                         up             up
+Vl3042                         up             up
+Vl3116                         admin down     down
+Vl3126                         up             up
+Vl3604                         up             up
+Fa1/0/1                        down           down     ADDAX IZOMBE INT & LL VIA SEPLAT-NERA-RADIO (PRY)
+Fa1/0/2                        up             up       SILVERBOND-OWERRI-INT | 100M
+Fa1/0/3                        up             up       TPGS-OWERRI-OWR901|55Mbps-INTERNET
+Fa1/0/4                        up             up       SEPLAT OFFICE OWERRI
+Fa1/0/5                        up             up       VODACOM-OWERRI-CERAGON-MGT
+Fa1/0/6                        up             up       VODACOM-OWERRI-PH
+Fa1/0/7                        admin down     down     PRIMCORE-DLC 10MB INTERNET
+Fa1/0/8                        down           down     SAVE A LIFE MISSION OWERRI | FIBER INTERNET
+Fa1/0/9                        up             up       FCMB WEATHERAL|ACCESS OWERRI | TEST
+Fa1/0/10                       up             up       VOICE OF LAST DAYS | VASCON |
+Fa1/0/11                       up             up       DICNET OWERRRI
+Fa1/0/12                       up             up       SEPLAT FLOW STATION OWERRI
+Fa1/0/13                       admin down     down     Sovereign Sat Com (Ray Jacobs  School) |10MB
+Fa1/0/14                       down           down     DPR OWERRI INTERNET
+Fa1/0/15                       up             up       WALTERSMITH IBIGWE LEASED CIRCUIT
+Fa1/0/16                       up             up       ADDAX IZOMBE LL VIA NERA RADIO AT IZB001
+Fa1/0/17                       up             up       # SEPLAT OHAJI | BQUBE-OGHUALI-INT
+Fa1/0/18                       admin down     down     IP2-AIR-OWR3-OBINZE-INT | 20M
+Fa1/0/19                       up             up       OWERRI TEST PORT
+Fa1/0/20                       down           down     DOTMAC_OWERRI
+Fa1/0/21                       up             up       NBC OWERRI
+Fa1/0/22                       up             up       ADDAX IZOMBE INTERNET VIA SWIFT RADIO AT IZB001
+Fa1/0/23                       up             up       ICSL-OWERRI[2148]|2Mbps
+Fa1/0/24                       up             up       UBA UMUAKA ORLU OWERRI RD | ORL001-OWR901-RTN905-GE3
+Gi1/0/1                        up             up       TO-DCN-MPLS || PORT-GE0/1/9(PE-B-M8-RTR)
+Gi1/0/2                        up             up       CONNECTION TO ADNET-SW-GE1/2
+GLO1_OWR901_3750#sh run
+Building configuration...
+
+Current configuration : 12876 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+service unsupported-transceiver
+!
+hostname GLO1_OWR901_3750
+!
+boot-start-marker
+boot-end-marker
+!
+no logging console
+enable password 7 09614F1B180B121E0703
+!
+!
+!
+no aaa new-model
+switch 1 provision ws-c3750v2-24ts
+system mtu routing 1960
+vtp mode transparent
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-52565760
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-52565760
+ revocation-check none
+ rsakeypair TP-self-signed-52565760
+!
+!
+crypto pki certificate chain TP-self-signed-52565760
+ certificate self-signed 01
+  30820245 308201AE A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  2F312D30 2B060355 04031324 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 35323536 35373630 301E170D 39333033 30313030 30313435
+  5A170D32 30303130 31303030 3030305A 302F312D 302B0603 55040313 24494F53
+  2D53656C 662D5369 676E6564 2D436572 74696669 63617465 2D353235 36353736
+  3030819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 8100ACDA
+  4D806017 7682BCCC 15AEC8CD 4E6DC9CD 46A797AC C91BF366 0A423727 04325D8C
+  0B046B19 B32B0BED FD6634A4 3FD64A37 DD1E595C A902FEFA 538A12C9 C8D2129B
+  178A10DE 5D00D6DF 1FCAE085 F2AE6BE8 FC1B3592 8FCE4903 61F99134 C9B30DCA
+  DD989626 BEE3E142 75EB69C4 44546DCF 1B1F940C 2FCA8ABA DA660E44 69590203
+  010001A3 71306F30 0F060355 1D130101 FF040530 030101FF 301C0603 551D1104
+  15301382 11474C4F 315F4F57 52393031 5F333735 302E301F 0603551D 23041830
+  168014A2 0A2A84AE C6954329 A4705B9C B07DE492 83BEEB30 1D060355 1D0E0416
+  0414A20A 2A84AEC6 954329A4 705B9CB0 7DE49283 BEEB300D 06092A86 4886F70D
+  01010405 00038181 003D4067 37ADE0E5 7A31A399 4A86D0D8 CAF3BE40 63EE115E
+  EC913303 D0BE66A8 162D9CCB E26EBC5E 0645C551 535A28BA A2685FBD 73C8D834
+  17BC43C7 3AE6A3A9 6F256460 10AF9D30 ACADC307 8F0C0878 1B74DA40 4707B7A2
+  8FD0C218 8DC74459 9244DA99 63462FE6 38640814 D9C516A4 A81B812F 3B51C03C
+  5F50E3E0 59C3F16A 5E
+  quit
+!
+!
+!
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig (STP)
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause l2ptguard
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause pppoe-ia-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause small-frame
+errdisable recovery interval 30
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 7
+ name OWR901-ADNET-SW
+!
+vlan 803
+ name NEW-SW-MGT
+!
+vlan 950
+ name VDT-LAGOS-OWERRI-2
+!
+vlan 953
+ name IMO-STATE-RESIDENCE
+!
+vlan 989
+ name vodcom-owerri
+!
+vlan 1056
+!
+vlan 1079
+ name BQUBE-OGHUALI
+!
+vlan 1136
+ name SWIFT-TALK-MGT
+!
+vlan 1207
+ name IP2AIR-OVURU
+!
+vlan 1228
+ name IP2AIR-OWR3-OBINZE
+!
+vlan 1295
+ name VASCON
+!
+vlan 1358
+ name PRIMCORE-DLC
+!
+vlan 1434
+ name SPACE-MATRIX-OWEI-BS
+!
+vlan 1435
+ name center-point
+!
+vlan 1460
+!
+vlan 1481
+ name TPGS-IM-OWERRI-1
+!
+vlan 1487
+ name NEw_Ceragon_Mgmt_South
+!
+vlan 1492
+ name BS-NERA-4-MGT
+!
+vlan 1493
+ name BS-NERA-3-MGT
+!
+vlan 1495
+ name BS-NERA-2-MGT
+!
+vlan 1496
+ name BS-CERAGON-MGT-2
+!
+vlan 1497
+ name BS-NERA-MGT
+!
+vlan 1498
+ name CERAGON_BS_MGT
+!
+vlan 1500
+ name ceragon-mgmt
+!
+vlan 1503
+ name NERA_MGT
+!
+vlan 1531
+ name UNION-BANK-OKIGWE
+!
+vlan 1532
+ name UNION-BANK-ORLU
+!
+vlan 1536
+ name DICNET-OWERRI
+!
+vlan 1537
+ name SWINTEC
+!
+vlan 1543
+ name SAVE-A-LIFE-MISS
+!
+vlan 1567
+ name Sovereign-SatCom
+!
+vlan 1574
+ name UNION-DOUGLASS-RD
+!
+vlan 1575
+ name UNION-2ND-OWERRI
+!
+vlan 1576
+ name UNION-CONCORDE-HOTEL
+!
+vlan 1577
+ name EXCELSIMO_10MB_LL
+!
+vlan 1600
+!
+vlan 1616
+ name Voice_Of_LastDays
+!
+vlan 1631
+ name hiqos-owerri
+!
+vlan 1640
+ name ACCESS-VPLS
+!
+vlan 1645
+ name VDT-OWERRI-INTERNET
+!
+vlan 1731
+ name FirstBank_IS_MBAISE
+!
+vlan 1732
+ name ROYAL-SPRINGS
+!
+vlan 1735
+ name IP2AIR_NETWORKS
+!
+vlan 1761
+ name MGT
+!
+vlan 1812
+ name NBC-OWERRI
+!
+vlan 1834
+ name FIDELITY_BANK_OW
+!
+vlan 1881
+ name fidelity-vpls
+!
+vlan 1892
+ name IMO-ICT
+!
+vlan 1910
+ name VDT-LAGOS-OWERRI
+!
+vlan 1911
+!
+vlan 1912
+ name Union-Bank3
+!
+vlan 1959
+ name IMO-STATE-GOVT
+!
+vlan 1977
+ name SILVERBOND
+!
+vlan 1999
+ name Union_OkigweRd_OW
+!
+vlan 2056
+ name ORANGE-HEIN-ONITSHA
+!
+vlan 2057
+ name TPGS-OWERRI-|20M-INT
+!
+vlan 2148
+ name ICSL-OWERRI
+!
+vlan 2179
+ name ADDAX-IZOMBE
+!
+vlan 2182
+ name ADDAX-IZOMBE-INT
+!
+vlan 2205
+ name DOTMAC_Owerri
+!
+vlan 2210
+ name excelsimo
+!
+vlan 2305
+ name DOTMAC-LAG-OWERRI
+!
+vlan 2312
+ name SHEKINAH-INTL-SCHOOL
+!
+vlan 2420
+ name ZINOX-IMO-STATE-UNIV
+!
+vlan 2429
+ name SPACEMATRIX
+!
+vlan 2450
+ name RECORDSPAD
+!
+vlan 2832
+ name BOA-OWERRI
+!
+vlan 2911
+ name GLOWORLD-OWERRI
+!
+vlan 2968
+ name INFRA-FOCUS-FUTO
+!
+vlan 2969
+ name SEPLAT-LAG-FLOW-OWR
+!
+vlan 2970
+ name SEPLAT-OHAJI
+!
+vlan 2999
+ name FCMB-VPLS
+!
+vlan 3039
+ name WALTERSMITH-IBIGWE
+!
+vlan 3042
+ name UBA-VPLS
+!
+vlan 3116
+ name cobranet
+!
+vlan 3126
+ name Diamond
+!
+vlan 3514
+ name NNPC-RETAIL-OWERRI
+!
+vlan 3560
+ name JW_WATCHTOWER
+!
+vlan 3604
+ name GRANET-TECH-STM1-INT
+!
+!
+!
+interface FastEthernet1/0/1
+ description ADDAX IZOMBE INT & LL VIA SEPLAT-NERA-RADIO (PRY)
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 2179,2182
+ switchport mode trunk
+ spanning-tree portfast
+!
+interface FastEthernet1/0/2
+ description SILVERBOND-OWERRI-INT | 100M
+ switchport access vlan 1977
+ switchport mode access
+!
+interface FastEthernet1/0/3
+ description TPGS-OWERRI-OWR901|55Mbps-INTERNET
+ switchport access vlan 2057
+ switchport mode access
+ duplex full
+!
+interface FastEthernet1/0/4
+ description SEPLAT OFFICE OWERRI
+ switchport access vlan 2970
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/5
+ description VODACOM-OWERRI-CERAGON-MGT
+ switchport access vlan 1500
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/6
+ description VODACOM-OWERRI-PH
+ switchport access vlan 989
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/7
+ description PRIMCORE-DLC 10MB INTERNET
+ switchport access vlan 1358
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet1/0/8
+ description SAVE A LIFE MISSION OWERRI | FIBER INTERNET
+ switchport access vlan 1543
+ switchport mode access
+ duplex full
+!
+interface FastEthernet1/0/9
+ description FCMB WEATHERAL|ACCESS OWERRI | TEST
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1493,1640,2999
+ switchport mode trunk
+ spanning-tree portfast
+!
+interface FastEthernet1/0/10
+ description VOICE OF LAST DAYS | VASCON |
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1136,1295,1487,1616
+ switchport mode trunk
+ spanning-tree portfast
+!
+interface FastEthernet1/0/11
+ description DICNET OWERRRI
+ switchport access vlan 1536
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/12
+ description SEPLAT FLOW STATION OWERRI
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1493,1497,2969,2970
+ switchport mode trunk
+!
+interface FastEthernet1/0/13
+ description Sovereign Sat Com (Ray Jacobs  School) |10MB
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1487,1567
+ switchport mode trunk
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet1/0/14
+ description DPR OWERRI INTERNET
+ switchport access vlan 1631
+ switchport mode access
+!
+interface FastEthernet1/0/15
+ description WALTERSMITH IBIGWE LEASED CIRCUIT
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1079,3039
+ switchport mode trunk
+!
+interface FastEthernet1/0/16
+ description ADDAX IZOMBE LL VIA NERA RADIO AT IZB001
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 2179,2182
+ switchport mode trunk
+ spanning-tree portfast
+!
+interface FastEthernet1/0/17
+ description # SEPLAT OHAJI | BQUBE-OGHUALI-INT
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1079,1487,2970
+ switchport mode trunk
+ spanning-tree portfast
+!
+interface FastEthernet1/0/18
+ description IP2-AIR-OWR3-OBINZE-INT | 20M
+ switchport access vlan 1228
+ switchport mode access
+ shutdown
+ no cdp tlv location
+ no cdp tlv server-location
+ no cdp tlv app
+ spanning-tree portfast
+!
+interface FastEthernet1/0/19
+ description OWERRI TEST PORT
+ switchport access vlan 1460
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/20
+ description DOTMAC_OWERRI
+ switchport access vlan 2305
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 2305,2306
+ switchport mode trunk
+!
+interface FastEthernet1/0/21
+ description NBC OWERRI
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1487,1495,1812
+ switchport mode trunk
+!
+interface FastEthernet1/0/22
+ description ADDAX IZOMBE INTERNET VIA SWIFT RADIO AT IZB001
+ switchport access vlan 2182
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/23
+ description ICSL-OWERRI[2148]|2Mbps
+ switchport access vlan 2148
+ switchport mode access
+!
+interface FastEthernet1/0/24
+ description UBA UMUAKA ORLU OWERRI RD | ORL001-OWR901-RTN905-GE3
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1487,3042
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/1
+ description TO-DCN-MPLS || PORT-GE0/1/9(PE-B-M8-RTR)
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 7,803,950,953,989,1079,1136,1207,1223,1228,1295
+ switchport trunk allowed vlan add 1358,1434,1435,1460,1481,1487,1492,1493
+ switchport trunk allowed vlan add 1495-1498,1500,1503,1531,1532,1536,1537,1543
+ switchport trunk allowed vlan add 1567,1574-1577,1616,1631,1640,1645,1731,1732
+ switchport trunk allowed vlan add 1735,1761,1812,1834,1881,1892,1910-1912,1959
+ switchport trunk allowed vlan add 1977,1999,2056,2057,2148,2179,2182,2205,2206
+ switchport trunk allowed vlan add 2210,2305,2312,2420,2429,2450,2832,2911
+ switchport trunk allowed vlan add 2968-2970,2999,3035,3039,3042,3116,3126,3514
+ switchport trunk allowed vlan add 3560,3604
+ switchport mode trunk
+ speed nonegotiate
+ spanning-tree bpdufilter enable
+!
+interface GigabitEthernet1/0/2
+ description CONNECTION TO ADNET-SW-GE1/2
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ speed nonegotiate
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan7
+ description OWR901-ADNET-SW-MGT-.10
+ ip address 10.248.248.9 255.255.255.252
+!
+interface Vlan803
+ description SW-MANAGEMENT
+ ip address 10.248.246.168 255.255.255.192
+!
+interface Vlan950
+ ip address 172.27.3.174 255.255.255.248
+!
+interface Vlan989
+ ip address 10.35.9.98 255.255.255.252
+ shutdown
+!
+interface Vlan1361
+ no ip address
+!
+interface Vlan1435
+ ip address 197.211.34.75 255.255.255.248
+ shutdown
+!
+interface Vlan1487
+ no ip address
+!
+interface Vlan1492
+ ip address 10.155.197.88 255.255.255.0
+!
+interface Vlan1495
+ ip address 10.155.199.253 255.255.255.0
+!
+interface Vlan1503
+ ip address 10.155.186.253 255.255.255.0
+!
+interface Vlan1531
+ no ip address
+!
+interface Vlan1577
+ ip address 172.200.10.2 255.255.255.0
+!
+interface Vlan1631
+ ip address 129.205.127.252 255.255.255.248
+!
+interface Vlan1733
+ no ip address
+!
+interface Vlan1735
+ ip address 129.205.118.68 255.255.255.248
+!
+interface Vlan1761
+ description MANAGEMENT
+ ip address 10.248.248.242 255.255.255.252
+!
+interface Vlan1881
+ ip address 192.168.32.200 255.255.255.0
+ shutdown
+!
+interface Vlan1999
+ no ip address
+ shutdown
+!
+interface Vlan2056
+ ip address 192.168.0.100 255.255.255.0
+!
+interface Vlan2057
+ no ip address
+!
+interface Vlan2179
+ no ip address
+!
+interface Vlan2305
+ description DOTMAC-OWERRI
+ ip address 198.198.198.2 255.255.255.248
+!
+interface Vlan2429
+ no ip address
+!
+interface Vlan2970
+ ip address 1.2.1.1 255.255.255.0
+!
+interface Vlan3035
+ ip address 10.15.118.204 255.255.255.0
+!
+interface Vlan3039
+ ip address 10.10.11.26 255.255.255.0
+!
+interface Vlan3042
+ ip address 192.168.219.163 255.255.255.0
+!
+interface Vlan3116
+ ip address 41.203.90.156 255.255.255.248
+ shutdown
+!
+interface Vlan3126
+ ip address 172.35.30.31 255.255.255.0
+!
+interface Vlan3604
+ no ip address
+!
+ip default-gateway 10.248.246.129
+ip classless
+ip route 0.0.0.0 0.0.0.0 10.248.246.129
+ip http server
+no ip http secure-server
+!
+snmp-server community globacom RO
+!
+!
+line con 0
+ password 7 04760A140E2F49420516
+ login
+line vty 0 4
+ session-timeout 10
+ exec-timeout 0 0
+ password 7 062B0E334D400C150918
+ login
+line vty 5 15
+ exec-timeout 0 0
+ password 7 013E07165A0503032D43
+ login
+!
+end
+
+GLO1_OWR901_3750#

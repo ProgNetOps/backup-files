@@ -1,0 +1,195 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:44.43 ? ? /home/mobaxterm ? telnet 10.248.246.107
+Connected to 10.248.246.107.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<ENT-SW-ALR002>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-SW-ALR002]dis int des
+Interface                   Description
+Ethernet0/0/1               FREE
+Ethernet0/0/2               NNPC-NGC-EWEKORO
+Ethernet0/0/3               HUAWEI, Quidway Series, Ethernet0/0/3 Interface
+Ethernet0/0/4               HUAWEI, Quidway Series, Ethernet0/0/4 Interface
+Ethernet0/0/5               HUAWEI, Quidway Series, Ethernet0/0/5 Interface
+Ethernet0/0/6               HUAWEI, Quidway Series, Ethernet0/0/6 Interface
+Ethernet0/0/7               HUAWEI, Quidway Series, Ethernet0/0/7 Interface
+Ethernet0/0/8               HUAWEI, Quidway Series, Ethernet0/0/8 Interface
+Ethernet0/0/9               HUAWEI, Quidway Series, Ethernet0/0/9 Interface
+Ethernet0/0/10              HUAWEI, Quidway Series, Ethernet0/0/10 Interface
+Ethernet0/0/11              HUAWEI, Quidway Series, Ethernet0/0/11 Interface
+Ethernet0/0/12              HUAWEI, Quidway Series, Ethernet0/0/12 Interface
+Ethernet0/0/13              HUAWEI, Quidway Series, Ethernet0/0/13 Interface
+Ethernet0/0/14              HUAWEI, Quidway Series, Ethernet0/0/14 Interface
+Ethernet0/0/15              HUAWEI, Quidway Series, Ethernet0/0/15 Interface
+Ethernet0/0/16              HUAWEI, Quidway Series, Ethernet0/0/16 Interface
+Ethernet0/0/17              HUAWEI, Quidway Series, Ethernet0/0/17 Interface
+Ethernet0/0/18              HUAWEI, Quidway Series, Ethernet0/0/18 Interface
+Ethernet0/0/19              HUAWEI, Quidway Series, Ethernet0/0/19 Interface
+Ethernet0/0/20              HUAWEI, Quidway Series, Ethernet0/0/20 Interface
+Ethernet0/0/21              HUAWEI, Quidway Series, Ethernet0/0/21 Interface
+Ethernet0/0/22              HUAWEI, Quidway Series, Ethernet0/0/22 Interface
+Ethernet0/0/23              HUAWEI, Quidway Series, Ethernet0/0/23 Interface
+Ethernet0/0/24              SWITCH-MGT
+GigabitEthernet0/0/1        UPLINK TO DCN ROUTER (M8-GE0/1/8)
+GigabitEthernet0/0/2        FBN-EWEKORO | 4Mbps
+GigabitEthernet0/0/3        FREE
+GigabitEthernet0/0/4        IOTECH-EWEKORO | 55M
+NULL0                       HUAWEI, Quidway Series, NULL0 Interface
+Vlanif804                   HUAWEI, Quidway Series, Vlanif804 Interface
+[ENT-SW-ALR002]     dis cur
+#
+!Software Version V100R005C01SPC100
+ sysname ENT-SW-ALR002
+#
+ vlan batch 804 1272 1494 2336 3475
+#
+ undo http server enable
+#
+ drop illegal-mac alarm
+#
+vlan 804
+ description SWITCH-MGT
+vlan 1272
+ description FBN-EWEKORO
+vlan 1494
+ description NERA-MGT
+vlan 2336
+ description IOTECH-EWEKORO
+vlan 3475
+ description NNPC-NGC-EWEKORO
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password simple admin
+ local-user admin service-type http
+ local-user bsnoc password cipher RB!G'1+"PX61[a"FZ7=S#!!!
+ local-user bsnoc privilege level 15
+ local-user bsnoc service-type telnet terminal ftp
+ local-user mathewo password cipher X.`EKBWM!^BU4Z(*%FTCV!!!
+ local-user mathewo privilege level 15
+ local-user mathewo service-type telnet terminal ftp
+#
+interface Vlanif804
+ ip address 10.248.246.107 255.255.255.192
+#
+interface Ethernet0/0/1
+ description FREE
+ port link-type access
+#
+interface Ethernet0/0/2
+ description NNPC-NGC-EWEKORO
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3475
+#
+interface Ethernet0/0/3
+#
+interface Ethernet0/0/4
+#
+interface Ethernet0/0/5
+#
+interface Ethernet0/0/6
+#
+interface Ethernet0/0/7
+#
+interface Ethernet0/0/8
+#
+interface Ethernet0/0/9
+#
+interface Ethernet0/0/10
+#
+interface Ethernet0/0/11
+#
+interface Ethernet0/0/12
+#
+interface Ethernet0/0/13
+#
+interface Ethernet0/0/14
+#
+interface Ethernet0/0/15
+#
+interface Ethernet0/0/16
+#
+interface Ethernet0/0/17
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ description SWITCH-MGT
+ port link-type access
+ port default vlan 804
+#
+interface GigabitEthernet0/0/1
+ description UPLINK TO DCN ROUTER (M8-GE0/1/8)
+ port link-type trunk
+ port trunk allow-pass vlan 804 1272 1494 2336 3475
+ jumboframe enable 13296
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/2
+ description FBN-EWEKORO | 4Mbps
+ port link-type access
+ port default vlan 1272
+ jumboframe enable 13296
+#
+interface GigabitEthernet0/0/3
+ description FREE
+ jumboframe enable 13296
+#
+interface GigabitEthernet0/0/4
+ description IOTECH-EWEKORO | 55M
+ port link-type access
+ port default vlan 2336
+ jumboframe enable 13296
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100003388
+ snmp-agent community read cipher ^D#U[\Q.+H.9]T((+V>!H\"TX$_S#6.NM(0=0\)*5WU!
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ idle-timeout 0 0
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[ENT-SW-ALR002]

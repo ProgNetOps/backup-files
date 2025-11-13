@@ -1,0 +1,340 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 08:18.49 ? ? /home/mobaxterm ? telnet 10.248.249.41
+Connected to 10.248.249.41.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<ENT-S3700-IBD035>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-S3700-IBD035]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/1 Interface
+Eth0/0/2                      *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/2 Interface
+Eth0/0/3                      *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/3 Interface
+Eth0/0/4                      *down   down     7UP IBADAN CERAGON
+Eth0/0/5                      *down   down     seven up reserved port
+Eth0/0/6                      *down   down     GUINESS IBD INT - DIRECT IP CERAG
+                                               ON RADIO
+Eth0/0/7                      *down   down     GUINESS test
+Eth0/0/8                      *down   down     STERLING NCR DUGBE
+Eth0/0/9                      down    down     ACCESS BANK DUGBE
+Eth0/0/10                     down    down     CERAGON_MGT
+Eth0/0/11                     up      up       FIDELITY BANK IBADAN
+Eth0/0/12                     down    down     PLOARIS BANK (SKYE) LEBANON
+Eth0/0/13                     up      up       ACCESS BANK RING-ROAD{IBD228-IBD0
+                                               35}
+Eth0/0/14                     up      up       GLOWSHOP RING ROAD
+Eth0/0/15                     up      up       WEST METRO (PAGE BANK) IBADAN
+Eth0/0/16                     down    down     Free Port
+Eth0/0/17                     up      up       SOMOTEX NIG LTD IBADAN | 5MB
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     SWITCH-MGT
+GE0/0/1                       *down   down     CHOICE2MOBILE-INT | 155M
+GE0/0/2                       up      up       ONEDATA FEMI_JOHNSON_IBW | 1326
+GE0/0/3                       up      up       TRUNK-TO-DCN-IP/MPLS[GE0/5/3]
+GE0/0/4                       down    down     IPEXPRESS COCOA HOUSE-IBW [VLAN 2
+                                               663]|150Mbps
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif1326                    up      up       HUAWEI, Quidway Series, Vlanif132
+                                               6 Interface
+Vlanif1498                    up      up       HUAWEI, Quidway Series, Vlanif149
+                                               8 Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1549                    up      down     HUAWEI, Quidway Series, Vlanif154
+                                               9 Interface
+Vlanif1640                    up      up       HUAWEI, Quidway Series, Vlanif164
+                                               0 Interface
+Vlanif1915                    up      up       HUAWEI, Quidway Series, Vlanif191
+                                               5 Interface
+Vlanif2468                    up      up       HUAWEI, Quidway Series, Vlanif246
+                                               8 Interface
+[ENT-S3700-IBD035]    dis cur
+#
+!Software Version V100R006C05
+ sysname ENT-S3700-IBD035
+#
+ vlan batch 1161 1326 1353 1492 1495 1498 1501 1549 1640 1830
+ vlan batch 1833 1881 1894 1915 2258 2468 2663 2908 3034 to 3035 3437
+#
+lldp enable
+#
+ undo http server enable
+ undo http secure-server enable
+#
+vlan 1161
+ description hyperia-iba
+vlan 1326
+ description ONEDATA FEMI_J
+vlan 1353
+ description Fidelity Ibadan Internet
+vlan 1492
+ description BS-NERA-4-MGT
+vlan 1495
+ description NERA MGT
+vlan 1498
+ description CERAGON_MGT
+vlan 1501
+ description BS-MGT
+vlan 1549
+ description UNION-IBADAN-BANKRD-DUGBE
+vlan 1640
+ description ACCESS-BANK-LINKS
+vlan 1830
+ description fidelity
+vlan 1833
+ description SOMOTEX-NIG-IBADAN
+vlan 1881
+ description fidelity-vpls
+vlan 1894
+ description CHOICE2MOBILE-INT
+vlan 1915
+ description Guiness_Internet _Ibadan
+vlan 2258
+ description West Metro
+vlan 2468
+ description SEVEN UP IBD MPLS
+vlan 2663
+ description IPEXPRESS COCOA-HOUSE
+vlan 2908
+ description TEST
+vlan 3034
+ description STERLING_BANK
+vlan 3035
+ description SKYE BANK
+vlan 3437
+ description GLOWSHOP RING ROAD
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@qJ4OI"$uFL]/w;<Eh[CXSm!=%@%@
+ local-user bsnoc privilege level 15
+ local-user bsnoc service-type telnet terminal ssh ftp
+#
+interface Vlanif1
+#
+interface Vlanif1326
+ ip address 10.10.10.1 255.255.255.0
+#
+interface Vlanif1498
+ ip address 10.155.194.2 255.255.255.0
+#
+interface Vlanif1501
+ ip address 10.248.249.41 255.255.255.0
+#
+interface Vlanif1549
+#
+interface Vlanif1640
+ ip address 1.1.1.1 255.255.255.0
+#
+interface Vlanif1915
+ ip address 100.100.100.1 255.255.255.0
+#
+interface Vlanif2468
+ ip address 192.168.10.101 255.255.255.0
+#
+interface Ethernet0/0/1
+#
+interface Ethernet0/0/2
+ shutdown
+#
+interface Ethernet0/0/3
+ shutdown
+ port link-type access
+#
+interface Ethernet0/0/4
+ description 7UP IBADAN CERAGON
+ shutdown
+ port link-type access
+ port default vlan 2468
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/5
+ description seven up reserved port
+ shutdown
+ port link-type access
+ port default vlan 2468
+#
+interface Ethernet0/0/6
+ description GUINESS IBD INT - DIRECT IP CERAGON RADIO
+ shutdown
+ port link-type access
+ port default vlan 1915
+#
+interface Ethernet0/0/7
+ description GUINESS test
+ shutdown
+ port link-type access
+ port default vlan 1915
+#
+interface Ethernet0/0/8
+ description STERLING NCR DUGBE
+ shutdown
+ port link-type access
+ port default vlan 3034
+#
+interface Ethernet0/0/9
+ description ACCESS BANK DUGBE
+ port link-type access
+ port default vlan 1640
+ qos lr outbound cir 6144 cbs 768000
+ qos lr inbound cir 6144 cbs 768000
+#
+interface Ethernet0/0/10
+ description CERAGON_MGT
+ port link-type access
+ port default vlan 1498
+#
+interface Ethernet0/0/11
+ description FIDELITY BANK IBADAN
+ port link-type trunk
+ port trunk allow-pass vlan 1353 1503 1881
+#
+interface Ethernet0/0/12
+ description PLOARIS BANK (SKYE) LEBANON
+ port link-type trunk
+ port trunk allow-pass vlan 1495 3035
+#
+interface Ethernet0/0/13
+ description ACCESS BANK RING-ROAD{IBD228-IBD035}
+ port link-type access
+ port default vlan 1640
+ qos lr outbound cir 10240 cbs 1280000
+ qos lr inbound cir 10240 cbs 1280000
+#
+interface Ethernet0/0/14
+ description GLOWSHOP RING ROAD
+ port link-type access
+ port default vlan 3437
+#
+interface Ethernet0/0/15
+ description WEST METRO (PAGE BANK) IBADAN
+ port link-type trunk
+ port trunk allow-pass vlan 1492 2258
+#
+interface Ethernet0/0/16
+ description Free Port
+#
+interface Ethernet0/0/17
+ description SOMOTEX NIG LTD IBADAN | 5MB
+ port link-type access
+ port default vlan 1833
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ description SWITCH-MGT
+ port link-type access
+ port default vlan 1501
+#
+interface GigabitEthernet0/0/1
+ description CHOICE2MOBILE-INT | 155M
+ shutdown
+ port link-type access
+ port default vlan 1894
+#
+interface GigabitEthernet0/0/2
+ description ONEDATA FEMI_JOHNSON_IBW | 1326
+ port link-type access
+ port default vlan 1326
+#
+interface GigabitEthernet0/0/3
+ description TRUNK-TO-DCN-IP/MPLS[GE0/5/3]
+ port link-type trunk
+ port trunk allow-pass vlan 1161 1326 1335 1353 1492 1495 1498 1501 1503 1549
+ port trunk allow-pass vlan 1640 1830 1833 1881 1894 1915 2258 2468 2663 3034 to 3035
+ port trunk allow-pass vlan 3437
+ undo negotiation auto
+ combo-port copper
+#
+interface GigabitEthernet0/0/4
+ description IPEXPRESS COCOA HOUSE-IBW [VLAN 2663]|150Mbps
+ port link-type access
+ port default vlan 2663
+ combo-port fiber
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100002AD1
+ snmp-agent community read cipher %@%@I`&&JE.2>+[dFeA+!w$+SpB@6|'KDgFTyA;|50KB^BP'pBCS7irwSWVs:U#B[9KN9PTUBLSp%@%@
+ snmp-agent community read cipher %@%@75A#I-gwP~sS;E#(@777z94=3Mb:K>h~AI^~TRKHG/XM94@z8%I4JK6{[<fiv|@rul864Iz9%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[ENT-S3700-IBD035]
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                                                   ?
+
+ ? 2025-11-13 ? ? 08:25.57 ? ? /home/mobaxterm ?

@@ -1,0 +1,1571 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:22.07 ? ? /home/mobaxterm ? telnet 10.248.248.14
+Connected to 10.248.248.14.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:Entering character mode
+Escape character is '^]'.
+bsnoc
+Password:
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2025-11-13 13:40:06-05:13.
+<SAKA25-HU-S5310-CORE-SW>sys
+Enter system view, return user view with Ctrl+Z.
+[SAKA25-HU-S5310-CORE-SW]dis int des
+PHY: Physical
+*down: administratively down
+(l): loopback
+(s): spoofing
+(E): E-Trunk down
+(b): BFD down
+(e): ETHOAM down
+(dl): DLDP down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth-Trunk21                   up      up       GLO1 HUAWEI NE ROUTER
+Eth-Trunk21.507               up      down     TPGS-FCML |1OMB
+Eth-Trunk21.1235              up      down     TPGS_ALABA
+Eth-Trunk21.1784              up      down     BEYOND LIMITS  ACADEMY |10MB
+Eth-Trunk21.1785              up      down     SOE TRADING (DE-QUALITY GARDENS)
+                                                |10MB
+GE0/0/1                       up      up       Marine Platform 15Mb Internet
+GE0/0/2                       down    down     TRUSTFUND PENSION BISHOP KALE
+GE0/0/3                       up      up       CONNECTION-TO-SAKA25PE01(PORT 2/1
+                                               /7)-ALU-PE
+GE0/0/4                       up      up       trunk_facing_glo1_DCN_Routr_4_pay
+                                               mentgatway
+GE0/0/5                       down    down     IGI INSURANCE-BISH-OLUWOLE-RADIO
+                                               | 110M
+GE0/0/6                       up      up       HYPERIA OCEAN PARADE
+GE0/0/7                       up      up       Trunk to Cisco_2960_2
+GE0/0/8                       up      up       ORANGE-MOBIL-200M-LL
+GE0/0/9                       up      up       NIBS-SECONDARY-INT-FIBER |310M
+GE0/0/10                      up      up       INDUSTRIAL & GENERAL INSURANCE (I
+                                               GI) | 50MB INTERNET
+GE0/0/11                      up      up       CONNECTION-GLOMOBILE-SERVICES
+GE0/0/12                      up      up       MCKINSEY & CO INT | 200M
+GE0/0/13                      up      up       BQUBE LAGOS 130MB-INTERNET!!L3VPN
+                                               -Eastern Obollo Akwa Ibom (STERLI
+                                               NG OIL)
+GE0/0/14                      up      up       IGI-BISH-OLUWOLE-FIBER-INT | 110M
+GE0/0/15                      up      up       SAHARA-NEW-HQ-INT | 155M
+GE0/0/16                      up      up       GlobeNode Ozumba VI |5OMB
+GE0/0/17                      up      up       TRUNK GLO-LAGOS-EXPERIENCE-CENTER
+GE0/0/18                      down    down     OLAM INTERNET 8M
+GE0/0/19                      up      up       TRUNK TO CISCO 3560
+GE0/0/19.250                  up      down     FIRST BANK HQ LAYER 3
+GE0/0/20                      up      up       Trunk to DCN PE-B GE1/0/14
+GE0/0/21                      up      up       CONNECTION-ADC(EKO-ATLANTIC)
+GE0/0/22                      up      up       ACCESS-BANK-HQ-BACKHAUL-LIGALI
+GE0/0/23                      up      up       UPLINK TO SEPLAT IKOYI
+GE0/0/24                      down    down     TRUNK TO GLO POP & ALLIANCE FRANC
+                                               AISE (MIKE ADENUGA CENTER)
+MEth0/0/1                     down    down
+NULL0                         up      up(s)
+Vlanif1                       up      down
+Vlanif2                       up      up
+Vlanif10                      up      up
+Vlanif20                      up      up
+Vlanif55                      up      up
+Vlanif88                      up      up
+Vlanif92                      up      up       TELNET TO 192.168.5.11 TO PAYMENT
+                                                GATEWAY
+Vlanif115                     up      up
+Vlanif126                     up      up
+Vlanif131                     up      up
+Vlanif222                     up      down
+Vlanif250                     up      up
+Vlanif518                     up      up
+Vlanif523                     up      up
+Vlanif530                     up      up
+Vlanif566                     up      up
+Vlanif804                     up      down
+Vlanif805                     up      up
+Vlanif809                     up      up       ALTERNATIVE-MGT-ADC-GLO-SWITCH
+Vlanif1049                    up      down
+Vlanif1065                    up      up
+Vlanif1117                    up      up
+Vlanif1137                    up      up
+Vlanif1181                    up      up
+Vlanif1211                    up      up
+Vlanif1258                    up      down
+Vlanif1266                    up      up
+Vlanif1296                    up      down
+Vlanif1312                    up      down
+Vlanif1318                    up      up
+Vlanif1355                    up      up
+Vlanif1501                    up      up
+Vlanif1503                    up      up
+Vlanif1578                    up      up
+Vlanif1581                    up      up
+Vlanif1640                    up      up
+Vlanif1748                    up      up
+Vlanif1781                    *down   down
+Vlanif1825                    up      up
+Vlanif1867                    up      down
+Vlanif1900                    up      up
+Vlanif2150                    up      down
+Vlanif2786                    up      up
+Vlanif2970                    up      up
+Vlanif3181                    up      up
+Vlanif3849                    up      up
+XGE0/0/1                      up      up       TRUNK TO SAKA25-NE40EX8-AR-C-GE3/
+                                               0/1
+XGE0/0/2                      up      up       TO-GLO1-HUAWEI-IPD-UPSTAIRS
+XGE0/0/3                      up      up       COOL_FM_10G
+XGE0/0/4                      up      up       CONNECTION-GLO1-HUAWEI-ROUTER-UPS
+                                               TAIRS(NE40E-X16A-1/1/5)-PHYSICAL-
+                                               LABEl-5/0/3
+[SAKA25-HU-S5310-CORE-SW]  dis cur
+!Software Version V200R003C00SPC300
+#
+sysname SAKA25-HU-S5310-CORE-SW
+#
+vlan batch 2 9 to 10 20 55 60 88 92 to 93 98 100 105
+vlan batch 112 115 117 to 118 126 131 to 134 141 143 145 to 147 155 to 156 166 to 167
+vlan batch 180 to 181 189 to 190 199 201 222 232 244 250 300 315 to 316
+vlan batch 501 to 511 513 to 520 523 to 525 530 566 585 600 602 670 804 to 805
+vlan batch 809 811 to 812 900 916 922 930 987 1019 1021 1024 to 1034
+vlan batch 1036 1039 1048 to 1049 1051 1058 to 1060 1064 to 1065 1067 to 1068 1081 1093 1096 to 1100
+vlan batch 1102 to 1105 1111 1114 1116 to 1117 1119 1127 to 1128 1132 to 1137 1163 1166 to 1167 1175 to 1176
+vlan batch 1178 to 1183 1186 1191 1211 1223 to 1224 1226 to 1227 1229 to 1230 1232 to 1258 1261 to 1263 1265 to 1275
+vlan batch 1277 1279 to 1286 1288 to 1289 1291 1293 to 1294 1296 to 1299 1303 1308 to 1314 1316 to 1324 1326 to 1355
+vlan batch 1360 to 1361 1363 to 1365 1367 to 1369 1371 to 1407 1411 to 1417 1419 to 1421 1423 to 1424 1426 1428 to 1429 1443
+vlan batch 1473 1481 to 1483 1486 to 1489 1491 1494 1499 to 1501 1503 1506 to 1507 1543 1551 to 1552
+vlan batch 1554 1556 to 1559 1576 to 1579 1581 1593 1599 1603 1632 1640 1644
+vlan batch 1651 to 1665 1667 to 1674 1676 to 1679 1681 to 1682 1684 1689 1692 to 1694 1710 to 1712 1731 to 1732 1748
+vlan batch 1750 1753 to 1754 1756 to 1757 1762 1765 1772 to 1773 1775 to 1779 1781 1783 to 1786 1788 to 1790
+vlan batch 1796 1820 to 1821 1823 to 1825 1839 1848 1853 1864 1867 1875 1896
+vlan batch 1900 1904 to 1909 1911 1927 to 1930 1967 to 1969 1971 1976 to 1979 1982 to 1983 1985 2057 to 2058
+vlan batch 2060 2085 2114 2122 2127 to 2128 2144 2150 to 2151 2175 2263 2267
+vlan batch 2321 to 2322 2415 to 2416 2437 to 2438 2511 2521 2533 2539 to 2540 2554 2701 2708
+vlan batch 2786 to 2787 2830 2901 2969 to 2970 2986 to 2989 3007 3105 3126 3164 to 3167 3181
+vlan batch 3195 3200 3221 3241 3671 3771 3849 3871 3874 3916
+#
+lldp enable
+#
+undo http server enable
+undo http secure-server enable
+#
+undo nap slave enable
+#
+diffserv domain default
+#
+ip vpn-instance First_Bank_L3
+#
+vlan 2
+ description Swt Mgmt Cisco 3750_01
+vlan 9
+ description OCEANPARADE-2
+vlan 10
+ description MGT
+vlan 55
+ description NBC-SW-MGT
+vlan 60
+ description COOLFM-INTERNET2-BREAKOUT-BACKUP
+vlan 88
+ description FBN-WEMA-SW-MGT
+vlan 92
+ description BS_RM_facing42
+vlan 93
+ description ENT-NOC-INT
+vlan 98
+ description SWITCH-MGT
+vlan 100
+ description SEPLAT_INTERNET
+vlan 105
+ description FRIGO-GLASS-INT-HQ
+vlan 112
+ description PRODECO-LAGOS-HQ-INT
+vlan 115
+ description trustfund
+ name TRUST-FUND
+vlan 117
+ description AXA-MANSARD-HQ-INT
+vlan 118
+ description Swt Mgmt sahara switch
+vlan 126
+ description HUAWEI-CISCO-CONNECT
+vlan 131
+ description STERLING-BANK-HQ-SW-MG
+vlan 133
+ description MIKE ADENUGA CENTRE PROJECT-LIVE-STREAM-200M-INT-FIB-LM
+vlan 134
+ description GLO EXPERIENCE CENTRE LAGOS
+vlan 141
+ description ETRANSZACT-INT
+vlan 143
+ description Qrious_payment_gateway
+vlan 146
+ name Click_a_tell(IS)_to_Stanbic_IBT
+vlan 147
+ description Naira_time
+vlan 155
+ description OLAM-INTERNET
+vlan 156
+ description CONOIL-MAT-INT
+vlan 166
+ description NBC-INTERNET
+vlan 167
+ description TPGS-NESG-IKOYI
+vlan 180
+ description description Cedarview Lekki
+ name CHAMS-APN
+vlan 181
+ description IGI INSURANCE
+vlan 189
+ description ENT-NOC-NMS
+vlan 190
+ description COOL_FM_INTERNET
+vlan 199
+ description Quinn-MACgrath Machine tools
+vlan 201
+ description COOLLINK RACKCENTRE
+vlan 222
+ description CLICKATEL-RACK-CENT-BACKUP
+ name CLICKATEL-BACKUP
+vlan 232
+ description AMIN-INTERNET
+vlan 244
+ description Aiteo_Lekki
+vlan 250
+ description FIRSTBANK LAYER3 HQ
+vlan 300
+ description FRIGO-GLASS-IBADAN
+vlan 315
+ description CHICASON
+vlan 316
+ description IGI-BISH-OLUWOLE-INT
+vlan 501
+ description BQUBE Lagos
+vlan 502
+ description Orange Merck Pharmaceutical
+vlan 503
+ description GlobeNode Ozumba VI
+vlan 504
+ description TPGS  Victoria Island-3
+vlan 505
+ description SAMSUNG TEMPLE ROAD IKOYI
+vlan 506
+ description Alpha quantum VI (Churchgate)
+vlan 507
+ description TPGS-FCML-10M
+vlan 509
+ description Petrolog internet
+vlan 510
+ description MARINE-PLATFORM
+vlan 511
+ description NBC LL
+vlan 513
+ description AFAMFA OIL IKOYI
+vlan 514
+ description TPGS AHMADU BELLO-5THFLR-LAG110|50MB-INTERNET
+vlan 515
+ description STERLING_OIL
+vlan 516
+ description MCKINSEY-FIBER-60M-INTERNET
+vlan 517
+ description RUSSELSMITH-VI-LAG129|50MB-INTERNET
+vlan 518
+ description SAHARA-NEW-HQ-OFFICE-INT
+vlan 519
+ description SOUTHERN-SUN-HOTEL
+vlan 520
+ description ACCESS-BANK-L3-LIGALI
+vlan 523
+ description ILE-OJA-MALL-INT
+vlan 524
+ description PRIME-ATLANTIC-INT2
+vlan 525
+ description NIBS-SECONDARY-INT-FIBER
+vlan 530
+ description Wema Radio Backup
+vlan 566
+ description DELLOITE-LAGOS-HQ-INT
+vlan 585
+ name CLOUDCOVER-APN
+vlan 600
+ name GLO-IS-NBC-Treasury
+vlan 602
+ description ACCESS-BANK-CAMPUS-L3-LL
+vlan 670
+ description CALEB-UNIV-IKORODU-STM1-INTERNET
+vlan 804
+ description SWITCH-MGT-4
+vlan 805
+ description Switch-Mgmt
+vlan 809
+ description TEM-SWT-MGT-ADC
+vlan 811
+ name ZEBWEB_SAKAJO
+vlan 812
+ description CONOIL-HQ-INT
+vlan 900
+ description SEPLAT
+vlan 916
+ description CONNECTION-PE-B-PRTG-RTR
+vlan 922
+ description SEPLAT_FIBER
+vlan 930
+ name COOLink-SPARKLE-INTERNET
+vlan 987
+ name OCEANPARADE
+vlan 1019
+ description UNILORIN-LIAISON-INT
+vlan 1021
+ description Tek Expert Ltd
+vlan 1024
+ description DEEPER LIFE ONDO
+vlan 1025
+ description KWASU ILORIN-MAIN-CAMPUS-INT-465M
+vlan 1026
+ description TPGS-DOMI-WHOUSE-INT-IBG001|100M
+vlan 1027
+ description EDUREXTECH-LAUTECH-INTERNET-OGB008|155M
+vlan 1028
+ description BEDC-TELEMET6-ONDO
+vlan 1029
+ description BEDC-TELEMET6-OWO
+vlan 1030
+ description BEDC-TELEMET-AKURE-INT
+vlan 1031
+ description BEDC-TELEMET6-IGBARA-OKE
+vlan 1032
+ description BEDC-IDDO-EKITI
+vlan 1033
+ description BEDC-TELEMET-ADO-EKITI-INT
+vlan 1034
+ description CAMPUSFI-LTD-INT
+vlan 1036
+ description DIC-MEDIA-ASABA-INT
+vlan 1039
+ description ZARTECH-IBADAN-INT
+vlan 1048
+ description GIANTSWORK-OWO-002-|155M-INTERNET
+vlan 1049
+ description DEEPER LIFE-ADO-ADO-002-|310M-INTERNET
+vlan 1051
+ description DEEPER-LIFE-CHURCH
+vlan 1058
+ description FETS-IKOYI-INT
+vlan 1059
+ description ETACT ILORIN
+vlan 1060
+ description CBN-KANO-1G-INT-PARALLEL
+vlan 1064
+ description NIGERIA AIRFORCE
+vlan 1065
+ description INNOVASTRA(GEN-HOSPITAL-OFFA)-OFFA002 |3Mb-INTERNET
+vlan 1067
+ description FBN MAKURDI - MAK003 |4M-LEASED-LINE
+vlan 1068
+ description NIG-BAPTIST-THE-SEMINARY-OGBOMOSHO-INT-PRIMARY
+vlan 1081
+ description COOL_ABUJA
+vlan 1093
+ description ADROITH-METERING-INT
+vlan 1096
+ description LADOL-APAPA-INT
+vlan 1097
+ description IBADAN-AIRPORT-INT
+vlan 1098
+ description IGCE-NETWORKS LAG120 |80M INTERNET
+vlan 1099
+ description STERLING HEALTH
+vlan 1100
+ description TITAN-IKEJA-INT-15M-LAG219
+vlan 1102
+ description BLUENET-LTD-INT-100M-LOS121
+vlan 1103
+ description VDT OYO 2
+vlan 1104
+ description AZURA-POWER-BENIN
+vlan 1105
+ description IO-TECH-SURULERE-INT
+vlan 1111
+ name is-pz
+vlan 1114
+ description GEREGU PLC
+vlan 1116
+ description TPGS GLOVER COURT
+vlan 1117
+ description ONT009-SAKA25-OGATECH-LL
+vlan 1119
+ description BIODUN OYELEKE CONSULTING
+vlan 1127
+ description ROYAL-INT-YABA
+vlan 1128
+ description DEJAVU HOTEL!AKURE INT!10M
+vlan 1132
+ description IO Tech Ikotun
+vlan 1133
+ description KWIRS-INT
+vlan 1134
+ description UNILORIN-MINI-INT
+vlan 1135
+ description VAS-TECH-FRSC-OJODU-INT
+vlan 1136
+ description FOUNTAIN-UNIV-INT
+vlan 1137
+ description PANOCEAN-WARRI_LAGOS-4M-LL
+vlan 1163
+ description ELECTRONIC PAYPLUS
+vlan 1166
+ description BOURBON-INTEROIL-MD-RESIDENCE-BANANA-ISLAND-INT-20M
+vlan 1167
+ description HI-CONNECT-NETWORK-415MB-INT
+vlan 1175
+ description IBILE-HOLDINGS-10M-INTERNET
+vlan 1176
+ description AMDEUS-MARKETING
+vlan 1178
+ description HI-KONNECT
+vlan 1179
+ description HI-KONNECT
+vlan 1180
+ description DICNET-OSHOGBO-INT
+vlan 1181
+ description TPGS-DEEP-V/I
+vlan 1182
+ description JUBALI-AGROTECH-IBADAN-RADIO-BACKUP-IBD024-IBD079-R-CERAGON-IP20
+vlan 1183
+ description AIML-SIMAWA-INT
+vlan 1186
+ description JUBALI-AGROTECH-RADIO
+vlan 1191
+ description ABRAHAM-ADESANYA-POLY-INT
+vlan 1211
+ description PANOCEAN-BENIN-LL
+vlan 1223
+ description ALPHA-QUANTUM-LAG375B-INTERNET|40MB
+vlan 1224
+ description God is Good (GIG) Group, LekkiE-INT| 45MB
+vlan 1226
+ description Money Master PSB- IDC
+vlan 1227
+ description Money Master HQTS -LL- IDC
+vlan 1229
+ description Afrosunshine Global
+vlan 1230
+ description cINEFORE-SERVER-155M-INTERNET-PRIMARY(RIVERS-STATE)- IDC-
+vlan 1232
+ description MACHPERSON-UNIV-IBADAN
+vlan 1233
+ description Smooth Multiservice-INT-155MB
+vlan 1234
+ description DEEPERLIFE-HQ-INT
+vlan 1235
+ description TPGS-ALABA
+vlan 1236
+ description FIRSTBANK-ONDO-8M
+vlan 1237
+ description Springfield (Kewalram)
+vlan 1238
+ name FBN-OBUBRA
+vlan 1239
+ description FBN-UNN-NSUKA
+vlan 1240
+ description FBN UWANNA
+vlan 1241
+ description FBN-AGODI-STM1
+vlan 1242
+ description FBN GWAGWALADA
+vlan 1243
+ description FBN OWERRI RD ONITSHA|45M
+vlan 1244
+ description FBN STATION RD PHC|155M
+vlan 1245
+ description FBN UGHELLI|45M
+vlan 1246
+ description FBN AKPAKPAVA BENIN|155M
+vlan 1247
+ description FBN ORE-l3
+vlan 1248
+ description FBN AWE| OYO|4M
+vlan 1249
+ description FBN ABUJA|155M
+vlan 1250
+ description FBN ILE-OLUJI
+vlan 1251
+ description FBN KANKIA
+vlan 1252
+ description FBN IKARE
+vlan 1253
+ description FBN-KANO-ZARIA-RD
+vlan 1254
+ description FBN IKOLE EKITI
+vlan 1255
+ description FBN OGIDI ANAMBRA
+vlan 1256
+ description FBN UNIZIK ANAMBRA
+vlan 1257
+ description FBN DEI-DEI ABUJA
+vlan 1258
+ description FBN KUBWA ABUJA
+vlan 1261
+ description FBN MALUMFASHI
+vlan 1262
+ description FBN VANDEIKYA, BENUE
+vlan 1263
+ description Lagos Business school
+vlan 1265
+ description FBN BASSA JOS
+vlan 1266
+ description FBN DAMBATTA
+vlan 1267
+ description FBN-ABEOKUTA-MAIN
+vlan 1268
+ name FBN-L3-ISEYIN
+vlan 1269
+ description FBN LAFENWA
+vlan 1270
+ description FBN EGBE KOGI
+vlan 1271
+ description FBN-LAYER3-GBOKO
+vlan 1272
+ description FBN EWEKORO
+vlan 1273
+ description FBN BICHI
+vlan 1274
+ description FBN AGBOR
+vlan 1275
+ description FBN OTIKIPUPA
+vlan 1277
+ description Data Visibility Ogijo
+vlan 1279
+ description FBN-SEME
+vlan 1280
+ description TPGS ILUPEJU-3
+vlan 1281
+ description TPGS LEKKI-4
+vlan 1282
+ description TPGS Ketu-1
+vlan 1283
+ description TPGS IPAJA-1
+vlan 1284
+ description TPGS ILUPEJU-6
+vlan 1285
+ description Data Visibility Giboligi
+vlan 1286
+ description NEC West Africa
+vlan 1288
+ description TPGS IKEJA GRA
+vlan 1289
+ description TPGS IKEJA GRA2-100M
+vlan 1291
+ description FIRST-BANK-8TH MILE-CALABAR-4M-LL
+vlan 1293
+ description WESTMETRO TBS LAGOS
+vlan 1294
+ description INTERNATIONAL-DATA-CENTER-55M-INT
+vlan 1296
+ description FIRST BANK LOKOJA-LKJ002-4M-LL
+vlan 1297
+ description FBN MANGU- JOS801|4M
+vlan 1298
+ description SMOOTH-ILR-INT-PRIMARY
+vlan 1299
+ description SMOOTH-ILR-INT-SECONDARY
+vlan 1303
+ description SUNTRUST GROUP GEO
+vlan 1308
+ description DEEPERLIFE-CHURCH-CAMP-HQ
+vlan 1309
+ description GLOBENODE AIROPLAY LEKKI
+vlan 1310
+ description ESSILOR
+vlan 1311
+ description J. ALVA
+vlan 1312
+ description TPGS_REXFORESTRY|SAKA25-DCN-LBR012
+vlan 1313
+ description GLOBAL_ACCELEREX
+vlan 1314
+ description LEADCITY UNIVERSITY
+vlan 1316
+ description ZENITH-TECH-IKEJA-50M-INT
+vlan 1317
+ description AACL-ACCOUNTANTS-FIBER
+vlan 1318
+ description VASCON-LAGOS-INT
+vlan 1319
+ description DEEPER-LIFE-WUKARI-CRUSADE
+vlan 1320
+ description JULIUS-BERGER-LIFE-CAMP-INT
+vlan 1321
+ description VDT  1XSTM1 Internet Agbara
+vlan 1322
+ description VDT  1XSTM1 Internet Alaba
+vlan 1323
+ description VDT EPE INTERNET
+vlan 1324
+ description elizade Nigeria Limited
+vlan 1326
+ description Solution Media
+vlan 1327
+ description ELIZADE OGBA
+vlan 1328
+ description TPGS OTA_3
+vlan 1329
+ description TPGS ISOLO
+vlan 1330
+ description 3WAYIKOYI
+vlan 1331
+ description ADT SYSTEMS
+vlan 1332
+ description TPGS OTTA 4
+vlan 1333
+ description TPGS LEKKI 1
+vlan 1334
+ description TPGS_OKOOBA
+vlan 1335
+ description TPGS IBADAN-2
+vlan 1336
+ description TPGS-ILUPEJU-04
+vlan 1337
+ description TPGS ILORIN
+vlan 1338
+ description TPGS SAGAMU
+vlan 1339
+ description TPGS LEKKI 3
+vlan 1340
+ description TPGS DOPEMU
+vlan 1341
+ description TPGS Ilupeju-5-10m-INT
+vlan 1342
+ description TPGS_EGBEDA
+vlan 1343
+ description IO Tech Ikoyi (kings Tower)
+vlan 1344
+ description IO TECH-ikoyi-int
+vlan 1345
+ description BRISCOE TECH-int
+vlan 1346
+ description HEALTHPLUS KOFO ABAYOMI
+vlan 1347
+ description Solution Media Fibre
+vlan 1348
+ description TPGS-ENUGU-NEST
+vlan 1349
+ description Health Plus Ayinde
+vlan 1350
+ description HEALTHPLUS GBEMI
+vlan 1351
+ description JULIUS BERGER IJORA
+vlan 1352
+ description FIDELITY LEKKI
+vlan 1353
+ description FIDELITY IBADAN
+vlan 1354
+ description ACEGID EDE
+vlan 1355
+ description FBN-IJEBUODE-4M-LL-IJE001
+vlan 1360
+ description Shell2 MD's house
+vlan 1361
+ description SHELL CCH (53 Bourdillon)
+vlan 1363
+ description AACSL Accountants
+vlan 1364
+ description APPZONE
+vlan 1365
+ description Linkage Assurance
+vlan 1367
+ description EVC-BELLA -PRIMARY
+vlan 1368
+ description EVC-BELLA-SECONDARY
+vlan 1369
+ description SUNFLAG-IGAMU-INT
+vlan 1371
+ description TOTAL-E&P-LL-200MB
+vlan 1372
+ description TPGS-IKEJA-005
+vlan 1373
+ description Satview Media
+vlan 1374
+ description GLO EXPERIENCE CENTRE IBADAN
+vlan 1375
+ description DUFIL BENIN
+vlan 1376
+ description VDT IWO
+vlan 1377
+ description REAL NETLINK
+vlan 1378
+ description SUNVIEW HOTEL
+vlan 1379
+ description ARDOVA MMA IKEJA
+vlan 1380
+ description SHADE GAMING
+vlan 1381
+ description NATIONAL ORTHOPAEDIC HOSPITAL
+vlan 1382
+ description TPG OTTA 5
+vlan 1383
+ description GLOBENODE LIMITED
+vlan 1384
+ description Hatupo Edorolo Laboratories
+vlan 1385
+ description MD-CONOIL
+vlan 1386
+ description TPGS Ibadan
+vlan 1387
+ description TPGS TPGS Ikorodu-2
+vlan 1388
+ description TPGS Oniru
+vlan 1389
+ description TPGS JAKANDE
+vlan 1390
+ description Denver Building
+vlan 1391
+ description FarmKonnect
+vlan 1392
+ description TPGS EWEKORO
+vlan 1393
+ description TPGS SHIMAWA
+vlan 1394
+ description TPGS Ago Palace Way
+vlan 1395
+ description TPGS Surulere
+vlan 1396
+ description TPGS Apapa-2
+vlan 1397
+ description TPGS Festac
+vlan 1398
+ description TPGS Gbagada
+vlan 1399
+ description TPGS Ikeja-3
+vlan 1400
+ description OXFORD GROUP
+vlan 1401
+ description TPGS Ajah Warehouse
+vlan 1402
+ description TPGS Ajah
+vlan 1403
+ description TPGS Lekki 2
+vlan 1404
+ description TPGS Ogudu
+vlan 1405
+ description TPGS Saka Jojo2-5Mbps
+vlan 1406
+ description QMB Mart Ltd
+vlan 1407
+ description ATLANTIC HALL-EPE-INT| 200MB
+vlan 1411
+ description TPGS Ikoyi-4
+vlan 1412
+ description TPGS OJOTA-2
+vlan 1413
+ description AFRIONE
+vlan 1414
+ description TPGS ISHERI
+vlan 1415
+ description TPGS AGIDINGBIN
+vlan 1416
+ description TPGS ALAUSA
+vlan 1417
+ description TPGS Mobolaji Bank Anthony
+vlan 1419
+ description ITX Telecoms Ilorin
+vlan 1420
+ description ITX FCE SPED OyO
+vlan 1421
+ description TPGS AKIN ADESOLA
+vlan 1423
+ description VDT-OTA-INT
+vlan 1424
+ description OYO-STATE-HEALTH-INSURANCE |10MB
+vlan 1426
+ description HOMELSAT-AIRPORT-ILORIN-INT
+vlan 1428
+ description IO-TECH-V/I-LAG
+vlan 1429
+ description IO-TECH-IBADAN-INT
+vlan 1443
+ description Sentient-Fidelity Bank ESUT
+vlan 1473
+ description IOTECH-VI-2-LAG944
+vlan 1481
+ description TPGS BINATONE-100M-INT
+vlan 1482
+ description TPGS Oba Akran-LAG313 |10M
+vlan 1483
+ description WESTMETRO-OSHOGBO
+vlan 1486
+ description NEW_CERAGON_MGMT_WEST-1486
+vlan 1487
+ description NEW_CERAGON_MGMT_SOUTH-1487
+vlan 1488
+ description NEW_CERAGON_MGMT_NORTH-1488
+vlan 1489
+ description CERAGON-MGT-6
+vlan 1491
+ description BOWEN UNIVERSITY-2xSTM1
+vlan 1494
+ description TPGS IBD-3-IBD029 |5M
+vlan 1499
+ description AIR-PEACE-MINIMAL-ESTATE-INT
+vlan 1500
+ name ZEBWEB_NGMT
+vlan 1501
+ description NEW-SWITCH-MGT
+vlan 1503
+ description NERA-MGT
+ name NERA_MGT
+vlan 1506
+ description LAMBERT-ELEC-SIP
+vlan 1507
+ description ENT-SW-MGT-3
+vlan 1543
+ description JOGOR-INT
+vlan 1551
+ description MONTEGO IKOYI
+vlan 1552
+ description OLAM IGANMU
+vlan 1554
+ description ARROWFAST ABAKALIKI
+vlan 1556
+ description -TPGS IKEJA AYODELE|50M
+vlan 1557
+ description ATREOS-RETAIL-INT-LAG313-IKEJA
+vlan 1558
+ description WESTMETRO-PCC-IBADAN
+vlan 1559
+ description WESTMETRO-PCC-ABEOKUTA
+vlan 1576
+ description BREEDWELL-NETWORK
+vlan 1577
+ description SAYED-FARM-INT
+vlan 1578
+ description ZETAWEB-ILLUPEJU
+vlan 1579
+ description RCC-JABI-GUEST-HOUSE
+vlan 1581
+ description ORANGE-MOBIL-IKOYI-200M-LL
+vlan 1593
+ description SEPLAT_LAG_ABJ
+vlan 1599
+ description AMOTEKUN-CORP-IBADAN-INT
+vlan 1603
+ description PETRO DATA
+vlan 1632
+ description FCMB INTERNET
+vlan 1640
+ description Access Bank VPLS
+vlan 1644
+ description ALFAO&O-LAGOS2-INT
+vlan 1651
+ description VICKS & J.C1
+vlan 1652
+ description VICKS & J.C2
+vlan 1653
+ description VICKS & J.C3
+vlan 1654
+ description VICKS & J.C4
+vlan 1655
+ description VICKS & J.C5
+vlan 1656
+ description HILDON OIL SERVICES1
+vlan 1657
+ description HILDON OIL SERVICES1
+vlan 1658
+ description HILDON OIL SERVICES3
+vlan 1659
+ description HILDON OIL SERVICES4
+vlan 1660
+ description X3M IDEAS
+vlan 1661
+ description GLOBENODE IKOYI
+vlan 1662
+ description Advanz Lafayette DR Internet
+vlan 1663
+ description VDT ILESA
+vlan 1664
+ description VDT SHAKI
+vlan 1665
+ description VDT EFON ALAAYE
+vlan 1667
+ description IGBINEDION UNIVERSITY
+vlan 1668
+ description Ardova-MD-Residence VI
+vlan 1669
+ description OLA BANK ONDO
+vlan 1670
+ description IUFMP IBADAN
+vlan 1671
+ description ROUTEL SOLUTIONS
+vlan 1672
+ description WESTMETRO
+vlan 1673
+ description R&S-Lotto-Enugu
+vlan 1674
+ description R&S LOTTO PHC
+vlan 1676
+ description RS LOTTO ONITSHA
+vlan 1677
+ description OSOSA COMPREHENSIVE
+vlan 1678
+ description Huxley Industries
+vlan 1679
+ description University of Medical Sciences Ondo
+vlan 1681
+ description Prime Bisco Isolo
+vlan 1682
+ description Avante Fly
+vlan 1684
+ description LATER-DAY-CHURCH-INT
+vlan 1689
+ description FRSC Ibadan-INT
+vlan 1692
+ description GTEL-INT-8MB
+vlan 1693
+ description DEEPERLIFE IKORODU
+vlan 1694
+ description DEEPER LIFE-IBADAN-INTERNET- IBD029 |310M
+vlan 1710
+ name FBN_OJIRIVER
+vlan 1711
+ name FBN_ISUOCHI
+vlan 1712
+ name FBN_ABIRIBA
+vlan 1731
+ name FBN_MBAISE
+vlan 1732
+ name FBN_OMOKU
+vlan 1748
+ description AITEO IKOYI
+vlan 1750
+ description ZINOX GBAGADA
+vlan 1753
+ description TP-Apapa-2
+vlan 1754
+ description TPGS Ahmadu Bello NIOMR
+vlan 1756
+ description BRISCOE APN
+vlan 1757
+ description BRISCOE-ABUJA-APN
+vlan 1762
+ description GTB_MUSHIN_INTERNET
+vlan 1765
+ description FIRST-TECH-UNI-IBADAN
+vlan 1772
+ description ITL-PODO-INT
+vlan 1773
+ description Internetsional  Radio Backup
+vlan 1775
+ description TPGS Ibadan 004
+vlan 1776
+ description Huxley Industries
+vlan 1777
+ description TPGS ONIRU-2
+vlan 1778
+ description TPGS SURULERE-2
+vlan 1779
+ description TPGS-MARYLAND-2
+vlan 1781
+ description PCCW-SHELL-BOI
+vlan 1783
+ description TPGS Ikoyi Club
+vlan 1784
+ description BEYOND LIMITS  ACADEMY
+vlan 1785
+ description SOE TRADING (DE-QUALITY GARDENS)
+vlan 1788
+ description OOU-AYETORO-CAMPUS
+vlan 1789
+ description OOU-SAGAMU-CAMPUS
+vlan 1790
+ description OOU-IBOGUN-CAMPUS
+vlan 1796
+ description CHEVRON-PRI-TODMOE
+vlan 1820
+ description PAN_AFRICAN
+vlan 1821
+ description IP2AIR UCH IBADAN
+vlan 1823
+ description WEMY-INTERNET
+vlan 1824
+ description WEMY2-INT-6MB
+vlan 1825
+ description UBERENNESS-INT
+vlan 1839
+ description ESTREAM-LAGOS-TO-LAR-003
+vlan 1848
+ description SENITENT-FIDELITY
+vlan 1853
+ description NEWS-CENTRAL-AFRICA
+vlan 1864
+ description GLOBENODE DOLPHIN  |4MB
+vlan 1867
+ description DICNET-IKOTUN-LAG302-GE0/2/4|10M-INTERNET
+vlan 1875
+ name STANBIC-IBTC-VTU
+vlan 1896
+ description Osun State Uni Okuk
+ name GLO_IS_IBADAN_45MB_LINK
+vlan 1900
+ description UBN-MARINA-L3 BRANCHES
+vlan 1904
+ description TPGS CARRINGTON
+vlan 1905
+ name is-ligali-peer
+vlan 1906
+ description SAMAILA ZUBAIRU
+ name is-lag-abj
+vlan 1907
+ description VDT SEME
+ name GLO_IS_IBADAN_45MB_New
+vlan 1908
+ description CUSTODIAN & ALLIED INSURANCE
+ name IS-ONDO-LL
+vlan 1909
+ description SAMSUNG WAREHOUSE OJOTA
+ name ISL-NOVA-CHEVRON
+vlan 1911
+ description LAG944-PILOT-TEST-INTERNET
+vlan 1927
+ description MEGALIFE-SCIENCES
+vlan 1928
+ description DODOPHO CONSULTANCY
+vlan 1929
+ description Indian Learning School
+vlan 1930
+ description DICNET-EKITI-INT
+vlan 1967
+ description FRSC Ijebu Ode
+vlan 1968
+ description FRSC SAGAMU
+vlan 1969
+ description EDUREX-TECH-UNI-IBADAN-INT
+vlan 1971
+ name UNIFIED-PAYMENT
+vlan 1976
+ description IO-TECH-IBAFON-INT
+vlan 1977
+ description VDT-IBADAN
+vlan 1978
+ description TPGS Saka Jojo
+vlan 1979
+ description GREENSPRING IKOYI
+vlan 1982
+ description PHASE POINT OWO
+vlan 1983
+ description Phase Point Limited Ejigbo
+vlan 1985
+ description VDT IBEJU LEKKI
+vlan 2057
+ description ORANGE-ZIM
+vlan 2058
+ description OSUN STATE POLY
+vlan 2060
+ description FRSC Abeokuta
+vlan 2085
+ description INNOVASTRA-ILORIN-INT
+vlan 2114
+ description GLOMOBILE-3G-NODE-B
+vlan 2122
+ description NIGER-INSURANCE-20M-INT-LAG128B
+vlan 2127
+ description DPR Osogbo
+vlan 2128
+ description DPR Abeokuta
+vlan 2144
+ description FBN-PHC-LY3
+vlan 2150
+ description DOUBLEONE(MOBIL)APAPA- LAG341-PRIMARY-FIBER |155M-INTERNET
+vlan 2151
+ description DOUBLEONE(MOBIL)APAPA-SECONDARY-|155M-INTERNET
+vlan 2175
+ description FRSC Otta
+vlan 2263
+ description CAMPUSFI KWARA STATE POLYTECHNIC
+vlan 2267
+ description FED POLY ILARO
+vlan 2322
+ description TPGS-ILUPEJU-INT
+vlan 2415
+ description Tulip Cocoa Processing
+vlan 2416
+ description NIIA-KOFO-INT-20MB
+vlan 2437
+ description FRESH-FM-IBADAN-INT
+vlan 2438
+ description FRESH-TEST
+vlan 2511
+ description DANGOTE-LFTZ-30M-INT
+vlan 2521
+ description FRIGO-GLASS-IJEBU
+vlan 2533
+ description Aiteo-Lekki-LL
+vlan 2539
+ description TPGS IKORODU 1
+vlan 2540
+ description GEREGU PLC CEO RESIDENCE
+vlan 2554
+ description NRC DUAL LINK
+vlan 2701
+ description FBN ORANGE
+vlan 2708
+ description PRIME_ATLANT-INT-50M
+vlan 2786
+ description FBN-IGBOKODA
+vlan 2787
+ description FBN-SHELL-PH
+vlan 2830
+ description FRSC Oshogbo
+vlan 2969
+ description SEPLAT_OWR
+vlan 2970
+ description SEPLAT-OHAJI
+vlan 2986
+ description DEEPER-LIFE-ASABA-INT
+vlan 2987
+ description CHAIRMAN-VCON-1
+vlan 2988
+ description CHAIRMAN-VCON-2
+vlan 2989
+ description CHAIRMAN-WIFI
+vlan 3007
+ description First Bank Main One DR
+vlan 3105
+ description ODUDUWA UNIVERSITY
+vlan 3126
+ description ACCESS-OLD-DIAMOND
+vlan 3164
+ name is-mak003
+vlan 3165
+ name is-akr006
+vlan 3166
+ name is-jos901
+vlan 3167
+ name is-ibd004
+vlan 3181
+ description RIVERSIDE-SBC
+vlan 3195
+ description RIVERSIDE-SBC-SIP
+vlan 3200
+ description Osun State University Ifetedo
+vlan 3221
+ description SENTIENT_POLARIS
+vlan 3241
+ description SENTIENT_FBN
+vlan 3671
+ description GLOMOBILE-LTE
+vlan 3771
+ description GLOMOBILE-OAM
+vlan 3849
+ description Orange_Microsoft
+vlan 3871
+ description GLOMOBILE-eGBTS
+vlan 3874
+ description ACCESS-BANK-APN
+vlan 3916
+ description Patrick Ilodianya Residence-INT
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user ben password cipher %@%@[mTt:KXL;*#Q:2/C"iGShV[5%@%@
+ local-user ben privilege level 15
+ local-user ope password cipher %@%@@-,0$Tb(M(H\JANq|-w!\ZSb%@%@
+ local-user ope privilege level 15
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password irreversible-cipher %@%@D~"15A7_d1kJ<cCgd:$Dc:\-$L1(D/#6_0Sl0Y44*Ea':\0c%@%@
+ local-user bsnoc privilege level 3
+ local-user bsnoc service-type telnet terminal ssh ftp
+ local-user chuks password cipher %@%@1{F%=[^YNF\o:4@"jQD<\ZWz%@%@
+ local-user chuks privilege level 15
+ local-user moses password cipher %@%@C3`q+;P;ZO[(%KT{jmA2\ZX]%@%@
+ local-user moses privilege level 15
+ local-user donald password cipher %@%@q@+I$w8QkO;Sh9T<2u9H\ZYC%@%@
+ local-user donald privilege level 15
+ local-user fabian password cipher %@%@K3(YV5O~x0BkS~Ojl)gN\ZUq%@%@
+ local-user fabian privilege level 15
+ local-user naveen password cipher %@%@oQjj>{cKH#Do{{Kaz.'=\ZVb%@%@
+ local-user naveen privilege level 15
+ local-user kelechi password cipher %@%@Z%,q*S\Ps@N0ce3b]@nP\ZV6%@%@
+ local-user kelechi privilege level 15
+ local-user adewunmi password cipher %@%@jaBe<GgN@4t%o[.ZLLQXULRg%@%@
+ local-user adewunmi privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif2
+ ip address 11.1.1.2 255.255.255.252
+#
+interface Vlanif10
+ ip address 10.248.248.14 255.255.255.240
+#
+interface Vlanif20
+ ip address 41.203.83.226 255.255.255.248
+#
+interface Vlanif55
+ ip address 10.248.248.62 255.255.255.248
+#
+interface Vlanif88
+ ip address 10.248.248.194 255.255.255.248
+#
+interface Vlanif92
+ description TELNET TO 192.168.5.11 TO PAYMENT GATEWAY
+ ip address 192.168.5.10 255.255.255.0
+#
+interface Vlanif115
+ ip address 1.1.1.11 255.255.255.248
+#
+interface Vlanif126
+ ip address 10.170.10.1 255.255.255.248
+#
+interface Vlanif131
+ ip address 171.1.1.1 255.255.255.252
+#
+interface Vlanif222
+#
+interface Vlanif250
+ ip address 192.168.30.3 255.255.255.248
+#
+interface Vlanif518
+ ip address 129.205.111.210 255.255.255.248
+#
+interface Vlanif523
+ ip address 13.1.1.1 255.255.255.0
+#
+interface Vlanif530
+ ip address 121.1.1.1 255.255.255.252
+#
+interface Vlanif566
+ ip address 125.1.1.1 255.255.255.0
+#
+interface Vlanif804
+#
+interface Vlanif805
+ ip address 10.248.246.44 255.255.255.192
+#
+interface Vlanif809
+ description ALTERNATIVE-MGT-ADC-GLO-SWITCH
+ ip address 10.248.247.3 255.255.255.0
+#
+interface Vlanif1049
+#
+interface Vlanif1065
+ ip address 14.14.14.14 255.255.255.0
+#
+interface Vlanif1117
+ ip address 10.216.26.2 255.254.0.0
+#
+interface Vlanif1137
+ ip address 24.24.24.2 255.255.255.0
+#
+interface Vlanif1181
+ ip address 18.18.18.2 255.255.255.0
+#
+interface Vlanif1211
+ ip address 10.20.20.3 255.255.255.0
+#
+interface Vlanif1258
+#
+interface Vlanif1266
+ ip address 13.13.13.13 255.255.255.0
+#
+interface Vlanif1296
+#
+interface Vlanif1312
+#
+interface Vlanif1318
+ ip address 12.1.2.1 255.255.255.0
+#
+interface Vlanif1355
+ ip address 41.41.41.42 255.255.255.0
+#
+interface Vlanif1501
+ ip address 10.248.249.217 255.255.255.0
+#
+interface Vlanif1503
+ ip address 10.155.187.38 255.255.255.0
+#
+interface Vlanif1578
+ ip address 10.128.12.6 255.255.255.248
+#
+interface Vlanif1581
+ ip address 31.31.31.32 255.255.255.0
+#
+interface Vlanif1640
+ ip address 10.230.230.230 255.255.255.0
+#
+interface Vlanif1748
+ ip address 200.10.10.2 255.255.255.248
+#
+interface Vlanif1781
+ shutdown
+ ip address 1.1.1.2 255.255.255.252
+#
+interface Vlanif1825
+ ip address 123.12.12.2 255.255.255.0
+#
+interface Vlanif1867
+#
+interface Vlanif1900
+ ip address 192.168.1.1 255.255.255.252
+#
+interface Vlanif2150
+#
+interface Vlanif2786
+ ip address 192.168.30.117 255.255.255.252
+#
+interface Vlanif2970
+ ip address 1.2.1.2 255.255.255.0
+#
+interface Vlanif3181
+ ip address 14.14.15.1 255.255.255.0
+#
+interface Vlanif3849
+ ip address 10.10.10.8 255.255.255.0
+#
+interface MEth0/0/1
+#
+load-balance-profile 1341
+#
+interface Eth-Trunk21
+ description GLO1 HUAWEI NE ROUTER
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 803 805 to 1363 1365 to 1639 1641 to 1906 1908 to 2899 2901 to 4094
+ stp disable
+ stp bpdu-filter enable
+ jumboframe enable 9600
+#
+interface Eth-Trunk21.507
+ description TPGS-FCML |1OMB
+#
+interface Eth-Trunk21.1235
+ description TPGS_ALABA
+#
+interface Eth-Trunk21.1784
+ description BEYOND LIMITS  ACADEMY |10MB
+#
+interface Eth-Trunk21.1785
+ description SOE TRADING (DE-QUALITY GARDENS)  |10MB
+#
+interface GigabitEthernet0/0/1
+ description Marine Platform 15Mb Internet
+ port link-type access
+ port default vlan 510
+#
+interface GigabitEthernet0/0/2
+ description TRUSTFUND PENSION BISHOP KALE
+ port link-type trunk
+ port trunk allow-pass vlan 10 115 1503 2538 3164
+#
+interface GigabitEthernet0/0/3
+ description CONNECTION-TO-SAKA25PE01(PORT 2/1/7)-ALU-PE
+ port link-type trunk
+ port trunk allow-pass vlan 2 115 118 123 222 310 510 1117 1486 to 1489 1503
+ port trunk allow-pass vlan 1578 1710 to 1712 1731 to 1732 1875 1908 2538 3164
+#
+interface GigabitEthernet0/0/4
+ description trunk_facing_glo1_DCN_Routr_4_paymentgatway
+ port link-type trunk
+ port trunk allow-pass vlan 10 92 143 145 to 147 222 1875 1971 2900 3501
+#
+interface GigabitEthernet0/0/5
+ undo negotiation auto
+ description IGI INSURANCE-BISH-OLUWOLE-RADIO | 110M
+ port link-type access
+ port default vlan 316
+#
+interface GigabitEthernet0/0/6
+ undo negotiation auto
+ description HYPERIA OCEAN PARADE
+ port link-type trunk
+ port trunk allow-pass vlan 9 987 2900 to 2903
+#
+interface GigabitEthernet0/0/7
+ description Trunk to Cisco_2960_2
+ port link-type trunk
+ port trunk allow-pass vlan 10 126 133 141 167 199 244 502 504 to 505 509
+ port trunk allow-pass vlan 513 to 514 524 805 1181 1310 1346 1385 1406 1489 1506
+ port trunk allow-pass vlan 1748 2533
+#
+interface GigabitEthernet0/0/8
+ undo negotiation auto
+ description ORANGE-MOBIL-200M-LL
+ port link-type dot1q-tunnel
+ port default vlan 1581
+#
+interface GigabitEthernet0/0/9
+ description NIBS-SECONDARY-INT-FIBER |310M
+ port link-type access
+ port default vlan 525
+#
+interface GigabitEthernet0/0/10
+ description INDUSTRIAL & GENERAL INSURANCE (IGI) | 50MB INTERNET
+ port link-type access
+ port default vlan 181
+#
+interface GigabitEthernet0/0/11
+ description CONNECTION-GLOMOBILE-SERVICES
+ port link-type trunk
+ port trunk allow-pass vlan 2114 3671 3771 3871
+#
+interface GigabitEthernet0/0/12
+ description MCKINSEY & CO INT | 200M
+ port link-type access
+ port default vlan 516
+#
+interface GigabitEthernet0/0/13
+ description BQUBE LAGOS 130MB-INTERNET!!L3VPN-Eastern Obollo Akwa Ibom (STERLING OIL)
+ port link-type trunk
+ port trunk allow-pass vlan 501 515
+ jumboframe enable 12288
+#
+interface GigabitEthernet0/0/14
+ description IGI-BISH-OLUWOLE-FIBER-INT | 110M
+ port link-type access
+ port default vlan 316
+ jumboframe enable 4000
+#
+interface GigabitEthernet0/0/15
+ undo negotiation auto
+ description SAHARA-NEW-HQ-INT | 155M
+ port link-type access
+ port default vlan 518
+#
+interface GigabitEthernet0/0/16
+ description GlobeNode Ozumba VI |5OMB
+ port link-type access
+ port default vlan 503
+#
+interface GigabitEthernet0/0/17
+ description TRUNK GLO-LAGOS-EXPERIENCE-CENTER
+ port link-type access
+ port default vlan 134
+#
+interface GigabitEthernet0/0/18
+ description OLAM INTERNET 8M
+ port link-type access
+#
+interface GigabitEthernet0/0/19
+ description TRUNK TO CISCO 3560
+ port link-type trunk
+ port trunk allow-pass vlan 55 88 93 98 105 112 131 156 166 189
+ port trunk allow-pass vlan 232 250 501 506 to 507 511 515 517 523 530 566
+ port trunk allow-pass vlan 805 916 1137 1211 1364 1371 1489 1501 1507 1579
+ port trunk allow-pass vlan 1640 1820 1848 1900 1907 2057 2151 2708 3007 3126
+ port trunk allow-pass vlan 3221 3241 3849
+ storm-control broadcast min-rate 50 max-rate 50
+ storm-control multicast min-rate 50 max-rate 50
+#
+interface GigabitEthernet0/0/19.250
+ description FIRST BANK HQ LAYER 3
+#
+interface GigabitEthernet0/0/20
+ description Trunk to DCN PE-B GE1/0/14
+ port link-type trunk
+ port trunk allow-pass vlan 900 922 1081 1241 1267 to 1268 1271 1503 1593 1839 2969 to 2970
+#
+interface GigabitEthernet0/0/21
+ port media type fiber
+  undo negotiation auto
+ description CONNECTION-ADC(EKO-ATLANTIC)
+ port link-type trunk
+ port trunk allow-pass vlan 520 602 805 809 1501 1640 3126 3874
+ stp bpdu-filter enable
+ jumboframe enable 12288
+ storm-control broadcast min-rate 50 max-rate 50
+ storm-control multicast min-rate 50 max-rate 50
+#
+interface GigabitEthernet0/0/22
+ description ACCESS-BANK-HQ-BACKHAUL-LIGALI
+ port link-type trunk
+ port trunk allow-pass vlan 98 1501 1640 3126 3874
+ stp bpdu vlan 1640
+ stp bpdu-filter enable
+ storm-control broadcast min-rate 50 max-rate 50
+ storm-control multicast min-rate 50 max-rate 50
+#
+interface GigabitEthernet0/0/23
+ port media type fiber
+  undo negotiation auto
+ description UPLINK TO SEPLAT IKOYI
+ port link-type trunk
+ port trunk allow-pass vlan 10 100 900 922 1501 1593 2969 to 2970 3404
+#
+interface GigabitEthernet0/0/24
+ description TRUNK TO GLO POP & ALLIANCE FRANCAISE (MIKE ADENUGA CENTER)
+ port link-type trunk
+ port trunk allow-pass vlan 133 1501 2114 3671 3771 3871
+#
+interface XGigabitEthernet0/0/1
+ description TRUNK TO SAKA25-NE40EX8-AR-C-GE3/0/1
+ port link-type trunk
+ port trunk allow-pass vlan 55 88 131 136 166 222 244 250 300 315
+ port trunk allow-pass vlan 505 511 517 530 670 804 to 805 1019 to 1021 1024 to 1034 1036 1039
+ port trunk allow-pass vlan 1048 to 1049 1051 1058 to 1060 1064 to 1065 1067 to 1068 1081 1093 1096 to 1100 1102 to 1105 1114
+ port trunk allow-pass vlan 1116 to 1117 1119 1127 to 1128 1132 to 1137 1163 1166 to 1167 1175 to 1176 1178 to 1183 1186 1191
+ port trunk allow-pass vlan 1211 1223 to 1224 1226 to 1227 1229 to 1230 1232 to 1258 1261 to 1263 1265 to 1275 1277 1279 to 1286 1288 to 1289
+ port trunk allow-pass vlan 1291 1293 to 1294 1296 to 1299 1303 1308 to 1314 1316 to 1328 1330 to 1338 1340 to 1345 1347 to 1355 1360 to 1361
+ port trunk allow-pass vlan 1363 to 1365 1367 to 1369 1371 to 1407 1411 to 1417 1419 to 1421 1423 to 1424 1426 1428 to 1429 1443 1473
+ port trunk allow-pass vlan 1481 to 1483 1486 to 1489 1491 1494 1499 1503 1506 to 1507 1543 to 1544 1551 to 1552 1554
+ port trunk allow-pass vlan 1556 to 1559 1576 to 1578 1581 1603 1632 1640 1644 1651 to 1665 1667 to 1682 1684
+ port trunk allow-pass vlan 1689 1692 to 1694 1748 1750 1753 to 1754 1756 to 1757 1762 1765 1772 to 1773 1775 to 1779
+ port trunk allow-pass vlan 1781 1783 to 1786 1788 to 1790 1796 1820 to 1821 1823 to 1825 1853 1864 1867 1896
+ port trunk allow-pass vlan 1900 1904 1906 to 1909 1911 1927 to 1930 1967 to 1969 1976 to 1979 1982 to 1983 1985 2057 to 2058
+ port trunk allow-pass vlan 2060 2085 2122 2127 to 2128 2144 2150 to 2151 2175 2263 2267 2322
+ port trunk allow-pass vlan 2415 to 2416 2437 2511 2521 2533 2539 to 2540 2554 2787 2830 2986 to 2989
+ port trunk allow-pass vlan 3105 3200 3849 3916
+ stp bpdu-filter enable
+ jumboframe enable 9000
+ storm-control broadcast min-rate 50 max-rate 50
+ storm-control multicast min-rate 50 max-rate 50
+#
+interface XGigabitEthernet0/0/2
+ description TO-GLO1-HUAWEI-IPD-UPSTAIRS
+ eth-trunk 21
+#
+interface XGigabitEthernet0/0/3
+ description COOL_FM_10G
+ port link-type trunk
+ port trunk allow-pass vlan 60 190 201 930 1081
+#
+interface XGigabitEthernet0/0/4
+ description CONNECTION-GLO1-HUAWEI-ROUTER-UPSTAIRS(NE40E-X16A-1/1/5)-PHYSICAL-LABEl-5/0/3
+ port link-type trunk
+ port trunk allow-pass vlan 93 189 525 805 809 916 1501 1503 1507
+#
+interface NULL0
+#
+ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+snmp-agent
+snmp-agent local-engineid 800007DB03845B123CF540
+snmp-agent community read cipher %$%$KNDG&H&N)+e@Jm-d:j5H_FOqJB^JBIlVI-s[-#&Yr'@FFOt_Q(P+RgpxxIY;,aQ"%rr'O}_F%$%$
+snmp-agent community read cipher %$%$.CD-PuuI|V9{iWA0jfR4b^,\vy%778]zkL7^z3SMCYi*^,_b0z:0Sk#pc8_0\`C+EgR&,hb^%$%$
+snmp-agent community read cipher %$%$mA*]#1bf5,n`4TN[Y;r0`E$h4hdQ6Nj67)$E4`R$\TaOE$k`C%!.J[]N[6j\*("(KYY;$t`E%$%$
+snmp-agent community read cipher %$%$US;HR/Z&/9=NJiF~8~i&u\|r7"B+A0TW3E$!Ro1/CU!-\|uu]ta1WB["s8VjH2";porM|!u\%$%$
+snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+user-interface vty 0 4
+ authentication-mode aaa
+user-interface vty 16 20
+#
+return
+[SAKA25-HU-S5310-CORE-SW]                                                                                                                           

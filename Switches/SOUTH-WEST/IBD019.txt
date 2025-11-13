@@ -1,0 +1,445 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 08:18.53 ? ? /home/mobaxterm ? telnet 10.248.246.80
+Connected to 10.248.246.80.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<IBD019-ENT-H-3700SW>sys
+Enter system view, return user view with Ctrl+Z.
+[IBD019-ENT-H-3700SW]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      down    down     JOGOR-GLOBAL-VENTURES-INT |100M
+Eth0/0/2                      down    down     NNPC IBADAN DEPOT
+Eth0/0/3                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/3 Interface
+Eth0/0/4                      *down   down     Satview Media(The Dexterity Group
+                                               )100MB Internet
+Eth0/0/5                      *down   down     TPGS-IBD-004-INT-25M-FIBER-LM
+Eth0/0/6                      up      up       description TPGS IBD BAZ3-IBD019|
+                                               RING-RD(VLAN1102)|BAZ(VLAN 1775)|
+                                               5M-INTERNET (VLAN-1319)
+Eth0/0/7                      up      up       CONOIL IBADAN
+Eth0/0/8                      down    down     SARO IBADAN
+Eth0/0/9                      down    down     ACCESS BANK ERUWA
+Eth0/0/10                     up      up       IOTech Ibadan
+Eth0/0/11                     up      up       ZETAWEB IBADAN BCOS
+Eth0/0/12                     up      up       STANBIC IBTC BANK GBAGI IBADAN -
+                                               SWIFTALK RADIO | 4MB
+Eth0/0/13                     up      up       HYPERIA SHELL-CLOSE_IBD|100Mb|VL3
+                                               836
+Eth0/0/14                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/14 Interface
+Eth0/0/15                     up      up       TPGS-ANTHONY-VILLAGE | 50M
+Eth0/0/16                     up      up       FAN-MILK-IBADAN-FACTORY-INT | 50M
+Eth0/0/17                     down    down     INTERNATIONAL-DATA-CENTER-55M-INT
+                                               -FIBER-LM
+Eth0/0/18                     down    down     VDT-100M-INT-Cocoa House
+Eth0/0/19                     up      up       CYBERSPACE IBD POLARIS BNK
+Eth0/0/20                     down    down     NNPC IBADAN DEPOT
+Eth0/0/21                     down    down     SIMBANET-IBADAN
+Eth0/0/22                     down    down     JOGOR-GLOBAL-VENTURES-INT |100M
+Eth0/0/23                     down    down     SWITCH LOGIN
+Eth0/0/24                     down    down     IPEXPRESS-IBADAN4(Evans building)
+                                               (vlan 1777)
+GE0/0/1                       up      up       IPEXPRESS-IBADAN-2(Lister Buildin
+                                               g)(vlan 1776) || NEW-SWITCH-MIGRA
+                                               TION-PORT
+GE0/0/2                       up      up       UPLINK TO DCN IP/MPLS(GE0/2/9)
+GE0/0/3                       up      up       SUMAL FOODS
+GE0/0/4                       up      up       TRUNK-TO-SECOND-3700-H-SW
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif804                     up      up       HUAWEI, Quidway Series, Vlanif804
+                                                Interface
+Vlanif1102                    up      down     HUAWEI, Quidway Series, Vlanif110
+                                               2 Interface
+Vlanif1294                    up      down     HUAWEI, Quidway Series, Vlanif129
+                                               4 Interface
+Vlanif1319                    up      down     HUAWEI, Quidway Series, Vlanif131
+                                               9 Interface
+Vlanif1494                    up      down     HUAWEI, Quidway Series, Vlanif149
+                                               4 Interface
+Vlanif1602                    up      up       HUAWEI, Quidway Series, Vlanif160
+                                               2 Interface
+Vlanif1640                    up      up       HUAWEI, Quidway Series, Vlanif164
+                                               0 Interface
+Vlanif1775                    up      down     HUAWEI, Quidway Series, Vlanif177
+                                               5 Interface
+Vlanif1977                    up      down     HUAWEI, Quidway Series, Vlanif197
+                                               7 Interface
+Vlanif1995                    up      down     HUAWEI, Quidway Series, Vlanif199
+                                               5 Interface
+Vlanif2423                    up      down     HUAWEI, Quidway Series, Vlanif242
+                                               3 Interface
+Vlanif2611                    up      up       HUAWEI, Quidway Series, Vlanif261
+                                               1 Interface
+Vlanif3366                    up      up       HUAWEI, Quidway Series, Vlanif336
+                                               6 Interface
+Vlanif3833                    *down   down     HUAWEI, Quidway Series, Vlanif383
+                                               3 Interface
+Vlanif4048                    up      up       HUAWEI, Quidway Series, Vlanif404
+                                               8 Interface
+[IBD019-ENT-H-3700SW]   dis cur
+#
+!Software Version V100R006C05
+ sysname IBD019-ENT-H-3700SW
+#
+ vlan batch 100 510 804 1033 1102 1161 1240 1294 1319 1322
+ vlan batch 1373 1429 1492 1494 1501 1503 1543 1602 1632 1640
+ vlan batch 1699 1773 to 1777 1917 1977 1995 2423 2611 2613 2745 2826
+ vlan batch 2981 3366 3466 3472 3833 3836 4048
+#
+lldp enable
+#
+ undo http server enable
+ undo http secure-server enable
+#
+vlan 100
+ description test vlan for dcn
+vlan 510
+ description SARO-VPLS
+vlan 804
+ description NEW-SWITCH-MGT
+vlan 1033
+ description EDUREX-OYO-ST-COLL-NURSING-ELEYELE
+vlan 1102
+ description TPGS-RING-RD-IBADAN-IBD019|10M-INTERNET
+vlan 1161
+ description HYPERIA-INTERNET || 30Mbps
+vlan 1240
+ description SARO-IBADAN-INTERNET
+vlan 1294
+ description INTERNATIONAL-DATA-CENTER-55M-INT
+vlan 1319
+ description TPGS IBD BAZ3-IBD019|5M-INTERNET
+vlan 1322
+ description IPEXPRES-IBADAN-019
+vlan 1373
+ description Satview Media
+vlan 1429
+ description IO-TECH-IBADAN-INT
+vlan 1492
+ description Nera_Mgmt
+vlan 1494
+ description NNPC-NERA-MGT
+vlan 1501
+ description BS-MGT
+vlan 1503
+ description NERA-MGMT
+vlan 1543
+ description JOGOR-GLOBAL-VENTURES-INT
+vlan 1602
+ description SIMBERNET-IBADAN-mntgmnt
+vlan 1632
+ description WEMA_BANK
+vlan 1640
+ description ACCESS-BANK-VPLS
+vlan 1699
+ description TPGS-ANTHONY-VILL-IBADAN
+vlan 1773
+ description Internetsional RadioBackup
+vlan 1774
+ description INTERNATIONAL-TECH
+vlan 1775
+ description TPGS-IBD-004-INT-25M
+vlan 1776
+ description IPEXPRESS-IBADAN-2
+vlan 1777
+ description IPEXPRES-IBD 45Mbps
+vlan 1917
+ description VDT_28MB_Ibadan
+vlan 1977
+ description VDT-IBADAN-INTERNET
+vlan 1995
+ description VDT-IBADAN-AYEDE
+vlan 2423
+ description STANBIC VPLS
+vlan 2611
+ description CONOIL-IBADAN
+vlan 2613
+ description SUMAL-FOODS
+vlan 2745
+ description FAN-MILK-IBADAN-FACTORY-INT
+vlan 2826
+ description ZETAWEB_IBADAN_BCOS
+vlan 2981
+ description FLOWZAP
+vlan 3366
+ description WEMA_APATA
+vlan 3466
+ description NNPC DEPOT APATA
+vlan 3472
+ description NNPC-RETAIL-STATION-IBADAN
+vlan 3833
+ description SIMBERNET-IBADAN
+vlan 3836
+ description HYPERIA SHELL CLOSE IBADAN
+vlan 4048
+ description CYBERSPACE IBD POLARIS BNK
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@'7AEF/1cEYy/CHM$$'C;7zsg%@%@
+ local-user bsnoc privilege level 15
+ local-user fabian password cipher %@%@3EMjS=)3dPsg&Y#._9tS7zjK%@%@
+ local-user fabian privilege level 15
+ local-user huawei password cipher %@%@ZR8OJD7*qUL&Td$vpcF3S=Fq%@%@
+ local-user huawei privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif804
+ ip address 10.248.246.80 255.255.255.192
+#
+interface Vlanif1102
+#
+interface Vlanif1294
+#
+interface Vlanif1319
+#
+interface Vlanif1494
+#
+interface Vlanif1602
+ ip address 10.155.187.76 255.255.255.248
+#
+interface Vlanif1640
+ ip address 10.230.230.176 255.255.255.0
+#
+interface Vlanif1775
+#
+interface Vlanif1977
+#
+interface Vlanif1995
+#
+interface Vlanif2423
+#
+interface Vlanif2611
+ ip address 182.20.10.29 255.255.255.252
+#
+interface Vlanif3366
+ ip address 172.19.10.29 255.255.255.252
+#
+interface Vlanif3833
+ shutdown
+ ip address 85.85.85.2 255.255.255.252
+#
+interface Vlanif4048
+ ip address 10.10.20.2 255.255.255.252
+#
+interface Ethernet0/0/1
+ description JOGOR-GLOBAL-VENTURES-INT |100M
+ port link-type access
+ port default vlan 1543
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/2
+ description NNPC IBADAN DEPOT
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3466
+#
+interface Ethernet0/0/3
+#
+interface Ethernet0/0/4
+ description Satview Media(The Dexterity Group)100MB Internet
+ shutdown
+ port link-type access
+ port default vlan 1373
+#
+interface Ethernet0/0/5
+ description TPGS-IBD-004-INT-25M-FIBER-LM
+ shutdown
+ port link-type access
+ port default vlan 1775
+#
+interface Ethernet0/0/6
+ description description TPGS IBD BAZ3-IBD019|RING-RD(VLAN1102)|BAZ(VLAN 1775)|5M-INTERNET (VLAN-1319)
+ port link-type trunk
+ port trunk allow-pass vlan 1102 1319 1775
+#
+interface Ethernet0/0/7
+ description CONOIL IBADAN
+ port link-type access
+ port default vlan 2611
+#
+interface Ethernet0/0/8
+ description SARO IBADAN
+ port link-type trunk
+ port trunk allow-pass vlan 510 1240
+#
+interface Ethernet0/0/9
+ description ACCESS BANK ERUWA
+ port link-type access
+ port default vlan 1640
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/10
+ description IOTech Ibadan
+ port link-type access
+ port default vlan 1429
+#
+interface Ethernet0/0/11
+ description ZETAWEB IBADAN BCOS
+ port link-type trunk
+ port trunk allow-pass vlan 1503 2826
+#
+interface Ethernet0/0/12
+ description STANBIC IBTC BANK GBAGI IBADAN - SWIFTALK RADIO | 4MB
+ port link-type access
+ port default vlan 2423
+#
+interface Ethernet0/0/13
+ description HYPERIA SHELL-CLOSE_IBD|100Mb|VL3836
+ port link-type access
+ port default vlan 3836
+#
+interface Ethernet0/0/14
+ port link-type trunk
+ port trunk allow-pass vlan 1995
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/15
+ description TPGS-ANTHONY-VILLAGE | 50M
+ port link-type access
+ port default vlan 1699
+ jumboframe enable 13296
+#
+interface Ethernet0/0/16
+ description FAN-MILK-IBADAN-FACTORY-INT | 50M
+ port link-type access
+ port default vlan 2745
+#
+interface Ethernet0/0/17
+ description INTERNATIONAL-DATA-CENTER-55M-INT-FIBER-LM
+ port link-type access
+ port default vlan 1294
+#
+interface Ethernet0/0/18
+ description VDT-100M-INT-Cocoa House
+ port link-type access
+ port default vlan 1977
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/19
+ description CYBERSPACE IBD POLARIS BNK
+ port link-type trunk
+ port trunk allow-pass vlan 1503 4048
+#
+interface Ethernet0/0/20
+ description NNPC IBADAN DEPOT
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3466
+#
+interface Ethernet0/0/21
+ description SIMBANET-IBADAN
+ port link-type trunk
+ port trunk allow-pass vlan 1602 3833
+#
+interface Ethernet0/0/22
+ description JOGOR-GLOBAL-VENTURES-INT |100M
+ port link-type access
+ port default vlan 1543
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/23
+ description SWITCH LOGIN
+ port link-type access
+ port default vlan 804
+#
+interface Ethernet0/0/24
+ description IPEXPRESS-IBADAN4(Evans building)(vlan 1777)
+ port link-type access
+ port default vlan 1777
+#
+interface GigabitEthernet0/0/1
+ description IPEXPRESS-IBADAN-2(Lister Building)(vlan 1776) || NEW-SWITCH-MIGRATION-PORT
+ port link-type access
+ port default vlan 1776
+ jumboframe enable 13296
+#
+interface GigabitEthernet0/0/2
+ description UPLINK TO DCN IP/MPLS(GE0/2/9)
+ port link-type trunk
+ port trunk allow-pass vlan 100 510 804 1033 1102 1161 1240 1294 1319 1322
+ port trunk allow-pass vlan 1373 1429 1492 1494 1501 1503 1542 to 1543 1602 1632 1640
+ port trunk allow-pass vlan 1699 1773 to 1778 1915 1917 1977 1995 2423 2611 to 2613 2745 2826
+ port trunk allow-pass vlan 2981 2999 3034 3366 3466 3472 3833 3836 4048
+ jumboframe enable 13296
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/3
+ description SUMAL FOODS
+ port link-type trunk
+ port trunk allow-pass vlan 1492 2613
+ jumboframe enable 13296
+ port media type fiber
+     undo negotiation auto
+ combo-port auto
+#
+interface GigabitEthernet0/0/4
+ description TRUNK-TO-SECOND-3700-H-SW
+ port link-type trunk
+ port trunk allow-pass vlan 804 1033 1773 to 1774 1777 1977 2981
+ jumboframe enable 13296
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F0000010000090D
+ snmp-agent community read cipher %@%@95"dXu8Ct/m1>s%"t3B)y$+9!gvI-~F';Jt(G\+QQ6v#$+<yq:(!XjN`"O5w%XJ~={T.+Ey$%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[IBD019-ENT-H-3700SW]
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                                                   ?
+
+ ? 2025-11-13 ? ? 08:25.02 ? ? /home/mobaxterm ?

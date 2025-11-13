@@ -1,0 +1,320 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:44.41 ? ? /home/mobaxterm ? telnet 10.248.246.116
+Connected to 10.248.246.116.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<ENT-S3700-SW2-ADO002>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-S3700-SW2-ADO002]dis int des
+Interface                   Description
+Ethernet0/0/1               SENTIENT-WEMA-OKESHA | 10M
+Ethernet0/0/2               SWIFT TALK ADO EKITI | 10MB
+Ethernet0/0/3               TRUNK TO ADO001 | NNPC RETAIL AKURE 3473 | GTB EKSU
+                             | ACCESS UNAD(EKSU)
+Ethernet0/0/4               STANBIC IBTC BANK ADO EKITI-4MB-IOTECH-RADIO-NEW
+Ethernet0/0/5               HUAWEI, Quidway Series, Ethernet0/0/5 Interface
+Ethernet0/0/6               HUAWEI, Quidway Series, Ethernet0/0/6 Interface
+Ethernet0/0/7               HUAWEI, Quidway Series, Ethernet0/0/7 Interface
+Ethernet0/0/8               HUAWEI, Quidway Series, Ethernet0/0/8 Interface
+Ethernet0/0/9               HUAWEI, Quidway Series, Ethernet0/0/9 Interface
+Ethernet0/0/10              HUAWEI, Quidway Series, Ethernet0/0/10 Interface
+Ethernet0/0/11              HUAWEI, Quidway Series, Ethernet0/0/11 Interface
+Ethernet0/0/12              HUAWEI, Quidway Series, Ethernet0/0/12 Interface
+Ethernet0/0/13              HUAWEI, Quidway Series, Ethernet0/0/13 Interface
+Ethernet0/0/14              HUAWEI, Quidway Series, Ethernet0/0/14 Interface
+Ethernet0/0/15              HUAWEI, Quidway Series, Ethernet0/0/15 Interface
+Ethernet0/0/16              HUAWEI, Quidway Series, Ethernet0/0/16 Interface
+Ethernet0/0/17              HUAWEI, Quidway Series, Ethernet0/0/17 Interface
+Ethernet0/0/18              HUAWEI, Quidway Series, Ethernet0/0/18 Interface
+Ethernet0/0/19              HUAWEI, Quidway Series, Ethernet0/0/19 Interface
+Ethernet0/0/20              HUAWEI, Quidway Series, Ethernet0/0/20 Interface
+Ethernet0/0/21              HUAWEI, Quidway Series, Ethernet0/0/21 Interface
+Ethernet0/0/22              HUAWEI, Quidway Series, Ethernet0/0/22 Interface
+Ethernet0/0/23              HUAWEI, Quidway Series, Ethernet0/0/23 Interface
+Ethernet0/0/24              HUAWEI, Quidway Series, Ethernet0/0/24 Interface
+GigabitEthernet0/0/1        UPLINK TO DCN IP/MPLS Ge0/3/3
+GigabitEthernet0/0/2        HUAWEI, Quidway Series, GigabitEthernet0/0/2 Interf
+                            ace
+GigabitEthernet0/0/3        SAMSMITH ADO FEDERAL POLY | 130MB
+GigabitEthernet0/0/4        DEEPERLIFE-ADO-CRUSADE
+NULL0                       HUAWEI, Quidway Series, NULL0 Interface
+Vlanif1                     HUAWEI, Quidway Series, Vlanif1 Interface
+Vlanif804                   HUAWEI, Quidway Series, Vlanif804 Interface
+[ENT-S3700-SW2-ADO002]     dis cur
+#
+!Software Version V100R005C01SPC100
+ sysname ENT-S3700-SW2-ADO002
+#
+ vlan batch 804 1115 1121 1492 1494 to 1495 1497 1523 1580 1640 1999
+ vlan batch 2423 2551 3361 3473
+#
+ cluster enable
+ ntdp enable
+ ntdp hop 16
+ ndp enable
+#
+ http server load flash:/S3700_28TP-V100R005C01SPC100.web.zip
+#
+vlan 804
+ description SWITCH-MGT
+vlan 1115
+ description GTB-EKSU
+vlan 1121
+ description SENTIENT-WEMA-OKESHA
+vlan 1492
+ description NERA-MGT-VLAN
+vlan 1494
+ description NNPC-NERA-MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1523
+ description DEEPER-LIFE-CRUSADE
+vlan 1580
+ description SAMSMITH-ADO-FED-POLY
+vlan 1640
+ description ACCESS-BANK-LL
+vlan 1999
+ description SWIFTTALK-ADO-EKITI
+vlan 2423
+ description STANBIC-BANK-VPLS
+vlan 2551
+ description voda56-ekiti
+vlan 3361
+ description WEMA_ABUAD
+vlan 3473
+ description NNPC-RETAIL-STATION-EKITI
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password simple admin
+ local-user admin privilege level 15
+ local-user admin service-type http
+ local-user bsnoc password cipher RB!G'1+"PX61[a"FZ7=S#!!!
+ local-user bsnoc privilege level 15
+ local-user bsnoc service-type telnet terminal ssh ftp
+ local-user fabian password cipher *2+W,D'B31_Q=^Q`MAF4<1!!
+ local-user fabian privilege level 15
+ local-user fabian service-type telnet terminal ssh ftp
+#
+interface Vlanif1
+#
+interface Vlanif804
+ ip address 10.248.246.116 255.255.255.192
+#
+interface Ethernet0/0/1
+ description SENTIENT-WEMA-OKESHA | 10M
+ port link-type trunk
+ port trunk allow-pass vlan 1121
+ stp bpdu-filter enable
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/2
+ description SWIFT TALK ADO EKITI | 10MB
+ port link-type access
+ port default vlan 1999
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/3
+ description TRUNK TO ADO001 | NNPC RETAIL AKURE 3473 | GTB EKSU | ACCESS UNAD(EKSU)
+ port link-type trunk
+ port trunk allow-pass vlan 1115 1494 to 1495 1497 1632 1640 2551 3361 3473
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/4
+ description STANBIC IBTC BANK ADO EKITI-4MB-IOTECH-RADIO-NEW
+ port link-type access
+ port default vlan 2423
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/5
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/6
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/7
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/8
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/9
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/10
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/11
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/12
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/13
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/14
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/15
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/16
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/17
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/18
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/19
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/21
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/22
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/23
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/24
+ port link-type access
+ port default vlan 804
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/1
+ description UPLINK TO DCN IP/MPLS Ge0/3/3
+ port link-type trunk
+ port trunk allow-pass vlan 804 1115 1121 1492 1494 to 1495 1497 1523 1580 1632 1640
+ port trunk allow-pass vlan 1999 2423 2551 3361 3473
+ ntdp enable
+ ndp enable
+ bpdu enable
+ jumboframe enable 13296
+#
+interface GigabitEthernet0/0/2
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/3
+ description SAMSMITH ADO FEDERAL POLY | 130MB
+ port link-type access
+ port default vlan 1580
+ ntdp enable
+ ndp enable
+ bpdu enable
+ jumboframe enable 13296
+ port media type fiber
+     undo negotiation auto
+ combo-port auto
+#
+interface GigabitEthernet0/0/4
+ description DEEPERLIFE-ADO-CRUSADE
+ port link-type access
+ port default vlan 1523
+ ntdp enable
+ ndp enable
+ bpdu enable
+ jumboframe enable 13296
+ port media type fiber
+     undo negotiation auto
+ combo-port auto
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F000001000047EC
+ snmp-agent community read cipher 6XGa;.+"]L2$AY<%6@@$X$2[KN3`&>".M(0=0\)*5WU!
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ idle-timeout 0 0
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[ENT-S3700-SW2-ADO002]

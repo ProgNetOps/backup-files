@@ -1,0 +1,856 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:47.09 ? ? /home/mobaxterm ? telnet 10.248.246.151
+Connected to 10.248.246.151.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Username: bsnoc
+Password:
+BEN901_3750_01#sh int des
+Interface                      Status         Protocol Description
+Vl1                            up             up
+Vl15                           admin down     down
+Vl20                           admin down     down
+Vl50                           up             up
+Vl100                          up             up
+Vl120                          up             up
+Vl122                          up             up
+Vl123                          admin down     down
+Vl130                          up             up
+Vl144                          up             up
+Vl151                          up             up
+Vl152                          up             up
+Vl168                          up             up       PRIMATONE_BENIN
+Vl199                          up             up
+Vl651                          up             up
+Vl803                          up             up
+Vl1126                         up             up
+Vl1136                         up             up
+Vl1329                         up             up
+Vl1487                         up             up
+Vl1514                         admin down     down
+Vl1519                         up             up
+Vl1532                         down           down
+Vl1579                         up             up
+Vl1841                         up             up
+Vl1842                         up             up
+Vl1874                         up             up
+Vl1964                         down           down
+Vl1978                         up             up
+Vl2179                         up             up
+Vl2188                         up             up
+Vl2189                         admin down     down
+Vl2190                         up             up
+Vl2407                         up             up
+Vl2423                         up             up       STANBIC SAPELE RD BENIN - VLAN2423
+Vl2430                         down           down
+Vl2431                         up             up
+Vl2450                         up             up
+Vl3007                         down           down
+Vl3126                         up             up
+Fa1/0/1                        down           down     PROTEA HOTEL BENIN
+Fa1/0/2                        up             up       ELCREST BENIN INT- GRA - FIBER LM
+Fa1/0/3                        admin down     down     ACCESS BANK  EKENWA
+Fa1/0/4                        up             up       JEHOVA_WITNESS_PRI
+Fa1/0/5                        up             up       TO-CISCO-2960-SWITCH
+Fa1/0/6                        up             up       NNPC ENSERVE IDSL-HQ BENIN
+Fa1/0/7                        admin down     down     CONNECTION TO IGBINEDION EDUCATION CENTRE
+Fa1/0/8                        down           down     NNPC NPDC FIBER | ELCREST BENIN LL TRAFFIC(TO BE PASSED WHEN RADIO IS DOWN)
+Fa1/0/9                        down           down     CONNECTION TO FLEET TECHNOLOGIES BENIN
+Fa1/0/10                       up             up       HIQOS DPR BENIN
+Fa1/0/11                       up             up       trunk to GLOSHOP-IS ASABA WARRI IKPOBA-AUCHI BENIN
+Fa1/0/12                       up             up       ACCESS BANK SAPELE RD. BENIN
+Fa1/0/13                       up             up       STANBIC IBTC BANK SAPELE RD BENIN | NNPC MEDICAL BENIN | OBASUYI INVESTMENT | SWIFT TALK | AXA MANSARD BENIN
+Fa1/0/14                       admin down     down     description ICTA INTERNET 45MB INTERNET
+Fa1/0/15                       down           down
+Fa1/0/16                       up             up       SAHARA ENAGEED RESOURCE
+Fa1/0/17                       down           down     VDT-BENIN-INTERNET - FORMER-PORT-CHURCH OF GOD MISSION BENIN
+Fa1/0/18                       up             up       STANBIC PENSION BENIN | DICNET RADIO
+Fa1/0/19                       up             up       EDO TELECOM SBC CONNECTION
+Fa1/0/20                       down           down     NNPC NPDC CHQ BENIN CERAGON-IP20-RADIO !!Elcrest-Benin-LL-traffic
+Fa1/0/21                       down           down     ### CONNECTION TO GLO1-NE40 | | Port 1/3/6
+Fa1/0/22                       down           down     NBC-BENIN
+Fa1/0/23                       up             up       ACCESS-BANK UGBOWO
+Fa1/0/24                       down           down     NNPC-NPDC-HQ-BENIN-[MOVED FROM G1/0/2
+Gi1/0/1                        up             up       TRUNK-TO-GLOMOBILE || PeB-GE2/0/6
+Gi1/0/2                        down           down     FLOWZAP_BENIN[VL 2972] 100MB
+BEN901_3750_01#sh run
+Building configuration...
+
+Current configuration : 15919 bytes
+!
+version 12.2
+no service pad
+service timestamps debug uptime
+service timestamps log uptime
+service password-encryption
+service unsupported-transceiver
+!
+hostname BEN901_3750_01
+!
+enable secret 5 $1$Lp1o$B2uIm4ZJ5WuKOUW3Lc2Vd.
+!
+username ben privilege 15 secret 5 $1$ucXr$..ZmQxJJj6etPZymeMYTw.
+username kelechi privilege 15 secret 5 $1$qOT2$yP4MOO6ueBRdSac3APE0A/
+username noc privilege 15 secret 5 $1$RyKZ$leoAMsMfAJQDg5QU3BHKh/
+username ope privilege 15 secret 5 $1$GzRQ$M6.lgJNEUBXLQ./oghvYG.
+username bsnoc privilege 15 secret 5 $1$fR1h$CjgTlRGKNSup91g9O51Bw0
+no aaa new-model
+switch 1 provision ws-c3750-24p
+system mtu routing 1500
+vtp domain btlimited
+vtp mode transparent
+ip subnet-zero
+ip routing
+no ip domain-lookup
+!
+!
+mls qos
+!
+!
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause l2ptguard
+errdisable recovery cause psecure-violation
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery interval 30
+no file verify auto
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 1
+ tb-vlan1 1002
+ tb-vlan2 1003
+!
+vlan 11-15
+!
+vlan 20
+ name IGBINEDION_UNIVERSITY
+!
+vlan 21
+ name CHURCH_OF_GOD_MISSION_BENIN
+!
+vlan 50
+ name asw-mgmt-2
+!
+vlan 100
+ name JEHOVA-WITNESS
+!
+vlan 120
+!
+vlan 122
+ name IGBINEDION_EDUCATION_CENTRE
+!
+vlan 123
+!
+vlan 125
+ name alca-huaw-l2
+!
+vlan 130,135,144
+!
+vlan 151
+ name NIGERIA_NETCOMM
+!
+vlan 152
+ name NIGERIA_NET2
+!
+vlan 166
+ name GARTH_DOOLEY
+!
+vlan 168
+!
+vlan 199
+ name NEW_PRIMATONE
+!
+vlan 201
+ name CATHOLIC_RELIEF_SERVICE_BENIN
+!
+vlan 314
+ name STANBIC-PENSION
+!
+vlan 648
+ name JEHOVA-WITNES
+!
+vlan 651
+!
+vlan 803
+ name NEW-SWITCH-MGT
+!
+vlan 1002
+ tb-vlan1 1
+ tb-vlan2 1003
+!
+vlan 1003
+ tb-vlan1 1
+ tb-vlan2 1002
+ parent 1005
+!
+vlan 1004
+ bridge 1
+ stp type ibm
+!
+vlan 1005
+ bridge 1
+!
+vlan 1018
+ name NPDC-OKOLOMA
+!
+vlan 1020
+ name NPDC-IMO-RIVER
+!
+vlan 1126
+ name JEHOVAH_WITNESS_STM1
+!
+vlan 1136
+ name SWIFT-TALK-RADIO-MGT
+!
+vlan 1238
+ name SAHARA-ENAGEED
+!
+vlan 1282
+ name WESTMETRO-BENIN
+!
+vlan 1329
+ name OBASUYI-INVESTMENT-INT-10M
+!
+vlan 1487
+ name CERAGON-IP20-MGT
+!
+vlan 1493
+ name BS-NERA-3-MGT
+!
+vlan 1494
+ name NNPC-NERA-MGT
+!
+vlan 1495
+ name BS-NERA-2-MGT
+!
+vlan 1497
+ name BS-NERA-MGT
+!
+vlan 1501
+ name BS-MGT
+!
+vlan 1504
+ name NBC_BENIN_URBAN
+!
+vlan 1506
+ name EDO-SBC-VOICE
+!
+vlan 1513
+ name BUA_GROUP
+!
+vlan 1514
+ name NBC-BENIN-EKPOMA
+!
+vlan 1519
+ name PRIMROSE_BENIN
+!
+vlan 1521-1524
+!
+vlan 1579
+ name AXA-MANSARD-BENIN
+!
+vlan 1640
+ name ACCESS-VPLS
+!
+vlan 1641
+ name GARTH-DOOLEY-INTERNET
+!
+vlan 1642
+ name ALFAO&o-INTERNET
+!
+vlan 1643
+ name ALFAO&o-LEASEDLINE
+!
+vlan 1733
+ name AMBROSE-ALLI-UNI
+!
+vlan 1809
+ name nig-net3
+!
+vlan 1840
+ name BIU
+!
+vlan 1841
+ name UNIBEN
+!
+vlan 1842
+ name GLO_MGT
+!
+vlan 1874
+!
+vlan 1966
+ name AMBROSE-ALI-UNI
+!
+vlan 1978
+ name VDT-BENIN-INT
+!
+vlan 2175
+ name HIQOS-DPR-BENIN
+!
+vlan 2177
+ name NNPC-NPDC-FIBER
+!
+vlan 2178
+ name NNPC-ITD-BENIN-SEC
+!
+vlan 2179
+ name GARTH)DOOLEY
+!
+vlan 2181
+ name AUCHI-GLOWORLD
+!
+vlan 2185
+ name GLOSHOP-IKPOBA-HILL
+!
+vlan 2188
+ name GLOSHOP-ASABA
+!
+vlan 2189
+ name GLOSHOP-WARRI
+!
+vlan 2190
+ name Sapele_Gloshop
+!
+vlan 2191
+ name GLOSHOP-AWKA
+!
+vlan 2193
+ name GLOWORLD-BENIN
+!
+vlan 2407
+ name CONOIL-BENIN
+!
+vlan 2423
+ name STANBIC-BENIN
+!
+vlan 2425
+ name PROTEA-HOTEL-BENIN
+!
+vlan 2431
+ name JEHOVA-WIT-OREGUN
+!
+vlan 2432
+ name JEHOVA-WIT-MOWE
+!
+vlan 2433
+ name JEHOVA-WIT-AGBARHO
+!
+vlan 2450
+ name RCC-BENIN-GH-GRA
+!
+vlan 2455
+ name RCC-BENIN-BY-PASS
+!
+vlan 2596
+ name LILLY-Hospital-INT
+!
+vlan 2910
+ name GLOWORLD-ONT-1
+!
+vlan 2914
+ name GLOSHOP-ONITSHA
+!
+vlan 2972
+ name FLOWZAP
+!
+vlan 3042
+ name UBA-VPLS
+!
+vlan 3126
+ name ACCESS-BANK-OLD-DIAMOND
+!
+vlan 3135
+ name ELCREST-BENIN-LL
+!
+vlan 3138
+ name ELCREST-BENIN-INTERNET
+!
+vlan 3522
+ name NNPC-NPDC-BENIN
+!
+vlan 3523
+ name NNPC-MEDICAL-BENIN
+!
+vlan 3524
+ name NNPC-NPDC-RADIO
+!
+vlan 3610
+ name Brett_Integrated
+!
+vlan 3881
+ name EDO-TEL-SBC-VOICE
+!
+class-map match-all PORT-10MB-IN
+  match input-interface  GigabitEthernet1/0/2
+class-map match-all VLAN-WARRI-REF-15MB-IN
+  match access-group name WARRI-REF-IN
+class-map match-all PORT-WARRI-REF-15MB-IN
+  match input-interface  FastEthernet1/0/3
+class-map match-all VLAN-10MB-IN
+  match access-group name J-WITNESS-IN
+class-map match-all VLAN-NIGER-NET-4MB-IN
+  match access-group name NIGER-NET-4MB-IN
+class-map match-all VLAN-NIGER-NET-6MB-IN
+  match access-group name NIGER-NET-6MB-IN
+class-map match-all PORT-NIGER-NET-4MB-IN
+  match input-interface  FastEthernet1/0/13
+class-map match-all PORT-NIGER-NET-6MB-IN
+  match input-interface  FastEthernet1/0/14
+class-map match-all VLAN-IGBINEDION-EDU-2MB-OUT
+  match access-group name IGBINEDION-EDU-OUT
+class-map match-all VLAN-IGBINEDION-UNI-6MB-OUT
+  match access-group name IGBINEDION-UNI-OUT
+class-map match-all PORT-MPLS-INTERFACE
+  match input-interface  GigabitEthernet1/0/1
+class-map match-all VLAN-J-WITNESS-10MB-OUT
+  match access-group name J-WITNESS-OUT
+class-map match-all VLAN-WARRI-REF-15MB-OUT
+  match access-group name WARRI-REF-OUT
+class-map match-all VLAN-NIGER-NET-4MB-OUT
+  match access-group name NIGER-NET-4MB-OUT
+class-map match-all VLAN-NIGER-NET-6MB-OUT
+  match access-group name NIGER-NET-6MB-OUT
+!
+!
+policy-map PORT-NIGER-NETCOM-4MB-OUT
+  class PORT-MPLS-INTERFACE
+    police 4096000 72000 exceed-action drop
+policy-map PORT-NIGER-NETCOM-6MB-OUT
+  class PORT-MPLS-INTERFACE
+    police 6144000 72000 exceed-action drop
+policy-map PORT-IGBINEDION-UNI-OUT
+  class PORT-MPLS-INTERFACE
+    police 6144000 24000 exceed-action drop
+policy-map PORT-IGBINEDION-EDU-OUT
+  class PORT-MPLS-INTERFACE
+    police 2048000 12000 exceed-action drop
+policy-map PORT-WARRI-REF-IN
+  class PORT-WARRI-REF-15MB-IN
+    police 15360000 72000 exceed-action drop
+policy-map VLAN-WARRI-REF-IN
+  class VLAN-WARRI-REF-15MB-IN
+    trust dscp
+   service-policy PORT-WARRI-REF-IN
+policy-map PORT-J-WITNESS-IN
+  class PORT-10MB-IN
+    police 54272000 72000 exceed-action drop
+policy-map VLAN-J-WITNESS-IN
+  class VLAN-10MB-IN
+    trust dscp
+   service-policy PORT-J-WITNESS-IN
+policy-map PORT-J-WITNESS-OUT
+  class PORT-MPLS-INTERFACE
+    police 1638400000 72000 exceed-action drop
+policy-map PORT-WARRI-REF-OUT
+  class PORT-MPLS-INTERFACE
+    police 15360000 72000 exceed-action drop
+policy-map VLAN-RATE-LIMIT-CLIENTS-OUT
+  class VLAN-J-WITNESS-10MB-OUT
+    trust dscp
+   service-policy PORT-J-WITNESS-OUT
+  class VLAN-IGBINEDION-EDU-2MB-OUT
+    trust dscp
+   service-policy PORT-IGBINEDION-EDU-OUT
+  class VLAN-IGBINEDION-UNI-6MB-OUT
+    trust dscp
+   service-policy PORT-IGBINEDION-UNI-OUT
+  class VLAN-WARRI-REF-15MB-OUT
+    trust dscp
+   service-policy PORT-WARRI-REF-OUT
+  class VLAN-NIGER-NET-4MB-OUT
+    trust dscp
+   service-policy PORT-NIGER-NETCOM-4MB-OUT
+  class VLAN-NIGER-NET-6MB-OUT
+    trust dscp
+   service-policy PORT-NIGER-NETCOM-6MB-OUT
+policy-map PORT-NIGER-NETCOM-4MB-IN
+  class PORT-NIGER-NET-4MB-IN
+    police 4096000 72000 exceed-action drop
+policy-map PORT-NIGER-NETCOM-6MB-IN
+  class PORT-NIGER-NET-6MB-IN
+    police 6144000 72000 exceed-action drop
+policy-map VLAN-NIGER-NETCOM-4MB-IN
+  class VLAN-NIGER-NET-4MB-IN
+    trust dscp
+   service-policy PORT-NIGER-NETCOM-4MB-IN
+  class VLAN-NIGER-NET-6MB-IN
+    trust dscp
+   service-policy PORT-NIGER-NETCOM-6MB-IN
+!
+!
+interface FastEthernet1/0/1
+ description PROTEA HOTEL BENIN
+ switchport access vlan 2425
+ switchport mode access
+!
+interface FastEthernet1/0/2
+ description ELCREST BENIN INT- GRA - FIBER LM
+ switchport access vlan 3138
+ switchport mode access
+!
+interface FastEthernet1/0/3
+ description ACCESS BANK  EKENWA
+ switchport access vlan 1640
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet1/0/4
+ description JEHOVA_WITNESS_PRI
+ switchport access vlan 130
+ switchport mode access
+!
+interface FastEthernet1/0/5
+ description TO-CISCO-2960-SWITCH
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1-19,21-119,121-151,153-802,804-1486,1488-1500
+ switchport trunk allowed vlan add 1502-1965,1967-4094
+ switchport mode trunk
+!
+interface FastEthernet1/0/6
+ description NNPC ENSERVE IDSL-HQ BENIN
+ switchport access vlan 3524
+ switchport mode access
+!
+interface FastEthernet1/0/7
+ description CONNECTION TO IGBINEDION EDUCATION CENTRE
+ switchport access vlan 1523
+ switchport mode access
+ load-interval 30
+ shutdown
+ speed 100
+ duplex full
+!
+interface FastEthernet1/0/8
+ description NNPC NPDC FIBER | ELCREST BENIN LL TRAFFIC(TO BE PASSED WHEN RADIO IS DOWN)
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 2177
+ switchport mode trunk
+!
+interface FastEthernet1/0/9
+ description CONNECTION TO FLEET TECHNOLOGIES BENIN
+ switchport access vlan 1524
+ switchport mode access
+!
+interface FastEthernet1/0/10
+ description HIQOS DPR BENIN
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1495,2175
+ switchport mode trunk
+!
+interface FastEthernet1/0/11
+ description trunk to GLOSHOP-IS ASABA WARRI IKPOBA-AUCHI BENIN
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 2181,2185,2188-2191,2193,2910,2914
+ switchport mode trunk
+!
+interface FastEthernet1/0/12
+ description ACCESS BANK SAPELE RD. BENIN
+ switchport access vlan 1640
+ switchport mode access
+!
+interface FastEthernet1/0/13
+ description STANBIC IBTC BANK SAPELE RD BENIN | NNPC MEDICAL BENIN | OBASUYI INVESTMENT | SWIFT TALK | AXA MANSARD BENIN
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1136,1329,1494,1497,1506,1579,2423,3523
+ switchport mode trunk
+ speed 100
+ duplex full
+ spanning-tree portfast
+!
+interface FastEthernet1/0/14
+ description description ICTA INTERNET 45MB INTERNET
+ switchport access vlan 152
+ switchport mode access
+ shutdown
+!
+interface FastEthernet1/0/15
+ load-interval 30
+!
+interface FastEthernet1/0/16
+ description SAHARA ENAGEED RESOURCE
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1238,1495
+ switchport mode trunk
+!
+interface FastEthernet1/0/17
+ description VDT-BENIN-INTERNET - FORMER-PORT-CHURCH OF GOD MISSION BENIN
+ switchport access vlan 1978
+ switchport mode access
+ speed 100
+ duplex full
+!
+interface FastEthernet1/0/18
+ description STANBIC PENSION BENIN | DICNET RADIO
+ switchport access vlan 314
+ switchport mode access
+!
+interface FastEthernet1/0/19
+ description EDO TELECOM SBC CONNECTION
+ switchport access vlan 3881
+ switchport mode access
+!
+interface FastEthernet1/0/20
+ description NNPC NPDC CHQ BENIN CERAGON-IP20-RADIO !!Elcrest-Benin-LL-traffic
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 803,1018,1020,1487,1494,1501,3135,3522
+ switchport mode trunk
+!
+interface FastEthernet1/0/21
+ description ### CONNECTION TO GLO1-NE40 | | Port 1/3/6
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 20,21,50,100,120,125,135,151,152,168,199,201
+ switchport trunk allowed vlan add 1519,1809
+ switchport mode trunk
+ load-interval 30
+!
+interface FastEthernet1/0/22
+ description NBC-BENIN
+ switchport access vlan 1514
+ switchport mode access
+!
+interface FastEthernet1/0/23
+ description ACCESS-BANK UGBOWO
+ switchport access vlan 1640
+ switchport mode access
+!
+interface FastEthernet1/0/24
+ description NNPC-NPDC-HQ-BENIN-[MOVED FROM G1/0/2
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3522
+ switchport mode trunk
+ load-interval 30
+ mls qos vlan-based
+!
+interface GigabitEthernet1/0/1
+ description TRUNK-TO-GLOMOBILE || PeB-GE2/0/6
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ speed nonegotiate
+ mls qos vlan-based
+ spanning-tree bpdufilter enable
+!
+interface GigabitEthernet1/0/2
+ description FLOWZAP_BENIN[VL 2972] 100MB
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 2972
+ switchport mode trunk
+ load-interval 30
+ mls qos vlan-based
+!
+interface Vlan1
+ ip address 10.240.240.34 255.255.255.252 secondary
+ ip address 192.168.0.1 255.255.255.0
+!
+interface Vlan15
+ ip address 41.203.76.185 255.255.255.248
+ shutdown
+!
+interface Vlan20
+ ip address 41.203.92.73 255.255.255.248
+ shutdown
+!
+interface Vlan50
+ ip address 10.248.248.18 255.255.255.252
+!
+interface Vlan100
+ ip address 192.168.4.1 255.255.255.0
+ service-policy input VLAN-J-WITNESS-IN
+!
+interface Vlan120
+ ip address 41.203.95.17 255.255.255.248 secondary
+ ip address 41.203.95.65 255.255.255.248
+ service-policy input VLAN-WARRI-REF-IN
+!
+interface Vlan122
+ no ip address
+!
+interface Vlan123
+ ip address 197.211.37.33 255.255.255.248
+ shutdown
+!
+interface Vlan130
+ ip address 10.10.10.1 255.255.255.252
+!
+interface Vlan144
+ no ip address
+!
+interface Vlan151
+ no ip address
+ service-policy input VLAN-NIGER-NETCOM-4MB-IN
+!
+interface Vlan152
+ no ip address
+!
+interface Vlan168
+ description PRIMATONE_BENIN
+ no ip address
+!
+interface Vlan199
+ no ip address
+!
+interface Vlan651
+ ip address 10.241.110.9 255.255.255.252
+!
+interface Vlan803
+ ip address 10.248.246.151 255.255.255.192
+!
+interface Vlan1126
+ no ip address
+!
+interface Vlan1136
+ no ip address
+!
+interface Vlan1329
+ no ip address
+!
+interface Vlan1487
+ no ip address
+!
+interface Vlan1514
+ ip address 10.240.245.249 255.255.255.252
+ shutdown
+!
+interface Vlan1519
+ no ip address
+!
+interface Vlan1532
+ ip address 41.203.76.190 255.255.255.248
+!
+interface Vlan1579
+ ip address 192.168.40.1 255.255.255.0
+!
+interface Vlan1841
+ ip address 10.12.13.2 255.255.255.252
+!
+interface Vlan1842
+ ip address 41.203.92.130 255.255.255.248
+ service-policy input VLAN-RATE-LIMIT-CLIENTS-OUT
+!
+interface Vlan1874
+ no ip address
+!
+interface Vlan1964
+ ip address 172.27.14.179 255.255.255.248
+!
+interface Vlan1978
+ no ip address
+!
+interface Vlan2179
+ no ip address
+!
+interface Vlan2188
+ no ip address
+!
+interface Vlan2189
+ ip address 8.8.8.1 255.255.255.252
+ shutdown
+!
+interface Vlan2190
+ no ip address
+!
+interface Vlan2407
+ ip address 160.5.125.100 255.255.255.0
+!
+interface Vlan2423
+ description STANBIC SAPELE RD BENIN - VLAN2423
+ ip address 172.30.30.25 255.255.255.0
+!
+interface Vlan2430
+ no ip address
+!
+interface Vlan2431
+ ip address 192.168.168.1 255.255.255.0
+!
+interface Vlan2450
+ ip address 197.211.32.19 255.255.255.248
+!
+interface Vlan3007
+ no ip address
+!
+interface Vlan3126
+ ip address 172.35.30.7 255.255.255.0
+!
+ip default-gateway 10.248.246.129
+ip classless
+ip route 0.0.0.0 0.0.0.0 10.248.246.129
+no ip http server
+!
+ip access-list extended IGBINEDION-EDU-OUT
+ permit ip any 41.203.76.184 0.0.0.7
+ip access-list extended IGBINEDION-UNI-OUT
+ permit ip any 41.203.92.72 0.0.0.7
+ip access-list extended J-WITNESS-IN
+ permit ip any any
+ip access-list extended J-WITNESS-OUT
+ permit ip any 41.203.92.136 0.0.0.7
+ip access-list extended NIGER-NET-4MB-IN
+ permit ip any any
+ip access-list extended NIGER-NET-4MB-OUT
+ permit ip any 197.211.37.56 0.0.0.7
+ip access-list extended NIGER-NET-6MB-IN
+ permit ip any any
+ip access-list extended NIGER-NET-6MB-OUT
+ permit ip any 197.211.49.224 0.0.0.15
+ip access-list extended WARRI-REF-IN
+ permit ip any any
+ip access-list extended WARRI-REF-OUT
+ permit ip any 41.203.95.16 0.0.0.7
+ permit ip any 41.203.95.64 0.0.0.7
+!
+tftp-server flash:c3750-ipbase-mz.122-35.SE5/c3750-ipbase-mz.122-35.SE5.bin
+snmp-server community globacom RO
+snmp-server enable traps license
+!
+control-plane
+!
+!
+line con 0
+ password 7 013E07165A0503032D5D
+ login local
+line vty 0 4
+ session-timeout 10
+ access-class 20 in
+ exec-timeout 5 0
+ password 7 132816000A020126272B
+ logging synchronous
+ login local
+line vty 5 15
+ exec-timeout 5 0
+ password 7 132816000A020126272B
+ logging synchronous
+ login local
+!
+end
+
+BEN901_3750_01#

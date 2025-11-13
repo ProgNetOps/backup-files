@@ -1,0 +1,492 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 08:23.14 ? ? /home/mobaxterm ? telnet 10.248.246.71
+Connected to 10.248.246.71.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-ILR009>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-ILR009]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       ACCESS BANK ILORIN
+Eth0/0/2                      up      up       SENTIENT NETWORKS SNL ILRP | 2MB
+Eth0/0/3                      down    down     [FORMER PORT] ITX Telecoms Ilorin
+                                                |10MB
+Eth0/0/4                      up      up       IBEDC_ILORIN | IBEDC_BABOKO
+Eth0/0/5                      up      up       KWASU CONTACT CENTER INT | 25MB D
+                                               ICNET RADIO
+Eth0/0/6                      up      up       UNION BANK MM WAY ILORIN
+Eth0/0/7                      up      up       FCMB MM WAY ILORIN LEASED LINE
+Eth0/0/8                      up      up       KWIRS ILORIN MPLS DIRECT IP R CER
+                                               AGON
+Eth0/0/9                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/9 Interface
+Eth0/0/10                     up      up       UBA MM WAY ILORIN | LAFAYETTE-INT
+                                                | WEMA ILORIN
+Eth0/0/11                     down    down     SMOOTH_BACKUP-RADIO
+Eth0/0/12                     up      up       TPGS-ILORIN-2
+Eth0/0/13                     up      up       ITX Telecoms Ilorin | 20MB
+Eth0/0/14                     down    down     UNILORIN VC RESIDENCE INTERNET |
+                                               10MB
+Eth0/0/15                     up      up       GLOWORLD ILORIN
+Eth0/0/16                     up      up       KWASU CONFERENCE CENTER INTERNET
+                                               | 45MB DICNET RADIO
+Eth0/0/17                     down    down     KWASU-BUS-ILR-INT | 70M
+Eth0/0/18                     up      up       UNILORIN COLLEGE OF HEALTH SCIENC
+                                               ES (COHS) | 75MB
+Eth0/0/19                     up      up       SWIFT-TALK-ILORIN-20M-LL-VLAN1919
+                                               -CLIENT-LM
+Eth0/0/20                     up      up       NIGER RIVER BASIN ILORIN
+Eth0/0/21                     up      up       UNILORIN GRA QUARTERS INT | 60MB
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     *down   down     ACCESS-BANK(OLD-DIAMOND) TAIWO RD
+Eth0/0/24                     up      up       MGT_TEST
+GE0/0/1                       up      up       UPLINK TO DCN UPE M8 GE0/2/0
+GE0/0/2                       up      up       ALHIKMAH MAIN CAMPUS
+GE0/0/3                       down    down     SKE BANK JEBBA | NNPC ILORIN DEPO
+                                               T | KWASU MAIN CAMP | IBEDC JEBBA
+GE0/0/4                       up      up       VDT-ILORIN-160M-INT(1290)
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif804                     up      up       HUAWEI, Quidway Series, Vlanif804
+                                                Interface
+Vlanif1290                    up      down     HUAWEI, Quidway Series, Vlanif129
+                                               0 Interface
+Vlanif1419                    up      up       HUAWEI, Quidway Series, Vlanif141
+                                               9 Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1758                    up      up       HUAWEI, Quidway Series, Vlanif175
+                                               8 Interface
+Vlanif1763                    up      up       HUAWEI, Quidway Series, Vlanif176
+                                               3 Interface
+Vlanif1894                    up      down     HUAWEI, Quidway Series, Vlanif189
+                                               4 Interface
+Vlanif1986                    up      down     HUAWEI, Quidway Series, Vlanif198
+                                               6 Interface
+Vlanif2055                    up      down     HUAWEI, Quidway Series, Vlanif205
+                                               5 Interface
+Vlanif2263                    up      up       HUAWEI, Quidway Series, Vlanif226
+                                               3 Interface
+Vlanif2304                    up      up       HUAWEI, Quidway Series, Vlanif230
+                                               4 Interface
+Vlanif2428                    up      up       HUAWEI, Quidway Series, Vlanif242
+                                               8 Interface
+Vlanif3042                    up      down     HUAWEI, Quidway Series, Vlanif304
+                                               2 Interface
+Vlanif3416                    up      up       HUAWEI, Quidway Series, Vlanif341
+                                               6 Interface
+[BS-ILR009]    dis cur
+#
+!Software Version V100R006C05
+ sysname BS-ILR009
+#
+ vlan batch 4 222 232 804 1115 1133 1181 to 1183 1228 1290 1299
+ vlan batch 1337 1419 1425 1486 1492 to 1497 1501 1589 1618 1640 1758 to 1759
+ vlan batch 1763 1894 1919 1974 1986 2023 2053 2055 2168 2175
+ vlan batch 2204 2207 to 2208 2262 to 2263 2304 2428 2446 2468 2551 2611 2615 to 2616
+ vlan batch 2957 2969 2999 3030 3035 3042 3107 3126 3374 3416
+ vlan batch 3465 3509 to 3510 3513
+#
+ stp disable
+#
+ undo http server enable
+ undo http secure-server enable
+#
+vlan 4
+ description Kwasu_Mini
+vlan 222
+ description KWASU-LEASE-LINE-MINI-CAMPUS
+vlan 232
+ description FIRS-ILORIN-MPLS
+vlan 804
+ description New_Switch _MGMT
+vlan 1115
+ description UNION-BANK-UNI-ILORIN
+vlan 1133
+ description KWIRS INTERNET | 10Mbps
+vlan 1181
+ description UNILORIN-VC-RESIDENCE
+vlan 1182
+ description UNILORIN-COHS
+vlan 1183
+ description UNILORIN GRA QUARTERS
+vlan 1228
+ description SOFTECH-IDEAL
+vlan 1290
+ description VDT-ILORIN-40M-INT
+vlan 1299
+ description SMOOTH-BACKUP-INT
+vlan 1337
+ description TPGS ILORIN
+vlan 1419
+ description ITX Telecoms Ilorin
+vlan 1425
+ description LAFAYETTE
+vlan 1486
+ description NEW-CERAGON-MGT
+vlan 1492
+ description BS-NERA-4-MGT
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1494
+ description NNPC-NERA-MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1496
+ description CERAGON-MGT-VLAN
+vlan 1497
+ description NERA-MGT-VLAN
+vlan 1501
+ description BS_MGT
+vlan 1589
+ description UNION-ILORIN
+vlan 1618
+ description NDIC-ILORIN
+vlan 1640
+ description Access-Bank
+vlan 1758
+ description IBDEC-CHALLENGE
+vlan 1759
+ description IBDEC-BABAKO
+vlan 1763
+ description IBEDC JEBBA
+vlan 1894
+ description OANDO ILORIN
+vlan 1919
+ description SWIFT-TALK-ILORIN
+vlan 1974
+ description UNION-UNI-ILORIN
+vlan 1986
+ description NALOT-KWARA-STATE-POLY
+vlan 2023
+ description LAFAYETTE-INT
+vlan 2053
+ description TPGS-ILORIN-2
+vlan 2055
+ description TPGS-ILORIN-2
+vlan 2168
+ description KWASU-CONTACT-OFFICE
+vlan 2175
+ description GLOWORLD-ILORIN
+vlan 2204
+ description KWASU-MAIN-2
+vlan 2207
+ description KWASU-INTERNET
+vlan 2208
+ description KWASU-MINI-INTERNET
+vlan 2262
+ description Imperial-IT-Ilorin-30MB Internet
+vlan 2263
+ description CAMPUSFI KWARA STATE POLYTECHNIC
+vlan 2304
+ description DOTMAC-TECH-LAG-IGBETI
+vlan 2428
+ description NBC-ILORIN
+vlan 2446
+ description FLOURMILLS SUNTI FARMS
+vlan 2468
+ description SEVEN-UP-ILORIN-MPLS
+vlan 2551
+ description SENTIENT-SNL-ILRP
+vlan 2611
+ description KWASU-BUS-ILR-INT
+vlan 2615
+ description KWASU-CONFERENCE-CENT-INT
+vlan 2616
+ description KWASU-CONTACT-OFFICE-INT
+vlan 2957
+ description idn
+vlan 2969
+ description FLOWZAP-ILORIN
+vlan 2999
+ description FCMB MM WAY- ILORIN
+vlan 3030
+ description ALHIKMAH-MAIN-CAMPUS
+vlan 3042
+ description UBA-VPLS
+vlan 3107
+ description VDT-LAG-ILORIN-LL
+vlan 3126
+ description DIAMOND-VPLS
+vlan 3374
+ description WEMA-BANK-ILORIN
+vlan 3416
+ description HERITAGE-BANK-ILORIN
+vlan 3465
+ description NNPC-ILORIN-DEPOT
+vlan 3509
+ description KWASU-CONFERENCE-CENTRE
+vlan 3510
+ description NIGER_RIVER_BASIN_ILORIN
+vlan 3513
+ description PRINCESS-HOTEL
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@n%GYW,ev1,CdfLGYx%0W~ssZ%@%@
+ local-user bsnoc privilege level 15
+ local-user chuks password cipher %@%@ze@AXO~w81|+6#H=BYL:7@#h%@%@
+ local-user chuks privilege level 15
+ local-user donald password cipher %@%@M=M}O/[D=F{)>KA,0(D=7@!V%@%@
+ local-user donald privilege level 15
+ local-user fabian password cipher %@%@ic'P@_gj@T$X%_.B2}VO7@z4%@%@
+ local-user fabian privilege level 15
+ local-user mathew password cipher %@%@5.7t;ecxN'xGY@E=zMC'~tUT%@%@
+ local-user mathew privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif804
+ ip address 10.248.246.71 255.255.255.192
+#
+interface Vlanif1290
+#
+interface Vlanif1419
+ ip address 129.205.123.74 255.255.255.248
+#
+interface Vlanif1501
+ ip address 10.248.249.180 255.255.255.0
+#
+interface Vlanif1758
+ ip address 192.168.45.2 255.255.255.0
+#
+interface Vlanif1763
+ ip address 10.100.100.2 255.255.255.0
+#
+interface Vlanif1894
+#
+interface Vlanif1986
+#
+interface Vlanif2055
+#
+interface Vlanif2263
+ ip address 129.205.123.182 255.255.255.248
+#
+interface Vlanif2304
+ ip address 192.168.3.2 255.255.255.0
+#
+interface Vlanif2428
+ ip address 192.168.0.100 255.255.255.0
+#
+interface Vlanif3042
+#
+interface Vlanif3416
+ ip address 172.16.64.107 255.255.255.248
+#
+interface Ethernet0/0/1
+ description ACCESS BANK ILORIN
+ port link-type access
+ port default vlan 1640
+#
+interface Ethernet0/0/2
+ description SENTIENT NETWORKS SNL ILRP | 2MB
+ port link-type trunk
+ port trunk allow-pass vlan 2551
+#
+interface Ethernet0/0/3
+ description [FORMER PORT] ITX Telecoms Ilorin |10MB
+ port link-type access
+ port default vlan 1419
+#
+interface Ethernet0/0/4
+ description IBEDC_ILORIN | IBEDC_BABOKO
+ port link-type trunk
+ port trunk allow-pass vlan 1486 1493 1758 to 1759
+ stp bpdu-filter enable
+ jumboframe enable 13296
+#
+interface Ethernet0/0/5
+ description KWASU CONTACT CENTER INT | 25MB DICNET RADIO
+ port link-type access
+ port default vlan 2616
+#
+interface Ethernet0/0/6
+ description UNION BANK MM WAY ILORIN
+ port link-type access
+ port default vlan 1589
+#
+interface Ethernet0/0/7
+ description FCMB MM WAY ILORIN LEASED LINE
+ port link-type trunk
+ port trunk allow-pass vlan 1495 2999
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/8
+ description KWIRS ILORIN MPLS DIRECT IP R CERAGON
+ port link-type access
+ port default vlan 1133
+#
+interface Ethernet0/0/9
+ port link-type access
+#
+interface Ethernet0/0/10
+ description UBA MM WAY ILORIN | LAFAYETTE-INT | WEMA ILORIN
+ port link-type trunk
+ port trunk allow-pass vlan 1495 2023 3042 3374 3513
+#
+interface Ethernet0/0/11
+ description SMOOTH_BACKUP-RADIO
+ port link-type trunk
+ port trunk allow-pass vlan 1299 1486
+#
+interface Ethernet0/0/12
+ description TPGS-ILORIN-2
+ port link-type access
+ port default vlan 2055
+#
+interface Ethernet0/0/13
+ description ITX Telecoms Ilorin | 20MB
+ port link-type access
+ port default vlan 1419
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/14
+ description UNILORIN VC RESIDENCE INTERNET | 10MB
+ port link-type access
+ port default vlan 1181
+#
+interface Ethernet0/0/15
+ description GLOWORLD ILORIN
+ port link-type access
+ port default vlan 2175
+#
+interface Ethernet0/0/16
+ description KWASU CONFERENCE CENTER INTERNET | 45MB DICNET RADIO
+ port link-type access
+ port default vlan 2615
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/17
+ description KWASU-BUS-ILR-INT | 70M
+ port link-type trunk
+ port trunk allow-pass vlan 1496 2611
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/18
+ description UNILORIN COLLEGE OF HEALTH SCIENCES (COHS) | 75MB
+ port link-type access
+ port default vlan 1182
+#
+interface Ethernet0/0/19
+ description SWIFT-TALK-ILORIN-20M-LL-VLAN1919-CLIENT-LM
+ port link-type access
+ port default vlan 1919
+#
+interface Ethernet0/0/20
+ description NIGER RIVER BASIN ILORIN
+ port link-type trunk
+ port trunk allow-pass vlan 1492 3510
+#
+interface Ethernet0/0/21
+ description UNILORIN GRA QUARTERS INT | 60MB
+ port link-type access
+ port default vlan 1183
+#
+interface Ethernet0/0/22
+ port link-type access
+ port default vlan 2262
+#
+interface Ethernet0/0/23
+ description ACCESS-BANK(OLD-DIAMOND) TAIWO RD
+ shutdown
+ port link-type access
+ port default vlan 1640
+#
+interface Ethernet0/0/24
+ description MGT_TEST
+ port link-type access
+ port default vlan 804
+#
+interface GigabitEthernet0/0/1
+ description UPLINK TO DCN UPE M8 GE0/2/0
+ port link-type trunk
+ port trunk allow-pass vlan 22 232 804 951 1115 1133 1181 to 1183 1228 1290 1299
+ port trunk allow-pass vlan 1337 1419 1425 1486 1492 to 1497 1501 1589 1640 1758 to 1759 1763
+ port trunk allow-pass vlan 1894 1919 1974 1986 2023 2053 2055 2168 2175 2204
+ port trunk allow-pass vlan 2207 to 2208 2262 to 2263 2304 2428 2446 2468 2551 2611 2615 to 2616 2957
+ port trunk allow-pass vlan 2969 2999 3030 3035 3042 3107 3126 3374 3416 3465
+ port trunk allow-pass vlan 3509 to 3510 3513 3602
+ jumboframe enable 13296
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/2
+ description ALHIKMAH MAIN CAMPUS
+ port link-type trunk
+ port trunk allow-pass vlan 3030
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/3
+ description SKE BANK JEBBA | NNPC ILORIN DEPOT | KWASU MAIN CAMP | IBEDC JEBBA
+ port link-type trunk
+ port trunk allow-pass vlan 804 1486 1494 to 1495 1501 1763 1894 2204 3465
+#
+interface GigabitEthernet0/0/4
+ description VDT-ILORIN-160M-INT(1290)
+ port link-type trunk
+ port trunk allow-pass vlan 1290 1495
+ jumboframe enable 13296
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F000001000018E6
+ snmp-agent community read cipher %@%@hpps9nJkT&G1.RRgCBPJZ'SP>tJ+K.~FcJs'hW"iR'YT'SSZDrRcNl9zP!}:h5&Z7!HOS\Z'%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[BS-ILR009]
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                                                   ?
+
+ ? 2025-11-13 ? ? 08:28.29 ? ? /home/mobaxterm ?

@@ -1,0 +1,453 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:54.11 ? ? /home/mobaxterm ? telnet 10.248.246.143
+Connected to 10.248.246.143.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<EKET-001-BS-HUAWEI>sys
+Enter system view, return user view with Ctrl+Z.
+[EKET-001-BS-HUAWEI]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       WEMA BANK EKET
+Eth0/0/2                      up      up       ACCESS-BANK-EKET
+Eth0/0/3                      down    down     GITS_EKET
+Eth0/0/4                      *down   down     UTAMANIK HOTEL STERLING EXPLORATI
+                                               ON 2MB INTERNET
+Eth0/0/5                      down    down     MOBIL HOUSING EKET 2 | 80MB INTER
+                                               NET
+Eth0/0/6                      *down   down     IBOM-POWER-INTERNET || 4Mbps
+Eth0/0/7                      up      up       AMALGAMATED-OIL-(II-ONE)-AMOCON|
+                                               10M
+Eth0/0/8                      down    down     CONNECT,SURF & SMILE EKET |30MB I
+                                               NTERNET
+Eth0/0/9                      down    down     MOBIL-VI-EKET-4M
+Eth0/0/10                     up      up       AMNI_EKET
+Eth0/0/11                     down    down     BS HUAWEI MGT
+Eth0/0/12                     up      up       SEVEN ENERGY (ACCUGAS) EKET [OREG
+                                               UN901-ETH-TR 31.950 - 41.203.89.1
+                                               /29]
+Eth0/0/13                     up      up       VASCON-EKET-INT | 10M
+Eth0/0/14                     down    down     HIQOS DPR (NUPRC) EKET | DICNET R
+                                               ADIO
+Eth0/0/15                     *down   down     FCMB EKET
+Eth0/0/16                     down    down     VIRGIN FOREST
+Eth0/0/17                     up      up       MOBIL HOUSING-1-EKET
+Eth0/0/18                     *down   down     UBA ORON LL
+Eth0/0/19                     up      up       VDT EKET INTERNET
+Eth0/0/20                     down    down     seven eng test port
+Eth0/0/21                     *down   down     METRO BROADBAND 20MB INTERNET
+Eth0/0/22                     down    down     TECPOINT_EKET
+Eth0/0/23                     down    down     VDT-EKET-35MINTERN
+Eth0/0/24                     up      up       CYBERSPACE-EKET || MGMT
+GE0/0/1                       up      up       TRUNK-TO-DCN || EKT001-UPE-M8 GE0
+                                               /2/6
+GE0/0/2                       down    down     CYBERSPACE-EKET || VPN|INTERNET
+GE0/0/3                       down    down     PRIMARY-STM1-TO-MOBIL
+GE0/0/4                       *down   down     HUAWEI, Quidway Series
+Loop260                       up      up(s)    HUAWEI, Quidway Series, LoopBack2
+                                               60 Interface
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Tun0/0/0                      up      down     HUAWEI, Quidway Series, Tunnel0/0
+                                               /0 Interface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif260                     up      up       HUAWEI, Quidway Series, Vlanif260
+                                                Interface
+Vlanif803                     up      up       HUAWEI, Quidway Series, Vlanif803
+                                                Interface
+Vlanif1296                    up      down     HUAWEI, Quidway Series, Vlanif129
+                                               6 Interface
+Vlanif1492                    up      down     NERA-MGT-VLAN4
+Vlanif1497                    up      down     HUAWEI, Quidway Series, Vlanif149
+                                               7 Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1640                    up      up       HUAWEI, Quidway Series, Vlanif164
+                                               0 Interface
+Vlanif1906                    up      up       HUAWEI, Quidway Series, Vlanif190
+                                               6 Interface
+Vlanif1908                    up      up       HUAWEI, Quidway Series, Vlanif190
+                                               8 Interface
+Vlanif3371                    up      down     HUAWEI, Quidway Series, Vlanif337
+                                               1 Interface
+[EKET-001-BS-HUAWEI]dis cur
+#
+!Software Version V100R006C05
+ sysname EKET-001-BS-HUAWEI
+#
+ vlan batch 100 to 101 155 223 226 260 360 803 950 952 1136
+ vlan batch 1296 1308 1463 1487 1492 to 1493 1495 1497 1499 1501 to 1502 1623 to 1624
+ vlan batch 1640 1644 1646 to 1647 1821 1893 1906 1908 1918 to 1919 1964 2174
+ vlan batch 2457 to 2459 2999 3042 3126 3371 3422 3563
+#
+ stp mode rstp
+ stp instance 0 priority 24576
+#
+lldp enable
+#
+ undo http server enable
+ undo http secure-server enable
+#
+vlan 100
+ description TEST
+vlan 101
+ description TEST2
+vlan 223
+ description MOBIL-EKET-2M
+vlan 226
+ description MOBIL-VI-EKET-4M
+vlan 260
+ description AMNI_EKET
+vlan 360
+ description ibom-power
+vlan 803
+ description NEW-SWITCH-MGT
+vlan 950
+ description SEVEN ENERGY(ACCUGAS)EKET
+vlan 952
+ description SEVEN-ENERGY-EKET
+vlan 1136
+ description swifttalk-radio-monitoring
+vlan 1296
+ description VASCON-Eket
+vlan 1308
+ description UTAMANIK HOTEL STERLING
+vlan 1463
+ description CONNECT,SURF & SMILE
+vlan 1487
+ description New Ceragon Mgmt
+vlan 1492
+ description NERA-MGT-VLAN
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1495
+ description MGMT_NERA
+vlan 1497
+ description BS-NERA-MGT
+vlan 1499
+ description BS-HUAWEI-MGT
+vlan 1501
+ description BS-MGT
+vlan 1502
+ description HUAWEI-RADIO-MGT
+vlan 1623
+ description VIRGIN-FOREST
+vlan 1624
+ description VIRGIN-FOREST
+vlan 1640
+ description ACCESS-BANK-VPLS
+vlan 1644
+ description NEPN EKET
+vlan 1646
+ description MOBIL HOUSING EKET 2
+vlan 1647
+ description Amalgamated Oil
+vlan 1821
+ description NBC-EKET
+vlan 1893
+ description TECPOINT_EKET
+vlan 1906
+ description MOBIL-EKET-LL-TO-MOBIL-VI
+vlan 1908
+ description GITS_EKET
+vlan 1918
+ description VDT-LAGOS-EKET
+vlan 1919
+ description VDT-INTERNET
+vlan 1964
+ description MOBIL-HOUSING-EKET
+vlan 2174
+ description HIQOS-DPR-EKET
+vlan 2457
+ description cyber-mgt
+vlan 2458
+ description cyber-vpn
+vlan 2459
+ description cyber-int
+vlan 2999
+ description FCMB-VPLS
+vlan 3042
+ description UBA ORON LL
+vlan 3126
+ description Diamond_Eket
+vlan 3371
+ description WEMA_BANK_EKET_L3
+vlan 3422
+ description HERITAGE-ORON
+vlan 3563
+ description METRO-BROADBAND
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user ope password cipher %@%@t3~v36e/bR09K2C4G6^I8\jq%@%@
+ local-user ope privilege level 15
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@K7*cMmcyi3IH*(<QIAX*8\k)%@%@
+ local-user bsnoc privilege level 15
+ local-user moses password cipher %@%@mSr'IsgI$R"!aK:](BB&8\m~%@%@
+ local-user moses privilege level 15
+ local-user donald password cipher %@%@}jBxNi^g|X.^ds1bLNmW8\nW%@%@
+ local-user donald privilege level 15
+ local-user fabian password cipher %@%@ZG's'@vlX)2vQ^-*8w=U8\lv%@%@
+ local-user fabian privilege level 15
+ local-user naveen password cipher %@%@]3:ZUekv)#hDO%Nc=`m)8\mO%@%@
+ local-user naveen privilege level 15
+ local-user rthphc password cipher %@%@>uAJM~S_sKlEoW&n&*T>tz_a%@%@
+ local-user rthphc privilege level 3
+ local-user solarch password cipher %@%@.P}6;/v1jRS.#G$jNJ'8tz]E%@%@
+ local-user solarch privilege level 3
+ local-user adewunmi password cipher %@%@ME1FIJ's!1i`+HYTAEHV8\o:%@%@
+ local-user adewunmi privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif260
+ ip address 197.211.37.124 255.255.255.248
+#
+interface Vlanif803
+ ip address 10.248.246.143 255.255.255.192
+#
+interface Vlanif1296
+#
+interface Vlanif1492
+ description NERA-MGT-VLAN4
+#
+interface Vlanif1497
+#
+interface Vlanif1501
+ ip address 10.248.249.151 255.255.255.0
+#
+interface Vlanif1640
+ ip address 10.230.230.75 255.255.255.0
+#
+interface Vlanif1906
+ ip address 10.10.10.1 255.255.255.252
+#
+interface Vlanif1908
+ ip address 197.211.33.110 255.255.255.248
+#
+interface Vlanif3371
+#
+interface Ethernet0/0/1
+ description WEMA BANK EKET
+ port link-type access
+ port default vlan 3371
+#
+interface Ethernet0/0/2
+ description ACCESS-BANK-EKET
+ port link-type access
+ port default vlan 1640
+#
+interface Ethernet0/0/3
+ description GITS_EKET
+ port link-type access
+ port default vlan 1908
+#
+interface Ethernet0/0/4
+ description UTAMANIK HOTEL STERLING EXPLORATION 2MB INTERNET
+ shutdown
+ port link-type access
+ port default vlan 1308
+#
+interface Ethernet0/0/5
+ description MOBIL HOUSING EKET 2 | 80MB INTERNET
+ port link-type access
+ port default vlan 1646
+#
+interface Ethernet0/0/6
+ description IBOM-POWER-INTERNET || 4Mbps
+ shutdown
+ port link-type access
+ port default vlan 360
+#
+interface Ethernet0/0/7
+ description AMALGAMATED-OIL-(II-ONE)-AMOCON| 10M
+ port link-type trunk
+ port trunk allow-pass vlan 1497 1647
+#
+interface Ethernet0/0/8
+ description CONNECT,SURF & SMILE EKET |30MB INTERNET
+ port link-type access
+ port default vlan 1463
+#
+interface Ethernet0/0/9
+ description MOBIL-VI-EKET-4M
+ port link-type access
+ port default vlan 226
+#
+interface Ethernet0/0/10
+ description AMNI_EKET
+ port link-type access
+ port default vlan 260
+#
+interface Ethernet0/0/11
+ description BS HUAWEI MGT
+ port link-type access
+ port default vlan 1499
+#
+interface Ethernet0/0/12
+ description SEVEN ENERGY (ACCUGAS) EKET [OREGUN901-ETH-TR 31.950 - 41.203.89.1/29]
+ port link-type access
+ port default vlan 950
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/13
+ description VASCON-EKET-INT | 10M
+ port link-type trunk
+ port trunk allow-pass vlan 1136 1296
+#
+interface Ethernet0/0/14
+ description HIQOS DPR (NUPRC) EKET | DICNET RADIO
+ port link-type access
+ port default vlan 2174
+#
+interface Ethernet0/0/15
+ description FCMB EKET
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1493 2999
+#
+interface Ethernet0/0/16
+ description VIRGIN FOREST
+ port link-type access
+ port default vlan 1624
+#
+interface Ethernet0/0/17
+ description MOBIL HOUSING-1-EKET
+ port link-type trunk
+ port trunk allow-pass vlan 1495 1964
+#
+interface Ethernet0/0/18
+ description UBA ORON LL
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1492 3042
+#
+interface Ethernet0/0/19
+ description VDT EKET INTERNET
+ port link-type access
+ port default vlan 1919
+ jumboframe enable 13296
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/20
+ description seven eng test port
+ port link-type access
+ port default vlan 950
+#
+interface Ethernet0/0/21
+ description METRO BROADBAND 20MB INTERNET
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 3563
+#
+interface Ethernet0/0/22
+ description TECPOINT_EKET
+ port link-type access
+ port default vlan 1893
+#
+interface Ethernet0/0/23
+ description VDT-EKET-35MINTERN
+ port link-type access
+ port default vlan 1919
+#
+interface Ethernet0/0/24
+ description CYBERSPACE-EKET || MGMT
+ port link-type access
+ port default vlan 2457
+#
+interface GigabitEthernet0/0/1
+ description TRUNK-TO-DCN || EKT001-UPE-M8 GE0/2/6
+ port link-type trunk
+ port trunk allow-pass vlan 223 260 360 803 950 1136 1296 1308 1463 1487
+ port trunk allow-pass vlan 1492 to 1493 1495 1497 1499 1501 to 1502 1623 to 1624 1632 1640 1644 1646 to 1647
+ port trunk allow-pass vlan 1821 1893 1906 1908 1918 to 1919 1964 2174 2457 to 2459 2999 3042
+ port trunk allow-pass vlan 3126 3371 3422 3563
+ jumboframe enable 13296
+#
+interface GigabitEthernet0/0/2
+ description CYBERSPACE-EKET || VPN|INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 2458 to 2459
+#
+interface GigabitEthernet0/0/3
+ description PRIMARY-STM1-TO-MOBIL
+ port link-type trunk
+ port trunk allow-pass vlan 223 226 1493 1501 1906 2999
+#
+interface GigabitEthernet0/0/4
+ description HUAWEI, Quidway Series
+ shutdown
+ port link-type access
+ port default vlan 2459
+ port media type copper
+     undo negotiation auto
+ port media type fiber
+     undo negotiation auto
+ combo-port copper
+#
+interface NULL0
+#
+interface LoopBack260
+#
+interface Tunnel0/0/0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.129
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100004FCD
+ snmp-agent community read cipher %@%@40VK3q)WZ@f}6xQ7ape2L+B,2pv:NG7JU<_bXuU&Z[h"+B/L{BpKV\k'KIEV}V']T#'+B8L+%@%@
+ snmp-agent community read cipher %@%@D)cAL6bmv(UDIoFE;rSQL&3"gc't16o'cXVoeO=Y}SH3&3%L8KFU9q{jE5^U$"GWf^XC3.L&%@%@
+ snmp-agent community read cipher %@%@|E@U1053[(;Te_Q(tUzAHX8B,ZpQ!"O3-T"8TfRrq)G.X8EHMOn676vVT66'1[3Q0I0I8NHX%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode password
+ user privilege level 15
+ set authentication password cipher %@%@9lEPG>3@oUE0%3'W.EeJ,%&;Zx/EPt%ZhACmyOSo!z$=%&>,%@%@
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[EKET-001-BS-HUAWEI]
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                                                   ?
+
+ ? 2025-11-13 ? ? 08:00.26 ? ? /home/mobaxterm ?

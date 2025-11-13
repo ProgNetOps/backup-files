@@ -1,0 +1,478 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:41.48 ? ? /home/mobaxterm ? telnet 10.248.246.219
+Connected to 10.248.246.219.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-ABJ-024>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-ABJ-024]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       COMPUMETRICS SOLUTIONS ABUJA IOTE
+                                               CH RADIO | 15MB
+Eth0/0/2                      up      up       VDT KURAMO ABUJA | 30MB
+Eth0/0/3                      up      up       LIVING FOUNTAIN SHCOOL ABUJA | LM
+                                                FIBER 35MB
+Eth0/0/4                      up      up       AES LUXURY(VLAN2481 SUSPENDED) |N
+                                               BC ABUJA|CONNECTIFY
+Eth0/0/5                      up      up       NIGERIAN BREWERIES PLC ABUJA IOTE
+                                               CH-RADIO-BACKUP | 50MB
+Eth0/0/6                      down    down     ASCOMNET-EFAB-GLOBAL-LIFECAMP
+Eth0/0/7                      up      up       NNPC NORTH CENTRAL | FRSC | RCC J
+                                               ABI |NURSING-AND-MIDWIFERY
+Eth0/0/8                      up      up       HUAWEI, Quidway Series, Ethernet0
+                                               /0/8 Interface
+Eth0/0/9                      up      up       FBN DEI DEI & KUBWA|STANBIC-IBTC
+                                               KUBWA|FIDELITY LUGBE|FCMB KUJE| A
+                                               CCESS GWARIMPA|DIAMOND KUBWA|UBA
+                                               KUBWA | TPGS-ABJDEEL5
+Eth0/0/10                     up      up       DPR ABUJA
+Eth0/0/11                     down    down     TPGS Abuja-12 15MBINTERNET
+Eth0/0/12                     up      up       TPGS Abuja-12 15MBINTERNET
+Eth0/0/13                     *down   down     INSO 6Mb INTERNET
+Eth0/0/14                     up      up       Swifttalk Abuja 20Mb Leased Line
+Eth0/0/15                     up      up       IOTECH-ABUJA-SPAR-INT | 10M
+Eth0/0/16                     *down   down     NISA-HOSPITAL-INT-20M-
+Eth0/0/17                     down    down     FBN-DEI-DEI-L3-FIBER-LM
+Eth0/0/18                     up      up       TPGS Abuja-4-5M-TPGS Abuja-14-10M
+                                               B - ABJ021-ABJ024!!TPGS_ABUJA-15(
+                                               abj706-abj021)|20MB-INt || TPGS-A
+                                               BUJA-JABI -ABJ021-ABJ024
+Eth0/0/19                     *down   down     DIRECTORATE FOR TECHNICAL AID COR
+                                               PS
+Eth0/0/20                     down    down     SW GLOBAL IMMIGRATION HQ 2M INT
+Eth0/0/21                     up      up       ACCESS BANK UTAKO FIBER
+Eth0/0/22                     down    down     VDT COMMUNICATIONS IDU ABUJA | 50
+                                               MB
+Eth0/0/23                     up      up       Jabi Lake Mall GLOSHOP ABUJA
+Eth0/0/24                     up      up       TPGS-Abuja-23-LAGOS-LEASED-LINE-4
+                                               M-ABJ24-ABJ60-LET-HU-IDU-P01
+GE0/0/1                       up      up       JULIUS-BERGER-LIFE-CAMP-INT | 3*
+                                               STM1
+GE0/0/2                       up      up       UPLINK TO DCN ABJ024-UPE-M8-GE0/2
+                                               /4
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif112                     up      down     HUAWEI, Quidway Series, Vlanif112
+                                                Interface
+Vlanif802                     up      up       HUAWEI, Quidway Series, Vlanif802
+                                                Interface
+Vlanif1104                    up      up       HUAWEI, Quidway Series, Vlanif110
+                                               4 Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif2481                    up      down     HUAWEI, Quidway Series, Vlanif248
+                                               1 Interface
+Vlanif3494                    up      up       HUAWEI, Quidway Series, Vlanif349
+                                               4 Interface
+[BS-ABJ-024]   dis cur
+#
+!Software Version V100R006C03
+ sysname BS-ABJ-024
+#
+ ipv6
+#
+ vlan batch 112 529 802 890 910 918 1087 1104 1121 1224
+ vlan batch 1227 1249 1257 to 1258 1289 1291 1309 1316 1318 1320 1365
+ vlan batch 1367 to 1368 1370 1385 1399 1488 1493 to 1497 1501 1504 1516 1519
+ vlan batch 1578 to 1579 1592 1640 1654 1657 1675 to 1676 1679 1881 1910 1915
+ vlan batch 1928 1937 1997 to 1998 2081 2087 2188 2212 2423 2442 2457
+ vlan batch 2468 2480 to 2481 2649 2811 2819 2999 3007 3034 3042 3126
+ vlan batch 3234 3433 3494 3535 3866
+#
+ lldp enable
+#
+ undo http server enable
+#
+vlan 112
+ description TSTV_STM1
+vlan 529
+ description NBC-ABUJA
+vlan 802
+ description Switch-Mgmt
+vlan 890
+ description cyberspace
+vlan 910
+ description DPR-VPLS
+vlan 918
+ description DPR_INTERNET
+vlan 1087
+ description TPGS-ABJ-DEELS
+vlan 1104
+ description BJ024-SAKA18-TPGS_JABI
+vlan 1121
+ description TPGS Mabushi
+vlan 1227
+ description IOTEC-ABUJA-SPAR
+vlan 1249
+ description FBN ABUJA|155M
+vlan 1257
+ description FBN-DEI-DEI-L3
+vlan 1258
+ description FBN-L3
+vlan 1289
+ description LIVING-FOUNTAIN-SCH-ABJ
+vlan 1291
+ description VDT KURAMO ABUJA
+vlan 1309
+ description Salem Global Mission
+vlan 1316
+ description TECH-AID-CORP-ABUJA
+vlan 1318
+ description ASCOMNET-ABJ007
+vlan 1320
+ description JULIUS-BERGER-LIFE-CAMP-INT
+vlan 1365
+ description Connectify Ltd
+vlan 1367
+ description Strong Technologies
+vlan 1368
+ description IP2AIR ABUJA
+vlan 1370
+ description ETACT SYSTEMS
+vlan 1385
+ description ANCHOR FOR PEACE
+vlan 1399
+ description TPGS-Abuja-23-LAGOS-LEASED-LINE-4M
+vlan 1488
+ description NEw Ceragon Mgmt North
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1494
+ description NNPC-NERA-MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1496
+ description CERAGON-MGT-VLAN
+vlan 1497
+ description BS-NERA-MGT
+vlan 1501
+ description BS-MGT
+vlan 1504
+ description IOTECH MGT
+vlan 1516
+ description FRSC-KADO
+vlan 1519
+ description TELNET-BACKUP-RADIO-LINK
+vlan 1578
+ description test
+vlan 1579
+ description RCC_JABI_GUEST_HOUSE
+vlan 1592
+ description VDT_IDU_ABUJA
+vlan 1640
+ description ACCESS-BANK-VPLS
+vlan 1654
+ description RCC-ABUJA-HQ-FIBER-LM
+vlan 1657
+ description SW GLOBAL IMMIGRATION HQ 2M INT
+vlan 1675
+ description ORANGE-HEINEKEN-CBD-ABUJA
+vlan 1676
+ description NBC-ABUJA
+vlan 1679
+ description TPGS Abuja-4-5M-INT
+vlan 1881
+ description FIDELITY-VPLS
+vlan 1910
+ description Swifttalk_Abuja
+vlan 1915
+ description PREMIER-ACADEMY
+vlan 1928
+ description FIRS-KATAMPE-MPLS
+vlan 1937
+ description INSO
+vlan 1997
+ description TPGS Abuja-12
+vlan 1998
+ description TPGS Abuja-14
+vlan 2081
+ description TPGS-ABUJA-15
+vlan 2087
+ description STL FIBERCO
+vlan 2188
+ description Jabi Lake Mall GLOSHOP ABUJA
+vlan 2212
+ description AFRICAN UNIVERSITY OF SCIENCE
+vlan 2423
+ description STANBIC-IBTC-VPLS
+vlan 2442
+ description RUACH-NETWORK-ABUJA
+vlan 2457
+ description COMPUMETRICS-SOLUTIONS
+vlan 2468
+ description SEVEN-UP-VPLS
+vlan 2480
+ description FHA-HOMES-GWARINPA
+vlan 2481
+ description AES-LUXURY-INTERNET
+vlan 2649
+ description NIGERIAN-BREWERIES-RADIO
+vlan 2811
+ description NISA-PREMIER-HOSPITAL
+vlan 2819
+ description PYRICH
+vlan 2999
+ description FCMB-VPLS
+vlan 3007
+ description FBN-VPLS
+vlan 3034
+ description STERLING 3034
+vlan 3042
+ description UBA VPLS
+vlan 3126
+ description DIAMOND-VPLS
+vlan 3234
+ description ACCESS-BANK-UTAKO-L3
+vlan 3494
+ description NNPC-NORTH-CENTRAL-ABJ
+vlan 3866
+ description NURSING-AND-MIDWIFERY-COUNCIL
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user ope password cipher %$%$v".BK%0#"Z'B#6ICSr`JT&zq%$%$
+ local-user ope privilege level 15
+ local-user admin password cipher %$%$I6.ASV)hJET,p"Dn.YM%3aXO%$%$
+ local-user admin service-type http
+ local-user bsnoc password cipher %$%$%P3}@TeO1$O+-;Qe}r=PTg^U%$%$
+ local-user bsnoc privilege level 15
+ local-user moses password cipher %$%$-_\B7l&m8Y=)vg~/!iP%T2)}%$%$
+ local-user moses privilege level 15
+ local-user donald password cipher %$%$db4&)*;j6S'GtZ0a4gX,T}tk%$%$
+ local-user donald privilege level 15
+ local-user fabian password cipher %$%$0i$:/Avw]J98|EQ0Ej^STYPG%$%$
+ local-user fabian privilege level 15
+ local-user naveen password cipher %$%$iyLVO09aQL3.qu,)]oZ7Td[R%$%$
+ local-user naveen privilege level 15
+ local-user rthabj password cipher %$%$*.s:TVj/|MFqiD(wiGv6@WNE%$%$
+ local-user rthabj privilege level 3
+ local-user solarch password cipher %$%$Af.#YS;Z).~Cr]2TkSo8@kbY%$%$
+ local-user solarch privilege level 3
+ local-user adewunmi password cipher %$%$dXy-Kt*|XQMIlZ#B\$xOT=4+%$%$
+ local-user adewunmi privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif112
+#
+interface Vlanif802
+ ip address 10.248.246.219 255.255.255.192
+#
+interface Vlanif1104
+ ip address 19.19.19.11 255.255.255.0
+#
+interface Vlanif1501
+ ip address 10.248.249.89 255.255.255.0
+#
+interface Vlanif2481
+#
+interface Vlanif3494
+ ip address 172.24.92.178 255.255.255.252
+#
+interface Ethernet0/0/1
+ description COMPUMETRICS SOLUTIONS ABUJA IOTECH RADIO | 15MB
+ port link-type trunk
+ port trunk allow-pass vlan 1504 2457
+#
+interface Ethernet0/0/2
+ description VDT KURAMO ABUJA | 30MB
+ port link-type access
+ port default vlan 1291
+#
+interface Ethernet0/0/3
+ description LIVING FOUNTAIN SHCOOL ABUJA | LM FIBER 35MB
+ port link-type access
+ port default vlan 1289
+#
+interface Ethernet0/0/4
+ description AES LUXURY(VLAN2481 SUSPENDED) |NBC ABUJA|CONNECTIFY
+ port link-type trunk
+ port trunk allow-pass vlan 1365 1676
+#
+interface Ethernet0/0/5
+ description NIGERIAN BREWERIES PLC ABUJA IOTECH-RADIO-BACKUP | 50MB
+ port link-type access
+ port default vlan 2649
+#
+interface Ethernet0/0/6
+ description ASCOMNET-EFAB-GLOBAL-LIFECAMP
+ port link-type access
+ port default vlan 1318
+#
+interface Ethernet0/0/7
+ description NNPC NORTH CENTRAL | FRSC | RCC JABI |NURSING-AND-MIDWIFERY
+ port link-type trunk
+ port trunk allow-pass vlan 1494 1516 1578 to 1579 3494
+#
+interface Ethernet0/0/8
+ port link-type trunk
+ port trunk allow-pass vlan 1497 3007
+#
+interface Ethernet0/0/9
+ description FBN DEI DEI & KUBWA|STANBIC-IBTC KUBWA|FIDELITY LUGBE|FCMB KUJE| ACCESS GWARIMPA|DIAMOND KUBWA|UBA KUBWA | TPGS-ABJDEEL5
+ port link-type trunk
+ port trunk allow-pass vlan 1087 1257 to 1258 1493 1495 1497 1640 1881 2423 2480 2999
+ port trunk allow-pass vlan 3007 3042 3126
+ undo negotiation auto
+ speed 100
+ multicast-suppression 50
+ broadcast-suppression 50
+#
+interface Ethernet0/0/10
+ description DPR ABUJA
+ port link-type access
+ port default vlan 918
+#
+interface Ethernet0/0/11
+ description TPGS Abuja-12 15MBINTERNET
+ port link-type access
+ port default vlan 1997
+#
+interface Ethernet0/0/12
+ description TPGS Abuja-12 15MBINTERNET
+ port link-type access
+ port default vlan 1997
+#
+interface Ethernet0/0/13
+ description INSO 6Mb INTERNET
+ shutdown
+ port link-type access
+ port default vlan 1937
+#
+interface Ethernet0/0/14
+ description Swifttalk Abuja 20Mb Leased Line
+ port link-type access
+ port default vlan 1910
+#
+interface Ethernet0/0/15
+ description IOTECH-ABUJA-SPAR-INT | 10M
+ port link-type access
+ port default vlan 1227
+#
+interface Ethernet0/0/16
+ description NISA-HOSPITAL-INT-20M-
+ shutdown
+ port link-type access
+ port default vlan 2811
+#
+interface Ethernet0/0/17
+ description FBN-DEI-DEI-L3-FIBER-LM
+ port link-type access
+ port default vlan 1257
+#
+interface Ethernet0/0/18
+ description TPGS Abuja-4-5M-TPGS Abuja-14-10MB - ABJ021-ABJ024!!TPGS_ABUJA-15(abj706-abj021)|20MB-INt || TPGS-ABUJA-JABI -ABJ021-ABJ024
+ port link-type trunk
+ port trunk allow-pass vlan 1104 1121 1679 2081
+#
+interface Ethernet0/0/19
+ description DIRECTORATE FOR TECHNICAL AID CORPS
+ shutdown
+ port link-type access
+ port default vlan 1316
+#
+interface Ethernet0/0/20
+ description SW GLOBAL IMMIGRATION HQ 2M INT
+ port link-type access
+ port default vlan 1657
+#
+interface Ethernet0/0/21
+ description ACCESS BANK UTAKO FIBER
+ port link-type access
+ port default vlan 1640
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/22
+ description VDT COMMUNICATIONS IDU ABUJA | 50MB
+ port link-type access
+ port default vlan 1592
+#
+interface Ethernet0/0/23
+ description Jabi Lake Mall GLOSHOP ABUJA
+ port link-type access
+ port default vlan 2188
+#
+interface Ethernet0/0/24
+ description TPGS-Abuja-23-LAGOS-LEASED-LINE-4M-ABJ24-ABJ60-LET-HU-IDU-P01
+ port link-type trunk
+ port trunk allow-pass vlan 1399
+#
+interface GigabitEthernet0/0/1
+ description JULIUS-BERGER-LIFE-CAMP-INT | 3* STM1
+ port link-type access
+ port default vlan 1320
+ port media type copper
+     undo negotiation auto
+ port media type fiber
+     undo negotiation auto
+ combo-port auto
+#
+interface GigabitEthernet0/0/2
+ description UPLINK TO DCN ABJ024-UPE-M8-GE0/2/4
+ port link-type trunk
+ port trunk allow-pass vlan 112 529 802 890 910 918 1087 1104 1121 1227
+ port trunk allow-pass vlan 1257 to 1258 1289 1291 1309 1316 1318 1320 1365 1367 to 1368 1370
+ port trunk allow-pass vlan 1385 1399 1488 1493 to 1497 1501 1504 1516 1519 1578 to 1579 1592
+ port trunk allow-pass vlan 1640 1654 1657 1675 to 1676 1881 1910 1915 1928 1937 1997 to 1998
+ port trunk allow-pass vlan 2081 2084 2087 2188 2212 2423 2442 2457 2468 2480 to 2481
+ port trunk allow-pass vlan 2649 2811 2819 2999 3007 3034 3042 3126 3234 3494
+ port trunk allow-pass vlan 3866
+ stp bpdu-filter enable
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1 preference 20
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.193
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100007D72
+ snmp-agent community read cipher %$%$$EO<<+M7r5W;_iUo`s\1s2)}%$%$
+ snmp-agent community read cipher %$%$~ZYI!5!b437"ak0.Ys;60@7.%$%$
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode password
+ set authentication password cipher %$%$R[_fJ,):;S,m(.P'^e4B,&zq:(F2D/'aU0]FU0Y5abO#.,#{%$%$
+user-interface vty 0 4
+ authentication-mode aaa
+#
+port-group link-type
+#
+port-group q
+#
+return
+[BS-ABJ-024]

@@ -1,0 +1,393 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:47.07 ? ? /home/mobaxterm ? telnet 10.248.246.163
+Connected to 10.248.246.163.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:Entering character mode
+Escape character is '^]'.
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2025-11-13 14:04:36-05:13.
+<BS-ENT-AWK005>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-ENT-AWK005]dis int des
+PHY: Physical
+*down: administratively down
+(l): loopback
+(s): spoofing
+(E): E-Trunk down
+(b): BFD down
+(e): ETHOAM down
+(dl): DLDP down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+GE0/0/1                       up      up       Access BANK UNIZIK|FIRST BANK UNI
+                                               ZIK|PACENT TECHNOLOGY|VEST WESTER
+                                               N MALOCH|WITNESS GARDEN| LIFE|VIR
+                                               TUAL|NNPC AKWA
+GE0/0/2                       up      up       UNIVERSITY ON THE NIGER
+GE0/0/3                       up      up       VDT AWKA 60MB INTERNET
+GE0/0/4                       up      up       GLO WORLD AWKA
+GE0/0/5                       up      up       PDS AWKA 15MB INTERNET
+GE0/0/6                       up      up       NNPC AWKA
+GE0/0/7                       *down   down     IGCE-NETWORK-AWKA-INT | 100M
+GE0/0/8                       up      up       DPR AWKA
+GE0/0/9                       *down   down     ACCESS-BANK-UNIZIK FIBER
+GE0/0/10                      up      up       FBN-BANK-UNIZIK FIBER
+GE0/0/11                      down    down     termiantion
+GE0/0/12                      up      up       Sentient-Fidelity-BK-Awka!8MB
+GE0/0/13                      up      up       GENEVA HOTEL | GTB AWKA | POLARIS
+                                                AWKA | BROADWAVE AWKA
+GE0/0/14                      *down   down     WESTMETRO-AWKA-10Mbps
+GE0/0/15                      down    down     - TPGS Awka-2 -10M-INTERNET
+GE0/0/16                      down    down     RCC AWKA GUEST-HOUSE
+GE0/0/17                      down    down     PACENT-TECH-AWKA-AWK005|50M-INTER
+                                               NET-FIBER-LM
+GE0/0/18                      up      up       FIBER EDGE(PLATINUM-INDEX) AWKA
+GE0/0/19                      up      up       TPGS-ANAM-INT-REGINACELLI|5MB
+GE0/0/20                      down    down     PHSWEB AWKA INTERNET[VL1387] - 1G
+GE0/0/21                      down    down     PDS-NETWORK-AWKA
+GE0/0/22                      up      up       SUNDRY-MKT-AWKA | 5M
+GE0/0/23                      down    down
+GE0/0/24                      down    down
+MEth0/0/1                     down    down
+NULL0                         up      up(s)
+Vlanif1                       up      down
+Vlanif803                     up      up
+Vlanif1031                    up      down
+Vlanif1256                    up      up
+Vlanif1340                    up      up
+Vlanif1365                    up      down
+Vlanif1389                    up      down
+Vlanif1501                    down    down     BS-MGT
+Vlanif2129                    up      down
+Vlanif3007                    up      down
+Vlanif3628                    up      down     Dicnet Awka
+Vlanif4014                    up      down
+XGE0/0/1                      up      up       to DCN-AWK005-M8-RTR- GE0/2/0
+XGE0/0/2                      down    down
+XGE0/0/3                      down    down
+XGE0/0/4                      down    down
+[BS-ENT-AWK005]    dis cur
+!Software Version V200R003C00SPC300
+#
+sysname BS-ENT-AWK005
+#
+vlan batch 801 803 1031 1049 1115 1217 1256 1339 to 1340 1365 1387
+vlan batch 1389 1438 1442 1487 1492 to 1493 1496 to 1498 1501 1575 1625 1640
+vlan batch 1671 to 1672 1766 1883 1918 1938 1942 1972 2058 2129 2191
+vlan batch 2824 3007 3035 3126 3419 3512 3516 3603 3628 4014
+vlan batch 4044
+#
+undo http server enable
+undo http secure-server enable
+#
+undo nap slave enable
+#
+diffserv domain default
+#
+vlan 1031
+ description TPGS Awka-2 -10M-INTERNET
+vlan 1049
+ description RCC AWKA GUEST-HOUSE
+vlan 1115
+ description GTB Awka
+vlan 1217
+ description GENEVA-CONT-HOTEL
+vlan 1256
+ description FIRST-BANK-UNIZIK- L3
+vlan 1339
+ description Pacent-Unizik
+vlan 1340
+ description PDS AWKA
+vlan 1365
+ description SOLPROCOM-INT
+vlan 1387
+ description PHSWEB_AWKA
+vlan 1389
+ description LIFE INTERNATIONAL HOSPITAL
+vlan 1438
+ description Broad-Wave-Systems
+vlan 1442
+ description WESTMETRO-AWKA
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1496
+ description BS-CERAGON-2-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1498
+ description BS-CERAGON-MGT
+vlan 1575
+ description BEST WESTERN AWKA
+vlan 1625
+ description Virtual Restart Awka
+vlan 1640
+ description Access bank Unizik
+vlan 1766
+ description IGCE-AWKA-INT
+vlan 1883
+ description Sentient-Fidelity-Bank-Awka
+vlan 1918
+ description SWIFT-TALK-AWKA
+vlan 1938
+ description UNIVERSITY ON THE NIGER UMUNYA
+vlan 1942
+ description Fiber Edge Awka
+vlan 1972
+ description Security technologies Awka
+vlan 2058
+ description TPGS-ANAM
+vlan 2129
+ description DPR AWKA
+vlan 2191
+ description GLOWORLD AWKA
+vlan 2824
+ description SUNDRY-MKT-AWKA
+vlan 3007
+ name FBN-VPLS
+vlan 3035
+ description Polaris bank Okeke-Awka
+vlan 3512
+ description NNPC-AWKA
+vlan 3516
+ description NNPC AKWA
+vlan 3628
+ description DICNET-AWKA
+vlan 4014
+ description VDT AWKA
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user ope password cipher %@%@-cHs!STU5=lhjM/;eP5A[1H3%@%@
+ local-user ope privilege level 15
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@nL"GFc;@=5Z/&Z/@&t/R[0G&%@%@
+ local-user bsnoc privilege level 15
+ local-user felix password cipher %@%@F\7.F37QuNtW57Y*rtB;[29n%@%@
+ local-user felix privilege level 15
+ local-user moses password cipher %@%@atg#O7lr4:VZ,$Q[kep([1Kd%@%@
+ local-user moses privilege level 15
+ local-user donald password cipher %@%@Vjcj1jRg*Sjm3I,xO&18[1L3%@%@
+ local-user donald privilege level 15
+ local-user fabian password cipher %@%@"/*xO2f3~RV5Th5$'__&[1HN%@%@
+ local-user fabian privilege level 15
+ local-user naveen password cipher %@%@DkD@5Qb=FW_3f)*9=Vx,[1Jc%@%@
+ local-user naveen privilege level 15
+ local-user rthphc password cipher %@%@*"TNNQuT|(Y,y3)&!Go3/Od`%@%@
+ local-user rthphc privilege level 15
+ local-user solarch password cipher %@%@S(m-L*~1)IE(,[Lxc`1G/Oed%@%@
+ local-user solarch privilege level 15
+ local-user adewunmi password cipher %@%@b-PS3>}WqROGY(.v!,.T[1L7%@%@
+#
+interface Vlanif1
+#
+interface Vlanif803
+ ip address 10.248.246.163 255.255.255.192
+#
+interface Vlanif1031
+#
+interface Vlanif1256
+ ip address 192.168.4.7 255.255.255.0
+#
+interface Vlanif1340
+ ip address 129.205.127.102 255.255.255.248
+#
+interface Vlanif1365
+#
+interface Vlanif1389
+#
+interface Vlanif1501
+ description BS-MGT
+ ip address 10.248.249.204 255.255.255.0
+#
+interface Vlanif2129
+#
+interface Vlanif3007
+#
+interface Vlanif3628
+ description Dicnet Awka
+#
+interface Vlanif4014
+#
+interface MEth0/0/1
+#
+interface GigabitEthernet0/0/1
+ description Access BANK UNIZIK|FIRST BANK UNIZIK|PACENT TECHNOLOGY|VEST WESTERN MALOCH|WITNESS GARDEN| LIFE|VIRTUAL|NNPC AKWA
+ port link-type trunk
+ port trunk allow-pass vlan 1389 1497 1620 1625 1757 3007 3516
+#
+interface GigabitEthernet0/0/2
+ description UNIVERSITY ON THE NIGER
+ port link-type access
+ port default vlan 1938
+#
+interface GigabitEthernet0/0/3
+ description VDT AWKA 60MB INTERNET
+ port link-type access
+ port default vlan 4014
+#
+interface GigabitEthernet0/0/4
+ description GLO WORLD AWKA
+ port link-type access
+ port default vlan 2191
+#
+interface GigabitEthernet0/0/5
+ description PDS AWKA 15MB INTERNET
+ port link-type access
+ port default vlan 1340
+#
+interface GigabitEthernet0/0/6
+ description NNPC AWKA
+ port link-type trunk
+ port trunk allow-pass vlan 1493 3516
+#
+interface GigabitEthernet0/0/7
+ description IGCE-NETWORK-AWKA-INT | 100M
+ shutdown
+ port link-type access
+ port default vlan 1766
+#
+interface GigabitEthernet0/0/8
+ description DPR AWKA
+ port link-type access
+ port default vlan 2129
+#
+interface GigabitEthernet0/0/9
+ description ACCESS-BANK-UNIZIK FIBER
+ shutdown
+ port link-type access
+ port default vlan 1640
+#
+interface GigabitEthernet0/0/10
+ description FBN-BANK-UNIZIK FIBER
+ port link-type access
+ port default vlan 1256
+#
+interface GigabitEthernet0/0/11
+ description termiantion
+ port link-type access
+ port default vlan 3516
+#
+interface GigabitEthernet0/0/12
+ description Sentient-Fidelity-BK-Awka!8MB
+ port link-type trunk
+ port trunk allow-pass vlan 1883
+#
+interface GigabitEthernet0/0/13
+ description GENEVA HOTEL | GTB AWKA | POLARIS AWKA | BROADWAVE AWKA
+ port link-type trunk
+ port trunk allow-pass vlan 1049 1115 1438 1493 1497 to 1498 3035
+#
+interface GigabitEthernet0/0/14
+ description WESTMETRO-AWKA-10Mbps
+ shutdown
+ port link-type access
+ port default vlan 1442
+#
+interface GigabitEthernet0/0/15
+ description - TPGS Awka-2 -10M-INTERNET
+ port link-type access
+ port default vlan 1031
+#
+interface GigabitEthernet0/0/16
+ description RCC AWKA GUEST-HOUSE
+ port link-type access
+ port default vlan 1049
+#
+interface GigabitEthernet0/0/17
+ description PACENT-TECH-AWKA-AWK005|50M-INTERNET-FIBER-LM
+ port link-type access
+ port default vlan 1339
+#
+interface GigabitEthernet0/0/18
+ description FIBER EDGE(PLATINUM-INDEX) AWKA
+ port link-type access
+ port default vlan 1942
+#
+interface GigabitEthernet0/0/19
+ description TPGS-ANAM-INT-REGINACELLI|5MB
+ port link-type access
+ port default vlan 2058
+#
+interface GigabitEthernet0/0/20
+ description PHSWEB AWKA INTERNET[VL1387] - 1G
+ port link-type access
+ port default vlan 1387
+#
+interface GigabitEthernet0/0/21
+ port media type fiber
+  undo negotiation auto
+ description PDS-NETWORK-AWKA
+ port link-type access
+#
+interface GigabitEthernet0/0/22
+ description SUNDRY-MKT-AWKA | 5M
+ port link-type access
+ port default vlan 2824
+#
+interface GigabitEthernet0/0/23
+#
+interface GigabitEthernet0/0/24
+#
+interface XGigabitEthernet0/0/1
+ undo negotiation auto
+ description to DCN-AWK005-M8-RTR- GE0/2/0
+ port link-type trunk
+ port trunk allow-pass vlan 803 1031 1049 1115 1217 1256 1339 to 1340 1365 1387 1389
+ port trunk allow-pass vlan 1438 1442 1493 to 1494 1496 to 1498 1575 1625 1640 1883 1918 1938
+ port trunk allow-pass vlan 1942 1972 2058 2129 2191 2824 3007 3035 3126 3512
+ port trunk allow-pass vlan 3516 3625 3628 4014 4044
+#
+interface XGigabitEthernet0/0/2
+#
+interface XGigabitEthernet0/0/3
+#
+interface XGigabitEthernet0/0/4
+#
+interface NULL0
+#
+ip route-static 0.0.0.0 0.0.0.0 10.248.246.129
+ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+snmp-agent
+snmp-agent local-engineid 800007DB03845B123CF430
+snmp-agent community read cipher %$%$#!^&NeWvlWe[I3X4~izPF4tX<4t:!QSTQ*P0fzH=Bkj54t[F5+a8ZPs]iH}$pa*<TCuRtdF4%$%$
+snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode password
+ set authentication password cipher %@%@4DJ5Q*(th&OQ%4T,s@>&,8_ejtC,6TGb_1h.!=9EGu|P8_h,%@%@
+user-interface vty 0 4
+ authentication-mode aaa
+ idle-timeout 45 45
+ protocol inbound all
+user-interface vty 16 20
+ idle-timeout 45 45
+ protocol inbound all
+#
+return
+[BS-ENT-AWK005]

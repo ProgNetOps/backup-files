@@ -1,0 +1,514 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 08:18.42 ? ? /home/mobaxterm ? telnet 10.248.246.75
+Connected to 10.248.246.75.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS_IJB_001>sys
+Enter system view, return user view with Ctrl+Z.
+[BS_IJB_001]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       ACCESS-BANK-IJEBU-ODE
+Eth0/0/2                      down    down     ABBE LIOUS
+Eth0/0/3                      down    down     - TO-SUMU003-VIA HUAWEI BACK BONE
+                                                - IJB001-LBR002(P04)-LBR001( HUA
+                                               WEI LINK)-LBR001-SUMU003( CERAGON
+                                               ) | | DIAMOND BANK SHAGAMU | RCC
+                                               SHAGAMU| FRSC|FALCK PRIME
+Eth0/0/4                      up      up       free
+Eth0/0/5                      down    down     FRIGOGLASS BETAGLASS IJEBU INT |
+                                               CERAGON
+Eth0/0/6                      down    down     POLARIS IJEBU-2M-LL-R-CERAGON_IP2
+                                               0
+Eth0/0/7                      up      up       STANBIC IBTC BANK IJEBU ODE (CERA
+                                               GON)
+Eth0/0/8                      *down   down     CITY OF KNOWLEGDE 6MB INTERNET
+Eth0/0/9                      down    down     NETCOM-OLAM-SAGAMU-VPN || 5Mbps
+Eth0/0/10                     down    down     TULIP COCOA PROCESSING  40MB INTE
+                                               RNET
+Eth0/0/11                     up      up       description TO (ILB001-IJB043-CER
+                                               AGONIDU P04)-LBR02-LBR001- COLEMA
+                                               N SHAGAMU( IJB001-LBR001) |DIAMON
+                                               D BABCOCK ( IJB001-LBR002)
+Eth0/0/12                     up      up       LOUISVILLE SCHOOLS IJEBU
+Eth0/0/13                     up      up       VDT SHAGAMU
+Eth0/0/14                     up      up       OGUN STATE POLYTECHNIC OF HEALTH
+                                               | 50MB INT
+Eth0/0/15                     up      up       SMU 003( SMC) MPLS SMU502-SMU003-
+                                               LBR001-LBR002-IJB043-IJB001( LBR0
+                                               02-IJB001-GLOMOBILE CERAGON BACK-
+                                               BONE
+Eth0/0/16                     *down   down     KRESTECH CALEB 20MB INTERNET
+Eth0/0/17                     up      up       GLOSHOP IJEBU
+Eth0/0/18                     down    down     FRIGO-JEBU-CERGAGON MGT
+Eth0/0/19                     *down   down     STERLINGBANK-IJEBU-ODE-FIB-LM
+Eth0/0/20                     down    down     GATEWAY ICT POLY  10MB INTERNET
+Eth0/0/21                     up      up       FRIGOGLASS-IJEBU_20M_INTERNET-R-C
+                                               ERAGON_IP20
+Eth0/0/22                     up      up       FBN IJEBUODE-IJE001 |4M-LEASEDLIN
+                                               E!R-NERA-DIRECT
+Eth0/0/23                     up      up       UBA IJEBU ODE-FIBER-LASTMILE
+Eth0/0/24                     down    down     GLOSHOP AGO IWOYE
+GE0/0/1                       down    down     TAI SOLARIN UNIVERSITY STM1 INTER
+                                               NET
+GE0/0/2                       up      up       UPLINK TO DCN IP/MPLS_UPE G0/2/4
+GE0/0/3                       down    down     HUAWEI, Quidway Series, GigabitEt
+                                               hernet0/0/3 Interface
+GE0/0/4                       down    down     HUAWEI, Quidway Series, GigabitEt
+                                               hernet0/0/4 Interface
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif804                     up      up       HUAWEI, Quidway Series, Vlanif804
+                                                Interface
+Vlanif1355                    up      down     HUAWEI, Quidway Series, Vlanif135
+                                               5 Interface
+Vlanif1407                    up      down     HUAWEI, Quidway Series, Vlanif140
+                                               7 Interface
+Vlanif1492                    up      down     HUAWEI, Quidway Series, Vlanif149
+                                               2 Interface
+Vlanif1497                    up      down     HUAWEI, Quidway Series, Vlanif149
+                                               7 Interface
+Vlanif1501                    *down   down     HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1640                    up      up       HUAWEI, Quidway Series, Vlanif164
+                                               0 Interface
+Vlanif1747                    up      up       HUAWEI, Quidway Series, Vlanif174
+                                               7 Interface
+Vlanif1819                    up      up       HUAWEI, Quidway Series, Vlanif181
+                                               9 Interface
+Vlanif1967                    up      down     HUAWEI, Quidway Series, Vlanif196
+                                               7 Interface
+Vlanif1968                    up      up       HUAWEI, Quidway Series, Vlanif196
+                                               8 Interface
+Vlanif2521                    up      up       HUAWEI, Quidway Series, Vlanif252
+                                               1 Interface
+Vlanif3034                    up      up       HUAWEI, Quidway Series, Vlanif303
+                                               4 Interface
+Vlanif3035                    up      up       HUAWEI, Quidway Series, Vlanif303
+                                               5 Interface
+Vlanif3042                    up      up       HUAWEI, Quidway Series, Vlanif304
+                                               2 Interface
+Vlanif4059                    up      down     HUAWEI, Quidway Series, Vlanif405
+                                               9 Interface
+[BS_IJB_001]   dis cur
+#
+!Software Version V100R006C05
+ sysname BS_IJB_001
+#
+ vlan batch 218 664 669 to 670 804 922 1000 1115 1313 1355 1372
+ vlan batch 1407 1453 1469 1486 1489 1492 to 1493 1495 to 1498 1500 to 1501 1503 1505 to 1506
+ vlan batch 1632 1640 1736 1742 to 1743 1747 1757 1771 1813 1819 to 1820 1874
+ vlan batch 1966 to 1968 2267 2415 2423 2428 2521 2646 2916 2999 3034 to 3035
+ vlan batch 3042 3126 3129 3221 3433 4025 4047 4059
+#
+lldp enable
+#
+ undo http server enable
+#
+vlan 218
+ description FIRS SAGAMU MPLS
+vlan 664
+ description VDT-LAGOS-IJEBU-ODE
+vlan 669
+ description VDT-SHAGAMU
+vlan 670
+ description KREST_TECHN
+vlan 804
+ description new-asw-mgt
+vlan 922
+ description SMC-INTERNET
+vlan 1000
+ description test dcn vlan
+vlan 1115
+ description GTBANK-VPLS
+vlan 1313
+ description TAI_SOLARIN_UNIVERSITY
+vlan 1355
+ description FBN-IJEBUODE-4M-LL-IJE001
+vlan 1372
+ description Tai Solarin Internet
+vlan 1407
+ description ATLANTIC HALL-EPE-INT| 200MB
+vlan 1453
+ description SUPER FM
+vlan 1469
+ description Ogun_State_Polytechnic_of_Health_INT
+vlan 1486
+ description NEW-CERAGON_IP20_MGT
+vlan 1489
+ description New Ceragon IP Lagos
+vlan 1492
+ description NERA-MGT-VLAN3
+vlan 1493
+ description NERA_MGT
+vlan 1495
+ description NERA MGT
+vlan 1496
+ description CERAGON RADIO MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1498
+ description Ceragon Mgt
+vlan 1500
+ description ceragon-mgmt
+vlan 1501
+ description BS-MGT
+vlan 1503
+ description nera-mgmt
+vlan 1505
+ description RCC_GUESTHOUSE
+vlan 1506
+ description RCC-ORE-BENIN
+vlan 1640
+ description Access_MPLS
+vlan 1736
+ description cok-ijebu
+vlan 1742
+ description winrock-ibefun
+vlan 1743
+ description NETCOM-OLAM
+vlan 1747
+ description TECH-POINT-AJEBO
+vlan 1757
+ description Gateway Poly
+vlan 1771
+ description ABBE LIOUS
+vlan 1813
+ description NBC IJEBU ODE
+vlan 1819
+ description COLEMAN SAGAMU
+vlan 1820
+ description skystar
+vlan 1874
+ description GLOSHOP IJEBU
+vlan 1966
+ description akomz
+vlan 1967
+ description FRSC IJEBU ODE
+vlan 1968
+ description FRSC SAGAMU
+vlan 2267
+ description PRESTO_INTERNET
+vlan 2415
+ description TULIP COCOA
+vlan 2423
+ description STANBIC-BANK
+vlan 2428
+ description JB SHAGAMU KM40 LL
+vlan 2521
+ description FRIGO GLASS IJEBU INT 3MB
+vlan 2646
+ description NDST OOUTH SAGAMU
+vlan 2916
+ description GLOSHOP-AGO-IWOYE
+vlan 2999
+ description FCMB-SAGAMU
+vlan 3034
+ description STERLING_BANK
+vlan 3035
+ description Polaris Ijebu Ode
+vlan 3042
+ description UBA-VPLS
+vlan 3126
+ description DIAMONND_BANK_SAGAMU
+vlan 3129
+ description LOUISVILLE
+vlan 3221
+ description ACCESS-BANK-L3-IJEBU
+vlan 3433
+ description RCC-SAGAM
+vlan 4025
+ description VDT-SHAGAMU-INTERNET
+vlan 4047
+ description CYBERSPACE POLARIS BANK IJEBU-IGBO
+vlan 4059
+ description FALCK-PRIME
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@%tgmU`&<PBgSU*Af#I|6Kp[-%@%@
+ local-user bsnoc privilege level 15
+ local-user bsnoc service-type telnet terminal ssh ftp
+ local-user moses password cipher %@%@Y%Uc%A}v<B\(P|:FTGrDSrSn%@%@
+ local-user moses privilege level 15
+ local-user fabian password cipher %@%@&eB^0"toN8!2\(M>whn'SrTG%@%@
+ local-user fabian privilege level 15
+ local-user huawei password cipher %@%@6}i>Vz4FwS+%LC6LK3iSS'R.%@%@
+ local-user huawei privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif804
+ ip address 10.248.246.75 255.255.255.192
+#
+interface Vlanif1355
+#
+interface Vlanif1407
+#
+interface Vlanif1492
+#
+interface Vlanif1497
+#
+interface Vlanif1501
+ shutdown
+ ip address 10.248.249.88 255.255.255.0
+#
+interface Vlanif1640
+ ip address 10.230.230.189 255.255.255.0
+#
+interface Vlanif1747
+ ip address 11.11.11.23 255.255.255.0
+#
+interface Vlanif1819
+ ip address 15.15.15.15 255.255.255.0
+#
+interface Vlanif1967
+#
+interface Vlanif1968
+ ip address 100.100.30.2 255.255.255.0
+#
+interface Vlanif2521
+ ip address 71.203.88.82 255.255.255.248
+#
+interface Vlanif3034
+ ip address 192.185.101.221 255.255.255.0
+#
+interface Vlanif3035
+ ip address 10.15.118.200 255.255.255.0
+#
+interface Vlanif3042
+ ip address 192.168.219.222 255.255.255.0
+#
+interface Vlanif4059
+#
+interface Ethernet0/0/1
+ description ACCESS-BANK-IJEBU-ODE
+ port link-type access
+ port default vlan 3221
+ stp bpdu-filter enable
+ undo negotiation auto
+ speed 100
+ storm-control broadcast min-rate 50 max-rate 50
+ storm-control multicast min-rate 50 max-rate 50
+ storm-control unicast min-rate 50 max-rate 50
+#
+interface Ethernet0/0/2
+ description ABBE LIOUS
+ port link-type access
+ port default vlan 1771
+#
+interface Ethernet0/0/3
+ description - TO-SUMU003-VIA HUAWEI BACK BONE - IJB001-LBR002(P04)-LBR001( HUAWEI LINK)-LBR001-SUMU003( CERAGON) | | DIAMOND BANK SHAGAMU | RCC SHAGAMU| FRSC|FALCK PRIME
+ port link-type trunk
+ port trunk allow-pass vlan 1492 1495 1757 1968 2999 3126 3433 4059
+#
+interface Ethernet0/0/4
+ description free
+ port link-type access
+#
+interface Ethernet0/0/5
+ description FRIGOGLASS BETAGLASS IJEBU INT | CERAGON
+ port link-type access
+ port default vlan 2521
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/6
+ description POLARIS IJEBU-2M-LL-R-CERAGON_IP20
+ port link-type trunk
+ port trunk allow-pass vlan 1486 3035
+#
+interface Ethernet0/0/7
+ description STANBIC IBTC BANK IJEBU ODE (CERAGON)
+ port link-type access
+ port default vlan 2423
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/8
+ description CITY OF KNOWLEGDE 6MB INTERNET
+ shutdown
+ port link-type access
+ port default vlan 1736
+#
+interface Ethernet0/0/9
+ description NETCOM-OLAM-SAGAMU-VPN || 5Mbps
+ port link-type trunk
+ port trunk allow-pass vlan 1503
+#
+interface Ethernet0/0/10
+ description TULIP COCOA PROCESSING  40MB INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 1495 2415
+#
+interface Ethernet0/0/11
+ description description TO (ILB001-IJB043-CERAGONIDU P04)-LBR02-LBR001- COLEMAN SHAGAMU( IJB001-LBR001) |DIAMOND BABCOCK ( IJB001-LBR002)
+ port link-type trunk
+ port trunk allow-pass vlan 1493 1496 1501 1819 3126
+#
+interface Ethernet0/0/12
+ description LOUISVILLE SCHOOLS IJEBU
+ port link-type access
+ port default vlan 3129
+ jumboframe enable 13296
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/13
+ description VDT SHAGAMU
+ port link-type trunk
+ port trunk allow-pass vlan 669 4025
+#
+interface Ethernet0/0/14
+ description OGUN STATE POLYTECHNIC OF HEALTH | 50MB INT
+ port link-type access
+ port default vlan 1469
+#
+interface Ethernet0/0/15
+ description SMU 003( SMC) MPLS SMU502-SMU003-LBR001-LBR002-IJB043-IJB001( LBR002-IJB001-GLOMOBILE CERAGON BACK-BONE
+ port link-type trunk
+ port trunk allow-pass vlan 804 922 1493 1495
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/16
+ description KRESTECH CALEB 20MB INTERNET
+ shutdown
+ port link-type access
+ port default vlan 670
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/17
+ description GLOSHOP IJEBU
+ port link-type access
+ port default vlan 1874
+#
+interface Ethernet0/0/18
+ description FRIGO-JEBU-CERGAGON MGT
+ port link-type access
+ port default vlan 1496
+#
+interface Ethernet0/0/19
+ description STERLINGBANK-IJEBU-ODE-FIB-LM
+ shutdown
+ port link-type access
+ port default vlan 3034
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/20
+ description GATEWAY ICT POLY  10MB INTERNET
+ port link-type access
+ port default vlan 1757
+#
+interface Ethernet0/0/21
+ description FRIGOGLASS-IJEBU_20M_INTERNET-R-CERAGON_IP20
+ port link-type trunk
+ port trunk allow-pass vlan 1486 2521
+#
+interface Ethernet0/0/22
+ description FBN IJEBUODE-IJE001 |4M-LEASEDLINE!R-NERA-DIRECT
+ port link-type trunk
+ port trunk allow-pass vlan 1355 1497
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/23
+ description UBA IJEBU ODE-FIBER-LASTMILE
+ port link-type access
+ port default vlan 3042
+#
+interface Ethernet0/0/24
+ description GLOSHOP AGO IWOYE
+ port link-type access
+ port default vlan 1966
+#
+interface GigabitEthernet0/0/1
+ description TAI SOLARIN UNIVERSITY STM1 INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 1372 1489
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/2
+ description UPLINK TO DCN IP/MPLS_UPE G0/2/4
+ port link-type trunk
+ port trunk allow-pass vlan 2 218 664 669 to 670 804 922 1115 1355 1372 1407
+ port trunk allow-pass vlan 1453 1469 1486 1489 1492 to 1493 1495 to 1497 1501 1503 1505 1632
+ port trunk allow-pass vlan 1640 1736 1742 to 1743 1747 1757 1771 1813 1819 to 1820 1874 1966 to 1968
+ port trunk allow-pass vlan 2267 2415 2423 2428 2521 2646 2916 2999 3034 to 3035 3042
+ port trunk allow-pass vlan 3126 3129 3221 3363 to 3364 3433 4025 4059
+ stp bpdu-filter enable
+ jumboframe enable 13296
+#
+interface GigabitEthernet0/0/3
+ jumboframe enable 13296
+#
+interface GigabitEthernet0/0/4
+ jumboframe enable 13296
+ port media type copper
+     undo negotiation auto
+ port media type fiber
+     undo negotiation auto
+ combo-port auto
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100001B2F
+ snmp-agent community read cipher %@%@1<[{/;4Yu3$kwLWc%\hJS+gH/pT8E*@;N/W@.c7+d3cV+gKSTm/l4w;nI,JjI.HyI!<9gTS+%@%@
+ snmp-agent community read cipher %@%@Q]sw5B%g>F.YCXG'iGg5ohYp8Zv<'"!L_Yt0|z6Pv&DUhYsooT5'<uO"d:(viY0EMIr,Y|oh%@%@
+ snmp-agent community read cipher %@%@&N3vK</$a)SJ'c25C{N/X/F.OlF}5$%+2Tj+p"E.M[&:/F1XE%wHJqoGWOP`@U9TU{86F:X/%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+
+[BS_IJB_001]
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                                                   ?
+
+ ? 2025-11-13 ? ? 08:27.31 ? ? /home/mobaxterm ?

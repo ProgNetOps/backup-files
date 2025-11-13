@@ -1,0 +1,417 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:41.45 ? ? /home/mobaxterm ? telnet 10.248.246.224
+Connected to 10.248.246.224.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<ENT-SW-ABJ012>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-SW-ABJ012]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      down    down     TPGS-CITEC
+Eth0/0/2                      *down   down     TPGS_QUEST
+Eth0/0/3                      down    down     VDT 5TH AVENUE GWARIMPA | 20MB
+Eth0/0/4                      down    down     VDT_GWARINPA-INTERNET
+Eth0/0/5                      down    down     UBA GWARIMPA ABUJA | IOTECH
+Eth0/0/6                      up      up       ACCESS BANK GWARIMPA
+Eth0/0/7                      down    down     NNPC KRPC INTERNET
+Eth0/0/8                      *down   down     GTB Kaduna suspended
+Eth0/0/9                      down    down     ACCESS BANK NNPC REFINERY KADUNA
+Eth0/0/10                     down    down     NNPC_KRPC_KADUNA
+Eth0/0/11                     down    down     OLAM-V|| KAD120-
+Eth0/0/12                     down    down     NNPC PPMC | NNPC DEPOT|NNPC KRPC
+                                               BACKUP
+Eth0/0/13                     down    down     NNPC MEDICAL KADUNA
+Eth0/0/14                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/14 Interface
+Eth0/0/15                     down    down     OLAM-VODACOM || 8Mbps || KAD120-I
+                                               DU-PORT03
+Eth0/0/16                     down    down     OLAM-VODACOM || 8Mbps || KAD120-I
+                                               DU-PORT03
+Eth0/0/17                     down    down     VDT KADUNA-KAD002 | 80MB
+Eth0/0/18                     up      up       TRUNK-TPGS-SWITCH-!TPGS_GWARINPA(
+                                               VLAN-1103)!TPGS_QUEST(vlan 1120)!
+                                               TPGS_ABJ11(vlan 1995)!TPGS_CITEC(
+                                               vlan 2325
+Eth0/0/19                     down    down     HIGHLAND-CHURCH-INT | 20M
+Eth0/0/20                     up      up       AGRO CLIMATIC RESILIENCE ACReSAL-
+                                               INTERNET
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     *down   down     BRIECH GWARIMPA GWT
+Eth0/0/24                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/24 Interface
+GE0/0/1                       up      up       FRSC-PRINT-FARM-INT(FIBER) | 155M
+GE0/0/2                       up      up       uplink GE0/2/1
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif802                     up      up       HUAWEI, Quidway Series, Vlanif802
+                                                Interface
+Vlanif1115                    down    down     HUAWEI, Quidway Series, Vlanif111
+                                               5 Interface
+Vlanif1337                    down    down     HUAWEI, Quidway Series, Vlanif133
+                                               7 Interface
+Vlanif1387                    up      down     HUAWEI, Quidway Series, Vlanif138
+                                               7 Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+[ENT-SW-ABJ012]   dis cur
+#
+!Software Version V100R006C03
+ sysname ENT-SW-ABJ012
+#
+ vlan batch 802 1103 1115 to 1116 1120 1270 1275 1292 1337 1368 1373
+ vlan batch 1387 1488 1492 to 1495 1498 1501 to 1502 1565 1568 1626 1640 1678
+ vlan batch 1750 1761 1929 1933 1995 2174 to 2175 2215 2325 2423 2468
+ vlan batch 2545 3034 3042 3126 3227 3442 3488 3491 to 3493
+#
+ undo http server enable
+#
+vlan 802
+ description SWITCH-MGT
+vlan 1103
+ description TPGS_GWARINPA
+vlan 1115
+ description GTB-VPLS
+vlan 1116
+ description VAS TECH VPN
+vlan 1120
+ description TPGS_QUEST
+vlan 1270
+ description FRSC KADO
+vlan 1275
+ description BRIECH_GWARIMPA
+vlan 1292
+ description VDT GWARIMPA
+vlan 1337
+ description VDT KADUNA-KAD002 | 80MB
+vlan 1368
+ description IP2AIR_ABJ
+vlan 1373
+ description HIGHLAND-CHURCH-INT
+vlan 1387
+ description VDT_GWAR
+vlan 1488
+ description NEW CERAGON MGT
+vlan 1492
+ description NERA-MGT-4
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1494
+ description NNPC_NERA_RADIO_MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1498
+ description CERAGON MGT
+vlan 1501
+ description Business Solution Switch
+vlan 1502
+ description huawei-mgmt
+vlan 1565
+ description olam-vodacom
+vlan 1568
+ description TPGS Barnawa
+vlan 1626
+ description FRSC_NVIS_AWKA
+vlan 1640
+ description ACCESS-VPLS
+vlan 1678
+ description TPGS KADUNA
+vlan 1750
+ description FRSC_NVIS_OJODU
+vlan 1761
+ description FRSC_UDI
+vlan 1929
+ description FRSC_RSHQ
+vlan 1933
+ description FRSC-KADO-PRINT-FARM-INT
+vlan 1995
+ description TPGS_ABJ11
+vlan 2174
+ description NNPC-KRPC-KADUNA-MAIN
+vlan 2175
+ description NNPC-KRPC-KADUNA-PROTECTION
+vlan 2215
+ description ACReSAL ABUJA
+vlan 2325
+ description TPGS_CITEC
+vlan 2423
+ description STANBIC-IBTC-LL
+vlan 2468
+ description SEVEN UP KADUNA MPLS CLIENT - KAD053-KAD002-R-ALCATEL-MC-SMART LINK
+vlan 2545
+ description NBC-KADUNA
+vlan 3034
+ description Sterling_Bank
+vlan 3042
+ description UBA-VPLS
+vlan 3126
+ description DIAMOND-VPLS
+vlan 3227
+ description ACCESS-BANK-GWARIMPA-L3
+vlan 3442
+ description NNPC-DEPOT-KADUNA
+vlan 3488
+ description NNPC-MEDICAL-PRI-KADUNA
+vlan 3491
+ description NNPC_KRPC_KADUNA
+vlan 3492
+ description NNPC-ITD-CENTRE-KADUNA
+vlan 3493
+ description NNPC-PPMC-KADUNA
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user ope password cipher %$%$LP$%#7AusH}|fTKBpP$-}=4+%$%$
+ local-user ope privilege level 3
+ local-user admin password cipher %$%$I6.ASV)hJET,p"Dn.YM%3aXO%$%$
+ local-user admin service-type http
+ local-user bsnoc password cipher %$%$/Y~O1\%ahVkhO%JZTlQ,}I@7%$%$
+ local-user bsnoc privilege level 3
+ local-user chuks password cipher %$%$H4;f5kx~*Ik}i$(CgPkS}pg^%$%$
+ local-user chuks privilege level 3
+ local-user moses password cipher %$%$V-^UYoR142UAQ`(f=n*>}qh_%$%$
+ local-user moses privilege level 3
+ local-user donald password cipher %$%$~BAU,%gp[VOp{pIlw/41}@7.%$%$
+ local-user donald privilege level 3
+ local-user fabian password cipher %$%$a1h6-9d5f%)O7O.EwP8F}bYP%$%$
+ local-user fabian privilege level 3
+ local-user huawei password cipher %$%$tPcu;1_m0>7]riEjnMMK,jaX%$%$
+ local-user huawei privilege level 3
+ local-user naveen password cipher %$%$IeF{GyQ~a(:kQ*(Y<J%=}F=4%$%$
+ local-user naveen privilege level 3
+ local-user rthabj password cipher %$%$j6ygKWu(+NcKM0#bVoD$4(|s%$%$
+ local-user rthabj privilege level 3
+ local-user kelechi password cipher %$%$<GK8DRt_0G}MEeJ)t5-H}%yp%$%$
+ local-user kelechi privilege level 3
+ local-user solarch password cipher %$%$`BImTC6F(52]Rn!3CSC=4sja%$%$
+ local-user solarch privilege level 3
+#
+interface Vlanif1
+#
+interface Vlanif802
+ ip address 10.248.246.224 255.255.255.192
+#
+interface Vlanif1115
+ ip address 10.0.181.200 255.255.255.0
+#
+interface Vlanif1337
+#
+interface Vlanif1387
+#
+interface Vlanif1501
+ ip address 10.248.249.63 255.255.255.0
+#
+interface Ethernet0/0/1
+ description TPGS-CITEC
+ port link-type access
+ port default vlan 2325
+#
+interface Ethernet0/0/2
+ description TPGS_QUEST
+ shutdown
+ port link-type access
+ port default vlan 1120
+#
+interface Ethernet0/0/3
+ description VDT 5TH AVENUE GWARIMPA | 20MB
+ port link-type access
+ port default vlan 1292
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/4
+ description VDT_GWARINPA-INTERNET
+ port link-type access
+ port default vlan 1387
+ dot1x enable
+#
+interface Ethernet0/0/5
+ description UBA GWARIMPA ABUJA | IOTECH
+ port link-type access
+ port default vlan 3042
+#
+interface Ethernet0/0/6
+ description ACCESS BANK GWARIMPA
+ port link-type access
+ port default vlan 1640
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/7
+ description NNPC KRPC INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 1495 3491
+#
+interface Ethernet0/0/8
+ description GTB Kaduna suspended
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1115 1495
+#
+interface Ethernet0/0/9
+ description ACCESS BANK NNPC REFINERY KADUNA
+ port link-type trunk
+ port trunk allow-pass vlan 1493 1640
+#
+interface Ethernet0/0/10
+ description NNPC_KRPC_KADUNA
+ port link-type access
+ port default vlan 3491
+#
+interface Ethernet0/0/11
+ description OLAM-V|| KAD120-
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3492
+#
+interface Ethernet0/0/12
+ description NNPC PPMC | NNPC DEPOT|NNPC KRPC BACKUP
+ port link-type trunk
+ port trunk allow-pass vlan 1494 to 1495 2175 3442 3488 3493
+#
+interface Ethernet0/0/13
+ description NNPC MEDICAL KADUNA
+ port link-type trunk
+ port trunk allow-pass vlan 1494
+#
+interface Ethernet0/0/14
+ port link-type trunk
+ port trunk allow-pass vlan 1494
+#
+interface Ethernet0/0/15
+ description OLAM-VODACOM || 8Mbps || KAD120-IDU-PORT03
+ port link-type access
+ port default vlan 1565
+#
+interface Ethernet0/0/16
+ description OLAM-VODACOM || 8Mbps || KAD120-IDU-PORT03
+ port link-type trunk
+ port trunk allow-pass vlan 1502 1565
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/17
+ description VDT KADUNA-KAD002 | 80MB
+ port link-type access
+ port default vlan 1337
+#
+interface Ethernet0/0/18
+ description TRUNK-TPGS-SWITCH-!TPGS_GWARINPA(VLAN-1103)!TPGS_QUEST(vlan 1120)!TPGS_ABJ11(vlan 1995)!TPGS_CITEC(vlan 2325
+ port link-type trunk
+ port trunk allow-pass vlan 1103 1995 2325
+#
+interface Ethernet0/0/19
+ description HIGHLAND-CHURCH-INT | 20M
+ port link-type access
+ port default vlan 1373
+#
+interface Ethernet0/0/20
+ description AGRO CLIMATIC RESILIENCE ACReSAL-INTERNET
+ port link-type access
+ port default vlan 2215
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+ description BRIECH GWARIMPA GWT
+ shutdown
+ port link-type access
+ port default vlan 1275
+ undo negotiation auto
+ speed 100
+ multicast-suppression 50
+ broadcast-suppression 50
+#
+interface Ethernet0/0/24
+ port link-type trunk
+ port trunk allow-pass vlan 1501
+#
+interface GigabitEthernet0/0/1
+ description FRSC-PRINT-FARM-INT(FIBER) | 155M
+ port link-type access
+ port default vlan 1933
+ stp bpdu-filter enable
+ port media type copper
+     undo negotiation auto
+ port media type fiber
+     undo negotiation auto
+ combo-port auto
+#
+interface GigabitEthernet0/0/2
+ description uplink GE0/2/1
+ port link-type trunk
+ port trunk allow-pass vlan 802 1103 1116 1270 1275 1292 1368 1373 1387 1488
+ port trunk allow-pass vlan 1501 1626 1640 1750 1761 1929 1933 1995 2215 2325
+ port trunk allow-pass vlan 3042 3126 3227
+ stp bpdu-filter enable
+ port media type fiber
+     undo negotiation auto
+ combo-port auto
+ multicast-suppression 50
+ broadcast-suppression 50
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.193
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100006BB3
+ snmp-agent community read cipher %$%$jh$`,p{PlPiJP0!nP.}VT]TK%$%$
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode password
+ set authentication password cipher %$%$!HyOO~+5W$#bLF!uYWR1,E<3VdJu7jo5v-dK.^0+NHn1"KB=%$%$
+user-interface vty 0 4
+ authentication-mode aaa
+#
+port-group def
+#
+port-group default
+#
+port-group linacc
+#
+port-group link
+#
+port-group link-type
+#
+port-group litethernet0/0/2]
+#
+return
+[ENT-SW-ABJ012]

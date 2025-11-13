@@ -1,0 +1,716 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:30.09 ? ? /home/mobaxterm ? telnet 10.248.246.230
+Connected to 10.248.246.230.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+BS_ABJ_007_3750_2ND>en
+Password:
+BS_ABJ_007_3750_2ND#sh int des
+Interface                      Status         Protocol Description
+Vl1                            admin down     down
+Vl125                          up             up
+Vl150                          down           down
+Vl308                          up             up
+Vl310                          up             up
+Vl312                          up             up
+Vl313                          up             up
+Vl535                          up             up
+Vl610                          up             up       voda-gusau
+Vl611                          up             up
+Vl658                          down           down
+Vl800                          up             up
+Vl802                          up             up
+Vl1126                         up             up
+Vl1176                         up             up
+Vl1281                         up             up
+Vl1438                         up             up
+Vl1499                         admin down     down
+Vl1503                         up             up
+Vl1518                         up             up
+Vl1545                         up             up
+Vl1564                         up             up
+Vl1565                         up             up
+Vl1577                         up             up
+Vl1640                         up             up
+Vl1658                         up             up
+Vl1675                         up             up
+Vl1773                         up             up
+Vl1845                         up             up
+Vl2423                         up             up
+Vl2425                         up             up
+Vl2430                         up             up
+Vl2520                         up             up
+Vl3035                         up             up
+Vl3042                         up             up
+Fa1/0/1                        down           down     TRUNK BETWENN 2nd-3750 & 3rd-3750-SW
+Fa1/0/2                        up             up       UBA KOFORIDUA WUSE ZONE 2 ABUJA - SWIFTALK-RADIO  | 6MB
+Fa1/0/3                        up             up       NOI-POLLS-ABUJA-ABJ003-3RD-3750P16 |20MB
+Fa1/0/4                        up             up       TPGS ABUJA-16 30MB INTERNET | TPGS AMINU KANO 5MB -ABJ222-ABJ110-ABJ007(PoP)
+Fa1/0/5                        up             up       NNPC MEDICAL UTAKO NEW
+Fa1/0/6                        up             up       CGC NIGERIA LTD KATAMPE(ROADS & BRIDGES DIVISION) |100MB INTERNET
+Fa1/0/7                        up             up       TPGS Abuja 18-20M-int!!Gitto-const-20M-INT!!  TPGS_WALIS-20M-INT-VLAN-1658-ABJ363 TO-ABJ007-ABJ-HUAWEI-RTN950-GE02
+Fa1/0/8                        up             up       GlobeNode (Japan Embassy) Abuja |10MB Internet
+Fa1/0/9                        up             up       FRSC APN VAS 10MB LL
+Fa1/0/10                       up             up       ame GLOSHOP ABUJA 10MB LL
+Fa1/0/11                       up             up       PDS-ABUJA-BACKUP
+Fa1/0/12                       down           down     TPGS-AMINU-KANO (Client-ABJ110(GE03-RTN905)-ABJ222-ABJ007)
+Fa1/0/13                       up             up       Ovivi Ventures Limited| 10MB
+Fa1/0/14                       up             up       Ovivi Ventures-WUSE2-ABUJA2|30Mb-INTERNET-FIBER-LM
+Fa1/0/15                       up             up       SENTIENT FBN ZUBA-ABJ007-ABJ027-OSN-MSTP
+Fa1/0/16                       up             up       TRUNK-TO-FHA-SWITCH
+Fa1/0/17                       down           down     AFDB SIP - SWIFTALK RADIO | 2MB
+Fa1/0/18                       up             up       TPGS-EATNGO-VLAN1564-15M-INTERNET-AND-TPGSWUSE2-VLAN1565-10M-INTERN
+Fa1/0/19                       up             up       NIG CUSTOMS SERVICE | BOARDWAVES LL-ABJ-AWKA
+Fa1/0/20                       up             up       SW GLOBAL-WUSE-ABJ007 |45M-INTERNET-FIBER-LM
+Fa1/0/21                       up             up       PDS-ABUJA-BACKUP-TO CLIENT MICROTICK_ROUTER
+Fa1/0/22                       up             up       CHRISTIAN BROADCASTING NETWORK 60M-INT-R-HUAWEI- ABJ013-ABJ007
+Fa1/0/23                       up             up       GERMAN_EMBASSY-INT | 20M
+Fa1/0/24                       up             up       DIZENGOFF ABUJA LL (ITALIAN EMBASSY) | 4M
+Gi1/0/1                        up             up       CONNECTION TO GLO1 HUAWEI G2/1/11
+Gi1/0/2                        up             up       TRUNK TO DCN NE40 PE-E 3/1/3
+BS_ABJ_007_3750_2ND# sh run
+Building configuration...
+
+Current configuration : 12394 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+service unsupported-transceiver
+!
+hostname BS_ABJ_007_3750_2ND
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$zWZn$wq98GP8wTFLgeHdhbaqlk.
+!
+!
+!
+no aaa new-model
+switch 1 provision ws-c3750v2-24ts
+system mtu routing 1950
+vtp domain gloonline
+vtp mode transparent
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-3646551808
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3646551808
+ revocation-check none
+ rsakeypair TP-self-signed-3646551808
+!
+!
+crypto pki certificate chain TP-self-signed-3646551808
+ certificate self-signed 01
+  3082024C 308201B5 A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 33363436 35353138 3038301E 170D3933 30333031 30303031
+  34365A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 36343635
+  35313830 3830819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  8100BC1B 09ADEEF0 CE9E8A21 E641C77A AF51A015 62E5A585 D5F9F161 21059ECB
+  68CC9CF5 36D9D61E A7A49E66 65F05681 935842D4 F265818D A2E18F39 4A1304BA
+  4DA392D7 EA769A60 D8CAD288 AF757653 C4C95CA8 15D55300 9FAEEF14 6D8CFF35
+  54F4A435 61926393 1A8BAE1F 4E74F59C 6F0FCD84 A7A28AB0 816FCB71 FC5E163D
+  08750203 010001A3 74307230 0F060355 1D130101 FF040530 030101FF 301F0603
+  551D1104 18301682 1442535F 41424A5F 3030375F 33373530 5F324E44 2E301F06
+  03551D23 04183016 8014B43D B6663922 04308E39 4C5ACEF5 22C5BD97 DF81301D
+  0603551D 0E041604 14B43DB6 66392204 308E394C 5ACEF522 C5BD97DF 81300D06
+  092A8648 86F70D01 01040500 03818100 9D7FD3FE CDF6314D EF9EB24E 047905FB
+  0D447B84 75E44180 97BD95BB 2A7FCA37 64D8FEB5 F1A072F9 ED5DAC53 52FBEC4F
+  1852D8B0 8146E932 E4FE998D AECF9CDC 4C8C18B9 0298876B 7B57269F 26AA38AF
+  E0D69040 6D880F12 E6B79D3B CC8AC5F6 3404A149 B00D2DFA F252FA0C 068D7A37
+  E5BE8BAA 1439D866 77469667 FDDF43A4
+  quit
+!
+!
+!
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig (STP)
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause l2ptguard
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause small-frame
+errdisable recovery interval 30
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 22
+ name SHELL-LEASED-LIN
+!
+vlan 31
+ name MGT
+!
+vlan 125
+!
+vlan 160
+ name ACCESS-BANK-BANEX
+!
+vlan 161
+ name ACCESS-BANK-ZONE5
+!
+vlan 162
+ name ACCESS-BANK-WUSE2
+!
+vlan 165
+ name ANTON-PROD(ADDAX)
+!
+vlan 166
+ name JUNKEM-INT
+!
+vlan 167
+ name GERMAN-EMBASSY-INT
+!
+vlan 168
+ name IOTECT-FCT-SPAR-CED
+!
+vlan 300
+ name GLOBENODE-ABUJA
+!
+vlan 301
+ name WestMetro-Abuja-2
+!
+vlan 302
+ name Global-E&E-Environ
+!
+vlan 303
+ name NNPC-MEDICAL-UTAKO
+!
+vlan 304
+ name CGC-LTD-KATAMPE
+!
+vlan 305
+ name TPGS-Abuja-15
+!
+vlan 306
+ name GlobeNode-Japan-Emb
+!
+vlan 307
+ name TPGS-Abuja-24-IN
+!
+vlan 308
+!
+vlan 309
+ name Alpha-Quantum
+!
+vlan 310
+ name IP2AIR-ABUJA
+!
+vlan 311
+ name Ovivi-Ventures
+!
+vlan 312
+ name Ovivi-WUSE2-30Mb-INT
+!
+vlan 313
+ name SW-GLOBAL-WUSE-45M'
+!
+vlan 314
+ name NATIONAL-URBAN-WATER
+!
+vlan 530
+ name NBC-BIDA
+!
+vlan 534
+ name NBC-LOKOJA
+!
+vlan 535
+ name NBC-LAFIA
+!
+vlan 536
+ name NBC-KONTAGORA
+!
+vlan 538
+ name NBC-YOLA
+!
+vlan 540
+ name NBC-AZARE
+!
+vlan 544
+ name NBC-MAIDUGURI
+!
+vlan 547
+ name NBC-GUSAU
+!
+vlan 552
+ name NBC-SOKOTO
+!
+vlan 560
+ name NO1-POLLS-20M-INT
+!
+vlan 568
+ name NBC-OTURKPO
+!
+vlan 605
+ name voda56-jega
+!
+vlan 610
+ name voda56-gusau
+!
+vlan 611
+ name VODACOM_NEWGUSAU
+!
+vlan 620
+ name leaf-tobacco
+!
+vlan 800
+!
+vlan 802
+ name ENT-SWT-MGMT
+!
+vlan 989
+ name MAROC_TELECOM
+!
+vlan 1028
+ name IP2AIR22
+!
+vlan 1126
+ name SENTIENT-FBN-ZUBA
+!
+vlan 1128
+ name TPGS-AMINU-KANO
+!
+vlan 1129
+ name CHRISTIAN-BROADCASTING-60M-INT
+!
+vlan 1136
+ name SWIFTALK-MGT-VL
+!
+vlan 1176
+ name NIG-CUSTOM-SERVICE
+!
+vlan 1281
+ name OLAN-RICE-TEST
+!
+vlan 1315
+ name GLOSHOP-ABUJA
+!
+vlan 1373
+ name PDS-ABUJA-BACKUP
+!
+vlan 1438
+ name Broad-Wave-System
+!
+vlan 1488
+ name CERAGON-MGT
+!
+vlan 1494
+ name NERA-MGT
+!
+vlan 1499
+!
+vlan 1501
+ name bs-mgt
+!
+vlan 1503
+ name NERA_MGT
+!
+vlan 1506
+ name SIP-VOICE
+!
+vlan 1507
+ name AFDB-SBC-SIP
+!
+vlan 1518
+ name LOYOLA_JESUIT_ABUJA
+!
+vlan 1535
+ name UNION-MAITAMA
+!
+vlan 1542
+ name UNION-FED-SEC
+!
+vlan 1543
+ name UNION-WUSE2
+!
+vlan 1544
+ name UNION-UAC
+!
+vlan 1545
+ name UNION-NAC
+!
+vlan 1564
+ name TPGS-EATNG
+!
+vlan 1565
+ name TPGSWUSE2
+!
+vlan 1577
+ name SOMITECH-SOLUTIONS
+!
+vlan 1632
+ name WEMA-BANL-LL-LINKS
+!
+vlan 1640
+ name ACCESS_BANK-VPLS
+!
+vlan 1658
+ name TPGS_WALIS
+!
+vlan 1675
+ name FRSC-APN-VAS
+!
+vlan 1773
+ name DIZENGOFF-ABUJA-LL
+!
+vlan 1845
+ name SERVERTECH_ABUJA
+!
+vlan 1914
+ name GUINNESS-ABUJA
+!
+vlan 1985
+ name Gitto-Construction
+!
+vlan 2082
+ name TPGS-ABUJA-16
+!
+vlan 2423
+ name Stanbic-Ibtc-bank
+!
+vlan 2425
+ name CON-AVIATIONSOKOTO
+!
+vlan 2429
+ name CONOIL-SULEJA
+!
+vlan 2430
+ name CONOIL-GUSUA
+!
+vlan 2520
+ name CONOIL-PPMC-GOMBE
+!
+vlan 3035
+ name POLARISBANK-JINIFA
+!
+vlan 3042
+ name UBA-VPLS
+lldp run
+!
+!
+!
+interface FastEthernet1/0/1
+ description TRUNK BETWENN 2nd-3750 & 3rd-3750-SW
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1640
+ switchport mode trunk
+ spanning-tree bpdufilter enable
+ spanning-tree bpduguard enable
+!
+interface FastEthernet1/0/2
+ description UBA KOFORIDUA WUSE ZONE 2 ABUJA - SWIFTALK-RADIO  | 6MB
+ switchport access vlan 3042
+ switchport mode access
+!
+interface FastEthernet1/0/3
+ description NOI-POLLS-ABUJA-ABJ003-3RD-3750P16 |20MB
+ switchport access vlan 560
+ switchport mode access
+!
+interface FastEthernet1/0/4
+ description TPGS ABUJA-16 30MB INTERNET | TPGS AMINU KANO 5MB -ABJ222-ABJ110-ABJ007(PoP)
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1128,2082
+ switchport mode trunk
+!
+interface FastEthernet1/0/5
+ description NNPC MEDICAL UTAKO NEW
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet1/0/6
+ description CGC NIGERIA LTD KATAMPE(ROADS & BRIDGES DIVISION) |100MB INTERNET
+ switchport access vlan 304
+ switchport mode access
+!
+interface FastEthernet1/0/7
+ description TPGS Abuja 18-20M-int!!Gitto-const-20M-INT!!  TPGS_WALIS-20M-INT-VLAN-1658-ABJ363 TO-ABJ007-ABJ-HUAWEI-RTN950-GE02
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 305,1658,1985
+ switchport mode trunk
+!
+interface FastEthernet1/0/8
+ description GlobeNode (Japan Embassy) Abuja |10MB Internet
+ switchport access vlan 306
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/9
+ description FRSC APN VAS 10MB LL
+ switchport access vlan 1675
+ switchport mode access
+!
+interface FastEthernet1/0/10
+ description ame GLOSHOP ABUJA 10MB LL
+ switchport access vlan 1315
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/11
+ description PDS-ABUJA-BACKUP
+ switchport access vlan 1373
+ switchport mode access
+!
+interface FastEthernet1/0/12
+ description TPGS-AMINU-KANO (Client-ABJ110(GE03-RTN905)-ABJ222-ABJ007)
+ switchport access vlan 1128
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/13
+ description Ovivi Ventures Limited| 10MB
+ switchport access vlan 311
+ switchport mode access
+ speed 100
+ duplex full
+ spanning-tree portfast
+!
+interface FastEthernet1/0/14
+ description Ovivi Ventures-WUSE2-ABUJA2|30Mb-INTERNET-FIBER-LM
+ switchport access vlan 312
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/15
+ description SENTIENT FBN ZUBA-ABJ007-ABJ027-OSN-MSTP
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1126
+ switchport mode trunk
+ spanning-tree portfast
+!
+interface FastEthernet1/0/16
+ description TRUNK-TO-FHA-SWITCH
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1506
+ switchport mode trunk
+!
+interface FastEthernet1/0/17
+ description AFDB SIP - SWIFTALK RADIO | 2MB
+ switchport access vlan 1507
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/18
+ description TPGS-EATNGO-VLAN1564-15M-INTERNET-AND-TPGSWUSE2-VLAN1565-10M-INTERN
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1564,1565
+ switchport mode trunk
+ spanning-tree portfast
+!
+interface FastEthernet1/0/19
+ description NIG CUSTOMS SERVICE | BOARDWAVES LL-ABJ-AWKA
+ location civic-location-id none
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 802,1176,1438,1494
+ switchport mode trunk
+ spanning-tree portfast
+!
+interface FastEthernet1/0/20
+ description SW GLOBAL-WUSE-ABJ007 |45M-INTERNET-FIBER-LM
+ switchport access vlan 313
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ spanning-tree bpduguard enable
+!
+interface FastEthernet1/0/21
+ description PDS-ABUJA-BACKUP-TO CLIENT MICROTICK_ROUTER
+ switchport access vlan 1373
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/22
+ description CHRISTIAN BROADCASTING NETWORK 60M-INT-R-HUAWEI- ABJ013-ABJ007
+ switchport access vlan 1129
+ switchport mode access
+!
+interface FastEthernet1/0/23
+ description GERMAN_EMBASSY-INT | 20M
+ switchport access vlan 167
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ spanning-tree bpduguard enable
+!
+interface FastEthernet1/0/24
+ description DIZENGOFF ABUJA LL (ITALIAN EMBASSY) | 4M
+ switchport access vlan 1773
+ switchport mode access
+!
+interface GigabitEthernet1/0/1
+ description CONNECTION TO GLO1 HUAWEI G2/1/11
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/2
+ description TRUNK TO DCN NE40 PE-E 3/1/3
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 802,1126,1136,1176,1315,1438,1488,1494,1506,1507
+ switchport trunk allowed vlan add 1564,1565,1577,1640,1658,1675,1773,3035,3042
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan125
+ ip address 10.248.248.46 255.255.255.252
+!
+interface Vlan150
+ no ip address
+!
+interface Vlan308
+ no ip address
+!
+interface Vlan310
+ no ip address
+!
+interface Vlan312
+ no ip address
+!
+interface Vlan313
+ no ip address
+!
+interface Vlan535
+ ip address 192.168.0.100 255.255.255.0
+!
+interface Vlan610
+ description voda-gusau
+ ip address 172.16.200.45 255.255.255.252
+!
+interface Vlan611
+ no ip address
+!
+interface Vlan658
+ no ip address
+!
+interface Vlan800
+ no ip address
+!
+interface Vlan802
+ ip address 10.248.246.230 255.255.255.192
+!
+interface Vlan1126
+ no ip address
+!
+interface Vlan1176
+ ip address 192.168.1.11 255.255.255.0
+!
+interface Vlan1281
+ no ip address
+!
+interface Vlan1438
+ ip address 11.11.11.2 255.255.255.0
+!
+interface Vlan1499
+ ip address 10.248.240.22 255.255.255.248
+ shutdown
+!
+interface Vlan1503
+ ip address 10.155.186.245 255.255.255.0
+!
+interface Vlan1518
+ no ip address
+!
+interface Vlan1545
+ no ip address
+!
+interface Vlan1564
+ no ip address
+!
+interface Vlan1565
+ no ip address
+!
+interface Vlan1577
+ ip address 10.10.10.3 255.255.255.0
+!
+interface Vlan1640
+ no ip address
+!
+interface Vlan1658
+ ip address 10.10.11.11 255.255.255.0
+!
+interface Vlan1675
+ ip address 10.1.1.1 255.255.255.0
+!
+interface Vlan1773
+ ip address 192.168.20.23 255.255.255.0
+!
+interface Vlan1845
+ no ip address
+!
+interface Vlan2423
+ ip address 172.30.30.223 255.255.255.0
+!
+interface Vlan2425
+ ip address 160.5.108.100 255.255.255.0
+!
+interface Vlan2430
+ ip address 160.5.106.200 255.255.255.0
+!
+interface Vlan2520
+ ip address 160.5.75.50 255.255.255.0
+!
+interface Vlan3035
+ ip address 10.15.118.175 255.255.255.0
+!
+interface Vlan3042
+ no ip address
+!
+ip default-gateway 10.248.246.193
+ip classless
+ip http server
+ip http secure-server
+!
+snmp-server community globacom RO
+!
+!
+line con 0
+line vty 0 4
+ password 7 153F0A1E05242E28243C
+ login
+line vty 5 15
+ password 7 153F0A1E05242E28243C
+ login
+!
+end
+
+BS_ABJ_007_3750_2ND#

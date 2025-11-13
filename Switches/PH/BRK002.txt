@@ -1,0 +1,306 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:47.14 ? ? /home/mobaxterm ? telnet 10.248.249.235
+Connected to 10.248.249.235.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-BRK002(BRK001)>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-BRK002(BRK001)]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      down    down     SAIPEM-OKPAI-PRI
+Eth0/0/2                      *down   down     WETLAND-KWALE
+Eth0/0/3                      *down   down     WETLAND-OBIORUKU
+Eth0/0/4                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/4 Interface
+Eth0/0/5                      *down   down     PILLAR OIL KWALE ABRAKA
+Eth0/0/6                      down    down     Technology Plus 6MB (Delta State
+                                               University Library)
+Eth0/0/7                      up      up       UBA-ABRAKA
+Eth0/0/8                      up      up       Technology Plus 20MB (Delta State
+                                                University ICT)
+Eth0/0/9                      down    down     Huawei, Quidway Series, Ethernet0
+                                               /0/9 Interface
+Eth0/0/10                     down    down     Huawei, Quidway Series, Ethernet0
+                                               /0/10 Interface
+Eth0/0/11                     down    down     AGIP-Kwale | AGIP-IPP
+Eth0/0/12                     up      up       DICNET ABRAKA |INT-20MB- CUSTOMER
+                                               -LASTMILE
+Eth0/0/13                     down    down     Delta State Uni-Research Center-B
+                                               RK001| 2M!Direct-ceragon
+Eth0/0/14                     down    down     SENTIENT ABRAKA | 4MB
+Eth0/0/15                     up      up       ACCESS-BANK-ABRAKA
+Eth0/0/16                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/16 Interface
+Eth0/0/17                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/17 Interface
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     MGT_TEST
+GE0/0/1                       up      up       UPLINK TO DCN IP/MPLS - BRK001(BR
+                                               K002)-UPE -M8GE0/1/9
+GE0/0/2                       up      up       AGIP-Kwale | AGIP-IPP-NEW-PORT
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1640                    up      up       HUAWEI, Quidway Series, Vlanif164
+                                               0 Interface
+Vlanif2516                    up      down     HUAWEI, Quidway Series, Vlanif251
+                                               6 Interface
+Vlanif3555                    up      up       HUAWEI, Quidway Series, Vlanif355
+                                               5 Interface
+Vlanif3851                    up      up       HUAWEI, Quidway Series, Vlanif385
+                                               1 Interface
+[BS-BRK002(BRK001)]     dis cur
+#
+!Software Version V100R006C05
+ sysname BS-BRK002(BRK001)
+#
+ vlan batch 549 678 680 1212 1215 1327 1492 to 1495 1497 1501 1640
+ vlan batch 1650 2516 3042 3190 3555 3629 3851
+#
+vlan 549
+ description Pillar-Oil
+vlan 678
+ description Agip Kwale
+vlan 680
+ description Agip IPPP
+vlan 1212
+ description Wetland
+vlan 1215
+ description Delta State Uni-Research Center-BRK001| 2M
+vlan 1327
+ description DICNET ABRAKA | 20MB
+vlan 1492
+ description NERA-MGT2
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1494
+ description NNPC-NERA-MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1497
+ description NERA-MGT
+vlan 1501
+ description BS_MGT
+vlan 1640
+ description ACCESS-BANK-VPLS
+vlan 1650
+ description TECHNOLOGY-PLUS
+vlan 2516
+ description SAIPEM-IPP-OKPAI
+vlan 3042
+ description UBA-ABRAKA
+vlan 3190
+ description SENTIENT-ABRAKA
+vlan 3555
+ description SAIPEM-E1-VOICE
+vlan 3629
+ description Technology Plus Limited, Library
+vlan 3851
+ description ORANGE-SAIPEM
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@d+DPQ>&z2C*uw0IeMQ:WmonD%@%@
+ local-user bsnoc privilege level 15
+ local-user moses password cipher %@%@,2D7!7s(_Mik~9!Z*.D4mot5%@%@
+ local-user moses privilege level 15
+ local-user fabian password cipher %@%@0mCBL83}K2ufcgIcVs@Umoow%@%@
+ local-user fabian privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif1501
+ ip address 10.248.249.235 255.255.255.0
+#
+interface Vlanif1640
+ ip address 10.230.230.19 255.255.255.0
+#
+interface Vlanif2516
+#
+interface Vlanif3555
+ ip address 10.10.10.12 255.255.255.0
+#
+interface Vlanif3851
+ ip address 192.168.200.2 255.255.255.0
+#
+interface Ethernet0/0/1
+ description SAIPEM-OKPAI-PRI
+ port link-type access
+ port default vlan 3555
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/2
+ description WETLAND-KWALE
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1212 1497
+#
+interface Ethernet0/0/3
+ description WETLAND-OBIORUKU
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1212 1497
+#
+interface Ethernet0/0/4
+#
+interface Ethernet0/0/5
+ description PILLAR OIL KWALE ABRAKA
+ shutdown
+ port link-type access
+ port default vlan 549
+#
+interface Ethernet0/0/6
+ description Technology Plus 6MB (Delta State University Library)
+ port link-type trunk
+ port trunk allow-pass vlan 3629
+#
+interface Ethernet0/0/7
+ description UBA-ABRAKA
+ port link-type trunk
+ port trunk allow-pass vlan 1492 3042
+#
+interface Ethernet0/0/8
+ description Technology Plus 20MB (Delta State University ICT)
+ port link-type trunk
+ port trunk allow-pass vlan 1493 1650
+#
+interface Ethernet0/0/9
+ description Huawei, Quidway Series, Ethernet0/0/9 Interface
+ port link-type access
+#
+interface Ethernet0/0/10
+ description Huawei, Quidway Series, Ethernet0/0/10 Interface
+ port link-type access
+#
+interface Ethernet0/0/11
+ description AGIP-Kwale | AGIP-IPP
+ port link-type trunk
+ port trunk allow-pass vlan 678 680
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/12
+ description DICNET ABRAKA |INT-20MB- CUSTOMER-LASTMILE
+ port link-type access
+ port default vlan 1327
+#
+interface Ethernet0/0/13
+ description Delta State Uni-Research Center-BRK001| 2M!Direct-ceragon
+ port link-type access
+ port default vlan 1215
+#
+interface Ethernet0/0/14
+ description SENTIENT ABRAKA | 4MB
+ port link-type trunk
+ port trunk allow-pass vlan 3190
+#
+interface Ethernet0/0/15
+ description ACCESS-BANK-ABRAKA
+ port link-type access
+ port default vlan 1640
+#
+interface Ethernet0/0/16
+#
+interface Ethernet0/0/17
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ description MGT_TEST
+ port link-type access
+ port default vlan 1501
+#
+interface GigabitEthernet0/0/1
+ description UPLINK TO DCN IP/MPLS - BRK001(BRK002)-UPE -M8GE0/1/9
+ port link-type trunk
+ port trunk allow-pass vlan 549 678 680 900 1212 1215 1327 1492 to 1497 1501 1640
+ port trunk allow-pass vlan 1650 1705 2516 3042 3190 3555 3629 3851
+#
+interface GigabitEthernet0/0/2
+ description AGIP-Kwale | AGIP-IPP-NEW-PORT
+ port link-type trunk
+ port trunk allow-pass vlan 678 680
+ stp bpdu-filter enable
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100002A22
+ snmp-agent community read cipher %@%@4cV),RXMS5J;z+4~z_,)S.qox2i!']'9tYMJ%S2l@QNR.qrS^=0Q<R^hwN3VP_.URH#!q{S.%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[BS-BRK002(BRK001)]
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                                                   ?
+
+ ? 2025-11-13 ? ? 07:53.30 ? ? /home/mobaxterm ?

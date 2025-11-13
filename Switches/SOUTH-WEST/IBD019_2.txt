@@ -1,0 +1,253 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 08:18.52 ? ? /home/mobaxterm ? telnet 10.248.246.97
+Connected to 10.248.246.97.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<IBD019-ENT-H-3700SW-2>sys
+Enter system view, return user view with Ctrl+Z.
+[IBD019-ENT-H-3700SW-2]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      down    down     FLOWZAP IBADAN [VL-2981] 100MB
+Eth0/0/2                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/2 Interface
+Eth0/0/3                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/3 Interface
+Eth0/0/4                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/4 Interface
+Eth0/0/5                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/5 Interface
+Eth0/0/6                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/6 Interface
+Eth0/0/7                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/7 Interface
+Eth0/0/8                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/8 Interface
+Eth0/0/9                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/9 Interface
+Eth0/0/10                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/10 Interface
+Eth0/0/11                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/11 Interface
+Eth0/0/12                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/12 Interface
+Eth0/0/13                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/13 Interface
+Eth0/0/14                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/14 Interface
+Eth0/0/15                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/15 Interface
+Eth0/0/16                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/16 Interface
+Eth0/0/17                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/17 Interface
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     management-port
+GE0/0/1                       up      up       UPLINK-TO-1st-3700-SWITCH
+GE0/0/2                       up      up       INTERNATIONA-TECH-INT
+GE0/0/3                       up      up       IPEXPRESS-IBADAN4-EVANS|VL1777| 3
+                                               00M
+GE0/0/4                       up      up       EDUREX-OYO-ST-COLL-NURSING-ELEYEL
+                                               E - IOTECH-RADIO | 100MB
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif804                     up      up       HUAWEI, Quidway Series, Vlanif804
+                                                Interface
+[IBD019-ENT-H-3700SW-2]    dis cur
+#
+!Software Version V100R006C05
+ sysname IBD019-ENT-H-3700SW-2
+#
+ vlan batch 804 1033 1773 to 1774 1777 1977 2981
+#
+lldp enable
+#
+vlan 804
+ description switch mgt
+vlan 1033
+ description EDUREX-OYO-ST-COLL-NURSING-ELEYELE
+vlan 1773
+ description Internetsional RadioBackup
+vlan 1774
+ description INTERNATIONAL-TECH
+vlan 1777
+ description IPEXPRESS-IBADAN4(Evans building)
+vlan 1977
+ description VDT-IBD-OKEARE-140m-INT
+vlan 2981
+ description FLOWZAP
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user ben password cipher %@%@P]CT8&bIn'L$1l,,9,AB'hk6%@%@
+ local-user ben privilege level 15
+ local-user ope password cipher %@%@#*SNNoc$B:pksA~Ks,i='hd0%@%@
+ local-user ope privilege level 15
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@+alx;z;1O(Ul;"3d]Qs/'hh7%@%@
+ local-user bsnoc privilege level 15
+ local-user moses password cipher %@%@k(8D$;{E8Wr5zg%ejUoW'hm+%@%@
+ local-user moses privilege level 15
+ local-user donald password cipher %@%@e-8*SH>Lf<[\49U9NSgC'hj~%@%@
+ local-user donald privilege level 15
+ local-user fabian password cipher %@%@\4>eX_k1gBMh/00Jz=z~'heY%@%@
+ local-user fabian privilege level 15
+ local-user mathew password cipher %@%@$33}(3b8n&O7w=,vh"FISyB>%@%@
+ local-user mathew privilege level 15
+ local-user naveen password cipher %@%@K6yo#dN\Q;7D%4(pgQw;'hfq%@%@
+ local-user naveen privilege level 15
+ local-user glo1noc password cipher %@%@JQ:H92mN375V,a+kPI!Z'hls%@%@
+ local-user glo1noc privilege level 15
+ local-user adewunmi password cipher %@%@971d&L~ct"Qy;s0dk9r5'hg6%@%@
+ local-user adewunmi privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif804
+ ip address 10.248.246.97 255.255.255.192
+#
+interface Ethernet0/0/1
+ description FLOWZAP IBADAN [VL-2981] 100MB
+ port link-type access
+ port default vlan 2981
+#
+interface Ethernet0/0/2
+#
+interface Ethernet0/0/3
+#
+interface Ethernet0/0/4
+#
+interface Ethernet0/0/5
+#
+interface Ethernet0/0/6
+#
+interface Ethernet0/0/7
+#
+interface Ethernet0/0/8
+#
+interface Ethernet0/0/9
+#
+interface Ethernet0/0/10
+#
+interface Ethernet0/0/11
+#
+interface Ethernet0/0/12
+#
+interface Ethernet0/0/13
+#
+interface Ethernet0/0/14
+#
+interface Ethernet0/0/15
+#
+interface Ethernet0/0/16
+#
+interface Ethernet0/0/17
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ description management-port
+ port link-type access
+ port default vlan 804
+#
+interface GigabitEthernet0/0/1
+ description UPLINK-TO-1st-3700-SWITCH
+ port link-type trunk
+ port trunk allow-pass vlan 804 1033 1773 to 1774 1777 1977 2981
+ jumboframe enable 13296
+#
+interface GigabitEthernet0/0/2
+ description INTERNATIONA-TECH-INT
+ port link-type access
+ port default vlan 1773
+ jumboframe enable 13296
+#
+interface GigabitEthernet0/0/3
+ description IPEXPRESS-IBADAN4-EVANS|VL1777| 300M
+ port link-type access
+ port default vlan 1777
+#
+interface GigabitEthernet0/0/4
+ description EDUREX-OYO-ST-COLL-NURSING-ELEYELE - IOTECH-RADIO | 100MB
+ port link-type access
+ port default vlan 1033
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F000001000035FD
+ snmp-agent community read cipher %@%@.+0l:/gye)K1!c3HW!kYs.;Kz(^%&-^'Y1kv.+>MlOCO.;Nsd2.WXHi5QOgp:F.j<Vi3;Ws.%@%@
+ snmp-agent community read cipher %@%@GkAxFrS@%#.<=l6'W^C<O"Tn.y)g.*t!C;eLetS`i3qN"TqOUp4X$n#F~JpLTe(LWAiTTzO"%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[IBD019-ENT-H-3700SW-2]
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                                                   ?
+
+ ? 2025-11-13 ? ? 08:25.10 ? ? /home/mobaxterm ?

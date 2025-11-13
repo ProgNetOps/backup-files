@@ -1,0 +1,412 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 08:10.18 ? ? /home/mobaxterm ? telnet 10.248.249.130
+bsnoc
+bsnoc12#$%
+sys
+dis int des
+Connected to 10.248.249.130.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:Entering character mode
+Escape character is '^]'.
+bsnoc
+Password:
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2023-08-06 01:35:38+00:00.
+Info: Lastest accessed IP: 192.168.6.5  Time: 2023-08-06 01:35:12  Failed: 0
+
+Info: Smart-upgrade is currently disabled. Enable Smart-upgrade to get recommended version information.
+<GLO-ENT-RACK-CT-HUAWEI>sys
+Enter system view, return user view with Ctrl+Z.
+[GLO-ENT-RACK-CT-HUAWEI]dis int des
+PHY: Physical
+*down: administratively down
+#down: LBDT down
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(dl): DLDP down
+(lb): LBDT block
+(o): Observe-port forwarding down
+Interface                     PHY     Protocol Description
+GE0/0/1                       up      up       UPLINK-GLO1-PE-RACKCENTER-3/0/0
+GE0/0/2                       up      up       UPLINK-GLO1-PE-3/0/1
+GE0/0/3                       up      up       CONNECTION-TDS-HI-TECH-APN
+GE0/0/4                       up      up       ### X-CONNECTION-TO-GLO-SW-AT-FBN-RACK ###
+GE0/0/5                       up      up       ACCESS-BANK-L3-CIRCUIT
+GE0/0/6                       down    down
+GE0/0/7                       down    down
+GE0/0/8                       down    down
+GE0/0/9                       down    down
+GE0/0/10                      down    down
+GE0/0/11                      down    down
+GE0/0/12                      down    down
+GE0/0/13                      down    down
+GE0/0/14                      down    down
+GE0/0/15                      down    down
+GE0/0/16                      down    down
+GE0/0/17                      down    down
+GE0/0/18                      down    down
+GE0/0/19                      down    down
+GE0/0/20                      down    down
+GE0/0/21                      down    down
+GE0/0/22                      down    down
+GE0/0/23                      down    down
+GE0/0/24                      down    down
+GE0/0/25                      up      up       SWITCH-MGT
+GE0/0/26                      up      up       # ORANGE ECOBANK-VISA-RACKCENTER- 1st-FL-L11Rack #
+GE0/0/27                      up      up       CONNECTION-TO-ACCESS-BANK
+GE0/0/28                      up      up       GLOBUS BANK NEW CONNECTION (INT-310MB $ LL)
+GE0/0/29                      up      up       ORANGE-MASTERCARD-RACKCENTER-LL ||10M
+GE0/0/30                      up      up       COOLLINK RACKCENTRE[VLAN201]|120Mbps
+GE0/0/31                      down    down     ### X-CONNECTION-TO-GLO-SW-AT-FBN-RACK ###
+GE0/0/32                      down    down
+MEth0/0/1                     down    down
+NULL0                         up      up(s)
+Vlanif1                       up      down
+Vlanif806                     up      up
+Vlanif807                     up      up       LOCAL-MGT-FBN-GLO-SW
+Vlanif1322                    up      up
+Vlanif1501                    up      up
+Vlanif1655                    down    down
+Vlanif1662                    up      up
+Vlanif1663                    up      up
+Vlanif2792                    up      up
+Vlanif2891                    up      up
+Vlanif2892                    up      up
+Vlanif2893                    up      up
+Vlanif3126                    up      up
+Vlanif3940                    up      up
+XGE0/0/1                      up      up       10G-UPLINK TRUNK TO GLO1-RC-NE40E-XGE2/1/1
+XGE0/0/2                      down    down
+XGE0/0/3                      down    down
+XGE0/0/4                      down    down
+[GLO-ENT-RACK-CT-HUAWEI]   dis cur
+!Software Version V200R020C00SPC300
+#
+sysname GLO-ENT-RACK-CT-HUAWEI
+#
+vlan batch 201 250 409 502 602 804 806 to 807 1322 1501 1506
+vlan batch 1640 1662 to 1663 1665 1878 2701 2792 2891 to 2893 3126 3873 3910
+vlan batch 3940
+#
+authentication-profile name default_authen_profile
+authentication-profile name dot1x_authen_profile
+authentication-profile name dot1xmac_authen_profile
+authentication-profile name mac_authen_profile
+authentication-profile name multi_authen_profile
+authentication-profile name portal_authen_profile
+#
+telnet server enable
+telnet server-source all-interface
+#
+http server-source -i MEth0/0/1
+#
+diffserv domain default
+#
+radius-server template default
+#
+pki realm default
+ certificate-check none
+#
+free-rule-template name default_free_rule
+#
+portal-access-profile name portal_access_profile
+#
+vlan 201
+ description COOLLINK RACKCENTRE
+vlan 250
+ description FBN-HQ-RACK-CENT-LL
+vlan 409
+ description ACCESS-BANK-HQ-RACKCENT-L3
+vlan 502
+ description GLOBUS-HQ-INT
+vlan 602
+ description ACCESS-BANK-CAMPUS-L3-LL
+vlan 804
+ description ENT-SWITCH_MGT
+vlan 806
+ description 2nd-sw-mgt
+vlan 807
+ description GLO-FBN-SW-LOCAL-MGT
+vlan 1322
+ description GLOBUS-PHC-LL
+vlan 1501
+ description SWITCH-MGT2
+vlan 1506
+ description FBN-VOICE-SIP
+vlan 1640
+ description ACCESS-BANK-VPLS
+vlan 1662
+ description GLOBUS-ASABA-LL
+vlan 1663
+ description GLOBUS-BENIN-LL
+vlan 1665
+ description GLOBUS-KANO
+vlan 1878
+ description GLOBUS-ENUGU
+vlan 2701
+ description ORANGE-WESTERN-UNION-FBN-HQ
+vlan 2792
+ description GLOBUS BANK ABAKALIKI
+vlan 2891
+ description GLOBUS-ABA
+vlan 2892
+ description GLOBUS-MAIDUGURI
+vlan 2893
+ description GLOBUS-WUSE-ABJ
+vlan 3126
+ description ACCESS-BANK-VPLS-OLD-DIAMOND
+vlan 3873
+ description TDS-APN
+vlan 3910
+ description ECOBANK-VISA-RACKCENTER
+vlan 3940
+ description ORANGE-MASTERCARD-RACKCENTER
+#
+aaa
+ authentication-scheme default
+  authentication-mode local
+ authentication-scheme radius
+  authentication-mode radius
+ authorization-scheme default
+  authorization-mode local
+ accounting-scheme default
+  accounting-mode none
+ local-aaa-user password policy administrator
+  password history record number 0
+  password expire 0
+ domain default
+  authentication-scheme radius
+  accounting-scheme default
+  radius-server default
+ domain default_admin
+  authentication-scheme default
+  accounting-scheme default
+ undo local-user admin
+ local-user bsnoc password irreversible-cipher $1c$W|^LB;T<<L$fdQl)KM\*Sk,AnBr*vpJhf%s"\zvqF"KR4Eh"KE<$
+ local-user bsnoc privilege level 3
+ local-user bsnoc service-type telnet terminal ssh ftp
+#
+interface Vlanif1
+#
+interface Vlanif806
+ ip address 10.248.247.2 255.255.255.192
+#
+interface Vlanif807
+ description LOCAL-MGT-FBN-GLO-SW
+ ip address 10.248.244.1 255.255.255.0
+#
+interface Vlanif1322
+ ip address 34.34.34.35 255.255.255.0
+#
+interface Vlanif1501
+ ip address 10.248.249.130 255.255.255.0
+#
+interface Vlanif1655
+ ip address 192.171.200.1 255.255.255.0
+#
+interface Vlanif1662
+ ip address 192.168.34.1 255.255.255.0
+#
+interface Vlanif1663
+ ip address 10.12.12.2 255.255.255.0
+#
+interface Vlanif2792
+ ip address 192.168.78.2 255.255.255.0
+#
+interface Vlanif2891
+ ip address 192.168.68.2 255.255.255.0
+#
+interface Vlanif2892
+ ip address 192.168.48.2 255.255.255.0
+#
+interface Vlanif2893
+ ip address 192.168.89.6 255.255.255.0
+#
+interface Vlanif3126
+ ip address 172.35.30.56 255.255.255.0
+#
+interface Vlanif3940
+ ip address 123.123.123.1 255.255.255.0
+#
+interface MEth0/0/1
+ ip address 192.168.1.253 255.255.255.0
+#
+interface GigabitEthernet0/0/1
+ undo negotiation auto
+ description UPLINK-GLO1-PE-RACKCENTER-3/0/0
+ port link-type trunk
+ port trunk allow-pass vlan 409 502 602 804 806 1322 1501 1640 1662 to 1663 1665
+ port trunk allow-pass vlan 1878 2792 2891 to 2893 3126 3873 3910 3940
+ stp bpdu-filter enable
+#
+interface GigabitEthernet0/0/2
+ undo negotiation auto
+ description UPLINK-GLO1-PE-3/0/1
+ port link-type trunk
+ port trunk allow-pass vlan 201 250 1506 2701
+#
+interface GigabitEthernet0/0/3
+ description CONNECTION-TDS-HI-TECH-APN
+ port link-type trunk
+ port trunk allow-pass vlan 3873
+#
+interface GigabitEthernet0/0/4
+ undo negotiation auto
+ description ### X-CONNECTION-TO-GLO-SW-AT-FBN-RACK ###
+ port link-type trunk
+ port trunk allow-pass vlan 250 807 1501 1506 2701
+#
+interface GigabitEthernet0/0/5
+ undo negotiation auto
+ description ACCESS-BANK-L3-CIRCUIT
+ port link-type trunk
+ port trunk allow-pass vlan 409 602 1501
+#
+interface GigabitEthernet0/0/6
+#
+interface GigabitEthernet0/0/7
+#
+interface GigabitEthernet0/0/8
+#
+interface GigabitEthernet0/0/9
+#
+interface GigabitEthernet0/0/10
+#
+interface GigabitEthernet0/0/11
+#
+interface GigabitEthernet0/0/12
+#
+interface GigabitEthernet0/0/13
+#
+interface GigabitEthernet0/0/14
+#
+interface GigabitEthernet0/0/15
+#
+interface GigabitEthernet0/0/16
+#
+interface GigabitEthernet0/0/17
+#
+interface GigabitEthernet0/0/18
+#
+interface GigabitEthernet0/0/19
+#
+interface GigabitEthernet0/0/20
+#
+interface GigabitEthernet0/0/21
+#
+interface GigabitEthernet0/0/22
+#
+interface GigabitEthernet0/0/23
+#
+interface GigabitEthernet0/0/24
+#
+interface GigabitEthernet0/0/25
+ description SWITCH-MGT
+ port link-type access
+ port default vlan 1501
+#
+interface GigabitEthernet0/0/26
+ undo negotiation auto
+ speed 100
+ description # ORANGE ECOBANK-VISA-RACKCENTER- 1st-FL-L11Rack #
+ port link-type dot1q-tunnel
+ port default vlan 3910
+#
+interface GigabitEthernet0/0/27
+ description CONNECTION-TO-ACCESS-BANK
+ port link-type trunk
+ port trunk allow-pass vlan 1501 1640
+ stp bpdu-filter enable
+#
+interface GigabitEthernet0/0/28
+ description GLOBUS BANK NEW CONNECTION (INT-310MB $ LL)
+ port link-type trunk
+ port trunk allow-pass vlan 502 1322 1662 to 1663 1665 1878 2792 2891 to 2893
+#
+interface GigabitEthernet0/0/29
+ undo negotiation auto
+ speed 100
+ description ORANGE-MASTERCARD-RACKCENTER-LL ||10M
+ port link-type dot1q-tunnel
+ port default vlan 3940
+#
+interface GigabitEthernet0/0/30
+ undo negotiation auto
+ description COOLLINK RACKCENTRE[VLAN201]|120Mbps
+ port link-type access
+ port default vlan 201
+#
+interface GigabitEthernet0/0/31
+ undo negotiation auto
+ description ### X-CONNECTION-TO-GLO-SW-AT-FBN-RACK ###
+ port link-type trunk
+ port trunk allow-pass vlan 250 807 1501 1506 2701
+#
+interface GigabitEthernet0/0/32
+#
+interface XGigabitEthernet0/0/1
+ description 10G-UPLINK TRUNK TO GLO1-RC-NE40E-XGE2/1/1
+ port link-type trunk
+ port trunk allow-pass vlan 201
+#
+interface XGigabitEthernet0/0/2
+#
+interface XGigabitEthernet0/0/3
+#
+interface XGigabitEthernet0/0/4
+#
+interface NULL0
+#
+undo icmp name timestamp-request receive
+#
+ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+snmp-agent
+snmp-agent local-engineid 800007DB039400B0E461E2
+snmp-agent community read cipher %^%#%yvS:/KVtX<]|y+uVlP<I7o^2r1ca:5t]aDoEK/RLP0hV&a`,L8jT61UPX|Q\(83$v/:a<S%Ha2sQd`C%^%#
+snmp-agent sys-info version all
+snmp-agent protocol source-status all-interface
+snmp-agent protocol source-status ipv6 all-interface
+#
+ssh server cipher aes256_ctr aes128_ctr
+ssh server hmac sha2_256
+ssh server key-exchange dh_group16_sha512 dh_group15_sha512 dh_group14_sha256 dh_group_exchange_sha256
+ssh client cipher aes256_ctr aes128_ctr
+ssh client hmac sha2_256
+ssh client key-exchange dh_group16_sha512 dh_group15_sha512 dh_group14_sha256 dh_group_exchange_sha256
+ssh server dh-exchange min-len 2048
+#
+user-interface con 0
+ authentication-mode aaa
+user-interface vty 0 4
+ authentication-mode aaa
+ protocol inbound all
+user-interface vty 16 20
+#
+dot1x-access-profile name dot1x_access_profile
+#
+mac-access-profile name mac_access_profile
+#
+ops
+#
+return
+[GLO-ENT-RACK-CT-HUAWEI]

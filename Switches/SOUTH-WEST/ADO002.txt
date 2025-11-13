@@ -1,0 +1,432 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:44.39 ? ? /home/mobaxterm ? telnet 10.248.246.69
+Connected to 10.248.246.69.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-ADO-002>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-ADO-002]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      *down   down     ZTE TRUNK TO ADO 002
+Eth0/0/2                      down    down     TEST
+Eth0/0/3                      down    down     TRUNK TO ADO001 | NNPC RETAIL AKU
+                                               RE 3473 | GTB UNADdescription TRU
+                                               NK TO ADO001 | NNPC RETAIL AKURE
+                                               3473 | GTB UNAD | ACCESS UNAD(EKS
+                                               U)
+Eth0/0/4                      up      up       VDT ADO LAGOS |  VDT INTERNET
+Eth0/0/5                      up      up       HUAWEI MICROWAVE SUPERVISION
+Eth0/0/6                      down    down     GLO MOBILE ADM SUPERVISION
+Eth0/0/7                      down    down     FIRS ADO
+Eth0/0/8                      up      up       FREE
+Eth0/0/9                      up      up       GLOWORLD ADO
+Eth0/0/10                     down    down     FIRST BANK IKOLE EKITI | UBA OYE
+                                               EKITI
+Eth0/0/11                     down    down     PLATINUM-INDEX || 30Mbps
+Eth0/0/12                     down    down     VODACOM56-EKITI || 8Mbps
+Eth0/0/13                     up      up       ACCESS-IKERE-EKITI-FIBER
+Eth0/0/14                     up      up       WEMABANK-IKERE-LL-5M-CLIENT-R-CER
+                                               AGON-IP10-AIR803-ADO002
+Eth0/0/15                     down    down     SWIFT TALK ADO EKITI | 10MB
+Eth0/0/16                     down    down     BEDC-TELEMET-ADO-EKITI-INT|20M
+Eth0/0/17                     *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/17 Interface
+Eth0/0/18                     down    down     STANBIC IBTC BANK ADO EKITI-4MB-I
+                                               OTECH-RADIO
+Eth0/0/19                     down    down     SENTIENT WEMA OKESHA | 10M
+Eth0/0/20                     down    down     SENTIENT WEMA OKESHA | 4MB
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     free port
+Eth0/0/23                     down    down     SAM-SMITH-MAIN-CAMPUS
+Eth0/0/24                     down    down     test
+GE0/0/1                       up      up       SAMSMITH(ADO-POLY-SATELLITE) | 12
+                                               0M
+GE0/0/2                       up      up       UPLINK TO DCN IP/MPLS | M8 - GE0/
+                                               1/9
+GE0/0/3                       up      up       ONEDATA ADO-EKITI | V1351 | 100MB
+GE0/0/4                       up      up       TRUNK TO OYE001 FUOYE_UBA_OYE_FIR
+                                               ST_IKOLE_ACCESS IKERE
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif212                     up      up       HUAWEI, Quidway Series, Vlanif212
+                                                Interface
+Vlanif660                     up      down     HUAWEI, Quidway Series, Vlanif660
+                                                Interface
+Vlanif804                     up      up       HUAWEI, Quidway Series, Vlanif804
+                                                Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif2174                    up      up       HUAWEI, Quidway Series, Vlanif217
+                                               4 Interface
+Vlanif2550                    up      up       HUAWEI, Quidway Series, Vlanif255
+                                               0 Interface
+Vlanif2551                    *down   down     HUAWEI, Quidway Series, Vlanif255
+                                               1 Interface
+Vlanif3007                    up      up       HUAWEI, Quidway Series, Vlanif300
+                                               7 Interface
+Vlanif3042                    up      down     HUAWEI, Quidway Series, Vlanif304
+                                               2 Interface
+Vlanif3392                    up      down     HUAWEI, Quidway Series, Vlanif339
+                                               2 Interface
+Vlanif4021                    up      down     HUAWEI, Quidway Series, Vlanif402
+                                               1 Interface
+[BS-ADO-002]    dis cur
+#
+!Software Version V100R006C05
+ sysname BS-ADO-002
+#
+ vlan batch 10 77 212 660 804 870 1033 1115 1121 1136
+ vlan batch 1351 1492 1494 to 1497 1501 1503 1512 to 1513 1579 to 1580 1633 1640 1930
+ vlan batch 1999 2174 2253 to 2254 2257 2423 2550 to 2551 2610 2924 3007 3042
+ vlan batch 3126 3311 3361 3392 3473 3846 4021
+#
+ undo http server enable
+ undo http secure-server enable
+#
+vlan 10
+ description MICROWAVE-HUAWEI-SUPERVISION
+vlan 77
+ description TEST
+vlan 212
+ description FIRS_ADO
+vlan 660
+ description VDT-ADO-LAGOS
+vlan 804
+ description NEW_SWITCH_MGMT
+vlan 870
+ description GLO-MOBILE-ADM-SUPERVISION
+vlan 1033
+ description BEDC-TELEMET-ADO-EKITI-INT
+vlan 1115
+ description GTBANK-VPLS
+vlan 1121
+ description SENTIENT-WEMA-OKESHA-NEW-VLAN
+vlan 1136
+ description SWIFTTALK-RAD-MGT
+vlan 1351
+ description ONEDATA ADO-EKITI VLAN
+vlan 1492
+ description NERA-MGT-VLAN
+vlan 1494
+ description NNPC-NERA-MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1496
+ description BS-CERAGON-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1501
+ description BS-MGT
+vlan 1503
+ description nera-mgmt
+vlan 1512
+ description GREENWICH-TRUST-ADO
+vlan 1513
+ description FED-POLY-ADO-EKITI
+vlan 1579
+ description SAMSMITH-ADO-POLY-SATELLITE-CAMPUS
+vlan 1580
+ description SAM-SMITH-MAIN-CAMPUS
+vlan 1633
+ description platinum-indx
+vlan 1640
+ description ACCESS-BANK-LL
+vlan 1930
+ description DICNET-EKITI-INT
+vlan 1999
+ description SWIFTALK ADO EKITI
+vlan 2174
+ description SENTIENT-WEMA-OKESHA
+vlan 2253
+ description FUOYE OYE CAMPUS
+vlan 2254
+ description FUOYE IKOLE CAMPUS
+vlan 2257
+ description 3WAY COMMS
+vlan 2423
+ description STANBIC IBTC BANK VPLS
+vlan 2550
+ description AFE-BABALOLA-UNI
+vlan 2551
+ description voda56-ekiti
+vlan 2610
+ description NBC-ADO-EKITI
+vlan 2924
+ description GLOWORLD-ADO
+vlan 3007
+ description FBN-IKOLE
+vlan 3042
+ description UBA-VPLS-OYE!!NEW-SECRETARIAT-ROAD
+vlan 3126
+ description DIAMOND-LL-LINKS
+vlan 3311
+ description Zinox_Unad
+vlan 3361
+ description WEMA_ABUAD
+vlan 3392
+ description WEMABANK-IKERE-LL-5M
+vlan 3473
+ description NNPC-RETAIL-STATION-EKITI
+vlan 3846
+ description 3Way 20MB APN LL
+vlan 4021
+ description VDT-ADO-INTERNET
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user ope password cipher %@%@1Sa[>itt-8Hh<&L~<H_YrYX'%@%@
+ local-user ope privilege level 15
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@AvQIRnxI4WL0/ABbSx8:rYYx%@%@
+ local-user bsnoc privilege level 15
+ local-user moses password cipher %@%@@$ZPMF0Df.+D_*!L|UzDjK#r%@%@
+ local-user moses privilege level 15
+ local-user fabian password cipher %@%@<M/F3$lglPlm04(2#SF)6^J`%@%@
+ local-user fabian privilege level 15
+ local-user naveen password cipher %@%@fku5LwpE056X{{0>t;<5rY^[%@%@
+ local-user naveen privilege level 15
+ local-user kelechi password cipher %@%@-fC4%N(Oz&p&y5I"ya40rY\t%@%@
+ local-user kelechi privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif212
+ ip address 172.31.16.210 255.255.255.248
+#
+interface Vlanif660
+#
+interface Vlanif804
+ ip address 10.248.246.69 255.255.255.192
+#
+interface Vlanif1501
+ ip address 10.248.249.61 255.255.255.0
+#
+interface Vlanif2174
+ ip address 192.168.19.1 255.255.255.0
+#
+interface Vlanif2550
+ ip address 197.211.48.196 255.255.255.248
+#
+interface Vlanif2551
+ shutdown
+ ip address 10.35.210.41 255.255.255.252
+#
+interface Vlanif3007
+ ip address 192.168.252.66 255.255.255.0
+#
+interface Vlanif3042
+#
+interface Vlanif3392
+#
+interface Vlanif4021
+#
+interface Ethernet0/0/1
+ description ZTE TRUNK TO ADO 002
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1501 1513 1640 2550
+#
+interface Ethernet0/0/2
+ description TEST
+ port link-type access
+ port default vlan 2550
+#
+interface Ethernet0/0/3
+ description TRUNK TO ADO001 | NNPC RETAIL AKURE 3473 | GTB UNADdescription TRUNK TO ADO001 | NNPC RETAIL AKURE 3473 | GTB UNAD | ACCESS UNAD(EKSU)
+ port link-type trunk
+ port trunk allow-pass vlan 1115 1494 to 1495 1497 1632 1640 2551 3361 3473
+#
+interface Ethernet0/0/4
+ description VDT ADO LAGOS |  VDT INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 4021
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/5
+ description HUAWEI MICROWAVE SUPERVISION
+ port link-type access
+ port default vlan 10
+#
+interface Ethernet0/0/6
+ description GLO MOBILE ADM SUPERVISION
+ port link-type trunk
+ port trunk allow-pass vlan 870
+#
+interface Ethernet0/0/7
+ description FIRS ADO
+ port link-type access
+ port default vlan 212
+#
+interface Ethernet0/0/8
+ description FREE
+ port link-type access
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/9
+ description GLOWORLD ADO
+ port link-type access
+ port default vlan 2924
+#
+interface Ethernet0/0/10
+ description FIRST BANK IKOLE EKITI | UBA OYE EKITI
+ port link-type trunk
+ port trunk allow-pass vlan 1496 to 1497 1640 3007 3042
+#
+interface Ethernet0/0/11
+ description PLATINUM-INDEX || 30Mbps
+ port link-type trunk
+ port trunk allow-pass vlan 1503 1633
+#
+interface Ethernet0/0/12
+ description VODACOM56-EKITI || 8Mbps
+ port link-type trunk
+ port trunk allow-pass vlan 2551
+#
+interface Ethernet0/0/13
+ description ACCESS-IKERE-EKITI-FIBER
+ port link-type access
+ port default vlan 1640
+ qos lr outbound cir 6000 cbs 750000
+ qos lr inbound cir 6000 cbs 750000
+#
+interface Ethernet0/0/14
+ description WEMABANK-IKERE-LL-5M-CLIENT-R-CERAGON-IP10-AIR803-ADO002
+ port link-type trunk
+ port trunk allow-pass vlan 1496 3392
+#
+interface Ethernet0/0/15
+ description SWIFT TALK ADO EKITI | 10MB
+ port link-type trunk
+ port trunk allow-pass vlan 1136 1999
+#
+interface Ethernet0/0/16
+ description BEDC-TELEMET-ADO-EKITI-INT|20M
+ port link-type access
+ port default vlan 1033
+#
+interface Ethernet0/0/17
+ shutdown
+#
+interface Ethernet0/0/18
+ description STANBIC IBTC BANK ADO EKITI-4MB-IOTECH-RADIO
+ port link-type access
+ port default vlan 2423
+#
+interface Ethernet0/0/19
+ description SENTIENT WEMA OKESHA | 10M
+ port link-type trunk
+ port trunk allow-pass vlan 1121
+ stp bpdu-filter enable
+ jumboframe enable 13296
+ broadcast-suppression 50
+#
+interface Ethernet0/0/20
+ description SENTIENT WEMA OKESHA | 4MB
+ port link-type trunk
+ port trunk allow-pass vlan 2174
+ stp bpdu-filter enable
+ jumboframe enable 13296
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+ description free port
+ port link-type access
+#
+interface Ethernet0/0/23
+ description SAM-SMITH-MAIN-CAMPUS
+ port link-type access
+ port default vlan 1513
+#
+interface Ethernet0/0/24
+ description test
+ port link-type access
+ port default vlan 1501
+#
+interface GigabitEthernet0/0/1
+ description SAMSMITH(ADO-POLY-SATELLITE) | 120M
+ port link-type access
+ port default vlan 1579
+ jumboframe enable 13296
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/2
+ description UPLINK TO DCN IP/MPLS | M8 - GE0/1/9
+ port link-type trunk
+ port trunk allow-pass vlan 3 10 212 660 804 870 1033 1115 1121 1136
+ port trunk allow-pass vlan 1351 1492 1494 to 1497 1501 1503 1512 to 1513 1579 to 1580 1632 to 1633 1640 1930
+ port trunk allow-pass vlan 1999 2174 2253 to 2254 2257 2423 2550 to 2551 2610 2924 3007 3042
+ port trunk allow-pass vlan 3126 3311 3361 3392 3473 3846 4021
+ stp bpdu-filter enable
+ jumboframe enable 13296
+ multicast-suppression 50
+ broadcast-suppression 50
+#
+interface GigabitEthernet0/0/3
+ description ONEDATA ADO-EKITI | V1351 | 100MB
+ port link-type access
+ port default vlan 1351
+#
+interface GigabitEthernet0/0/4
+ description TRUNK TO OYE001 FUOYE_UBA_OYE_FIRST_IKOLE_ACCESS IKERE
+ port link-type trunk
+ port trunk allow-pass vlan 804 1492 1495 to 1497 1640 2253 to 2254 3007 3042
+ jumboframe enable 13296
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F000001000032F8
+ snmp-agent community write cipher %@%@YXI*3,|\h0O3~hMF}hf.SCIE\jFi#HTjo%)v8+TguE<ZCIHS%-LM$Xhpe'TX=g(BO.39IQSC%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[BS-ADO-002]

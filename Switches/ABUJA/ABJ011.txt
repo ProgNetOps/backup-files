@@ -1,0 +1,289 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:41.44 ? ? /home/mobaxterm ? telnet 10.248.249.224
+Connected to 10.248.249.224.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-ABJ-011>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-ABJ-011]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      *down   down     EMPTY
+Eth0/0/2                      up      up       VDT ABUJA - MARABA-INTERNET-50M
+Eth0/0/3                      *down   down     DIAMOND BANK NEW KARU - NEW
+Eth0/0/4                      down    down     UBA BANK MARABA
+Eth0/0/5                      up      up       TPGS-NYANYA-10M-INT
+Eth0/0/6                      down    down     GTBANK MARABA
+Eth0/0/7                      down    down     FCMB KARU FIBER LASTMILE
+Eth0/0/8                      up      up       ACCESS BANK JIKOYI-ABUJA
+Eth0/0/9                      *down   down     ONTRAC TECHNOLOGIES
+Eth0/0/10                     up      up       UNION-BANK-MASAKA
+Eth0/0/11                     down    down     TPGS-Heritage Hotel Maraba
+Eth0/0/12                     *down   down     FLOWZAP-ABUJA-2[VL2441]INTERNET|5
+                                               0Mb
+Eth0/0/13                     *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/13 Interface
+Eth0/0/14                     down    down     Union Masaka Test
+Eth0/0/15                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/15 Interface
+Eth0/0/16                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/16 Interface
+Eth0/0/17                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/17 Interface
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/24 Interface
+GE0/0/1                       down    down     HUAWEI, Quidway Series, GigabitEt
+                                               hernet0/0/1 Interface
+GE0/0/2                       up      up       UPLINK TO DCN ROUTER-G0/1/6
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1887                    up      down     HUAWEI, Quidway Series, Vlanif188
+                                               7 Interface
+Vlanif1888                    up      up       HUAWEI, Quidway Series, Vlanif188
+                                               8 Interface
+Vlanif2999                    up      up       HUAWEI, Quidway Series, Vlanif299
+                                               9 Interface
+Vlanif3126                    up      down     HUAWEI, Quidway Series, Vlanif312
+                                               6 Interface
+Vlanif3492                    up      down     HUAWEI, Quidway Series, Vlanif349
+                                               2 Interface
+[BS-ABJ-011]   dis cur
+#
+!Software Version V100R006C05
+ sysname BS-ABJ-011
+#
+ vlan batch 254 1115 1122 1492 1501 1640 1877 1887 to 1888 2441 2999
+ vlan batch 3042 3126 3163 3492
+#
+vlan 254
+ description VDT-ABUJA-MARABA
+vlan 1115
+ description GTBANK-VPLS
+vlan 1122
+ description TPGS NYANYA
+vlan 1492
+ description BS-NERA-4-MGT
+vlan 1501
+ description BS-MGT
+vlan 1640
+ description ACCESS-BANK-VPLS
+vlan 1887
+ description VDT-MARABA-INTERNET
+vlan 1888
+ description TPGS-Heritage Hotel Maraba
+vlan 2441
+ description FLOWZAP-ABUJA-2
+vlan 2999
+ description FCMB-VPLS
+vlan 3042
+ description UBA-MARABA
+vlan 3126
+ description DIAMOND-BANK-VPLS
+vlan 3163
+ description ONTRAC-TECHNOLOGIES
+vlan 3492
+ description UNION-BANK-MASAKA
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@3>t+UUUPCXYsc+P+$@;-nQ^J%@%@
+ local-user bsnoc privilege level 15
+ local-user huawei password cipher %@%@,;9EY):/5LtzG',./"z-S:JO%@%@
+ local-user huawei privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif1501
+ ip address 10.248.249.224 255.255.255.0
+#
+interface Vlanif1887
+#
+interface Vlanif1888
+ ip address 10.201.0.53 255.255.255.248
+#
+interface Vlanif2999
+ ip address 172.22.6.100 255.255.255.0
+#
+interface Vlanif3126
+#
+interface Vlanif3492
+#
+interface Ethernet0/0/1
+ description EMPTY
+ shutdown
+ port link-type access
+ port default vlan 3126
+#
+interface Ethernet0/0/2
+ description VDT ABUJA - MARABA-INTERNET-50M
+ port link-type access
+ port default vlan 1887
+#
+interface Ethernet0/0/3
+ description DIAMOND BANK NEW KARU - NEW
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 3126
+ qos lr outbound cir 4096 cbs 512000
+ qos lr inbound cir 4096 cbs 512000
+#
+interface Ethernet0/0/4
+ description UBA BANK MARABA
+ port link-type access
+ port default vlan 3042
+#
+interface Ethernet0/0/5
+ description TPGS-NYANYA-10M-INT
+ port link-type access
+ port default vlan 1122
+ qos lr outbound cir 4096 cbs 512000
+ qos lr inbound cir 4096 cbs 512000
+#
+interface Ethernet0/0/6
+ description GTBANK MARABA
+ port link-type access
+ port default vlan 1115
+#
+interface Ethernet0/0/7
+ description FCMB KARU FIBER LASTMILE
+ port link-type access
+ port default vlan 2999
+#
+interface Ethernet0/0/8
+ description ACCESS BANK JIKOYI-ABUJA
+ port link-type access
+ port default vlan 1640
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/9
+ description ONTRAC TECHNOLOGIES
+ shutdown
+ port link-type access
+ port default vlan 3163
+#
+interface Ethernet0/0/10
+ description UNION-BANK-MASAKA
+ port link-type access
+ port default vlan 3492
+#
+interface Ethernet0/0/11
+ description TPGS-Heritage Hotel Maraba
+ port link-type access
+ port default vlan 1888
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/12
+ description FLOWZAP-ABUJA-2[VL2441]INTERNET|50Mb
+ shutdown
+ port link-type access
+ port default vlan 2441
+#
+interface Ethernet0/0/13
+ shutdown
+#
+interface Ethernet0/0/14
+ description Union Masaka Test
+ port link-type access
+ port default vlan 3492
+#
+interface Ethernet0/0/15
+#
+interface Ethernet0/0/16
+#
+interface Ethernet0/0/17
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+ port link-type trunk
+ port trunk allow-pass vlan 1501
+#
+interface Ethernet0/0/24
+ port link-type access
+ port default vlan 1501
+#
+interface GigabitEthernet0/0/1
+#
+interface GigabitEthernet0/0/2
+ description UPLINK TO DCN ROUTER-G0/1/6
+ port link-type trunk
+ port trunk allow-pass vlan 254 1115 1122 1492 1501 1640 1887 to 1888 2441 2999 3042
+ port trunk allow-pass vlan 3126 3163 3492
+ stp bpdu-filter enable
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100002A22
+ snmp-agent community read cipher %@%@*ffGH7"8E".$g6)0}t7VT"J:VeyqQ[`u[5.j6t>0)"<2"J=T\R_(+%W}YPnIvcDg-.V:JFT"%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[BS-ABJ-011]

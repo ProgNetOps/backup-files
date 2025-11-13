@@ -1,0 +1,325 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:54.09 ? ? /home/mobaxterm ? telnet 10.248.249.172
+Connected to 10.248.249.172.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-EKP-001>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-EKP-001]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/1 Interface
+Eth0/0/2                      *down   down     All For His Grace
+Eth0/0/3                      down    down     NBC AUCHI
+Eth0/0/4                      down    down     NBC EKPOMA
+Eth0/0/5                      down    down     FIRS AUCHI
+Eth0/0/6                      *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/6 Interface
+Eth0/0/7                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/7 Interface
+Eth0/0/8                      *down   down     DATACOM NETWORK
+Eth0/0/9                      down    down     SETRACO AUCHI
+Eth0/0/10                     *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/10 Interface
+Eth0/0/11                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/11 Interface
+Eth0/0/12                     down    down     GTBANK EKPOMA
+Eth0/0/13                     up      up       SETRACO UROMI YARD
+Eth0/0/14                     *down   down     GTBANK EKPOMA
+Eth0/0/15                     *down   down     SEMINARY OF ALL SAINTS
+Eth0/0/16                     *down   down     ACCESS-BANK EKPOMA
+Eth0/0/17                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/17 Interface
+Eth0/0/18                     up      up       UBA EKPOMA FIBER LM
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     TRUNK TO DCN
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/24 Interface
+GE0/0/1                       up      up       WATCHTOWER IGIEDUMA - SEC FIBER E
+                                               KPOMA
+GE0/0/2                       down    down     HUAWEI, Quidway Series, GigabitEt
+                                               hernet0/0/2 Interface
+GE0/0/3                       down    down     AMBROSE ALI UNIVERSITY EKPOMA (AD
+                                               MIN BLOCK)
+GE0/0/4                       up      up       TO-DCN-RTR-EKP001-GE3/1/7
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif1464                    up      up       HUAWEI, Quidway Series, Vlanif146
+                                               4 Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1632                    up      up       HUAWEI, Quidway Series, Vlanif163
+                                               2 Interface
+Vlanif3042                    up      up       HUAWEI, Quidway Series, Vlanif304
+                                               2 Interface
+[BS-EKP-001] dis cur
+#
+!Software Version V100R006C05
+ sysname BS-EKP-001
+#
+ vlan batch 100 130 915 1115 1463 to 1465 1493 1497 1501 1562 1632
+ vlan batch 1640 1667 1763 2324 to 2325 2521 2828 3035 3039 3042
+#
+ undo http server enable
+ undo http secure-server enable
+#
+vlan 100
+ description JEHOVA-WITNESS-INTERNET
+vlan 130
+ description JEHOVA-WITNESS-E1 VOICE
+vlan 915
+ description SETRACO_AUCHI
+vlan 1115
+ description GTBANK-VPLS
+vlan 1463
+ description NBC EKPOMA
+vlan 1464
+ description AAU
+vlan 1465
+ description AMBROSE-ALI-UNIVERSITY
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1501
+ description BS_MGT
+vlan 1562
+ description Setraco Uromi Yard
+vlan 1632
+ description ALL-SAINTS-SEMINARY
+vlan 1640
+ description ACCESS-BANK EKPOMA
+vlan 1667
+ description FIRS AUCHI
+vlan 1763
+ description GTB_EKPOMA_INTERNET
+vlan 2324
+ description DATACOM_BACCESS
+vlan 2325
+ description All For His Grace
+vlan 2521
+ description NBC AUCHI
+vlan 2828
+ description BOA INTERNET
+vlan 3035
+ description SKYE_BANK_LL
+vlan 3039
+ description UNION-BANK-AUCHI
+vlan 3042
+ description UBA-VPLS
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@ru/sM@n5:3KQix+n<eCJ4RWY%@%@
+ local-user bsnoc privilege level 15
+ local-user moses password cipher %@%@gJ|NR`yZRS@p^S*>3S"/4R\g%@%@
+ local-user moses privilege level 15
+ local-user fabian password cipher %@%@r%qG@(0*!>1t%{QvdVlR4RYM%@%@
+ local-user fabian privilege level 15
+#
+isis 1
+ is-name q
+#
+interface Vlanif1
+#
+interface Vlanif1464
+ ip address 197.211.49.171 255.255.255.248
+#
+interface Vlanif1501
+ ip address 10.248.249.172 255.255.255.0
+#
+interface Vlanif1632
+ ip address 197.211.35.108 255.255.255.248
+#
+interface Vlanif3042
+ ip address 192.168.219.188 255.255.255.0
+#
+interface Ethernet0/0/1
+ shutdown
+#
+interface Ethernet0/0/2
+ description All For His Grace
+ shutdown
+ port link-type access
+ port default vlan 2325
+#
+interface Ethernet0/0/3
+ description NBC AUCHI
+ port link-type access
+ port default vlan 2521
+#
+interface Ethernet0/0/4
+ description NBC EKPOMA
+ port link-type access
+ port default vlan 1463
+#
+interface Ethernet0/0/5
+ description FIRS AUCHI
+ port link-type access
+ port default vlan 1667
+#
+interface Ethernet0/0/6
+ shutdown
+#
+interface Ethernet0/0/7
+ port link-type access
+#
+interface Ethernet0/0/8
+ description DATACOM NETWORK
+ shutdown
+ port link-type access
+ port default vlan 2324
+#
+interface Ethernet0/0/9
+ description SETRACO AUCHI
+ port link-type access
+ port default vlan 915
+#
+interface Ethernet0/0/10
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1115 1493 1497
+#
+interface Ethernet0/0/11
+ port link-type access
+#
+interface Ethernet0/0/12
+ description GTBANK EKPOMA
+ port link-type trunk
+ port trunk allow-pass vlan 1115 1493 1763
+#
+interface Ethernet0/0/13
+ description SETRACO UROMI YARD
+ port link-type trunk
+ port trunk allow-pass vlan 1493 1562
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/14
+ description GTBANK EKPOMA
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1115 1493
+#
+interface Ethernet0/0/15
+ description SEMINARY OF ALL SAINTS
+ shutdown
+ port link-type access
+ port default vlan 1632
+#
+interface Ethernet0/0/16
+ description ACCESS-BANK EKPOMA
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1493 1640
+#
+interface Ethernet0/0/17
+ port link-type trunk
+#
+interface Ethernet0/0/18
+ description UBA EKPOMA FIBER LM
+ port link-type access
+ port default vlan 3042
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+ description TRUNK TO DCN
+#
+interface Ethernet0/0/23
+ port link-type access
+ port default vlan 1464
+#
+interface Ethernet0/0/24
+#
+interface GigabitEthernet0/0/1
+ description WATCHTOWER IGIEDUMA - SEC FIBER EKPOMA
+ port link-type trunk
+ port trunk allow-pass vlan 100 130 1501
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/2
+#
+interface GigabitEthernet0/0/3
+ description AMBROSE ALI UNIVERSITY EKPOMA (ADMIN BLOCK)
+ port link-type access
+ port default vlan 1465
+#
+interface GigabitEthernet0/0/4
+ description TO-DCN-RTR-EKP001-GE3/1/7
+ port link-type trunk
+ port trunk allow-pass vlan 100 130 915 1115 1463 to 1465 1493 1497 1501 1562 1632
+ port trunk allow-pass vlan 1640 1667 1763 2324 to 2325 2521 2828 3035 3039 3042
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F000001000071A5
+ snmp-agent community read cipher %@%@7iI7@u)UQ(`gH|=by&}#S)M;I|r0/K"Bj#t:eLO#,`a/)M>SU&l09if(l34yY)3+VU#3MGS)%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+port-group link-type
+#
+return
+[BS-EKP-001]
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                                                   ?
+
+ ? 2025-11-13 ? ? 08:00.13 ? ? /home/mobaxterm ?

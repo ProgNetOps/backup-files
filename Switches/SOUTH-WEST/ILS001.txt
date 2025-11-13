@@ -1,0 +1,242 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 08:18.38 ? ? /home/mobaxterm ? telnet 10.248.246.87
+Connected to 10.248.246.87.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-ILS001>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-ILS001]dis int des
+Interface                   Description
+Ethernet0/0/1               FREE
+Ethernet0/0/2               METRONET BROADBAND ILESHA | 155MB
+Ethernet0/0/3               ACCESS-BANK (DIAMOND-BANK)-ILESHA
+Ethernet0/0/4               Polaris Bank Ilesa
+Ethernet0/0/5               HUAWEI, Quidway Series, Ethernet0/0/5 Interface
+Ethernet0/0/6               Wesley Guild Hospital 6MB Internet
+Ethernet0/0/7               POLARIS-BANK-ESAOKE
+Ethernet0/0/8               VDT ILESHA
+Ethernet0/0/9               UBA ADETI ILESHA 4MB | FIBER LM
+Ethernet0/0/10              ACCESS-BANK-ILESHA
+Ethernet0/0/11              SENTIENT-FBN-IJESHA
+Ethernet0/0/12              HUAWEI, Quidway Series, Ethernet0/0/12 Interface
+Ethernet0/0/13              HUAWEI, Quidway Series, Ethernet0/0/13 Interface
+Ethernet0/0/14              HUAWEI, Quidway Series, Ethernet0/0/14 Interface
+Ethernet0/0/15              HUAWEI, Quidway Series, Ethernet0/0/15 Interface
+Ethernet0/0/16              HUAWEI, Quidway Series, Ethernet0/0/16 Interface
+Ethernet0/0/17              HUAWEI, Quidway Series, Ethernet0/0/17 Interface
+Ethernet0/0/18              HUAWEI, Quidway Series, Ethernet0/0/18 Interface
+Ethernet0/0/19              HUAWEI, Quidway Series, Ethernet0/0/19 Interface
+Ethernet0/0/20              HUAWEI, Quidway Series, Ethernet0/0/20 Interface
+Ethernet0/0/21              HUAWEI, Quidway Series, Ethernet0/0/21 Interface
+Ethernet0/0/22              HUAWEI, Quidway Series, Ethernet0/0/22 Interface
+Ethernet0/0/23              HUAWEI, Quidway Series, Ethernet0/0/23 Interface
+Ethernet0/0/24              MGT_TEST
+GigabitEthernet0/0/1        UPLINK TO UPE GE 3/0/5  ILS001 ROUTER
+GigabitEthernet0/0/2        SENTIENT-FBN-IJESHA
+NULL0                       HUAWEI, Quidway Series, NULL0 Interface
+Vlanif804                   HUAWEI, Quidway Series, Vlanif804 Interface
+Vlanif2423                  HUAWEI, Quidway Series, Vlanif2423 Interface
+Vlanif3035                  HUAWEI, Quidway Series, Vlanif3035 Interface
+[BS-ILS001]     dis cur
+#
+!Software Version V100R005C01
+ sysname BS-ILS001
+#
+ vlan batch 1 804 1137 1486 1497 1640 1663 1939 2273 2423
+ vlan batch 3035 3042 3126
+#
+ undo http server enable
+#
+vlan 804
+ description SWITCH-MGT
+vlan 1137
+ description SENTIENT-FBN-IJESHA
+vlan 1486
+ description CERAGON MGT
+vlan 1497
+ description Nera-Mgmt
+vlan 1640
+ description ACCESS-BANK-ILESHA
+vlan 1663
+ description VDT ILESA
+vlan 1939
+ description METRONET BROADBAND ILESHA
+vlan 2273
+ description Wesley Guild Hospital
+vlan 2423
+ description STANBIC-IBTC-ILESHA
+vlan 3035
+ description POLARIS-BANK-ILESHA
+vlan 3042
+ description UBA-VPLS
+vlan 3126
+ description DIAMOND-BANK-ILESHA
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password simple admin
+ local-user admin service-type http
+ local-user bsnoc password cipher RB!G'1+"PX61[a"FZ7=S#!!!
+ local-user bsnoc privilege level 15
+ local-user bsnoc service-type telnet terminal ssh ftp
+ local-user fabian password cipher *2+W,D'B31_Q=^Q`MAF4<1!!
+ local-user fabian privilege level 15
+ local-user huawei password cipher N`C55QK<`=/Q=^Q`MAF4<1!!
+ local-user huawei privilege level 15
+#
+interface Vlanif804
+ ip address 10.248.246.87 255.255.255.192
+#
+interface Vlanif2423
+ ip address 172.30.30.200 255.255.255.0
+#
+interface Vlanif3035
+ ip address 10.15.118.200 255.255.255.0
+#
+interface Ethernet0/0/1
+ description FREE
+ port link-type access
+#
+interface Ethernet0/0/2
+ description METRONET BROADBAND ILESHA | 155MB
+ port link-type access
+ port default vlan 1939
+#
+interface Ethernet0/0/3
+ description ACCESS-BANK (DIAMOND-BANK)-ILESHA
+ port link-type access
+ port default vlan 1640
+ stp bpdu-filter enable
+ undo negotiation auto
+ speed 100
+ qos lr outbound cir 10000 cbs 1040384
+ qos lr inbound cir 10000 cbs 1040384
+#
+interface Ethernet0/0/4
+ description Polaris Bank Ilesa
+ port link-type access
+ port default vlan 3035
+#
+interface Ethernet0/0/5
+ shutdown
+ port link-type trunk
+#
+interface Ethernet0/0/6
+ description Wesley Guild Hospital 6MB Internet
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1486 2273
+#
+interface Ethernet0/0/7
+ description POLARIS-BANK-ESAOKE
+ port link-type trunk
+ port trunk allow-pass vlan 3035
+#
+interface Ethernet0/0/8
+ description VDT ILESHA
+ port link-type access
+ port default vlan 1663
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/9
+ description UBA ADETI ILESHA 4MB | FIBER LM
+ port link-type access
+ port default vlan 3042
+#
+interface Ethernet0/0/10
+ description ACCESS-BANK-ILESHA
+ port link-type access
+ port default vlan 1640
+ undo negotiation auto
+ speed 100
+ qos lr outbound cir 10000 cbs 1040384
+ qos lr inbound cir 10000 cbs 1040384
+#
+interface Ethernet0/0/11
+ description SENTIENT-FBN-IJESHA
+ port link-type trunk
+ port trunk allow-pass vlan 1137
+#
+interface Ethernet0/0/12
+#
+interface Ethernet0/0/13
+#
+interface Ethernet0/0/14
+#
+interface Ethernet0/0/15
+#
+interface Ethernet0/0/16
+#
+interface Ethernet0/0/17
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ description MGT_TEST
+ port link-type access
+ port default vlan 804
+#
+interface GigabitEthernet0/0/1
+ description UPLINK TO UPE GE 3/0/5  ILS001 ROUTER
+ port link-type trunk
+ port trunk allow-pass vlan 804 1137 1486 1497 1640 1663 1939 2273 2423 3035
+ port trunk allow-pass vlan 3042 3126
+#
+interface GigabitEthernet0/0/2
+ description SENTIENT-FBN-IJESHA
+ port link-type trunk
+ port trunk allow-pass vlan 1137
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100002D65
+ snmp-agent community read  globacom
+ snmp-agent community read  Globacom123*
+ snmp-agent community read cipher ^D#U[\Q.+H/>GFW0<<HQJ,"TX$_S#6.NM(0=0\)*5WU!
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[BS-ILS001]

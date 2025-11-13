@@ -1,0 +1,348 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:30.12 ? ? /home/mobaxterm ? telnet 10.248.246.229
+Connected to 10.248.246.229.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<ENT-SW-ABJ010>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-SW-ABJ010]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       ACCESS-BANK-OLD-DIAMOND-FIBER KUB
+                                               WA
+Eth0/0/2                      up      up       UBA KUBWA
+Eth0/0/3                      up      up       FCMB KUBWA ABUJA
+Eth0/0/4                      up      up       VDT KUBWA
+Eth0/0/5                      down    down     Deeper Life Abuja 100MB Internet
+Eth0/0/6                      down    down     Deeper Life Abuja 100MB Internet
+Eth0/0/7                      down    down     [CAT5]-VERITAS-UNIV.(SILVER BOND)
+Eth0/0/8                      up      up       FIRST BANK KUBWA | LM FIBER
+Eth0/0/9                      up      up       STANBIC KUBWA
+Eth0/0/10                     up      up       ARROWFAST-ABUJA(ABJ062-ABJ010)
+Eth0/0/11                     up      up       TPGS-ENCLAVE-10M(VLAN1126)
+Eth0/0/12                     up      up       CONVERNERS-ASSEMBLY-INTERNET-ABJ0
+                                               10|5MB|RADIO-HUAWEI-RTN910
+Eth0/0/13                     up      up       SENTIENT-KUBWA
+Eth0/0/14                     up      up       TPGS-ABJ-MP (VLAN 2219)
+Eth0/0/15                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/15 Interface
+Eth0/0/16                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/16 Interface
+Eth0/0/17                     *down   down     ICSL KUBWA-LAGOS[VL1877] 50Mbps |
+                                                SHUTDOWN 05052025
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     FREE
+Eth0/0/24                     down    down     switch-mgt.
+GE0/0/1                       up      up       TRUNK-DCN-PE-GE0/2/3
+GE0/0/2                       up      up       TRUNK-TO-GLOMOBILE HUAWEI-ABJ010-
+                                               ABG029-GE06-(FCMB BWARI | POLARIS
+                                                BWARI)
+GE0/0/3                       up      up       JAMB-HQ-INT(VIA-SWIFTTALK-RADIO)
+                                               | 155M
+GE0/0/4                       down    down     STL FIBACO (FIBERCO) BRICK CITY A
+                                               BUJA | 155MB
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif802                     up      up       HUAWEI, Quidway Series, Vlanif802
+                                                Interface
+Vlanif1126                    up      down     HUAWEI, Quidway Series, Vlanif112
+                                               6 Interface
+Vlanif1141                    up      up       HUAWEI, Quidway Series, Vlanif114
+                                               1 Interface
+Vlanif1288                    up      up       HUAWEI, Quidway Series, Vlanif128
+                                               8 Interface
+Vlanif1640                    up      up       HUAWEI, Quidway Series, Vlanif164
+                                               0 Interface
+Vlanif2219                    up      up       HUAWEI, Quidway Series, Vlanif221
+                                               9 Interface
+Vlanif3035                    up      up       HUAWEI, Quidway Series, Vlanif303
+                                               5 Interface
+[ENT-SW-ABJ010]   dis cur
+#
+!Software Version V100R006C05
+ sysname ENT-SW-ABJ010
+#
+ vlan batch 802 982 1126 1136 1141 1258 1288 1311 1488 1495
+ vlan batch 1497 1640 1666 1766 1877 2219 2423 2541 2883 2999
+ vlan batch 3007 3035 3042 3126
+#
+vlan 802
+ description Switc-MGT-2
+vlan 982
+ description VERITAS-UNIV.
+vlan 1126
+ description TPGS-Encla-10M-INT
+vlan 1136
+ description SWIFTTALK-RADIO-MGT
+vlan 1141
+ description SENTIENT-KUBWA
+vlan 1258
+ description FBN-LAYER3
+vlan 1288
+ description CONVERNERS-ASSEMBLY-INTERNET-ABJ010|5MB
+vlan 1311
+ description ARROWFAST-ABUJA
+vlan 1488
+ description CERAGON-MGT
+vlan 1495
+ description NERA-MGT
+vlan 1497
+ description NERA-MGT-2
+vlan 1640
+ description ACCESS-BANK
+vlan 1666
+ description VDT
+vlan 1766
+ description Deeper Life Abuja
+vlan 1877
+ description ICSL KUBWA
+vlan 2219
+ description TPGS - ABJ-MP-ABJ010
+vlan 2423
+ description STANBIC
+vlan 2541
+ description STL-FIBERCO-BRICK-CITY
+vlan 2883
+ description JAMB-HQ-INT
+vlan 2999
+ description FCMB-VPLS
+vlan 3007
+ description FBN-OLD
+vlan 3035
+ description POLARIS-BWARI(ABJ151)
+vlan 3042
+ description UBA
+vlan 3126
+ description ACCESS-DIAMOND
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user ben password cipher %@%@8ta#:VD'@)wb":-xnGC>TD91%@%@
+ local-user ben privilege level 15
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@Lknc6eadwIO~Z96a=;<9TD8l%@%@
+ local-user bsnoc privilege level 15
+ local-user donald password cipher %@%@'DVi40YI<TL2sE+=PmuYTD6g%@%@
+ local-user donald privilege level 15
+ local-user fabian password cipher %@%@w0tO4bMk9'Mu=q3-<ltATD4@%@%@
+ local-user fabian privilege level 15
+ local-user rthabj password cipher %@%@\*G6U8KOO1_"8,LV#9EXe5-D%@%@
+ local-user rthabj privilege level 3
+ local-user solarch password cipher %@%@V]9R*;y7H>LcekS0nFb7e5.j%@%@
+ local-user solarch privilege level 3
+#
+interface Vlanif1
+#
+interface Vlanif802
+ ip address 10.248.246.229 255.255.255.192
+#
+interface Vlanif1126
+#
+interface Vlanif1141
+ ip address 12.12.12.1 255.255.255.0
+#
+interface Vlanif1288
+ ip address 102.213.87.90 255.255.255.252
+#
+interface Vlanif1640
+ ip address 10.230.230.150 255.255.255.0
+#
+interface Vlanif2219
+ ip address 22.22.22.1 255.255.255.0
+#
+interface Vlanif3035
+ ip address 10.15.118.187 255.255.255.0
+#
+interface Ethernet0/0/1
+ description ACCESS-BANK-OLD-DIAMOND-FIBER KUBWA
+ port link-type access
+ port default vlan 1640
+#
+interface Ethernet0/0/2
+ description UBA KUBWA
+ port link-type trunk
+ port trunk allow-pass vlan 1495 3042
+#
+interface Ethernet0/0/3
+ description FCMB KUBWA ABUJA
+ port link-type access
+ port default vlan 2999
+#
+interface Ethernet0/0/4
+ description VDT KUBWA
+ port link-type access
+ port default vlan 1666
+ jumboframe enable 13296
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/5
+ description Deeper Life Abuja 100MB Internet
+ port link-type access
+ port default vlan 1766
+#
+interface Ethernet0/0/6
+ description Deeper Life Abuja 100MB Internet
+ port link-type access
+ port default vlan 1766
+#
+interface Ethernet0/0/7
+ description [CAT5]-VERITAS-UNIV.(SILVER BOND)
+ port link-type access
+ port default vlan 982
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/8
+ description FIRST BANK KUBWA | LM FIBER
+ port link-type access
+ port default vlan 1258
+#
+interface Ethernet0/0/9
+ description STANBIC KUBWA
+ port link-type trunk
+ port trunk allow-pass vlan 1495 2423
+#
+interface Ethernet0/0/10
+ description ARROWFAST-ABUJA(ABJ062-ABJ010)
+ port link-type trunk
+ port trunk allow-pass vlan 1311 1488
+#
+interface Ethernet0/0/11
+ description TPGS-ENCLAVE-10M(VLAN1126)
+ port link-type access
+ port default vlan 1126
+#
+interface Ethernet0/0/12
+ description CONVERNERS-ASSEMBLY-INTERNET-ABJ010|5MB|RADIO-HUAWEI-RTN910
+ port link-type access
+ port default vlan 1288
+#
+interface Ethernet0/0/13
+ description SENTIENT-KUBWA
+ port link-type trunk
+ port trunk allow-pass vlan 1141
+#
+interface Ethernet0/0/14
+ description TPGS-ABJ-MP (VLAN 2219)
+ port link-type access
+ port default vlan 2219
+#
+interface Ethernet0/0/15
+#
+interface Ethernet0/0/16
+#
+interface Ethernet0/0/17
+ description ICSL KUBWA-LAGOS[VL1877] 50Mbps | SHUTDOWN 05052025
+ shutdown
+ port link-type access
+ port default vlan 1877
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+ description FREE
+#
+interface Ethernet0/0/24
+ description switch-mgt.
+ port link-type access
+ port default vlan 802
+#
+interface GigabitEthernet0/0/1
+ description TRUNK-DCN-PE-GE0/2/3
+ port link-type trunk
+ port trunk allow-pass vlan 802 982 1126 1136 1141 1258 1288 1311 1488 1495
+ port trunk allow-pass vlan 1497 1640 1666 1766 1877 2219 2423 2541 2883 2999
+ port trunk allow-pass vlan 3035 3042 3126
+ jumboframe enable 13296
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/2
+ description TRUNK-TO-GLOMOBILE HUAWEI-ABJ010-ABG029-GE06-(FCMB BWARI | POLARIS BWARI)
+ port link-type trunk
+ port trunk allow-pass vlan 1311 2999 3035
+ jumboframe enable 13296
+#
+interface GigabitEthernet0/0/3
+ description JAMB-HQ-INT(VIA-SWIFTTALK-RADIO) | 155M
+ port link-type access
+ port default vlan 2883
+ port media type fiber
+     undo negotiation auto
+ combo-port auto
+#
+interface GigabitEthernet0/0/4
+ description STL FIBACO (FIBERCO) BRICK CITY ABUJA | 155MB
+ port link-type access
+ port default vlan 2541
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.193
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100000DD0
+ snmp-agent community read cipher %@%@l\r[DN]P>@qSOZ#aK36X/>:X(}4(A>YEw7yeO]HJ@S.&>:[/-LQl>*]aiJ\no8!/OV4K:d/>%@%@
+ snmp-agent community read cipher %@%@JHRX4WMn,!2W]VTLOa,3\@;Y0Z0GK-.3b(dGOE+m]@[8@;\\jYRg+)O,P!xh7l%1d|M@;e\@%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[ENT-SW-ABJ010]

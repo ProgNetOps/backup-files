@@ -1,0 +1,370 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 08:19.07 ? ? /home/mobaxterm ? telnet 10.248.249.127
+Connected to 10.248.249.127.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Note: The max number of VTY users is 5, and the current number
+      of VTY users on line is 1.
+<GLO1_HU_SW1_@IBADAN-013>sys
+Enter system view, return user view with Ctrl+Z.
+[GLO1_HU_SW1_@IBADAN-013]dis int des
+Interface                   Description
+Ethernet0/0/1               URBAN FLOOD IBADAN 15MB INTERNET
+Ethernet0/0/2               UCH IBADAN INTERNET
+Ethernet0/0/3               ICSL IBADAN
+Ethernet0/0/4               American School Academy 20MB Internet
+Ethernet0/0/5               IBD013A-SAKA25-WEMABODIJA_GLO
+Ethernet0/0/6               WESTMETRO-PCC-IBADAN INT | 10MB
+Ethernet0/0/7               COCOA RESEARCH INSTITUTE 100MB INTERNET (CRIN) OLD
+Ethernet0/0/8               OYO-STATE-HEALTH-INSURANCE
+Ethernet0/0/9               COCOA RESEARCH INSTITUTE 100MB INTERNET (CRIN)
+Ethernet0/0/10              GLOWORLD IBADAN
+Ethernet0/0/11              IPEXPRESS-IITA
+Ethernet0/0/12              TPGS-KFC-Oyo-BODIJA-INTERNET-5M( VLAN 1044) | TPGS-
+                            BODIJA-IBD013|10M-INTERNET(VLAN 1108)
+Ethernet0/0/13              BIODUN-OYELEKE--FIBER-IBD013|2MB-INTERNET
+Ethernet0/0/14              Sterling Bank Ibadan Sec
+Ethernet0/0/15              IPEXPRESS-IWO-ROAD
+Ethernet0/0/16              OYO-STATE-HEALTH-INSURANCE
+GigabitEthernet0/0/1        FIRSTBANK-AGODI-STM1-LL-R-NERA
+GigabitEthernet0/0/2        TRUNK-TO-NE-40-MPLS-ROUTER-GE2/1/7
+NULL0                       Huawei, Quidway Series, NULL0 Interface
+Vlanif1044                  Huawei, Quidway Series, Vlanif1044 Interface
+Vlanif1154                  Huawei, Quidway Series, Vlanif1154 Interface
+Vlanif1169                  Huawei, Quidway Series, Vlanif1169 Interface
+Vlanif1182                  Huawei, Quidway Series, Vlanif1182 Interface
+Vlanif1424                  Huawei, Quidway Series, Vlanif1424 Interface
+Vlanif1501                  Huawei, Quidway Series, Vlanif1501 Interface
+Vlanif1773                  Huawei, Quidway Series, Vlanif1773 Interface
+Vlanif1774                  Huawei, Quidway Series, Vlanif1774 Interface
+[GLO1_HU_SW1_@IBADAN-013]     dis cur
+#
+ sysname GLO1_HU_SW1_@IBADAN-013
+#
+ vlan batch 1 218 932 1044 1108 1119 1154 to 1172 1178 1182 1241
+ vlan batch 1424 to 1425 1492 1496 to 1498 1501 1503 1558 1617 1670 1689 1773 to 1774
+ vlan batch 1811 1814 1821 1896 to 1897 1907 to 1908 1980 1990 2421 2423 2922
+ vlan batch 3034 to 3035 3103 to 3104 3369 3441 3846 3930
+#
+ bpdu enable
+#
+ cluster enable
+ ntdp enable
+ ntdp hop 16
+ ndp enable
+#
+ undo http server enable
+#
+ lldp enable
+#
+vlan 218
+ description ADVANS-APN
+vlan 932
+ description ICSL IBADAN
+vlan 1044
+ description TPGS-KFC-Oyo-BODIJA-INTERNET-5M
+vlan 1108
+ description TPGS-BODIJA-IBD013|10M-INTERNET
+vlan 1119
+ description BIODUN OYELEKE CONSULTING
+vlan 1154
+ description MANAGEMENT_VLAN
+vlan 1155
+ description American Christian Assembly
+vlan 1161
+ description HYPERIA OLOYOLE IBADAN
+vlan 1162
+ description OSUN STATE COLLEGE OF EDUCATION
+vlan 1169
+ description Lafayette_INT_2
+vlan 1171
+ description MY JOY FOOD
+vlan 1172
+ description IPEXPRESS-IWO-ROAD
+vlan 1178
+ description ADVANZ-LAFAYET-HQ-NEW-INT
+vlan 1182
+ description JUBALI-AGRO-FIBER-IBD013| 100MB-INTERNE
+vlan 1241
+ description FIRSTBANK-AGODI-STM1-LL
+vlan 1424
+ description OYO-STATE-HEALTH-INSURANCE
+vlan 1425
+ description LAFAYETTE-VPLS
+vlan 1492
+ description MGT-NERA
+vlan 1496
+ description CERAGON MGT VLAN
+vlan 1497
+ description BS-NERA-MGT
+vlan 1501
+ description BS-MGT
+vlan 1503
+ description NERA RADIO MGMT
+vlan 1558
+ description WESTMETRO-PCC-IBADAN
+vlan 1617
+ description ILR901-IBD013-ECC
+vlan 1670
+ description IUFMP IBADAN
+vlan 1689
+ description FRSC IBADAN
+vlan 1773
+ description IPEXPRESS-FAVOS
+vlan 1774
+ description IPEXPRESS-IITA
+vlan 1811
+ description NBC ASEJIRE
+vlan 1814
+ description NBC MOKOLA-IBADAN
+vlan 1821
+ description UCH IBADAN INTERNET
+vlan 1907
+ description IS-10MB-New
+vlan 1908
+ description IS-Ondo-LAG-LL
+vlan 1990
+ description OSUNTECH
+vlan 2421
+ description BAI_INTERNET
+vlan 2423
+ description STANBIC-IBTC-LL-LINKS
+vlan 2922
+ description GLOWORLD-IBADAN
+vlan 3034
+ description Conoil-Ibadan-Internet
+vlan 3035
+ description MAINSTREET-LL
+vlan 3103
+ description CONNECTION TO BAPTIST CONVENTION
+vlan 3104
+ description ADVANS_IBADAN
+vlan 3369
+ description IBD013A-SAKA25-WEMABODIJA_GLO
+vlan 3441
+ description IBD013-LAG901-IPEXPRESS
+vlan 3846
+ description Gloworld-Ibadan
+vlan 3930
+ description Heineken-Ibadan
+#
+interface Vlanif1044
+ ip address 102.222.116.226 255.255.255.252
+#
+interface Vlanif1154
+ ip address 10.240.241.19 255.255.255.248
+#
+interface Vlanif1169
+ ip address 10.100.100.2 255.255.255.0
+#
+interface Vlanif1182
+#
+interface Vlanif1424
+ ip address 102.213.84.238 255.255.255.252
+#
+interface Vlanif1501
+ ip address 10.248.249.127 255.255.255.0
+#
+interface Vlanif1773
+ shutdown
+#
+interface Vlanif1774
+ shutdown
+#
+interface Ethernet0/0/1
+ description URBAN FLOOD IBADAN 15MB INTERNET
+ port link-type access
+ port default vlan 1670
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/2
+ description UCH IBADAN INTERNET
+ port link-type access
+ port default vlan 1821
+ undo negotiation auto
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/3
+ description ICSL IBADAN
+ port link-type trunk
+ port trunk allow-pass vlan 932 1503
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/4
+ description American School Academy 20MB Internet
+ port link-type access
+ port default vlan 1155
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/5
+ description IBD013A-SAKA25-WEMABODIJA_GLO
+ port link-type access
+ port default vlan 3369
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/6
+ description WESTMETRO-PCC-IBADAN INT | 10MB
+ port link-type access
+ port default vlan 1558
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/7
+ description COCOA RESEARCH INSTITUTE 100MB INTERNET (CRIN) OLD
+ port link-type access
+ port default vlan 1159
+#
+interface Ethernet0/0/8
+ description OYO-STATE-HEALTH-INSURANCE
+ port link-type access
+ port default vlan 1424
+ undo negotiation auto
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/9
+ description COCOA RESEARCH INSTITUTE 100MB INTERNET (CRIN)
+ port link-type trunk
+ port trunk allow-pass vlan 1159
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/10
+ description GLOWORLD IBADAN
+ port link-type access
+ port default vlan 3846
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/11
+ description IPEXPRESS-IITA
+ port link-type access
+ port default vlan 1774
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/12
+ description TPGS-KFC-Oyo-BODIJA-INTERNET-5M( VLAN 1044) | TPGS-BODIJA-IBD013|10M-INTERNET(VLAN 1108)
+ port link-type trunk
+ port trunk allow-pass vlan 1044 1108
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/13
+ description BIODUN-OYELEKE--FIBER-IBD013|2MB-INTERNET
+ port link-type access
+ port default vlan 1119
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/14
+ description Sterling Bank Ibadan Sec
+ port link-type access
+ port default vlan 3034
+ undo negotiation auto
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/15
+ description IPEXPRESS-IWO-ROAD
+ port link-type access
+ port default vlan 1172
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/16
+ description OYO-STATE-HEALTH-INSURANCE
+ port link-type access
+ port default vlan 1424
+ undo negotiation auto
+ ntdp enable
+ ndp enable
+#
+interface GigabitEthernet0/0/1
+ description FIRSTBANK-AGODI-STM1-LL-R-NERA
+ port link-type trunk
+ port trunk allow-pass vlan 1241 1492
+ combo-port media type
+   combo-port auto
+ ntdp enable
+ ndp enable
+#
+interface GigabitEthernet0/0/2
+ description TRUNK-TO-NE-40-MPLS-ROUTER-GE2/1/7
+ port link-type trunk
+ port trunk allow-pass vlan 1 to 4094
+ combo-port media type
+   combo-port auto
+ ntdp enable
+ ndp enable
+#
+interface NULL0
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user bsnoc password cipher RB!G'1+"PX61[a"FZ7=S#!!!
+ local-user bsnoc ftp-directory flash:
+ local-user donald password cipher ^)AW.F&IO7JU4Z(*%FTCV!!!
+ local-user donald level 3
+ local-user donald ftp-directory flash:
+ local-user ehis password cipher *(.T*.PS0&XC501C\L\GD1!!
+ local-user ehis level 3
+ local-user ehis ftp-directory flash:
+ local-user fabian password cipher Y4'aSPFO!+"6Ja&ALT]Q.A!!
+ local-user fabian ftp-directory flash:
+ local-user moses password cipher Y;FLM:7Q_/F1[a"FZ7=S#!!!
+ local-user moses level 3
+ local-user moses ftp-directory flash:
+ local-user naveen password cipher V>4:5D3Q-L<0G`2^"@4W+A!!
+ local-user naveen ftp-directory flash:
+ local-user ope password cipher \THX&0.I;NKQBC:RRU/-W1!!
+ local-user ope level 3
+ local-user ope ftp-directory flash:
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7FFFFFFF00003926
+ snmp-agent community read  globacom
+ snmp-agent community write  anonymous
+ snmp-agent sys-info version all
+#
+user-interface con 0
+user-interface vty 0 4
+ authentication-mode aaa
+ user privilege level 3
+#
+return
+[GLO1_HU_SW1_@IBADAN-013]
+Note: The max number of VTY users is 5, and the current number
+      of VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                                                   ?
+
+ ? 2025-11-13 ? ? 08:29.49 ? ? /home/mobaxterm ?

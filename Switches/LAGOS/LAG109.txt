@@ -1,0 +1,635 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 08:18.40 ? ? /home/mobaxterm ? telnet 10.248.248.66
+Connected to 10.248.248.66.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Note: The max number of VTY users is 5, and the current number
+      of VTY users on line is 1.
+<Glo_BS_LAG109_Ikoyi>sys
+Enter system view, return user view with Ctrl+Z.
+[Glo_BS_LAG109_Ikoyi]dis int des
+Interface                   Description
+Ethernet0/0/1               NNPC ZONAL OFFICE  | NNPC-RETAIL-SW-RO-IDSL
+Ethernet0/0/2               SAHARA PETROSCOPE LAKEPOINT
+Ethernet0/0/3               COOLLINK SOULE PARKVIEW | 25Mbps
+Ethernet0/0/4               NNPC RETAIL STATION IKOYI
+Ethernet0/0/5               IO TECH IKOYI-1-MOSAFEJO 50MB INTERNET
+Ethernet0/0/6               TOTAL BANANA ISLAND 2MB INTERNET
+Ethernet0/0/7               description AITEO-LEKKI-IKOYI ll
+Ethernet0/0/8               NNPC NIPEX IKOYI PRIMARY
+Ethernet0/0/9               COOLLINK-BOURDILON-IKOYI | TO-SAKA17-ETH21.1236
+Ethernet0/0/10              NNPC LAGOS HQ ANNEX
+Ethernet0/0/11              NNPC NAPIMS GERRARD
+Ethernet0/0/12              IPEXPRESS TEMPLE|VL1779| 150Mbps [ZETAWEB BANANA IS
+                            LAND/ RACKCENTRE]
+Ethernet0/0/13              IOTECH-RADIO-MANAGEMENT
+Ethernet0/0/14              NNPC NAPIMS GERRARD PRIMARY
+Ethernet0/0/15              FORD FOUNDATION
+Ethernet0/0/16              IPEXPRESS-AWOLOWO-IKOYI-105Mbps
+Ethernet0/0/17              DENMARK EMBASSY 3MB INTERNET
+Ethernet0/0/18              SWISS EMBASSY 4MB INTERNET
+Ethernet0/0/19              TEST-FOR-IOTECH-RADIO-MGT
+Ethernet0/0/20              SEPLAT-BOURDILLION
+Ethernet0/0/21              TRUNK TO CHICASON
+Ethernet0/0/22              NNPC NIPEX IKOYI SECONDARY
+Ethernet0/0/23              COOLLINK-OOAK-VILLA-VPN ||
+Ethernet0/0/24              WHEAT BAKER INTERNET
+GigabitEthernet0/0/1        NETCOM-IKOYI-SAIPEM-LAKEPOINT-TOWERS
+GigabitEthernet0/0/2        ERIN-PROJECT | 155M
+GigabitEthernet0/0/3        UPLINK TO SECOND HUAWEI SWITCH
+GigabitEthernet0/0/4        TRUNK-TO-GLOMOBILE || GE-2/0/0
+NULL0                       Huawei, Quidway Series, NULL0 Interface
+Vlanif1                     Huawei, Quidway Series, Vlanif1 Interface
+Vlanif313                   Huawei, Quidway Series, Vlanif313 Interface
+Vlanif921                   Huawei, Quidway Series, Vlanif921 Interface
+Vlanif1114                  Huawei, Quidway Series, Vlanif1114 Interface
+Vlanif1116                  Huawei, Quidway Series, Vlanif1116 Interface
+Vlanif1344                  Huawei, Quidway Series, Vlanif1344 Interface
+Vlanif1360                  Huawei, Quidway Series, Vlanif1360 Interface
+Vlanif1489                  Huawei, Quidway Series, Vlanif1489 Interface
+Vlanif1501                  Huawei, Quidway Series, Vlanif1501 Interface
+Vlanif1593                  Huawei, Quidway Series, Vlanif1593 Interface
+Vlanif1748                  Huawei, Quidway Series, Vlanif1748 Interface
+Vlanif1908                  Huawei, Quidway Series, Vlanif1908 Interface
+Vlanif2508                  Huawei, Quidway Series, Vlanif2508 Interface
+Vlanif2641                  Huawei, Quidway Series, Vlanif2641 Interface
+Vlanif3643                  Huawei, Quidway Series, Vlanif3643 Interface
+Vlanif3916                  Huawei, Quidway Series, Vlanif3916 Interface
+[Glo_BS_LAG109_Ikoyi]    dis cur
+#
+ sysname Glo_BS_LAG109_Ikoyi
+#
+ vlan batch 1 20 222 312 to 313 315 555 560 768 805 900
+ vlan batch 902 912 920 to 922 941 968 987 1000 1043 1085 to 1087 1114
+ vlan batch 1116 1236 to 1237 1257 1287 1318 1330 1343 to 1344 1353 1360 to 1361 1367 to 1368
+ vlan batch 1444 1449 1478 1489 1494 1496 to 1498 1500 to 1504 1526 1551 1581 to 1582
+ vlan batch 1593 1642 1661 1745 1748 1779 1867 1870 to 1871 1873 to 1874 1889
+ vlan batch 1906 1908 to 1909 1964 1979 1988 2055 2057 2079 2178 2253
+ vlan batch 2266 2420 2508 2511 to 2512 2641 2812 2952 2954 2956 2958
+ vlan batch 2960 2969 3038 to 3039 3126 to 3127 3130 to 3131 3133 3135 3137 3168 to 3169 3274
+ vlan batch 3402 to 3405 3408 to 3409 3411 3416 3643 3645 to 3646 3882 3912 3916
+#
+ cluster enable
+ ntdp enable
+ ntdp hop 16
+ ndp enable
+#
+ voice-vlan mac-address 0001-e300-0000 mask ffff-ff00-0000 description Siemens phone
+ voice-vlan mac-address 0003-6b00-0000 mask ffff-ff00-0000 description Cisco phone
+ voice-vlan mac-address 0004-0d00-0000 mask ffff-ff00-0000 description Avaya phone
+ voice-vlan mac-address 0060-b900-0000 mask ffff-ff00-0000 description Philips/NEC phone
+ voice-vlan mac-address 00d0-1e00-0000 mask ffff-ff00-0000 description Pingtel phone
+ voice-vlan mac-address 00e0-7500-0000 mask ffff-ff00-0000 description Polycom phone
+ voice-vlan mac-address 00e0-bb00-0000 mask ffff-ff00-0000 description 3com phone
+#
+ undo http server enable
+#
+ lldp enable
+#
+vlan 20
+ description MOBIL_STM1_CERAGON_RADIO
+vlan 312
+ description CHICASON-DOCKYARD
+vlan 313
+ description CHICASON-FLOURMILL
+vlan 315
+ description CHICASON-INTERNET
+vlan 560
+ description DELOITTE-INTERNET
+vlan 805
+ description BS-NEW-SWITCH
+vlan 900
+ description SEPLAT-LAG-SAPELE
+vlan 902
+ description APMT-APAPA-IKOYI
+vlan 912
+ description cool-ooakvilla
+vlan 920
+ description SEPLAT-INTERNET
+vlan 921
+ description ZETAWEB_BANILAND_100MB
+vlan 922
+ description SEPLAT-LEASE-LINE
+vlan 941
+ description ooak-new
+vlan 968
+ description DELOITTE-LAG-PHC
+vlan 987
+ description HYPERIA_OCEAN_PARADE
+vlan 1000
+ description DELOITTE-LAG-ABJ
+vlan 1043
+ description TPGS-KFC-Lag-NNPC-Ikoyi-INTERNET-5M
+vlan 1085
+ description CHAIRMAN'S-SON-INTERNET (BOROUGH REALTY
+vlan 1086
+ description FEMI OTEDOLA INTERNET
+vlan 1087
+ description NETCOM-BANANA-ISLAND-2
+vlan 1114
+ description NETCOM-BANANA-ISLAND-2
+vlan 1116
+ description TPGS GLOVER COURT
+vlan 1236
+ description COOLLINK-BOURDILON-IKOYI
+vlan 1237
+ description COOLLINK QUEENS DRIVE
+vlan 1257
+ description NPDC Alfred Rewani Ikoyi
+vlan 1287
+ description SHELL1-SHELL44-BOURDILLION-LEASED-LINE
+vlan 1318
+ description VASCON-LAGOS-INT
+vlan 1330
+ description 3WAY COMMUNICATIONS
+vlan 1343
+ description IO Tech Ikoyi (kings Tower)
+vlan 1344
+ description IO-TECH-INT
+vlan 1353
+ description UNILORIN-COUNCIL-CHAIRMAN
+vlan 1360
+ description Shell2 MD's house
+vlan 1361
+ description SHELL CCH (53 Bourdillon)
+vlan 1367
+ description Madam_Bella_Disu_5OMB_Pry
+vlan 1368
+ description Madam_Bella_Disu_Primary
+vlan 1449
+ description COOLLINK SOULE_CLOSE
+vlan 1478
+ description ERIN-PROJECTS
+vlan 1489
+ description CERAGON MGT
+vlan 1494
+ description NNPC-NERA-MGT
+vlan 1496
+ description Monitoring-Ceragon
+vlan 1497
+ description NERA-MGT
+vlan 1498
+ description BS-CERAGON-MGT
+vlan 1500
+ description ceragon-mgmt
+vlan 1501
+ description BS-MGT
+vlan 1502
+ description IOTECH-RADIO-MGT
+vlan 1503
+ description NERA-MGT
+vlan 1504
+ description IOTEC-MGT.
+vlan 1526
+ description zeta-2-banana
+vlan 1551
+ description MONTEGO IKOYI
+vlan 1581
+ description NNPC-ITD-CENTRE-IKOYI
+vlan 1593
+ description SEPLAT_ABUJA
+vlan 1642
+ description ZETAWEB_BANANAISLAND
+vlan 1661
+ description GLOBENODE IKOYI
+vlan 1745
+ description GTEL-INT
+vlan 1748
+ description AITEO-LEKKI-IKOYI
+vlan 1779
+ description IPEXPRESS-IKOYI-2
+vlan 1867
+ description CRANEBURG-CONSTRUCTION
+vlan 1870
+ description ISL-Internet
+vlan 1873
+ description PETROSCOPE-BANANA-ISLAND
+vlan 1874
+ description AITEO-INTERNET
+vlan 1889
+ description FRENCH-EMBASSY
+vlan 1906
+ description SAMAILA ZUBAIRU
+vlan 1908
+ description mgt
+vlan 1909
+ description ISL-NOVA-CHEVRON
+vlan 1964
+ description VDT_VPLS
+vlan 1979
+ description GREENSPRING IKOYI
+vlan 1988
+ description Adekunle Hassan Internet
+vlan 2055
+ description SEADRILL-INTERNET
+vlan 2057
+ description SWISS_EMBASSY_INTERNET
+vlan 2079
+ description APMT
+vlan 2178
+ description NNPC ITD CENTRE IKOYI PRIMARY
+vlan 2253
+ description "COOLLINK_HELIOS"
+vlan 2266
+ description DENMARK_EMBASSY
+vlan 2508
+ description WHEAT BAKER INTERNET
+vlan 2511
+ description Folawiyo Sobowale
+vlan 2512
+ description SEVEN-ENERGY-CHAIRMAN
+vlan 2641
+ description Total Banana Island
+vlan 2812
+ description FORD_FOUDATION
+vlan 2969
+ description SEPLAT-LAG-FLOW-STATION-OWERRI
+vlan 3038
+ description WALTERSMITH-INTERNET
+vlan 3039
+ description WALTERSMITH-LL-OWERRI
+vlan 3126
+ description DIAMOND-BANK-LINKS
+vlan 3127
+ description AKER-SOLUTIONS
+vlan 3168
+ description ipexpress
+vlan 3169
+ description MIKE-ADENUGA-CENTRE
+vlan 3274
+ description FINCRA-TECH
+vlan 3402
+ description NNPC-ZONAL-OFFCIE-FIBER
+vlan 3403
+ description NNPC-NAPIMS-GERRARD
+vlan 3404
+ description NNPC-ZONAL-OFFICE
+vlan 3405
+ description NNPC-NIPEX-PRIMARY
+vlan 3408
+ description NNPC-RETAIL-STATION-IKOYI
+vlan 3409
+ description NNPC-RETAIL-SW-RO-IDSL
+vlan 3411
+ description NNPC-LAGOS-ANNEX
+vlan 3416
+ description NNPC_SECONDEE_UNIT-VI
+vlan 3643
+ description NPDC Alfred Rewani Ikoyi
+vlan 3645
+ description NNPC-NIPEX-IKOYI-BACKUP
+vlan 3646
+ description NNPC NIPEX (NEW VLAN)
+vlan 3882
+ description NETCOM-IKOYI-BANANA-ISLAND
+vlan 3912
+ description OLiver Andrews ED AFC
+vlan 3916
+ description PATRICK-ILODIANYA
+#
+interface Vlanif1
+ ip address dhcp-alloc
+#
+interface Vlanif313
+#
+interface Vlanif921
+ ip address 172.192.192.4 255.255.255.0
+#
+interface Vlanif1114
+ shutdown
+ ip address 10.17.1.2 255.255.255.252
+#
+interface Vlanif1116
+#
+interface Vlanif1344
+#
+interface Vlanif1360
+#
+interface Vlanif1489
+#
+interface Vlanif1501
+#
+interface Vlanif1593
+ ip address 10.100.100.2 255.255.255.0
+#
+interface Vlanif1748
+ ip address 200.10.10.4 255.255.255.248
+#
+interface Vlanif1908
+ ip address 10.248.248.66 255.255.255.252
+#
+interface Vlanif2508
+ ip address 129.205.102.211 255.255.255.248
+#
+interface Vlanif2641
+#
+interface Vlanif3643
+#
+interface Vlanif3916
+#
+interface Ethernet0/0/1
+ description NNPC ZONAL OFFICE  | NNPC-RETAIL-SW-RO-IDSL
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3404 3409
+ bpdu enable
+#
+interface Ethernet0/0/2
+ description SAHARA PETROSCOPE LAKEPOINT
+ shutdown
+ port link-type access
+ port default vlan 1873
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/3
+ description COOLLINK SOULE PARKVIEW | 25Mbps
+ port link-type access
+ port default vlan 1449
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/4
+ description NNPC RETAIL STATION IKOYI
+ port link-type access
+ port default vlan 3408
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/5
+ description IO TECH IKOYI-1-MOSAFEJO 50MB INTERNET
+ port link-type access
+ port default vlan 1344
+ undo negotiation auto
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/6
+ description TOTAL BANANA ISLAND 2MB INTERNET
+ port link-type access
+ port default vlan 2641
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/7
+ description description AITEO-LEKKI-IKOYI ll
+ port link-type trunk
+ port trunk allow-pass vlan 1748
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/8
+ description NNPC NIPEX IKOYI PRIMARY
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3405
+ undo negotiation auto
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/9
+ description COOLLINK-BOURDILON-IKOYI | TO-SAKA17-ETH21.1236
+ port link-type access
+ port default vlan 1236
+ bpdu enable
+#
+interface Ethernet0/0/10
+ description NNPC LAGOS HQ ANNEX
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3411
+ bpdu enable
+#
+interface Ethernet0/0/11
+ description NNPC NAPIMS GERRARD
+ port link-type trunk
+ port trunk allow-pass vlan 1494 2178 3403
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/12
+ description IPEXPRESS TEMPLE|VL1779| 150Mbps [ZETAWEB BANANA ISLAND/ RACKCENTRE]
+ port link-type trunk
+ port trunk allow-pass vlan 921 1500 1526 1642 1779
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/13
+ description IOTECH-RADIO-MANAGEMENT
+ port link-type trunk
+ port trunk allow-pass vlan 1344 1502
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/14
+ description NNPC NAPIMS GERRARD PRIMARY
+ port default vlan 3403
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/15
+ description FORD FOUNDATION
+ port link-type access
+ port default vlan 2812
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/16
+ description IPEXPRESS-AWOLOWO-IKOYI-105Mbps
+ port link-type access
+ port default vlan 3168
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/17
+ description DENMARK EMBASSY 3MB INTERNET
+ port link-type access
+ port default vlan 2266
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/18
+ description SWISS EMBASSY 4MB INTERNET
+ port link-type access
+ port default vlan 2057
+ undo negotiation auto
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/19
+ description TEST-FOR-IOTECH-RADIO-MGT
+ port link-type access
+ port default vlan 1504
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/20
+ description SEPLAT-BOURDILLION
+ port link-type access
+ port default vlan 922
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/21
+ description TRUNK TO CHICASON
+ port link-type trunk
+ port trunk allow-pass vlan 312 to 313 1501
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/22
+ description NNPC NIPEX IKOYI SECONDARY
+ port link-type access
+ port default vlan 3646
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/23
+ description COOLLINK-OOAK-VILLA-VPN ||
+ shutdown
+ port link-type access
+ port default vlan 941
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/24
+ description WHEAT BAKER INTERNET
+ port link-type access
+ port default vlan 2508
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface GigabitEthernet0/0/1
+ description NETCOM-IKOYI-SAIPEM-LAKEPOINT-TOWERS
+ port link-type access
+ port default vlan 3882
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface GigabitEthernet0/0/2
+ description ERIN-PROJECT | 155M
+ port link-type access
+ port default vlan 1478
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface GigabitEthernet0/0/3
+ description UPLINK TO SECOND HUAWEI SWITCH
+ port link-type trunk
+ port trunk allow-pass vlan 1 to 4094
+ combo-port fiber
+   negotiation auto
+ combo-port media type
+   combo-port copper
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface GigabitEthernet0/0/4
+ description TRUNK-TO-GLOMOBILE || GE-2/0/0
+ port link-type trunk
+ port trunk allow-pass vlan 20 312 to 315 560 768 805 900 902 912 920 to 922 941
+ port trunk allow-pass vlan 968 987 1000 1043 1085 to 1087 1114 1116 1236 to 1237 1257 1287
+ port trunk allow-pass vlan 1318 1330 1343 to 1344 1353 1360 to 1361 1367 to 1368 1444 1449 1478 1489
+ port trunk allow-pass vlan 1494 1496 to 1498 1500 to 1501 1503 to 1504 1526 1551 1581 to 1582 1593 1642 1661
+ port trunk allow-pass vlan 1692 1745 1748 1779 1867 1870 to 1871 1873 to 1874 1889 1906 1908 to 1909
+ port trunk allow-pass vlan 1964 to 1965 1979 1988 2055 2057 2079 2178 2253 2266 2420
+ port trunk allow-pass vlan 2508 2511 to 2512 2641 2812 2952 2954 2956 2958 2960 2969
+ port trunk allow-pass vlan 3038 to 3039 3042 3125 to 3127 3130 to 3131 3133 3135 3137 3168 to 3169 3274 3402 to 3405
+ port trunk allow-pass vlan 3408 to 3409 3411 3416 3643 3645 to 3646 3882 3912 3916
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface NULL0
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user adewunmi password cipher !\)S/>B90$21[a"FZ7=S#!!!
+ local-user adewunmi level 3
+ local-user adewunmi ftp-directory flash:
+ local-user bsnoc password cipher RB!G'1+"PX61[a"FZ7=S#!!!
+ local-user bsnoc level 3
+ local-user bsnoc ftp-directory flash:
+ local-user bsnoc service-type telnet terminal ssh ftp
+ local-user chuks password cipher BI1)@V<*-U*U4Z(*%FTCV!!!
+ local-user chuks level 3
+ local-user chuks ftp-directory flash:
+ local-user fabian password cipher *2+W,D'B31_Q=^Q`MAF4<1!!
+ local-user fabian level 3
+ local-user fabian ftp-directory flash:
+ local-user heawei password simple vlan
+ local-user heawei ftp-directory flash:
+ local-user huawei password cipher N`C55QK<`=/Q=^Q`MAF4<1!!
+ local-user huawei level 3
+ local-user huawei ftp-directory flash:
+ local-user mathew password cipher a!OB$L'IL7+Q=^Q`MAF4<1!!
+ local-user mathew level 3
+ local-user mathew ftp-directory flash:
+ local-user moses password cipher Y;FLM:7Q_/F1[a"FZ7=S#!!!
+ local-user moses level 3
+ local-user moses ftp-directory flash:
+ local-user naveen password cipher V>4:5D3Q-L<0G`2^"@4W+A!!
+ local-user naveen level 3
+ local-user naveen ftp-directory flash:
+ local-user ope password cipher \THX&0.I;NKQBC:RRU/-W1!!
+ local-user ope level 3
+ local-user ope ftp-directory flash:
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.248.65
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100007C71
+ snmp-agent community read  globacom
+ snmp-agent community read  Globacom@123
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ idle-timeout 0 0
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[Glo_BS_LAG109_Ikoyi]

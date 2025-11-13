@@ -1,0 +1,262 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:47.08 ? ? /home/mobaxterm ? telnet 10.248.249.238
+Connected to 10.248.249.238.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-BAR-005>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-BAR-005]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       ACCESS BANK AGBOR
+Eth0/0/2                      up      up       FIRST-BANK-AGBOR
+Eth0/0/3                      down    down     NNPC ABUDU PS
+Eth0/0/4                      up      up       WETLAND AGBOR | First Bank Agbor
+Eth0/0/5                      up      up       DICNET AGBOR 1
+Eth0/0/6                      down    down     DICNET-AGBOOR2(BAR005-AGB002) | G
+                                               E003@AGB002-RTN980-FACING BAR005
+                                               & GE003@BAR005-AGB019)
+Eth0/0/7                      up      up       DICNET-AGBOOR2(BAR005-AGB002) | G
+                                               E003@AGB002-RTN980-FACING BAR005
+                                               & GE003@BAR005-AGB019)
+Eth0/0/8                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/8 Interface
+Eth0/0/9                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/9 Interface
+Eth0/0/10                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/10 Interface
+Eth0/0/11                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/11 Interface
+Eth0/0/12                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/12 Interface
+Eth0/0/13                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/13 Interface
+Eth0/0/14                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/14 Interface
+Eth0/0/15                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/15 Interface
+Eth0/0/16                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/16 Interface
+Eth0/0/17                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/17 Interface
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     MGT_TEST
+GE0/0/1                       up      up       UPLINK TO DCN IP/MPLS GE 2/0/5 -
+                                               BAR006-BAR005
+GE0/0/2                       down    down     HUAWEI, Quidway Series, GigabitEt
+                                               hernet0/0/2 Interface
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif1274                    up      down     HUAWEI, Quidway Series, Vlanif127
+                                               4 Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif3007                    up      down     HUAWEI, Quidway Series, Vlanif300
+                                               7 Interface
+[BS-BAR-005]   dis cur
+#
+!Software Version V100R006C05
+ sysname BS-BAR-005
+#
+ vlan batch 1212 1274 1390 1396 1493 to 1497 1501 1640 1925 3007 3527
+#
+vlan 1212
+ description Wetland
+vlan 1274
+ description FBN -AGBOR - L3
+vlan 1390
+ description DICNET-AGBOR
+vlan 1396
+ description DICNET AGBOR 2
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1494
+ description NNPC-NERA-MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1496
+ description FBN AGBOR CER-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1501
+ description BS_MGT
+vlan 1640
+ description Access-Bank-Sapele
+vlan 1925
+ description REXIFI-TECHNOLOGIES-LTD
+vlan 3007
+ description FIRST-BANK-AGBOR-VPLS
+vlan 3527
+ description NNPC ABUDU-PS
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user ope password cipher %@%@x=}WACzp^%wm)iKJYmrOj5*-%@%@
+ local-user ope privilege level 15
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@o"7aIRd5UQkgO9.CBmG4j5,L%@%@
+ local-user bsnoc privilege level 15
+ local-user moses password cipher %@%@Prq<T8z0=%\3Vs.'\$/Tj50a%@%@
+ local-user moses privilege level 15
+ local-user donald password cipher %@%@,wo[C"p6'23tp4B7Q3~Oj52f%@%@
+ local-user donald privilege level 15
+ local-user fabian password cipher %@%@T"=%>D&GM~2dXgA7AupMj5-k%@%@
+ local-user fabian privilege level 15
+ local-user naveen password cipher %@%@2*L<Nh$73F.=gRAl*t.Mj5.b%@%@
+ local-user naveen privilege level 15
+ local-user adewunmi password cipher %@%@6$}K!%Ox0P!{;r-!veZ2j5/.%@%@
+ local-user adewunmi privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif1274
+#
+interface Vlanif1501
+ ip address 10.248.249.238 255.255.255.0
+#
+interface Vlanif3007
+#
+interface Ethernet0/0/1
+ description ACCESS BANK AGBOR
+ port link-type access
+ port default vlan 1640
+#
+interface Ethernet0/0/2
+ description FIRST-BANK-AGBOR
+ port link-type trunk
+ port trunk allow-pass vlan 1274 1496 3007
+#
+interface Ethernet0/0/3
+ description NNPC ABUDU PS
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3527
+#
+interface Ethernet0/0/4
+ description WETLAND AGBOR | First Bank Agbor
+ port link-type trunk
+ port trunk allow-pass vlan 1496 to 1497
+#
+interface Ethernet0/0/5
+ description DICNET AGBOR 1
+ port link-type access
+ port default vlan 1390
+#
+interface Ethernet0/0/6
+ description DICNET-AGBOOR2(BAR005-AGB002) | GE003@AGB002-RTN980-FACING BAR005 & GE003@BAR005-AGB019)
+ port link-type access
+ port default vlan 1396
+#
+interface Ethernet0/0/7
+ description DICNET-AGBOOR2(BAR005-AGB002) | GE003@AGB002-RTN980-FACING BAR005 & GE003@BAR005-AGB019)
+ port link-type trunk
+ port trunk allow-pass vlan 1396
+#
+interface Ethernet0/0/8
+#
+interface Ethernet0/0/9
+#
+interface Ethernet0/0/10
+#
+interface Ethernet0/0/11
+#
+interface Ethernet0/0/12
+#
+interface Ethernet0/0/13
+#
+interface Ethernet0/0/14
+#
+interface Ethernet0/0/15
+#
+interface Ethernet0/0/16
+#
+interface Ethernet0/0/17
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ description MGT_TEST
+ port link-type access
+ port default vlan 1501
+#
+interface GigabitEthernet0/0/1
+ description UPLINK TO DCN IP/MPLS GE 2/0/5 - BAR006-BAR005
+ port link-type trunk
+ port trunk allow-pass vlan 352 1212 1274 1390 1396 1493 to 1497 1501 1640 1925 3007
+ port trunk allow-pass vlan 3527
+#
+interface GigabitEthernet0/0/2
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100002A22
+ snmp-agent community read cipher %@%@vj'AFWS9$SWO=K*g,d6*h9{qYl9=Z<@,nC4Q0MI&F}pT9{thTAqJH$k3e%whI7,BBXIS{}h9%@%@
+ snmp-agent community read cipher %@%@Jse59zCd_It.)%6bB>.N'WY`X"~.Y&Nv[Y)kGZTjh}p'WYc'rxvSE+e0F@JDBUR0f[WCYl'W%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[BS-BAR-005]

@@ -1,0 +1,440 @@
+                             +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 08:59.15 ? ? /home/mobaxterm ?                         telnet 10.248.249.81
+Connected to 10.248.249.81.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:Entering character mode
+Escape character is '^]'.
+bsnoc
+Password:
+Info: The max number of VTY users is 13, and the number
+      of current VTY users on line is 1.
+      The current login time is 2025-06-05 16:45:47+00:00.
+<ENT-IFE-SW>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-IFE-SW]dis int des
+PHY: Physical
+*down: administratively down
+#down: LBDT down
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(dl): DLDP down
+(lb): LBDT block
+Interface                     PHY     Protocol Description
+GE0/0/1                       down    down     ODUDUWA_MAIN_CAMPUS IPETUMODU
+GE0/0/2                       down    down     ODUDUWA_MINI_CAMPUS
+GE0/0/3                       up      up       ACCESS BANK OAU
+GE0/0/4                       up      up       OAU_IFE_500MbPs_FIBER
+GE0/0/5                       down    down     BS CERAGON MGT
+GE0/0/6                       down    down     JABU_INTERNET
+GE0/0/7                       up      up       TPGS IFE-2 | 30MB
+GE0/0/8                       down    down     TPGS IFE-2 | 30MB **OLD PORT**
+GE0/0/9                       up      up       OAU IFE CDL-INTERNET | VLAN1170 | 80MB
+GE0/0/10                      down    down     IDN-IFE-INTERNET ||
+GE0/0/11                      *down   down     UBA OAU ILE IFE | CERAGON IP 10
+GE0/0/12                      up      up       ACCESS BANK  APOMU
+GE0/0/13                      up      up       NBC-ASEJIRE | OSUN-IKIRE-CAMPUS
+GE0/0/14                      *down   down
+GE0/0/15                      down    down     OAU IFE CDL-INTERNET
+GE0/0/16                      down    down     OAU IFE CDL-CERAGON MGT
+GE0/0/17                      down    down     OSUN IPETU CAMPUS
+GE0/0/18                      up      up       FCMB ILE IFE
+GE0/0/19                      down    down     INFRA FOCUS OAU IFE
+GE0/0/20                      *down   down
+GE0/0/21                      down    down     VDT ILE-IFE INTERNET
+GE0/0/22                      down    down     TECPOINT-IFE1 - IFE2-TRUNK
+GE0/0/23                      down    down
+GE0/0/24                      up      up       TRUNK TO DCN-UPE-GE0/1/0
+NULL0                         up      up(s)
+Vlanif1                       up      down
+Vlanif1115                    up      down
+Vlanif1493                    *down   down
+Vlanif1501                    up      up
+Vlanif1503                    up      down
+Vlanif1640                    up      up
+Vlanif1641                    up      up
+Vlanif1873                    *down   down
+Vlanif1993                    up      down
+Vlanif2999                    *down   down
+Vlanif3035                    up      up
+Vlanif3105                    up      up
+Vlanif3126                    *down   down
+Vlanif3381                    up      down
+XGE0/0/1                      up      up       TRUNK TO DCN
+XGE0/0/2                      down    down
+XGE0/0/3                      down    down
+XGE0/0/4                      up      up       OAU_IFE_500MbPs_FIBER
+[ENT-IFE-SW]     dis cur
+!Software Version V200R011C10SPC600
+#
+sysname ENT-IFE-SW
+#
+vlan batch 400 804 1115 1146 1157 1170 1235 1351 1426 1486
+vlan batch 1492 to 1493 1495 1497 to 1498 1500 to 1501 1503 1632 to 1633 1640 to 1641 1811 1872 to 1873 1993
+vlan batch 2423 2999 3035 3042 3105 to 3106 3126 3202 3381
+#
+authentication-profile name default_authen_profile
+authentication-profile name dot1x_authen_profile
+authentication-profile name mac_authen_profile
+authentication-profile name portal_authen_profile
+authentication-profile name dot1xmac_authen_profile
+authentication-profile name multi_authen_profile
+#
+telnet server enable
+#
+radius-server template default
+#
+pki realm default
+ certificate-check none
+#
+free-rule-template name default_free_rule
+#
+portal-access-profile name portal_access_profile
+#
+vlan 804
+ description TEM-SWITCH-MGT
+vlan 1115
+ description GTB_OAU
+vlan 1146
+ description OAU_IFE
+vlan 1157
+ description JABU_INTERNET
+vlan 1170
+ description OAU IFE CDL-INTERNET
+vlan 1235
+ description JABU_INTERNET
+vlan 1351
+ description TPGS-IFE2
+vlan 1426
+ description VDT-LAGOS-IFE
+vlan 1486
+ description CERAGON-MGT
+vlan 1492
+ description BS-NERA-4-MGT
+vlan 1493
+ description NERA-MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1498
+ description BS-CERAGON-MGT
+vlan 1500
+ description GLO1-CERAGON MGT
+vlan 1501
+ description BS-MGT
+vlan 1503
+ description NERA MGMT
+vlan 1632
+ description WEMA-BANK-LL-LINKS
+vlan 1633
+ description OAU-INFRA-FOCUS
+vlan 1640
+ description ACCESS-BANK-VPLS
+vlan 1641
+ description OSUN IPETU CAMPUS
+vlan 1811
+ description NBC-ASEJIRE
+vlan 1872
+ description idn-ifee
+vlan 1873
+ description TECPOINT-IFE
+vlan 1993
+ description VDT-ILE-IFE-INTERNET
+vlan 2423
+ description STANBIC_IBTC_BANK
+vlan 2999
+ description FCMB-VPLS
+vlan 3035
+ description POLARISBANK-OBA-ADEREMI-IFE039
+vlan 3042
+ description UBA-VPLS
+vlan 3105
+ description ODUDUWA_MAIN_CAMPUS
+vlan 3106
+ description ODUDUWA_MINI_CAMPUS
+vlan 3126
+ description DIAMOND-VPLS
+vlan 3381
+ description WEMA_OAU
+#
+aaa
+ authentication-scheme default
+ authentication-scheme radius
+  authentication-mode radius
+ authorization-scheme default
+ accounting-scheme default
+ local-aaa-user password policy administrator
+  password history record number 0
+  password expire 0
+ domain default
+  authentication-scheme radius
+  radius-server default
+ domain default_admin
+  authentication-scheme default
+ local-user ope password irreversible-cipher $1a$J+DD7#3KJH$k&KE*B9R\@dsQTJ2;xo#U!b{E.ohg!JERU'neWPW$
+ local-user ope privilege level 15
+ local-user ope service-type telnet
+ local-user admin password irreversible-cipher $1a$)$R!(fu$~W$5u8:!n)y6G8ul]XDVDN9_!p|<G[\B'S*_vG9t*HN$
+ local-user admin privilege level 15
+ local-user admin service-type telnet
+ local-user bsnoc password irreversible-cipher $1a$@6[g2JcYO:$wGc(-I/IV,:gqZVm)bhWiUYDLIQ\KC58@0@$)Ts&$
+ local-user bsnoc privilege level 15
+ local-user bsnoc service-type telnet ssh
+ local-user elvis password irreversible-cipher $1a$-/%>K$-"{E$-3<0+R6M6~hjFG/P(sgVG<0IIv^d-%o9S5&&9J`5$
+ local-user elvis privilege level 15
+ local-user elvis service-type telnet
+ local-user moses password irreversible-cipher $1a$=,Or5n&;(8$Mn^:/5A.\0h3$>(KX&2@1jYH3rtH|Wh#LjG"93rT$
+ local-user moses privilege level 15
+ local-user moses service-type telnet
+ local-user donald password irreversible-cipher $1a$47R/9W<ZtY$+];-FnD1yS[!H'KUvD{CH>km;lo_j.Rce}F(_bN:$
+ local-user donald privilege level 15
+ local-user donald service-type telnet
+ local-user fabian password irreversible-cipher $1a$wY5jWECLjE$b:$eV]qiTG-NAMQ~&`zX}:AF*A0JBJpY'JW\o12T$
+ local-user fabian privilege level 15
+ local-user fabian service-type telnet
+ local-user naveen password irreversible-cipher $1a$^yA;0oU$|T$um[TR|/7T9q|eILt(6GIXy/@SrjN]Bvc]]@o2wlD$
+ local-user naveen privilege level 15
+ local-user naveen service-type telnet
+ local-user matthew privilege level 15
+ local-user matthew service-type telnet
+ local-user adewunmi password irreversible-cipher $1a$@K|6@(T/;B$LN9<)]6wcEIqW&3A)8/F$`pGU#)8IK+1cnRJs\'*$
+ local-user adewunmi privilege level 0
+ local-user adewunmi service-type telnet
+ local-user huawei123 password irreversible-cipher $1a$p'\438#Y]"$r|W<P3#lGN$\{xD[MLh"XWR_D4|Pw=$K&b)ZTLz2$
+ local-user huawei123 privilege level 15
+ local-user huawei123 service-type telnet
+#
+interface Vlanif1
+#
+interface Vlanif1115
+#
+interface Vlanif1493
+ shutdown
+ ip address 10.155.200.158 255.255.255.0
+#
+interface Vlanif1501
+ ip address 10.248.249.81 255.255.255.0
+#
+interface Vlanif1503
+#
+interface Vlanif1640
+ ip address 10.230.230.232 255.255.255.0
+#
+interface Vlanif1641
+ ip address 12.12.12.9 255.255.255.0
+#
+interface Vlanif1873
+ shutdown
+ ip address 129.205.111.189 255.255.255.248
+#
+interface Vlanif1993
+#
+interface Vlanif2999
+ shutdown
+ ip address 172.22.6.231 255.255.255.0
+#
+interface Vlanif3035
+ ip address 10.15.118.179 255.255.255.0
+#
+interface Vlanif3105
+ ip address 197.211.48.102 255.255.255.248
+#
+interface Vlanif3126
+ shutdown
+ ip address 12.12.12.1 255.255.255.252
+#
+interface Vlanif3381
+#
+interface GigabitEthernet0/0/1
+ description ODUDUWA_MAIN_CAMPUS IPETUMODU
+ port link-type trunk
+ port trunk allow-pass vlan 400 3105
+#
+interface GigabitEthernet0/0/2
+ description ODUDUWA_MINI_CAMPUS
+ port link-type access
+ port default vlan 400
+#
+interface GigabitEthernet0/0/3
+ description ACCESS BANK OAU
+ port link-type access
+ port default vlan 1640
+#
+interface GigabitEthernet0/0/4
+ description OAU_IFE_500MbPs_FIBER
+ port link-type access
+ port default vlan 1146
+#
+interface GigabitEthernet0/0/5
+ description BS CERAGON MGT
+ port link-type access
+ port default vlan 1498
+#
+interface GigabitEthernet0/0/6
+ description JABU_INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 804 1115 1157 1170 1235 1351 1426 1493 1495 1497 to 1498
+ port trunk allow-pass vlan 1500 to 1501 1632 to 1633 1640 to 1641 1811 1872 to 1873 1993 2273 2423 2999 3035
+ port trunk allow-pass vlan 3042 3105 to 3106 3126 3202 3381
+#
+interface GigabitEthernet0/0/7
+ description TPGS IFE-2 | 30MB
+ port link-type access
+ port default vlan 1351
+#
+interface GigabitEthernet0/0/8
+ description TPGS IFE-2 | 30MB **OLD PORT**
+ port link-type access
+ port default vlan 1351
+#
+interface GigabitEthernet0/0/9
+ description OAU IFE CDL-INTERNET | VLAN1170 | 80MB
+ port link-type trunk
+ port trunk allow-pass vlan 1170 1500 1503
+ qos lr outbound cir 80000 cbs 10000000
+ qos lr inbound cir 80000 cbs 10000000
+#
+interface GigabitEthernet0/0/10
+ description IDN-IFE-INTERNET ||
+ port link-type access
+ port default vlan 1872
+#
+interface GigabitEthernet0/0/11
+ description UBA OAU ILE IFE | CERAGON IP 10
+ shutdown
+ port link-type access
+ port default vlan 3042
+#
+interface GigabitEthernet0/0/12
+ description ACCESS BANK  APOMU
+ port link-type trunk
+ port trunk allow-pass vlan 1486 1497 1640
+#
+interface GigabitEthernet0/0/13
+ description NBC-ASEJIRE | OSUN-IKIRE-CAMPUS
+ port link-type trunk
+ port trunk allow-pass vlan 1493 1811 3202
+#
+interface GigabitEthernet0/0/14
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 400 3105
+#
+interface GigabitEthernet0/0/15
+ description OAU IFE CDL-INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 1170 1500 1503
+ qos lr outbound cir 80000 cbs 10000000
+ qos lr inbound cir 80000 cbs 10000000
+#
+interface GigabitEthernet0/0/16
+ description OAU IFE CDL-CERAGON MGT
+ port link-type access
+ port default vlan 1500
+#
+interface GigabitEthernet0/0/17
+ description OSUN IPETU CAMPUS
+ port link-type access
+ port default vlan 1641
+#
+interface GigabitEthernet0/0/18
+ description FCMB ILE IFE
+ port link-type trunk
+ port trunk allow-pass vlan 1492 2999
+#
+interface GigabitEthernet0/0/19
+ description INFRA FOCUS OAU IFE
+ port link-type trunk
+ port trunk allow-pass vlan 1495 1633
+#
+interface GigabitEthernet0/0/20
+ shutdown
+ port link-type access
+ port default vlan 3105
+#
+interface GigabitEthernet0/0/21
+ description VDT ILE-IFE INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 1993
+#
+interface GigabitEthernet0/0/22
+ description TECPOINT-IFE1 - IFE2-TRUNK
+ port link-type trunk
+ port trunk allow-pass vlan 1351 1873
+#
+interface GigabitEthernet0/0/23
+ undo negotiation auto
+ port link-type trunk
+ port trunk allow-pass vlan 1495 1633
+#
+interface GigabitEthernet0/0/24
+ description TRUNK TO DCN-UPE-GE0/1/0
+ port link-type trunk
+ port trunk allow-pass vlan 804 1115 1146 1157 1170 1235 1351 1426 1486 1493
+ port trunk allow-pass vlan 1495 1497 to 1498 1500 to 1501 1503 1632 to 1633 1640 to 1641 1811 1872 1993 2273
+ port trunk allow-pass vlan 2423 2999 3035 3042 3105 to 3106 3126 3202 3381
+#
+interface XGigabitEthernet0/0/1
+ description TRUNK TO DCN
+ port link-type trunk
+ port trunk allow-pass vlan 804 1115 1157 1170 1235 1351 1426 1486 1493 1495
+ port trunk allow-pass vlan 1497 to 1498 1500 to 1501 1632 to 1633 1640 to 1641 1811 1872 1993 2273 2423 2999
+ port trunk allow-pass vlan 3035 3042 3105 to 3106 3126 3202 3381
+#
+interface XGigabitEthernet0/0/2
+ port link-type trunk
+#
+interface XGigabitEthernet0/0/3
+#
+interface XGigabitEthernet0/0/4
+ description OAU_IFE_500MbPs_FIBER
+ port link-type trunk
+ port trunk allow-pass vlan 804 1146 1501
+#
+interface NULL0
+#
+ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+snmp-agent
+snmp-agent local-engineid 800007DB03A82BCD55AE51
+snmp-agent community read cipher %^%#_GCrT#ZY7"BCA;Nd`@8F{&#KXDjK,9P`n@*p2fTQBZhBX1e'{~@_T\*r`m;&#O8("o%<cBVziKJ(8ozO%^%#
+snmp-agent community read cipher %^%#5Vo~GM5iIRPDX>:0xw/Gn0!i7@iYzX$UbkQxw^FBLX9uV\m>+IOY$dX+0Nq)*e^3BwcVNDyvC17ZhR1;%^%#
+snmp-agent community read cipher %^%#\S+v#AdUD-1!56!;kr,JjoYsXuTzO~-KU[OQ4v-0&m{/P~y4#Zs~/^B3!7s!{^f:W+&R`Ov{un5![s~$%^%#
+snmp-agent sys-info version all
+#
+user-interface maximum-vty 8
+user-interface con 0
+ authentication-mode password
+ set authentication password cipher $1a$/eqp>P@~,1$2pAS>N`)z;Xv23,Ayf&Os5{@EH[.86YugKR%(vpC$
+user-interface vty 0 7
+ authentication-mode aaa
+ protocol inbound all
+user-interface vty 16 20
+ authentication-mode password
+ set authentication password cipher $1a$`jx*CyQdAJ$Tlz~&z#|<#_E;iVyd[yYP$fU<.6(|8>PMh%-jEs($
+ protocol inbound all
+#
+dot1x-access-profile name dot1x_access_profile
+#
+mac-access-profile name mac_access_profile
+#
+return
+[ENT-IFE-SW]

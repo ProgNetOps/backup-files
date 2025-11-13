@@ -1,0 +1,551 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:47.06 ? ? /home/mobaxterm ? telnet 10.248.249.27
+Connected to 10.248.249.27.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+BS-ASA-901>en
+Password:
+BS-ASA-901#sh int des
+Interface                      Status         Protocol Description
+Vl1                            admin down     down
+Vl954                          up             up
+Vl1020                         up             up
+Vl1029                         up             up
+Vl1067                         down           down
+Vl1377                         up             up
+Vl1462                         up             up
+Vl1496                         up             up
+Vl1497                         up             up
+Vl1501                         up             up
+Vl1503                         up             up
+Vl1553                         admin down     down
+Vl1593                         up             up
+Vl1626                         up             up
+Vl1640                         up             up
+Vl1651                         up             up
+Vl2057                         up             down
+Vl2377                         up             up
+Vl2800                         up             up
+Vl3126                         up             up
+Vl3487                         up             up
+Fa0/1                          down           down     BAD
+Fa0/2                          down           down     WORLD_SCOPE_ASABA
+Fa0/3                          down           down     BAD
+Fa0/4                          down           down     CYBERSPACE-ASABA-VPLS-INTERNET || 295Mbps
+Fa0/5                          down           down     CITYCYBER-SOLUTION-10MB-INTERNET
+Fa0/6                          down           down     VDT LAGOS TO ASABA | INTERNET ASABA
+Fa0/7                          admin down     down     MET-WEST-STEEL-ASABA-INT | 20MB
+Fa0/8                          admin down     down     IP2AIR-ASABA-INT | 15M
+Fa0/9                          admin down     down     NETRONIKZ ASABA-INTERNET-10MB-R-HUAWEI
+Fa0/10                         down           down     ISN-ASABA-VPN || 10Mbps
+Fa0/11                         up             up       IDN-ASABA-INTERNET || 20Mbps
+Fa0/12                         up             up       GLOSHOP ASABA
+Fa0/13                         up             up       Delta-Trust-MFB-ASA039-GE1
+Fa0/14                         down           down     GLOBUS BANK ASABA 4MB LEASED LINE
+Fa0/15                         down           down     HIGH-COURT ASABA
+Fa0/16                         up             up       SWIFT TALK ASABA | 20MB
+Fa0/17                         up             up       NNPC RETAIL STATION ASABA | DICNECT
+Fa0/18                         admin down     down     SPRING-HILL-HOTEL-10MB-INTERNET
+Fa0/19                         admin down     down     NICO ICT 4MB INTERNET
+Fa0/20                         up             up       TPGS ASABA-1 10MB INTERNET
+Fa0/21                         down           down     JEFCON-ASSOC-4MB-INT-R-NERA
+Fa0/22                         up             up       NOCY-CASTLE-INT | 50M
+Fa0/23                         admin down     down     PDS NW ASABA | 20M INTERNET
+Fa0/24                         up             up       SUNDRY-MARKET-INT | 3 M
+Gi0/1                          up             up       TRUNK_TO_DCN_IP-RTR  GE 0/2/5
+Gi0/2                          up             up       CYBERSPACE-ASABA-VPLS-INTERNET || 295Mbps
+BS-ASA-901# sh run
+Building configuration...
+
+Current configuration : 9043 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname BS-ASA-901
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+!
+no aaa new-model
+system mtu routing 1500
+vtp mode transparent
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-2313236224
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-2313236224
+ revocation-check none
+ rsakeypair TP-self-signed-2313236224
+!
+!
+crypto pki certificate chain TP-self-signed-2313236224
+ certificate self-signed 01
+  30820243 308201AC A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 32333133 32333632 3234301E 170D3933 30333031 30303031
+  35335A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D32 33313332
+  33363232 3430819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  8100D3D4 AE831BF7 2216DEFB 341EF66E 63581AC1 CDA808C2 ED94242F 72D4FA85
+  E67BC012 19D1FB73 72C9830C 66107424 498B10C2 AE9F1589 30E732E8 73C4C4B7
+  3D019C4E 3B1443DD 57D8D48C DD7D7066 45E95C3E 6AE133A9 FE852357 9F1F84E5
+  5EE46C4C E47935CD 1B640298 B15EA95C BB61CBB8 D28970A9 20AE797F 05B7A16B
+  F5750203 010001A3 6B306930 0F060355 1D130101 FF040530 030101FF 30160603
+  551D1104 0F300D82 0B42532D 4153412D 3930312E 301F0603 551D2304 18301680
+  1445578C 2F5ABEA8 08395103 58BB5BBC 7BCCD56D CE301D06 03551D0E 04160414
+  45578C2F 5ABEA808 39510358 BB5BBC7B CCD56DCE 300D0609 2A864886 F70D0101
+  04050003 8181000A 1CEF1F78 563FA819 2885B870 1F296312 0E83C4E2 24CD776B
+  8C79E773 39859261 9EDA9BF2 C19C8C39 55B08745 640633E7 84B9FC76 9B54A72F
+  1A3FE238 5B1D2F1D C1C614FA 154823CE 86E525E4 ED6C1F2F BDB31943 4B3E2116
+  110366AA B176CB1F 1EBAE388 4B254D05 C30B43E4 D5C6FEB8 BF576426 BC336208
+  D7A2CB0D 68C330
+  quit
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 667
+ name FIRS-ASABA-MPLS
+!
+vlan 890
+ name cyberspace
+!
+vlan 954
+ name idn-asaba
+!
+vlan 1020
+ name NETRONIKZ-ASABA
+!
+vlan 1025
+ name NOCY-CASTLE
+!
+vlan 1029
+ name PDS-NW-20M-INT
+!
+vlan 1132
+ name IP2AIR-ASABA
+!
+vlan 1182
+ name WORLD_SCOPE_ASABA
+!
+vlan 1212
+ name WETLAND-OGWASHI-UKU
+!
+vlan 1222
+ name HIGH-COURT-ASABA
+!
+vlan 1303
+ name VANMILLAN-HOTEL
+!
+vlan 1316
+ name DELTA_POLY
+!
+vlan 1334
+ name CITYCYBER-SOLUTION
+!
+vlan 1377
+ name TPGS-ASABA-1
+!
+vlan 1393
+ name NICO-ICT-Solution
+!
+vlan 1446
+ name SUNDRY-MARKET-INT
+!
+vlan 1462
+ name JEFCOM-INT
+!
+vlan 1487
+ name New_Ceragon_MgMt
+!
+vlan 1492
+ name BS-NERA-4-MGT
+!
+vlan 1493
+ name BS-NERA-3-MGT
+!
+vlan 1494
+ name NNPC-NERA-MGT
+!
+vlan 1495
+ name UNION_ASABA_MGT
+!
+vlan 1496
+ name CERAGON-RADI-MGT
+!
+vlan 1497
+ name NERA-MGT-VLAN
+!
+vlan 1498
+ name CERAGON-RAD-MGT
+!
+vlan 1500
+ name CERAGON_MGT
+!
+vlan 1501
+ name BS_MGT
+!
+vlan 1503
+ name NERA_MGT
+!
+vlan 1553
+ name cobranet
+!
+vlan 1593
+ name UNION-BANK-ASABA
+!
+vlan 1626
+ name SPRINGHILL-HOTEL
+!
+vlan 1640
+ name ACCESS-BANK-VPLS
+!
+vlan 1650
+ name TECHNOLOGY-PLUS
+!
+vlan 1651
+ name VICKS&JC1
+!
+vlan 1652
+ name VICKS&JC2
+!
+vlan 1653
+ name VICKS&JC3
+!
+vlan 1654
+ name VICKS&JC4
+!
+vlan 1655
+ name VICKS&JC5
+!
+vlan 1662
+ name GLOBUS-BANK-ASABA
+!
+vlan 1721
+ name SSG-DELTA-STATE
+!
+vlan 1734
+ name DICNET-ASABA
+!
+vlan 1742
+ name BRIDGE_RADIO_ASABA
+!
+vlan 1820
+ name NBC_ASABA
+!
+vlan 1828
+ name IS_NOVA_ASABA
+!
+vlan 1923
+ name SWIFT-TALK-ASABA
+!
+vlan 1970
+ name MET-WEST-STEEL
+!
+vlan 1979
+ name VDT-ASABA-INTERNET
+!
+vlan 2057
+ name ORANGE_ZIM
+!
+vlan 2188
+ name GLOSHOP-ASABA
+!
+vlan 2201
+ name ELOMAZ_ASABA_INT
+!
+vlan 2377
+ name SIMPLENET-DIGITAL
+!
+vlan 2800
+ name JULIUS_BERGER_ONITSH
+!
+vlan 2874
+ name DELTA-TRUST-MFB
+!
+vlan 3106
+!
+vlan 3126
+ name DIAMOND_BANK_AGBOR
+!
+vlan 3487
+ name NNPC-RETA-STA-ASABA
+!
+vlan 3489
+ name cyberspacevpn
+!
+vlan 3553
+ name IWUCHI-TECHNOLOGIES
+!
+vlan 3561
+ name JEHOVA-WITNESS-ASABA
+!
+vlan 3615
+ name GOLDEN-TULIP-ASABA
+!
+!
+!
+interface FastEthernet0/1
+ description BAD
+ switchport mode access
+ speed 100
+ duplex full
+ spanning-tree portfast
+!
+interface FastEthernet0/2
+ description WORLD_SCOPE_ASABA
+ switchport access vlan 1182
+ switchport mode access
+!
+interface FastEthernet0/3
+ description BAD
+ switchport mode access
+ speed 100
+ duplex full
+ spanning-tree portfast
+!
+interface FastEthernet0/4
+ description CYBERSPACE-ASABA-VPLS-INTERNET || 295Mbps
+ switchport trunk allowed vlan 890,1503
+ switchport mode trunk
+!
+interface FastEthernet0/5
+ description CITYCYBER-SOLUTION-10MB-INTERNET
+ switchport access vlan 1334
+ switchport mode access
+!
+interface FastEthernet0/6
+ description VDT LAGOS TO ASABA | INTERNET ASABA
+ switchport access vlan 1979
+ switchport mode access
+ duplex full
+!
+interface FastEthernet0/7
+ description MET-WEST-STEEL-ASABA-INT | 20MB
+ switchport access vlan 1970
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/8
+ description IP2AIR-ASABA-INT | 15M
+ switchport access vlan 1132
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/9
+ description NETRONIKZ ASABA-INTERNET-10MB-R-HUAWEI
+ switchport trunk allowed vlan 1020
+ switchport mode trunk
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet0/10
+ description ISN-ASABA-VPN || 10Mbps
+ switchport access vlan 1828
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/11
+ description IDN-ASABA-INTERNET || 20Mbps
+ switchport access vlan 954
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/12
+ description GLOSHOP ASABA
+ switchport access vlan 2188
+ switchport mode access
+!
+interface FastEthernet0/13
+ description Delta-Trust-MFB-ASA039-GE1
+ switchport access vlan 2874
+ switchport mode access
+!
+interface FastEthernet0/14
+ description GLOBUS BANK ASABA 4MB LEASED LINE
+ switchport access vlan 1662
+ switchport mode access
+!
+interface FastEthernet0/15
+ description HIGH-COURT ASABA
+ switchport access vlan 1222
+ switchport mode access
+!
+interface FastEthernet0/16
+ description SWIFT TALK ASABA | 20MB
+ switchport trunk allowed vlan 1923
+ switchport mode trunk
+!
+interface FastEthernet0/17
+ description NNPC RETAIL STATION ASABA | DICNECT
+ switchport access vlan 3487
+ switchport mode access
+!
+interface FastEthernet0/18
+ description SPRING-HILL-HOTEL-10MB-INTERNET
+ switchport trunk allowed vlan 1626
+ switchport mode trunk
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet0/19
+ description NICO ICT 4MB INTERNET
+ switchport access vlan 1393
+ switchport mode access
+ shutdown
+ duplex full
+!
+interface FastEthernet0/20
+ description TPGS ASABA-1 10MB INTERNET
+ switchport access vlan 1377
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/21
+ description JEFCON-ASSOC-4MB-INT-R-NERA
+ switchport trunk allowed vlan 1462,1492
+ switchport mode trunk
+!
+interface FastEthernet0/22
+ description NOCY-CASTLE-INT | 50M
+ switchport access vlan 1025
+ switchport mode access
+!
+interface FastEthernet0/23
+ description PDS NW ASABA | 20M INTERNET
+ switchport access vlan 1029
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/24
+ description SUNDRY-MARKET-INT | 3 M
+ switchport access vlan 1446
+ switchport mode access
+!
+interface GigabitEthernet0/1
+ description TRUNK_TO_DCN_IP-RTR  GE 0/2/5
+ switchport trunk allowed vlan 667,890,954,1020,1025,1029,1132,1182,1212,1222
+ switchport trunk allowed vlan add 1303,1316,1334,1377,1393,1446,1462,1487
+ switchport trunk allowed vlan add 1492-1498,1500,1501,1503,1553,1593,1626,1640
+ switchport trunk allowed vlan add 1651-1655,1662,1672,1721,1734,1742,1820,1828
+ switchport trunk allowed vlan add 1923,1970,1979,2188,2201,2377,2800,2874,3126
+ switchport trunk allowed vlan add 3487,3489,3553,3561,3615
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ description CYBERSPACE-ASABA-VPLS-INTERNET || 295Mbps
+ switchport trunk allowed vlan 1500,1503,3489
+ switchport mode trunk
+ media-type rj45
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan954
+ no ip address
+!
+interface Vlan1020
+ no ip address
+!
+interface Vlan1029
+ no ip address
+!
+interface Vlan1067
+ no ip address
+!
+interface Vlan1377
+ no ip address
+!
+interface Vlan1462
+ no ip address
+!
+interface Vlan1496
+ no ip address
+!
+interface Vlan1497
+ no ip address
+!
+interface Vlan1501
+ ip address 10.248.249.27 255.255.255.0
+!
+interface Vlan1503
+ no ip address
+!
+interface Vlan1553
+ ip address 41.203.80.188 255.255.255.248
+ shutdown
+!
+interface Vlan1593
+ no ip address
+!
+interface Vlan1626
+ no ip address
+!
+interface Vlan1640
+ ip address 192.168.0.100 255.255.255.0
+!
+interface Vlan1651
+ no ip address
+!
+interface Vlan2057
+ ip address 192.168.49.2 255.255.255.0
+!
+interface Vlan2377
+ ip address 41.203.91.141 255.255.255.248
+!
+interface Vlan2800
+ ip address 192.168.1.2 255.255.255.0
+!
+interface Vlan3126
+ ip address 172.35.30.197 255.255.255.0
+!
+interface Vlan3487
+ no ip address
+!
+ip default-gateway 10.248.249.1
+ip http server
+ip http secure-server
+snmp-server community globacom RO
+!
+line con 0
+ password Maranellq
+ login
+line vty 0 4
+ password Maranellq
+ login
+line vty 5 15
+ login
+!
+end
+
+BS-ASA-901#

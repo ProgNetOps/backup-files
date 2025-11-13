@@ -1,0 +1,372 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:26.06 ? ? /home/mobaxterm ? telnet 10.248.249.83
+Connected to 10.248.249.83.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+BS-ABJ-005-02>en
+Password:
+BS-ABJ-005-02#sh int des
+Interface                      Status         Protocol Description
+Vl1                            up             up
+Vl1501                         up             up
+Vl1818                         up             up
+Vl2324                         up             up
+Vl2999                         up             up
+Fa0/1                          down           down     FREE PORT
+Fa0/2                          down           down     SW GLOBAL GARKI ABUJA
+Fa0/3                          down           down     ALFA-O&o-INT-TOTAL
+Fa0/4                          admin down     down     CET-POWER-INT
+Fa0/5                          up             up       SLOVAK SLOCAK EMBASSY INT FIB LM
+Fa0/6                          down           down     BAD PORT
+Fa0/7                          up             up       WEMA-BANK-DUNOKOFIA-LL-NERA
+Fa0/8                          up             up       ACCESS-BANK-DURUMI-FIB-LM
+Fa0/9                          up             up       ACCESS BANK JOS STREET FIB-LM
+Fa0/10                         up             up       NIGERIAN-ARMY-RD-MGT
+Fa0/11                         up             up       FCMB ABUJA GARKI (AKINTOLA BLVD)
+Fa0/12                         down           down     NNPC-PENSION-NERA-R
+Fa0/13                         down           down     ABJ005-SAKA18-TPGS_DURUMI
+Fa0/14                         up             up       WEMA-RALPH-SHOD-FIB-LM
+Fa0/15                         up             up       MEDICAL-LAB-SCIENTIST-INT |10M
+Fa0/16                         up             up       VASCON-ABUJA-INT | 20M
+Fa0/17                         down           down     AG PLACID-ABUJA-INT | 50M
+Fa0/18                         admin down     down     IP2AIR-GARKI-INT | 15M
+Fa0/19                         down           down     TPGS-FX6-ABUJA-LL | 10M
+Fa0/20                         up             up       ACCESS BANK ASOKORO | 20M
+Fa0/21                         admin down     down     AFREXIM-ADMIN-INT | 100M
+Fa0/22                         down           down
+Fa0/23                         down           down
+Fa0/24                         down           down
+Gi0/1                          up             up       TO-DCN-M8-RTR-GE-0/1/7
+Gi0/2                          up             up       FIRST-BANK-ABJ STM1-LL-FIB-LM
+BS-ABJ-005-02#   sh run
+Building configuration...
+
+Current configuration : 6512 bytes
+!
+! Last configuration change at 06:11:40 UTC Fri Sep 10 1993
+!
+version 15.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service unsupported-transceiver
+!
+hostname BS-ABJ-005-02
+!
+boot-start-marker
+boot-end-marker
+!
+enable password Maranello
+!
+no aaa new-model
+system mtu routing 1500
+vtp mode transparent
+!
+!
+!
+!
+!
+!
+!
+no ip domain-lookup
+!
+!
+crypto pki trustpoint TP-self-signed-1838143744
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1838143744
+ revocation-check none
+ rsakeypair TP-self-signed-1838143744
+!
+!
+crypto pki certificate chain TP-self-signed-1838143744
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 31383338 31343337 3434301E 170D3933 30333031 30303030
+  35395A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 38333831
+  34333734 3430819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  810087E4 42274483 7512E308 F6A164B4 695910F6 32F91608 A82E8619 334530FD
+  34CB9AB7 C9D151AC 03C4632A 6009E72A 3E0305FB 7683498A CA009F3E B38F533F
+  48A78BB3 DD339479 24F38CED B97EAA69 02F5C986 9EE970E5 8AD8B5FB 59EE3D96
+  5B8B3D45 90E6D2AC 2E22C87B E2F1BE48 3182B570 195F9FAC 418F237C 1366BE70
+  75210203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603
+  551D2304 18301680 1493F7BB 05A65D2E 42E9A53D 96A44053 4223A874 BA301D06
+  03551D0E 04160414 93F7BB05 A65D2E42 E9A53D96 A4405342 23A874BA 300D0609
+  2A864886 F70D0101 05050003 81810010 CC89E553 7B0DC794 F3741F94 1187899C
+  CF38CA24 4C30D007 9CB14BFF 780BA3CA 3C341D8C 5A138A8F A084D424 CDF462C1
+  68BE2642 C67099D2 FB6CFE67 0DD9A3C1 02ED0A80 3D5F6D77 AA39AD12 338F8CB6
+  94660AA9 969B23BB 7E48ECA4 C04486F5 E648E0FA 8396F6DD B7E0A1E7 7F7986EF
+  24F361AE 3AADE39C BF194E68 6A8A2F
+        quit
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 1035
+ name MEDICAL-LAB-SCI-INT
+!
+vlan 1077
+ name IP2AIR-GARKI-INT
+!
+vlan 1249
+ name FIRST-BANK-ABJ-LL
+!
+vlan 1279
+!
+vlan 1324
+ name ALFA-O&o-INT-TOTAL
+!
+vlan 1412
+ name CET-POWER-INT
+!
+vlan 1416
+ name SW-GLOBAL-INT
+!
+vlan 1488
+ name Ceragon-MGT
+!
+vlan 1493
+ name NERA-MGT2
+!
+vlan 1494
+ name nera-mgt-3
+!
+vlan 1495
+ name nera-mgt
+!
+vlan 1497
+ name NERA-MGT
+!
+vlan 1501
+ name BES-SW-MGT
+!
+vlan 1615
+ name VASCON_SOL-ABJ
+!
+vlan 1640
+ name ACCESS-BANK-DURUMI
+!
+vlan 1787
+ name TPGS-FX6-ABUJA
+!
+vlan 1818
+ name ROYALON_HOTELS
+!
+vlan 1819
+ name AG-PLACID-INT
+!
+vlan 1982
+ name SAPHITTAL-LIMITED-ABUJA
+!
+vlan 2234
+ name AFREXIM-ADMIN-INT
+!
+vlan 2324
+ name ABJ005-SAKA18-TPGS_DURUMI
+!
+vlan 2810
+ name SLOCAK-EMBASSY-INT
+!
+vlan 2999
+ name FCMB-NERA
+!
+vlan 3225
+ name ACCESS-ASOKORO-L3
+!
+vlan 3370
+ name WEMA-BANK-DUNOKOFIA
+!
+vlan 3386
+ name WEMA-RALPH-SHOD
+!
+vlan 3421
+ name NNPC-PENSION-NERA-R
+lldp run
+!
+!
+class-map match-all DURUMI
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+ description FREE PORT
+!
+interface FastEthernet0/2
+ description SW GLOBAL GARKI ABUJA
+ switchport access vlan 1416
+ switchport mode access
+!
+interface FastEthernet0/3
+ description ALFA-O&o-INT-TOTAL
+ switchport access vlan 1324
+ switchport mode access
+!
+interface FastEthernet0/4
+ description CET-POWER-INT
+ switchport access vlan 1412
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/5
+ description SLOVAK SLOCAK EMBASSY INT FIB LM
+ switchport access vlan 2810
+ switchport mode access
+!
+interface FastEthernet0/6
+ description BAD PORT
+ switchport access vlan 3386
+ switchport mode access
+!
+interface FastEthernet0/7
+ description WEMA-BANK-DUNOKOFIA-LL-NERA
+ switchport trunk allowed vlan 3370
+ switchport mode trunk
+!
+interface FastEthernet0/8
+ description ACCESS-BANK-DURUMI-FIB-LM
+ switchport access vlan 1640
+ switchport mode access
+!
+interface FastEthernet0/9
+ description ACCESS BANK JOS STREET FIB-LM
+ switchport access vlan 1640
+ switchport mode access
+!
+interface FastEthernet0/10
+ description NIGERIAN-ARMY-RD-MGT
+ switchport trunk allowed vlan 1493
+ switchport mode trunk
+!
+interface FastEthernet0/11
+ description FCMB ABUJA GARKI (AKINTOLA BLVD)
+ switchport trunk allowed vlan 1497,2999
+ switchport mode trunk
+!
+interface FastEthernet0/12
+ description NNPC-PENSION-NERA-R
+ switchport trunk allowed vlan 1494,3421
+ switchport mode trunk
+!
+interface FastEthernet0/13
+ description ABJ005-SAKA18-TPGS_DURUMI
+ switchport access vlan 2324
+ switchport mode access
+!
+interface FastEthernet0/14
+ description WEMA-RALPH-SHOD-FIB-LM
+ switchport access vlan 3386
+ switchport mode access
+!
+interface FastEthernet0/15
+ description MEDICAL-LAB-SCIENTIST-INT |10M
+ switchport trunk allowed vlan 1035,1115,1497
+ switchport mode trunk
+!
+interface FastEthernet0/16
+ description VASCON-ABUJA-INT | 20M
+ switchport access vlan 1615
+ switchport mode access
+!
+interface FastEthernet0/17
+ description AG PLACID-ABUJA-INT | 50M
+ switchport trunk allowed vlan 1488,1819
+ switchport mode trunk
+!
+interface FastEthernet0/18
+ description IP2AIR-GARKI-INT | 15M
+ switchport access vlan 1077
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/19
+ description TPGS-FX6-ABUJA-LL | 10M
+ switchport access vlan 1787
+ switchport mode access
+!
+interface FastEthernet0/20
+ description ACCESS BANK ASOKORO | 20M
+ switchport access vlan 1640
+ switchport mode access
+ spanning-tree bpdufilter enable
+!
+interface FastEthernet0/21
+ description AFREXIM-ADMIN-INT | 100M
+ switchport access vlan 2234
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+ switchport trunk allowed vlan 1501
+ switchport mode trunk
+!
+interface FastEthernet0/24
+ switchport access vlan 1501
+ switchport mode access
+!
+interface GigabitEthernet0/1
+ description TO-DCN-M8-RTR-GE-0/1/7
+ switchport mode trunk
+ spanning-tree bpdufilter enable
+!
+interface GigabitEthernet0/2
+ description FIRST-BANK-ABJ STM1-LL-FIB-LM
+ switchport access vlan 1249
+ switchport mode access
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan1501
+ ip address 10.248.249.83 255.255.255.0
+!
+interface Vlan1818
+ no ip address
+!
+interface Vlan2324
+ ip address 1.1.1.1 255.255.255.0
+!
+interface Vlan2999
+ no ip address
+!
+ip default-gateway 10.248.249.1
+ip http server
+ip http secure-server
+!
+snmp-server community globacom RO
+!
+!
+line con 0
+line vty 0 4
+ password Maranello
+ login
+line vty 5 15
+ password Maranello
+ login
+!
+end
+
+BS-ABJ-005-02#

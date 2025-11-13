@@ -1,0 +1,339 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 08:09.38 ? ? /home/mobaxterm ? telnet 10.248.246.198
+Connected to 10.248.246.198.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<ENT-SW-GUS004-S3700>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-SW-GUS004-S3700]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      down    down     HOMELSAT-NIG-ARMY-ZAMFARA
+Eth0/0/2                      down    down     AA TECH ZAMFARA STATE GOVT HOUSE
+Eth0/0/3                      up      up       STANBIC IBTC BANK GUSAU
+Eth0/0/4                      up      up       POLARIS BANK CANTEEN ROAD GUSAU
+Eth0/0/5                      down    down     DPR GUSAU | 8MB INTERNET
+Eth0/0/6                      up      up       DIAMOND BANK GUSAU
+Eth0/0/7                      up      up       UNION BANK GUSAU
+Eth0/0/8                      down    down     FEDERAL UNIVERSITY GUSAU | 30MB I
+                                               NTERNET
+Eth0/0/9                      down    down     FIRS FUTUA MPLS FUN501-FUN004-FUN
+                                               002
+Eth0/0/10                     down    down     BS CERAGON MGT
+Eth0/0/11                     up      up       SENTIENT FBN KAURA NAMODA | 2MB L
+                                               L
+Eth0/0/12                     up      up       VDT GUSAU INTERNET
+Eth0/0/13                     up      up       NNPC RETAIL STATION GUSAU
+Eth0/0/14                     up      up       GLOWORLD GUSAU
+Eth0/0/15                     up      up       NNPC DEPOT GUSAU
+Eth0/0/16                     down    down     INEC GUSAU
+Eth0/0/17                     down    down     BRINKS GUSAU ZAMFARA
+Eth0/0/18                     up      up       ACCESS BANK KAURA
+Eth0/0/19                     down    down     VODACOM 56 ISA SOKOTO VLAN 1409
+Eth0/0/20                     down    down     WHO ZAMFARA INTERNET
+Eth0/0/21                     down    down     CONOIL GUSAU
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     up      up       TRUNK TO OSN | GUS004 | VODACOM F
+                                               MB TALATA
+Eth0/0/24                     down    down     SWITCH MGT
+GE0/0/1                       up      up       UPLINK TO DCN IP/MPLS GE2/1/6
+GE0/0/2                       up      up       FEDERAL UNIVERSITY GUSAU INTERNET
+                                                GE-PORT | FIBER LM
+GE0/0/3                       down    down     HUAWEI, Quidway Series, GigabitEt
+                                               hernet0/0/3 Interface
+GE0/0/4                       down    down     HUAWEI, Quidway Series, GigabitEt
+                                               hernet0/0/4 Interface
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif802                     up      up       HUAWEI, Quidway Series, Vlanif802
+                                                Interface
+[ENT-SW-GUS004-S3700]  dis cur
+#
+!Software Version V100R006C05
+ sysname ENT-SW-GUS004-S3700
+#
+ vlan batch 66 224 252 258 525 802 910 1283 1403 1409
+ vlan batch 1488 1494 1497 to 1498 1501 1546 to 1549 1586 1640 1647 to 1648 1662 1685
+ vlan batch 1901 1991 1993 2123 2125 2254 2341 2423 2430 2824
+ vlan batch 3035 3126 3162 3318 3441 3455
+#
+vlan 224
+ description FIRS-FUNTUA
+vlan 252
+ description VDT-GUSAU
+vlan 258
+ description VDT-ABUJA-SOKOTO
+vlan 525
+ description AA-TECH
+vlan 802
+ description SWITCH-MGT
+vlan 910
+ description DPR-VPLS
+vlan 1283
+ description HOMELSAT-NIG-ARMY
+vlan 1403
+ description VODA-TALATA
+vlan 1409
+ description VODACOM-ISA-SOKOTO
+vlan 1488
+ description CERAGON-IP20-MGT
+vlan 1494
+ description NNPC-NERA-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1498
+ description BS-CERAGON-MGT
+vlan 1546
+ description FIRS-GUSAU
+vlan 1547
+ description FIRS-BIRNIN-KEBBI
+vlan 1549
+ description NBC-SOKOTO
+vlan 1586
+ description UNION-BANK-GUSAU
+vlan 1640
+ description ACCESS-BANK-VPLS
+vlan 1647
+ description INEC-GUSAU
+vlan 1648
+ description ANSAR-TECHNOLOGIES
+vlan 1662
+ description FIRS-SOKOTO
+vlan 1685
+ description SENTIENT-FBN-KAURA
+vlan 1901
+ description VDT-GUSAU-INTERNET
+vlan 1991
+ description UNION-BANK-SOKOTO-MAIN
+vlan 1993
+ description UNION-BANK-KEBBI
+vlan 2123
+ description FEDERAL-UNIVERSITY-GUSAU
+vlan 2125
+ description DPR-GUSAU
+vlan 2341
+ description TEST-MULTIPLEVLAN
+vlan 2423
+ description STANBIC-IBTC-BANK-GUSAU
+vlan 2430
+ description CONOIL-GUSAU
+vlan 2824
+ description BRINKS-GUSAU-ZAMFARA
+vlan 3035
+ description SKYE-BANK
+vlan 3126
+ description DIAMOND-BANK-VPLS
+vlan 3162
+ description GLOWORLD-GUSAU
+vlan 3318
+ description NBC-GUSAU
+vlan 3441
+ description NNPC-DEPOT-GUSAU
+vlan 3455
+ description NNPC-RETAIL-STATION-GUSAU
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@Q|f7FxsSADX\[P-h}_bKSnh5%@%@
+ local-user bsnoc privilege level 15
+ local-user bsnoc service-type telnet terminal ssh ftp
+ local-user fabian password cipher %@%@n]KJ:P@*J-w)s!'H[="PTD~t%@%@
+ local-user fabian privilege level 15
+ local-user fabian service-type telnet terminal ssh ftp
+#
+interface Vlanif1
+#
+interface Vlanif802
+ ip address 10.248.246.198 255.255.255.192
+#
+interface Ethernet0/0/1
+ description HOMELSAT-NIG-ARMY-ZAMFARA
+ port link-type access
+ port default vlan 1283
+#
+interface Ethernet0/0/2
+ description AA TECH ZAMFARA STATE GOVT HOUSE
+ port link-type access
+ port default vlan 525
+#
+interface Ethernet0/0/3
+ description STANBIC IBTC BANK GUSAU
+ port link-type access
+ port default vlan 2423
+#
+interface Ethernet0/0/4
+ description POLARIS BANK CANTEEN ROAD GUSAU
+ port link-type access
+ port default vlan 3035
+#
+interface Ethernet0/0/5
+ description DPR GUSAU | 8MB INTERNET
+ port link-type access
+ port default vlan 2125
+#
+interface Ethernet0/0/6
+ description DIAMOND BANK GUSAU
+ port link-type access
+ port default vlan 1640
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/7
+ description UNION BANK GUSAU
+ port link-type access
+ port default vlan 1586
+#
+interface Ethernet0/0/8
+ description FEDERAL UNIVERSITY GUSAU | 30MB INTERNET
+ port link-type access
+ port default vlan 2123
+#
+interface Ethernet0/0/9
+ description FIRS FUTUA MPLS FUN501-FUN004-FUN002
+ port link-type access
+ port default vlan 224
+#
+interface Ethernet0/0/10
+ description BS CERAGON MGT
+ port link-type access
+ port default vlan 1498
+#
+interface Ethernet0/0/11
+ description SENTIENT FBN KAURA NAMODA | 2MB LL
+ port link-type trunk
+ port trunk allow-pass vlan 1685
+#
+interface Ethernet0/0/12
+ description VDT GUSAU INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 1901
+#
+interface Ethernet0/0/13
+ description NNPC RETAIL STATION GUSAU
+ port link-type trunk
+ port trunk allow-pass vlan 1488 to 1489 3455
+#
+interface Ethernet0/0/14
+ description GLOWORLD GUSAU
+ port link-type access
+ port default vlan 3162
+#
+interface Ethernet0/0/15
+ description NNPC DEPOT GUSAU
+ port link-type access
+ port default vlan 3441
+#
+interface Ethernet0/0/16
+ description INEC GUSAU
+ port link-type access
+ port default vlan 1647
+#
+interface Ethernet0/0/17
+ description BRINKS GUSAU ZAMFARA
+ port link-type access
+ port default vlan 2824
+#
+interface Ethernet0/0/18
+ description ACCESS BANK KAURA
+ port link-type trunk
+ port trunk allow-pass vlan 1640
+#
+interface Ethernet0/0/19
+ description VODACOM 56 ISA SOKOTO VLAN 1409
+ port link-type access
+ port default vlan 1409
+#
+interface Ethernet0/0/20
+ description WHO ZAMFARA INTERNET
+ port link-type access
+ port default vlan 2254
+#
+interface Ethernet0/0/21
+ description CONOIL GUSAU
+ port link-type access
+ port default vlan 2430
+#
+interface Ethernet0/0/22
+ port link-type access
+ port default vlan 1501
+#
+interface Ethernet0/0/23
+ description TRUNK TO OSN | GUS004 | VODACOM FMB TALATA
+ port link-type trunk
+ port trunk allow-pass vlan 1403
+#
+interface Ethernet0/0/24
+ description SWITCH MGT
+ port link-type access
+ port default vlan 802
+#
+interface GigabitEthernet0/0/1
+ description UPLINK TO DCN IP/MPLS GE2/1/6
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/2
+ description FEDERAL UNIVERSITY GUSAU INTERNET GE-PORT | FIBER LM
+ port link-type access
+ port default vlan 2123
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/3
+#
+interface GigabitEthernet0/0/4
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.193
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100006E8D
+ snmp-agent community write cipher %@%@Q^"rBfjNzTggYMV1kAJ-`'P2Cpg28WNp~!z]mk2Oy/".'P5`T\h@8.a]=,xrPy+9zM1=P>`'%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[ENT-SW-GUS004-S3700]

@@ -1,0 +1,471 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 07:24.18 ? ? /home/mobaxterm ? telnet 10.248.246.142
+Connected to 10.248.246.142.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-ABA-001>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-ABA-001]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      *down   down     PDS NIGERIA ABA  65MB INTERNET
+Eth0/0/2                      down    down     CERAGON MW SUPERVISION FOR HUAWEI
+                                                MW
+Eth0/0/3                      down    down     !!!!!! SUSPECT BAD !!!!!!!!!!!
+Eth0/0/4                      down    down     ORANGE HEINEKEN ABA
+Eth0/0/5                      down    down     TPGS_AB_ABA005
+Eth0/0/6                      down    down     TPGS ABA-1 5M-INT-CLIENT-ABA005-A
+                                               BA001-GE02 |TPGS-ABA-05 |5M
+Eth0/0/7                      up      up       STANBIC IBTC BANK ABA MAIN - DICN
+                                               ET RADIO | 8MB
+Eth0/0/8                      up      up       UNION ABA FACTORY | ACCESS ABA-OG
+                                               BOR
+Eth0/0/9                      down    down     GLOBUS BANK ABA | 4MB SWIFTTALK R
+                                               ADIO
+Eth0/0/10                     down    down     free
+Eth0/0/11                     *down   down     UNION OKIGWE
+Eth0/0/12                     down    down     FIRS ABA MSTO
+Eth0/0/13                     *down   down     INNOVATION GROWTH
+Eth0/0/14                     down    down     SEVEN UP ABA MPLS LL - CLIENT - A
+                                               BA23-ABA-00
+Eth0/0/15                     *down   down     IP2AIR-ABIA-|4M-INTERNET-CLIENT-A
+                                               BR002-ABA001RTN905 -GE01-ABA001-A
+                                               BA007-RTN950A-IDU-GE02
+Eth0/0/16                     down    down     VODACOM ABA CERAGON_MGT
+Eth0/0/17                     up      up       Trunk to ABA034 | WEMA_ARIARA
+Eth0/0/18                     up      up       HERITAGE BANK AZIKIWE RD, ABA
+Eth0/0/19                     up      up       TPGS-ABA1-TEST
+Eth0/0/20                     up      up       TPGS_AB_ABA005
+Eth0/0/21                     down    down     ZINOX ABA STATE POLYTECNIC
+Eth0/0/22                     up      up       NNPC ABA DEPOT|ACCESS (DIAMOND) A
+                                               BA-OGBOR| OSISIOMA| ABIA STATE UN
+                                               IV| IP2AIR-ALOZIE
+Eth0/0/23                     down    down     GLOWORLD ABA
+Eth0/0/24                     down    down     INTERNET-SOLNS-PZ || 8Mbps
+GE0/0/1                       down    down     GREAT RIVER SYSTEM STM1
+GE0/0/2                       up      up       NIG-BRITISH-UNI-ABA-INT | 500M
+GE0/0/3                       up      up       VDT-ABA-INTERNET-110M
+GE0/0/4                       up      up       UPLINK TO DCN IP/MPLS GE 0/1/6
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif803                     up      up       HUAWEI, Quidway Series, Vlanif803
+                                                Interface
+Vlanif1044                    up      down     HUAWEI, Quidway Series, Vlanif104
+                                               4 Interface
+Vlanif1483                    up      up       HUAWEI, Quidway Series, Vlanif148
+                                               3 Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1640                    up      up       HUAWEI, Quidway Series, Vlanif164
+                                               0 Interface
+Vlanif2153                    up      up       HUAWEI, Quidway Series, Vlanif215
+                                               3 Interface
+Vlanif2312                    up      up       HUAWEI, Quidway Series, Vlanif231
+                                               2 Interface
+Vlanif2423                    up      up       HUAWEI, Quidway Series, Vlanif242
+                                               3 Interface
+Vlanif3319                    up      up       HUAWEI, Quidway Series, Vlanif331
+                                               9 Interface
+Vlanif3389                    up      up       HUAWEI, Quidway Series, Vlanif338
+                                               9 Interface
+Vlanif4015                    up      down     HUAWEI, Quidway Series, Vlanif401
+                                               5 Interface
+[BS-ABA-001]   dis cur
+#
+!Software Version V100R006C05
+ sysname BS-ABA-001
+#
+ vlan batch 20 150 415 521 803 1036 1044 1111 1115 1133
+ vlan batch 1230 1376 1397 1411 1455 1483 1487 1493 to 1498 1500 to 1501 1503
+ vlan batch 1640 1712 1824 1940 1997 to 1999 2153 2202 2312 2411 2423
+ vlan batch 2444 2449 2468 2521 2833 2891 3007 3042 3126 3317 to 3319
+ vlan batch 3389 3412 3507 3918 4015
+#
+ undo http server enable
+ undo http secure-server enable
+#
+vlan 20
+ description CERAGONMW-Super-HUAWEIMW
+vlan 150
+ description TEST
+vlan 415
+ description VDT-ABA-INTERNET-110M
+vlan 521
+ description NBC-ABA
+vlan 803
+ description NEW-SWITCH-MGT
+vlan 1036
+ description EYIMBA-TV
+vlan 1044
+ description IP2AIR-ABIA-|4M-INTERNET
+vlan 1111
+ description is-pz
+vlan 1115
+ description GTBANK-VPLS
+vlan 1133
+ description IP2AIR-ABA-ALOZIE
+vlan 1230
+ description ABIA-STATE-UNIVERSITY
+vlan 1376
+ description TPGS ABA-1
+vlan 1397
+ description PDS NIGERIA ABA
+vlan 1411
+ description CHROME-CONSORTIUM-ENERGY
+vlan 1455
+ description INNOVATION GROWTH
+vlan 1483
+ description TPGS-ABA-05-ABA001
+vlan 1487
+ description CERAGON_MGT
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1494
+ description BS_NNPC_MGT_VLAN
+vlan 1495
+ description BS-NERA-MGT-2
+vlan 1496
+ description CERAGON-MGT-VLAN
+vlan 1497
+ description Nera Management
+vlan 1498
+ description CERAGON_MGT
+vlan 1501
+ description BS-MGT
+vlan 1503
+ description nera
+vlan 1640
+ description ACCESS BANK ABA EZUIKWU LL 2Mb
+vlan 1712
+ description IS_Firsbank_Abiriba
+vlan 1824
+ description Cliford University
+vlan 1940
+ description NIG-BRITISH-UNI-ABA-INT
+vlan 1997
+ description UNION-PHC-RD
+vlan 1998
+ description UNION-UMUOCHAM
+vlan 1999
+ description UNION-OKIGWE
+vlan 2153
+ description GLOWORLD-ABA
+vlan 2202
+ description GREAT-RIVER-SYSTEM-INTERNET
+vlan 2312
+ description ORANGE-HEINEKEN-ABA
+vlan 2411
+ description CHROME-CONSORTIUM-ENERGY
+vlan 2423
+ description STANBIC-IBTC-VPLS
+vlan 2444
+ description CONOIL-ABA
+vlan 2449
+ description UNION-BANK-ABA-FACTORY-RD
+vlan 2468
+ description SEVEN UP LL MPLS
+vlan 2521
+ description INEC-ABA
+vlan 2833
+ description BOA-UMUAHIA
+vlan 2891
+ description GLOBUS BANK ABA
+vlan 3007
+ description FirstBank_Abriba
+vlan 3042
+ description UBA-VPLS
+vlan 3126
+ description DIAMOND-VPLS
+vlan 3317
+ description FIRS-MSTO-ABA
+vlan 3318
+ description ZINOX ABA STATE POLYTECNIC
+vlan 3319
+ description Catholic Institute of West Africa
+vlan 3389
+ description Wema-Ariara
+vlan 3412
+ description HERITAGE-BANK-ABA
+vlan 3507
+ description NNPC-ABA-DEPOT
+vlan 3918
+ description Gloworld Abakalilki
+vlan 4015
+ description VDT-ABA-INTERNET
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user ben password cipher %@%@a6ojC%y{3Mc{yl#hB~Y.r=T#%@%@
+ local-user ben privilege level 15
+ local-user ope password cipher %@%@va,zPaW$"7m_\TGB=MYFV;=N%@%@
+ local-user ope privilege level 15
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@_7r(HPv^FN>AlX!ak5ONXMR>%@%@
+ local-user bsnoc privilege level 15
+ local-user chuks password cipher %@%@PT^C%&f/6*hR()S=>@]Te<"V%@%@
+ local-user chuks privilege level 15
+ local-user moses password cipher %@%@{"LEY(ER;%H<4dV;.^wUr<c&%@%@
+ local-user moses privilege level 15
+ local-user donald password cipher %@%@z&ei.BLt!9UYC/26i3XMr<dL%@%@
+ local-user donald privilege level 15
+ local-user fabian password cipher %@%@:u*GCUPa/S`#aUGLa'$Q(;B3%@%@
+ local-user fabian privilege level 15
+ local-user naveen password cipher %@%@dn$QO>+01.fueoF7E7H2V;Ca%@%@
+ local-user naveen privilege level 15
+ local-user rthphc password cipher %@%@XlGFE9G7/0VI~lUM}|I/O)JQ%@%@
+ local-user rthphc privilege level 3
+ local-user kelechi password cipher %@%@{Hb!;/w8s$T}6'+O4Kh-V;B'%@%@
+ local-user kelechi privilege level 15
+ local-user solarch password cipher %@%@]iAoI\|e<Li>Y6>'*spDO)HV%@%@
+ local-user solarch privilege level 3
+ local-user adewunmi password cipher %@%@-ePGByy2I.iJBN=Z,6=%XMQk%@%@
+ local-user adewunmi privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif803
+ ip address 10.248.246.142 255.255.255.192
+#
+interface Vlanif1044
+#
+interface Vlanif1483
+ ip address 192.168.83.2 255.255.255.0
+#
+interface Vlanif1501
+ ip address 10.248.249.82 255.255.255.0
+#
+interface Vlanif1640
+ ip address 10.230.230.150 255.255.255.0
+#
+interface Vlanif2153
+ ip address 7.7.7.1 255.255.255.252
+#
+interface Vlanif2312
+ ip address 1.0.1.1 255.255.255.0
+#
+interface Vlanif2423
+ ip address 172.30.30.100 255.255.255.0
+#
+interface Vlanif3319
+ ip address 41.203.83.69 255.255.255.248
+#
+interface Vlanif3389
+ ip address 172.19.10.117 255.255.255.252
+#
+interface Vlanif4015
+#
+interface Ethernet0/0/1
+ description PDS NIGERIA ABA  65MB INTERNET
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1397 1495
+#
+interface Ethernet0/0/2
+ description CERAGON MW SUPERVISION FOR HUAWEI MW
+ port link-type access
+ port default vlan 20
+#
+interface Ethernet0/0/3
+ description !!!!!! SUSPECT BAD !!!!!!!!!!!
+#
+interface Ethernet0/0/4
+ description ORANGE HEINEKEN ABA
+ port link-type dot1q-tunnel
+ port default vlan 2312
+#
+interface Ethernet0/0/5
+ description TPGS_AB_ABA005
+ port link-type access
+ port default vlan 1483
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/6
+ description TPGS ABA-1 5M-INT-CLIENT-ABA005-ABA001-GE02 |TPGS-ABA-05 |5M
+ port link-type trunk
+ port trunk allow-pass vlan 1376
+#
+interface Ethernet0/0/7
+ description STANBIC IBTC BANK ABA MAIN - DICNET RADIO | 8MB
+ port link-type access
+ port default vlan 2423
+#
+interface Ethernet0/0/8
+ description UNION ABA FACTORY | ACCESS ABA-OGBOR
+ port link-type trunk
+ port trunk allow-pass vlan 2449 3126 3319
+#
+interface Ethernet0/0/9
+ description GLOBUS BANK ABA | 4MB SWIFTTALK RADIO
+ port link-type access
+ port default vlan 2891
+#
+interface Ethernet0/0/10
+ description free
+ port link-type access
+#
+interface Ethernet0/0/11
+ description UNION OKIGWE
+ shutdown
+ port link-type access
+ port default vlan 1999
+#
+interface Ethernet0/0/12
+ description FIRS ABA MSTO
+ port link-type access
+ port default vlan 3317
+#
+interface Ethernet0/0/13
+ description INNOVATION GROWTH
+ shutdown
+ port link-type access
+ port default vlan 1455
+#
+interface Ethernet0/0/14
+ description SEVEN UP ABA MPLS LL - CLIENT - ABA23-ABA-00
+ port link-type trunk
+ port trunk allow-pass vlan 1496 2468
+#
+interface Ethernet0/0/15
+ description IP2AIR-ABIA-|4M-INTERNET-CLIENT-ABR002-ABA001RTN905 -GE01-ABA001-ABA007-RTN950A-IDU-GE02
+ shutdown
+ port link-type access
+ port default vlan 1044
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/16
+ description VODACOM ABA CERAGON_MGT
+ port link-type access
+ port default vlan 1500
+#
+interface Ethernet0/0/17
+ description Trunk to ABA034 | WEMA_ARIARA
+ port link-type trunk
+ port trunk allow-pass vlan 1495 3389
+#
+interface Ethernet0/0/18
+ description HERITAGE BANK AZIKIWE RD, ABA
+ port link-type trunk
+ port trunk allow-pass vlan 3412
+#
+interface Ethernet0/0/19
+ description TPGS-ABA1-TEST
+ port link-type access
+ port default vlan 1376
+#
+interface Ethernet0/0/20
+ description TPGS_AB_ABA005
+ port link-type access
+ port default vlan 1483
+ jumboframe enable 13296
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/21
+ description ZINOX ABA STATE POLYTECNIC
+ port link-type trunk
+ port trunk allow-pass vlan 1493 3318
+#
+interface Ethernet0/0/22
+ description NNPC ABA DEPOT|ACCESS (DIAMOND) ABA-OGBOR| OSISIOMA| ABIA STATE UNIV| IP2AIR-ALOZIE
+ port link-type trunk
+ port trunk allow-pass vlan 1133 1487 1494 1497 1640 3126 3507
+#
+interface Ethernet0/0/23
+ description GLOWORLD ABA
+ port link-type access
+ port default vlan 2153
+#
+interface Ethernet0/0/24
+ description INTERNET-SOLNS-PZ || 8Mbps
+ port link-type trunk
+ port trunk allow-pass vlan 1111 1503
+#
+interface GigabitEthernet0/0/1
+ description GREAT RIVER SYSTEM STM1
+ port link-type access
+ port default vlan 2202
+#
+interface GigabitEthernet0/0/2
+ description NIG-BRITISH-UNI-ABA-INT | 500M
+ port link-type access
+ port default vlan 1940
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/3
+ description VDT-ABA-INTERNET-110M
+ port link-type access
+ port default vlan 4015
+ jumboframe enable 13296
+ undo negotiation auto
+ combo-port copper
+#
+interface GigabitEthernet0/0/4
+ description UPLINK TO DCN IP/MPLS GE 0/1/6
+ port link-type trunk
+ port trunk allow-pass vlan 20 521 803 997 1036 1044 1111 1115 1133 1230
+ port trunk allow-pass vlan 1376 1397 1411 1455 1483 1487 1493 to 1498 1500 to 1501 1503 1640
+ port trunk allow-pass vlan 1712 1824 1940 1997 to 1999 2153 2202 2312 2411 2423 2444
+ port trunk allow-pass vlan 2449 2468 2507 2521 2833 2891 3042 3126 3317 to 3319 3389
+ port trunk allow-pass vlan 3412 3507 4015
+ jumboframe enable 13296
+ port media type copper
+     undo negotiation auto
+ port media type fiber
+     undo negotiation auto
+ combo-port fiber
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.129
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F000001000076D8
+ snmp-agent community read cipher %@%@W)~S&u[>(3R-N9HaY+9NY~{S.$HTQM'fh87ZL^P@a^X>~{VY"q!55,<0hX`=_PB#YYuP{_Y~%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode password
+ user privilege level 15
+ set authentication password cipher %@%@c(SkEZ`<EJ'K3/O\JbBQ,5%O(WjNPMS%;0-*_d6T4'}E5%R,%@%@
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[BS-ABA-001]

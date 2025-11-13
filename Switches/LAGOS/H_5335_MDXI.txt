@@ -1,0 +1,462 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 08:09.39 ? ? /home/mobaxterm ? telnet 10.248.243.2
+Connected to 10.248.243.2.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:Entering character mode
+Escape character is '^]'.
+bsnoc
+Password:
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2023-12-01 15:46:34+00:00.
+Info: Lastest accessed IP: 192.168.6.5  Time: 2023-11-30 21:33:42  Failed: 0
+
+Info: Smart-upgrade is currently disabled. Enable Smart-upgrade to get recommended version information.
+<GLO-ENTERPRISE-MDXI>sys
+Enter system view, return user view with Ctrl+Z.
+[GLO-ENTERPRISE-MDXI]dis int des
+PHY: Physical
+*down: administratively down
+#down: LBDT down
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(dl): DLDP down
+(lb): LBDT block
+(o): Observe-port forwarding down
+Interface                     PHY     Protocol Description
+GE0/0/1                       up      up       ##CONNECTION-STANBIC-PENSION##
+GE0/0/2                       up      up       ##CONNECTION-DANGOTE##
+GE0/0/3                       up      up       CONNECTION-TO-POLARIS-MAINONE
+GE0/0/4                       up      up       CONNECTION-FCMB-MAINONE
+GE0/0/5                       down    down     CONNECTION-GLOBACOM-SWITCH-AT-ADDAX-RACK
+GE0/0/6                       up      up       CONNECTION-STANBIC-IBTC-BANK-MAINONE
+GE0/0/7                       up      up       CONNECTION-WEMA-DRC-MAINONE
+GE0/0/8                       down    down     CONNECTION-SENTIENT-FIDELITY | FIDELITY
+GE0/0/9                       up      up       RIVERSIDE-TELECOM | 100M
+GE0/0/10                      down    down     NIBS-INT |310M
+GE0/0/11                      up      up       CONNECTION-PREMIUM-BANK-MDXI
+GE0/0/12                      down    down     WESTMETRO-OPTIMUS-PHC-MDXI-LL | 20M
+GE0/0/13                      down    down
+GE0/0/14                      down    down
+GE0/0/15                      down    down
+GE0/0/16                      down    down
+GE0/0/17                      down    down
+GE0/0/18                      down    down
+GE0/0/19                      down    down
+GE0/0/20                      down    down
+GE0/0/21                      down    down
+GE0/0/22                      down    down
+GE0/0/23                      down    down
+GE0/0/24                      down    down
+GE0/0/25                      down    down     SWITCH-MGT
+GE0/0/26                      down    down
+GE0/0/27                      down    down
+GE0/0/28                      down    down
+GE0/0/29                      down    down
+GE0/0/30                      down    down
+GE0/0/31                      down    down
+GE0/0/32                      down    down
+MEth0/0/1                     down    down
+NULL0                         up      up(s)
+Vlanif1                       up      down
+Vlanif315                     up      up
+Vlanif317                     up      up
+Vlanif509                     up      up
+Vlanif804                     up      up
+Vlanif805                     up      up
+Vlanif808                     up      up
+Vlanif1323                    up      up
+Vlanif1501                    up      up
+Vlanif1507                    up      up       ENT-SW-MGT-3
+Vlanif1573                    up      up
+Vlanif1848                    up      up
+Vlanif1895                    up      up
+Vlanif1898                    up      up
+Vlanif2423                    up      up
+Vlanif2999                    up      up
+Vlanif3035                    up      up
+XGE0/0/1                      up      up       UPLINK-GLO1-10G-ROUTER-PORT(3/0/1)
+XGE0/0/2                      down    down
+XGE0/0/3                      down    down
+XGE0/0/4                      down    down
+[GLO-ENTERPRISE-MDXI]   dis cur
+!Software Version V200R020C00SPC300
+#
+sysname GLO-ENTERPRISE-MDXI
+#
+vlan batch 31 100 to 101 165 200 310 to 315 317 400 509 804 to 805 808
+vlan batch 1323 1501 1507 1573 1848 1881 1895 1898 2423 2710 to 2712
+vlan batch 2999 3035 3111 to 3115 3181 3390 3393 3668
+#
+stp bpdu-protection
+#
+authentication-profile name default_authen_profile
+authentication-profile name dot1x_authen_profile
+authentication-profile name dot1xmac_authen_profile
+authentication-profile name mac_authen_profile
+authentication-profile name multi_authen_profile
+authentication-profile name portal_authen_profile
+#
+telnet server enable
+telnet server-source all-interface
+#
+http server-source -i MEth0/0/1
+#
+diffserv domain default
+#
+radius-server template default
+#
+pki realm default
+ certificate-check none
+#
+free-rule-template name default_free_rule
+#
+portal-access-profile name portal_access_profile
+#
+vlan 31
+ description GLO-STANBIC-SW-MGT
+vlan 100
+ description ADDAX-HQ-LL
+vlan 101
+ description NIBS-MDXI-INT
+vlan 165
+ description ADDAX-ANTON-ABJ-Q-IN-Q
+vlan 200
+ description DANGOTE-L3-MDIX-HQ
+vlan 310
+ description STANBIC-PEN-ENUGU
+vlan 311
+ description STANBIC-PEN-KADUNA
+vlan 312
+ description STANBIC-PEN-IBADAN
+vlan 313
+ description STANBIC-PEN-MINNA
+vlan 314
+ description STANBIC-PEN-BENIN
+vlan 315
+ description STANBIC-PEN-KATSINA
+vlan 317
+ description STANBIC-PEN-LOKOJA
+vlan 400
+ description DANGOTE-INT
+vlan 509
+ description HERITAGE-BANK-MDXI
+vlan 804
+ description SWITCH-MGT-3
+vlan 805
+ description SWITCH-MGT2
+vlan 808
+ description SWITCH-TEMP-MGT
+vlan 1323
+ description DANGOTE-OBAJANA-FIBER
+vlan 1501
+ description SWITCH-MGT-4
+vlan 1507
+ description ENT-SW-MGT-3
+vlan 1573
+ description PREMIUM-BANK-LL
+vlan 1848
+ description SENTIENT-FIDELITY-MDXI
+vlan 1881
+ description FIDELITY-BANK
+vlan 1895
+ description DANGOTE-OBAJANA-RADIO
+vlan 1898
+ description DANGOTE-IBESE
+vlan 2423
+ description STANBIC-IBTC-BANK
+vlan 2710
+ description LLC-75MB
+vlan 2711
+ description INTERNET-75MB
+vlan 2712
+ description INTERNET-10MB
+vlan 2999
+ description FCMB-MAINEONE
+vlan 3035
+ description POLARIS-MAINONE
+vlan 3111
+ description STANBIC-PEN-1
+vlan 3112
+ description STANBIC-PEN-2
+vlan 3113
+ description STANBIC-PEN-3
+vlan 3114
+ description STANBIC-PEN-4
+vlan 3115
+ description STANBIC-PEN-5
+vlan 3181
+ description RIVERSIDE-SIP-100M
+vlan 3390
+ description WEMA-DRC-MAINONE
+vlan 3393
+ description WESTMETRO-OPTIMUS-PHC-MDXI-LL
+vlan 3668
+ description WESTMETRO-OPTIMUS-CWG-LL
+#
+aaa
+ authentication-scheme default
+  authentication-mode local
+ authentication-scheme radius
+  authentication-mode radius
+ authorization-scheme default
+  authorization-mode local
+ accounting-scheme default
+  accounting-mode none
+ local-aaa-user password policy administrator
+  password history record number 0
+  password expire 0
+ domain default
+  authentication-scheme radius
+  accounting-scheme default
+  radius-server default
+ domain default_admin
+  authentication-scheme default
+  accounting-scheme default
+ undo local-user admin
+ local-user bsnoc password irreversible-cipher $1c$q`NbTG%`0=$r(YLI\_ZTFId`DY6-.h2@s%%@Ke&b~="$@Wuv@a;$
+ local-user bsnoc privilege level 3
+ local-user bsnoc service-type telnet terminal ssh ftp
+ local-user fabian password irreversible-cipher $1c$DdFt;baBfS$Yy3+FOD<p~eEIk*Ev^6"tVZ&H:CWg$-Us}14\=@#$
+ local-user fabian privilege level 3
+ local-user fabian service-type telnet terminal ftp
+ local-user mathew1 password irreversible-cipher $1c$tttJ4_ABs"$kx!LB|9{TML\7/<"=06&]cfoW-2CB%.D8-WCoYPA$
+ local-user mathew1 privilege level 3
+ local-user mathew1 service-type telnet terminal ssh ftp
+#
+interface Vlanif1
+#
+interface Vlanif315
+ ip address 31.31.31.31 255.255.255.0
+#
+interface Vlanif317
+ ip address 192.168.37.1 255.255.255.0
+#
+interface Vlanif509
+ ip address 12.12.12.15 255.255.255.0
+#
+interface Vlanif804
+ ip address 10.248.246.119 255.255.255.192
+#
+interface Vlanif805
+ ip address 10.248.246.33 255.255.255.192
+#
+interface Vlanif808
+ ip address 10.248.244.2 255.255.255.248
+#
+interface Vlanif1323
+ ip address 2.2.2.3 255.255.255.0
+#
+interface Vlanif1501
+ mtu 9216
+ ip address 10.248.249.169 255.255.255.0
+#
+interface Vlanif1507
+ description ENT-SW-MGT-3
+ ip address 10.248.243.2 255.255.255.0
+#
+interface Vlanif1573
+ ip address 44.44.44.2 255.255.255.0
+#
+interface Vlanif1848
+ ip address 78.78.78.78 255.255.255.0
+#
+interface Vlanif1895
+ ip address 192.168.70.1 255.255.255.0
+#
+interface Vlanif1898
+ ip address 3.3.3.4 255.255.255.0
+#
+interface Vlanif2423
+ ip address 172.30.30.249 255.255.255.0
+#
+interface Vlanif2999
+ ip address 172.22.6.240 255.255.255.0
+#
+interface Vlanif3035
+ ip address 4.4.4.2 255.255.255.0
+#
+interface MEth0/0/1
+ ip address 192.168.1.253 255.255.255.0
+#
+interface GigabitEthernet0/0/1
+ undo negotiation auto
+ description ##CONNECTION-STANBIC-PENSION##
+ port link-type trunk
+ port trunk allow-pass vlan 3 31 310 to 315 317 2710 to 2712 3111 to 3115
+#
+interface GigabitEthernet0/0/2
+ undo negotiation auto
+ description ##CONNECTION-DANGOTE##
+ port link-type trunk
+ port trunk allow-pass vlan 400 1323 1895 1898
+#
+interface GigabitEthernet0/0/3
+ description CONNECTION-TO-POLARIS-MAINONE
+ port link-type trunk
+ port trunk allow-pass vlan 3035
+#
+interface GigabitEthernet0/0/4
+ description CONNECTION-FCMB-MAINONE
+ port link-type trunk
+ port trunk allow-pass vlan 2999
+#
+interface GigabitEthernet0/0/5
+ undo negotiation auto
+ description CONNECTION-GLOBACOM-SWITCH-AT-ADDAX-RACK
+ port link-type trunk
+ port trunk allow-pass vlan 100 165 1501
+#
+interface GigabitEthernet0/0/6
+ description CONNECTION-STANBIC-IBTC-BANK-MAINONE
+ port link-type trunk
+ port trunk allow-pass vlan 2423
+ stp bpdu-filter enable
+#
+interface GigabitEthernet0/0/7
+ undo negotiation auto
+ description CONNECTION-WEMA-DRC-MAINONE
+ port link-type trunk
+ port trunk allow-pass vlan 3390
+#
+interface GigabitEthernet0/0/8
+ undo negotiation auto
+ description CONNECTION-SENTIENT-FIDELITY | FIDELITY
+ port link-type trunk
+ port trunk allow-pass vlan 1848 1881
+#
+interface GigabitEthernet0/0/9
+ undo negotiation auto
+ description RIVERSIDE-TELECOM | 100M
+ port link-type trunk
+ port trunk allow-pass vlan 3181
+#
+interface GigabitEthernet0/0/10
+ description NIBS-INT |310M
+ port link-type trunk
+ port trunk allow-pass vlan 101
+#
+interface GigabitEthernet0/0/11
+ undo negotiation auto
+ description CONNECTION-PREMIUM-BANK-MDXI
+ port link-type trunk
+ port trunk allow-pass vlan 1573
+#
+interface GigabitEthernet0/0/12
+ undo negotiation auto
+ description WESTMETRO-OPTIMUS-PHC-MDXI-LL | 20M
+ port link-type trunk
+ port trunk allow-pass vlan 3393 3668
+#
+interface GigabitEthernet0/0/13
+#
+interface GigabitEthernet0/0/14
+#
+interface GigabitEthernet0/0/15
+#
+interface GigabitEthernet0/0/16
+#
+interface GigabitEthernet0/0/17
+#
+interface GigabitEthernet0/0/18
+#
+interface GigabitEthernet0/0/19
+#
+interface GigabitEthernet0/0/20
+#
+interface GigabitEthernet0/0/21
+#
+interface GigabitEthernet0/0/22
+#
+interface GigabitEthernet0/0/23
+#
+interface GigabitEthernet0/0/24
+#
+interface GigabitEthernet0/0/25
+ description SWITCH-MGT
+ port link-type access
+ port default vlan 805
+#
+interface GigabitEthernet0/0/26
+ qos lr outbound cir 2000 cbs 4000
+ qos lr inbound cir 2000 cbs 4000
+#
+interface GigabitEthernet0/0/27
+#
+interface GigabitEthernet0/0/28
+#
+interface GigabitEthernet0/0/29
+#
+interface GigabitEthernet0/0/30
+#
+interface GigabitEthernet0/0/31
+#
+interface GigabitEthernet0/0/32
+#
+interface XGigabitEthernet0/0/1
+ description UPLINK-GLO1-10G-ROUTER-PORT(3/0/1)
+ port link-type trunk
+ port trunk allow-pass vlan 3 31 100 to 101 165 200 310 to 315 317 400 509 804 to 805
+ port trunk allow-pass vlan 808 1323 1501 1507 1573 1848 1881 1895 1898 2423
+ port trunk allow-pass vlan 2710 to 2712 2999 3035 3111 to 3115 3181 3390 3668
+#
+interface XGigabitEthernet0/0/2
+#
+interface XGigabitEthernet0/0/3
+#
+interface XGigabitEthernet0/0/4
+#
+interface NULL0
+#
+undo icmp name timestamp-request receive
+#
+ip route-static 0.0.0.0 0.0.0.0 10.248.243.1
+#
+snmp-agent
+snmp-agent local-engineid 800007DB039400B0E46342
+snmp-agent community read cipher %^%#;[IYW.ukc"E)$jVko.~#y|L_Ab3iq!E8,8$[<KYXhM<#WrCL1WGLd7XC!8WI.''(N'G1":|0X+ZN7_.A%^%#
+snmp-agent sys-info version all
+snmp-agent protocol source-status all-interface
+snmp-agent protocol source-status ipv6 all-interface
+#
+ssh server cipher aes256_ctr aes128_ctr
+ssh server hmac sha2_256
+ssh server key-exchange dh_group16_sha512 dh_group15_sha512 dh_group14_sha256 dh_group_exchange_sha256
+ssh client cipher aes256_ctr aes128_ctr
+ssh client hmac sha2_256
+ssh client key-exchange dh_group16_sha512 dh_group15_sha512 dh_group14_sha256 dh_group_exchange_sha256
+ssh server dh-exchange min-len 2048
+#
+user-interface con 0
+ authentication-mode aaa
+user-interface vty 0 4
+ authentication-mode aaa
+ protocol inbound all
+user-interface vty 16 20
+#
+dot1x-access-profile name dot1x_access_profile
+#
+mac-access-profile name mac_access_profile
+#
+ops
+#
+return
+[GLO-ENTERPRISE-MDXI]
