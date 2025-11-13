@@ -1,0 +1,900 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 13:32.10 ? ? /home/mobaxterm ? telnet 10.248.249.14
+Connected to 10.248.249.14.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Username: bsnoc
+Password:
+GLO-1_PAR901_2960G_1#sh run
+Building configuration...
+
+Current configuration : 14924 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+service unsupported-transceiver
+!
+hostname GLO-1_PAR901_2960G_1
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$2/TG$P.qhiq4wGYkmeFWvN6Ne60
+!
+username ben privilege 15 secret 5 $1$1D0o$oqd3BvTdowTGj84AL4kJt/
+username bsnoc privilege 15 secret 5 $1$gGqj$e9ReNYa3ulR3G5WjmQLbW0
+username fabian privilege 15 secret 5 $1$nuP3$MtLsxBKJyvZIgqSHB9gOx1
+no aaa new-model
+system mtu routing 1950
+vtp mode transparent
+ip subnet-zero
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-336070656
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-336070656
+ revocation-check none
+ rsakeypair TP-self-signed-336070656
+!
+!
+crypto pki certificate chain TP-self-signed-336070656
+ certificate self-signed 01
+  3082024B 308201B4 A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  30312E30 2C060355 04031325 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 33333630 37303635 36301E17 0D393330 33303130 30303131
+  335A170D 32303031 30313030 30303030 5A303031 2E302C06 03550403 1325494F
+  532D5365 6C662D53 69676E65 642D4365 72746966 69636174 652D3333 36303730
+  36353630 819F300D 06092A86 4886F70D 01010105 0003818D 00308189 02818100
+  C6EAEB1B A2F291C8 26FB7DFF 02B3B729 E3336634 B1DC20D7 FE0EC5E5 083F01B5
+  A255C9BE F31E527F CA920905 967184EB F24FDC5D 442586F2 06DA29B4 EE64DE9F
+  D05BABBB 2608858E FDA5AD37 A53A207F C868072C 7255891A 414049A0 655EDECE
+  5B7A4847 935564EF 3B4EBE1D 4003ACF8 CFAC3CA5 F8D4717C 6AC4DC03 C2A3D03B
+  02030100 01A37530 73300F06 03551D13 0101FF04 05300301 01FF3020 0603551D
+  11041930 17821547 4C4F2D31 5F504152 3930315F 32393630 475F312E 301F0603
+  551D2304 18301680 14B98F1B D6C6EAA6 7A4D9219 9B2CA97A 3B3C68DB 20301D06
+  03551D0E 04160414 B98F1BD6 C6EAA67A 4D92199B 2CA97A3B 3C68DB20 300D0609
+  2A864886 F70D0101 04050003 818100C1 7754E2C5 A4301448 54459BAE 032C4071
+  2CEB3D6A D149C464 AB5F404A EA290015 F1C87E15 2BA87CF5 7F4E9CBA EB5BA7DD
+  BFF7D503 19B2AA84 6AD9CA7B A72BCB8D 33568D27 436C0788 CD71BCAA 5E2214A7
+  B75866A1 9258E71C 5ECA1F56 82058422 9FF939EE 973DE5B5 B0CD5F49 88E9BD5C
+  13D8BF9C 1F361B53 FFB3EAB0 D900A3
+  quit
+!
+!
+!
+!
+!
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause small-frame
+errdisable recovery interval 30
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+no spanning-tree vlan 1,4,24,65,128,159-160,205,521,803,923,996,1025,1213,1299
+no spanning-tree vlan 1311,1487,1493,1501,1519,1572,1847,1911,1969,2514,2605
+no spanning-tree vlan 2787,3501-3502
+spanning-tree vlan 1-4094 priority 24576
+!
+vlan internal allocation policy ascending
+!
+vlan 3-4
+!
+vlan 5
+ name makinde-lan
+!
+vlan 7
+!
+vlan 10
+ name Levant_PH
+!
+vlan 11
+ name DOD-PH
+!
+vlan 14,16,18,21
+!
+vlan 22
+ name AGIP-INTERNET
+!
+vlan 29
+ name CHRISTEMBASSY_PH
+!
+vlan 50
+ name WINROK_RSG
+!
+vlan 55
+!
+vlan 100
+ name netcom-ph-lag
+!
+vlan 101
+ name netcom-ph-lag-test
+!
+vlan 108
+ name NAVIGATE
+!
+vlan 115
+!
+vlan 127
+ name PRODECO-INTERNET
+!
+vlan 128
+ name MEDBURY-MEDICAL-INT
+!
+vlan 159
+ name ANCHOR-MARICK
+!
+vlan 160
+ name SCHLUMBERGER
+!
+vlan 200
+!
+vlan 201
+ name MANAGEMENT
+!
+vlan 202-203,205
+!
+vlan 232
+ name NNPC-IDSL-ELELE
+!
+vlan 350
+ name PRIME-CORE
+!
+vlan 351
+ name PRIME-CORE-DEEPER-LIFE-310M-INT
+!
+vlan 400
+ name vodacom-agip
+!
+vlan 521
+ name SPECIALITY-FLUID
+!
+vlan 554
+ name NBC_ABA
+!
+vlan 555
+ name NBC_UMUAHIA
+!
+vlan 556
+ name JOINT-MARINE-SERVICE
+!
+vlan 557
+ name NBC_PH
+!
+vlan 558
+ name NBC_AHOADA
+!
+vlan 559
+ name NBC_UYO
+!
+vlan 560
+ name NBC_EKET
+!
+vlan 561
+ name NBC_IKOT_EKPENE
+!
+vlan 562
+ name NBC_ONITSHA
+!
+vlan 563
+ name NBC_NNEWI
+!
+vlan 564
+ name NBC_AWKA
+!
+vlan 565
+ name NBC_OWERRI
+!
+vlan 566
+ name NBC_MARKUDI
+!
+vlan 567
+ name NBC_GBOKO
+!
+vlan 568
+ name NBC_OTURKPO
+!
+vlan 569
+ name NBC_ABAKALIKI
+!
+vlan 570
+ name NBC_ENUGU
+!
+vlan 571
+ name NBC_ENUGU_URBAN
+!
+vlan 572
+ name NBC_NSUKKA
+!
+vlan 573
+ name NBC_WARRI
+!
+vlan 574
+ name NBC_UGHELLI
+!
+vlan 575
+ name NBC_ASABA
+!
+vlan 576
+ name NBC_AGBOR
+!
+vlan 577
+ name NBC_SAPELE
+!
+vlan 578
+ name NBC_BENIN_URBAN
+!
+vlan 579
+ name NBC_BENIN
+!
+vlan 580
+ name NBC_EKPOMA
+!
+vlan 581
+ name NBC_CALABAR
+!
+vlan 582
+ name NBC_AUCHI
+!
+vlan 583
+ name NBC_ELECHI
+!
+vlan 584
+ name NBC_OBIGBO
+!
+vlan 586
+ name PACENT_TECHNOLOGIES_10MB
+!
+vlan 654
+ name AGIP-OGBAINBIRI
+!
+vlan 655
+ name AGIP-OBAMA-BAYELSA
+!
+vlan 670
+ name AGIP-BRASS-4M-LL-PHC-HQ
+!
+vlan 671
+ name AGIP-IRRI-DELTA
+!
+vlan 672
+!
+vlan 673
+ name AGIP-AKIRI-IMO
+!
+vlan 674
+ name AGIP-TEBIDABA-4M-LL-PHC-HQ
+!
+vlan 675
+ name AGIP-IDU-RIVERS
+!
+vlan 676
+ name AGIP-EBOCHA-RIVERS
+!
+vlan 677
+ name AGIP-OB/OB-RIVERS
+!
+vlan 678
+ name AGIP-KWALE-DELTA
+!
+vlan 679
+ name AGIP-OSHI-RIVERS
+!
+vlan 680
+ name AGIP-IPP-DELTA
+!
+vlan 681
+ name AGIP-SAMABIRI-BAYELSA
+!
+vlan 713
+ name WINROK-BAYELSA
+!
+vlan 715
+ name NEW_NATION_PH
+!
+vlan 717
+ name MABISE_HOTELS-PH
+!
+vlan 718
+ name CISNET_PH
+!
+vlan 720
+ name INEC_ABAKALIKI
+!
+vlan 721
+ name INEC_OWERRI
+!
+vlan 803
+ name SWITCH-MGT2
+!
+vlan 832
+ name INDORAMA-ELEME-INTERNET
+!
+vlan 900
+ name NLNG-PHC-ONNE-2M-LL-NO-RADIO
+!
+vlan 923
+ name HYPREP-INT
+!
+vlan 933
+ name icsl2
+!
+vlan 952
+ name ZETA_WEB_CALABAR
+!
+vlan 953
+ name IMO-STATE-RESIDENCE
+!
+vlan 980
+ name NBC-ORLU
+!
+vlan 1045
+ name SETCO-INT
+!
+vlan 1209
+ name COL.OF.EDU.OBUDU
+!
+vlan 1213
+ name WETLAND-INT
+!
+vlan 1221
+ name NEWCROSS-EKU-INTERNET
+!
+vlan 1292
+!
+vlan 1299
+ name VASCON-PHC-INT
+!
+vlan 1300
+ name TOTAL-OBITE-TO-OBAGI
+!
+vlan 1301
+ name TOTAL
+!
+vlan 1302
+ name TOTAL-INT
+!
+vlan 1311
+ name KENYON-INTL-PHC
+!
+vlan 1312
+ name IPEXPRESS-PH
+!
+vlan 1371
+ name TOTAL-E&P-LL-200MB
+!
+vlan 1487
+ name CERAGON-MGT
+!
+vlan 1493
+ name NERA-MGT
+!
+vlan 1501
+ name SWITCH-MGT
+!
+vlan 1503-1504
+!
+vlan 1509
+ name icsl-nera
+!
+vlan 1519
+ name DAEWO-INDORAMA-INT
+!
+vlan 1572
+ name NGCOM-INT
+!
+vlan 1601
+ name ORANGE-HALIBURTON
+!
+vlan 1620
+ name PACENT-TECH-UNIZIK
+!
+vlan 1621
+ name INEC-ENUGU
+!
+vlan 1664
+ name CATHOLIC-ARCH-AWKA
+!
+vlan 1666
+ name CATH-ARCH-AWKA-(GOV.LODGE)
+!
+vlan 1675
+ name ENUGU-STATE-ELECTRICITY
+!
+vlan 1702,1718
+!
+vlan 1719
+ name ABJ-PH-LL
+!
+vlan 1720
+!
+vlan 1734
+ name BOA-BENIN
+!
+vlan 1735
+ name SAIPEM-WARRI
+!
+vlan 1818
+ name NBC-ONITSHA
+!
+vlan 1819
+ name NBC-WARRI
+!
+vlan 1820
+ name NBC-ASABA
+!
+vlan 1821
+ name NBC-EKET
+!
+vlan 1847
+ name PRODECO-PHC-LAG-LL
+!
+vlan 1852
+ name ADOKEH-ASSOCIATES
+!
+vlan 1911
+ name BQUBE-STERLING-OIL-SPFL
+!
+vlan 1969
+ name icsl
+!
+vlan 1970
+ name temp-cool
+!
+vlan 2022
+ name NEWCROSS-EKU-LL-LAGOS_4M
+!
+vlan 2172
+ name NNPC-WRPC-PRI
+!
+vlan 2173
+ name NNPC-WRPC-SEC
+!
+vlan 2177
+ name NNPC-ITD-BENIN-PRI
+!
+vlan 2178
+ name NNPC-ITD-BENIN-SEC
+!
+vlan 2179
+ name ADDAX-IZOMBE
+!
+vlan 2452
+ name WEST-ORD-OIL
+!
+vlan 2501
+ name SWIFT-TALK-UYO
+!
+vlan 2514
+ name ANCHOR-MARIC-INT
+!
+vlan 2605
+ name PRODECO-PHC-WARRI
+!
+vlan 2787
+ name FBN-SHELL-PHC
+!
+vlan 2801
+ name JULIUS_BERGER_KOKO_AMA
+!
+vlan 3004
+ name SILVERBIRD-VPLS
+!
+vlan 3035
+ name POLARIS-PHC-TRANSAMADI
+!
+vlan 3304
+ name NBC-ENUGU-URBAN
+!
+vlan 3317
+ name FIRS_ABA
+!
+vlan 3501
+ name NNPC-PHC-AREA-FIELD-OFFICE
+!
+vlan 3502
+ name NNPC-PHC-DEPOT
+!
+vlan 3554
+ name SETRACO-ELELE
+!
+!
+!
+interface GigabitEthernet0/1
+ description TRUNK-TO-HUAWEI-SW1
+ switchport trunk allowed vlan 11,14,16,18,21,127,160,200,201,232,558,569
+ switchport trunk allowed vlan add 675-677,803,832,923,952,953,980,1209,1221
+ switchport trunk allowed vlan add 1300-1302,1312,1501,1503,1504,1601,1620,1621
+ switchport trunk allowed vlan add 1664,1666,1675,1702,1719,1720,1734,1735
+ switchport trunk allowed vlan add 1818-1821,1852,1970,2022,2172,2173,2177-2179
+ switchport trunk allowed vlan add 2452,2501,2801,3004,3304,3305,3317,3501,3502
+ switchport trunk allowed vlan add 3554
+ switchport mode trunk
+ no cdp enable
+!
+interface GigabitEthernet0/2
+ description TRUNK-2nd-3750-SW-MGT | PRODECO | MONTEGO
+ switchport trunk allowed vlan 127,128,159,160,201,556,924,1501
+ switchport mode trunk
+ speed 1000
+ duplex full
+!
+interface GigabitEthernet0/3
+ description HYPREP-INT | 75M
+ switchport access vlan 923
+ switchport mode access
+ shutdown
+ no cdp enable
+!
+interface GigabitEthernet0/4
+ description TRUNK-TO-NLNG-RADIO
+ switchport trunk allowed vlan 201-203,900,1292
+ switchport mode trunk
+ load-interval 30
+ duplex full
+!
+interface GigabitEthernet0/5
+ description FAULTY PORT
+ shutdown
+ speed 100
+ duplex full
+!
+interface GigabitEthernet0/6
+ description TO-IPD | | Port 4/1/7
+ switchport trunk allowed vlan 3,5,7,10,11,16,18,21,29,50,55,100,101,108,115
+ switchport trunk allowed vlan add 200,201,203,232,554-584,586,713,715,717,718
+ switchport trunk allowed vlan add 720,721,832,952,980,1209,1300,1312,1503,1504
+ switchport trunk allowed vlan add 1664,1666,1675,1718,1734,1735,1818-1821,1852
+ switchport trunk allowed vlan add 1961,2172,2173,2177-2179,2452,2501,3304,3305
+ switchport trunk allowed vlan add 3317
+ switchport mode trunk
+!
+interface GigabitEthernet0/7
+ description SUSPECTED BAD PORT
+ switchport access vlan 654
+ switchport mode access
+ load-interval 30
+ spanning-tree portfast
+!
+interface GigabitEthernet0/8
+ description AGIP RADIO UPLINK
+ switchport trunk allowed vlan 22,654,655,670-681,1719,3601
+ switchport mode trunk
+ duplex full
+ no cdp enable
+!
+interface GigabitEthernet0/9
+ description SPECIALITY FLUID DRILL  |60MB
+ switchport access vlan 521
+ switchport mode access
+ speed 100
+ duplex full
+!
+interface GigabitEthernet0/10
+ description PH_POP_Test_Port
+ switchport access vlan 5
+ switchport mode access
+ load-interval 30
+ duplex full
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+!
+interface GigabitEthernet0/11
+ description ANCHOR MARICK INT | 20MB
+ switchport access vlan 2514
+ switchport mode access
+ duplex full
+!
+interface GigabitEthernet0/12
+ description BAD PORT
+ speed 1000
+ duplex full
+!
+interface GigabitEthernet0/13
+ description MEDBURY-MEDICAL-INT | 100M
+ switchport access vlan 128
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet0/14
+ description UPLINK TO DCN ROUTER-PAR901-PE-D-GIG-1/1/14
+ switchport mode trunk
+ spanning-tree bpdufilter enable
+!
+interface GigabitEthernet0/15
+ description DAEWO-INDORAMA-INT | 60M
+ switchport access vlan 1519
+ switchport mode access
+ speed 1000
+ duplex full
+ spanning-tree portfast
+!
+interface GigabitEthernet0/16
+ description FAULTY PORT
+ switchport access vlan 717
+ switchport mode access
+!
+interface GigabitEthernet0/17
+ description CONNECTION TO CISNET (CISCON) SHAWSAND PHC
+ switchport access vlan 718
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+!
+interface GigabitEthernet0/18
+ description ICSL || FORMER-NBC-ELECHI
+ switchport trunk allowed vlan 933,1509
+ switchport mode trunk
+!
+interface GigabitEthernet0/19
+ description TOTAL E&P 200MB LEASED LINE
+ switchport access vlan 1371
+ switchport mode access
+ load-interval 30
+ speed 1000
+ duplex full
+!
+interface GigabitEthernet0/20
+ description UPLINK-GLO1-HUAWEI-PE(2/1/22)
+ switchport trunk allowed vlan 14,127,128,159,160,521,556,557,717,1299,1501
+ switchport trunk allowed vlan add 1519,1911,2605,3501,3502
+ switchport mode trunk
+ speed 1000
+ duplex full
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+!
+interface GigabitEthernet0/21
+ description TO-7750-IPD || Port 4/2/5
+ switchport trunk allowed vlan 5,10,11,14,21,22,29,127,160,200,201,203,350,351
+ switchport trunk allowed vlan add 400,554,555,584,586,654,655,715,718,720,933
+ switchport trunk allowed vlan add 953,1504,1509,1620,1621,1818,1970,2172,2173
+ switchport trunk allowed vlan add 3305,3554,3601
+ switchport mode trunk
+!
+interface GigabitEthernet0/22
+ description AGIP FIBER UPLINK
+ switchport trunk allowed vlan 22,654,655,670-681,1719,3601
+ switchport mode trunk
+ no cdp enable
+!
+interface GigabitEthernet0/23
+ description VASCON PHC INTERNET | 15MB
+ switchport trunk allowed vlan 1299,1487
+ switchport mode trunk
+!
+interface GigabitEthernet0/24
+ description FBN-SHELL-PHC | 4M
+ switchport access vlan 2787
+ switchport mode access
+ spanning-tree bpdufilter enable
+!
+interface Vlan1
+ no ip address
+ no ip route-cache
+!
+interface Vlan22
+ ip address 10.1.1.1 255.255.255.0
+ no ip route-cache
+!
+interface Vlan127
+ ip address 10.1.3.2 255.255.255.0
+ no ip route-cache
+!
+interface Vlan201
+ ip address 10.244.244.18 255.255.255.240
+ no ip route-cache
+!
+interface Vlan202
+ ip address 10.10.10.1 255.255.255.0
+ no ip route-cache
+!
+interface Vlan203
+ ip address 10.244.244.41 255.255.255.248
+ no ip route-cache
+!
+interface Vlan351
+ no ip address
+ no ip route-cache
+!
+interface Vlan400
+ ip address 10.143.10.21 255.255.255.252
+ no ip route-cache
+ shutdown
+!
+interface Vlan556
+ ip address 123.123.123.2 255.255.255.0
+ no ip route-cache
+!
+interface Vlan569
+ no ip address
+ no ip route-cache
+!
+interface Vlan572
+ ip address 172.16.242.97 255.255.255.252
+ no ip route-cache
+!
+interface Vlan654
+ ip address 192.168.200.1 255.255.255.0
+ no ip route-cache
+!
+interface Vlan655
+ no ip address
+ no ip route-cache
+!
+interface Vlan670
+ ip address 12.11.10.1 255.255.255.0
+ no ip route-cache
+!
+interface Vlan674
+ ip address 11.11.10.1 255.255.255.0
+ no ip route-cache
+!
+interface Vlan677
+ ip address 192.168.1.1 255.255.255.0
+ no ip route-cache
+!
+interface Vlan717
+ no ip address
+ no ip route-cache
+ shutdown
+!
+interface Vlan832
+ no ip address
+ no ip route-cache
+!
+interface Vlan900
+ ip address 10.20.20.3 255.255.255.0
+ no ip route-cache
+!
+interface Vlan923
+ ip address 19.19.19.1 255.255.255.0
+ no ip route-cache
+!
+interface Vlan924
+ no ip address
+ no ip route-cache
+!
+interface Vlan933
+ ip address 11.11.11.2 255.255.255.0
+ no ip route-cache
+!
+interface Vlan1371
+ ip address 192.168.78.1 255.255.255.0
+ no ip route-cache
+!
+interface Vlan1501
+ ip address 10.248.249.14 255.255.255.0
+ no ip route-cache
+!
+interface Vlan1509
+ ip address 10.155.187.54 255.255.255.240
+ no ip route-cache
+!
+interface Vlan1601
+ ip address 4.2.2.1 255.255.255.0
+ no ip route-cache
+!
+interface Vlan1719
+ ip address 13.13.13.14 255.255.255.0
+ no ip route-cache
+!
+interface Vlan3004
+ ip address 172.16.248.79 255.255.255.0
+ no ip route-cache
+!
+interface Vlan3317
+ no ip address
+ no ip route-cache
+!
+ip default-gateway 10.248.249.1
+ip http server
+ip http secure-server
+snmp-server community Globacom123* RO
+!
+control-plane
+!
+!
+line con 0
+ login local
+line vty 0 4
+ password 7 132816000A0201262735
+ login local
+line vty 5 15
+ login
+!
+end
+
+GLO-1_PAR901_2960G_1#   sh int des
+Interface                      Status         Protocol Description
+Vl1                            up             up
+Vl22                           up             up
+Vl127                          up             up
+Vl201                          up             up
+Vl202                          up             up
+Vl203                          up             up
+Vl351                          up             up
+Vl400                          admin down     down
+Vl556                          up             up
+Vl569                          up             up
+Vl572                          up             up
+Vl654                          up             up
+Vl655                          up             up
+Vl670                          up             up
+Vl674                          up             up
+Vl677                          up             up
+Vl717                          admin down     down
+Vl832                          up             up
+Vl900                          up             up
+Vl923                          up             up
+Vl924                          down           down
+Vl933                          up             up
+Vl1371                         up             up
+Vl1501                         up             up
+Vl1509                         up             up
+Vl1601                         up             up
+Vl1719                         up             up
+Vl3004                         up             up
+Vl3317                         up             up
+Gi0/1                          up             up       TRUNK-TO-HUAWEI-SW1
+Gi0/2                          up             up       TRUNK-2nd-3750-SW-MGT | PRODECO | MONTEGO
+Gi0/3                          admin down     down     HYPREP-INT | 75M
+Gi0/4                          up             up       TRUNK-TO-NLNG-RADIO
+Gi0/5                          admin down     down     FAULTY PORT
+Gi0/6                          up             up       TO-IPD | | Port 4/1/7
+Gi0/7                          down           down     SUSPECTED BAD PORT
+Gi0/8                          up             up       AGIP RADIO UPLINK
+Gi0/9                          up             up       SPECIALITY FLUID DRILL  |60MB
+Gi0/10                         up             up       PH_POP_Test_Port
+Gi0/11                         up             up       ANCHOR MARICK INT | 20MB
+Gi0/12                         down           down     BAD PORT
+Gi0/13                         down           down     MEDBURY-MEDICAL-INT | 100M
+Gi0/14                         up             up       UPLINK TO DCN ROUTER-PAR901-PE-D-GIG-1/1/14
+Gi0/15                         up             up       DAEWO-INDORAMA-INT | 60M
+Gi0/16                         up             up       FAULTY PORT
+Gi0/17                         admin down     down     CONNECTION TO CISNET (CISCON) SHAWSAND PHC
+Gi0/18                         up             up       ICSL || FORMER-NBC-ELECHI
+Gi0/19                         up             up       TOTAL E&P 200MB LEASED LINE
+Gi0/20                         up             up       UPLINK-GLO1-HUAWEI-PE(2/1/22)
+Gi0/21                         up             up       TO-7750-IPD || Port 4/2/5
+Gi0/22                         up             up       AGIP FIBER UPLINK
+Gi0/23                         up             up       VASCON PHC INTERNET | 15MB
+Gi0/24                         up             up       FBN-SHELL-PHC | 4M
+GLO-1_PAR901_2960G_1#

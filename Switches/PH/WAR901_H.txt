@@ -1,0 +1,406 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 14:45.07 ? ? /home/mobaxterm ? telnet 10.248.246.155
+Connected to 10.248.246.155.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<ENT-SW-WAR901-HU>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-SW-WAR901-HU]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       FRIGOGLASS BETA GLASS UGHELLI | 1
+                                               2MB INT | FIBER LM
+Eth0/0/2                      down    down     Fibre  Benson Idohosa Warri
+Eth0/0/3                      down    down     TPGS NERA Radio Link
+Eth0/0/4                      down    down     JW Agbarho-Warri
+Eth0/0/5                      down    down     Christ Mercy land Church -Warri
+Eth0/0/6                      down    down     Bqube WRPC-Warri
+Eth0/0/7                      up      up       TPGS Radio Link
+Eth0/0/8                      down    down     Christ Embassy Church
+Eth0/0/9                      down    down     Gloshop-Warrui
+Eth0/0/10                     down    down     NNPC NGC HQR. -Warri
+Eth0/0/11                     down    down     Delta Mall Gloshop
+Eth0/0/12                     down    down     NNPC WRPC Warri-INT-FIB-LM
+Eth0/0/13                     down    down     Daewo (DRCN)WRPC-INT-FIB-LM
+Eth0/0/14                     down    down     ONE DATA Fibre link -PTI Effurun
+                                               155Mbps
+Eth0/0/15                     *down   down     IGCE-NET-INT-WARRI | 25MB
+Eth0/0/16                     down    down     test-port for IGCE
+Eth0/0/17                     up      up       SWIFTNET-INT | 20M
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     mgt test port
+GE0/0/1                       up      up       UPLINK TO M8  ROUTER B-(GE0/7/4)
+GE0/0/2                       down    down     ONE DATA Fibre link -PTI Effurun
+                                               155Mbps
+GE0/0/3                       down    down     free
+GE0/0/4                       down    down     Internet to IGGC Warri 120M
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif803                     up      up       HUAWEI, Quidway Series, Vlanif803
+                                                Interface
+Vlanif1549                    up      up       HUAWEI, Quidway Series, Vlanif154
+                                               9 Interface
+Vlanif1551                    up      down     HUAWEI, Quidway Series, Vlanif155
+                                               1 Interface
+Vlanif2520                    up      down     HUAWEI, Quidway Series, Vlanif252
+                                               0 Interface
+[ENT-SW-WAR901-HU]     dis cur
+#
+!Software Version V100R006C03
+ sysname ENT-SW-WAR901-HU
+#
+ vlan batch 10 65 100 200 to 205 350 400 803 to 804 996 1061 1183
+ vlan batch 1244 1324 1348 1445 1452 1455 1487 1492 1495 1497
+ vlan batch 1500 1503 1520 1523 1549 1551 1568 1629 1641 1735
+ vlan batch 1819 1870 to 1871 1910 1956 1959 to 1960 1962 1964 to 1965 1993 2010 2082
+ vlan batch 2088 2172 2174 2189 2203 2411 to 2412 2431 2433 2520 2526
+ vlan batch 2599 2613 to 2614 2616 2855 2988 3007 3035 3126 3478 3480
+#
+ lldp enable
+#
+ undo http server enable
+#
+vlan 65
+ description asw2-mgmtq
+vlan 100
+ description test
+vlan 205
+ description SWIFT_LAG_WARRI_45MB
+vlan 400
+ description mid-west-oil
+vlan 803
+ description SWITCH-MGT-VLAN
+vlan 996
+ description VODACOM-WARRI
+vlan 1061
+ description radio link to IGCE Warri
+vlan 1183
+ description PILLAR-OIL-KWALE
+vlan 1244
+ description Fibre link yo Benson Idahosa Warri
+vlan 1324
+ description BQUBE WPRC
+vlan 1445
+ description Fibre Link to Daewo DECN Warri
+vlan 1452
+ description CHRIST-EMBASSY
+vlan 1455
+ description VODACOM-SAPELE
+vlan 1487
+ description CERAGON-IP-20-MGT
+vlan 1492
+ description BS-NERA-4-MGT
+vlan 1495
+ description NERA radio mgt
+vlan 1497
+ description FRSC-WARRI
+vlan 1500
+ description CERAGON-MGMT
+vlan 1503
+ description NERA-MGMT
+vlan 1520
+ description UNION-BANK-WARRI
+vlan 1523
+ description OBRIENSOFT-INTERNET
+vlan 1549
+ description SHELL-PHC-WARRI-250MbLL-SECONDARY
+vlan 1551
+ description SHELL-PHC-WARRI-250MbLL-PRIMARY
+vlan 1568
+ description DESICON-ENGINEERING
+vlan 1629
+ description KAYRIOTT_HOTEL
+vlan 1641
+ description Unionbank_Oghara
+vlan 1735
+ description SAIPEM-WARRI
+vlan 1819
+ description NBC-WARRI
+vlan 1870
+ description Vodacom-WAR-PHC
+vlan 1871
+ description VDT-WARRI-INTERNET
+vlan 1910
+ description DOD_4MB_WARRI
+vlan 1956
+ description management
+vlan 1959
+ description MIDWEST-OIL-GAS
+vlan 1960
+ description CISCON-INTERNET-WARRI
+vlan 1962
+ description CCC
+vlan 1964
+ description zetaweb-abj-warri
+vlan 1965
+ description ELOMAZ-WARRI
+vlan 2010
+ description FUGRO-WARRI-INTERNET
+vlan 2082
+ description TPGS-ABJ-16-30M-INT
+vlan 2088
+ description DELTA-MALL-GLOSHOP
+vlan 2172
+ description NNPC-WRPC-WARRI-PRI
+vlan 2174
+ description NISSI-TECH-WARRI-WAR901
+vlan 2203
+ description ELOMAZ-EFFURUN
+vlan 2411
+ description CONOIL-NPA-WARRI
+vlan 2412
+ description CONOIL-WARRI-REFINERY
+vlan 2431
+ description SWIFT_45MB_CHEVRON
+vlan 2433
+ description JEHO-WIT-AGBARHO
+vlan 2520
+ description BETA-GLASS-UGH-12M-INT-FIB-LM
+vlan 2526
+ description CHRIST-MERCYLAND
+vlan 2599
+ description ALVINA-SCHOOL-WARRI
+vlan 2613
+ description zebweb
+vlan 2614
+ description EDGETEX
+vlan 2616
+ description zebweb2
+vlan 2855
+ description SWIFTNET-INT
+vlan 2988
+ description FLOWZAP
+vlan 3007
+ description FBN-LL-LINK
+vlan 3035
+ description MIANSTREET-BANK-LL
+vlan 3126
+ description DIAMOND-BANK-LINKS
+vlan 3478
+ description NNPC-NGC-WARRI
+vlan 3480
+ description NNPC-WRPC-NEW-PRI
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %$%$4;/%5XMN6K}n3VI&$,FPS%yp%$%$
+ local-user admin service-type http
+ local-user bsnoc password cipher %$%$Q[9G;-[)hTLzsF7aLkb-V8/&%$%$
+ local-user bsnoc privilege level 15
+ local-user bsnoc service-type telnet terminal ssh ftp
+ local-user huawei password cipher %$%$p,^]2;2BH1n'V^S-:HH%X^UL%$%$
+ local-user huawei privilege level 15
+ local-user rthphc password cipher %$%$WLh4(.G{JA!\-ZX-s:;CoULC%$%$
+ local-user rthphc privilege level 15
+ local-user solarch password cipher %$%$i-Yw;jD+@I4l6K;b-;S+ojaX%$%$
+ local-user solarch privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif803
+ ip address 10.248.246.155 255.255.255.192
+#
+interface Vlanif1549
+ ip address 11.11.11.34 255.255.255.0
+#
+interface Vlanif1551
+#
+interface Vlanif2520
+#
+interface Ethernet0/0/1
+ description FRIGOGLASS BETA GLASS UGHELLI | 12MB INT | FIBER LM
+ port link-type access
+ port default vlan 2520
+#
+interface Ethernet0/0/2
+ description Fibre  Benson Idohosa Warri
+ port link-type access
+ port default vlan 1244
+#
+interface Ethernet0/0/3
+ description TPGS NERA Radio Link
+ port link-type trunk
+ undo port trunk allow-pass vlan 1
+ port trunk allow-pass vlan 1993
+#
+interface Ethernet0/0/4
+ description JW Agbarho-Warri
+ port link-type trunk
+ port trunk allow-pass vlan 1492 2433
+#
+interface Ethernet0/0/5
+ description Christ Mercy land Church -Warri
+ port link-type trunk
+ port trunk allow-pass vlan 15 1492 2526
+#
+interface Ethernet0/0/6
+ description Bqube WRPC-Warri
+ port link-type trunk
+ port trunk allow-pass vlan 1324 1487
+#
+interface Ethernet0/0/7
+ description TPGS Radio Link
+ port link-type access
+ port default vlan 1993
+#
+interface Ethernet0/0/8
+ description Christ Embassy Church
+ port link-type access
+ port default vlan 1452
+#
+interface Ethernet0/0/9
+ description Gloshop-Warrui
+ port link-type access
+ port default vlan 2189
+#
+interface Ethernet0/0/10
+ description NNPC NGC HQR. -Warri
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3478
+#
+interface Ethernet0/0/11
+ description Delta Mall Gloshop
+ port link-type access
+ port default vlan 2088
+#
+interface Ethernet0/0/12
+ description NNPC WRPC Warri-INT-FIB-LM
+ port link-type access
+ port default vlan 3480
+#
+interface Ethernet0/0/13
+ description Daewo (DRCN)WRPC-INT-FIB-LM
+ port link-type access
+ port default vlan 1445
+#
+interface Ethernet0/0/14
+ description ONE DATA Fibre link -PTI Effurun 155Mbps
+ port link-type access
+#
+interface Ethernet0/0/15
+ description IGCE-NET-INT-WARRI | 25MB
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1061 1487
+ jumboframe enable 13296
+#
+interface Ethernet0/0/16
+ description test-port for IGCE
+ port link-type access
+ port default vlan 1061
+#
+interface Ethernet0/0/17
+ description SWIFTNET-INT | 20M
+ port link-type access
+ port default vlan 2855
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ description mgt test port
+ port link-type access
+ port default vlan 803
+#
+interface GigabitEthernet0/0/1
+ description UPLINK TO M8  ROUTER B-(GE0/7/4)
+ port link-type trunk
+ port trunk allow-pass vlan 803 1061 1253 1487 1492 1495 1549 1551 1993 2520
+ port trunk allow-pass vlan 2855 2988
+ jumboframe enable 13296
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/2
+ description ONE DATA Fibre link -PTI Effurun 155Mbps
+ port link-type access
+ port default vlan 1348
+#
+interface GigabitEthernet0/0/3
+ description free
+ port link-type access
+ port default vlan 2174
+ jumboframe enable 13296
+ combo-port copper
+#
+interface GigabitEthernet0/0/4
+ description Internet to IGGC Warri 120M
+ port link-type trunk
+ port trunk allow-pass vlan 1061 1253 1487
+ jumboframe enable 13296
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.129
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F0000010000728F
+ snmp-agent community read cipher %$%$.b9xM!*0E8(*r&~)2t2~Y+"v%$%$
+ snmp-agent community read cipher %$%$FJx*3V#58U7/)n<Gh0W/VOF=%$%$
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[ENT-SW-WAR901-HU]
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                        ?
+
+ ? 2025-11-13 ? ? 14:50.46 ? ? /home/mobaxterm ?

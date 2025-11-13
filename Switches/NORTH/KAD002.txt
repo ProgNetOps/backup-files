@@ -1,0 +1,379 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:08.46 ? ? /home/mobaxterm ? telnet 10.248.246.196
+Connected to 10.248.246.196.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-KAD-002>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-KAD-002]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       STANBIC IBTC BANK NNPC-KADUNA 4MB
+                                               -SWIFTALK RADIO
+Eth0/0/2                      *down   down     NNPC KRPC KADUNA PROTECTION (SECO
+                                               NDARY)
+Eth0/0/3                      down    down     ALHERI TEST PORT
+Eth0/0/4                      down    down     STERLING_BANK_REFINERY
+Eth0/0/5                      up      up       NNPC PPMC | NNPC DEPOT|NNPC KRPC
+                                               BACKUP
+Eth0/0/6                      down    down     CERAGON MGT seven up kaduna
+Eth0/0/7                      down    down     NNPC KRPC INTERNET
+Eth0/0/8                      down    down     free
+Eth0/0/9                      up      up       ACCESS BANK NNPC REFINERY KADUNA
+Eth0/0/10                     down    down     NNPC_KRPC_KADUNA
+Eth0/0/11                     down    down     DAEWO-KPRC-INT |60M
+Eth0/0/12                     down    down     NNPC PPMC | NNPC DEPOT|NNPC KRPC
+                                               BACKUP
+Eth0/0/13                     down    down     NNPC MEDICAL KADUNA
+Eth0/0/14                     down    down     COOLLINK KAKURI_KADUNA || 10Mbps
+Eth0/0/15                     down    down     OLAM-VODACOM || 8Mbps || KAD120-I
+                                               DU-PORT03
+Eth0/0/16                     down    down     OLAM-VODACOM || 8Mbps || KAD120-I
+                                               DU-PORT03
+Eth0/0/17                     *down   down     free
+Eth0/0/18                     down    down     TEST-PORT-TPGS_BARNAWA
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     DAEWO-KRPC-INT KADUNA-KAD002 | 60
+                                               MB
+Eth0/0/21                     down    down     TPGS-DEEL2
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     Switch Management test
+Eth0/0/24                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/24 Interface
+GE0/0/1                       up      up       VDT KADUNA 150MB | KADUNA-2 | GIG
+                                                PORT 1
+GE0/0/2                       up      up       GLOMOBILE-HUAWEI-TRUNK-TO-KAD047(
+                                               TPGS Barnawa & Alheri - other vla
+                                               ns have been removed from RTN rad
+                                               io by Ngozi[4265] during troubles
+                                               hooting)
+GE0/0/3                       up      up       VDT KADUNA 150MB | KADUNA-2 | GIG
+                                                PORT 1
+GE0/0/4                       up      up       UPLINK TO DCN IP/MPLS UPE 2/0/5(U
+                                               PE-M8-GE0/1/7)
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif802                     up      up       HUAWEI, Quidway Series, Vlanif802
+                                                Interface
+Vlanif1115                    up      up       HUAWEI, Quidway Series, Vlanif111
+                                               5 Interface
+Vlanif1337                    up      down     HUAWEI, Quidway Series, Vlanif133
+                                               7 Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1568                    up      up       HUAWEI, Quidway Series, Vlanif156
+                                               8 Interface
+Vlanif1640                    up      up       HUAWEI, Quidway Series, Vlanif164
+                                               0 Interface
+Vlanif1678                    up      down     HUAWEI, Quidway Series, Vlanif167
+                                               8 Interface
+[BS-KAD-002]   dis cur
+#
+!Software Version V100R006C05
+ sysname BS-KAD-002
+#
+ vlan batch 802 1095 1115 1174 1184 1337 1492 to 1495 1498 1500 to 1502 1565
+ vlan batch 1568 1640 1650 1678 2174 to 2175 2423 2468 2545 3034 3224
+ vlan batch 3442 3488 3491 to 3493
+#
+vlan 802
+ description MGNT
+vlan 1095
+ description TPGS-DEEL2
+vlan 1115
+ description GTB-VPLS
+vlan 1174
+ description DAEWO-KADUNA
+vlan 1184
+ description ALHERI-PRAYER-CAMP
+vlan 1337
+ description VDT KADUNA-KAD002 | 80MB
+vlan 1492
+ description NERA-MGT-4
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1494
+ description NNPC_NERA_RADIO_MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1498
+ description CERAGON MGT
+vlan 1500
+ description GLO1 CERAGON RADIO MGMT
+vlan 1501
+ description BS-MGT
+vlan 1502
+ description huawei-mgmt
+vlan 1565
+ description olam-vodacom
+vlan 1568
+ description TPGS Barnawa
+vlan 1640
+ description ACCESS-VPLS
+vlan 1650
+ description COOLLINK KAKURI_KADUNA
+vlan 1678
+ description TPGS KADUNA
+vlan 2174
+ description NNPC-KRPC-KADUNA-MAIN
+vlan 2175
+ description NNPC-KRPC-KADUNA-PROTECTION
+vlan 2423
+ description STANBIC-IBTC-LL
+vlan 2468
+ description SEVEN UP KADUNA MPLS CLIENT - KAD053-KAD002-R-ALCATEL-MC-SMART LINK
+vlan 2545
+ description NBC-KADUNA
+vlan 3034
+ description Sterling_Bank
+vlan 3224
+ description ACCESS-BANK-REFINE-L3
+vlan 3442
+ description NNPC-DEPOT-KADUNA
+vlan 3488
+ description NNPC-MEDICAL-PRI-KADUNA
+vlan 3491
+ description NNPC_KRPC_KADUNA
+vlan 3492
+ description NNPC-ITD-CENTRE-KADUNA
+vlan 3493
+ description NNPC-PPMC-KADUNA
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@SXW5$tOx.,iV$a2tDjvYSsDh%@%@
+ local-user bsnoc privilege level 15
+ local-user huawei password cipher %@%@&:P5SDVZ,3Pvjh6axl33Se7O%@%@
+ local-user huawei privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif802
+ ip address 10.248.246.196 255.255.255.192
+#
+interface Vlanif1115
+ ip address 10.0.181.200 255.255.255.0
+#
+interface Vlanif1337
+#
+interface Vlanif1501
+ ip address 10.248.249.63 255.255.255.0
+#
+interface Vlanif1568
+ ip address 102.222.116.50 255.255.255.252
+#
+interface Vlanif1640
+ ip address 10.230.230.188 255.255.255.0
+#
+interface Vlanif1678
+#
+interface Ethernet0/0/1
+ description STANBIC IBTC BANK NNPC-KADUNA 4MB-SWIFTALK RADIO
+ port link-type access
+ port default vlan 2423
+#
+interface Ethernet0/0/2
+ description NNPC KRPC KADUNA PROTECTION (SECONDARY)
+ shutdown
+ port link-type access
+ port default vlan 2175
+#
+interface Ethernet0/0/3
+ description ALHERI TEST PORT
+ port link-type access
+ port default vlan 1184
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/4
+ description STERLING_BANK_REFINERY
+ port link-type access
+ port default vlan 3034
+#
+interface Ethernet0/0/5
+ description NNPC PPMC | NNPC DEPOT|NNPC KRPC BACKUP
+ port link-type trunk
+ port trunk allow-pass vlan 1494 2175 3442 3488 3493
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/6
+ description CERAGON MGT seven up kaduna
+ port link-type access
+ port default vlan 1498
+#
+interface Ethernet0/0/7
+ description NNPC KRPC INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 1495 3491
+#
+interface Ethernet0/0/8
+ description free
+#
+interface Ethernet0/0/9
+ description ACCESS BANK NNPC REFINERY KADUNA
+ port link-type trunk
+ port trunk allow-pass vlan 1493 1640
+#
+interface Ethernet0/0/10
+ description NNPC_KRPC_KADUNA
+ port link-type access
+ port default vlan 3491
+#
+interface Ethernet0/0/11
+ description DAEWO-KPRC-INT |60M
+ port link-type trunk
+ port trunk allow-pass vlan 1174 1494
+#
+interface Ethernet0/0/12
+ description NNPC PPMC | NNPC DEPOT|NNPC KRPC BACKUP
+ port link-type trunk
+ port trunk allow-pass vlan 1494 to 1495 2175 3442 3488 3493
+#
+interface Ethernet0/0/13
+ description NNPC MEDICAL KADUNA
+ port link-type trunk
+ port trunk allow-pass vlan 1494
+#
+interface Ethernet0/0/14
+ description COOLLINK KAKURI_KADUNA || 10Mbps
+ port link-type trunk
+ port trunk allow-pass vlan 1494 1500 1650
+#
+interface Ethernet0/0/15
+ description OLAM-VODACOM || 8Mbps || KAD120-IDU-PORT03
+ port link-type access
+ port default vlan 1565
+#
+interface Ethernet0/0/16
+ description OLAM-VODACOM || 8Mbps || KAD120-IDU-PORT03
+ port link-type trunk
+ port trunk allow-pass vlan 1502 1565
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/17
+ description free
+ shutdown
+ port link-type access
+#
+interface Ethernet0/0/18
+ description TEST-PORT-TPGS_BARNAWA
+ port link-type access
+ port default vlan 1568
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+ description DAEWO-KRPC-INT KADUNA-KAD002 | 60MB
+ port link-type access
+ port default vlan 1174
+#
+interface Ethernet0/0/21
+ description TPGS-DEEL2
+ port link-type access
+ port default vlan 1095
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+ description Switch Management test
+ port link-type access
+ port default vlan 802
+#
+interface Ethernet0/0/24
+ port link-type trunk
+ port trunk allow-pass vlan 1501
+#
+interface GigabitEthernet0/0/1
+ description VDT KADUNA 150MB | KADUNA-2 | GIG PORT 1
+ port link-type access
+ port default vlan 1337
+#
+interface GigabitEthernet0/0/2
+ description GLOMOBILE-HUAWEI-TRUNK-TO-KAD047(TPGS Barnawa & Alheri - other vlans have been removed from RTN radio by Ngozi[4265] during troubleshoo            ting)
+ port link-type trunk
+ port trunk allow-pass vlan 1184 1500 1568 1650 1678 2423
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/3
+ description VDT KADUNA 150MB | KADUNA-2 | GIG PORT 1
+ port link-type trunk
+ port trunk allow-pass vlan 1495 3491
+ port media type copper
+     undo negotiation auto
+ combo-port auto
+#
+interface GigabitEthernet0/0/4
+ description UPLINK TO DCN IP/MPLS UPE 2/0/5(UPE-M8-GE0/1/7)
+ port link-type trunk
+ port trunk allow-pass vlan 15 68 802 1095 1115 1174 1184 1337 1492 to 1495 1498
+ port trunk allow-pass vlan 1500 to 1502 1565 1568 1640 1650 1678 1897 2174 to 2175 2423 3034
+ port trunk allow-pass vlan 3224 3442 3488 3491 to 3493
+ multicast-suppression 50
+ broadcast-suppression 50
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.193
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F000001000000C0
+ snmp-agent community read cipher %@%@@G9H%WPlC&CX"8,7r=y!fB$CWxZ[P:_B-Q(D\t$tp'_$B$Ff'%~<#Z/h/*B{pJ#1a"I7$OfB%@%@
+ snmp-agent community read cipher %@%@6`-$DOrzn!]o!"Latw%LfT@S6od~"emw_#e0F8G#(3[IT@VfI~opV]8B-~bNx`E9j\eT@_fT%@%@
+ snmp-agent community read cipher %@%@_/2L6qEJ]2+(,dC[Wlg~S4lN~i~W)UZF>0m6afIB$T}!4lQS*m;IE[1mAA`gf^:7Tf)4lZS4%@%@
+ snmp-agent community read cipher %@%@kgJM2=L-e!@Co~BEd`L6YE0WbAkzDn!yOHS<Bq,tBU<#E0ZYI9Q[@<<l6I^SQV0TdTA70cYE%@%@
+ snmp-agent community read cipher %@%@MQ~+Ijg#dDnj+O)w{)m8fUh;y#01!S5U;XDu-MFfo^2YUh>fAE;g+\^Rt1!]eTRs9U(=hGfU%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[BS-KAD-002]
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                                                               ?
+
+ ? 2025-11-13 ? ? 10:14.05 ? ? /home/mobaxterm ?

@@ -1,0 +1,2189 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 14:59.51 ? ? /home/mobaxterm ? telnet 10.248.248.74
+Connected to 10.248.248.74.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+BS_SAKA_25_3750_3>en
+Password:
+BS_SAKA_25_3750_3#sh run
+Building configuration...
+
+Current configuration : 34819 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+service unsupported-transceiver
+!
+hostname BS_SAKA_25_3750_3
+!
+boot-start-marker
+boot-end-marker
+!
+no logging console
+enable secret 5 $1$/juK$H3Zh/lf88QyiriqAD7Svo/
+!
+!
+!
+no aaa new-model
+switch 1 provision ws-c3750x-24
+system mtu routing 1950
+!
+!
+ip device tracking
+vtp mode transparent
+!
+!
+crypto pki trustpoint TP-self-signed-2804240384
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-2804240384
+ revocation-check none
+ rsakeypair TP-self-signed-2804240384
+!
+!
+crypto pki certificate chain TP-self-signed-2804240384
+ certificate self-signed 01
+  3082024A 308201B3 A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 32383034 32343033 3834301E 170D3933 30333031 30303031
+  31375A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D32 38303432
+  34303338 3430819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  8100B3FB 0ECF5103 4C8DF095 D4A66FFF BA7DFB1F 21F8BF47 C1DDDCFB E6FA01E6
+  28B94F81 EA8323DF 82AE573E B065556E 22DCAC43 32639449 1237FCAB FB1888F8
+  86044C73 3746A1B7 922B3E0B 0938BBBD 709E692A 4603CC7F 923760BA EE7F4BB3
+  21513FA0 5C838C72 4694DDCA DDCE5887 2552F2DE 9E70E0F3 FA328074 4E6E36FB
+  1D4D0203 010001A3 72307030 0F060355 1D130101 FF040530 030101FF 301D0603
+  551D1104 16301482 1242535F 53414B41 5F32355F 33373530 5F332E30 1F060355
+  1D230418 30168014 052A3283 F1665AF8 3342EE0E C6EBD150 993D1D97 301D0603
+  551D0E04 16041405 2A3283F1 665AF833 42EE0EC6 EBD15099 3D1D9730 0D06092A
+  864886F7 0D010104 05000381 810031BC 0D3F48B8 0BFC0A01 B4726ED5 970B9B84
+  1D3395B8 B1A68A44 E2CCE1BC EBCC0072 94307D5D FC1FDB5E 6346E5E5 206DA4CD
+  F446E461 CBE06AB4 F3D2C2C0 04064B66 7A133564 C09116BA 22BEE426 1948D724
+  FAC4C6D1 DCFB7760 DCBD8E73 701A7BBE EA9F3BC9 AE1C4153 777406D8 1ADE671F
+  AEDC853F AB119BC9 631DA0D3 0A8C
+  quit
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+no spanning-tree vlan 1-2,5,11,17,21,31,41,45,51,61,71,81,89,94-97,113,117,120
+no spanning-tree vlan 136,141,144,173,179,185,189,200,222,225,230,250,281,300
+no spanning-tree vlan 334,337,351-352,355-357,362-373,375-377,400,413,444,502
+no spanning-tree vlan 519-520,524,531,555,622,804,905,911,914,916,984,999,1071
+no spanning-tree vlan 1072-1073,1086,1090,1111-1113,1116-1124,1126-1139,1141
+no spanning-tree vlan 1143-1145,1147,1153,1179,1211,1214,1238,1241,1248,1255
+no spanning-tree vlan 1257,1265,1275,1356,1364,1422,1428,1443,1471,1486-1489
+no spanning-tree vlan 1492-1493,1495-1496,1502,1504,1507,1512,1516,1520-1521
+no spanning-tree vlan 1524,1529-1530,1533-1534,1538,1544,1548-1549,1551,1554
+no spanning-tree vlan 1555,1557,1559-1560,1563,1565-1567,1569,1571,1574-1578
+no spanning-tree vlan 1581,1583,1586,1589,1591-1593,1599-1601,1603-1604,1623
+no spanning-tree vlan 1629,1634,1641,1650-1651,1653-1660,1662-1669,1671-1672
+no spanning-tree vlan 1676-1681,1683,1686-1687,1710-1712,1719,1723,1731-1732
+no spanning-tree vlan 1743,1750,1753,1810-1815,1820,1824,1844,1854,1871-1872
+no spanning-tree vlan 1874,1883-1884,1888-1889,1910,1912-1914,1917-1919,1921
+no spanning-tree vlan 1925,1962,1972-1974,1991,1993,1995,1997-1999,2010,2012
+no spanning-tree vlan 2016,2026,2039,2052-2053,2056-2068,2101-2103,2170-2171
+no spanning-tree vlan 2174,2178,2211,2213,2266,2299,2311-2314,2317,2387,2397
+no spanning-tree vlan 2399,2414,2421-2422,2434,2441,2449,2510-2511,2551,2610
+no spanning-tree vlan 2617,2702-2704,2708,2786,2814,3001,3005-3006,3030-3031
+no spanning-tree vlan 3034,3037,3105,3124-3125,3129-3131,3134,3150-3151,3163
+no spanning-tree vlan 3164-3167,3190-3192,3221,3241,3361-3377,3379-3392,3400
+no spanning-tree vlan 3415,3491-3492,3529,3539,3651-3652,3751-3752,3843,3851
+no spanning-tree vlan 3852,4005-4006,4008,4054-4055,4059
+spanning-tree vlan 126 priority 24576
+!
+!
+!
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig (STP)
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause l2ptguard
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause small-frame
+errdisable recovery interval 30
+!
+vlan internal allocation policy ascending
+!
+vlan 2
+ name LAG131-SW-MGT
+!
+vlan 5
+ name Odeku_5_DNS
+!
+vlan 10
+ name MGMT
+!
+vlan 11,21,31,41
+!
+vlan 45
+ name SAKA25-3750-4TH-MGT
+!
+vlan 51
+!
+vlan 55
+ name NBC-SWITCH-MGT
+!
+vlan 61
+!
+vlan 66
+ name RADIO-P2P-TO-IPD
+!
+vlan 71,81
+!
+vlan 88
+ name WEMA-GLO-SW-MGT
+!
+vlan 89
+ name FBN-REMOTE-MGT
+!
+vlan 91
+ name SWITCH-NMS-ENT-NOC
+!
+vlan 93
+ name BS_@42_Internet
+!
+vlan 94
+ name BS-Access-BB
+!
+vlan 95
+ name ACCESS-BANK-MONITO
+!
+vlan 96
+ name ACCESS-CAMP-MONI
+!
+vlan 97
+ name WEMA-BANK-MONITOR
+!
+vlan 98
+ name ACCESS-MGT-SWITCH
+!
+vlan 100
+ name SWIFT_UNITY
+!
+vlan 110
+ name FIRST-BANK-GHANA
+!
+vlan 112
+ name PRODECO-INT
+!
+vlan 113
+ name COMPOJ-SYSTEM-INT
+!
+vlan 115
+ name AXA-MASARD-HQ-INT
+!
+vlan 117
+ name CORAL-PAY-INT
+!
+vlan 120
+ name STACO_Insurance
+!
+vlan 125
+ name addax-bs
+!
+vlan 126
+ name addax-rack
+!
+vlan 131
+ name c-3560-mgmt
+!
+vlan 135
+ name APN-LINKS
+!
+vlan 136
+ name Adroit
+!
+vlan 140
+ name APOSTOLIC-FAITH
+!
+vlan 141
+ name ARM_LIFE
+!
+vlan 143
+ name NNPC-MEDI-MURI-FIBER
+!
+vlan 144
+ name NNPC-MEDICAL-MURI
+!
+vlan 145
+ name BS-PRTG-PUBLIC
+!
+vlan 150-151
+!
+vlan 160
+ name Q-LIfe-Clinic
+!
+vlan 166
+ name NBC-INTERNET
+!
+vlan 170
+ name CISCON-INT-LAGOS
+!
+vlan 173-174
+!
+vlan 176
+ name NNPC-NETCO-BACKUP
+!
+vlan 179
+ name BUSINESS-SOLUTION-OFFICE-INT
+!
+vlan 184
+ name TECPOINT-GLOBAL-SOLN
+!
+vlan 185
+ name KRISPY-KREME
+!
+vlan 189
+ name ENT-NMS
+!
+vlan 191
+ name SEVENUP-INTERNET
+!
+vlan 200
+ name PRTG-LAN2
+!
+vlan 210
+ name NNPC-NMS-PRTG
+!
+vlan 211
+ name ADDAX-NMS-PRTG
+!
+vlan 212
+ name NBC-NMS-PRTG
+!
+vlan 222
+!
+vlan 225
+ name PRTG-LAN-CONNECTION
+!
+vlan 230
+!
+vlan 250
+ name FIRSTBANK-LAYER3-HQ
+!
+vlan 281,300,334,351-352,355-357,362-373,375-377,400
+!
+vlan 413
+ name CACTI-SERVER
+!
+vlan 415
+ name NNPC-NMS
+!
+vlan 420
+ name ADDAX-NMS
+!
+vlan 434
+ name MORNING_SIDE_SUITES
+!
+vlan 444
+ name PRTG-Proxy-server
+!
+vlan 500,502
+!
+vlan 510
+ name SARO-VPLS
+!
+vlan 513
+!
+vlan 519
+ name FIRS-OYO
+!
+vlan 520
+!
+vlan 524
+ name PREMEIUM-BANK-HQ-INT
+!
+vlan 530
+ name WEMA-HQ-MPLS
+!
+vlan 531
+ name STERLING-ASSET-IKOYI
+!
+vlan 555
+!
+vlan 588
+ name Heritage-Monitoring
+!
+vlan 611
+ name test-key
+!
+vlan 622
+ name YOA-INSURANCE
+!
+vlan 800
+ name ECP_Internet
+!
+vlan 804
+ name new-sw-mgt
+!
+vlan 810
+ name FORTE-OIL-VPLS
+!
+vlan 811
+ name ZEBWEB_SAKAJOJO
+!
+vlan 905
+ name ad
+!
+vlan 910
+ name DPR-VPLS
+!
+vlan 911
+ name DPR-INTERNET
+!
+vlan 914
+ name CONNECTION-PRTG-RTR
+!
+vlan 916
+ name CONNECTION-PE-B
+!
+vlan 917
+ name SWIFT_UNITYBANK
+!
+vlan 918
+ name BABCOCK_INTLSCH
+!
+vlan 984
+!
+vlan 991
+ name vodacom-iba
+!
+vlan 999
+ name int-gw
+!
+vlan 1071
+ name SENTIENT-OBUDU
+!
+vlan 1072
+!
+vlan 1073
+ name SENTIENT-AROCHUKWU
+!
+vlan 1086
+ name SENTI-FID-AQUA-RAPHA
+!
+vlan 1090
+ name Orange_Virgin
+!
+vlan 1111
+ name DCN-TEST-VLAN
+!
+vlan 1112
+ name SENTIENT-FCMB
+!
+vlan 1113
+ name SENTIENT-LL04
+!
+vlan 1114
+ name SENTIENT-LL05
+!
+vlan 1115
+ name GTBank-VPLS
+!
+vlan 1116
+ name SENTIENT-FBN-ABA-EHI
+!
+vlan 1117
+ name SENTIENT-TAJ-BAUCHI
+!
+vlan 1118
+ name SENTIENT-lAFENWA-LL-8M
+!
+vlan 1119
+ name SENTIENT-ABIRIBA
+!
+vlan 1120
+ name SENTIENT-KACHIA
+!
+vlan 1121
+ name SENT-WEMA-OKESHA-NEW
+!
+vlan 1122
+ name TPGS-LANDMARK
+!
+vlan 1123
+ name SENTIENT-KOGI
+!
+vlan 1124
+ name SENTIENT-KATSINA-ALA
+!
+vlan 1126
+ name SENTIENT-FBN-ZUBA
+!
+vlan 1127
+ name SENTIENT-EKITI
+!
+vlan 1128
+ name SENTIENT-GOMBE
+!
+vlan 1129
+ name SENTIENT-AWOYAYA
+!
+vlan 1130
+ name SENTIENT-TAJ-KATSINA
+!
+vlan 1131
+ name SENTIENT-OTUOCHA
+!
+vlan 1132
+ name puzzle-group
+!
+vlan 1133
+ name SENTIENT-DAMATURU
+!
+vlan 1134
+ name SENT-FBN-SAMINAKA
+!
+vlan 1135
+ name SENT-FBN-EKWULOBIA
+!
+vlan 1136
+ name SENT-FBN-MAYAMA
+!
+vlan 1137
+ name SENT-FBN-IJESHA
+!
+vlan 1138
+ name SENTIENT-FBN-OFFA
+!
+vlan 1139
+ name SENTIENT-TAJ-MUBI
+!
+vlan 1141
+ name SENTIENT-KUBWA
+!
+vlan 1143
+ name SENTIENT-FBN-BIDA
+!
+vlan 1144
+ name SENTI-TAJ-POTISKUM
+!
+vlan 1145
+ name SENTIENT-FBN-OGOJA
+!
+vlan 1147
+ name CONN-SURF-SMILE-SIP
+!
+vlan 1153
+ name SENTIENT-FBN-KABBA-NEW
+!
+vlan 1179
+ name SENTIENT-WARRI2
+!
+vlan 1211
+ name PANOCEAN-LAG131
+!
+vlan 1214
+ name CONOIL-MGT-SAKA-RTR
+!
+vlan 1230
+ name sheraton-abj
+!
+vlan 1238
+ name FBN-OBUBRA
+!
+vlan 1248
+ name FBN-OYO
+!
+vlan 1255
+ name FBN-OGIDI
+!
+vlan 1257
+ name FBN-DEIDEI
+!
+vlan 1265
+ name FBN-BASSA
+!
+vlan 1275
+ name FBN-OKITI-PUPA
+!
+vlan 1356
+ name IOTECH-ONIRU
+!
+vlan 1364
+ name APPZONE-INT
+!
+vlan 1428
+!
+vlan 1443
+ name SENTIENT-FIDEL-ESUT
+!
+vlan 1471
+ name UNION_BANK_OJU
+!
+vlan 1486
+ name ENT-CERA-IP-20-MGT1
+!
+vlan 1487
+ name ENT-CERA-IP-20-MGT2
+!
+vlan 1488
+ name ENT-CERA-IP-20-MGT3
+!
+vlan 1489
+ name ENT-CERA-IP-20-MGT4
+!
+vlan 1492
+ name NERA1-MGT
+!
+vlan 1493
+ name BS-NERA-4-MGT
+!
+vlan 1494
+ name NNPC-NERA
+!
+vlan 1495
+ name Nera_Mgt
+!
+vlan 1496
+ name CERAGON_MGT
+!
+vlan 1497
+ name BS-NERA-MGT
+!
+vlan 1498
+ name BS-CERAGON-MGT
+!
+vlan 1500
+ name ZETAWEB_MGMTBS_MGMT
+!
+vlan 1501
+ name BS_MGMT
+!
+vlan 1502
+ name NBC-MARINA
+!
+vlan 1504
+ name ENT-SWITCH-MGT3
+!
+vlan 1507
+ name ENT-SW-MGT-3
+!
+vlan 1512
+ name ORANGE-SITA-AIRPORT
+!
+vlan 1516
+ name european-comm
+!
+vlan 1520
+ name UNION-WARRI
+!
+vlan 1521
+ name UNION-MAKURDI-MAIN
+!
+vlan 1522
+ name UNIONBANK-RD-MAKURDI
+!
+vlan 1523
+ name UNION-OGIRIOKO
+!
+vlan 1524
+ name UNION-ALIADE-MAKURDI
+!
+vlan 1525
+ name UNION-SOKOION-BAUCHI-COMM
+!
+vlan 1526
+ name UNION-YANDOKA
+!
+vlan 1527
+ name UNION-BAUCHI-COMM
+!
+vlan 1529
+ name SENTIENT-FID-NNEWI
+!
+vlan 1530
+ name UNION-ABJ-ANNEX
+!
+vlan 1531
+ name UNION-OKIGWE
+!
+vlan 1532
+ name UNION-ORLU
+!
+vlan 1533
+ name UNION-OSHOGBO
+!
+vlan 1534
+ name UNION-OFFA-MAIN
+!
+vlan 1535
+ name UNION-MAITAMA
+!
+vlan 1536
+ name UNION-KADUNA
+!
+vlan 1537
+ name UNION-AKURE-MRKT
+!
+vlan 1538
+ name UNION-OBA-ADESHIDA
+!
+vlan 1539
+ name UNION-AKURE-MAIN
+!
+vlan 1541
+ name UNION-TRANSAMADI
+!
+vlan 1542
+ name UNION-FED-SEC
+!
+vlan 1543
+ name UNION-WUSE-2
+!
+vlan 1544
+ name UNION-UAC-ABUJA
+!
+vlan 1545
+ name UNION-NAT
+!
+vlan 1546
+ name UNION-SHARADA
+!
+vlan 1547
+ name UNION-BANK-RD-JOS
+!
+vlan 1548
+ name UNION-MMWAY-JOS
+!
+vlan 1549
+ name UNION-IBADAN
+!
+vlan 1550
+ name UNION-AKPAVAVA-BEN
+!
+vlan 1551
+ name UNION-MISSION-RD
+!
+vlan 1552
+ name UNION-AKPAVAVA-2-BEN
+!
+vlan 1554
+ name UNION-MBIAMA
+!
+vlan 1555
+ name UNION-OBIOMA-YENEGOA
+!
+vlan 1556
+ name UNION-ELEME-PETRO
+!
+vlan 1557
+ name UNION-PPMC-ELEME
+!
+vlan 1558
+ name UNION-OYIGBO-PH
+!
+vlan 1559
+ name UNION-KINGSWAY
+!
+vlan 1560
+ name UNION-STATION-RD-PH
+!
+vlan 1561
+ name UNION-AREA-8-ABJ
+!
+vlan 1562
+ name UNION-OKO
+!
+vlan 1563
+ name UNION-PARKLANE-ONIT
+!
+vlan 1564
+ name UNION-AWKA
+!
+vlan 1565
+ name UNION-NNEWI
+!
+vlan 1566
+ name UNION-ORAFITE
+!
+vlan 1567
+ name UNION-EDO-EZENNEWI
+!
+vlan 1568
+ name UNION-IGBO-UKWU
+!
+vlan 1569
+ name UNION-ENUGUKWU
+!
+vlan 1571
+ name UNION-CADESTRAL-ABJ
+!
+vlan 1573
+ name UNION-SOKOTO-MKT
+!
+vlan 1574
+ name UNION-DOUGLASS
+!
+vlan 1575
+ name UNION-2ND-OWERRI
+!
+vlan 1576
+ name UNION-CONCORDE-HOTEL
+!
+vlan 1577
+ name UNION-OGBEDE
+!
+vlan 1578
+ name UNION-ABAKALIKI
+!
+vlan 1579
+ name AXA-MANSARD-ABEKUT
+!
+vlan 1581
+ name NNPC-IKOYI-SEC
+!
+vlan 1582
+ name UNION-ONNE
+!
+vlan 1583
+ name UNION-ODO-IRELE
+!
+vlan 1586
+ name UNION-GUSAU
+!
+vlan 1589
+ name UNION-ILORIN
+!
+vlan 1591
+ name UNION-ABAKALIKI-2
+!
+vlan 1592
+ name UNION-BANK-ONDO
+!
+vlan 1593
+ name UNION-BANK-ASABA
+!
+vlan 1599
+ name AMOTEKUN-IBADAN-INT
+!
+vlan 1600
+ name ORANGE-SCHLUMBERBER
+!
+vlan 1601
+ name ORANGE-HALIBURTON
+!
+vlan 1603-1604,1623
+!
+vlan 1629
+ name SENTIENT-FBN-BENIN
+!
+vlan 1630
+!
+vlan 1632
+ name SENTPLS
+!
+vlan 1634
+ name SENTI-FCMB-IKOT-EKP
+!
+vlan 1640
+ name ACCESS-VPLS
+!
+vlan 1641
+ name UNION-OGHARA
+!
+vlan 1642
+!
+vlan 1650
+ name IO-SAT
+!
+vlan 1651
+ name NLPC-INTERNET
+!
+vlan 1652
+ name india-high
+!
+vlan 1653
+ name UNION-BRIDGEHEAD
+!
+vlan 1654
+!
+vlan 1655
+ name ANO-RD
+!
+vlan 1656
+ name UNION-KANO-RD
+!
+vlan 1657
+ name UNION-ABJ-MAIN-AR-10
+!
+vlan 1658
+ name UNION-AJAGBUEZE
+!
+vlan 1659
+ name UNION-UMUAHIA
+!
+vlan 1660
+ name UNION-NEW-MKT-RD
+!
+vlan 1662
+ name UNION-OGIDI
+!
+vlan 1663
+ name UNION-NKPOR-MAIN
+!
+vlan 1664
+ name UNION-NKPOR-MKT
+!
+vlan 1665
+ name UNION-NKPOR-TYRE-MKT
+!
+vlan 1666
+ name UNION-GARDEN-AVENUE
+!
+vlan 1667
+ name UNION-FIRST-OKPARA
+!
+vlan 1668
+ name UNION-2ND-OKPARA-AVE
+!
+vlan 1669
+ name UNION-OGUI-RD
+!
+vlan 1670
+ name UNION-EMENE
+!
+vlan 1671
+ name UNION-AGBANI
+!
+vlan 1672
+ name UNION-OGBETE
+!
+vlan 1673
+ name ORAN-HEINKEN-KADUNA
+!
+vlan 1674
+ name ORAN-HEINKEN-IBADAN
+!
+vlan 1676
+ name ORAN-HEINEK-SANGO
+!
+vlan 1677
+ name ORAN-HEINE-IGNA-RAD
+!
+vlan 1679
+!
+vlan 1680
+ name UNION-ABJ-MAIN-AREA3
+!
+vlan 1681
+ name UNION-AREA-10
+!
+vlan 1683
+ name ORAN-HEIEKEN-KUDENDA
+!
+vlan 1685
+ name Sentient-fbn-kaura
+!
+vlan 1686
+ name ORANGE-SCHLUMBER-GS
+!
+vlan 1687
+ name UNION-RVER
+!
+vlan 1710
+ name IS_FBN_ORJI_RIVER
+!
+vlan 1711
+ name ISABIRIBA
+!
+vlan 1712
+ name IS_FBN_ABIRIBA
+!
+vlan 1719
+ name SENTIENT-FEMI-PEARSE
+!
+vlan 1723
+ name COBBLE-STONE-ILE-OJA
+!
+vlan 1731
+ name IS_FBN_MBAISE
+!
+vlan 1732
+ name IS_FBN_OMOKU_RIVERS
+!
+vlan 1733
+ name AMBROSE-ALI-UNI
+!
+vlan 1750
+ name ZINOX-LAG
+!
+vlan 1751
+ name ZINOX-ABJ-5M
+!
+vlan 1753
+ name ORANGE-UPS
+!
+vlan 1761
+ name KEYSTONE-VPLS
+!
+vlan 1810
+ name MICHEAL-CECELIA-UNIV
+!
+vlan 1811
+ name NBC-ASEJIRE
+!
+vlan 1812
+ name NBC-OTA
+!
+vlan 1813
+ name NBC-IJEBU-ODE
+!
+vlan 1814
+ name NBC-IBADAN-MPLS
+!
+vlan 1815
+ name NBC-OSHOGBO
+!
+vlan 1820
+ name PAN-AFRICA-INT
+!
+vlan 1824
+ name SENTIENT-SAPELE
+!
+vlan 1844
+ name ORANG-HEINE-BENIN
+!
+vlan 1848
+ name SENITENT-FIDELITY
+!
+vlan 1854
+ name Sent-LOKOJA
+!
+vlan 1871
+ name FIRS-OTA
+!
+vlan 1872
+ name FIRSMOBOLAJI-ONIGBOG
+!
+vlan 1873
+ name UNI-ILORIN
+!
+vlan 1874
+ name PAC-HOLDINGS
+!
+vlan 1881
+ name FIDELITY-VPLS
+!
+vlan 1883
+ name SENTIENT-FIDEL-AWK
+!
+vlan 1884
+ name SENTIENT-TAJ-BANK
+!
+vlan 1888
+ name SENTIENT-IJEBU-IGBO
+!
+vlan 1889
+ name FRENCH-EMBASSY-LAGOS
+!
+vlan 1900
+ name UNION-MONITOR
+!
+vlan 1907
+ name VDT-SEME
+!
+vlan 1908
+ name IS-ONDO-CADBURY
+!
+vlan 1910,1912-1914
+!
+vlan 1915
+ name TNS-RNS
+!
+vlan 1917
+ name RAINBOW-FM
+!
+vlan 1918
+!
+vlan 1919
+ name RCCG-MAGODO
+!
+vlan 1920
+ name irs-jos
+!
+vlan 1921
+ name ORAN-HEINE-MARKURDI
+!
+vlan 1925,1962
+!
+vlan 1967
+ name GREENSPSPRING-LEKKI
+!
+vlan 1972
+ name GREEN-SPRING-LEKKI
+!
+vlan 1973
+ name SENT-JOS
+!
+vlan 1974
+ name SENTIENT-HQ-RACKCENT
+!
+vlan 1991
+ name SOKOTO-MAIN
+!
+vlan 1992
+ name UNION-SOKOTO-MARKET
+!
+vlan 1993
+ name UNION-KEBBI
+!
+vlan 1995
+ name UNION-YOLA
+!
+vlan 1997
+ name UNION-PH-ABA-RD
+!
+vlan 1998
+ name ubn-umuocham
+!
+vlan 1999
+ name Union_Okigwerd_ow
+!
+vlan 2010
+ name FUGRO-WARRI
+!
+vlan 2012
+ name NBC-APAPA
+!
+vlan 2016
+ name SENTIENT-FBN-ELEME
+!
+vlan 2022
+ name NEW-CROSS-LL
+!
+vlan 2039,2053
+!
+vlan 2056
+ name ORANGE-HEINE-ONITSHA
+!
+vlan 2057
+ name SWISS-EMBASSY
+!
+vlan 2059
+ name ORANGE-NAMA-PRI
+!
+vlan 2060
+ name ORANGE-NAMA-SEC
+!
+vlan 2061
+ name ORANGE-WORLD-BANK
+!
+vlan 2062
+ name SENTIENT-TAFAWA-BALE
+!
+vlan 2063
+ name SENTIENT-ORBA-ENUGU
+!
+vlan 2064
+ name SENTIENT-OGBUNIKE
+!
+vlan 2065
+ name SENTIENT-OJI-ENUGU
+!
+vlan 2066
+ name SENTIENT-FBN-BABCOCK
+!
+vlan 2067
+ name SENTIENT-TORO
+!
+vlan 2068
+ name SENTIENT-FUNTUA
+!
+vlan 2101-2103
+!
+vlan 2151
+ name MOBIL-INT(BACKUP)
+!
+vlan 2170
+ name NNPC-MOSIMI-PRI
+!
+vlan 2171
+ name NNPC-MOSIMI-SEC
+!
+vlan 2174
+ name SENTIENT-WEMA-OKESHA
+!
+vlan 2178
+ name NNPC-IKOYI-PRI
+!
+vlan 2203
+ name STERLING-DRC-MAINONE
+!
+vlan 2211
+ name AXA-MANSARD-ABEOKUTA
+!
+vlan 2213
+ name FLORIDAN-HOTEL-IKARE
+!
+vlan 2266
+ name DENMARK-EMBASSY
+!
+vlan 2299
+ name SENT-TAJ-EWET-UYO004
+!
+vlan 2311
+ name ORANGE-HEINKE-IBD
+!
+vlan 2312
+ name ORANG-HEINE-ABA
+!
+vlan 2313
+ name ORANGE-HEINKE-ENU
+!
+vlan 2314
+ name ORANGE-HEIN-KAD-KAKU
+!
+vlan 2315
+ name ORANGE-HEINEKEN-IBD
+!
+vlan 2317
+ name ORAN-HEINE-ENU-10M
+!
+vlan 2387
+ name SENTIENT-IBADAN
+!
+vlan 2397
+ name VDT-GOMT-GOMBE
+!
+vlan 2399
+ name SENT-TAJ-EWET
+!
+vlan 2414
+ name SKIPPER-NIG-INT
+!
+vlan 2420
+ name NIGERIA-BREWERIES
+!
+vlan 2421
+!
+vlan 2422
+ name INDORAMA-LL-PHC
+!
+vlan 2423
+ name StanbicBank_LL
+!
+vlan 2434
+ name ORANGE-COLGATE
+!
+vlan 2441
+ name ORANGE-AEA
+!
+vlan 2449
+ name UNION-FACTORY-RD
+!
+vlan 2481
+ name AES-LUXURY
+!
+vlan 2510
+ name Orange_Aur!
+!
+vlan 2511
+ name ORAN-GIVUDAN
+!
+vlan 2521
+ name FBN-INSURANCE
+!
+vlan 2551
+ name SENTIENT-ILRP-ILORIN
+!
+vlan 2610
+ name NBC-ADO-EKITI
+!
+vlan 2617
+!
+vlan 2701
+ name ORANGE-FBN
+!
+vlan 2702
+ name GREENBEE-INTERNET
+!
+vlan 2703
+ name FUG-PENSION
+!
+vlan 2704
+!
+vlan 2708
+ name PRIME_ATLANT-INT-50M
+!
+vlan 2721
+ name FBN-CAPITAL-PH
+!
+vlan 2786
+ name FBN-IGBOKODA
+!
+vlan 2814
+!
+vlan 2999
+ name FCMB-VPLS
+!
+vlan 3001
+!
+vlan 3005
+ name Telcovas-INT
+!
+vlan 3006
+ name Symbiotic-INT
+!
+vlan 3007
+ name FBN-LL
+!
+vlan 3030
+ name ALHIKMAH-MAIN
+!
+vlan 3031
+ name ALHIKMAH-MINI
+!
+vlan 3034
+ name STERLING-VPLS
+!
+vlan 3035
+ name POLARIS-BANK
+!
+vlan 3036
+ name APMT-INT
+!
+vlan 3037
+!
+vlan 3038
+ name WALTERSMITH-INT
+!
+vlan 3041
+!
+vlan 3042
+ name UBA-VPLS
+!
+vlan 3105
+ name ODUDUWA-MAIN-CAMP
+!
+vlan 3124
+ name SENT-TAJ-YOLA
+!
+vlan 3125
+ name SENT-MINP-NIGER
+!
+vlan 3126
+ name SENT-MINP-JEBBA
+!
+vlan 3129
+ name UNION-UYO
+!
+vlan 3130
+ name UNION-CALABAR
+!
+vlan 3131
+ name UNION-TINAPA
+!
+vlan 3134
+ name ELCREST-LL-OPUAMA
+!
+vlan 3138
+ name redeemer
+!
+vlan 3150-3151
+!
+vlan 3152
+ name FBN-STM1-ABUJA
+!
+vlan 3156
+ name BABCOCK-UNIVESITY
+!
+vlan 3163
+ name SENTIENT-LAPO-MFB
+!
+vlan 3190
+ name SENTIENT-ABRAKA
+!
+vlan 3191
+ name SENTIENT-WEMA-KISHI
+!
+vlan 3192
+ name SENTIENT-OWO-ONDO
+!
+vlan 3221
+ name SENTIENT_POLARIS
+!
+vlan 3241
+ name SENTIENT_FBN
+!
+vlan 3361
+ name WEMA_ABUAD
+!
+vlan 3362
+ name WEMA_AGODI
+!
+vlan 3363
+ name WEMA_AGOIWOYE
+!
+vlan 3364
+ name WEMA_SAGAMU
+!
+vlan 3366
+ name WEMA_APATA
+!
+vlan 3367
+ name WEMA_Ayetoro
+!
+vlan 3368
+ name WEMA_BAUCHI
+!
+vlan 3369
+ name WEMA_BODIJA
+!
+vlan 3370
+ name WEMA_GARKI_DUNOKOFIA
+!
+vlan 3371
+ name WEMA_EKET
+!
+vlan 3372
+ name WEMA_FUTA
+!
+vlan 3373
+ name WEMA_GBAGI
+!
+vlan 3374
+ name WEMA-ILORIN
+!
+vlan 3375
+ name WEMA_OWO
+!
+vlan 3376
+ name WEMA_IFO
+!
+vlan 3378
+ name WEMA_BANK_ILARO
+!
+vlan 3379
+ name WEMA_IRAGBIJI
+!
+vlan 3380
+ name WEMA_KADUNA
+!
+vlan 3381
+ name WEMA_OAU
+!
+vlan 3384
+ name WEMA_ONDO
+!
+vlan 3385
+ name WEMA_OWODE
+!
+vlan 3386
+ name WEMA_RALPH_SOLDEINDE
+!
+vlan 3387
+ name WEMA_STATION_RD
+!
+vlan 3388
+ name WEMA_UYO
+!
+vlan 3389
+ name WEMA-ABA
+!
+vlan 3390
+ name WEMA-DRC-MAINONE
+!
+vlan 3391
+ name WEMA-IYIN-EKITI
+!
+vlan 3392
+ name WEMABANK-IKERE-LL-5M
+!
+vlan 3400
+ name FIRS-BAR-BEACH
+!
+vlan 3415
+ name NNPC-NETCO-VI
+!
+vlan 3491
+ name ORTECH
+!
+vlan 3492
+ name UNION-MASAKA
+!
+vlan 3529
+ name SENTIENT-JOS
+!
+vlan 3651
+ name GTCO-food-festival-Glomobile-Eno
+!
+vlan 3652,3751-3752
+!
+vlan 3843
+ name SENTIENT_IGBOGILA
+!
+vlan 3849
+ name SENTENEBODE
+!
+vlan 3851-3852
+!
+vlan 4005
+ name SENTIENT_INTERNET
+!
+vlan 4007
+ name SENTIENT-LL
+!
+vlan 4008
+ name SENTIENT-AGENEBODE
+!
+vlan 4054
+ name ORANGE-HEINE-UYO
+!
+vlan 4055
+ name ORANGE-GE-
+!
+vlan 4059
+ name FALCK-PRIME-ATLANTIC
+!
+lldp run
+!
+!
+interface Loopback202
+ ip address 172.16.85.1 255.255.255.240
+ shutdown
+!
+interface FastEthernet0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/0/1
+ description TRUNK_TO_GLO1_SAKA25PE01_ALU_RTR | OLD-1/1/2 NEW-2/1/3
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 2,10,11,21,31,41,45,51,61,66,71,81,93,94,98,100
+ switchport trunk allowed vlan add 112,117,120,121,123,125-127,130,131,133,135
+ switchport trunk allowed vlan add 136,138,140,141,143-145,149-151,160,170,174
+ switchport trunk allowed vlan add 176,184,185,199,200,210-212,222,225,230,281
+ switchport trunk allowed vlan add 300,351,352,355-357,362-373,375-377,400,411
+ switchport trunk allowed vlan add 413,415,420,429-435,444,500,501,503-529
+ switchport trunk allowed vlan add 531-580,588,595,800,810,811,901,910,911,917
+ switchport trunk allowed vlan add 918,955,984,999,1071-1073,1090,1114,1115
+ switchport trunk allowed vlan add 1132,1134-1137,1208,1471,1500,1502,1512,1516
+ switchport trunk allowed vlan add 1521,1522,1527,1539,1541,1543,1547,1550,1556
+ switchport trunk allowed vlan add 1559,1562,1566,1574,1579,1581,1583,1593,1600
+ switchport trunk allowed vlan add 1601,1603,1604,1623,1630,1642,1643,1650,1652
+ switchport trunk allowed vlan add 1656,1660,1663,1666,1667,1672,1675-1677,1679
+ switchport trunk allowed vlan add 1683-1687,1710-1712,1731,1732,1750,1751,1753
+ switchport trunk allowed vlan add 1810,1812-1815,1844,1848,1871,1872,1874,1900
+ switchport trunk allowed vlan add 1908,1910,1912-1915,1917-1921,1925,1962,1967
+ switchport trunk allowed vlan add 1973,1998,2000,2010,2012,2039,2052,2056-2068
+ switchport trunk allowed vlan add 2103,2170,2171,2178,2203,2261,2311-2315,2317
+ switchport trunk allowed vlan add 2414,2420,2421,2423,2434,2441,2449,2481,2510
+ switchport trunk allowed vlan add 2511,2521,2610,2617,2701-2704,2721,2724,2814
+ switchport trunk allowed vlan add 2999,3001,3005-3008,3030,3031,3034-3039,3041
+ switchport trunk allowed vlan add 3042,3105,3126,3134,3150-3152,3156,3221,3241
+ switchport trunk allowed vlan add 3390,3400,3415,3491,4005,4008,4054,4055,4059
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/2
+ description STACO_Insurance-SUSPENDED-MGT-RADWIN
+ switchport access vlan 1496
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1496
+ switchport mode trunk
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/3
+ description CONNECTION-AXA-MANSARD-HQ-INT | 500M
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 115,1579
+ switchport mode trunk
+ speed 1000
+ duplex full
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/4
+ description FBN CAPITAL PH
+ switchport access vlan 2721
+ switchport mode access
+!
+interface GigabitEthernet1/0/5
+ description TRUNK-TO-Saka25-3750-Upstairs
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 5,23,66,110,131,135,171,200,210-212,225,460,502
+ switchport trunk allowed vlan add 999,1497,1881,2203
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/6
+ description BELLA-VISTA-BANANA-ISLAND || ADDAX
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1,3-109,111-559,561-1631,1633-1639,1641-1847
+ switchport trunk allowed vlan add 1849-1905,1907-2205,2207-3006,3008-4006
+ switchport trunk allowed vlan add 4008-4094
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/7
+ description TO BSG PRTG SERVER NIC-1(LAN-INTERFACE)(10.192.192.X)
+ switchport access vlan 225
+ switchport mode access
+!
+interface GigabitEthernet1/0/8
+ description COMPOJ-SYSTEM-LTD-INT | 10M
+ switchport access vlan 113
+ switchport mode access
+ no cdp tlv location
+ no cdp tlv server-location
+ no cdp tlv app
+!
+interface GigabitEthernet1/0/9
+ description CACTI NIC-1
+ switchport access vlan 413
+ switchport mode access
+!
+interface GigabitEthernet1/0/10
+ description TRUNK TO BSG PRTG SERVER ROUTER PORT Gi0/1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 66,94,145,200,210-212,225,413,444,914,916,3004
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/11
+ description BUSINESS-SOLUTION-INT
+ switchport access vlan 179
+ switchport mode access
+!
+interface GigabitEthernet1/0/12
+ description CONNECTION TO SWIFT NETWORK-UNITY BANK
+ switchport access vlan 917
+ switchport trunk encapsulation dot1q
+ switchport mode dot1q-tunnel
+ shutdown
+ l2protocol-tunnel cdp
+ l2protocol-tunnel stp
+ no cdp enable
+!
+interface GigabitEthernet1/0/13
+ description STERLING ASSET MGT AND TRUSTEES LTD IKOYI | 15MB
+ switchport access vlan 531
+ switchport mode access
+!
+interface GigabitEthernet1/0/14
+ description SENTIENT FIBER TO SURA OFFICE | FIBER LM
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1072,1073,1086,1112,1116-1121,1124,1126-1128
+ switchport trunk allowed vlan add 1130,1135-1139,1141,1143-1145,1153,1179,1443
+ switchport trunk allowed vlan add 1529,1629,1685,1719,1824,1848,1854,1883,1884
+ switchport trunk allowed vlan add 1888,1973,1974,2016,2062,2065,2066,2068,2174
+ switchport trunk allowed vlan add 2299,2387,2397,2399,2551,3124-3126,3163,3191
+ switchport trunk allowed vlan add 3192,3221,3241,3529,3843,4005,4007,4008
+ switchport mode trunk
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/15
+ description ARM-Internet
+ switchport access vlan 141
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/0/16
+ description TO-DCN-SWITCH-FOR-RM&HUW SERVER MONITORING- Port 1/0/40-DCN_Core_
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ duplex full
+!
+interface GigabitEthernet1/0/17
+ description BILLING SUSPENSION  AGIP-ABJ-LAG-LL
+ switchport access vlan 1208
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/0/18
+ description TRUNK PORT TO ALCATEL-7529 SWITCH PORT-1/5
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 131,133,135,150,174,411,415,420,500,510,513,588
+ switchport trunk allowed vlan add 810,811,955,1114,1500,1630,1643,1900,2423
+ switchport trunk allowed vlan add 3004,3034,3035,3126
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/19
+ description GLO1-Ceragon-Mgmt
+ switchport access vlan 1500
+ switchport mode access
+!
+interface GigabitEthernet1/0/20
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 93,179
+ switchport mode trunk
+ duplex full
+!
+interface GigabitEthernet1/0/21
+ description NEW-TRUNK-TO-GLO1-SAKA25-NE40E || GE1/1/16 (HUAWEI-PE)
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 10,45,55,88,89,91,93-97,110,112,113,115,117,131
+ switchport trunk allowed vlan add 140,166,179,191,502,524,530,531,622,905,914
+ switchport trunk allowed vlan add 991,1122,1230,1238,1248,1255,1257,1265,1275
+ switchport trunk allowed vlan add 1356,1364,1471,1486-1489,1492-1495,1497,1501
+ switchport trunk allowed vlan add 1504,1507,1520-1527,1530-1539,1541-1552
+ switchport trunk allowed vlan add 1554-1569,1571,1573-1579,1582,1583,1586,1589
+ switchport trunk allowed vlan add 1591,1592,1599,1623,1641,1650,1651,1653-1660
+ switchport trunk allowed vlan add 1662-1672,1675,1680,1681,1723,1733,1751,1810
+ switchport trunk allowed vlan add 1811,1820,1848,1873,1889,1900,1907,1908,1915
+ switchport trunk allowed vlan add 1967,1972,1991-1993,1995,1997-1999,2055,2057
+ switchport trunk allowed vlan add 2213,2266,2414,2423,2449,2481,2786,2999
+ switchport trunk allowed vlan add 3034-3036,3038,3042,3129-3131,3138,3221,3241
+ switchport trunk allowed vlan add 3361-3392,3492
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/22
+ description CONNECTION TO DPR
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 910,911
+ switchport mode trunk
+ shutdown
+!
+interface GigabitEthernet1/0/23
+ description CONNECTION BTW CISCO-3560-3rd-3750
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 55,88,98,112,131,140,166,189,191,250,524,530,610
+ switchport trunk allowed vlan add 611,622,900,916,1211,1214,1364,1486-1489
+ switchport trunk allowed vlan add 1492-1494,1497,1501,1507,1640,1673,1674,1684
+ switchport trunk allowed vlan add 1685,1761,1810,1820,1889,1900,1907,2022,2057
+ switchport trunk allowed vlan add 2151,2266,2701,2708,2999,3004,3007,3034,3035
+ switchport trunk allowed vlan add 3042,3126,3134,3221,3241,3849
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/24
+ description SENTIENT TRUNK TO SURA OFFICE | HUAWEI MICROWAVE
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 112-114,1086,1112,1113,1118,1121,1123,1133,1134
+ switchport trunk allowed vlan add 1136,1144,1493,1495,1634,1675,1848,2063-2067
+ switchport trunk allowed vlan add 3163,3221,3241,4007
+ switchport mode trunk
+ switchport nonegotiate
+ duplex full
+!
+interface GigabitEthernet1/1/1
+ description Trunk_to_DCN_PE-A_GE 1/1/11
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ speed nonegotiate
+!
+interface GigabitEthernet1/1/2
+ description UPLINK TO LAG 131
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 2,10,117,143,144,150,160,170,176,184,185,560,595
+ switchport trunk allowed vlan add 901,1122,1211,1356,1494,1497,1498,1501,1684
+ switchport trunk allowed vlan add 1685,1723,1906,2101,2102,2206,2414,2422,2708
+ switchport trunk allowed vlan add 3400,3415,3651,3652,3751,3752,3851,3852
+ switchport mode trunk
+ speed nonegotiate
+!
+interface GigabitEthernet1/1/3
+ description TRUNK TO ENT-NOC-ADEOLA-ODEKU
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ speed nonegotiate
+!
+interface GigabitEthernet1/1/4
+ description DOUBLE ONE PLC (MOBIL APAPA)
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 804,1493,2151
+ switchport mode trunk
+ speed nonegotiate
+!
+interface TenGigabitEthernet1/1/1
+!
+interface TenGigabitEthernet1/1/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan2
+ ip address 10.248.248.228 255.255.255.248
+!
+interface Vlan5
+ ip address 195.1.1.3 255.255.255.248
+!
+interface Vlan10
+ ip address 10.248.248.74 255.255.255.248
+!
+interface Vlan32
+ no ip address
+!
+interface Vlan43
+ no ip address
+!
+interface Vlan91
+ no ip address
+!
+interface Vlan94
+ ip address 10.248.248.251 255.255.255.248
+!
+interface Vlan100
+ ip address 192.168.100.1 255.255.255.0
+!
+interface Vlan110
+ ip address 172.27.27.1 255.255.255.248
+!
+interface Vlan126
+ ip address 172.16.19.1 255.255.255.248
+!
+interface Vlan131
+ ip address 192.168.0.200 255.255.255.0
+!
+interface Vlan149
+ ip address 197.211.47.27 255.255.255.248
+!
+interface Vlan150
+ ip address 10.248.248.142 255.255.255.248
+!
+interface Vlan200
+ ip address 192.168.4.3 255.255.255.248
+!
+interface Vlan225
+ ip address 10.192.192.3 255.255.255.248
+!
+interface Vlan241
+ no ip address
+!
+interface Vlan250
+ no ip address
+!
+interface Vlan252
+ no ip address
+!
+interface Vlan336
+ no ip address
+!
+interface Vlan407
+ no ip address
+!
+interface Vlan413
+ ip address 192.168.9.4 255.255.255.0
+!
+interface Vlan444
+ no ip address
+!
+interface Vlan510
+ ip address 172.30.4.102 255.255.255.240
+!
+interface Vlan530
+ ip address 192.168.140.2 255.255.255.0
+!
+interface Vlan560
+ ip address 197.211.44.98 255.255.255.252
+!
+interface Vlan804
+ ip address 10.248.246.117 255.255.255.192
+!
+interface Vlan905
+ ip address 192.168.15.1 255.255.255.0
+!
+interface Vlan910
+ ip address 192.168.20.201 255.255.255.0
+!
+interface Vlan917
+ ip address 10.100.10.11 255.255.255.0
+!
+interface Vlan999
+ no ip address
+!
+interface Vlan1073
+ no ip address
+!
+interface Vlan1086
+ ip address 23.23.23.23 255.255.255.0
+!
+interface Vlan1111
+ ip address 10.10.100.1 255.255.255.252
+!
+interface Vlan1112
+ ip address 200.200.1.1 255.255.255.248
+!
+interface Vlan1119
+ no ip address
+!
+interface Vlan1120
+ ip address 192.168.1.1 255.255.255.0
+!
+interface Vlan1121
+ ip address 18.18.18.2 255.255.255.0
+!
+interface Vlan1126
+ ip address 10.1.0.90 255.255.255.252
+!
+interface Vlan1136
+ ip address 51.51.51.2 255.255.255.0
+!
+interface Vlan1141
+ ip address 12.12.12.2 255.255.255.0
+!
+interface Vlan1241
+ no ip address
+!
+interface Vlan1265
+ ip address 131.131.131.2 255.255.255.0
+!
+interface Vlan1492
+ ip address 10.155.197.2 255.255.255.0
+ shutdown
+!
+interface Vlan1493
+ ip address 10.155.200.2 255.255.255.0
+!
+interface Vlan1495
+ no ip address
+ shutdown
+!
+interface Vlan1496
+ ip address 10.155.195.210 255.255.255.0
+ shutdown
+!
+interface Vlan1498
+ no ip address
+!
+interface Vlan1501
+ ip address 10.248.249.134 255.255.255.0
+!
+interface Vlan1504
+ ip address 10.248.244.11 255.255.255.0
+!
+interface Vlan1527
+ no ip address
+!
+interface Vlan1529
+ ip address 14.14.14.2 255.255.255.0
+!
+interface Vlan1568
+ no ip address
+!
+interface Vlan1629
+ ip address 192.168.10.2 255.255.255.248
+!
+interface Vlan1632
+ no ip address
+!
+interface Vlan1667
+ no ip address
+!
+interface Vlan1670
+ ip address 10.10.200.1 255.255.255.0
+!
+interface Vlan1676
+ ip address 192.168.49.3 255.255.255.0
+!
+interface Vlan1685
+ ip address 10.155.155.155 255.255.255.0
+!
+interface Vlan1712
+ ip address 10.10.1.16 255.255.255.0
+!
+interface Vlan1848
+ ip address 78.78.78.77 255.255.255.0
+!
+interface Vlan1871
+ ip address 172.31.16.204 255.255.255.248
+!
+interface Vlan1881
+ ip address 192.168.40.2 255.255.255.0
+!
+interface Vlan1906
+ ip address 192.168.11.3 255.255.255.0
+!
+interface Vlan1908
+ ip address 11.11.11.10 255.255.255.0
+!
+interface Vlan1920
+ ip address 197.211.45.3 255.255.255.248
+!
+interface Vlan1973
+ ip address 192.168.14.2 255.255.255.0
+!
+interface Vlan1974
+ ip address 123.123.123.1 255.255.255.0
+!
+interface Vlan2066
+ ip address 10.20.30.40 255.255.255.0
+!
+interface Vlan2174
+ ip address 192.168.19.2 255.255.255.0
+!
+interface Vlan2387
+ ip address 192.168.17.2 255.255.255.0
+!
+interface Vlan2423
+ ip address 172.30.30.222 255.255.255.0
+!
+interface Vlan2521
+ ip address 192.100.100.3 255.255.255.0
+!
+interface Vlan2708
+ ip address 129.205.99.104 255.255.255.240
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+!
+interface Vlan2999
+ ip address 172.22.6.219 255.255.255.0
+!
+interface Vlan3007
+ no ip address
+!
+interface Vlan3034
+ description sterling-bank
+ ip address 192.185.101.241 255.255.255.0
+!
+interface Vlan3035
+ ip address 4.4.4.4 255.255.255.0
+!
+interface Vlan3126
+ ip address 172.35.30.10 255.255.255.0
+!
+interface Vlan3156
+ ip address 192.168.47.1 255.255.255.0
+!
+interface Vlan3163
+ ip address 19.18.18.1 255.255.255.0
+!
+interface Vlan3192
+ ip address 3.2.2.3 255.255.255.0
+!
+interface Vlan3221
+ ip address 192.168.170.202 255.255.255.0
+!
+interface Vlan3241
+ ip address 172.100.200.2 255.255.255.248
+!
+interface Vlan3363
+ no ip address
+!
+interface Vlan3366
+ no ip address
+!
+interface Vlan3367
+ no ip address
+!
+interface Vlan3369
+ ip address 10.11.12.13 255.255.255.0
+!
+interface Vlan3370
+ no ip address
+!
+interface Vlan3372
+ no ip address
+!
+interface Vlan3375
+ no ip address
+!
+interface Vlan3376
+ no ip address
+!
+interface Vlan3378
+ ip address 1.2.3.4 255.255.255.0
+!
+interface Vlan3381
+ no ip address
+!
+interface Vlan3387
+ no ip address
+!
+interface Vlan3388
+ no ip address
+!
+interface Vlan3390
+ no ip address
+!
+interface Vlan3391
+ no ip address
+!
+interface Vlan3392
+ no ip address
+!
+interface Vlan3843
+ ip address 19.19.19.2 255.255.255.0
+!
+interface Vlan4005
+ no ip address
+!
+ip default-gateway 10.248.248.73
+ip classless
+ip route 10.185.0.0 255.255.0.0 10.185.101.1
+ip route 192.168.6.0 255.255.255.0 10.248.248.250
+ip http server
+ip http secure-server
+!
+ip sla 1
+ icmp-echo 192.168.20.10 source-ip 192.168.20.9
+ timeout 1000
+ frequency 2
+ip sla schedule 1 life forever start-time now
+snmp-server community Globacom123* RO
+!
+!
+line con 0
+ password 7 0722205E4F071C091B1D
+line vty 0 4
+ password 7 0722205E4F071C091B1D
+ login
+line vty 5 15
+ login
+!
+end
+
+BS_SAKA_25_3750_3#         sh int des
+Interface                      Status         Protocol Description
+Vl1                            admin down     down
+Vl2                            up             up
+Vl5                            up             up
+Vl10                           up             up
+Vl32                           down           down
+Vl43                           down           down
+Vl91                           up             up
+Vl94                           up             up
+Vl100                          up             up
+Vl110                          up             up
+Vl126                          up             up
+Vl131                          up             up
+Vl149                          down           down
+Vl150                          up             up
+Vl200                          up             up
+Vl225                          up             up
+Vl241                          down           down
+Vl250                          up             up
+Vl252                          down           down
+Vl336                          down           down
+Vl407                          down           down
+Vl413                          up             up
+Vl444                          up             up
+Vl510                          up             up
+Vl530                          up             up
+Vl560                          down           down
+Vl804                          up             up
+Vl905                          up             up
+Vl910                          up             up
+Vl917                          up             up
+Vl999                          up             up
+Vl1073                         up             up
+Vl1086                         up             up
+Vl1111                         up             up
+Vl1112                         up             up
+Vl1119                         up             up
+Vl1120                         up             up
+Vl1121                         up             up
+Vl1126                         up             up
+Vl1136                         up             up
+Vl1141                         up             up
+Vl1241                         down           down
+Vl1265                         up             up
+Vl1492                         admin down     down
+Vl1493                         up             up
+Vl1495                         admin down     down
+Vl1496                         admin down     down
+Vl1498                         up             up
+Vl1501                         up             up
+Vl1504                         up             up
+Vl1527                         up             up
+Vl1529                         up             up
+Vl1568                         up             up
+Vl1629                         up             up
+Vl1632                         up             up
+Vl1667                         up             up
+Vl1670                         up             up
+Vl1676                         up             up
+Vl1685                         up             up
+Vl1712                         up             up
+Vl1848                         up             up
+Vl1871                         up             up
+Vl1881                         up             up
+Vl1906                         down           down
+Vl1908                         up             up
+Vl1920                         up             up
+Vl1973                         up             up
+Vl1974                         up             up
+Vl2066                         up             up
+Vl2174                         up             up
+Vl2387                         up             up
+Vl2423                         up             up
+Vl2521                         up             up
+Vl2708                         up             up
+Vl2999                         up             up
+Vl3007                         up             up
+Vl3034                         up             up       sterling-bank
+Vl3035                         up             up
+Vl3126                         up             up
+Vl3156                         up             up
+Vl3163                         up             up
+Vl3192                         up             up
+Vl3221                         up             up
+Vl3241                         up             up
+Vl3363                         up             up
+Vl3366                         up             up
+Vl3367                         up             up
+Vl3369                         up             up
+Vl3370                         up             up
+Vl3372                         up             up
+Vl3375                         up             up
+Vl3376                         up             up
+Vl3378                         up             up
+Vl3381                         up             up
+Vl3387                         up             up
+Vl3388                         up             up
+Vl3390                         up             up
+Vl3391                         up             up
+Vl3392                         up             up
+Vl3843                         up             up
+Vl4005                         up             up
+Fa0                            admin down     down
+Gi1/0/1                        up             up       TRUNK_TO_GLO1_SAKA25PE01_ALU_RTR | OLD-1/1/2 NEW-2/1/3
+Gi1/0/2                        down           down     STACO_Insurance-SUSPENDED-MGT-RADWIN
+Gi1/0/3                        up             up       CONNECTION-AXA-MANSARD-HQ-INT | 500M
+Gi1/0/4                        down           down     FBN CAPITAL PH
+Gi1/0/5                        up             up       TRUNK-TO-Saka25-3750-Upstairs
+Gi1/0/6                        down           down     BELLA-VISTA-BANANA-ISLAND || ADDAX
+Gi1/0/7                        up             up       TO BSG PRTG SERVER NIC-1(LAN-INTERFACE)(10.192.192.X)
+Gi1/0/8                        up             up       COMPOJ-SYSTEM-LTD-INT | 10M
+Gi1/0/9                        down           down     CACTI NIC-1
+Gi1/0/10                       up             up       TRUNK TO BSG PRTG SERVER ROUTER PORT Gi0/1
+Gi1/0/11                       down           down     BUSINESS-SOLUTION-INT
+Gi1/0/12                       admin down     down     CONNECTION TO SWIFT NETWORK-UNITY BANK
+Gi1/0/13                       up             up       STERLING ASSET MGT AND TRUSTEES LTD IKOYI | 15MB
+Gi1/0/14                       up             up       SENTIENT FIBER TO SURA OFFICE | FIBER LM
+Gi1/0/15                       admin down     down     ARM-Internet
+Gi1/0/16                       up             up       TO-DCN-SWITCH-FOR-RM&HUW SERVER MONITORING- Port 1/0/40-DCN_Core_
+Gi1/0/17                       admin down     down     BILLING SUSPENSION  AGIP-ABJ-LAG-LL
+Gi1/0/18                       up             up       TRUNK PORT TO ALCATEL-7529 SWITCH PORT-1/5
+Gi1/0/19                       down           down     GLO1-Ceragon-Mgmt
+Gi1/0/20                       down           down
+Gi1/0/21                       up             up       NEW-TRUNK-TO-GLO1-SAKA25-NE40E || GE1/1/16 (HUAWEI-PE)
+Gi1/0/22                       admin down     down     CONNECTION TO DPR
+Gi1/0/23                       up             up       CONNECTION BTW CISCO-3560-3rd-3750
+Gi1/0/24                       down           down     SENTIENT TRUNK TO SURA OFFICE | HUAWEI MICROWAVE
+Gi1/1/1                        up             up       Trunk_to_DCN_PE-A_GE 1/1/11
+Gi1/1/2                        up             up       UPLINK TO LAG 131
+Gi1/1/3                        up             up       TRUNK TO ENT-NOC-ADEOLA-ODEKU
+Gi1/1/4                        up             up       DOUBLE ONE PLC (MOBIL APAPA)
+Te1/1/1                        down           down
+Te1/1/2                        down           down
+Lo202                          admin down     down
+BS_SAKA_25_3750_3#

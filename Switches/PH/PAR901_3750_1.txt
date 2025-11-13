@@ -1,0 +1,852 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 13:32.11 ? ? /home/mobaxterm ? telnet 10.248.249.10
+Connected to 10.248.249.10.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Username: bsnoc
+Password:
+PAR901_3750_1#sh int des
+Interface                      Status         Protocol Description
+Vl1                            up             down
+Vl11                           admin down     down
+Vl45                           up             down
+Vl60                           admin down     down
+Vl100                          up             up
+Vl127                          up             up
+Vl201                          up             up
+Vl803                          up             up
+Vl913                          up             up
+Vl917                          up             up
+Vl918                          up             up
+Vl920                          up             up
+Vl921                          up             up
+Vl923                          up             up
+Vl924                          up             up
+Vl1115                         up             up
+Vl1221                         up             up
+Vl1311                         up             up
+Vl1322                         up             up
+Vl1487                         up             up
+Vl1501                         up             up
+Vl1519                         up             up
+Vl1570                         up             up
+Vl2372                         up             up
+Vl2801                         up             up
+Fa1/0/1                        up             up       TPGS PETER PHS PORT HARCOURT
+Fa1/0/2                        down           down     FRSC PHC OFFICE
+Fa1/0/3                        up             up       FRSC DLC TAX  OFFICE
+Fa1/0/4                        down           down     SETCO-OIL-FIELD-PHC-INT
+Fa1/0/5                        admin down     down     GTBANK AZIKWE RD, PHC 8MB LEASED LINE
+Fa1/0/6                        down           down     BAD PORT
+Fa1/0/7                        up             up       JBN-KOKO-AMA-RD| 50MB INTERNET-FIBER-LM
+Fa1/0/8                        down           down     MG-VOW-GAS-INT-10M-DIREC-PAR901-R-CERAGON-IP10-13G
+Fa1/0/9                        up             up       Fredalfred Technologies PHC | 5MB Internet
+Fa1/0/10                       up             up       IOTECH PHC 55MB  INTERNET
+Fa1/0/11                       up             up       TPGS PHC-9 5MB INTERNET
+Fa1/0/12                       up             up       JULIUS-BERGER-KOKOMA-BACKUP-RADIO
+Fa1/0/13                       up             up       TPGS PHC-4 5MB INTERNET
+Fa1/0/14                       down           down     Upland Consulting 10MB INTERNET
+Fa1/0/15                       down           down     DANAHRIQ GROUP | 6MB INTERNET
+Fa1/0/16                       up             up       Graceland International 3MB Internet
+Fa1/0/17                       up             up       BELEMA OIL  30MB INTERNET
+Fa1/0/18                       down           down     MONTEGO-TRANS-AMADI-INT | 10 MB
+Fa1/0/19                       up             up       description NEWCROSS-EKU-8MINTERNET-SHL048 to AKK001 to ADG003 to BUG001 to PAR901
+Fa1/0/20                       up             up       Kenyon-INTL-PHC|10M-INT-R-NERA-PAR59
+Fa1/0/21                       down           down     UNITERM-INT| 30M
+Fa1/0/22                       up             up       TPGS-ELEC-WH-PAR901-PAR320IDU-4M-INTERNET-PAR084
+Fa1/0/23                       down           down     HYPREP-INT |45M
+Fa1/0/24                       up             up       SWITCH-MGT-TRUNK-HUAWEI-3700-SW|PRODECO-INTERNET| MONTEGO-TRANS-AMADI | ACCESS-WOJI-L3
+Gi1/0/1                        up             up       TRUNK TO GLO1 HUAWEI ROUTER 2/1/8
+Gi1/0/2                        up             up       TO-IPD | | NE40EX8-AR-D-G1/1/11
+Lo918                          up             up
+PAR901_3750_1#  sh run
+Building configuration...
+
+Current configuration : 14402 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service unsupported-transceiver
+!
+hostname PAR901_3750_1
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$btTP$Y6F/m5p9DcgXAMvf4IoxW1
+!
+username taiwo privilege 15 secret 5 $1$7l2S$5NY14LcucoZnSfjJiCJBj1
+username ben privilege 15 secret 5 $1$fDLS$bKEoLfRh8Av7E/uRMtfm2.
+username donald privilege 15 secret 5 $1$O7Ie$jHRFz6/ga/xpYZjIRjTDK0
+username richard privilege 15 secret 5 $1$7brN$.buJJIVS4CuTJbwMK.wIc/
+username emeka privilege 15 secret 5 $1$J1ez$Q7C9O9vdBaXds73PRiVpx0
+username onyeka privilege 15 secret 5 $1$g0oy$U3.P0qUbnkQvLl0b3GAoS.
+username chinedu privilege 15 secret 5 $1$RBGP$H37XaBKR4oShYzbOgfCjn0
+username kelechi privilege 15 secret 5 $1$mMgB$6NraFTYImaIXe7TWRoFlT0
+username bizsol privilege 5 secret 5 $1$AIIK$TvBId/BDc57bocfuCLi4w0
+username ope privilege 15 secret 5 $1$vVkl$T0RlsJ/LqN/6cbiDum99R/
+username jonas privilege 15 secret 5 $1$zbFV$zDSQvSLtFVDrj.JHOlAln/
+username noc privilege 15 secret 5 $1$O2oA$.JLzFSP9SttTSiNUDVAzd/
+username bsnoc privilege 15 secret 5 $1$Q6Uu$JiVtXQKJEWwB5P5v3AORE.
+no aaa new-model
+switch 1 provision ws-c3750v2-24ts
+system mtu routing 1950
+vtp mode transparent
+ip subnet-zero
+ip routing
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-3419019904
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3419019904
+ revocation-check none
+ rsakeypair TP-self-signed-3419019904
+!
+!
+crypto pki certificate chain TP-self-signed-3419019904
+ certificate self-signed 01
+  30820246 308201AF A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 33343139 30313939 3034301E 170D3933 30333031 30303031
+  30305A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 34313930
+  31393930 3430819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  8100A3CD 1C5DEAD1 33F09074 E24E59DA 1F1208E4 9A8FA32D A8305E0E E13D1AF8
+  FA7910F5 027ACF5C A844A965 5C44AC08 2393BB9F D782E1DB 8CB7F2A8 A7FB23C8
+  30CFBC48 21DCB5BE 5F3D52AC 21555678 7A7983E2 0F1BDF57 1A1B9F30 90C26991
+  A96CDF6D 12EAF5CB 592E5117 E01BA453 0FEC88B8 6CD8A2F9 A941C78C 12AD512D
+  4D770203 010001A3 6E306C30 0F060355 1D130101 FF040530 030101FF 30190603
+  551D1104 12301082 0E504152 3930315F 33373530 5F312E30 1F060355 1D230418
+  30168014 7B422F1E E97FD8A9 A2371DDF 592DCC3E E426B523 301D0603 551D0E04
+  1604147B 422F1EE9 7FD8A9A2 371DDF59 2DCC3EE4 26B52330 0D06092A 864886F7
+  0D010104 05000381 81007C28 092398CE A0360263 1B637A62 0F44420F 9A1D1D20
+  17CACE07 50482A78 54825D58 5410FE78 2FD9A354 9646F2CF 6ECFF2FF 7B45D8CA
+  F50456A0 7CF2E888 222D8016 36A6A783 2F338BE1 7D3B44DD ECC067DD 6A5C9BDF
+  BD2DB0E2 5DFC8B89 99428519 F3A51BC6 D59724AE C45EB673 A0F7E973 904CB45E
+  703B7884 02C6036F 5BA0
+  quit
+!
+!
+!
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause small-frame
+errdisable recovery interval 30
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+no spanning-tree vlan 803,911-914,1656-1658,1889,1924,1934,1959-1960,2150,2181
+no spanning-tree vlan 2331,2422,2429,2434,2452,2454,2515,2957-2958,2999,3126
+no spanning-tree vlan 3317,3324,3540,4055
+!
+vlan internal allocation policy ascending
+!
+vlan 10
+!
+vlan 11
+ name dopc-ph
+!
+vlan 13
+ name STG
+!
+vlan 15,19
+!
+vlan 20
+ name indorama
+!
+vlan 22
+ name AGIP-INTERNET
+!
+vlan 45
+ name RCC-PH-OFFICE
+!
+vlan 60
+ name l2-test
+!
+vlan 65
+ name jc-international
+!
+vlan 90
+ name new-mgmt
+!
+vlan 100
+ name MANAGEMENT
+!
+vlan 102
+!
+vlan 103
+ name rockview-owerri
+!
+vlan 104
+ name FEDERAL_UNIVERSITY_OTUOKE
+!
+vlan 105
+ name FED_MED_CENTRE_UMUAHIA
+!
+vlan 106-108
+!
+vlan 110
+ name CAVERTON_HELICOPTERS
+!
+vlan 111
+ name EXCELSIMO_INTERNET
+!
+vlan 112
+ name COOLFM-PH-INTERNET
+!
+vlan 114
+ name FUPRE_INTERNET
+!
+vlan 115
+!
+vlan 116
+ name HEALTH_STATION_LIMITED
+!
+vlan 117
+ name SPACE_MATRICE_OWERRI
+!
+vlan 120
+ name test-port
+!
+vlan 121
+ name NETPRO_INTERNET
+!
+vlan 125
+!
+vlan 127
+ name PRODECO-INTERNET
+!
+vlan 133
+ name ADVANCED-MARITIME-T
+!
+vlan 135
+ name SWIRE-OIL-SERVICES
+!
+vlan 201
+ name SWITCH-MGT
+!
+vlan 202-213,215,222
+!
+vlan 223
+ name FIRS-BENIN-MPLS
+!
+vlan 224-226,228-235
+!
+vlan 300
+ name etisalat
+!
+vlan 520
+ name ACCESS-BANK-WOJI-L3
+!
+vlan 521
+ name SPECIALITY-FLUID-DRILL
+!
+vlan 522
+ name CLEAN-NIG-ASSOC-INT
+!
+vlan 523
+ name SAVE-A-LIFE
+!
+vlan 569
+ name UNITERM-INT
+!
+vlan 584
+ name NBC-TRANSAMADI-2
+!
+vlan 653
+ name FIRS_Abakaliki_MPLS
+!
+vlan 665
+ name FIRS-AWKA-MPLS
+!
+vlan 667
+ name FIRS-ASABA-MPLS
+!
+vlan 668
+ name FIRS-CALABAR-LL-MPLS
+!
+vlan 670
+ name FIRS-ONITSHA-MPLS
+!
+vlan 671
+ name FIRS-SAPALE-MPLS
+!
+vlan 672
+ name FIRS-UMUAHIA-MPLS
+!
+vlan 673
+ name FIRS-UYO-MPLS
+!
+vlan 705
+ name FIRS-YENAGOA
+!
+vlan 803
+ name Switch-Mgmt-south
+!
+vlan 901
+ name FIRS-ENUGU-1A-RIDGE-WAY-REGIONAL
+!
+vlan 902
+ name FIRS-NNEWI
+!
+vlan 912
+ name ICAMERD-(BELEMAOIL)
+!
+vlan 913
+ name Graceland-International
+!
+vlan 914
+ name TPGS-PHC-9
+!
+vlan 915
+ name GLO-EXPERIENCE-CENTRE
+!
+vlan 916
+ name Uplan-Consulting
+!
+vlan 917
+ name TPGS-PHC-4
+!
+vlan 918
+ name Fredalfred-Technologies-PHC
+!
+vlan 919
+ name DANAHRIQ-GROUP
+!
+vlan 920
+ name MG-VOW-GAS-INT-10M
+!
+vlan 921
+ name TPGS-ELEC-WH-PAR901-PAR320IDU-4M
+!
+vlan 922
+ name JULIUS-BERG-KOKOMA-BACKUP
+!
+vlan 923
+ name HYPREP-INT
+!
+vlan 924
+ name MONTEGO-TRANS-AMADI-INT
+!
+vlan 1010
+ name HUAHAN-AGG-NMS
+!
+vlan 1045
+ name SETCO-OILFIELD-INT
+!
+vlan 1113
+ name STG-ONNE-INTERNET
+!
+vlan 1115
+ name GTB_VPLS
+!
+vlan 1128
+ name NPA-ONNE-INTERNET
+!
+vlan 1130
+ name NOTORE-INTERNET
+!
+vlan 1201
+!
+vlan 1207
+ name SWIFT-TALK-CALABAR
+!
+vlan 1221
+ name NEWCROSS-EKU-INTERNET
+!
+vlan 1229
+ name JEHOVA-UMUAHIA
+!
+vlan 1299
+ name VASCON-PHC-INT
+!
+vlan 1300
+ name TOTAL
+!
+vlan 1301
+ name TOTAL-OBITE-INTERNET
+!
+vlan 1311
+ name Kenyon-International
+!
+vlan 1312
+ name IPEXPRESS-PH
+!
+vlan 1316
+ name Graceland_International
+!
+vlan 1322
+ name GLOBUS-BANK-PHC
+!
+vlan 1342
+ name AT85-NIGERIA-LTD
+!
+vlan 1351
+ name MONTEGO-HOLDINGS-PHC
+!
+vlan 1477
+ name TPGS-PETER-PHS
+!
+vlan 1487
+ name NEW_CERAGON-MGT
+!
+vlan 1492
+ name BS-NERA-1-MGT
+!
+vlan 1493
+ name BS-NERA-3-MGT
+!
+vlan 1495
+ name BS-NERA-2-MGT
+!
+vlan 1497
+ name BS-NERA-MGT
+!
+vlan 1498
+ name BS-CERAGON-MGT
+!
+vlan 1501
+ name BS-MGT
+!
+vlan 1503
+ name nera-mgmt
+!
+vlan 1510
+ name BULLWARK-INTERNET
+!
+vlan 1519
+ name DAEWO-INDORAMA-INT
+!
+vlan 1541
+ name UNION-BANK-TRANSAMADI
+!
+vlan 1570
+ name IOTECH
+!
+vlan 1600
+ name ORANGE-SCHLUMBERGER
+!
+vlan 1640
+ name ACCESS-BANK-VPLS
+!
+vlan 1649
+ name COZ-PH
+!
+vlan 1656
+ name HILDON_OIL_SERVICES1
+!
+vlan 1657
+ name HILDON_OIL_SERVICES2
+!
+vlan 1658
+ name HILDON_OIL_SERVICES3
+!
+vlan 1659
+ name HILDON_OIL_SERVICES4
+!
+vlan 1702,1718
+!
+vlan 1760
+ name TPGS-PLOT474
+!
+vlan 1761
+ name OWERRI_SWITCH_MGT
+!
+vlan 1840
+ name FIRS-OLRU-MPLS
+!
+vlan 1841
+ name Prodeco_Abuja
+!
+vlan 1847
+ name Prodeco_Lagos
+!
+vlan 1876
+!
+vlan 1882
+ name EROTON-CAWTHORNE
+!
+vlan 1884
+ name EROTON-ALAKIRI
+!
+vlan 1889
+!
+vlan 1924
+ name CATHOLIC-ARCHIDIOCESE
+!
+vlan 1934
+ name AMT-NIG.LTD
+!
+vlan 1959
+ name IMO-STATE-GOVT
+!
+vlan 1960
+ name CISCON-INTERNET-WARRI
+!
+vlan 2150
+ name ESUT-INTERNET
+!
+vlan 2181
+ name NNPC-PHRC-PRIMARY
+!
+vlan 2326
+ name FRSC-PHC-OFFICE
+!
+vlan 2327
+ name FRSC-PHC-DLC-TAX
+!
+vlan 2331
+ name SUNTRUST-VPLS
+!
+vlan 2372
+ name BELEMA-OIL-LL-TO-LAG-2Mb
+!
+vlan 2373
+ name BELEMA-OIL-PH-YENAGOA
+!
+vlan 2422
+ name INDORAMA-LL-LAG-4M
+!
+vlan 2429
+ name SPACEMATRIX_OWERRI
+!
+vlan 2434
+ name WINROK_NSITF_PH
+!
+vlan 2452
+ name WEST-ORD-OIL
+!
+vlan 2454
+ name RCC_EKET_INTERNET
+!
+vlan 2515
+ name FIRS-ENUGU-MSTO
+!
+vlan 2801
+ name JBN-KOKO-AMA-RD
+!
+vlan 2957-2958
+!
+vlan 2999
+ name FCMB-VPLS
+!
+vlan 3126
+ name ACCESS-OLD-DIAMOND-BANK
+!
+vlan 3317
+ name FIRS-ABA-MSTO
+!
+vlan 3324
+ name SALVATION-MINISTRIES-BKP
+!
+vlan 3540
+ name NNPC-NPDC-EGBEMA
+!
+vlan 4055
+ name ORANGE-GE-ONNE
+!
+!
+!
+interface Loopback918
+ no ip address
+!
+interface FastEthernet1/0/1
+ description TPGS PETER PHS PORT HARCOURT
+ switchport access vlan 1477
+ switchport mode access
+ speed 100
+ duplex full
+ no cdp enable
+!
+interface FastEthernet1/0/2
+ description FRSC PHC OFFICE
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1492,2326
+ switchport mode trunk
+ spanning-tree portfast
+!
+interface FastEthernet1/0/3
+ description FRSC DLC TAX  OFFICE
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1492,2327
+ switchport mode trunk
+!
+interface FastEthernet1/0/4
+ description SETCO-OIL-FIELD-PHC-INT
+ switchport access vlan 1045
+ switchport mode access
+!
+interface FastEthernet1/0/5
+ description GTBANK AZIKWE RD, PHC 8MB LEASED LINE
+ switchport access vlan 1115
+ switchport mode access
+ shutdown
+!
+interface FastEthernet1/0/6
+ description BAD PORT
+!
+interface FastEthernet1/0/7
+ description JBN-KOKO-AMA-RD| 50MB INTERNET-FIBER-LM
+ switchport access vlan 2801
+ switchport mode access
+!
+interface FastEthernet1/0/8
+ description MG-VOW-GAS-INT-10M-DIREC-PAR901-R-CERAGON-IP10-13G
+ switchport access vlan 920
+ switchport mode access
+!
+interface FastEthernet1/0/9
+ description Fredalfred Technologies PHC | 5MB Internet
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 918
+ switchport mode trunk
+!
+interface FastEthernet1/0/10
+ description IOTECH PHC 55MB  INTERNET
+ switchport access vlan 1570
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/11
+ description TPGS PHC-9 5MB INTERNET
+ switchport access vlan 914
+ switchport mode access
+!
+interface FastEthernet1/0/12
+ description JULIUS-BERGER-KOKOMA-BACKUP-RADIO
+ switchport access vlan 922
+ switchport mode access
+!
+interface FastEthernet1/0/13
+ description TPGS PHC-4 5MB INTERNET
+ switchport access vlan 917
+ switchport mode access
+!
+interface FastEthernet1/0/14
+ description Upland Consulting 10MB INTERNET
+ switchport access vlan 916
+ switchport mode access
+ load-interval 30
+!
+interface FastEthernet1/0/15
+ description DANAHRIQ GROUP | 6MB INTERNET
+ switchport access vlan 919
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/16
+ description Graceland International 3MB Internet
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 913,1487
+ switchport mode trunk
+!
+interface FastEthernet1/0/17
+ description BELEMA OIL  30MB INTERNET
+ switchport access vlan 912
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/18
+ description MONTEGO-TRANS-AMADI-INT | 10 MB
+ switchport access vlan 924
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/19
+ description description NEWCROSS-EKU-8MINTERNET-SHL048 to AKK001 to ADG003 to BUG001 to PAR901
+ switchport access vlan 1221
+ switchport mode access
+!
+interface FastEthernet1/0/20
+ description Kenyon-INTL-PHC|10M-INT-R-NERA-PAR59
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1311,1493
+ switchport mode trunk
+!
+interface FastEthernet1/0/21
+ description UNITERM-INT| 30M
+ switchport access vlan 569
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/22
+ description TPGS-ELEC-WH-PAR901-PAR320IDU-4M-INTERNET-PAR084
+ switchport access vlan 921
+ switchport mode access
+ speed 100
+ duplex full
+ spanning-tree portfast
+!
+interface FastEthernet1/0/23
+ description HYPREP-INT |45M
+ switchport access vlan 923
+ switchport mode access
+ speed 100
+ duplex full
+!
+interface FastEthernet1/0/24
+ description SWITCH-MGT-TRUNK-HUAWEI-3700-SW|PRODECO-INTERNET| MONTEGO-TRANS-AMADI | ACCESS-WOJI-L3
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 127,201,520-523,923,924,1299,1342,1501,1519
+ switchport mode trunk
+ speed 100
+ duplex full
+!
+interface GigabitEthernet1/0/1
+ description TRUNK TO GLO1 HUAWEI ROUTER 2/1/8
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 100,127,520-523,569,803,912-924,1045,1221,1229
+ switchport trunk allowed vlan add 1299,1311,1342,1351,1519,1570,2801
+ switchport mode trunk
+ speed nonegotiate
+!
+interface GigabitEthernet1/0/2
+ description TO-IPD | | NE40EX8-AR-D-G1/1/11
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 803,1115,1322,1477,1492,1493,1640,1656-1659,1760
+ switchport trunk allowed vlan add 2326,2327,2372,2373
+ switchport mode trunk
+ load-interval 30
+ speed nonegotiate
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan11
+ ip address 41.203.91.77 255.255.255.248
+ shutdown
+!
+interface Vlan45
+ no ip address
+!
+interface Vlan60
+ ip address 173.20.20.4 255.255.255.0
+ shutdown
+!
+interface Vlan100
+ ip address 10.244.244.2 255.255.255.240
+!
+interface Vlan127
+ no ip address
+!
+interface Vlan201
+ ip address 10.244.244.23 255.255.255.240
+!
+interface Vlan803
+ ip address 10.248.246.160 255.255.255.192
+!
+interface Vlan913
+ no ip address
+!
+interface Vlan917
+ no ip address
+!
+interface Vlan918
+ no ip address
+!
+interface Vlan920
+ no ip address
+!
+interface Vlan921
+ no ip address
+!
+interface Vlan923
+ ip address 19.19.19.2 255.255.255.0
+!
+interface Vlan924
+ no ip address
+!
+interface Vlan1115
+ ip address 15.15.15.15 255.255.255.0
+!
+interface Vlan1221
+ no ip address
+!
+interface Vlan1311
+ no ip address
+!
+interface Vlan1322
+ ip address 16.16.16.16 255.255.255.0
+!
+interface Vlan1487
+ no ip address
+!
+interface Vlan1501
+ ip address 10.248.249.10 255.255.255.0
+!
+interface Vlan1519
+ ip address 13.13.13.13 255.255.255.0
+!
+interface Vlan1570
+ no ip address
+!
+interface Vlan2372
+ no ip address
+!
+interface Vlan2801
+ no ip address
+!
+router rip
+ redistribute connected
+ network 172.31.0.0
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 10.248.249.1
+ip http server
+ip http secure-server
+!
+snmp-server community Globacom123* RO
+!
+control-plane
+!
+!
+line con 0
+ password Maranellq
+ login local
+line vty 0 4
+ password Maranello
+ login local
+line vty 5 15
+ login
+!
+end
+
+PAR901_3750_1#

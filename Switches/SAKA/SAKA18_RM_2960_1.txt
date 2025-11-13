@@ -1,0 +1,566 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 13:32.14 ? ? /home/mobaxterm ? telnet 10.248.249.203
+Connected to 10.248.249.203.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Username: bsnoc
+Password:
+SAKA18-RM-SW1_2960_1#sh run
+Building configuration...
+
+Current configuration : 9998 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service unsupported-transceiver
+!
+hostname SAKA18-RM-SW1_2960_1
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$qvtT$s9U4GJBua2HAEgnrPmxrO.
+!
+username taiwo privilege 15 secret 5 $1$u8I8$9n218Sr4BZ2bNlIRa5mp90
+username ben privilege 15 secret 5 $1$C1AZ$nZ2EknXXoS/d6o8D6yD.z0
+username donald privilege 15 secret 5 $1$TuZE$Pn2O8zFxUx/N1fuWoF1HQ.
+username richard privilege 15 secret 5 $1$ZBkc$jXIbQe8ZhV0XD6LgneIyA/
+username emeka privilege 15 secret 5 $1$ROqp$394SJBkwcE2o9KrKrKZYE.
+username onyeka privilege 15 secret 5 $1$fXiJ$CoS3n2/EGQ7smpfv.LxfE/
+username chinedu privilege 15 secret 5 $1$.um3$CS.9SbtC62W9tiauh.C4N0
+username kelechi privilege 15 secret 5 $1$EVo5$sGH.wjml0cVbCPe0Ho.Bf/
+username bizsol privilege 5 secret 5 $1$Nzsk$gLL786x/qqduiMF5XfRyH/
+username ope privilege 15 secret 5 $1$rTZU$LdilRi/1eH9dl3.4Ga3Rv1
+username jonas privilege 15 secret 5 $1$oZue$/hcL2GmvOz/k2yL0ipKZl0
+username noc privilege 15 secret 5 $1$bqfo$xdK.XvjJOGYVa2GufhZdE0
+username bsnoc privilege 15 secret 5 $1$4sGJ$2i/uYiddsPpwSs6U0PHvw/
+username fabian privilege 15 secret 5 $1$uXPh$WISqDxRAbnS81w73UW1St0
+no aaa new-model
+system mtu routing 1500
+vtp domain LAG001
+vtp mode transparent
+ip subnet-zero
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-3815758208
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3815758208
+ revocation-check none
+ rsakeypair TP-self-signed-3815758208
+!
+!
+crypto pki certificate chain TP-self-signed-3815758208
+ certificate self-signed 01
+  3082024D 308201B6 A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 33383135 37353832 3038301E 170D3933 30333031 30303031
+  30375A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 38313537
+  35383230 3830819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  8100DC57 2E9ACA11 EDBB17D9 7C878EE4 26C80E8B EED7549C 432A074E 561AA8FF
+  F012BC2B 404885B8 23B8B836 DDE2B3E2 9D8D3D00 B8A92056 959E3DD4 0A340A84
+  5CD24787 2541E66A 1CA8E80E 6C796C1E 96D46703 F22116EA 0033D729 25996062
+  AF288062 973B4A97 E4AEEDF4 504A4BF9 DFA30176 18DB12BF 34FC732F 7BDDD033
+  68750203 010001A3 75307330 0F060355 1D130101 FF040530 030101FF 30200603
+  551D1104 19301782 1553414B 4131382D 524D2D53 57315F32 3936305F 312E301F
+  0603551D 23041830 168014F0 B11D4950 F719B451 111FEAA7 FE41A64A 7C64D130
+  1D060355 1D0E0416 0414F0B1 1D4950F7 19B45111 1FEAA7FE 41A64A7C 64D1300D
+  06092A86 4886F70D 01010405 00038181 00CF543F C6AE62B9 78211844 F2AB02A9
+  2A676E62 586D6491 A51CF2AD 4A2FC869 2C282F2F 422D64B8 E8D12636 CDE4282A
+  9C411B92 ED0D07EC CBC81A0D 6CAEB97A 697759D6 1C0181C1 ED85A574 67AAB27A
+  D1EC1556 3E2D563C 19E3EE9F 5E003EAF 73B39518 68230025 5A7095EE 43D19C5C
+  1459F8EE C39D6996 A54F4EC0 9CD50E50 CE
+  quit
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 2
+ name TRANSIT
+!
+vlan 3-6
+!
+vlan 8
+ name VIEWSAT-LORDCHOSEN
+!
+vlan 9-11
+!
+vlan 12
+ name BLUE-CR-UTILITY
+!
+vlan 15
+ name JB-ABJ-LAG
+!
+vlan 21
+!
+vlan 22
+ name Frigo-Ibadan
+!
+vlan 23-24,30-31,42,44,91
+!
+vlan 101
+ name FRGO-HQ-INT-2
+!
+vlan 102-104
+!
+vlan 105
+ name FRIGO-INT2
+!
+vlan 106-109,111-115
+!
+vlan 116
+ name BBParis
+!
+vlan 120
+ name TNS_RMS
+!
+vlan 130
+ name NN-FEMS
+!
+vlan 200
+!
+vlan 202
+ name NIRA
+!
+vlan 300
+ name GID-SERVER
+!
+vlan 500
+ name Freeman_house_FL_13-17
+!
+vlan 501
+ name FMH_Floor_10-12
+!
+vlan 502
+ name FMH_Floor_1-9
+!
+vlan 503
+ name FMH
+!
+vlan 506
+ name NON-GID_PCs
+!
+vlan 531
+ name Access_Control
+!
+vlan 551-552
+!
+vlan 555
+ name NAL_Towers_C4C_Users
+!
+vlan 560
+ name LINUX_Workstations
+!
+vlan 561
+ name PRODUCTION_MONITOR
+!
+vlan 565-566,600
+!
+vlan 602
+ name SAN_Switches
+!
+vlan 612
+ name SAP_NetApp_Connection
+!
+vlan 805
+ name SWITCH-SUPERVISION
+!
+vlan 861,900
+!
+vlan 1501
+ name SWITCH-MGT
+!
+vlan 1504
+ name SWITCH-MGT3
+!
+!
+interface FastEthernet0/1
+ description TO-IPD | | Suspect Port 5/1/3
+ switchport trunk allowed vlan 1,4-40,104,500,555,565,566
+ switchport mode trunk
+!
+interface FastEthernet0/2
+ description BRISCOE
+ switchport access vlan 4
+ switchport mode access
+!
+interface FastEthernet0/3
+ description VIASAT
+ switchport access vlan 8
+ switchport mode access
+!
+interface FastEthernet0/4
+ description non
+ switchport access vlan 113
+ switchport mode access
+!
+interface FastEthernet0/5
+ description FrigoIbadan-loop
+ switchport access vlan 22
+ switchport mode access
+ shutdown
+ spanning-tree bpdufilter enable
+!
+interface FastEthernet0/6
+ description FRIGOGLASS (BETAGLASS) HQ CHURCHGATE HOUSE (VLAN-105-INTERNET)
+ switchport trunk allowed vlan 100,101,103,105,111,805,1501,1504
+ switchport mode trunk
+!
+interface FastEthernet0/7
+ description "CONNECTION_TO_ARIK AIR"
+ switchport access vlan 102
+ switchport mode access
+!
+interface FastEthernet0/8
+ description non
+ switchport access vlan 109
+ switchport mode access
+!
+interface FastEthernet0/9
+ description NN FEMS
+ switchport access vlan 130
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/10
+ description FRIGO GLASS IJEBU
+ switchport access vlan 104
+ switchport mode access
+!
+interface FastEthernet0/11
+ description "CBC-LEKKI"
+ switchport access vlan 111
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/12
+ description "CONNECTION_TO_PILAROIL"
+ switchport access vlan 106
+ switchport mode access
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+ description SDV_Bollore
+ switchport access vlan 2
+ switchport mode access
+ load-interval 30
+ spanning-tree portfast
+!
+interface FastEthernet0/15
+ description "CONNECTION TO BETA-GLASS-UGHELLI
+ switchport access vlan 112
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+!
+interface FastEthernet0/16
+ description APMT
+ switchport access vlan 105
+!
+interface FastEthernet0/17
+ description "SUN_NEWSPAPER"
+ switchport access vlan 107
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+!
+interface FastEthernet0/18
+ description "KKONTECH"
+ switchport access vlan 114
+ switchport mode access
+!
+interface FastEthernet0/19
+ description TNS_RMS
+ switchport access vlan 120
+ switchport mode access
+!
+interface FastEthernet0/20
+ description "ABB-VI"
+ switchport access vlan 108
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+!
+interface FastEthernet0/21
+ description non
+ switchport access vlan 24
+ switchport mode access
+!
+interface FastEthernet0/22
+ description PAN_AFRICAN
+ switchport access vlan 115
+ switchport mode access
+!
+interface FastEthernet0/23
+ description non
+ switchport access vlan 500
+ switchport mode access
+!
+interface FastEthernet0/24
+ description LATER-RAIN
+ switchport access vlan 113
+ switchport mode access
+!
+interface GigabitEthernet0/1
+ description TO-IPD | | Suspect Port 5/1/3
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ description TRUNK TO CISCO 3750-SWITCH
+ switchport trunk allowed vlan 105,805,1501
+ switchport mode trunk
+!
+interface Vlan1
+ no ip address
+ no ip route-cache
+!
+interface Vlan3
+ no ip address
+ no ip route-cache
+!
+interface Vlan4
+ description BRISCOE
+ ip address 192.168.177.1 255.255.255.248
+ no ip route-cache
+!
+interface Vlan5
+ ip address 10.241.21.36 255.255.255.248
+ no ip route-cache
+!
+interface Vlan6
+ no ip address
+ no ip route-cache
+!
+interface Vlan7
+ no ip address
+ no ip route-cache
+!
+interface Vlan8
+ no ip address
+ no ip route-cache
+!
+interface Vlan9
+ ip address 141.136.96.90 255.255.255.252
+ no ip route-cache
+!
+interface Vlan10
+ description WAN1_TEST
+ ip address 10.95.10.1 255.255.255.0
+ no ip route-cache
+!
+interface Vlan15
+ ip address 10.11.255.244 255.255.255.248
+ no ip route-cache
+!
+interface Vlan21
+ ip address 10.96.10.1 255.255.255.0
+ no ip route-cache
+!
+interface Vlan22
+ description loop_test
+ ip address 10.97.10.1 255.255.255.0
+ no ip route-cache
+!
+interface Vlan24
+ description RCCG
+ ip address 10.100.100.100 255.255.255.0
+ no ip route-cache
+!
+interface Vlan31
+ ip address 10.10.10.5 255.255.255.248
+ no ip route-cache
+!
+interface Vlan44
+ ip address 10.152.89.70 255.255.255.0
+ no ip route-cache
+!
+interface Vlan101
+ ip address 192.168.0.1 255.255.255.0
+ no ip route-cache
+!
+interface Vlan102
+ ip address 192.168.5.1 255.255.255.0
+ no ip route-cache
+!
+interface Vlan103
+ ip address 10.241.1.44 255.255.255.248
+ no ip route-cache
+!
+interface Vlan104
+ description "FRIGOGLASS_IJEBU"
+ no ip address
+ no ip route-cache
+!
+interface Vlan107
+ description "CONNECTION_TO_SUN_NEWSPAPER"
+ ip address 192.168.18.1 255.255.255.0
+ no ip route-cache
+!
+interface Vlan109
+ description "APOSTOLIC_FAITH"
+ no ip address
+ no ip route-cache
+!
+interface Vlan111
+ no ip address
+ no ip route-cache
+!
+interface Vlan113
+ description LATER_RAIN
+ ip address 192.168.17.1 255.255.255.0
+ no ip route-cache
+!
+interface Vlan114
+ no ip address
+ no ip route-cache
+!
+interface Vlan116
+ ip address 61.246.45.126 255.255.255.0
+ no ip route-cache
+!
+interface Vlan500
+ description SURVELANCE
+ ip address 10.10.5.1 255.255.255.0
+ no ip route-cache
+!
+interface Vlan555
+ description CCTV CONNECTION
+ ip address 10.120.39.13 255.255.255.240
+ no ip route-cache
+!
+interface Vlan565
+ description 7705_MONITORING
+ ip address 10.240.82.98 255.255.255.248
+ no ip route-cache
+!
+interface Vlan805
+ ip address 10.248.246.57 255.255.255.192
+ no ip route-cache
+!
+interface Vlan999
+ no ip address
+ no ip route-cache
+!
+interface Vlan1501
+ ip address 10.248.249.203 255.255.255.0
+ no ip route-cache
+!
+interface Vlan1504
+ ip address 10.248.244.2 255.255.255.0
+ no ip route-cache
+!
+interface Vlan1641
+ no ip address
+ no ip route-cache
+!
+ip default-gateway 10.248.249.1
+ip http server
+ip http secure-server
+snmp-server community globacom RO
+!
+control-plane
+!
+!
+line con 0
+ login local
+line vty 0 4
+ password telnet
+ login local
+line vty 5 15
+ password telnet
+ login
+!
+end
+
+SAKA18-RM-SW1_2960_1#           sh int des
+Interface                      Status         Protocol Description
+Vl1                            up             up
+Vl3                            up             down
+Vl4                            up             up       BRISCOE
+Vl5                            up             up
+Vl6                            up             up
+Vl7                            down           down
+Vl8                            up             up
+Vl9                            up             up
+Vl10                           up             up       WAN1_TEST
+Vl15                           up             up
+Vl21                           up             up
+Vl22                           up             up       loop_test
+Vl24                           up             up       RCCG
+Vl31                           up             up
+Vl44                           up             down
+Vl101                          up             up
+Vl102                          up             down
+Vl103                          up             up
+Vl104                          up             up       "FRIGOGLASS_IJEBU"
+Vl107                          up             down     "CONNECTION_TO_SUN_NEWSPAPER"
+Vl109                          up             down     "APOSTOLIC_FAITH"
+Vl111                          up             up
+Vl113                          up             down     LATER_RAIN
+Vl114                          up             down
+Vl116                          up             down
+Vl500                          up             up       SURVELANCE
+Vl555                          up             up       CCTV CONNECTION
+Vl565                          up             up       7705_MONITORING
+Vl805                          up             up
+Vl999                          down           down
+Vl1501                         up             up
+Vl1504                         up             up
+Vl1641                         down           down
+Fa0/1                          up             up       TO-IPD | | Suspect Port 5/1/3
+Fa0/2                          down           down     BRISCOE
+Fa0/3                          down           down     VIASAT
+Fa0/4                          down           down     non
+Fa0/5                          admin down     down     FrigoIbadan-loop
+Fa0/6                          up             up       FRIGOGLASS (BETAGLASS) HQ CHURCHGATE HOUSE (VLAN-105-INTERNET)
+Fa0/7                          down           down     "CONNECTION_TO_ARIK AIR"
+Fa0/8                          down           down     non
+Fa0/9                          admin down     down     NN FEMS
+Fa0/10                         down           down     FRIGO GLASS IJEBU
+Fa0/11                         admin down     down     "CBC-LEKKI"
+Fa0/12                         down           down     "CONNECTION_TO_PILAROIL"
+Fa0/13                         down           down
+Fa0/14                         down           down     SDV_Bollore
+Fa0/15                         down           down     "CONNECTION TO BETA-GLASS-UGHELLI
+Fa0/16                         down           down     APMT
+Fa0/17                         down           down     "SUN_NEWSPAPER"
+Fa0/18                         down           down     "KKONTECH"
+Fa0/19                         down           down     TNS_RMS
+Fa0/20                         down           down     "ABB-VI"
+Fa0/21                         down           down     non
+Fa0/22                         down           down     PAN_AFRICAN
+Fa0/23                         down           down     non
+Fa0/24                         down           down     LATER-RAIN
+Gi0/1                          down           down     TO-IPD | | Suspect Port 5/1/3
+Gi0/2                          up             up       TRUNK TO CISCO 3750-SWITCH
+SAKA18-RM-SW1_2960_1#    telnet: Connection closed by foreign host
+                                                                                                                        ?
+
+ ? 2025-11-13 ? ? 13:44.45 ? ? /home/mobaxterm ?

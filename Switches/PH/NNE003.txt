@@ -1,0 +1,423 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 13:22.58 ? ? /home/mobaxterm ? telnet 10.248.249.173
+Connected to 10.248.249.173.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-NNE-003>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-NNE-003]dis int des
+Interface                   Description
+Ethernet0/0/1               ADJOINT PHARMACEUTICAL 4MB INTERNET
+Ethernet0/0/2               Jehova Winess ULI 2MB
+Ethernet0/0/3               CUTIX PLC
+Ethernet0/0/4               IP2AIR NKWO MARKET NNEWI 2MB INTERNET
+Ethernet0/0/5               HUAWEI, Quidway Series, Ethernet0/0/5 Interface
+Ethernet0/0/6               CHARYKEL LIMITED 2MB LEASED LINE
+Ethernet0/0/7               UNION BANK ORIFITE
+Ethernet0/0/8               GE2-RTN901-NNE00-EKW801-UNB-OKO!UNB-Igboukwu!Sentie
+                            nt-FBN-Ekwulobia | FCMB ORLU
+Ethernet0/0/9               UNION BANK NNEWI MAIN
+Ethernet0/0/10              HUAWEI, Quidway Series, Ethernet0/0/10 Interface
+Ethernet0/0/11              NSIA-SENTIENT NETWORK
+Ethernet0/0/12              HUAWEI, Quidway Series, Ethernet0/0/12 Interface
+Ethernet0/0/13              UBA NNEWI
+Ethernet0/0/14              FIRS NNEWI
+Ethernet0/0/15              UNION NNEWI & ORIFITE TRUNK THROUGH  HUAWEI
+Ethernet0/0/16              POLARIS BANK EZEMEWI NNEWI
+Ethernet0/0/17              FCMB NNEWI_2
+Ethernet0/0/18              TRUNK-TO-NNE017-NNE004 | STANBIC BANK NNEWI - IOTEC
+                            H RADIO
+Ethernet0/0/19              Platinum Index -ISUOFIA
+Ethernet0/0/20              VDT LAGOS TO NNEWI
+Ethernet0/0/21              HUAWEI, Quidway Series, Ethernet0/0/21 Interface
+Ethernet0/0/22              SENTIENT-FIDELITY-NNEWI2 | 2M
+Ethernet0/0/23              EKULO Group NNEWI
+Ethernet0/0/24              DIAMOND NNEWI CERAGON MONITORING
+GigabitEthernet0/0/1        HUAWEI, Quidway Series, GigabitEthernet0/0/1 Interf
+                            ace
+GigabitEthernet0/0/2        UPLINK TO DCN IP/MPLS | GE 0/2/5
+NULL0                       HUAWEI, Quidway Series, NULL0 Interface
+Vlanif1                     HUAWEI, Quidway Series, Vlanif1 Interface
+Vlanif1454                  HUAWEI, Quidway Series, Vlanif1454 Interface
+Vlanif1501                  HUAWEI, Quidway Series, Vlanif1501 Interface
+Vlanif1529                  HUAWEI, Quidway Series, Vlanif1529 Interface
+Vlanif1565                  HUAWEI, Quidway Series, Vlanif1565 Interface
+Vlanif1568                  HUAWEI, Quidway Series, Vlanif1568 Interface
+Vlanif1992                  HUAWEI, Quidway Series, Vlanif1992 Interface
+Vlanif2423                  HUAWEI, Quidway Series, Vlanif2423 Interface
+[BS-NNE-003] dis cu
+#
+!Software Version V100R005C01SPC100
+ sysname BS-NNE-003
+#
+ vlan batch 555 902 1018 1135 1206 1254 1439 to 1440 1454 1492 to 1493 1495 to 1498
+ vlan batch 1501 1529 1545 1562 1565 to 1569 1579 1583 1640 1652 1881
+ vlan batch 1924 1992 2379 2423 2888 2999 3004 3035 3042 3126
+ vlan batch 3412
+#
+ stp enable
+#
+ cluster enable
+ ntdp enable
+ ntdp hop 16
+ ndp enable
+#
+ bpdu enable
+#
+ dhcp enable
+#
+ undo http server enable
+#
+ drop illegal-mac alarm
+#
+vlan 902
+ description FIRS-NNEWI
+vlan 1018
+ description NESTOIL NNEWI
+vlan 1135
+ description SENTIENT-FBN-EKWUOLOBIA
+vlan 1206
+ description JW-ULI
+vlan 1254
+ description ADJOINT PHARMACEUTICAL
+vlan 1439
+ description NBC-NNEWI
+vlan 1440
+ description NBC-ABAKILIKI
+vlan 1454
+ description CUTIX PLC
+vlan 1492
+ description BS-NERA-4-MGT
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1496
+ description CERAGON-RADIO-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1498
+ description DIAMOND MONITORING
+vlan 1501
+ description MGMT
+vlan 1529
+ description SENTIENT-FIDELITY-NNEWI
+vlan 1545
+ description CHARYKEL LIMITED 2MB LEASED LIN
+vlan 1562
+ description UNION-OKO-EKWULOBIA
+vlan 1565
+ description UNION-NNEWI
+vlan 1566
+ description UNION-ORIFATE
+vlan 1567
+ description UNION-EDOEZE
+vlan 1568
+ description UNION-BANK-IGBO-UKWU
+vlan 1569
+ description VDT-LAGOS-NNEWI
+vlan 1579
+ description Platinum Index
+vlan 1583
+ description FIRS-NNEWI
+vlan 1640
+ description ACCESS-BANK-VPLS
+vlan 1881
+ description Fidelity
+vlan 1924
+ description EKULO group NNewi
+vlan 1992
+ description VDT-NNEWI-INTERNET
+vlan 2379
+ description IP2AIR NKWO MARKET
+vlan 2423
+ description STANBIC IBTC BANK NNEWI
+vlan 2888
+ description ECOBANK-VPLS
+vlan 2999
+ description FCMB-VPLS
+vlan 3035
+ description Polaris bank Nnewi
+vlan 3042
+ description UBA-VPLS
+vlan 3126
+ description DIAMOND-BANK-VPLS
+vlan 3412
+ description HERITAGE-EDO-NNEWI
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user adewunmi password cipher !\)S/>B90$21[a"FZ7=S#!!!
+ local-user adewunmi privilege level 3
+ local-user admin password simple admin
+ local-user admin service-type http
+ local-user bsnoc password cipher RB!G'1+"PX61[a"FZ7=S#!!!
+ local-user bsnoc privilege level 3
+ local-user donald password cipher ^)AW.F&IO7JU4Z(*%FTCV!!!
+ local-user donald privilege level 3
+ local-user fabian password cipher *2+W,D'B31_Q=^Q`MAF4<1!!
+ local-user fabian privilege level 3
+ local-user felix password cipher -5`H9#=YS3"U4Z(*%FTCV!!!
+ local-user moses password cipher Y;FLM:7Q_/F1[a"FZ7=S#!!!
+ local-user moses privilege level 3
+ local-user naveen password cipher V>4:5D3Q-L<0G`2^"@4W+A!!
+ local-user naveen privilege level 3
+ local-user ope password cipher \THX&0.I;NKQBC:RRU/-W1!!
+ local-user ope privilege level 3
+#
+interface Vlanif1
+ ip address dhcp-alloc
+#
+interface Vlanif1454
+ ip address 41.203.75.22 255.255.255.248
+#
+interface Vlanif1501
+ ip address 10.248.249.173 255.255.255.0
+#
+interface Vlanif1529
+ ip address 14.14.14.1 255.255.255.0
+#
+interface Vlanif1565
+#
+interface Vlanif1568
+#
+interface Vlanif1992
+#
+interface Vlanif2423
+#
+interface Ethernet0/0/1
+ description ADJOINT PHARMACEUTICAL 4MB INTERNET
+ shutdown
+ port link-type access
+ port default vlan 1254
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/2
+ description Jehova Winess ULI 2MB
+ port link-type trunk
+ port trunk allow-pass vlan 1206
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/3
+ description CUTIX PLC
+ shutdown
+ port link-type access
+ port default vlan 1454
+ undo ntdp enable
+ undo ndp enable
+#
+interface Ethernet0/0/4
+ description IP2AIR NKWO MARKET NNEWI 2MB INTERNET
+ shutdown
+ port link-type access
+ port default vlan 2379
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/5
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/6
+ description CHARYKEL LIMITED 2MB LEASED LINE
+ port link-type access
+ port default vlan 1545
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/7
+ description UNION BANK ORIFITE
+ shutdown
+ port link-type access
+ port default vlan 1566
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/8
+ description GE2-RTN901-NNE00-EKW801-UNB-OKO!UNB-Igboukwu!Sentient-FBN-Ekwulobia | FCMB ORLU
+ port link-type trunk
+ port trunk allow-pass vlan 1135 1562 1568 1579 2999
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/9
+ description UNION BANK NNEWI MAIN
+ port link-type access
+ port default vlan 1565
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/10
+ port link-type trunk
+ undo port trunk allow-pass vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/11
+ description NSIA-SENTIENT NETWORK
+ port link-type trunk
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/12
+ port link-type access
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/13
+ description UBA NNEWI
+ port link-type trunk
+ port trunk allow-pass vlan 1497 3042
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/14
+ description FIRS NNEWI
+ port link-type access
+ port default vlan 902
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/15
+ description UNION NNEWI & ORIFITE TRUNK THROUGH  HUAWEI
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1566
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/16
+ description POLARIS BANK EZEMEWI NNEWI
+ port link-type trunk
+ port trunk allow-pass vlan 1497 3035
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/17
+ description FCMB NNEWI_2
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1493 2999
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/18
+ description TRUNK-TO-NNE017-NNE004 | STANBIC BANK NNEWI - IOTECH RADIO
+ port link-type trunk
+ port trunk allow-pass vlan 1018 1206 1492 to 1493 1497 1881 2423
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/19
+ description Platinum Index -ISUOFIA
+ port link-type access
+ port default vlan 1579
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/20
+ description VDT LAGOS TO NNEWI
+ port link-type access
+ port default vlan 1992
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/21
+ port link-type access
+ port default vlan 1569
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/22
+ description SENTIENT-FIDELITY-NNEWI2 | 2M
+ port link-type trunk
+ port trunk allow-pass vlan 1529
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/23
+ description EKULO Group NNEWI
+ port link-type access
+ port default vlan 1924
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/24
+ description DIAMOND NNEWI CERAGON MONITORING
+ shutdown
+ port link-type access
+ port default vlan 1498
+ ntdp enable
+ ndp enable
+#
+interface GigabitEthernet0/0/1
+ port link-type trunk
+ port trunk allow-pass vlan 150 1495 1501 1906 2206
+ ntdp enable
+ ndp enable
+ undo negotiation auto
+ speed 100
+#
+interface GigabitEthernet0/0/2
+ description UPLINK TO DCN IP/MPLS | GE 0/2/5
+ port link-type trunk
+ port trunk allow-pass vlan 902 1018 1135 1206 1254 1439 to 1440 1454 1492 to 1493 1495 to 1497 150                      1
+ port trunk allow-pass vlan 1529 1545 1562 1565 to 1569 1579 1583 1640 1881 1924 1992
+ port trunk allow-pass vlan 2311 2379 2423 2888 2999 3035 3042 3126 3157 3412
+ ntdp enable
+ ndp enable
+ port media type copper
+     undo negotiation auto
+ port media type fiber
+     undo negotiation auto
+ combo-port auto
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100002FA9
+ snmp-agent community read  globacom
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ idle-timeout 0 0
+user-interface vty 0 4
+ authentication-mode aaa
+#
+port-group link-type
+#
+return
+[BS-NNE-003]
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                        ?
+
+ ? 2025-11-13 ? ? 13:28.12 ? ? /home/mobaxterm ?

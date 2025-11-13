@@ -1,0 +1,316 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:43.49 ? ? /home/mobaxterm ? telnet 10.248.246.83
+Connected to 10.248.246.83.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:Entering character mode
+Escape character is '^]'.
+bsnoc
+Password:
+Warning: The initial password poses security risks.
+The password needs to be changed. Change now? [Y/N]: n
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2023-10-21 00:46:48+00:00.
+<GLO-ENT -LAR003-10G>sys
+Enter system view, return user view with Ctrl+Z.
+[GLO-ENT -LAR003-10G]dis int des
+PHY: Physical
+*down: administratively down
+#down: LBDT down
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(dl): DLDP down
+(lb): LBDT block
+Interface                     PHY     Protocol Description
+GE0/0/1                       up      up       OGTV ZETAWEB
+GE0/0/2                       down    down     COOLLINK-SHAGAMU-WACUBE(vlan 4004)
+GE0/0/3                       up      up       NNPC RETAIL STATION ABEOKUTA
+GE0/0/4                       down    down     FRSC_ABEOKUTA
+GE0/0/5                       down    down
+GE0/0/6                       down    down     NNPC RETAIL STATION ABEOKUTA
+GE0/0/7                       down    down     FRSC_ABEOKUTA
+GE0/0/8                       down    down     GLOBUS BANK ABEOKUTA (ABE023-LAR003) | 4MB
+GE0/0/9                       up      up       GLOBUS BANK ABEOKUTA (ABE023-LAR003) | 4MB
+GE0/0/10                      down    down
+GE0/0/11                      down    down
+GE0/0/12                      down    down
+GE0/0/13                      down    down
+GE0/0/14                      down    down
+GE0/0/15                      down    down
+GE0/0/16                      down    down
+GE0/0/17                      down    down
+GE0/0/18                      down    down
+GE0/0/19                      down    down
+GE0/0/20                      down    down
+GE0/0/21                      down    down
+GE0/0/22                      down    down
+GE0/0/23                      down    down
+GE0/0/24                      down    down     BACKUP-UPLINK TO DCN LAR003 _GE1/0/17
+NULL0                         up      up(s)
+Vlanif1                       up      down
+Vlanif804                     up      up
+Vlanif1873                    up      up
+Vlanif2824                    up      up
+XGE0/0/1                      up      up       TRUNK DCN-UPE-M8-GE0/5/4
+XGE0/0/2                      down    down     TRUNK RCCG STM6 SECONDARY  INTERNET
+XGE0/0/3                      down    down
+XGE0/0/4                      down    down
+[GLO-ENT -LAR003-10G]     dis cur
+!Software Version V200R011C10SPC600
+#
+sysname GLO-ENT -LAR003-10G
+#
+vlan batch 210 400 804 1123 1133 1352 1492 1494 1497 1500 to 1501
+vlan batch 1503 1664 1804 1839 1873 1893 2060 2824 3042 3470
+vlan batch 4004
+#
+authentication-profile name default_authen_profile
+authentication-profile name dot1x_authen_profile
+authentication-profile name mac_authen_profile
+authentication-profile name portal_authen_profile
+authentication-profile name dot1xmac_authen_profile
+authentication-profile name multi_authen_profile
+#
+telnet server enable
+#
+radius-server template default
+#
+pki realm default
+ certificate-check none
+#
+free-rule-template name default_free_rule
+#
+portal-access-profile name portal_access_profile
+#
+vlan 210
+ description FIRS-ABEOKUTA-LL
+vlan 400
+ description test
+vlan 804
+ description MGNT
+vlan 1123
+ description DAY-WATERMAN-COLLEGE
+vlan 1133
+ description OGTV_INTERNET
+vlan 1352
+ description JBN KM40 PRI INT10M-FIB-LM
+vlan 1492
+ description Ceragon_Mgt
+vlan 1494
+ description BS-NNPC-NERA-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1500
+ description ceragon-mgmt
+vlan 1501
+ description MGT
+vlan 1503
+ description NERA_MGT
+vlan 1664
+ description GLOBUS-BANK-ABEOKUTA
+vlan 1804
+ description emergency
+vlan 1839
+ description Estream Abeokuta
+vlan 1873
+ description RCCG Internet LAR003-RCCG
+vlan 1893
+ description RCCG_Internet
+vlan 2060
+ description FRSC_ABEOKUTA
+vlan 2824
+ description ZETAWEB_OGTV
+vlan 3042
+ description testing
+vlan 3470
+ description NNPC-RETAIL-STATION-ABEOKUTA
+vlan 4004
+ description COOLLINK-SHAGAMU-WACUBE
+#
+aaa
+ authentication-scheme default
+ authentication-scheme radius
+  authentication-mode radius
+ authorization-scheme default
+ accounting-scheme default
+ local-aaa-user password policy administrator
+  password history record number 0
+  password expire 0
+ domain default
+  authentication-scheme radius
+  radius-server default
+ domain default_admin
+  authentication-scheme default
+ local-user ope password irreversible-cipher $1a$;)W%Qo}=V/$Nf>g;<r*T1AjP>ZO"|29}*y%~Hrp&V'"B[Py{qyL$
+ local-user ope privilege level 3
+ local-user ope service-type telnet terminal ssh ftp
+ local-user admin password irreversible-cipher $1a$~Qy25G|nwY$&^Qh5\o`JDU,5gIW.3t(Ds>3&`A>RJ)gN\79pLMY$
+ local-user admin privilege level 15
+ local-user admin service-type telnet terminal
+ local-user bsnoc password irreversible-cipher $1a$1]3nVvR9'I$gl;aKT'5J%Otaz=Ht;W:A4HPH816l,+3&y=*m9Y:$
+ local-user bsnoc privilege level 3
+ local-user bsnoc service-type telnet terminal ssh ftp
+ local-user huawei password irreversible-cipher %^%#K[vxM-~>JSHR!6%CTCPS#b(E0&B{)P5*WU4[U9:3|kxt.([Ui2C:WlL.&Ol5%^%#
+ local-user huawei privilege level 3
+ local-user huawei service-type telnet terminal ssh ftp
+ local-user bsnoc12 password irreversible-cipher $1a$0-UiI.H51O$Dj|TQaV>:ZsSb"YImgj&P!V[$o)mC>&g[RGA[:8H$
+ local-user bsnoc12 privilege level 3
+ local-user bsnoc12 service-type telnet terminal ssh ftp
+ local-user huawei2 password irreversible-cipher %^%#x^bjEshtv=GZ{)'{0+N:Mu/RV0DUsDc63fRdBA\2dSI(=q>3F>Z!d5=O#`pR%^%#
+ local-user huawei2 privilege level 3
+ local-user huawei2 service-type telnet terminal ssh ftp
+ local-user adewunmi password cipher %^%#J{SyY+DgeJ=Eu!%Uf^p1thw;G{\l[,R3-z:OBD/8%^%#
+ local-user adewunmi privilege level 3
+#
+interface Vlanif1
+#
+interface Vlanif804
+ ip address 10.248.246.83 255.255.255.192
+#
+interface Vlanif1873
+ ip address 197.211.54.82 255.255.255.252
+#
+interface Vlanif2824
+ ip address 192.168.99.2 255.255.255.0
+#
+interface GigabitEthernet0/0/1
+ description OGTV ZETAWEB
+ port link-type trunk
+ port trunk allow-pass vlan 1503 2824
+#
+interface GigabitEthernet0/0/2
+ description COOLLINK-SHAGAMU-WACUBE(vlan 4004)
+ port link-type access
+ port default vlan 4004
+#
+interface GigabitEthernet0/0/3
+ description NNPC RETAIL STATION ABEOKUTA
+ port link-type trunk
+ port trunk allow-pass vlan 1494 1503 3470
+#
+interface GigabitEthernet0/0/4
+ undo negotiation auto
+ description FRSC_ABEOKUTA
+ port link-type trunk
+ port trunk allow-pass vlan 804 1492 1893 2060
+#
+interface GigabitEthernet0/0/5
+#
+interface GigabitEthernet0/0/6
+ description NNPC RETAIL STATION ABEOKUTA
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3470
+#
+interface GigabitEthernet0/0/7
+ description FRSC_ABEOKUTA
+ port link-type trunk
+ port trunk allow-pass vlan 1492 2060
+#
+interface GigabitEthernet0/0/8
+ description GLOBUS BANK ABEOKUTA (ABE023-LAR003) | 4MB
+ port link-type access
+ port default vlan 1559
+#
+interface GigabitEthernet0/0/9
+ description GLOBUS BANK ABEOKUTA (ABE023-LAR003) | 4MB
+ port link-type access
+ port default vlan 1664
+#
+interface GigabitEthernet0/0/10
+#
+interface GigabitEthernet0/0/11
+#
+interface GigabitEthernet0/0/12
+#
+interface GigabitEthernet0/0/13
+#
+interface GigabitEthernet0/0/14
+#
+interface GigabitEthernet0/0/15
+#
+interface GigabitEthernet0/0/16
+#
+interface GigabitEthernet0/0/17
+#
+interface GigabitEthernet0/0/18
+#
+interface GigabitEthernet0/0/19
+#
+interface GigabitEthernet0/0/20
+#
+interface GigabitEthernet0/0/21
+#
+interface GigabitEthernet0/0/22
+#
+interface GigabitEthernet0/0/23
+ undo negotiation auto
+ speed 100
+ port link-type access
+ port default vlan 804
+#
+interface GigabitEthernet0/0/24
+ description BACKUP-UPLINK TO DCN LAR003 _GE1/0/17
+ port link-type trunk
+ port trunk allow-pass vlan 804 1492 1494 1503 1664 1873 2060 2824 3470 4004
+#
+interface XGigabitEthernet0/0/1
+ description TRUNK DCN-UPE-M8-GE0/5/4
+ port link-type trunk
+ port trunk allow-pass vlan 804 1492 1494 1503 1664 1873 2060 2824 3470 4004
+#
+interface XGigabitEthernet0/0/2
+ undo negotiation auto
+ description TRUNK RCCG STM6 SECONDARY  INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 804 1873
+#
+interface XGigabitEthernet0/0/3
+#
+interface XGigabitEthernet0/0/4
+#
+interface NULL0
+#
+ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+snmp-agent
+snmp-agent local-engineid 800007DB03A82BCD55AD94
+snmp-agent community read cipher %^%#"H*X+0)Mo7_5U`909Y$UalH]96_|;SFfP^'CiXa,AVh*67r3VHpCro<`{pbRE!%iMo}Nl1oU\;LNa[h5%^%#
+snmp-agent community read cipher %^%#_>P4+7#z+L;pjODenf\#AFfT4||Mh&3@VY,LiM;T~k.VE>r<g>OT50WxCFhCcRmRQ-f8=9.s8t"9\Ou.%^%#
+snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode password
+ set authentication password cipher $1a$3Dg=%r!JHO$|Y_7.mt}c&}ind7CIR8Gu^+GO|VxU,ZyyeG}fW3N$
+user-interface vty 0 4
+ authentication-mode aaa
+ idle-timeout 15 0
+ protocol inbound all
+user-interface vty 16 20
+ authentication-mode aaa
+ idle-timeout 15 0
+ protocol inbound all
+#
+dot1x-access-profile name dot1x_access_profile
+#
+mac-access-profile name mac_access_profile
+#
+return
+[GLO-ENT -LAR003-10G]

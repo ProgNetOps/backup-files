@@ -1,0 +1,302 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:19.30 ? ? /home/mobaxterm ? telnet 10.248.246.58
+Connected to 10.248.246.58.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<ENT-LAG126-SWITCH>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-LAG126-SWITCH]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       STANBIC IBTC BANK KETU | CLIENT-L
+                                               OS011-LAG126 | IOTECH
+Eth0/0/2                      up      up       TPGS OJOTA-2 5MB INTERNET
+Eth0/0/3                      down    down     9JA_MOREPLEX 20MB RADIO  INTERNET
+Eth0/0/4                      down    down     TPGS OGUDU 5MB INTERNET
+Eth0/0/5                      down    down     SAMSUNG-OJOTA-20M-INT-R-CERAGON-D
+                                               IRECT
+Eth0/0/6                      up      up       WEMY1 (14MB) & WEMY2 (6MB) INTERN
+                                               ET | 20MB
+Eth0/0/7                      up      up       SAMSUNG-OJOTA-20M-INT-R-CERAGON-D
+                                               IRECT
+Eth0/0/8                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/8 Interface
+Eth0/0/9                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/9 Interface
+Eth0/0/10                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/10 Interface
+Eth0/0/11                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/11 Interface
+Eth0/0/12                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/12 Interface
+Eth0/0/13                     *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/13 Interface
+Eth0/0/14                     up      up       IOTECH-BARMAN-GRA | 10M
+Eth0/0/15                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/15 Interface
+Eth0/0/16                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/16 Interface
+Eth0/0/17                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/17 Interface
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/24 Interface
+GE0/0/1                       down    down     HUAWEI, Quidway Series, GigabitEt
+                                               hernet0/0/1 Interface
+GE0/0/2                       up      up       UPLINK TO DCN TO UPE-M8-0/2/5
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif10                      up      down     HUAWEI, Quidway Series, Vlanif10
+                                               Interface
+Vlanif805                     up      up       HUAWEI, Quidway Series, Vlanif805
+                                                Interface
+Vlanif1459                    down    down     HUAWEI, Quidway Series, Vlanif145
+                                               9 Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1909                    up      up       HUAWEI, Quidway Series, Vlanif190
+                                               9 Interface
+Vlanif2423                    up      up       HUAWEI, Quidway Series, Vlanif242
+                                               3 Interface
+[ENT-LAG126-SWITCH]    dis cur
+#
+!Software Version V100R006C05
+ sysname ENT-LAG126-SWITCH
+#
+ vlan batch 10 312 805 1404 1412 1425 1459 1489 1492 to 1493 1495 to 1497
+ vlan batch 1501 1639 1778 1823 to 1824 1909 2423 2592
+#
+vlan 10
+ description Glomobile_Monitoring
+vlan 805
+ description Switch Management
+vlan 1404
+ description TPGS Ogudu
+vlan 1412
+ description TPGS OJOTA2
+vlan 1459
+ description WAIFEM
+vlan 1489
+ description CERAGON-MGT
+vlan 1492
+ description BS-NERA-4-MGT
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1496
+ description BS-CERAGON-2-MGT
+vlan 1497
+ description NERA-MGMT_1
+vlan 1501
+ description BS-MGT
+vlan 1639
+ description MEED-FCE-OYO
+vlan 1778
+ description 9JA_MOREPLEX
+vlan 1823
+ description WEMY-INTERNET
+vlan 1824
+ description WEMY-2nd-INTERNET
+vlan 1909
+ description SAMSUNG-OJOTA-20M-INT
+vlan 2423
+ description STANBIC-VPLS
+vlan 2592
+ description IOTECH-BARMAN-GRA
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@zO{r:oD:r@w[1UWKDky%W081%@%@
+ local-user bsnoc privilege level 15
+ local-user bsnoc service-type telnet terminal ftp
+ local-user fabian password cipher %@%@l|V\TVYxJ81}C&ZoPttMQ:X'%@%@
+ local-user fabian privilege level 15
+ local-user huawei password cipher %@%@ZL{b+%UyPR3"Oh/k6QX~S'W'%@%@
+ local-user huawei privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif10
+#
+interface Vlanif805
+ ip address 10.248.246.58 255.255.255.192
+#
+interface Vlanif1459
+#
+interface Vlanif1501
+ ip address 10.248.249.250 255.255.255.0
+#
+interface Vlanif1909
+ ip address 129.205.123.237 255.255.255.248
+#
+interface Vlanif2423
+ ip address 172.30.30.200 255.255.255.0
+#
+interface Ethernet0/0/1
+ description STANBIC IBTC BANK KETU | CLIENT-LOS011-LAG126 | IOTECH
+ port link-type trunk
+ port trunk allow-pass vlan 2423
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/2
+ description TPGS OJOTA-2 5MB INTERNET
+ port link-type access
+ port default vlan 1412
+#
+interface Ethernet0/0/3
+ description 9JA_MOREPLEX 20MB RADIO  INTERNET
+ port link-type access
+ port default vlan 1778
+#
+interface Ethernet0/0/4
+ description TPGS OGUDU 5MB INTERNET
+ port link-type access
+ port default vlan 1404
+#
+interface Ethernet0/0/5
+ description SAMSUNG-OJOTA-20M-INT-R-CERAGON-DIRECT
+ port link-type access
+ port default vlan 1909
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/6
+ description WEMY1 (14MB) & WEMY2 (6MB) INTERNET | 20MB
+ port link-type trunk
+ port trunk allow-pass vlan 1489 1823 to 1824
+#
+interface Ethernet0/0/7
+ description SAMSUNG-OJOTA-20M-INT-R-CERAGON-DIRECT
+ port link-type access
+ port default vlan 1909
+#
+interface Ethernet0/0/8
+ port link-type trunk
+#
+interface Ethernet0/0/9
+ port link-type trunk
+#
+interface Ethernet0/0/10
+ port link-type trunk
+#
+interface Ethernet0/0/11
+ port link-type trunk
+#
+interface Ethernet0/0/12
+ port link-type trunk
+#
+interface Ethernet0/0/13
+ shutdown
+ port link-type access
+#
+interface Ethernet0/0/14
+ description IOTECH-BARMAN-GRA | 10M
+ port link-type access
+ port default vlan 2592
+#
+interface Ethernet0/0/15
+#
+interface Ethernet0/0/16
+#
+interface Ethernet0/0/17
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+ shutdown
+ port link-type trunk
+#
+interface Ethernet0/0/23
+ port link-type access
+#
+interface Ethernet0/0/24
+ port link-type access
+#
+interface GigabitEthernet0/0/1
+ port link-type trunk
+ undo port trunk allow-pass vlan 1
+#
+interface GigabitEthernet0/0/2
+ description UPLINK TO DCN TO UPE-M8-0/2/5
+ port link-type trunk
+ port trunk allow-pass vlan 10 805 1404 1412 1489 1497 1501 1778 1823 to 1824 1909
+ port trunk allow-pass vlan 2423 2592
+ port media type copper
+     undo negotiation auto
+ port media type fiber
+     undo negotiation auto
+ combo-port fiber
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100007D72
+ snmp-agent community read cipher %@%@eS&)A@\g6D@u5v3&4=~C|LB4y'd##6}Pe~Gow+Iw%kwJLB7|FC`n0]l<oTZ[w#7tN/N&B@|L%@%@
+ snmp-agent community read cipher %@%@`.Y'Y_NR&ZN1KxTc$"X@S,=cq;^q11:rMY:=b\5\k>p0,=fS.q5\(utp3L~i\n/Y/^zJ=oS,%@%@
+ snmp-agent community read cipher %@%@#rM`6)r`PC/#n1D,=fM%1c_.i2U-2@P;F$q.4TTF47BTc_11Z$6|Mj5`q3Klzl8KH2-&_:1c%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[ENT-LAG126-SWITCH]

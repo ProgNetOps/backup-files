@@ -1,0 +1,399 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:08.49 ? ? /home/mobaxterm ? telnet 10.248.246.210
+bsnoc
+bsnoc12#$
+Connected to 10.248.246.210.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<KAD-901-ENT-HUAWEI>sys
+Enter system view, return user view with Ctrl+Z.
+[KAD-901-ENT-HUAWEI]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       UBA AHMADU BELLO WAY KADUNA - SWI
+                                               FTALK RADIO - 20MB
+Eth0/0/2                      up      up       SWIFT TALK BARNAWA KADUNA | 20MB
+Eth0/0/3                      up      up       FCMB KASU KADUNA
+Eth0/0/4                      *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/4 Interface
+Eth0/0/5                      up      up       UNION BANK YAKUBU GOWON KADUNA
+Eth0/0/6                      up      up       ICNL INLAND CONTAINERS KADUNA
+Eth0/0/7                      down    down     Westmetro Limited Kaduna 10Mbps
+Eth0/0/8                      down    down     FCMB KASU KADUNA
+Eth0/0/9                      *down   down     WEMA BANK KADUNA
+Eth0/0/10                     down    down     FCMB YAKUBU GOWON ROAD KAD
+Eth0/0/11                     up      up       IS-MPLS KADUNA
+Eth0/0/12                     down    down     UTEL TEST PORT
+Eth0/0/13                     down    down     DPR KADUNA
+Eth0/0/14                     up      up       URTEL VOIP INTERNET
+Eth0/0/15                     *down   down     HOMELSAT (AIRFORCE BASE KADUNA) |
+                                                100MB
+Eth0/0/16                     up      up       ICNL INLAND|SENTIENT FBN KACHIA R
+                                               D |FCMB CONSTITUTION
+Eth0/0/17                     down    down     WEMA BANK KADUNA
+Eth0/0/18                     up      up       GUUT KADUNA
+Eth0/0/19                     up      up       ZTE-ADM-SUPERVISION
+Eth0/0/20                     up      up       STANBIC PENSIONS KADUNA
+Eth0/0/21                     down    down     FRSC KADUNA
+Eth0/0/22                     up      up       GLOWORLD-SHOP-KADUNA
+Eth0/0/23                     down    down     TPGS-KADUNA(WAMCO)
+Eth0/0/24                     down    down     FCMB CONSTITUTION ROAD KAD
+GE0/0/1                       up      up       LINK-TO-DCN-IP/MPLS || GE2/0/3 PE
+                                                B
+GE0/0/2                       up      up       VDT KADUNA | 150M INTERNET | KADU
+                                               NA-1
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif802                     up      up       HUAWEI, Quidway Series, Vlanif802
+                                                Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif3042                    up      up       HUAWEI, Quidway Series, Vlanif304
+                                               2 Interface
+Vlanif3380                    up      up       HUAWEI, Quidway Series, Vlanif338
+                                               0 Interface
+[KAD-901-ENT-HUAWEI]  dis cur
+#
+!Software Version V100R006C03
+ sysname KAD-901-ENT-HUAWEI
+#
+ vlan batch 94 251 311 620 802 910 919 1120 1415 1482
+ vlan batch 1484 1492 1494 to 1495 1497 to 1499 1501 1503 1522 1525 1536 1573 to 1574
+ vlan batch 1632 1640 1660 1680 to 1683 1818 1843 1862 1866 to 1867 1871 1892
+ vlan batch 1897 1924 1968 2209 2314 2545 2616 2999 3007 3034
+ vlan batch 3042 3380 3410 3489 to 3490 3857 4039
+#
+ undo http server enable
+#
+vlan 94
+ description ZTE-ADM-SUPERVISION
+vlan 251
+ description IS-MPLS-2-Kaduna
+vlan 311
+ description STANBIC_PENSIONS
+vlan 620
+ description VDT-KADUNA-INTERNET
+vlan 802
+ description SWITCH-MGT
+vlan 910
+ description DPR-VPLS
+vlan 919
+ description DPR-KADUNA-INTERNET
+vlan 1120
+ description SENTIENT|FBN KACHIA ROAD
+vlan 1415
+ description Westmetro Limited Kaduna 10Mbps
+vlan 1482
+ description ICNL-KADUNA
+vlan 1484
+ description HOMELSAT NIGERIA LTD (AIRFORCE BASE KADUNA
+vlan 1492
+ description BS-NERA-4-MGT
+vlan 1494
+ description NNPC-NERA-MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1497
+ description BE-NERA-MGT
+vlan 1498
+ description BS-CERAGON-MGT
+vlan 1499
+ description BS-HUAWEI-MGT
+vlan 1501
+ description BS-MGT
+vlan 1503
+ description NERA_MGT
+vlan 1522
+ description uTEL-VOIP-INT
+vlan 1525
+ description UNION-SOKOTO-MAIN
+vlan 1536
+ description UNION-KADUNA
+vlan 1573
+ description UNION-SOKOTO-MARKET
+vlan 1574
+ description EXCLUSIVE-NETWORKS
+vlan 1632
+ description WEMA-VPLS
+vlan 1640
+ description ACCESS-BANK-VPLS
+vlan 1660
+ description CAC-KADUNA
+vlan 1680
+ description GUUT-VPLS
+vlan 1682
+ description SWIFT_LAGLL_80MB
+vlan 1683
+ description ORA-HEINEKEN-KUDENDA
+vlan 1818
+ description FRSC KADUNA
+vlan 1843
+ description PAN
+vlan 1866
+ description FIRS-KADUNA-SOUTH
+vlan 1867
+ description FIRS-KADUNA-NORTH-RO
+vlan 1871
+ description GLOWORLD-SHOP-KADUNA
+vlan 1892
+ description VDT-KADUNA-INTERNET
+vlan 1897
+ description TPGS-KADUNA
+vlan 1924
+ description SWIFT-TALK-BARNAWA-KADUNA
+vlan 1968
+ description VDT-ABUJA-KADUNA
+vlan 2209
+ description UDUS-SOKOTO-UNI
+vlan 2314
+ description ORANGEHEINEKENMAKIRA
+vlan 2545
+ description NBC-KADUNA
+vlan 2616
+ description CONOIL-KADUNA
+vlan 2999
+ description FCMB-VPLS
+vlan 3007
+ description FBN-LL-LINKS
+vlan 3034
+ description STERLING-BANK
+vlan 3042
+ description UBA-VPLS
+vlan 3380
+ description WEMA_KADUNA
+vlan 3410
+ description HERITAGE-KADUNA
+vlan 3489
+ description NNPC-ZONAL-OFFICE-KADUNA-PRI
+vlan 3490
+ description NNPC-CPSK-KADUNA
+vlan 3857
+ description ALHERI-CAMP
+vlan 4039
+ description CYBERSPACE_KADUNA
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %$%$I6.ASV)hJET,p"Dn.YM%3aXO%$%$
+ local-user admin service-type http
+ local-user bsnoc password cipher %$%$Qwua-Me&6.v-QV3CZVYLjB90%$%$
+ local-user bsnoc privilege level 15
+ local-user moses password cipher %$%$J0Mo;HGO2!ZU$q,VW.5=j(|s%$%$
+ local-user moses privilege level 15
+ local-user fabian password cipher %$%$WNn>NI.;LO4\wW'gq}])j;2)%$%$
+ local-user fabian privilege level 15
+ local-user rthabj password cipher %$%$x7vlG<Cl6BoKC/:7'(~SrWNE%$%$
+ local-user rthabj privilege level 3
+ local-user solarch password cipher %$%$z+8hH'AqnJv\R'DL-CdXrcZQ%$%$
+ local-user solarch privilege level 3
+#
+interface Vlanif1
+#
+interface Vlanif802
+ ip address 10.248.246.210 255.255.255.192
+#
+interface Vlanif1501
+ ip address 10.248.249.78 255.255.255.0
+#
+interface Vlanif3042
+ ip address 1.1.1.1 255.255.255.0
+#
+interface Vlanif3380
+ ip address 10.30.40.50 255.255.255.0
+#
+interface Ethernet0/0/1
+ description UBA AHMADU BELLO WAY KADUNA - SWIFTALK RADIO - 20MB
+ port link-type access
+ port default vlan 3042
+#
+interface Ethernet0/0/2
+ description SWIFT TALK BARNAWA KADUNA | 20MB
+ port link-type trunk
+ port trunk allow-pass vlan 1924
+#
+interface Ethernet0/0/3
+ description FCMB KASU KADUNA
+ port link-type trunk
+ port trunk allow-pass vlan 1495 2999
+#
+interface Ethernet0/0/4
+ shutdown
+#
+interface Ethernet0/0/5
+ description UNION BANK YAKUBU GOWON KADUNA
+ port link-type access
+ port default vlan 1536
+#
+interface Ethernet0/0/6
+ description ICNL INLAND CONTAINERS KADUNA
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3489
+#
+interface Ethernet0/0/7
+ description Westmetro Limited Kaduna 10Mbps
+ port link-type access
+ port default vlan 1415
+#
+interface Ethernet0/0/8
+ description FCMB KASU KADUNA
+ port link-type trunk
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/9
+ description WEMA BANK KADUNA
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1495 3380
+#
+interface Ethernet0/0/10
+ description FCMB YAKUBU GOWON ROAD KAD
+ port link-type access
+ port default vlan 2999
+#
+interface Ethernet0/0/11
+ description IS-MPLS KADUNA
+ port link-type access
+ port default vlan 251
+#
+interface Ethernet0/0/12
+ description UTEL TEST PORT
+ port link-type access
+ port default vlan 1522
+#
+interface Ethernet0/0/13
+ description DPR KADUNA
+ port link-type trunk
+ port trunk allow-pass vlan 910 919 1497 1640
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/14
+ description URTEL VOIP INTERNET
+ port link-type access
+ port default vlan 1522
+#
+interface Ethernet0/0/15
+ description HOMELSAT (AIRFORCE BASE KADUNA) | 100MB
+ shutdown
+ port link-type access
+ port default vlan 1484
+#
+interface Ethernet0/0/16
+ description ICNL INLAND|SENTIENT FBN KACHIA RD |FCMB CONSTITUTION
+ port link-type trunk
+ port trunk allow-pass vlan 1120 1482
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/17
+ description WEMA BANK KADUNA
+ port link-type trunk
+ port trunk allow-pass vlan 1495 3380
+#
+interface Ethernet0/0/18
+ description GUUT KADUNA
+ port link-type access
+ port default vlan 1680
+#
+interface Ethernet0/0/19
+ description ZTE-ADM-SUPERVISION
+ port link-type access
+ port default vlan 94
+#
+interface Ethernet0/0/20
+ description STANBIC PENSIONS KADUNA
+ port link-type access
+ port default vlan 311
+#
+interface Ethernet0/0/21
+ description FRSC KADUNA
+ port link-type trunk
+ port trunk allow-pass vlan 1492 1818
+#
+interface Ethernet0/0/22
+ description GLOWORLD-SHOP-KADUNA
+ port link-type access
+ port default vlan 1871
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/23
+ description TPGS-KADUNA(WAMCO)
+ port link-type access
+ port default vlan 1897
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/24
+ description FCMB CONSTITUTION ROAD KAD
+ port link-type access
+ port default vlan 2999
+#
+interface GigabitEthernet0/0/1
+ description LINK-TO-DCN-IP/MPLS || GE2/0/3 PE B
+ port link-type trunk
+ port trunk allow-pass vlan 94 251 310 to 311 620 802 910 919 1120 1415 1482
+ port trunk allow-pass vlan 1484 1492 1494 to 1495 1497 to 1499 1501 1503 1522 1525 1536 1573 to 1574
+ port trunk allow-pass vlan 1632 1640 1660 1680 1682 to 1683 1818 1843 1866 to 1867 1871 1892
+ port trunk allow-pass vlan 1897 1924 1968 2209 2314 2545 2616 2999 3007 3034
+ port trunk allow-pass vlan 3042 3380 3410 3489 to 3490 3857 4039
+#
+interface GigabitEthernet0/0/2
+ description VDT KADUNA | 150M INTERNET | KADUNA-1
+ port link-type access
+ port default vlan 1892
+ undo negotiation auto
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.193
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F000001000067EC
+ snmp-agent community read cipher %$%$A1Z]QU)E..ed8lTPplz0S`WN%$%$
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode password
+ set authentication password cipher %$%$ONe|J8o@j<}%8""KhiY$,$xol`Xa0dS)kYF*r<M^t.5%#*!y%$%$
+user-interface vty 0 4
+ authentication-mode aaa
+#
+port-group de
+#
+return
+[KAD-901-ENT-HUAWEI]

@@ -1,0 +1,345 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 13:24.40 ? ? /home/mobaxterm ? telnet 10.248.249.73
+Connected to 10.248.249.73.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-OWO-002>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-OWO-002]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      down    down     SAM-SMITH-RUFUS-GIWA-UNIVERSITY
+Eth0/0/2                      up      up       VDT LAGOS - OWO
+Eth0/0/3                      up      up       WEMA BANK OWO
+Eth0/0/4                      down    down     PHASE POINT OWO |2MB INTERNET
+Eth0/0/5                      up      up       TPGS TECPOINT OWO-VEI003 | 50MB
+Eth0/0/6                      *down   down     HERITAGE BANK FAJUYI ROAD, OWO
+Eth0/0/7                      *down   down     POLARIS BANK OWO (terminated)
+Eth0/0/8                      up      up       BESTWESTERN MYDAS HOTEL
+Eth0/0/9                      down    down     FIRST BANK IKARE MPLS
+Eth0/0/10                     *down   down     RUGIPO
+Eth0/0/11                     down    down     CERAGON RADIO MGT FIRST BANK IKAR
+                                               E MPLS
+Eth0/0/12                     up      up       UBA ADEKUNLE AJASIN UNIVERSITY -
+                                               DICNET RADIO
+Eth0/0/13                     *down   down     POLARISBANK-IKARE-OWO002-IKA002-H
+                                               UAWEI-MAINIDU-GE03-IKA002-R-CERAG
+                                               ON
+Eth0/0/14                     down    down     BEDC-TELEMET6-OWO-INT |10MB
+Eth0/0/15                     up      up       SENTIENT OWO | 4MB
+Eth0/0/16                     down    down     FLOWZAP OWO |VL 2977| 50MB
+Eth0/0/17                     down    down     ACCESS BANK AKUNGBA | 10M
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23
+Eth0/0/24                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/24 Interface
+GE0/0/1                       up      up       SAM-SMITH-RUFUS-GIWA-UNIVERSITY
+GE0/0/2                       up      up       UPLINK TO DCN IP/MPLS-UPE-M8-GE0/
+                                               2/1
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1512                    down    down     HUAWEI, Quidway Series, Vlanif151
+                                               2 Interface
+Vlanif1555                    up      up       HUAWEI, Quidway Series, Vlanif155
+                                               5 Interface
+Vlanif3042                    up      down     HUAWEI, Quidway Series, Vlanif304
+                                               2 Interface
+Vlanif3192                    up      up       HUAWEI, Quidway Series, Vlanif319
+                                               2 Interface
+[BS-OWO-002]    dis cur
+#
+!Software Version V100R006C03
+ sysname BS-OWO-002
+#
+ vlan batch 220 1028 to 1029 1048 1088 1252 1327 1486 1492 1495 to 1497 1501
+ vlan batch 1512 1555 1632 1640 1642 1982 2052 2815 2977 3007
+ vlan batch 3035 to 3036 3042 3159 3192 3375 3430 to 3431
+#
+ undo http server enable
+#
+vlan 220
+ description FIRS IKARE MPLS
+vlan 1029
+ description BEDC-TELEMET6-OWO
+vlan 1048
+ description GIANTSWORK-OWO|155M-INTERNET
+vlan 1088
+ description VDT-LAGOS-OWO
+vlan 1252
+ description FBN-L3
+vlan 1327
+ description SAM-SMITH-RUFUS-GIWA-UNIVERSITY
+vlan 1486
+ description CERAGON-IP20-RADIO-MGT
+vlan 1492
+ description BS-NERA-4-MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1496
+ description CERAGON-MGT-VLAN
+vlan 1497
+ description BS-NERA-MGT
+vlan 1501
+ description BS_MGT
+vlan 1512
+ description ORANGE-AIRPORT
+vlan 1555
+ description TPGS-OWO-VEI003
+vlan 1632
+ description WEMA-BANK-VPLS
+vlan 1640
+ description ACCESS-BANK-VPLS
+vlan 1642
+ description BESTWESTERN-MYDAS-HOTEL
+vlan 1982
+ description PHASE POINT OWO
+vlan 2052
+ description ORANGE_DELTAAIRLINE
+vlan 2815
+ description FIRS ALIMOSHO
+vlan 2977
+ description FLOWZAP
+vlan 3007
+ description FBN-VPLS
+vlan 3035
+ description SKYE BANK
+vlan 3036
+ description ACHIEVERS UNIVERSITY
+vlan 3042
+ description UBA-ADEKUNLE AJASIN
+vlan 3159
+ description RUGIPO
+vlan 3192
+ description SENTIENT-OWO
+vlan 3375
+ description WEMA BANK OWO
+vlan 3430
+ description HERITAGE-OKITIPUPA
+vlan 3431
+ description HERITAGE_BANK_OWO
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user ope password cipher %$%$:HzN-Uig9Q8Gc}UJH9mF0I@7%$%$
+ local-user ope privilege level 3
+ local-user admin password cipher %$%$I6.ASV)hJET,p"Dn.YM%3aXO%$%$
+ local-user admin service-type http
+ local-user bsnoc password cipher %$%$[r9\AWvL^~~}[MB6rB=)0xof%$%$
+ local-user bsnoc privilege level 3
+ local-user chuks password cipher %$%$>nx'QaOj#YG%JO<T]g/S0^UL%$%$
+ local-user chuks privilege level 3
+ local-user moses password cipher %$%$0|LECc:mw5hYJQ(*-V;F08/&%$%$
+ local-user moses privilege level 3
+ local-user donald password cipher %$%$f@4O-giST4i@sZQ8y%080.%y%$%$
+ local-user donald privilege level 3
+ local-user fabian password cipher %$%$5;:WR&&w!;CE4G7S+iHI0YPG%$%$
+ local-user fabian privilege level 3
+ local-user naveen password cipher %$%$}l|:6S,}1.*Z*P,,d'DF0_VM%$%$
+ local-user naveen privilege level 3
+ local-user kelechi password cipher %$%$p&k6B@9o)'"~6y0Opg\90tkb%$%$
+ local-user kelechi privilege level 3
+#
+interface Vlanif1
+#
+interface Vlanif1501
+ ip address 10.248.249.73 255.255.255.0
+#
+interface Vlanif1512
+ ip address 192.168.43.10 255.255.255.0
+#
+interface Vlanif1555
+ ip address 10.13.13.1 255.255.255.0
+#
+interface Vlanif3042
+#
+interface Vlanif3192
+ ip address 3.2.2.4 255.255.255.0
+#
+interface Ethernet0/0/1
+ description SAM-SMITH-RUFUS-GIWA-UNIVERSITY
+ port link-type access
+ port default vlan 1327
+ multicast-suppression 50
+ broadcast-suppression 50
+#
+interface Ethernet0/0/2
+ description VDT LAGOS - OWO
+ port link-type access
+ port default vlan 1088
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/3
+ description WEMA BANK OWO
+ port link-type access
+ port default vlan 3375
+#
+interface Ethernet0/0/4
+ description PHASE POINT OWO |2MB INTERNET
+ port link-type access
+ port default vlan 1982
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/5
+ description TPGS TECPOINT OWO-VEI003 | 50MB
+ port link-type access
+ port default vlan 1555
+#
+interface Ethernet0/0/6
+ description HERITAGE BANK FAJUYI ROAD, OWO
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1497 3431
+#
+interface Ethernet0/0/7
+ description POLARIS BANK OWO (terminated)
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1495 3035
+#
+interface Ethernet0/0/8
+ description BESTWESTERN MYDAS HOTEL
+ port link-type access
+ port default vlan 1642
+#
+interface Ethernet0/0/9
+ description FIRST BANK IKARE MPLS
+ port link-type trunk
+ port trunk allow-pass vlan 1252 1496 3007
+#
+interface Ethernet0/0/10
+ description RUGIPO
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1492 3159
+#
+interface Ethernet0/0/11
+ description CERAGON RADIO MGT FIRST BANK IKARE MPLS
+ port link-type access
+ port default vlan 1496
+#
+interface Ethernet0/0/12
+ description UBA ADEKUNLE AJASIN UNIVERSITY - DICNET RADIO
+ port link-type access
+ port default vlan 3042
+#
+interface Ethernet0/0/13
+ description POLARISBANK-IKARE-OWO002-IKA002-HUAWEI-MAINIDU-GE03-IKA002-R-CERAGON
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1496 3035
+#
+interface Ethernet0/0/14
+ description BEDC-TELEMET6-OWO-INT |10MB
+ port link-type access
+ port default vlan 1029
+#
+interface Ethernet0/0/15
+ description SENTIENT OWO | 4MB
+ port link-type trunk
+ port trunk allow-pass vlan 3192
+#
+interface Ethernet0/0/16
+ description FLOWZAP OWO |VL 2977| 50MB
+ port link-type access
+ port default vlan 2977
+#
+interface Ethernet0/0/17
+ description ACCESS BANK AKUNGBA | 10M
+ port link-type access
+ port default vlan 1640
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+ description HUAWEI, Quidway Series, Ethernet0/0/23
+#
+interface Ethernet0/0/24
+#
+interface GigabitEthernet0/0/1
+ description SAM-SMITH-RUFUS-GIWA-UNIVERSITY
+ port link-type access
+ port default vlan 1327
+#
+interface GigabitEthernet0/0/2
+ description UPLINK TO DCN IP/MPLS-UPE-M8-GE0/2/1
+ port link-type trunk
+ port trunk allow-pass vlan 220 1029 1048 1088 1252 1327 1486 1492 1495 to 1497 1501
+ port trunk allow-pass vlan 1555 1632 1640 1642 1982 2977 3007 3035 to 3036 3042 3159
+ port trunk allow-pass vlan 3192 3375 3430 to 3431
+ undo negotiation auto
+ multicast-suppression 50
+ broadcast-suppression 50
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F000001000032AF
+ snmp-agent community read cipher %$%$KV2$E'XdiC<\zR)W87qKw^UL%$%$
+ snmp-agent community read cipher %$%$;k[K2*RO&"FIOBS+oN!#/i`W%$%$
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode password
+ set authentication password cipher %$%$3pZyJEg[QF_2bc*Do6Y9,{ripwSx:G(@TU(bJY!LN&_A*$xs%$%$
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[BS-OWO-002]

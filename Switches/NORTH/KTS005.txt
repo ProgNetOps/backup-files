@@ -1,0 +1,448 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:14.11 ? ? /home/mobaxterm ? telnet 10.248.246.202
+Connected to 10.248.246.202.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+BS-KTS-005>en
+Password:
+BS-KTS-005#sh int des
+Interface                      Status         Protocol Description
+Vl1                            admin down     down
+Vl315                          up             up
+Vl505                          up             up
+Vl522                          up             up
+Vl802                          up             up
+Vl1251                         up             up
+Vl1415                         up             up
+Vl1494                         up             up
+Vl1497                         up             up
+Vl1501                         up             up
+Vl1900                         up             up
+Vl3007                         up             up
+Vl3035                         up             up
+Fa0/1                          up             up       UNION BANK KATSINA MAIN
+Fa0/2                          down           down     EXCLUSIVE NETWORKS
+Fa0/3                          down           down     WESTMETRO-PCC-KATSINA
+Fa0/4                          down           down     FIRS KATSINA
+Fa0/5                          up             up       STANBIC PENSIONS KATSINA (CERAGON ODU 15G)
+Fa0/6                          up             up       VDT ABUJA KATSINA
+Fa0/7                          down           down     DAN BUKAR SCHOOL DAURA
+Fa0/8                          up             up       SWIFT TALK JIBIA | 10MB
+Fa0/9                          down           down     INTERNATIONAL KATSINA
+Fa0/10                         down           down     WHO-KATSINA-INTERNET || 1MB
+Fa0/11                         down           down     WHO-KATSINA-RADIO-MGT
+Fa0/12                         up             up       BCN-DAURA-KATSINA-INTERNET || 10Mbps
+Fa0/13                         up             up       HIQOS DPR KATSINA
+Fa0/14                         up             up       SENTIENT TAJ BANK KATSINA - CLIENT-MANAGED-RADIO
+Fa0/15                         down           down     KTS 005 O & M TECHNICAL
+Fa0/16                         up             up       NNPC RETAIL STATION KATSINA | IOTECH
+Fa0/17                         up             up       FEDERAL UNIVERSITY, DUSTIN KATSINA | UBA DUTSINMA
+Fa0/18                         up             up       GLOWORLD KATSINA
+Fa0/19                         down           down     FIRST-BANK-KANKIA-ll- MOVED-SUSPECTED-BAD-PORT
+Fa0/20                         down           down     NIMET KATSINA
+Fa0/21                         up             up       FIRST-BANK-KANKIA-ll
+Fa0/22                         up             up       IOTECH-KATSINA-INT | 100M
+Fa0/23                         down           down     POLARIS-KASTINA-2M-LL-R-CERAGON
+Fa0/24                         down           down
+Gi0/1                          up             up       HASSAN-UMARU-KATSINA-POLY-INT |155M
+Gi0/2                          up             up       TRUNK-TO-DCN-RTR-KTS005-GE-0/1/9
+BS-KTS-005#   sh run
+Building configuration...
+
+Current configuration : 7886 bytes
+!
+version 15.0
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+service unsupported-transceiver
+!
+hostname BS-KTS-005
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$iPHq$jkPTl5KDslvRraWbLGehV0
+!
+no aaa new-model
+system mtu routing 1500
+vtp mode transparent
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-2471201280
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-2471201280
+ revocation-check none
+ rsakeypair TP-self-signed-2471201280
+!
+!
+crypto pki certificate chain TP-self-signed-2471201280
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 32343731 32303132 3830301E 170D3933 30333031 30303030
+  35385A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D32 34373132
+  30313238 3030819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  810093E6 62A398E1 FCA14928 9DF7E944 BCC3624E 6F0D48DB 6E08CC0D 896A1380
+  8AD93072 41287628 59A42A3A 75E9F979 F84D43C6 AB36983B 0D27F210 23ABC3F3
+  5CB71336 7B861F77 6F9C2491 0DE9393E B3AAD8CC 326F55C9 80BEBBC9 436C7605
+  A789FE1C FBEEF22E BB362AFD A4FEEA66 A4714078 7734BA7A CA589380 2D344B32
+  52170203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603
+  551D2304 18301680 147E1974 23236AF4 A29C606A 013EF5E2 6E536A9B 33301D06
+  03551D0E 04160414 7E197423 236AF4A2 9C606A01 3EF5E26E 536A9B33 300D0609
+  2A864886 F70D0101 05050003 8181008E 14C07617 1F75F535 5C1720FA B7636D4F
+  89AA90E1 DF41A358 32814624 0E8D33E4 984E839F 41F9146D 00B93F0A 9F4FA8FE
+  094BFB05 D4F0116A B8E6A845 0C72D403 535CA823 F7E53FEA 46293B9E 072FC3C9
+  426CD67B 1BA9850B 5CFA74AB 5826142F B90EF70B 0F28BA5D A0B89FD8 CF10DFF0
+  A94A89CB 43E39DE5 29A8B3B2 27299C
+        quit
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 100
+ name KTS005-TECH-O&M
+!
+vlan 311
+ name CHICASON-INTERNET
+!
+vlan 312
+ name CHICASON-DOCKYARD
+!
+vlan 313
+ name CHICASON-FLOURMILL
+!
+vlan 315
+ name STANBIC-PENSION-KATS
+!
+vlan 504
+ name VDT-ABUJA-KATSINA
+!
+vlan 505
+ name NBC_KATSINA
+!
+vlan 522
+ name FIRS-KATSINA
+!
+vlan 523
+ name DAN-BUKAR-SCH-DAURA
+!
+vlan 802
+ name SWITCH-MGT
+!
+vlan 1124
+ name SENTIENT-KATSINA
+!
+vlan 1130
+ name SENTIENT-TAJ-BANK
+!
+vlan 1228
+ name IOTECH-INT
+!
+vlan 1251
+ name FBN-L3
+!
+vlan 1252
+ name HASSAN-UMARU-POLY
+!
+vlan 1279
+ name WESTMETRO-KATSINA
+!
+vlan 1415
+ name BCN_DAURA
+!
+vlan 1488
+ name Ceragon-mgt
+!
+vlan 1492
+ name BS-NERA-4-MGT
+!
+vlan 1493
+ name BS-NERA-3-MGT
+!
+vlan 1494
+ name NNPC-NERA-RADIO-MGT
+!
+vlan 1497
+ name BS-NERA-MGT
+!
+vlan 1498
+ name CERAGON_MGT
+!
+vlan 1501
+ name BS-MGT
+!
+vlan 1503
+ name NERA_MGT
+!
+vlan 1627
+ name HIQOS-DPR-KATSINA
+!
+vlan 1640
+ name EXCLUSIVE
+!
+vlan 1680
+ name GUUT-H-VPLS
+!
+vlan 1900
+ name VDT-KATSINA-INTERNET
+!
+vlan 1965
+ name FED-UNI-DUTSIN-KATSINA
+!
+vlan 2180
+ name GLOWORLD-KATSINA
+!
+vlan 2251
+!
+vlan 2261
+ name UNION_bnK_KATSINA
+!
+vlan 2563
+!
+vlan 2653
+ name SWIFTALK-JIBIA
+!
+vlan 3007
+ name FIRST-BANK-KANKIA
+!
+vlan 3035
+ name POLARIS-KASTINA-2M-LL
+!
+vlan 3042
+ name UBA-VPLS
+!
+vlan 3446
+ name NNPC-RETAIL-ST-KASTINA
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+ description UNION BANK KATSINA MAIN
+ switchport access vlan 2261
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/2
+ description EXCLUSIVE NETWORKS
+ switchport access vlan 1640
+ switchport mode access
+ duplex full
+ spanning-tree portfast
+!
+interface FastEthernet0/3
+ description WESTMETRO-PCC-KATSINA
+ switchport access vlan 1279
+ switchport mode access
+ speed 100
+ duplex full
+ spanning-tree portfast
+!
+interface FastEthernet0/4
+ description FIRS KATSINA
+ switchport access vlan 522
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/5
+ description STANBIC PENSIONS KATSINA (CERAGON ODU 15G)
+ switchport access vlan 315
+ switchport mode access
+ speed 100
+ duplex full
+!
+interface FastEthernet0/6
+ description VDT ABUJA KATSINA
+ switchport trunk allowed vlan 1900
+ switchport mode trunk
+!
+interface FastEthernet0/7
+ description DAN BUKAR SCHOOL DAURA
+ switchport trunk allowed vlan 523,1497
+ switchport mode trunk
+ spanning-tree portfast
+!
+interface FastEthernet0/8
+ description SWIFT TALK JIBIA | 10MB
+ switchport access vlan 2653
+ switchport mode access
+!
+interface FastEthernet0/9
+ description INTERNATIONAL KATSINA
+ switchport access vlan 1680
+ switchport mode access
+!
+interface FastEthernet0/10
+ description WHO-KATSINA-INTERNET || 1MB
+ switchport access vlan 2251
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/11
+ description WHO-KATSINA-RADIO-MGT
+ switchport access vlan 2251
+ switchport mode access
+!
+interface FastEthernet0/12
+ description BCN-DAURA-KATSINA-INTERNET || 10Mbps
+ switchport trunk allowed vlan 1415,1503
+ switchport mode trunk
+!
+interface FastEthernet0/13
+ description HIQOS DPR KATSINA
+ switchport trunk allowed vlan 1493,1627
+ switchport mode trunk
+!
+interface FastEthernet0/14
+ description SENTIENT TAJ BANK KATSINA - CLIENT-MANAGED-RADIO
+ switchport trunk allowed vlan 1130
+ switchport mode trunk
+!
+interface FastEthernet0/15
+ description KTS 005 O & M TECHNICAL
+ switchport access vlan 100
+ switchport mode access
+!
+interface FastEthernet0/16
+ description NNPC RETAIL STATION KATSINA | IOTECH
+ switchport access vlan 3446
+ switchport mode access
+!
+interface FastEthernet0/17
+ description FEDERAL UNIVERSITY, DUSTIN KATSINA | UBA DUTSINMA
+ switchport trunk allowed vlan 802,1492,1497,1965,3042
+ switchport mode trunk
+!
+interface FastEthernet0/18
+ description GLOWORLD KATSINA
+ switchport access vlan 2180
+ switchport mode access
+!
+interface FastEthernet0/19
+ description FIRST-BANK-KANKIA-ll- MOVED-SUSPECTED-BAD-PORT
+ switchport trunk allowed vlan 1251,1498,3007
+ switchport mode trunk
+!
+interface FastEthernet0/20
+ description NIMET KATSINA
+ switchport access vlan 1680
+ switchport mode access
+!
+interface FastEthernet0/21
+ description FIRST-BANK-KANKIA-ll
+ switchport trunk allowed vlan 1251,1498,3007
+ switchport mode trunk
+!
+interface FastEthernet0/22
+ description IOTECH-KATSINA-INT | 100M
+ switchport access vlan 1228
+ switchport mode access
+!
+interface FastEthernet0/23
+ description POLARIS-KASTINA-2M-LL-R-CERAGON
+ switchport access vlan 3035
+ switchport mode access
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+ description HASSAN-UMARU-KATSINA-POLY-INT |155M
+ switchport trunk allowed vlan 802,1252,1488
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ description TRUNK-TO-DCN-RTR-KTS005-GE-0/1/9
+ switchport trunk allowed vlan 100,311-313,315,505,522,523,802,1124,1130,1228
+ switchport trunk allowed vlan add 1251,1252,1279,1415,1488,1492-1494,1496-1498
+ switchport trunk allowed vlan add 1501,1503,1627,1640,1680,1900,1965,2180,2251
+ switchport trunk allowed vlan add 2261,2653,3007,3035,3042,3446
+ switchport mode trunk
+ load-interval 30
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan315
+ ip address 31.31.31.33 255.255.255.0
+!
+interface Vlan505
+ ip address 172.16.242.254 255.255.255.0
+!
+interface Vlan522
+ no ip address
+!
+interface Vlan802
+ ip address 10.248.246.202 255.255.255.192
+!
+interface Vlan1251
+ no ip address
+!
+interface Vlan1415
+ no ip address
+!
+interface Vlan1494
+ ip address 10.155.201.2 255.255.255.0
+!
+interface Vlan1497
+ no ip address
+!
+interface Vlan1501
+ ip address 10.248.249.187 255.255.255.0
+!
+interface Vlan1900
+ no ip address
+!
+interface Vlan3007
+ ip address 192.168.252.199 255.255.255.0
+!
+interface Vlan3035
+ no ip address
+!
+ip default-gateway 10.248.246.193
+ip http server
+ip http secure-server
+snmp-server community globacom RW
+!
+!
+line con 0
+ password 7 013E07165A0503032D5D
+ login
+line vty 0 4
+ password 7 013E07165A0503032D5D
+ login
+line vty 5 15
+ login
+!
+end
+
+BS-KTS-005#

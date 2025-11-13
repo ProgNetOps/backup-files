@@ -1,0 +1,366 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:19.24 ? ? /home/mobaxterm ? telnet 10.248.246.213
+Connected to 10.248.246.213.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-LAF-002>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-LAF-002]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      down    down     NASARAWA POLY ISA AGWAI 10MB INTE
+                                               RNET
+Eth0/0/2                      up      up       IDN 2MB ( Moved fron DCN routerFI
+                                               RS LAFIA
+Eth0/0/3                      down    down     KEYSTONE LAFIA
+Eth0/0/4                      up      up       VDT ABUJA - LAFIA
+Eth0/0/5                      up      up       GLOWORLD NASSARAWA
+Eth0/0/6                      *down   down     FEDERAL UNIV LAFIA (NALOT)
+Eth0/0/7                      down    down     DPR LAFIA  |8MB INTERNET
+Eth0/0/8                      down    down     GTBANK MARABA
+Eth0/0/9                      down    down     FIDELITY BANK LAFIA
+Eth0/0/10                     up      up       NNPC RETAIL STATION LAFIA | FIDEL
+                                                POLY | CHEC(CHINA) 10M | DOTMAC
+Eth0/0/11                     up      up       CYBERSPACE-LAFIA-INTERNET || 40Mb
+                                               ps
+Eth0/0/12                     down    down     CYBERSPACE-LAFIA-INTERNET || 40Mb
+                                               ps
+Eth0/0/13                     down    down     UBA LAFIA
+Eth0/0/14                     *down   down     MFEDOO NAPOL
+Eth0/0/15                     up      up       NSUK Lafia campus -20Mb||INTERNET
+Eth0/0/16                     up      up       ACCES BANK LAFIA
+Eth0/0/17                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/17 Interface
+Eth0/0/18                     up      up       CHINA HARBOUR ENGINEERING LAFIA |
+                                                60MB | FIBER | PORT-18
+Eth0/0/19                     up      up       SWIFTTALK-LAFIA-LL | 10M
+Eth0/0/20                     down    down     VODACOM-56-LAFIA(vlan 630)
+Eth0/0/21                     down    down     CERAGON-MGT-VODACOM-56-LAFIA
+Eth0/0/22                     up      up       DOTMAC-NASARAWA
+Eth0/0/23                     up      up       CATAMARAN-NIGERIA-LTD-GIDAN-WAYA
+Eth0/0/24                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/24 Interface
+GE0/0/1                       down    down     HUAWEI, Quidway Series, GigabitEt
+                                               hernet0/0/1 Interface
+GE0/0/2                       up      up       CONNECTION TO DCN IP/MPLS  GE 1/1
+                                               /3
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif630                     *down   down     HUAWEI, Quidway Series, Vlanif630
+                                                Interface
+Vlanif802                     up      up       HUAWEI, Quidway Series, Vlanif802
+                                                Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1890                    up      down     HUAWEI, Quidway Series, Vlanif189
+                                               0 Interface
+Vlanif2303                    up      up       HUAWEI, Quidway Series, Vlanif230
+                                               3 Interface
+Vlanif3042                    up      down     HUAWEI, Quidway Series, Vlanif304
+                                               2 Interface
+[BS-LAF-002]    dis cur
+#
+!Software Version V100R006C05
+ sysname BS-LAF-002
+#
+ vlan batch 257 610 630 802 1115 1136 1493 to 1494 1497 to 1498 1500 to 1501 1503
+ vlan batch 1566 1620 1640 1677 1761 to 1762 1881 1890 1929 1967 1977
+ vlan batch 1998 2126 2131 2303 2521 2578 2991 to 2992 3042 3126 3161
+ vlan batch 3230 3429 3859
+#
+ stp disable
+#
+lldp enable
+#
+vlan 257
+ description VDT-ABUJA-LAFIA
+vlan 610
+ description IDN ( DCN Router)
+vlan 630
+ description VODACOM-56-LAFIA
+vlan 802
+ description SWITCH-MGT
+vlan 1115
+ description GTBANK-VPLS
+vlan 1136
+ description SWIFTTALKT-RADIO-MGT
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1494
+ description NNPC-NERA-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1498
+ description BS-CERAGON-MGT
+vlan 1500
+ description CERAGON-MGT-VODACOM-56-LAFIA
+vlan 1501
+ description BS-MGT
+vlan 1503
+ description nera-mgmt
+vlan 1566
+ description NALOT-UNI-OF-LAFIA
+vlan 1620
+ description 2GS
+vlan 1640
+ description ACCESS BANK
+vlan 1677
+ description cyberspace
+vlan 1761
+ description KEYSTONE_LAFIA
+vlan 1762
+ description NASARAWA POLY ISA AGWAI
+vlan 1881
+ description FIDELITY BANK
+vlan 1890
+ description VDT-LAFIA-INTERNET
+vlan 1929
+ description FIRS-MPLS-LAFIA
+vlan 1967
+ description CHEC-NASARAWA-10M
+vlan 1977
+ description China Harbour Engineering Construction 60Mbps
+vlan 1998
+ description SWIFTTALK-LAFIA-LL
+vlan 2126
+ description DPR LAFIA
+vlan 2131
+ description CATAMARAN-NIG-LTD
+vlan 2303
+ description DOTMAC NASARAWA
+vlan 2521
+ description GLOWORLD-NASSARAWA
+vlan 2578
+ description CATAMARAN_LL
+vlan 2991
+ description NBC_LAFIA
+vlan 2992
+ description FIRS-LAFIA
+vlan 3042
+ description UBA_VPLS
+vlan 3126
+ description ACCESS-BANK
+vlan 3161
+ description MFEDOO-NAPOL
+vlan 3230
+ description ACCESS-BANK-LAFIA-L3
+vlan 3429
+ description NNPC-RETAIL-STATION-LAFIA
+vlan 3859
+ description NSU LAFIA CAMPUS
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@0'NEFx:D4=a8}4~$q)pV(9uv%@%@
+ local-user bsnoc privilege level 15
+ local-user moses password cipher %@%@<'|DVP1vg~6&]=.nwd`)(9%!%@%@
+ local-user moses privilege level 15
+ local-user fabian password cipher %@%@u:@w&u4>SKX,nfK^B@8R(9w<%@%@
+ local-user fabian privilege level 15
+ local-user rthabj password cipher %@%@jyow(xyo'#f.2vV1OJ4$Vz60%@%@
+ local-user rthabj privilege level 3
+ local-user solarch password cipher %@%@V}Ds6,PZ{L-{_l@{naq<Vz8`%@%@
+ local-user solarch privilege level 3
+#
+interface Vlanif1
+#
+interface Vlanif630
+ shutdown
+ ip address 10.35.209.149 255.255.255.252
+#
+interface Vlanif802
+ ip address 10.248.246.213 255.255.255.192
+#
+interface Vlanif1501
+ ip address 10.248.249.216 255.255.255.0
+#
+interface Vlanif1890
+#
+interface Vlanif2303
+ ip address 194.194.194.4 255.255.255.0
+#
+interface Vlanif3042
+#
+interface Ethernet0/0/1
+ description NASARAWA POLY ISA AGWAI 10MB INTERNET
+ port link-type access
+ port default vlan 1762
+#
+interface Ethernet0/0/2
+ description IDN 2MB ( Moved fron DCN routerFIRS LAFIA
+ port link-type access
+ port default vlan 610
+#
+interface Ethernet0/0/3
+ description KEYSTONE LAFIA
+ port link-type access
+ port default vlan 1761
+#
+interface Ethernet0/0/4
+ description VDT ABUJA - LAFIA
+ port link-type trunk
+ port trunk allow-pass vlan 1890
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/5
+ description GLOWORLD NASSARAWA
+ port link-type access
+ port default vlan 2521
+#
+interface Ethernet0/0/6
+ description FEDERAL UNIV LAFIA (NALOT)
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1493 1566
+#
+interface Ethernet0/0/7
+ description DPR LAFIA  |8MB INTERNET
+ port link-type access
+ port default vlan 2126
+#
+interface Ethernet0/0/8
+ description GTBANK MARABA
+ port link-type access
+ port default vlan 1115
+#
+interface Ethernet0/0/9
+ description FIDELITY BANK LAFIA
+ port link-type access
+ port default vlan 1881
+#
+interface Ethernet0/0/10
+ description NNPC RETAIL STATION LAFIA | FIDEL POLY | CHEC(CHINA) 10M | DOTMAC
+ port link-type trunk
+ port trunk allow-pass vlan 1494 1503 2303 3161 3429
+#
+interface Ethernet0/0/11
+ description CYBERSPACE-LAFIA-INTERNET || 40Mbps
+ port link-type trunk
+ port trunk allow-pass vlan 1503 1677
+#
+interface Ethernet0/0/12
+ description CYBERSPACE-LAFIA-INTERNET || 40Mbps
+ port link-type trunk
+ port trunk allow-pass vlan 1503 1677
+#
+interface Ethernet0/0/13
+ description UBA LAFIA
+ port link-type access
+ port default vlan 3042
+#
+interface Ethernet0/0/14
+ description MFEDOO NAPOL
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 3161
+#
+interface Ethernet0/0/15
+ description NSUK Lafia campus -20Mb||INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 1497 3859
+#
+interface Ethernet0/0/16
+ description ACCES BANK LAFIA
+ port link-type access
+ port default vlan 1640
+#
+interface Ethernet0/0/17
+#
+interface Ethernet0/0/18
+ description CHINA HARBOUR ENGINEERING LAFIA | 60MB | FIBER | PORT-18
+ port link-type access
+ port default vlan 1977
+#
+interface Ethernet0/0/19
+ description SWIFTTALK-LAFIA-LL | 10M
+ port link-type trunk
+ port trunk allow-pass vlan 1136 1998
+#
+interface Ethernet0/0/20
+ description VODACOM-56-LAFIA(vlan 630)
+ port link-type access
+ port default vlan 630
+#
+interface Ethernet0/0/21
+ description CERAGON-MGT-VODACOM-56-LAFIA
+ port link-type access
+ port default vlan 1500
+#
+interface Ethernet0/0/22
+ description DOTMAC-NASARAWA
+ port link-type trunk
+ port trunk allow-pass vlan 1503 2303
+#
+interface Ethernet0/0/23
+ description CATAMARAN-NIGERIA-LTD-GIDAN-WAYA
+ port link-type trunk
+ port trunk allow-pass vlan 2131 2578
+#
+interface Ethernet0/0/24
+ port link-type access
+ port default vlan 802
+#
+interface GigabitEthernet0/0/1
+#
+interface GigabitEthernet0/0/2
+ description CONNECTION TO DCN IP/MPLS  GE 1/1/3
+ port link-type trunk
+ port trunk allow-pass vlan 257 610 630 802 1115 1136 1493 to 1494 1497 to 1498 1500 to 1501 1503
+ port trunk allow-pass vlan 1566 1620 1640 1677 1761 to 1762 1881 1890 1929 1977 1998
+ port trunk allow-pass vlan 2126 2131 2303 2521 2578 2991 to 2992 3042 3126 3161 3230
+ port trunk allow-pass vlan 3429 3859
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.193
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100002A22
+ snmp-agent community read cipher %@%@<Rp5#c7k^/Iik]I360oRT[JO{B7w#~l\,:,/[&9pXRyD[JRT)3tV6};$H*cW5\~q9P<<J[T[%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[BS-LAF-002]

@@ -1,0 +1,223 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 13:32.13 ? ? /home/mobaxterm ? telnet 10.192.192.1
+Connected to 10.192.192.1.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Username: bsnoc
+Password:
+GLO-BS-PRTG-ROUTER#sh int des
+Interface                      Status         Protocol Description
+Gi0/0                          down           down     # WAN CONNECTION TO INTERNET #
+Gi0/1                          up             up
+Gi0/1.66                       up             up       RADIO MGT
+Gi0/1.94                       up             up
+Gi0/1.145                      up             up       PRTG-WAN-CONNECTION
+Gi0/1.200                      up             up       PRTG LAN 2
+Gi0/1.210                      up             up       NNPC
+Gi0/1.211                      up             up       ADDAX
+Gi0/1.212                      up             up       NBC
+Gi0/1.225                      up             up       PRTG LAN CONNECTION
+Gi0/1.413                      up             up       CACTI LAN CONNECTION
+Gi0/1.914                      up             up       CONNECTION-TO-PE1
+Gi0/1.916                      up             up       CONNECTION-TO-PE-B-SAKA025
+NV0                            admin down     down
+GLO-BS-PRTG-ROUTER#sh run
+Building configuration...
+
+Current configuration : 5187 bytes
+!
+! Last configuration change at 10:16:16 UTC Wed Nov 12 2025 by glo
+!
+version 15.1
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname GLO-BS-PRTG-ROUTER
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+!
+no ipv6 cef
+ip source-route
+ip cef
+!
+!
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+license udi pid CISCO1921/K9 sn FCZ162370PQ
+!
+!
+username glo privilege 15 secret 5 $1$VXt1$eorPNwyr4AtKp02hgBZA70
+username bsnoc privilege 15 secret 5 $1$NjDS$N5kc4FoPxYSBqxibP1WRx1
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ description # WAN CONNECTION TO INTERNET #
+ no ip address
+ ip nat outside
+ ip virtual-reassembly
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1.66
+ description RADIO MGT
+ encapsulation dot1Q 66
+ ip address 10.240.240.3 255.255.255.248
+!
+interface GigabitEthernet0/1.94
+ encapsulation dot1Q 94
+ ip address 10.248.248.254 255.255.255.248
+ ip nat outside
+ no ip virtual-reassembly
+!
+interface GigabitEthernet0/1.145
+ description PRTG-WAN-CONNECTION
+ encapsulation dot1Q 145
+ ip address 197.211.50.195 255.255.255.248
+ ip nat outside
+ ip virtual-reassembly
+!
+interface GigabitEthernet0/1.200
+ description PRTG LAN 2
+ encapsulation dot1Q 200
+ ip address 192.168.4.1 255.255.255.248
+!
+interface GigabitEthernet0/1.210
+ description NNPC
+ encapsulation dot1Q 210
+ ip address 172.16.2.254 255.255.255.252
+!
+interface GigabitEthernet0/1.211
+ description ADDAX
+ encapsulation dot1Q 211
+ ip address 172.16.0.254 255.255.255.252
+!
+interface GigabitEthernet0/1.212
+ description NBC
+ encapsulation dot1Q 212
+ ip address 172.16.240.254 255.255.255.252
+!
+interface GigabitEthernet0/1.225
+ description PRTG LAN CONNECTION
+ encapsulation dot1Q 225
+ ip address 10.192.192.1 255.255.255.248
+ ip nat inside
+ no ip virtual-reassembly
+!
+interface GigabitEthernet0/1.413
+ description CACTI LAN CONNECTION
+ encapsulation dot1Q 413
+ ip address 192.168.9.1 255.255.255.0
+ ip virtual-reassembly
+!
+interface GigabitEthernet0/1.914
+ description CONNECTION-TO-PE1
+ encapsulation dot1Q 914
+ ip address 10.218.218.2 255.255.255.248
+!
+interface GigabitEthernet0/1.916
+ description CONNECTION-TO-PE-B-SAKA025
+ encapsulation dot1Q 916
+ ip address 10.219.219.2 255.255.255.248
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+ip nat inside source list 10 interface GigabitEthernet0/1.145 overload
+ip nat inside source list 11 interface GigabitEthernet0/1.94 overload
+ip route 0.0.0.0 0.0.0.0 197.211.50.193
+ip route 10.28.0.0 255.255.0.0 10.248.248.249
+ip route 10.47.47.0 255.255.255.0 10.248.248.249 name GLO1-CPES
+ip route 10.48.0.0 255.255.0.0 10.248.248.249
+ip route 10.48.10.0 255.255.255.0 10.248.248.249
+ip route 10.98.10.0 255.255.255.0 10.192.192.4
+ip route 10.98.10.0 255.255.255.0 10.248.248.249
+ip route 10.98.11.16 255.255.255.248 10.248.248.249
+ip route 10.155.194.0 255.255.255.0 10.240.240.1 name CERAGON-RADIO-MGT
+ip route 10.155.195.0 255.255.255.0 10.240.240.1 name CERAGON-RADIO-MGT-2
+ip route 10.155.198.0 255.255.255.0 10.240.240.1 name NERA-RADIO-MGT
+ip route 10.155.199.0 255.255.255.0 10.240.240.1 name NERA-RADIO-MGT-2
+ip route 10.198.0.0 255.255.0.0 10.248.248.249
+ip route 10.240.79.0 255.255.255.0 10.248.248.249
+ip route 10.241.233.0 255.255.255.0 197.211.50.193
+ip route 10.248.243.0 255.255.255.0 10.219.219.1 name CONNECTION-PE-B
+ip route 10.248.246.0 255.255.255.0 10.218.218.1 name ENT-SWITCHES
+ip route 10.248.246.0 255.255.255.0 10.248.248.249
+ip route 10.248.246.0 255.255.255.128 10.218.218.1 name ENT-SWITCHES
+ip route 10.248.246.0 255.255.255.128 10.248.248.249
+ip route 10.248.246.0 255.255.255.192 10.248.248.249
+ip route 10.248.246.0 255.255.255.192 10.218.218.1 100 name ENT-SWITCHES
+ip route 10.248.246.64 255.255.255.192 10.218.218.1 name ENT-SWITCHES
+ip route 10.248.246.64 255.255.255.192 10.192.192.4 100
+ip route 10.248.246.128 255.255.255.192 10.218.218.1 100 name ENT-SWITCHES
+ip route 10.248.246.192 255.255.255.192 10.218.218.1 100 name ENT-SWITCHES
+ip route 10.248.248.0 255.255.255.0 10.248.248.249
+ip route 10.248.248.12 255.255.255.252 10.248.248.249
+ip route 10.248.248.22 255.255.255.255 10.248.248.249
+ip route 10.248.248.72 255.255.255.248 10.248.248.249
+ip route 10.248.248.112 255.255.255.248 10.248.248.249
+ip route 10.248.248.200 255.255.255.248 10.192.192.4
+ip route 10.248.249.0 255.255.255.0 10.248.248.249
+ip route 41.203.64.0 255.255.224.0 197.211.50.193
+ip route 172.16.0.0 255.255.255.0 172.16.0.253 name ADDAX
+ip route 172.16.1.0 255.255.255.0 172.16.2.253 name NNPC-ABJ
+ip route 172.16.2.0 255.255.255.0 172.16.2.253 name NNPC-LAG
+ip route 172.16.3.0 255.255.255.0 172.16.2.253 name NNPC-PH
+ip route 172.16.240.0 255.255.252.0 172.16.240.253 name NBC
+ip route 172.24.92.0 255.255.252.0 197.211.50.193
+ip route 192.168.6.0 255.255.255.0 10.218.218.1 name TO-ENT-NOC-LAN
+ip route 192.168.9.0 255.255.255.0 10.248.248.249
+ip route 197.211.32.0 255.255.224.0 197.211.50.193
+!
+access-list 11 permit 10.192.192.0 0.0.0.7
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ login local
+line aux 0
+line vty 0 4
+ login local
+ transport input all
+!
+scheduler allocate 20000 1000
+end
+
+GLO-BS-PRTG-ROUTER#

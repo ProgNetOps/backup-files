@@ -1,0 +1,443 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:43.52 ? ? /home/mobaxterm ? telnet 10.248.246.29
+Connected to 10.248.246.29.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<ENT-SW-H3700-LAG111>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-SW-H3700-LAG111]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       GLOSHOP LEKKI
+Eth0/0/2                      up      up       TPGS-LAG-ADM
+Eth0/0/3                      down    down     BELEMA OIL LL TO PHC 2MB- 6MB INT
+                                               ERNET
+Eth0/0/4                      up      up       GLOWORLD PALMS
+Eth0/0/5                      down    down     TPGS Lekki-2 2MB INTERNET
+Eth0/0/6                      up      up       Delta Afrique Engineering limited
+                                                (WESTPAQ)
+Eth0/0/7                      up      up       HUAWEI, Quidway Series, Ethernet0
+                                               /0/7 Interface
+Eth0/0/8                      down    down     VELO LIVING NIG IKOYI | IOTECH |
+                                               45MB
+Eth0/0/9                      up      up       LG ELECTRONICS
+Eth0/0/10                     up      up       TPGS JAKANDE 20MB INT - -VLAN1389
+                                               (LAG778)
+Eth0/0/11                     down    down     SHS_LILYGATE_FIBER[VLAN-1834]|80M
+                                               bps(EX-SWIFTTALK-1905)
+Eth0/0/12                     up      up       LEKKI BRITISH SCHOOL 20MB INTERNE
+                                               T
+Eth0/0/13                     up      up       PROSERVE-SECURITY-HQ | 50M
+Eth0/0/14                     up      up       WESTMETRO-MDXI-CWG | 10M
+Eth0/0/15                     up      up       God is Good (GIG) Group, LekkiE-I
+                                               NT| 45MB-FIBER
+Eth0/0/16                     down    down     SAHARA ENERGY LEKKI
+Eth0/0/17                     down    down     TPGS-KFC-Peninsula-lekki-INTERNET
+                                               -5M
+Eth0/0/18                     up      up       PROSERVE LEKKI FIBER | 50MB
+Eth0/0/19                     up      up       LILYGATE-SIP-CONNECTION-TO-THE-SB
+                                               C
+Eth0/0/20                     up      up       COBRANET-SIP-CONNECTION-TO-THE-SB
+                                               C
+Eth0/0/21                     up      up       NNPC-ITD-CENTRE
+Eth0/0/22                     down    down     SHS_ALBERGO_FIBER[VLAN-1833]|90Mb
+                                               ps
+Eth0/0/23                     up      up       SW-MGT
+Eth0/0/24                     down    down     TPGS ONIRU 10MB INTERNET
+GE0/0/1                       up      up       TEK EXPERT LTD | 300MB INTERNET
+GE0/0/2                       up      up       IOTECH IOT004-LAG | 100MB INTERNE
+                                               T
+GE0/0/3                       up      up       GLOBUS BANK INTERNET DR CWG | 155
+                                               MB | HUAWEI-RADIO
+GE0/0/4                       up      up       UPLINK TO DCN M8 RTR 0/2/0
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif805                     up      up       HUAWEI, Quidway Series, Vlanif805
+                                                Interface
+Vlanif994                     up      down     HUAWEI, Quidway Series, Vlanif994
+                                                Interface
+Vlanif1224                    up      down     HUAWEI, Quidway Series, Vlanif122
+                                               4 Interface
+Vlanif1868                    down    down     HUAWEI, Quidway Series, Vlanif186
+                                               8 Interface
+Vlanif2372                    up      down     HUAWEI, Quidway Series, Vlanif237
+                                               2 Interface
+Vlanif4006                    up      down     HUAWEI, Quidway Series, Vlanif400
+                                               6 Interface
+[ENT-SW-H3700-LAG111]    dis cur
+#
+!Software Version V100R006C05
+ sysname ENT-SW-H3700-LAG111
+#
+ vlan batch 2 21 to 22 43 518 805 994 1021 1032 1136 1143
+ vlan batch 1148 1211 1224 1303 1333 1346 1348 to 1350 1353 1388 to 1389 1400
+ vlan batch 1403 1422 1489 1493 to 1494 1496 to 1498 1507 to 1508 1580 1650 to 1651 1827 1833 to 1834
+ vlan batch 1847 to 1848 1855 1864 to 1866 1868 1876 1905 to 1906 1926 2173 2201 to 2202 2323
+ vlan batch 2372 2510 2735 2915 3039 3133 3157 3405 3413 3668
+ vlan batch 3834 3913 4006
+#
+vlan 2
+ description MOBIL-UK-75M
+vlan 21
+ description ALU-BSC-LB
+vlan 22
+ description ALU-BSC-OAM
+vlan 43
+ description MOBILLAG111
+vlan 518
+ description FOURPOINT-FAILOVER
+vlan 805
+ description SWITCH-MGT
+vlan 994
+ description ADDAX-HQ-MICROWAVE-BACKUP
+vlan 1021
+ description TEK-EXPERT-INT
+vlan 1032
+ description TPGS-KFC-Peninsula-lekki-INTERNET-5M
+vlan 1143
+ description IOTECH-004-LAG
+vlan 1148
+ description PROSERVE LEKKI
+vlan 1211
+ description WESTPAQ
+vlan 1224
+ description God is Good (GIG) Group, LekkiE-INT| 45MB
+vlan 1303
+ description Suntrust CEO
+vlan 1333
+ description TPGS LEKKI 1
+vlan 1346
+ description HEALTHPLUS AROBIEKE
+vlan 1348
+ description HEALTHPLUS KUBOYE
+vlan 1349
+ description Health Plus Ayinde
+vlan 1350
+ description HEALTHPLUS GBEMI
+vlan 1353
+ description UNI-ILORIN-COUNCIL
+vlan 1388
+ description TPGS ONIRU
+vlan 1389
+ description TPGS JAKANDE
+vlan 1400
+ description OXFORD GROUP
+vlan 1403
+ description TPGS Lekki-2
+vlan 1422
+ description fourpoint-bkup
+vlan 1489
+ description CERAGON MGT
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1494
+ description NNPC-NERA-RADIO
+vlan 1496
+ description BS-CERAGON-2-MGT
+vlan 1497
+ description NERA-RAD-MGT-IP
+vlan 1498
+ description CERAGON_MGT
+vlan 1507
+ description COBRANET-SIP
+vlan 1508
+ description LILYGATE-SIP
+vlan 1580
+ description CISCON-INTERNET_LAGOS
+vlan 1650
+ description IO-SAT-INTERNET
+vlan 1651
+ description FIRS-AJAH
+vlan 1827
+ description Henry Hooper
+vlan 1833
+ description SHS_ALBERGO
+vlan 1834
+ description SHS_LILYGATE
+vlan 1847
+ description ICSL_INTERNET
+vlan 1848
+ description PRODECO-VI-PARKVIEW
+vlan 1855
+ description VELO LIVING IKOYI
+vlan 1864
+ description ICSL-LAG-PHC-WAN
+vlan 1865
+ description ICSL-LAG-KANO-WAN
+vlan 1866
+ description ADDAX_PETROLEUM
+vlan 1868
+ description Lafarge-Ewekoro
+vlan 1876
+ description MCOMM-NIGERIA-LIMITED
+vlan 1905
+ description Swifttalk Lekki
+vlan 1906
+ description MOBIL-EKET-STM1-LINK
+vlan 1926
+ description LEKKI BRITISH SCHOOL
+vlan 2173
+ description GLOWORLD-LEKKI
+vlan 2201
+ description MGT
+vlan 2202
+ description LILLYGATE
+vlan 2323
+ description TPGS-LAG-ADM
+vlan 2372
+ description BELEMA-OIL-LL
+vlan 2510
+ description ORANGE-AURECON
+vlan 2735
+ description GLOBUS-DR-CWG
+vlan 2915
+ description GLOSHOP-PALMS
+vlan 3039
+ description SHELL-DRILLING-INTERNET
+vlan 3133
+ description AURECON-CONSULTING
+vlan 3157
+ description SAHARA-VPLS
+vlan 3405
+ description NNPC-NIPEX-PRIMARY
+vlan 3413
+ description NNPC-ITD-CENTRE
+vlan 3668
+ description WESTMETRO-MDXI-CWG
+vlan 3834
+ description BELEMAOIL-LEKKI-INTERNET
+vlan 3913
+ description LG ELECTRONIC
+vlan 4006
+ description EMADEB_ENERGY
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@0,nmE"9vr;|lU@F7+(o&S$gu%@%@
+ local-user bsnoc privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif805
+ ip address 10.248.246.29 255.255.255.192
+#
+interface Vlanif994
+#
+interface Vlanif1224
+#
+interface Vlanif1868
+ ip address 10.1.18.12 255.255.255.224
+#
+interface Vlanif2372
+#
+interface Vlanif4006
+#
+interface Ethernet0/0/1
+ description GLOSHOP LEKKI
+ port link-type trunk
+ port trunk allow-pass vlan 2173
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/2
+ description TPGS-LAG-ADM
+ port link-type access
+ port default vlan 2323
+#
+interface Ethernet0/0/3
+ description BELEMA OIL LL TO PHC 2MB- 6MB INTERNET
+ port link-type access
+ port default vlan 2372
+#
+interface Ethernet0/0/4
+ description GLOWORLD PALMS
+ port link-type access
+ port default vlan 2915
+#
+interface Ethernet0/0/5
+ description TPGS Lekki-2 2MB INTERNET
+ port link-type access
+ port default vlan 1403
+#
+interface Ethernet0/0/6
+ description Delta Afrique Engineering limited (WESTPAQ)
+ port link-type access
+ port default vlan 1211
+#
+interface Ethernet0/0/7
+ port link-type access
+ port default vlan 1389
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/8
+ description VELO LIVING NIG IKOYI | IOTECH | 45MB
+ port link-type access
+ port default vlan 1855
+#
+interface Ethernet0/0/9
+ description LG ELECTRONICS
+ port link-type access
+ port default vlan 3913
+#
+interface Ethernet0/0/10
+ description TPGS JAKANDE 20MB INT - -VLAN1389(LAG778)
+ port link-type trunk
+ port trunk allow-pass vlan 1349 1389 1400
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/11
+ description SHS_LILYGATE_FIBER[VLAN-1834]|80Mbps(EX-SWIFTTALK-1905)
+ port link-type access
+ port default vlan 1834
+#
+interface Ethernet0/0/12
+ description LEKKI BRITISH SCHOOL 20MB INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 1486 1489 1926
+#
+interface Ethernet0/0/13
+ description PROSERVE-SECURITY-HQ | 50M
+ port link-type access
+ port default vlan 1148
+#
+interface Ethernet0/0/14
+ description WESTMETRO-MDXI-CWG | 10M
+ port link-type access
+ port default vlan 3668
+#
+interface Ethernet0/0/15
+ description God is Good (GIG) Group, LekkiE-INT| 45MB-FIBER
+ port link-type access
+ port default vlan 1224
+#
+interface Ethernet0/0/16
+ description SAHARA ENERGY LEKKI
+ port link-type access
+ port default vlan 3157
+#
+interface Ethernet0/0/17
+ description TPGS-KFC-Peninsula-lekki-INTERNET-5M
+ port link-type access
+ port default vlan 1032
+#
+interface Ethernet0/0/18
+ description PROSERVE LEKKI FIBER | 50MB
+ port link-type access
+ port default vlan 1148
+#
+interface Ethernet0/0/19
+ description LILYGATE-SIP-CONNECTION-TO-THE-SBC
+ port link-type trunk
+ port trunk allow-pass vlan 1136 1508
+#
+interface Ethernet0/0/20
+ description COBRANET-SIP-CONNECTION-TO-THE-SBC
+ port link-type access
+ port default vlan 1507
+#
+interface Ethernet0/0/21
+ description NNPC-ITD-CENTRE
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3413
+#
+interface Ethernet0/0/22
+ description SHS_ALBERGO_FIBER[VLAN-1833]|90Mbps
+ port link-type access
+ port default vlan 1833
+#
+interface Ethernet0/0/23
+ description SW-MGT
+ port link-type access
+ port default vlan 805
+#
+interface Ethernet0/0/24
+ description TPGS ONIRU 10MB INTERNET
+ port link-type access
+ port default vlan 1388
+#
+interface GigabitEthernet0/0/1
+ description TEK EXPERT LTD | 300MB INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 805 1021
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/2
+ description IOTECH IOT004-LAG | 100MB INTERNET
+ port link-type access
+ port default vlan 1143
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/3
+ description GLOBUS BANK INTERNET DR CWG | 155MB | HUAWEI-RADIO
+ port link-type access
+ port default vlan 2735
+ jumboframe enable 13296
+ port media type copper
+     undo negotiation auto
+ combo-port auto
+#
+interface GigabitEthernet0/0/4
+ description UPLINK TO DCN M8 RTR 0/2/0
+ port link-type trunk
+ port trunk allow-pass vlan 2 21 to 22 130 518 805 994 1021 1032 1136 1143
+ port trunk allow-pass vlan 1148 1211 1224 1333 1348 to 1350 1353 1388 to 1389 1400 1403 1507 to 1508
+ port trunk allow-pass vlan 1833 to 1834 1855 1926 2173 2201 to 2202 2323 2372 to 2373 2510 2735 2915
+ port trunk allow-pass vlan 3668 3834 3913 4006
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100000B8E
+ snmp-agent community read cipher %@%@4]H\,%A1a7r2ZU;^jMCIW$#3#ZctQqh}WEWrxy>L8Qy)$#6WB!;;<FFXiHx{tUC[qxdV#~W$%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[ENT-SW-H3700-LAG111]
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 0.

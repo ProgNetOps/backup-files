@@ -1,0 +1,581 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 12:26.46 ? ? /home/mobaxterm ? telnet 10.248.246.99
+Connected to 10.248.246.99.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+Password:
+OREGUN_MSC6_3750_2>en
+Password:
+OREGUN_MSC6_3750_2#sh int des
+Interface                      Status         Protocol Description
+Vl1                            up             down
+Vl31                           up             down
+Vl515                          up             up
+Vl528                          up             up
+Vl804                          up             up
+Vl1000                         up             up
+Vl1501                         up             up
+Vl1550                         up             down
+Vl1581                         up             up
+Vl1640                         up             up
+Vl1660                         up             up
+Vl1777                         up             up
+Vl1846                         up             up
+Vl1893                         up             up
+Vl1906                         up             down
+Vl2206                         up             down
+Vl2792                         up             up
+Vl3126                         up             up
+Vl3999                         up             up
+Fa0                            down           down
+Gi1/0/1                        up             up       TRUNK-TO-OREGUN_MSC6_3750_1
+Gi1/0/2                        up             up       INTERNETSIONAL FIBER LINK 80MB INTERNET
+Gi1/0/3                        down           down     WATERCRESS-HOTEL-4M-INTERNET
+Gi1/0/4                        admin down     down     SUSPECTED BAD
+Gi1/0/5                        down           down     Archbishop Vining Memorial 4MB Internet
+Gi1/0/6                        down           down     DIAMOND BANK DRC IKEJA - OFF ISAAC JOHN
+Gi1/0/7                        down           down     NBC IKEJA NEW-TEST
+Gi1/0/8                        down           down     NBC IKEJA NEW
+Gi1/0/9                        down           down
+Gi1/0/10                       down           down
+Gi1/0/11                       down           down     RCCG INTERNET TEST
+Gi1/0/12                       up             up       9JA_MOREPLEX 465MB FIBRE  INTERNET
+Gi1/0/13                       down           down     WAVE5-WIRELESS-MARYLAND | 90M
+Gi1/0/14                       down           down
+Gi1/0/15                       down           down
+Gi1/0/16                       down           down
+Gi1/0/17                       down           down
+Gi1/0/18                       down           down
+Gi1/0/19                       down           down
+Gi1/0/20                       down           down
+Gi1/0/21                       down           down
+Gi1/0/22                       down           down
+Gi1/0/23                       down           down     CONNECTION-S3700-HUAWEI-SWITCH
+Gi1/0/24                       up             up       CONNECTION TO 3RD CISCO SWITCH
+Gi1/1/1                        up             up       TRUNK TO GLO1 HUAWEI ROUTER 5/0/19
+Gi1/1/2                        down           down     CONNECTION-2nd-10G-3750-SW
+Gi1/1/3                        up             up       COBLESTONE-ILEOJA-OPEBI-MALL-INT | 500M
+Gi1/1/4                        down           down     X3M-IDEA-STM1-INTERNET
+Te1/1/1                        down           down
+Te1/1/2                        down           down
+OREGUN_MSC6_3750_2#   sh run
+Building configuration...
+
+Current configuration : 9933 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service unsupported-transceiver
+!
+hostname OREGUN_MSC6_3750_2
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$Hgw2$l2QpBnSCUL7R2x9fkQb/Z0
+!
+!
+!
+no aaa new-model
+switch 1 provision ws-c3750x-24
+system mtu routing 1500
+!
+!
+vtp mode transparent
+!
+!
+crypto pki trustpoint TP-self-signed-4139193472
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-4139193472
+ revocation-check none
+ rsakeypair TP-self-signed-4139193472
+!
+!
+crypto pki certificate chain TP-self-signed-4139193472
+ certificate self-signed 01
+  3082024B 308201B4 A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 34313339 31393334 3732301E 170D3933 30333031 30303032
+  31375A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D34 31333931
+  39333437 3230819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  8100DAD9 7D7B38FF 0A2F32C6 F865060E A9263736 9A61C7F6 F40595D3 3060FA37
+  35A98987 C481D5C5 7682A974 25429526 1E83BEAB 786A5589 D27AD950 875D254C
+  CA231CE9 BAB951A3 1FD41D49 02C9D1E8 0142400C 04BA62DF D49F7695 D7EC9056
+  97C9F4A5 090E8C62 97B7F6C2 8A39AACA A9DFA07B 133D87DE F612CEE4 689307FD
+  F6510203 010001A3 73307130 0F060355 1D130101 FF040530 030101FF 301E0603
+  551D1104 17301582 134F5245 47554E5F 4D534336 5F333735 305F322E 301F0603
+  551D2304 18301680 149973B2 027E5C15 33512F75 00EBBB33 B736F814 8F301D06
+  03551D0E 04160414 9973B202 7E5C1533 512F7500 EBBB33B7 36F8148F 300D0609
+  2A864886 F70D0101 04050003 81810046 DD6A95D5 119B4B47 0869C7F8 A743B125
+  158F1322 96507FFE DAF7A756 F0704138 F5E3FD7F E564CB97 A7FC7A1E 9320735F
+  8F8365F0 28A4B652 F5275AC0 F6D71484 0435306F 6EF49A6C E9ABF28A 649AC48E
+  3F0D0760 DADE7FC4 123233E1 2F465C15 5A849068 D039EFAC F4B5031C FD0F5C01
+  49849993 94EEF38A 32769FAC 99A643
+  quit
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+vlan 2
+ name MOBIL-LAGOS-UK
+!
+vlan 12
+ name TPGS-AVICIENA
+!
+vlan 31
+ name MGT-FROM-SAKA-18
+!
+vlan 43
+ name LAG111
+!
+vlan 118
+ name Dangote_Internet
+!
+vlan 119
+ name FCMB-RACKCENTRE
+!
+vlan 126
+ name COBRANET-RC-MGT
+!
+vlan 150
+ name MGT-FROM-LAG-131
+!
+vlan 201
+ name COOLLINK-RACKCENTRE
+!
+vlan 223
+ name MOBIL-EKET-VOICE
+!
+vlan 226
+ name MOBIL-VI-EKET-4M
+!
+vlan 500
+ name MOBIL-UK-75M
+!
+vlan 501
+ name Archbishop-Vining
+!
+vlan 502
+ name GLOBUS-RACKCENTRE
+!
+vlan 512
+ name NBC-IDDO-BKP
+!
+vlan 515
+ name NBC-IKEJA-LL
+!
+vlan 516
+ name NBC-IKEJA-INT
+!
+vlan 521
+ name ACCESS-BANK-DRC-JO-L3
+!
+vlan 528
+ name NBC-MUSHIN
+!
+vlan 555
+!
+vlan 560
+ name MOBIL-100M-INT-PRI
+!
+vlan 595
+ name MOBIL-100M-INT-SEC
+!
+vlan 804
+ name Ent-Swt-Mgmt
+!
+vlan 805
+ name SWITCH-MGT
+!
+vlan 846
+!
+vlan 980
+ name hyperia-ikeja
+!
+vlan 1000
+ name MGT-TEST
+!
+vlan 1119
+ name ARIK-AIR-INT
+!
+vlan 1142
+ name NBC-DRC-IKEJA-500Mb
+!
+vlan 1322
+ name GLOBUS-BANK-PHC-LL
+!
+vlan 1385
+ name INTERNETSIONAL
+!
+vlan 1386
+ name INTERNETIONAL-FIBER
+!
+vlan 1501
+ name switch-MGT
+!
+vlan 1504
+ name RCC-MONIYA-INT
+!
+vlan 1550
+ name MOBIL-INTERNET
+!
+vlan 1581
+ name ORANGE-MOBIL-IKOYI
+!
+vlan 1600
+!
+vlan 1640
+ name Access-Bank-VPLS
+!
+vlan 1660
+ name X3M-IDEAS
+!
+vlan 1661
+ name WAVE5-MARYLAND
+!
+vlan 1662
+ name GLOBUS-BANK-ASABA-LL
+!
+vlan 1663
+ name GLOBUS-BANK-BENIN-LL
+!
+vlan 1664
+ name WAVE5-MILE12
+!
+vlan 1665
+ name GLOBUS-BANK-KANO
+!
+vlan 1667
+ name WAVE5-BOLADE
+!
+vlan 1668
+ name WAVE5-KETU
+!
+vlan 1721
+ name COBLESTONE-ILEOJA
+!
+vlan 1777
+ name TPGS_OREGUN_INTERNET
+!
+vlan 1778
+ name 9JA_MOREPLEX
+!
+vlan 1846
+ name Switch_Mgmt
+!
+vlan 1873
+ name RCCG_Internet_LAR003
+!
+vlan 1876
+ name WATERCRESS-HOTEL
+!
+vlan 1878
+ name GLOBUS-ENUGU-LL
+!
+vlan 1883
+ name NISER-IBADAN
+!
+vlan 1893
+ name RCCG_INTERNET_LAG901
+!
+vlan 1906
+ name MOBIL-EKET-LL
+!
+vlan 2206
+ name MOBIL-ABUJA-LAG-LL
+!
+vlan 2427
+ name JB-SHAGAMU-KM0
+!
+vlan 2701
+ name ORANGE-WESTERN-UNION
+!
+vlan 2792
+ name GLOBUS-BANK-EBONYI
+!
+vlan 2891
+ name GLOBUS-ABA
+!
+vlan 2892
+ name GLOBUS-MAIDUGURI
+!
+vlan 2893
+ name GLOBUS-WUSE-ABJ
+!
+vlan 2999
+ name FCMB-VPLS
+!
+vlan 3126
+ name Access-Bank
+!
+vlan 3873
+ name HI-TECH-TDS-APN
+!
+vlan 3910
+ name ORANGE-ECOBANK-RACK
+!
+vlan 3935
+ name ORANGE-21ST-MAST-CD
+!
+vlan 3940
+ name ORANGE-MASTER-RACK
+!
+vlan 3999
+ name ORANGE-VISA-OADC
+!
+lldp run
+!
+!
+interface FastEthernet0
+ no ip address
+!
+interface GigabitEthernet1/0/1
+ description TRUNK-TO-OREGUN_MSC6_3750_1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 12,118,119,126,201,502,521,528,804,805,980,1000
+ switchport trunk allowed vlan add 1119,1142,1322,1385,1501,1504,1581,1640,1662
+ switchport trunk allowed vlan add 1663,1777,1778,1846,1878,1883,2427,2701,2999
+ switchport trunk allowed vlan add 3126,3873,3910,3935,3940,3999
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/2
+ description INTERNETSIONAL FIBER LINK 80MB INTERNET
+ switchport access vlan 1386
+ switchport mode access
+!
+interface GigabitEthernet1/0/3
+ description WATERCRESS-HOTEL-4M-INTERNET
+ switchport access vlan 1876
+ switchport mode access
+ no cdp enable
+!
+interface GigabitEthernet1/0/4
+ description SUSPECTED BAD
+ switchport mode access
+ shutdown
+ speed 1000
+ duplex full
+!
+interface GigabitEthernet1/0/5
+ description Archbishop Vining Memorial 4MB Internet
+ switchport access vlan 501
+ switchport mode access
+ no cdp enable
+!
+interface GigabitEthernet1/0/6
+ description DIAMOND BANK DRC IKEJA - OFF ISAAC JOHN
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1501,1640,3126
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/7
+ description NBC IKEJA NEW-TEST
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 512,515,516,805,1142,1501,1846
+ switchport mode trunk
+ speed 1000
+ duplex full
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/8
+ description NBC IKEJA NEW
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 512,515,516,805,1142,1501,1846
+ switchport mode trunk
+ duplex full
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/9
+!
+interface GigabitEthernet1/0/10
+ switchport trunk encapsulation dot1q
+!
+interface GigabitEthernet1/0/11
+ description RCCG INTERNET TEST
+ switchport access vlan 1893
+ switchport mode access
+ speed 1000
+ duplex full
+ no cdp enable
+!
+interface GigabitEthernet1/0/12
+ description 9JA_MOREPLEX 465MB FIBRE  INTERNET
+ switchport access vlan 1778
+ switchport mode access
+ speed 1000
+ duplex full
+!
+interface GigabitEthernet1/0/13
+ description WAVE5-WIRELESS-MARYLAND | 90M
+ switchport access vlan 1661
+ switchport mode access
+!
+interface GigabitEthernet1/0/14
+!
+interface GigabitEthernet1/0/15
+!
+interface GigabitEthernet1/0/16
+!
+interface GigabitEthernet1/0/17
+!
+interface GigabitEthernet1/0/18
+!
+interface GigabitEthernet1/0/19
+!
+interface GigabitEthernet1/0/20
+!
+interface GigabitEthernet1/0/21
+!
+interface GigabitEthernet1/0/22
+!
+interface GigabitEthernet1/0/23
+ description CONNECTION-S3700-HUAWEI-SWITCH
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 804,1661,1664,1667,1668
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/24
+ description CONNECTION TO 3RD CISCO SWITCH
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 521,804,1000,1119,1322,1501,1640,1662,1663,1665
+ switchport trunk allowed vlan add 1878,1883,1893,2792,2891-2893,3126,3873,3910
+ switchport trunk allowed vlan add 3935
+ switchport mode trunk
+!
+interface GigabitEthernet1/1/1
+ description TRUNK TO GLO1 HUAWEI ROUTER 5/0/19
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 12,118,119,126,201,501,502,512,515,516,528,804
+ switchport trunk allowed vlan add 805,980,1000,1119,1142,1385,1386,1501,1504
+ switchport trunk allowed vlan add 1660-1665,1667,1668,1721,1777,1778,1846,1876
+ switchport trunk allowed vlan add 1878,1883,1893,2427,2701,2792,2891-2893,3873
+ switchport trunk allowed vlan add 3910,3935,3940,3999
+ switchport mode trunk
+ switchport nonegotiate
+ speed nonegotiate
+!
+interface GigabitEthernet1/1/2
+ description CONNECTION-2nd-10G-3750-SW
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 804,1664,1667,1668
+ switchport mode trunk
+ switchport nonegotiate
+ speed nonegotiate
+ no cdp enable
+!
+interface GigabitEthernet1/1/3
+ description COBLESTONE-ILEOJA-OPEBI-MALL-INT | 500M
+ switchport access vlan 1721
+ switchport mode access
+ speed nonegotiate
+ no cdp enable
+!
+interface GigabitEthernet1/1/4
+ description X3M-IDEA-STM1-INTERNET
+ switchport access vlan 1660
+ switchport mode access
+!
+interface TenGigabitEthernet1/1/1
+!
+interface TenGigabitEthernet1/1/2
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan31
+ no ip address
+!
+interface Vlan515
+ no ip address
+!
+interface Vlan528
+ ip address 197.211.55.123 255.255.255.248
+!
+interface Vlan804
+ ip address 10.248.246.99 255.255.255.192
+!
+interface Vlan1000
+ ip address 10.21.21.2 255.255.255.0
+!
+interface Vlan1501
+ ip address 10.248.249.244 255.255.255.192
+!
+interface Vlan1550
+ no ip address
+!
+interface Vlan1581
+ ip address 31.31.31.35 255.255.255.0
+!
+interface Vlan1640
+ ip address 10.230.230.247 255.255.255.0
+!
+interface Vlan1660
+ no ip address
+!
+interface Vlan1777
+ no ip address
+!
+interface Vlan1846
+ ip address 10.240.56.5 255.255.255.240
+!
+interface Vlan1893
+ no ip address
+!
+interface Vlan1906
+ ip address 192.168.11.10 255.255.255.0
+!
+interface Vlan2206
+ ip address 192.168.9.1 255.255.255.0
+!
+interface Vlan2792
+ ip address 192.168.78.4 255.255.255.0
+!
+interface Vlan3126
+ ip address 172.35.30.248 255.255.255.0
+!
+interface Vlan3999
+ ip address 192.168.75.2 255.255.255.0
+!
+ip default-gateway 10.248.246.65
+no ip http server
+no ip http secure-server
+tftp-server nvram:startup-config
+snmp-server community Globacom123* RO
+!
+!
+line con 0
+ password Maranellq
+line vty 0 4
+ password Maranellq
+ login
+line vty 5 15
+ login
+!
+end
+
+OREGUN_MSC6_3750_2#

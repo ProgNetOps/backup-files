@@ -1,0 +1,423 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 14:54.42 ? ? /home/mobaxterm ? telnet 10.248.246.21
+Connected to 10.248.246.21.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+GLO1-2960-SAKA-HUAWEI-5300>en
+Password:
+GLO1-2960-SAKA-HUAWEI-5300#sh int des
+Interface                      Status         Protocol Description
+Vl1                            admin down     down
+Vl2                            down           down
+Vl125                          admin down     down
+Vl126                          down           down
+Vl144                          down           down
+Vl504                          up             up
+Vl505                          up             up
+Vl509                          up             up
+Vl510                          up             down
+Vl514                          up             up
+Vl516                          up             up
+Vl805                          up             up
+Vl1310                         up             up
+Vl1489                         up             up
+Vl1748                         up             up
+Fa0/1                          down           down     QUINNMCGRATH-NIG-MACH-TOOLS
+Fa0/2                          up             up       ESSILOR INT-FIBER
+Fa0/3                          down           down     HEALTHPLUS KOFO INT-7Mbps
+Fa0/4                          admin down     down     ORANGE-MERCK-PHARM INT-8Mbps
+Fa0/5                          up             up       SAMSUNG-TEMPLE-RD-IKOYI INT-30Mbps
+Fa0/6                          admin down     down     QMBMART-LTD INT-10Mbps
+Fa0/7                          up             up       PETROLOG Internet | 20MB FIBER LM
+Fa0/8                          up             up       FAMFA OIL IKOYI | 40Mbps INTERNET
+Fa0/9                          down           down     LAMBERT-PRI-CERAGON-IP20-MGT
+Fa0/10                         up             up       TPGS -Victoria Island-3-LAG110-50MB-INTERNET-6THFLOOR
+Fa0/11                         up             up       TPGS-AHMADU BELLO-5THFLR-LAG110-50MB-INTERNET
+Fa0/12                         down           down     MCKINSEY 60M-INTERNET | FIBER
+Fa0/13                         up             up       TPGS-LAG-DEEP via fiber to TPGS NNI at Saka 18
+Fa0/14                         up             up       PRIME-ATLANTIC
+Fa0/15                         up             up       TRUNK TO 1ST CISCO 3750
+Fa0/16                         down           down     BQUBE-STERLING-OIL-HQ
+Fa0/17                         down           down     CHEVRON NIG LTD | PRI | TDMOE
+Fa0/18                         down           down     CHEVRON PRI
+Fa0/19                         down           down     BAD
+Fa0/20                         down           down     BAD
+Fa0/21                         down           down     BAD
+Fa0/22                         down           down     TPGS-AHMADU BELLO-5THFLR-LAG110-50MB-INTERNET
+Fa0/23                         admin down     down     BAD
+Fa0/24                         admin down     down     BAD
+Gi0/1                          up             up       Trunk Cisco facing at Huawei 5300
+Gi0/2                          down           down
+GLO1-2960-SAKA-HUAWEI-5300#sh run
+Building configuration...
+
+Current configuration : 7358 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname GLO1-2960-SAKA-HUAWEI-5300
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$Yavc$yfP3V.fKeB360fbGFNxML1
+!
+!
+!
+no aaa new-model
+system mtu routing 1960
+vtp mode transparent
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-590017152
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-590017152
+ revocation-check none
+ rsakeypair TP-self-signed-590017152
+!
+!
+crypto pki certificate chain TP-self-signed-590017152
+ certificate self-signed 01
+  30820251 308201BA A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  30312E30 2C060355 04031325 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 35393030 31373135 32301E17 0D393330 33303130 30303135
+  355A170D 32303031 30313030 30303030 5A303031 2E302C06 03550403 1325494F
+  532D5365 6C662D53 69676E65 642D4365 72746966 69636174 652D3539 30303137
+  31353230 819F300D 06092A86 4886F70D 01010105 0003818D 00308189 02818100
+  A3374E82 4CFA5BBC 01386818 D46AB7F2 0E66236E 7469D1A9 3D94B6D7 93ECFF0E
+  BBBF52DB 9A09F1B1 9ED8B346 9AA674C8 297FB9DF EC3E8646 5AD56437 4BE9B67A
+  599A34FE 93C57E92 163C982A 4FC262B2 744161D5 94543C29 861A1243 58CCBF3B
+  75FF1363 E0736115 5C98C84C C51FE42B CC006822 82FBAC40 BC69E2DD B16D38ED
+  02030100 01A37B30 79300F06 03551D13 0101FF04 05300301 01FF3026 0603551D
+  11041F30 1D821B47 4C4F312D 32393630 2D53414B 412D4855 41574549 2D353330
+  302E301F 0603551D 23041830 168014ED AADC8620 C91C80DA 657FC49C 10A75007
+  48313D30 1D060355 1D0E0416 0414EDAA DC8620C9 1C80DA65 7FC49C10 A7500748
+  313D300D 06092A86 4886F70D 01010405 00038181 006CA079 601D739E AC115EB1
+  1FEC5DCB 2EEA24B2 622D40F1 0963CE7D 910E93C1 37C9A594 E2911480 8DFA6CEB
+  2CE103F7 D518FAF7 D39738EB 25DD3DFF 0DCB245A B74002A0 BFA20D36 03D229E4
+  527D5E32 6781F2B2 D89A865C 4151DF30 ACEB2F30 974CB197 7ADBBA57 7272009D
+  ECD0C04C 53F8B85A 6A3644FF 27717208 B9A27D00 BA
+  quit
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 10
+ name SWITCH-MANAGEMENT
+!
+vlan 133
+ name ALLIANZ-MIKE-ADENUGA
+!
+vlan 141
+ name ETRANZACT-INT
+!
+vlan 167
+ name TPGS-NESG-IKOYI-INT
+!
+vlan 199
+ name QUINNMCGRATH
+!
+vlan 244
+ name Aiteo_Lekki
+!
+vlan 501
+ name BQUBE-INT
+!
+vlan 502
+ name ORANGE-MERCK-PHARM
+!
+vlan 504
+ name TPGS-VI-3-50MB-INT
+!
+vlan 505
+ name SAMSUNG-TEMPLE
+!
+vlan 509
+ name Petrolog-internet
+!
+vlan 510
+ name MARINE-PLATFORM
+!
+vlan 513
+!
+vlan 514
+ name TPGS-AHMADU-BELLO
+!
+vlan 515
+ name BQUBE-LL
+!
+vlan 516
+ name MCKINSEY-FIBER-60M-INTERNET
+!
+vlan 523
+ name PRIME-ATLANTIC-INT
+!
+vlan 524
+ name PRIME-ATLANTIC-INT2
+!
+vlan 805
+ name ENT-SWITCH-MGT2
+!
+vlan 1181
+ name TPGS-LAG-DEEP
+!
+vlan 1310
+ name ESSILOR-FIBER
+!
+vlan 1346
+ name HEALTHPLUS-KOFO
+!
+vlan 1385
+ name MD-CONOIL
+!
+vlan 1406
+ name QMBMART-LTD
+!
+vlan 1489
+ name CERAGON-IP20-MGT
+!
+vlan 1506
+ name LAMBERT-ELC-2M-SIP
+!
+vlan 1748
+ name AITEO-LEKKI
+!
+vlan 1796
+ name CHEVRON-PRI-TDMOE
+!
+vlan 2533
+ name Aiteo__Lekki
+!
+!
+!
+interface FastEthernet0/1
+ description QUINNMCGRATH-NIG-MACH-TOOLS
+ switchport access vlan 199
+ switchport mode access
+!
+interface FastEthernet0/2
+ description ESSILOR INT-FIBER
+ switchport access vlan 1310
+ switchport mode access
+!
+interface FastEthernet0/3
+ description HEALTHPLUS KOFO INT-7Mbps
+ switchport access vlan 1346
+ switchport mode access
+!
+interface FastEthernet0/4
+ description ORANGE-MERCK-PHARM INT-8Mbps
+ switchport access vlan 502
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/5
+ description SAMSUNG-TEMPLE-RD-IKOYI INT-30Mbps
+ switchport access vlan 505
+ switchport mode access
+!
+interface FastEthernet0/6
+ description QMBMART-LTD INT-10Mbps
+ switchport access vlan 1406
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/7
+ description PETROLOG Internet | 20MB FIBER LM
+ switchport access vlan 509
+ switchport mode access
+!
+interface FastEthernet0/8
+ description FAMFA OIL IKOYI | 40Mbps INTERNET
+ switchport access vlan 513
+ switchport mode access
+!
+interface FastEthernet0/9
+ description LAMBERT-PRI-CERAGON-IP20-MGT
+ switchport access vlan 1489
+ switchport trunk allowed vlan 1489,1506
+ switchport mode trunk
+!
+interface FastEthernet0/10
+ description TPGS -Victoria Island-3-LAG110-50MB-INTERNET-6THFLOOR
+ switchport access vlan 504
+ switchport mode access
+!
+interface FastEthernet0/11
+ description TPGS-AHMADU BELLO-5THFLR-LAG110-50MB-INTERNET
+ switchport access vlan 514
+ switchport mode access
+!
+interface FastEthernet0/12
+ description MCKINSEY 60M-INTERNET | FIBER
+ switchport access vlan 516
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/13
+ description TPGS-LAG-DEEP via fiber to TPGS NNI at Saka 18
+ switchport access vlan 1181
+ switchport mode access
+!
+interface FastEthernet0/14
+ description PRIME-ATLANTIC
+ switchport access vlan 524
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/15
+ description TRUNK TO 1ST CISCO 3750
+ switchport trunk allowed vlan 141,167,244,1748,2533
+ switchport mode trunk
+ spanning-tree portfast
+!
+interface FastEthernet0/16
+ description BQUBE-STERLING-OIL-HQ
+ switchport trunk allowed vlan 501,515
+!
+interface FastEthernet0/17
+ description CHEVRON NIG LTD | PRI | TDMOE
+ switchport access vlan 1796
+ switchport mode access
+ speed 100
+ duplex full
+!
+interface FastEthernet0/18
+ description CHEVRON PRI
+ switchport trunk allowed vlan 1796
+ switchport mode trunk
+!
+interface FastEthernet0/19
+ description BAD
+ switchport access vlan 509
+ switchport mode access
+!
+interface FastEthernet0/20
+ description BAD
+ switchport access vlan 133
+ switchport mode access
+!
+interface FastEthernet0/21
+ description BAD
+ switchport access vlan 502
+ switchport mode access
+!
+interface FastEthernet0/22
+ description TPGS-AHMADU BELLO-5THFLR-LAG110-50MB-INTERNET
+ switchport access vlan 514
+ switchport mode access
+!
+interface FastEthernet0/23
+ description BAD
+ switchport access vlan 805
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/24
+ description BAD
+ switchport trunk allowed vlan 141,244,1748,2533
+ switchport mode trunk
+ shutdown
+!
+interface GigabitEthernet0/1
+ description Trunk Cisco facing at Huawei 5300
+ switchport trunk allowed vlan 133,141,167,199,244,501,502,504,505,509,513-516
+ switchport trunk allowed vlan add 523,524,805,1181,1310,1346,1385,1406,1489
+ switchport trunk allowed vlan add 1506,1748,1796,2533
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan2
+ no ip address
+!
+interface Vlan125
+ no ip address
+ shutdown
+!
+interface Vlan126
+ no ip address
+!
+interface Vlan144
+ no ip address
+!
+interface Vlan504
+ no ip address
+!
+interface Vlan505
+ no ip address
+!
+interface Vlan509
+ no ip address
+!
+interface Vlan510
+ no ip address
+!
+interface Vlan514
+ no ip address
+!
+interface Vlan516
+ no ip address
+!
+interface Vlan805
+ ip address 10.248.246.21 255.255.255.192
+!
+interface Vlan1310
+ no ip address
+!
+interface Vlan1489
+ no ip address
+!
+interface Vlan1748
+ no ip address
+!
+ip default-gateway 10.248.246.1
+ip http server
+ip http secure-server
+snmp-server community globacom RO
+!
+line con 0
+ password 7 153F0A1E05242E28243C
+ login
+line vty 0 4
+ exec-timeout 5 0
+ password 7 153F0A1E05242E28243C
+ login
+line vty 5 15
+ exec-timeout 5 0
+ password 7 153F0A1E05242E28243C
+ login
+!
+end
+
+GLO1-2960-SAKA-HUAWEI-5300#

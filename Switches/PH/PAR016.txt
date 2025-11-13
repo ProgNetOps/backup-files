@@ -1,0 +1,393 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 13:32.05 ? ? /home/mobaxterm ? telnet 10.248.246.137
+Connected to 10.248.246.137.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-PAR-016>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-PAR-016]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       Becon Nigeria|2MB INTERNET
+Eth0/0/2                      up      up       WAVE VENTURES STG ONNE INT
+Eth0/0/3                      up      up       SWIFT TALK ONNE | 10MB
+Eth0/0/4                      down    down     BONNY UTILITY CO FINIMA | 5MB
+Eth0/0/5                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/5 Interface
+Eth0/0/6                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/6 Interface
+Eth0/0/7                      down    down     EROTON CAWTHORNE
+Eth0/0/8                      up      up       JEVIAUSTIN-ALAKIRI LL & INT
+Eth0/0/9                      up      up       DANGOTE-ONNE-10M-LL-SWIFT-TALK RA
+                                               DIO -LM
+Eth0/0/10                     up      up       NLNG MARINE BUILDING BONNY | GTB
+                                               | NNPC BONNY |Bonny Delig |IP2AIR
+                                               -ROSON
+Eth0/0/11                     up      up       NNPC NGC ONNE
+Eth0/0/12                     *down   down     GTBANK BONNY+NNPC_BONNY+INTECH+TE
+                                               CPOINT
+Eth0/0/13                     up      up       EROTON | JEVIAUSTIN CC| CAWTHORNE
+Eth0/0/14                     up      up       BUC UTILITY COMPANY BONNY | CERAG
+                                               ONIP20 | TO-GLOMOBILE-RADIO-BNY00
+                                               1B | ACCESS BONNY
+Eth0/0/15                     up      up       JEVIAUSTIN-CC2-ALAKIRI-LL
+Eth0/0/16                     down    down     CYBERSPACE-ONNE-VPN || 26Mbps
+Eth0/0/17                     *down   down     faulty port
+Eth0/0/18                     down    down     MONTEGO-AREA 1 & 2-PHC
+Eth0/0/19                     up      up       NLNG PHC TETRALINK TO ONNE 2MB-LL
+                                               -NO-RADIO
+Eth0/0/20                     down    down     TEST FOR DANGOTE ONNE
+Eth0/0/21                     up      up       NIGERIA CUSTOM SERVICE | 10MB LEA
+                                               SED LINE
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     TELNET MGT PORT
+GE0/0/1                       down    down     HUAWEI, Quidway Series, GigabitEt
+                                               hernet0/0/1 Interface
+GE0/0/2                       down    down     OLD DCN PORT (NOT IN USE)
+GE0/0/3                       up      up       UPLINK TO DCN UPE-M8 GE0/1/9
+GE0/0/4                       up      up       SAIPEM-BONNY-INT | 300M
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif803                     up      up       HUAWEI, Quidway Series, Vlanif803
+                                                Interface
+Vlanif900                     up      up       HUAWEI, Quidway Series, Vlanif900
+                                                Interface
+Vlanif1136                    up      up       HUAWEI, Quidway Series, Vlanif113
+                                               6 Interface
+Vlanif1176                    up      up       HUAWEI, Quidway Series, Vlanif117
+                                               6 Interface
+Vlanif1498                    up      down     HUAWEI, Quidway Series, Vlanif149
+                                               8 Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1758                    up      up       HUAWEI, Quidway Series, Vlanif175
+                                               8 Interface
+Vlanif3499                    up      up       HUAWEI, Quidway Series, Vlanif349
+                                               9 Interface
+[BS-PAR-016]   dis cur
+#
+!Software Version V100R006C05
+ sysname BS-PAR-016
+#
+ vlan batch 102 803 900 1012 to 1016 1038 1052 1113 1115 1128 1130
+ vlan batch 1136 1176 1493 to 1494 1498 1501 1503 1535 1582 1584 to 1585 1640
+ vlan batch 1758 1824 1854 1882 1884 1888 to 1889 1983 2376 2460 2655
+ vlan batch 3499 3506 3607 3915 4055
+#
+ undo http server enable
+ undo http secure-server enable
+#
+vlan 102
+ description JEVIAUSTIN-CC2-INT
+vlan 803
+ description MGT VLAN
+vlan 900
+ description NLNG PHC TO ONNE-2M-LL-NO-RADIO
+vlan 1012
+ description JEVIAUSTIN-CC2-INT
+vlan 1013
+ description JEVIAUSTIN-ALAKIRI-INT
+vlan 1014
+ description JEVIAUSTIN-KRAKAMA
+vlan 1015
+ description JEVIAUSTIN PHO-CC2-LL
+vlan 1016
+ description JEVIAUSTIN-PHO-ALAKIRI-LL
+vlan 1038
+ description IP2AIR-ROSON
+vlan 1052
+ description MONTEGO-AREA1&2
+vlan 1113
+ description STG-ONNE-INTERNET
+vlan 1115
+ description GTB VLAN
+vlan 1128
+ description NPA-ONNE-INTERNET
+vlan 1130
+ description NOTORE-INTERNET
+vlan 1136
+ description SWIFT-TAKLK-RADO-MGTVLAN
+vlan 1176
+ description NIGERIA CUSTOM SERVICES
+vlan 1493
+ description NERA-MGT-3
+vlan 1494
+ description NERA_MGT_VLAN
+vlan 1498
+ description BS-CERAGON-MGT
+vlan 1501
+ description BS-MGT
+vlan 1503
+ description nera
+vlan 1535
+ description Becon Nigeria
+vlan 1582
+ description UNION-BANK-ONNE
+vlan 1584
+ description DANGOTE-ONNE-10M-LL
+vlan 1585
+ description BECON- NIGERIA
+vlan 1640
+ description ACCESS-BANK-LINKS
+vlan 1758
+ description Bonny Delight Hotel
+vlan 1824
+ description TECPOINT-BONNY
+vlan 1882
+ description EROTON-CAWTHORNE
+vlan 1884
+ description EROTON-ALAKIRI
+vlan 1888
+ description BUC-UTILITY-BONNY
+vlan 1889
+ description BONNY UTILITY
+vlan 1983
+ description SAIPEM-BONNY-INT
+vlan 2376
+ description BRASSNLNG
+vlan 2460
+ description cyberspace-onne
+vlan 2655
+ description SWIFTALK-ONNE
+vlan 3499
+ description NNPC-NGC-ONNE
+vlan 3506
+ description NNPC_BONNY_TERMINAL
+vlan 3607
+ description INTECH
+vlan 3915
+ description WAV-VETURES
+vlan 4055
+ description ORANGE-ONNE
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@(/(b3DO~aB+m8z$M^m^UU~%B%@%@
+ local-user bsnoc privilege level 15
+ local-user bsnoc service-type telnet ftp
+#
+interface Vlanif1
+#
+interface Vlanif803
+ ip address 10.248.246.137 255.255.255.192
+#
+interface Vlanif900
+ ip address 10.20.20.2 255.255.255.0
+#
+interface Vlanif1136
+ ip address 192.168.20.7 255.255.255.0
+#
+interface Vlanif1176
+ ip address 10.1.1.1 255.255.255.0
+#
+interface Vlanif1498
+#
+interface Vlanif1501
+ ip address 10.248.249.51 255.255.255.0
+#
+interface Vlanif1758
+ ip address 192.168.1.1 255.255.255.0
+#
+interface Vlanif3499
+ ip address 10.10.10.1 255.255.255.0
+#
+interface Ethernet0/0/1
+ description Becon Nigeria|2MB INTERNET
+ port link-type access
+ port default vlan 1535
+#
+interface Ethernet0/0/2
+ description WAVE VENTURES STG ONNE INT
+ port link-type access
+ port default vlan 3915
+#
+interface Ethernet0/0/3
+ description SWIFT TALK ONNE | 10MB
+ port link-type access
+ port default vlan 2655
+#
+interface Ethernet0/0/4
+ description BONNY UTILITY CO FINIMA | 5MB
+ port link-type access
+ port default vlan 1889
+#
+interface Ethernet0/0/5
+#
+interface Ethernet0/0/6
+#
+interface Ethernet0/0/7
+ description EROTON CAWTHORNE
+ port link-type access
+ port default vlan 1882
+#
+interface Ethernet0/0/8
+ description JEVIAUSTIN-ALAKIRI LL & INT
+ port link-type trunk
+ port trunk allow-pass vlan 1013 1884
+#
+interface Ethernet0/0/9
+ description DANGOTE-ONNE-10M-LL-SWIFT-TALK RADIO -LM
+ port link-type trunk
+ port trunk allow-pass vlan 1136 1584
+#
+interface Ethernet0/0/10
+ description NLNG MARINE BUILDING BONNY | GTB | NNPC BONNY |Bonny Delig |IP2AIR-ROSON
+ port link-type trunk
+ port trunk allow-pass vlan 1038 1115 1493 to 1494 1758 2376 3506
+#
+interface Ethernet0/0/11
+ description NNPC NGC ONNE
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3499
+#
+interface Ethernet0/0/12
+ description GTBANK BONNY+NNPC_BONNY+INTECH+TECPOINT
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3506
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/13
+ description EROTON | JEVIAUSTIN CC| CAWTHORNE
+ port link-type trunk
+ port trunk allow-pass vlan 1012 1882
+#
+interface Ethernet0/0/14
+ description BUC UTILITY COMPANY BONNY | CERAGONIP20 | TO-GLOMOBILE-RADIO-BNY001B | ACCESS BONNY
+ port link-type trunk
+ port trunk allow-pass vlan 1640 1888
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/15
+ description JEVIAUSTIN-CC2-ALAKIRI-LL
+ port link-type trunk
+ port trunk allow-pass vlan 1015 to 1016
+#
+interface Ethernet0/0/16
+ description CYBERSPACE-ONNE-VPN || 26Mbps
+ port link-type access
+ port default vlan 2460
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/17
+ description faulty port
+ shutdown
+ port link-type access
+#
+interface Ethernet0/0/18
+ description MONTEGO-AREA 1 & 2-PHC
+ port link-type access
+ port default vlan 1052
+#
+interface Ethernet0/0/19
+ description NLNG PHC TETRALINK TO ONNE 2MB-LL-NO-RADIO
+ port link-type access
+ port default vlan 900
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/20
+ description TEST FOR DANGOTE ONNE
+ port link-type access
+ port default vlan 1584
+#
+interface Ethernet0/0/21
+ description NIGERIA CUSTOM SERVICE | 10MB LEASED LINE
+ port link-type access
+ port default vlan 1176
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ description TELNET MGT PORT
+ port link-type access
+ port default vlan 803
+#
+interface GigabitEthernet0/0/1
+#
+interface GigabitEthernet0/0/2
+ description OLD DCN PORT (NOT IN USE)
+ port link-type trunk
+ port trunk allow-pass vlan 803 900 1012 to 1016 1038 1052 1113 1115 1128 1130 1136
+ port trunk allow-pass vlan 1176 1498 1501 1535 1582 1584 1640 1758 1824 1882
+ port trunk allow-pass vlan 1884 2376 2460 3499 3506 3607 4017 4055
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/3
+ description UPLINK TO DCN UPE-M8 GE0/1/9
+ port link-type trunk
+ port trunk allow-pass vlan 803 900 1012 to 1016 1038 1052 1113 1115 1128 1130 1136
+ port trunk allow-pass vlan 1176 1498 1501 1535 1582 1584 1640 1758 1824 1882
+ port trunk allow-pass vlan 1884 1888 to 1889 1983 2376 2460 2655 3499 3506 3607 3915
+ port trunk allow-pass vlan 4017 4055
+ stp bpdu-filter enable
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/4
+ description SAIPEM-BONNY-INT | 300M
+ port link-type access
+ port default vlan 1983
+ jumboframe enable 13296
+ undo negotiation auto
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.129
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F000001000001BB
+ snmp-agent community read cipher %@%@/Sn)U5kcN2}v@$LB6Ji1!^;P(|Er7Mnrs*O6K9Xa8CpG^;S!hpKSJRtR(L1j3bQ#`L{G;\!^%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode password
+ user privilege level 15
+ set authentication password cipher %@%@Rl`*46U:nSGJLV5zX.WT,)F~Ze^T<)I-s*Zjbm+F;*V%)FB,%@%@
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[BS-PAR-016]

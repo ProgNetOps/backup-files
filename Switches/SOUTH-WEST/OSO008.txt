@@ -1,0 +1,456 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 13:23.40 ? ? /home/mobaxterm ? telnet 10.248.246.126
+Connected to 10.248.246.126.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-OSO-008>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-OSO-008]dis int des
+Interface                   Description
+Ethernet0/0/1               OSUN EJIGBO CAMPUS
+Ethernet0/0/2               OSUN IFETEDO CAMPUS
+Ethernet0/0/3               FOUNTAIN-UNIV-TEST
+Ethernet0/0/4               CONNECTION TO NIGERIAN MACHINE TOOLS
+Ethernet0/0/5               ROUTEL SOLUTIONS 155MB INTERNET
+Ethernet0/0/6               UNION BANK OSHOGBO
+Ethernet0/0/7               NERA - WEMA BANK | IBEDC EDE STORE | HYPERIA-OSOGBO
+                            -1 and 2(OSO019)
+Ethernet0/0/8               STANBIC IBTC BANK OSHOGBO | 4MB
+Ethernet0/0/9               WESTMETRO-OSHOGBO-INT | 10 MB
+Ethernet0/0/10              CHRISJOSH
+Ethernet0/0/11              UBA IREE|WEMA IRAGBIJI|CYBERSPACE IKIRU|NACCESS IRE
+                            E|VDT IREE|CHRIS JOSH | IBEDC IKIRUN X2
+Ethernet0/0/12              ACCESS BANK(OLD DIAMOND) OSHOGBO
+Ethernet0/0/13              CERAGON MGT VODACOM
+Ethernet0/0/14              FRSC DPR OSOGBO 2MB | DPR OSOGBO 8MB INTERNET
+Ethernet0/0/15              GLOWORLD OSOGBO
+Ethernet0/0/16              OMOLUABI MFB
+Ethernet0/0/17              ACCESS BANK OSOGBO
+Ethernet0/0/18              VDT INTERNET
+Ethernet0/0/19              NNPC RETAIL STATION OSHOGBO
+Ethernet0/0/20              SUSPENDED ON APPAJI REQ OMOLUABI-MORTGAGE
+Ethernet0/0/21              VDT INTERNET
+Ethernet0/0/22              FOUNTAIN-UNIVERSITY-100M-INT
+Ethernet0/0/23              DICNET-OSOGBO-INT |15M
+Ethernet0/0/24              FOUNTAIN-UNI-TEST-PORT
+GigabitEthernet0/0/1        OSUN STATE UNIVERSITY MAIN CAMPUS ( oso main campus
+                             - suspended )
+GigabitEthernet0/0/2        TRUNK TO DCN IP/MPLS | GE 2/0/1
+NULL0                       HUAWEI, Quidway Series, NULL0 Interface
+Vlanif804                   HUAWEI, Quidway Series, Vlanif804 Interface
+Vlanif1501                  HUAWEI, Quidway Series, Vlanif1501 Interface
+Vlanif1910                  HUAWEI, Quidway Series, Vlanif1910 Interface
+[BS-OSO-008]     dis cur
+#
+!Software Version V100R005C01SPC100
+ sysname BS-OSO-008
+#
+ vlan batch 44 100 to 101 105 110 to 112 804 982 1087 1136 1153 1180
+ vlan batch 1245 1483 1486 1492 1494 1498 1500 to 1501 1503 1527 1533
+ vlan batch 1632 1640 to 1641 1671 1754 to 1756 1815 to 1816 1862 to 1863 1890 1895 to 1896 1910 1969
+ vlan batch 1979 2127 2150 2423 2830 2920 3007 3032 3035 3042
+ vlan batch 3126 3138 3200 3202 3387 3471 4019 to 4020
+#
+ stp enable
+#
+ undo cluster enable
+ undo ntdp enable
+ undo ndp enable
+#
+ bpdu enable
+#
+ undo http server enable
+#
+vlan 44
+ description Okuku
+vlan 100
+ description Osun_Ikire_campus
+vlan 105
+ description Ifetedo-Campus
+vlan 110
+ description Ejigbo-Campus
+vlan 111
+ description Osun_Okuku_campus
+vlan 112
+ description Osun_Ipetu_campus
+vlan 804
+ description SWITCH-MGT
+vlan 982
+ description vodacom-osogbo-lag
+vlan 1087
+ description VDT IREE
+vlan 1136
+ description FOUNTAIN-UNIVERSITY-INT
+vlan 1153
+ description OMOLUABI_MFB
+vlan 1180
+ description DICNET-OSHOGBO
+vlan 1245
+ description CHRISJOSH
+vlan 1483
+ description WESTMETRO-OSHOGBO
+vlan 1486
+ description CERAGON MGT
+vlan 1492
+ description BS-NERA-4-MGT
+vlan 1494
+ description NNPC_MGT
+vlan 1498
+ description BS-CERAGON-MGT
+vlan 1500
+ description ceragon-mgmt
+vlan 1501
+ description switch mgt vlan old
+vlan 1503
+ description GLO1-NERA-MGT
+vlan 1527
+ description omo-mortgage
+vlan 1533
+ description UNION-BANK-OSOGBO
+vlan 1632
+ description WEMA-BANK
+vlan 1640
+ description ACCESS-BANK-LL
+vlan 1641
+ description OSUN IPETU CAMPUS
+vlan 1671
+ description ROUTEL SOLUTIONS
+vlan 1754
+ description IBEDC_IKI_HUB
+vlan 1755
+ description IBEDC_IKI-CENTER
+vlan 1756
+ description IBEDC_EDE-STORE
+vlan 1815
+ description NBC-OSHOGBO
+vlan 1816
+ description ZINOX OSUN STATE POLYTECHNIC
+vlan 1862
+ description HYPERIA-OSOGBO-1
+vlan 1863
+ description HYPERIA-OSOGBO-2
+vlan 1895
+ description Osun_state_internet
+vlan 1896
+ description OSUN-STATE-UNI-OKUKU
+vlan 1910
+ description MGT
+vlan 1969
+ description NIGERIAN_MACHINE_TOOLS_OSHOGBO
+vlan 1979
+ description FRSC OSOGBO
+vlan 2127
+ description DPR OSOGBO
+vlan 2150
+ description TOTAL-ABUJA-PH-DS3
+vlan 2423
+ description STANBIC-BANK-VPLS
+vlan 2830
+ description FRSC OSOGBO
+vlan 2920
+ description GLOWORLD-OSOGBO
+vlan 3007
+ description FBN-LINKS-LL
+vlan 3032
+ description Adeleke-University
+vlan 3035
+ description SKYE_BANK
+vlan 3042
+ description UBA-VPLS
+vlan 3126
+ description DIAMOND-BANK-LL-LINKS
+vlan 3138
+ description REDEEMERS_UNIVERSITY
+vlan 3200
+ description OSUN STATE UNIVERSITY EJIGBO
+vlan 3202
+ description OSUN-EJIGBO-CAMP
+vlan 3387
+ description WEMA_STATION_RD
+vlan 3471
+ description NNPC_OSHOGBO
+vlan 4020
+ description VDT-OSHOGBO-INTERNET
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user bsnoc password cipher RB!G'1+"PX61[a"FZ7=S#!!!
+ local-user bsnoc privilege level 15
+ local-user chuks password cipher BI1)@V<*-U*U4Z(*%FTCV!!!
+ local-user chuks privilege level 15
+ local-user donald password cipher ^)AW.F&IO7JU4Z(*%FTCV!!!
+ local-user donald privilege level 15
+ local-user fabian password cipher *2+W,D'B31_Q=^Q`MAF4<1!!
+ local-user fabian privilege level 15
+ local-user kelechi password cipher WHBE#"/W/^@PKL"W<AF/\1!!
+ local-user kelechi privilege level 15
+ local-user moses password cipher Y;FLM:7Q_/F1[a"FZ7=S#!!!
+ local-user moses privilege level 15
+ local-user naveen password cipher V>4:5D3Q-L<0G`2^"@4W+A!!
+ local-user naveen privilege level 15
+ local-user ope password cipher \THX&0.I;NKQBC:RRU/-W1!!
+ local-user ope privilege level 15
+ undo local-user admin
+#
+interface Vlanif804
+ ip address 10.248.246.126 255.255.255.192
+#
+interface Vlanif1501
+#
+interface Vlanif1910
+ ip address 10.248.248.70 255.255.255.252
+#
+interface Ethernet0/0/1
+ description OSUN EJIGBO CAMPUS
+ shutdown
+ port link-type access
+ port default vlan 110
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/2
+ description OSUN IFETEDO CAMPUS
+ shutdown
+ port link-type access
+ port default vlan 105
+ stp instance 0 cost 300000
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/3
+ description FOUNTAIN-UNIV-TEST
+ port link-type access
+ port default vlan 1136
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/4
+ description CONNECTION TO NIGERIAN MACHINE TOOLS
+ shutdown
+ port link-type access
+ port default vlan 1890
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/5
+ description ROUTEL SOLUTIONS 155MB INTERNET
+ port link-type access
+ port default vlan 1671
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/6
+ description UNION BANK OSHOGBO
+ port link-type access
+ port default vlan 1533
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/7
+ description NERA - WEMA BANK | IBEDC EDE STORE | HYPERIA-OSOGBO-1 and 2(OSO019)
+ port link-type trunk
+ port trunk allow-pass vlan 1486 1503 1756 1863 3387
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/8
+ description STANBIC IBTC BANK OSHOGBO | 4MB
+ port link-type access
+ port default vlan 2423
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/9
+ description WESTMETRO-OSHOGBO-INT | 10 MB
+ shutdown
+ port link-type access
+ port default vlan 1483
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/10
+ description CHRISJOSH
+ port link-type access
+ port default vlan 1245
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/11
+ description UBA IREE|WEMA IRAGBIJI|CYBERSPACE IKIRU|NACCESS IREE|VDT IREE|CHRIS JOSH | IBEDC IKIRUN X2
+ port link-type trunk
+ port trunk allow-pass vlan 1486 1492 1503 1632 1753 to 1755 3379 4019
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/12
+ description ACCESS BANK(OLD DIAMOND) OSHOGBO
+ port link-type access
+ port default vlan 1640
+ stp bpdu-filter enable
+ ntdp enable
+ ndp enable
+ qos lr outbound cir 9000 cbs 1040384
+ qos lr inbound cir 9000 cbs 1040384
+#
+interface Ethernet0/0/13
+ description CERAGON MGT VODACOM
+ port link-type access
+ port default vlan 1500
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/14
+ description FRSC DPR OSOGBO 2MB | DPR OSOGBO 8MB INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 1492 2127 2830
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/15
+ description GLOWORLD OSOGBO
+ port link-type access
+ port default vlan 2920
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/16
+ description OMOLUABI MFB
+ shutdown
+ port link-type access
+ port default vlan 1153
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/17
+ description ACCESS BANK OSOGBO
+ port link-type access
+ port default vlan 1640
+ stp bpdu-filter enable
+ ntdp enable
+ ndp enable
+ undo negotiation auto
+ speed 100
+ multicast-suppression 50
+#
+interface Ethernet0/0/18
+ description VDT INTERNET
+ port link-type access
+ port default vlan 4020
+ ntdp enable
+ ndp enable
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/19
+ description NNPC RETAIL STATION OSHOGBO
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3471
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/20
+ description SUSPENDED ON APPAJI REQ OMOLUABI-MORTGAGE
+ shutdown
+ port link-type access
+ port default vlan 1527
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/21
+ description VDT INTERNET
+ port link-type access
+ port default vlan 4020
+ ntdp enable
+ ndp enable
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/22
+ description FOUNTAIN-UNIVERSITY-100M-INT
+ port link-type trunk
+ port trunk allow-pass vlan 1136 1486
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/23
+ description DICNET-OSOGBO-INT |15M
+ shutdown
+ port link-type access
+ port default vlan 1180
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/24
+ description FOUNTAIN-UNI-TEST-PORT
+ port link-type access
+ port default vlan 1136
+ ntdp enable
+ ndp enable
+#
+interface GigabitEthernet0/0/1
+ description OSUN STATE UNIVERSITY MAIN CAMPUS ( oso main campus - suspended )
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 100 105 110 112 1486 1641 1896 3200 3202
+ ntdp enable
+ ndp enable
+#
+interface GigabitEthernet0/0/2
+ description TRUNK TO DCN IP/MPLS | GE 2/0/1
+ port link-type trunk
+ port trunk allow-pass vlan 105 804 982 1087 1136 1153 1180 1245 1483 1486
+ port trunk allow-pass vlan 1492 1494 1498 1500 to 1501 1503 1527 1533 1632 1640 to 1641 1671
+ port trunk allow-pass vlan 1753 1756 1815 to 1816 1862 to 1863 1890 1895 to 1896 1910 1969 1979 2127
+ port trunk allow-pass vlan 2423 2830 2920 3007 3032 3035 3042 3126 3138 3200
+ port trunk allow-pass vlan 3202 3379 3387 3471 4019 to 4020
+ stp bpdu-filter enable
+ ntdp enable
+ ndp enable
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F000001000068AC
+ snmp-agent community read cipher EHM$9`["N%+Q=^Q`MAF4<<"TX$_S#6.NM(0=0\)*5WU!
+ snmp-agent community read cipher ^D#U[\Q.+H.9S,G%)\D@SL"TX$_S#6.NM(0=0\)*5WU!
+ snmp-agent community read cipher ^D#U[\Q.+H.9]T((+V>!H\"TX$_S#6.NM(0=0\)*5WU!
+ snmp-agent community read cipher ^D#U[\Q.+H-86]4I7B2,!,"TX$_S#6.NM(0=0\)*5WU!
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ idle-timeout 0 0
+user-interface vty 0 4
+ authentication-mode aaa
+#
+port-group tr
+#
+return
+
+[BS-OSO-008]

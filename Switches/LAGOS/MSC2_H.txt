@@ -1,0 +1,402 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 12:23.35 ? ? /home/mobaxterm ? telnet 10.248.246.104
+Connected to 10.248.246.104.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Note: The max number of VTY users is 5, and the current number
+      of VTY users on line is 1.
+<GLO1_HU-SW_MSC2>sys
+Enter system view, return user view with Ctrl+Z.
+[GLO1_HU-SW_MSC2]dis int des
+Interface                   Description
+Ethernet0/0/1               ISN-IKEJA
+Ethernet0/0/2               STERLING BANK OGUDU
+Ethernet0/0/3               GLOWORLD TRUNK TO IS
+Ethernet0/0/4               DCN REQUESTED PORT
+Ethernet0/0/5               GTBANK KETU
+Ethernet0/0/6               ISN-IKEJA || NERA-MGMT
+Ethernet0/0/7               CHEVRON NIG LTD PRI | 4MB
+Ethernet0/0/8               STERLING BANK KETU
+Ethernet0/0/9               EMPIRIX PROBE (DCN)
+Ethernet0/0/10              MICROWAVE LINK TO MTN OJOTA
+Ethernet0/0/11              DANGOTE NOC IKEJA
+Ethernet0/0/12              BS CERAGON MGT
+Ethernet0/0/13              CONNECTION TO THE ROUTER FOR THE 45M LINK TO SAKA 1
+                            8
+Ethernet0/0/14              CONNECTION TO BS HERITAGE ROUTER AT MSC 2
+Ethernet0/0/15              Huawei, Quidway Series, Ethernet0/0/15 Interface
+Ethernet0/0/16              SEVEN UP MPLS LL LAG901 TO CLIENt-CERAGON-IP.
+GigabitEthernet0/0/1        TRUNK-TO-CISCO 3750
+GigabitEthernet0/0/2        FIBRE-TO-SHELL-NSC-IKEJA-100M-LL
+NULL0                       Huawei, Quidway Series, NULL0 Interface
+Vlanif1                     Huawei, Quidway Series, Vlanif1 Interface
+Vlanif509                   Huawei, Quidway Series, Vlanif509 Interface
+Vlanif804                   Huawei, Quidway Series, Vlanif804 Interface
+Vlanif1121                  MANAGEMENT
+Vlanif3161                  Huawei, Quidway Series, Vlanif3161 Interface
+[GLO1_HU-SW_MSC2]     dis cur
+#
+ sysname GLO1_HU-SW_MSC2
+#
+ vlan batch 1 88 91 121 501 509 791 804 1115 1121 to 1122
+ vlan batch 1281 1290 1322 1400 1492 1495 to 1496 1498 1501 to 1503 1616 1640
+ vlan batch 1796 1871 to 1876 1899 1996 to 1999 2173 to 2175 2423 2468 2916 2920 2922 to 2924
+ vlan batch 2999 3034 3161 3410 to 3411 3413 to 3414 3416 3418 3421 3423 3426
+ vlan batch 3428 to 3431 3435 3437 to 3438 3832
+#
+ stp enable
+#
+ bpdu enable
+#
+ cluster enable
+ ntdp enable
+ ntdp hop 16
+ ndp enable
+#
+ undo http server enable
+#
+ lldp enable
+#
+vlan 91
+ description DCN VLAN
+vlan 121
+ description ENT-SW-MGT-VLAN
+vlan 501
+ description HERITAGE-OJOTA-MTN
+vlan 509
+ description HERITAGE-BANK-LL
+vlan 791
+ description EMPIRIX-PROBE
+vlan 804
+ description MGNT
+vlan 1115
+ description GTBANK-VPLS
+vlan 1121
+ description MANAGEMENT
+vlan 1281
+ description HERITAGE UMUAIHIA
+vlan 1290
+ description BNP-MAESTRO
+vlan 1322
+ description HERITAGE-ABAKALIKI
+vlan 1400
+ description ISN_IKEJA
+vlan 1492
+ description BS-NERA-4MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1496
+ description CERAGON MGT
+vlan 1498
+ description BS-CERAGON-MGT
+vlan 1501
+ description NERA_MGT
+vlan 1502
+ description new_nera_mgt
+vlan 1503
+ description nera-mgmt
+vlan 1616
+ description isn-ikeja-new
+vlan 1640
+ description ACCESS-VPLS
+vlan 1796
+ description CHEVRON-PRI
+vlan 1871
+ description ISL_IKEJA_20MB_INTERNET
+vlan 1872
+ description FBN-CAPITAL-INTERNET
+vlan 1873
+ description Gloworld allen
+vlan 1874
+ description GLOSHOP IJEBU
+vlan 1875
+ description STANBIC-IBTC-VTU
+vlan 1876
+ description WINNERS-GOLDEN-BET-NIG
+vlan 1899
+ description SERVETECH-INTERNET
+vlan 1996
+ description GLOWORLD-OYO
+vlan 1997
+ description Gloworld Alagbaka akure
+vlan 1998
+ description Gloworld Lafe_ Akure
+vlan 1999
+ description GLOWORLD-ONDO
+vlan 2173
+ description GLOSHOP-IKORODU
+vlan 2174
+ description GLOSHOP-OTA
+vlan 2175
+ description GLOWORLD-ILORIN
+vlan 2423
+ description STANBIC-IBTC-LL
+vlan 2468
+ description SEVEN UP IKEJA MPLS
+vlan 2916
+ description GLOWORLD-AGO-IWOYE
+vlan 2920
+ description GLOWORLD-OSOGBO
+vlan 2922
+ description GLOWORLD-SANGO-IBADAN
+vlan 2923
+ description GLOWORLD-ABEOKUTA
+vlan 2924
+ description GLOWORLD-ADO
+vlan 2999
+ description FCMB-VPLS
+vlan 3034
+ description STERLING-VPLS
+vlan 3161
+ description SHELL-IKEJA-TO-MARINA-LL
+vlan 3410
+ description HERITAGE-KADUNA
+vlan 3411
+ description HERITAGE-JOS-2
+vlan 3413
+ description HERITAGE-MINNA
+vlan 3414
+ description HERITAGE-SOKOTO
+vlan 3416
+ description HERITAGE-ILORIN
+vlan 3418
+ description HERITAGE-ABEOKUTA
+vlan 3421
+ description HERITAGE-AKURE
+vlan 3423
+ description HERITAGE-AKURE-SECRETARIAT
+vlan 3426
+ description HERITAGE-AJASIN
+vlan 3428
+ description HERITAGE-FUTA
+vlan 3429
+ description HERITAGE-ONDO-STR.
+vlan 3430
+ description HERITAGE-OKITIPUPA
+vlan 3431
+ description HERITAGE-OWO
+vlan 3435
+ description HERITAGE-MUSHIN
+vlan 3437
+ description GLOSHOP-IBADAN-RING-RD
+vlan 3438
+ description GLOSHOP-IBADAN-CHALLENGE
+vlan 3832
+ description ORANGE-VISA-OJOTA
+#
+interface Vlanif1
+#
+interface Vlanif509
+ ip address 172.16.67.4 255.255.255.248
+#
+interface Vlanif804
+ ip address 10.248.246.104 255.255.255.192
+#
+interface Vlanif1121
+ description MANAGEMENT
+ ip address 10.241.9.2 255.255.255.240
+#
+interface Vlanif3161
+ ip address 4.7.7.7 255.255.255.0
+#
+interface Ethernet0/0/1
+ description ISN-IKEJA
+ port link-type trunk
+ port trunk allow-pass vlan 1616 1871
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/2
+ description STERLING BANK OGUDU
+ port link-type trunk
+ port trunk allow-pass vlan 1496 3034
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/3
+ description GLOWORLD TRUNK TO IS
+ port link-type trunk
+ port trunk allow-pass vlan 1873 to 1874 1996 to 1999 2173 to 2175 2916 2920 2922 to 2924 3437 to 3438
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/4
+ description DCN REQUESTED PORT
+ port link-type access
+ port default vlan 91
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/5
+ description GTBANK KETU
+ port link-type trunk
+ port trunk allow-pass vlan 1115 1495
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/6
+ description ISN-IKEJA || NERA-MGMT
+ port link-type access
+ port default vlan 1503
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/7
+ description CHEVRON NIG LTD PRI | 4MB
+ port link-type access
+ port default vlan 1796
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/8
+ description STERLING BANK KETU
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1495 to 1496 3034
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/9
+ description EMPIRIX PROBE (DCN)
+ port link-type access
+ port default vlan 791
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/10
+ description MICROWAVE LINK TO MTN OJOTA
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 501 509 1501 1872 1875 2423 3832
+ stp instance 0 cost 1000000
+ undo negotiation auto
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/11
+ description DANGOTE NOC IKEJA
+ port link-type trunk
+ port trunk allow-pass vlan 1492
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/12
+ description BS CERAGON MGT
+ port link-type access
+ port default vlan 1498
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/13
+ description CONNECTION TO THE ROUTER FOR THE 45M LINK TO SAKA 18
+ port default vlan 509
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/14
+ description CONNECTION TO BS HERITAGE ROUTER AT MSC 2
+ port link-type trunk
+ port trunk allow-pass vlan 501 1281 3410 to 3411 3413 to 3414 3416 3418 3421 3423 3426 3428 to 3431
+ port trunk allow-pass vlan 3435
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/15
+ port link-type trunk
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/16
+ description SEVEN UP MPLS LL LAG901 TO CLIENt-CERAGON-IP.
+ port link-type access
+ port default vlan 2468
+ undo negotiation auto
+ ntdp enable
+ ndp enable
+#
+interface GigabitEthernet0/0/1
+ description TRUNK-TO-CISCO 3750
+ port link-type trunk
+ port trunk allow-pass vlan 1 to 4094
+ combo-port media type
+   combo-port auto
+ ntdp enable
+ ndp enable
+#
+interface GigabitEthernet0/0/2
+ description FIBRE-TO-SHELL-NSC-IKEJA-100M-LL
+ port link-type access
+ port default vlan 3161
+ combo-port media type
+   combo-port fiber
+ ntdp enable
+ ndp enable
+#
+interface NULL0
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user adewunmi password cipher !\)S/>B90$21[a"FZ7=S#!!!
+ local-user adewunmi level 3
+ local-user adewunmi ftp-directory flash:
+ local-user bsnoc password cipher RB!G'1+"PX61[a"FZ7=S#!!!
+ local-user bsnoc level 3
+ local-user bsnoc ftp-directory flash:
+ local-user donald password cipher ^)AW.F&IO7JU4Z(*%FTCV!!!
+ local-user donald level 3
+ local-user donald ftp-directory flash:
+ local-user fabian password cipher *2+W,D'B31_Q=^Q`MAF4<1!!
+ local-user fabian level 3
+ local-user fabian ftp-directory flash:
+ local-user huawei password simple huawei
+ local-user huawei level 3
+ local-user huawei ftp-directory flash:
+ local-user huawei service-type telnet terminal ftp
+ local-user moses password cipher Y;FLM:7Q_/F1[a"FZ7=S#!!!
+ local-user moses level 3
+ local-user moses ftp-directory flash:
+ local-user naveen password cipher V>4:5D3Q-L<0G`2^"@4W+A!!
+ local-user naveen level 3
+ local-user naveen ftp-directory flash:
+ local-user ope password cipher \THX&0.I;NKQBC:RRU/-W1!!
+ local-user ope level 3
+ local-user ope ftp-directory flash:
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7FFFFFFF00003926
+ snmp-agent community read  globacom
+ snmp-agent community read  globacon
+ snmp-agent community read  Globacom123*
+ snmp-agent sys-info version all
+#
+user-interface con 0
+user-interface vty 0 4
+ authentication-mode aaa
+ user privilege level 3
+#
+return
+[GLO1_HU-SW_MSC2]

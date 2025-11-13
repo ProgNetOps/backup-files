@@ -1,0 +1,404 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:25.27 ? ? /home/mobaxterm ? telnet 10.248.248.76
+Connected to 10.248.248.76.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+BS-LAG-131>en
+Password:
+BS-LAG-131#sh int des
+Interface                      Status         Protocol Description
+Vl1                            admin down     down
+Vl10                           up             up
+Vl150                          up             up
+Vl170                          up             up
+Vl905                          up             up
+Vl1122                         up             up
+Vl1310                         down           down
+Vl2022                         up             up
+Vl2707                         down           down
+Vl2708                         up             up
+Fa0/1                          up             up       CORAL PAY INTERNET
+Fa0/2                          admin down     down     BILLING SUSPENSION Q LIFE FAMILY INTERNET
+Fa0/3                          down           down     NNPC NETCO BACKUP LINK ( CERAGON)
+Fa0/4                          up             up       CISCON INTERNET LAGOS
+Fa0/5                          up             up       IOTECH-ONIRU | 50M
+Fa0/6                          admin down     down     ORANGE SIEMENS
+Fa0/7                          down           down     NEW CROSS LEASED LINE
+Fa0/8                          down           down
+Fa0/9                          admin down     down     ORANGE GE LAGOS
+Fa0/10                         down           down
+Fa0/11                         down           down
+Fa0/12                         up             up       SKIPPER-NIG-LTD-INT |20M
+Fa0/13                         down           down
+Fa0/14                         down           down     TPGS-LANDMARK
+Fa0/15                         admin down     down     LINK-TERMINATED- TECPOINT GLOBAL LIGALI AYORINDE
+Fa0/16                         admin down     down     KRISPY-KREME-VI-6Mb-INT
+Fa0/17                         up             up       NNPC MEDICAL MURI
+Fa0/18                         up             up       NNPC NETCO ENGINEERING CLOSE VI - NERA
+Fa0/19                         down           down     NNPC MEDICAL FIBER
+Fa0/20                         down           down
+Fa0/21                         up             up       NNPC MEDICAL FIBER
+Fa0/22                         down           down     INDORAMA-LL-LAG-PHC-4Mb-LM-FIBER
+Fa0/23                         down           down     PRIME_ATLANTIC INT FIBER | 50MB
+Fa0/24                         down           down
+Gi0/1                          up             up       COBBLESTONE-ILE-OJA-BELLA'S PLACE-INT |200M
+Gi0/2                          up             up       BS_SAKA_25_3750_3# IP 10.248.248.74 - interface GigabitEthernet1/1/2
+BS-LAG-131#sh run
+Building configuration...
+
+Current configuration : 6121 bytes
+!
+version 12.2
+no service pad
+service timestamps debug uptime
+service timestamps log uptime
+no service password-encryption
+service unsupported-transceiver
+!
+hostname BS-LAG-131
+!
+enable secret 5 $1$J7z0$.b/jA4bJSdy4Obk7QCbz31
+!
+no aaa new-model
+vtp mode transparent
+ip subnet-zero
+!
+!
+!
+!
+no file verify auto
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 2
+ name MOBIL-UK-75M
+!
+vlan 10
+ name Updated-sw-managment
+!
+vlan 100
+ name ACCESS-TDM
+!
+vlan 117
+ name CORAL-PAY-INTERNET
+!
+vlan 143
+ name NNPC-MEDI-MURI-FIBER
+!
+vlan 144
+ name NNPC-MEDICAL-MURI
+!
+vlan 150
+ name MGT
+!
+vlan 155
+ name CGG-Internet
+!
+vlan 160
+ name Q-Life-Family-Internet
+!
+vlan 170
+ name CISCON-INTERNET-LAGOS
+!
+vlan 176
+ name NNPC-NETCO-BACKUP
+!
+vlan 184
+ name TECPOINT-GLOBAL
+!
+vlan 185
+ name Krisp-Kreme
+!
+vlan 560
+ name MOBIL-iNTERNET
+!
+vlan 595
+ name MOBIL-100M-INTERNET-SECONDARY
+!
+vlan 901
+ name ORANGE-AT&T
+!
+vlan 905
+ name da
+!
+vlan 1122
+ name TPGS-LANDMARK
+!
+vlan 1211
+ name NEWCROSS-(PAN-OCEAN)
+!
+vlan 1356
+ name IOTECH-ONIRU
+!
+vlan 1494
+ name NERA_NNPC
+!
+vlan 1497
+ name BS-NERA-MGT
+!
+vlan 1498
+ name BS-CERAGON-MGT
+!
+vlan 1501
+ name BS-MGT
+!
+vlan 1640
+ name ACCESS-BANK-MPLS
+!
+vlan 1684
+ name ORANGE-GE
+!
+vlan 1685
+ name ORANGE-SIEMENS
+!
+vlan 1723
+ name COBBLESTON-ILE-OJA
+!
+vlan 1906
+ name MOBIL-EKET-LINK
+!
+vlan 2022
+ name NEW-CROSS-LL
+!
+vlan 2101-2102
+!
+vlan 2206
+ name MOBIL-HQ-TO-ABUJA
+!
+vlan 2414
+ name SKIPPER-NIG-LTD-INT
+!
+vlan 2422
+ name INDORAMA_PH_LL
+!
+vlan 2708
+ name PRIME_ATLANTIC
+!
+vlan 3400
+ name FIRS-BARBEACH
+!
+vlan 3414
+ name NNPC_MEDICAL_MURI
+!
+vlan 3415
+ name NNPC-NETCO-VI
+!
+vlan 3651
+ name GTCO-food-festival-Glomobile-Eno
+!
+vlan 3652,3751-3752,3851-3852
+!
+!
+interface FastEthernet0/1
+ description CORAL PAY INTERNET
+ switchport access vlan 117
+ switchport mode access
+!
+interface FastEthernet0/2
+ description BILLING SUSPENSION Q LIFE FAMILY INTERNET
+ switchport access vlan 160
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet0/3
+ description NNPC NETCO BACKUP LINK ( CERAGON)
+ switchport access vlan 176
+ switchport mode access
+!
+interface FastEthernet0/4
+ description CISCON INTERNET LAGOS
+ switchport access vlan 170
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/5
+ description IOTECH-ONIRU | 50M
+ switchport access vlan 1356
+ switchport mode access
+!
+interface FastEthernet0/6
+ description ORANGE SIEMENS
+ switchport access vlan 1685
+ switchport trunk encapsulation dot1q
+ switchport mode dot1q-tunnel
+ shutdown
+ l2protocol-tunnel cdp
+ l2protocol-tunnel stp
+!
+interface FastEthernet0/7
+ description NEW CROSS LEASED LINE
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1211,2022
+ spanning-tree portfast
+!
+interface FastEthernet0/8
+ switchport trunk encapsulation dot1q
+!
+interface FastEthernet0/9
+ description ORANGE GE LAGOS
+ switchport access vlan 1684
+ switchport trunk encapsulation dot1q
+ switchport mode dot1q-tunnel
+ shutdown
+ l2protocol-tunnel cdp
+ l2protocol-tunnel stp
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+ description SKIPPER-NIG-LTD-INT |20M
+ switchport access vlan 2414
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+ description TPGS-LANDMARK
+ switchport access vlan 1122
+ switchport mode access
+!
+interface FastEthernet0/15
+ description LINK-TERMINATED- TECPOINT GLOBAL LIGALI AYORINDE
+ switchport access vlan 184
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/16
+ description KRISPY-KREME-VI-6Mb-INT
+ switchport access vlan 185
+ switchport mode access
+ shutdown
+ speed 100
+ duplex full
+!
+interface FastEthernet0/17
+ description NNPC MEDICAL MURI
+ switchport access vlan 144
+ switchport mode access
+!
+interface FastEthernet0/18
+ description NNPC NETCO ENGINEERING CLOSE VI - NERA
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1494,3415
+ switchport mode trunk
+!
+interface FastEthernet0/19
+ description NNPC MEDICAL FIBER
+ switchport access vlan 143
+ switchport mode access
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+ description NNPC MEDICAL FIBER
+ switchport access vlan 143
+ switchport mode access
+!
+interface FastEthernet0/22
+ description INDORAMA-LL-LAG-PHC-4Mb-LM-FIBER
+ switchport access vlan 2422
+ switchport trunk encapsulation dot1q
+ switchport mode dot1q-tunnel
+ l2protocol-tunnel cdp
+ l2protocol-tunnel stp
+!
+interface FastEthernet0/23
+ description PRIME_ATLANTIC INT FIBER | 50MB
+ switchport access vlan 2708
+ switchport mode access
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+ description COBBLESTONE-ILE-OJA-BELLA'S PLACE-INT |200M
+ switchport access vlan 1723
+ switchport mode access
+!
+interface GigabitEthernet0/2
+ description BS_SAKA_25_3750_3# IP 10.248.248.74 - interface GigabitEthernet1/1/2
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 2,10,100,117,143,144,150,160,170,176,184,185,560
+ switchport trunk allowed vlan add 901,905,1122,1135,1211,1356,1494,1497,1498
+ switchport trunk allowed vlan add 1640,1684,1685,1723,1906,2022,2101,2102,2206
+ switchport trunk allowed vlan add 2414,2422,2708,3400,3414,3415,3651,3652,3751
+ switchport trunk allowed vlan add 3752,3851,3852
+ switchport mode trunk
+ switchport nonegotiate
+ speed nonegotiate
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ ip address 10.248.248.76 255.255.255.248
+!
+interface Vlan150
+ no ip address
+!
+interface Vlan170
+ ip address 197.211.47.158 255.255.255.248
+!
+interface Vlan905
+ ip address 192.168.15.2 255.255.255.0
+!
+interface Vlan1122
+ ip address 192.168.76.1 255.255.255.0
+!
+interface Vlan1310
+ no ip address
+!
+interface Vlan2022
+ ip address 10.4.4.250 255.255.255.0
+!
+interface Vlan2707
+ no ip address
+!
+interface Vlan2708
+ ip address 129.205.99.108 255.255.255.240
+!
+ip default-gateway 10.248.248.73
+ip classless
+ip http server
+ip http port 10222
+!
+!
+snmp-server community gloabcom RO
+snmp-server community globacom RO
+!
+control-plane
+!
+!
+line con 0
+line vty 0 4
+ password Maranellq
+ login
+line vty 5 15
+ password Maranellq
+ login
+!
+end
+
+BS-LAG-131#

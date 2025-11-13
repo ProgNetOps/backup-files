@@ -1,0 +1,1086 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 12:26.43 ? ? /home/mobaxterm ? telnet 10.248.246.98
+Connected to 10.248.246.98.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+OREGUN_MSC6_3750_1>en
+Password:
+OREGUN_MSC6_3750_1#sh int des
+Interface                      Status         Protocol Description
+Vl1                            admin down     down
+Vl5                            up             up
+Vl50                           up             up
+Vl65                           down           down
+Vl100                          admin down     down
+Vl112                          down           down
+Vl113                          down           down
+Vl118                          up             up
+Vl135                          down           down
+Vl166                          up             up
+Vl260                          down           down
+Vl350                          down           down
+Vl515                          up             up
+Vl560                          up             up
+Vl766                          up             up
+Vl804                          up             up
+Vl827                          admin down     down
+Vl850                          up             up
+Vl968                          down           down
+Vl1112                         up             up
+Vl1142                         up             up
+Vl1149                         up             up
+Vl1227                         up             up
+Vl1450                         up             up
+Vl1512                         down           down
+Vl1526                         admin down     down
+Vl1581                         up             up
+Vl1630                         admin down     down
+Vl1640                         up             up
+Vl1663                         up             up
+Vl1665                         up             up
+Vl1677                         up             up
+Vl1826                         admin down     down
+Vl1827                         down           down
+Vl1846                         up             up
+Vl1881                         up             up
+Vl1895                         up             up
+Vl1896                         up             up
+Vl1898                         up             up
+Vl1902                         up             up
+Vl1974                         up             up
+Vl2056                         up             up
+Vl2057                         up             up
+Vl2312                         up             up
+Vl2315                         up             up
+Vl2402                         down           down
+Vl2427                         up             up
+Vl2440                         up             up       DANGOTE GBOKO MPLS
+Vl2701                         up             up
+Vl2792                         up             up
+Vl2999                         up             up
+Vl3026                         down           down
+Vl3046                         up             up
+Vl3126                         up             up
+Vl3161                         down           down
+Vl3507                         up             up
+Vl3508                         up             up
+Vl3832                         up             up
+Vl3853                         up             up
+Vl3910                         up             up
+Vl3932                         up             up
+Vl3933                         up             up
+Gi1/0/1                        up             up       DCN-PeA-3/0/6
+Gi1/0/2                        down           down     SMIL HI-IMPACT-IBAFO-100MB-INTERNET-PRIMARY-FIBRE-BACKHAUL-OREGUN
+Gi1/0/3                        up             up
+Gi1/0/4                        down           down     TRUNK TO OREGUN-GLO1-NE40-5/0/0[EX-ALU-B:OREGUNPE01-Port-3/1/1]
+Gi1/0/5                        up             up       CONNECTION TO huawei SWITCH- GE0/0/2-MSC6
+Gi1/0/6                        down           down     DANGOTE IKEJA FIBER
+Gi1/0/7                        down           down
+Gi1/0/8                        admin down     down     SMIL HI-IMPACT 100MB - FIBRE BACKHAUL
+Gi1/0/9                        up             up       TRUNK-TO-OREGUN_MSC6_3750_2
+Gi1/0/10                       down           down     Conoil-CONGAS-Internet-Oregun
+Gi1/0/11                       down           down
+Gi1/0/12                       down           down     HYPERIA IKEJA(vlan 980)
+Gi1/0/13                       up             up       TPGS Avi Cenna Int high School 100Mb Internet
+Gi1/0/14                       up             up       COOLLINK-IKEJA(LSETF)
+Gi1/0/15                       admin down     down     JULIUS BERGERSAGAMU KM 0-ZERO-INT 10M- FIBER LAST MILE-
+Gi1/0/16                       down           down
+Gi1/0/17                       down           down     CONNECTION TO ZEBWEB TELEGRAPH
+Gi1/0/18                       admin down     down     TPGS IKEJA SUN-100M-INTERNET_FIBER_LM_BY_CLIENT
+Gi1/0/19                       down           down
+Gi1/0/20                       admin down     down     TRUNK TO NBC SECONDARY LINK
+Gi1/0/21                       admin down     down     AGGREKO INTERNET SERVICE
+Gi1/0/22                       down           down     RICHARD-TEST
+Gi1/0/23                       down           down     DIAMOND BANK DRC IKEJA - OFF ISAAC JOHN
+Gi1/0/24                       up             up       NBC MUSHIN
+Gi1/0/25                       down           down     RCCG_INTERNET
+Gi1/0/26                       down           down     CONNECTION TO ALU-B:OREGUNPE01 || Port 3/1/1
+Gi1/0/27                       up             up       TRUNK-TO-RACK-CENTER || SECONDARY
+Gi1/0/28                       down           down     FAULTY-PORT
+OREGUN_MSC6_3750_1#  sh run
+Building configuration...
+
+Current configuration : 18012 bytes
+!
+version 12.1
+no service pad
+service timestamps debug uptime
+service timestamps log uptime
+no service password-encryption
+!
+hostname OREGUN_MSC6_3750_1
+!
+enable secret 5 $1$KfXk$DTEStIwIA3ptn.VHEDw960
+enable password Maranello
+!
+ip subnet-zero
+!
+vtp mode transparent
+!
+no errdisable detect cause gbic-invalid
+no errdisable detect cause loopback
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause psecure-violation
+errdisable recovery cause gbic-invalid
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause unicast-flood
+errdisable recovery cause vmps
+errdisable recovery cause loopback
+errdisable recovery interval 30
+!
+spanning-tree mode pvst
+no spanning-tree optimize bpdu transmission
+spanning-tree extend system-id
+no spanning-tree vlan 119,121,521,767,769,804,1112-1114,1124,1149,1227,1385
+no spanning-tree vlan 1450,1581,1584,1663-1665,1777-1778,1878,1974,2792,2999
+no spanning-tree vlan 3163,3477,3853,3873,3910,3921-3933,3935,3937,3940,3999
+no spanning-tree vlan 4007,4054
+!
+!
+vlan 5,10-11
+!
+vlan 12
+ name TPGS_AVI-CEENA_Int_school
+!
+vlan 21,31,41,50-51
+!
+vlan 55
+ name daystar
+!
+vlan 61,71,81
+!
+vlan 98
+ name sw=mgt
+!
+vlan 118
+ name DANGOTE-STM1-INT
+!
+vlan 119
+ name FCMB-RACKCENTRE
+!
+vlan 121
+!
+vlan 126
+ name COBRANET-RC-MGT
+!
+vlan 150
+!
+vlan 166
+ name NBC-IDDO-INTERNET
+!
+vlan 201
+!
+vlan 222
+ name CLICKATEL-RACK-CENT-BACKUP
+!
+vlan 250,300,400,444
+!
+vlan 445
+ name commercio
+!
+vlan 502
+ name GLOBUS-RACKCENTRE
+!
+vlan 511
+ name NBC-IDDO-HQ
+!
+vlan 512
+ name NBC-IDDO-BKP
+!
+vlan 515
+ name NBC-IKEJA-LL
+!
+vlan 516
+ name NBC-IKEJA-INTERNET
+!
+vlan 521
+ name ACCESS-BANK-DRC-JO-L3
+!
+vlan 528
+ name NBC-MUSHIN
+!
+vlan 555
+!
+vlan 560
+ name ORANGE-ECOBANK-HQ-LL
+!
+vlan 766-767,769
+!
+vlan 802
+ name BS_NEW_SW_MGT_VLAN
+!
+vlan 804
+ name Ent-Swt-Mgmt
+!
+vlan 805
+ name BS_SW_MGT_VLAN
+!
+vlan 846
+!
+vlan 850
+ name DANGOTE-L3-FIBER
+!
+vlan 852
+ name DANGOTE-L3-RADIO
+!
+vlan 888
+ name POLARIS-RACKCENTRE
+!
+vlan 921
+!
+vlan 922
+ name SMC
+!
+vlan 980
+ name hyperia-ikeja
+!
+vlan 1000
+ name COOLLINK_IKEJA_OREGUN
+!
+vlan 1090
+ name ORANGE-VIR-ATLAN-LL
+!
+vlan 1112
+ name SENTIENT-FCMB
+!
+vlan 1113
+ name SENTIENT-LL04
+!
+vlan 1114
+ name SENTIENT-LL05
+!
+vlan 1119
+ name ARIK-AIR
+!
+vlan 1123
+ name DAYWATERMAN
+!
+vlan 1124
+ name ORANGE-VIRGIN-ATL2
+!
+vlan 1142
+ name NBC-IDDO-TO-IKEJA
+!
+vlan 1149
+ name ORANGE-MASTERCD-LEKKI
+!
+vlan 1227
+!
+vlan 1385
+ name INTERNETSIONAL
+!
+vlan 1450
+ name DANGOTE-OBAJANA-FIBER-180M-LL
+!
+vlan 1501
+ name BS-MGT
+!
+vlan 1504
+ name RCC-MONIYA
+!
+vlan 1505
+ name RCC-ORE-GH
+!
+vlan 1506
+ name RCC-ORE-BENIN
+!
+vlan 1513
+ name WINNERS-LOTTO-IKEJA
+!
+vlan 1526
+ name SAHEM-UNITRUST-INSURANCE
+!
+vlan 1581
+ name ORANGE-MOBIL-IKOYI
+!
+vlan 1584
+ name DANGOTE-ONNE-10M-LL
+!
+vlan 1600
+ name ORANGE-SCHLUM-PHC-LL
+!
+vlan 1601
+ name ORANGE-HALLI-P/H
+!
+vlan 1603
+!
+vlan 1604
+ name simba-otta-nera
+!
+vlan 1630
+!
+vlan 1640
+ name Access-Bank-DRC
+!
+vlan 1662
+ name GLOBUS-BANK-ASABA
+!
+vlan 1663
+ name GLOBUS-BANK-BENIN
+!
+vlan 1664
+ name GLOBUS-BANK-ABEOKUTA
+!
+vlan 1665
+ name GLOBUS-BANK-KANO
+!
+vlan 1676
+ name ORANGE-HEI-OTA-LL
+!
+vlan 1677
+ name ORANGE-HEI-IGANMU-LL
+!
+vlan 1685
+ name ORANGE-SIEMENS-VI-LL
+!
+vlan 1777
+ name TPGS_OREGUN_INTERNET
+!
+vlan 1778
+ name 9JA_MOREPLEX
+!
+vlan 1802
+ name MOBIF-IN-SERVICES
+!
+vlan 1812
+ name NBC-OTA-LL
+!
+vlan 1818
+!
+vlan 1846
+ name SW-MGT
+!
+vlan 1873
+ name RCCG_Internet_LAR003
+!
+vlan 1877
+ name DANGOTE-YOLA
+!
+vlan 1878
+ name GLOBUS-BANK-ENUGU
+!
+vlan 1881
+ name Fidelity_bank_VPLS
+!
+vlan 1883
+ name RCCG_Internet_IBG027
+!
+vlan 1893
+ name RCCG_INTERNET
+!
+vlan 1895
+ name DANGOTE-OBAJANA
+!
+vlan 1896
+ name DANGOTE-GBOKO
+!
+vlan 1898
+ name DANGOTE-IBESE
+!
+vlan 1902
+ name DANGOTE-ABUJA-4Mb-ll
+!
+vlan 1903
+ name DANGOTE-ABUJA-BKP
+!
+vlan 1917
+ name ORANGE-INTER-MASTER
+!
+vlan 1974
+ name SENTIENT-HQ-RACKCENT
+!
+vlan 1992
+ name ORANGE-SCHLUM-LAG-LL
+!
+vlan 2056
+ name ORANGE-HEI-ONIT-LL
+!
+vlan 2057
+ name ORANGE-ZIM-LL
+!
+vlan 2059
+ name ORANGE-NAMA-PRI-LL
+!
+vlan 2060
+ name ORANGE-NAMA-SEC-LL
+!
+vlan 2080
+ name ORANGE-HEI-IJEBU-LL
+!
+vlan 2312
+ name ORANGE-HEI-ABA-LL
+!
+vlan 2315
+ name ORANGE-HEI-IBADAN-LL
+!
+vlan 2317
+ name ORANGE-HEI-ENUGU-LL
+!
+vlan 2423
+ name STANBIC_IBTC_BANK
+!
+vlan 2427
+ name JB-SHAGAMU
+!
+vlan 2428
+ name JB-LAG-IBD-EXPRESS
+!
+vlan 2440
+ name DANGOTE-GBOKO1
+!
+vlan 2441
+ name ORANGE-AEA-PHC-LL
+!
+vlan 2450
+ name RCC-BENIN-GH
+!
+vlan 2453
+ name RCC-OKADA
+!
+vlan 2455
+ name RCC-BENIN-BYE
+!
+vlan 2456
+ name RCC-ENU-OFFICE
+!
+vlan 2458
+ name RCC-OHOSU
+!
+vlan 2459
+ name RCC-IKEJA
+!
+vlan 2460
+ name RCC-ENU-GH
+!
+vlan 2511
+ name ORANGE-GIVUDAN-LL
+!
+vlan 2701
+ name ORANGE-WEST-UNI-LL
+!
+vlan 2792
+ name GLOBUS-BANK-EBONYI
+!
+vlan 2906
+ name RCC-PODO
+!
+vlan 2999
+ name FCMB-VPLS
+!
+vlan 3035
+ name POLARIS_BANK
+!
+vlan 3041
+ name ORANGE-ORIENT-HUA-LL
+!
+vlan 3042
+ name UBA-VPLS
+!
+vlan 3043
+ name ORANGE-MMIA-LL
+!
+vlan 3045
+ name JEHOVAH-WITNESSES-ABEOKUTA
+!
+vlan 3046
+!
+vlan 3126
+ name DIAMOND-VPLS
+!
+vlan 3163
+ name SENTIENT-LAPO-MFB
+!
+vlan 3440
+ name JEHOVAH-WITNESSES-SHOMOLU
+!
+vlan 3441
+ name INTERCONTINENTAL-DISTILLERS
+!
+vlan 3505
+ name PCCG
+!
+vlan 3507
+ name SMIL-HI-IMPACT-40M
+!
+vlan 3508
+ name SMIL-HI-IMPACT-60M
+!
+vlan 3509
+ name KWASU-CONFERENCE-CEN
+!
+vlan 3510
+ name ERUDIT-CONSULTING
+!
+vlan 3511
+ name LAG136-LAG901A-SIMBANET-OTTA
+!
+vlan 3512
+ name KDU
+!
+vlan 3832
+ name ORANGE-MTN-DC-LL
+!
+vlan 3841
+ name ORANGE-INTER-VISA
+!
+vlan 3842
+ name ORANGE-VISA-IDOWU-LL
+!
+vlan 3845
+ name ORANGE-VISA-ZEN-IKJ
+!
+vlan 3847
+ name ORANGE-ZENITH-IKJ
+!
+vlan 3848
+ name ORANGE-ZENITH-HQ
+!
+vlan 3849
+ name ORANGE-MICRO-VI
+!
+vlan 3851
+ name ORANGE-SAIPEM-OKPAI
+!
+vlan 3853
+ name ORANGE-VIR-NEW
+!
+vlan 3873
+ name TDS-HI-TECH-APN
+!
+vlan 3910
+ name ORANGE-ECOBANK-RACK
+!
+vlan 3921
+ name ORANGE-ECOBANK-NEW
+!
+vlan 3922
+ name ORANGE-VIRGIN-NEW
+!
+vlan 3923
+ name ORANGE-HEI-SANGO-OTA-NEW
+!
+vlan 3924
+ name ORANGE-HEI-ONITSHA-NEW
+!
+vlan 3925
+ name ORANGE-ZIM-NEW
+!
+vlan 3926
+ name ORANGE-NAMA-PRI-NEW
+!
+vlan 3927
+ name ORANGE-NAMA-SEC-NEW
+!
+vlan 3928
+ name ORANGE-HEI-IJEBU-ODE-NEW
+!
+vlan 3929
+ name ORANGE-HEI-ABA-OTA-NEW
+!
+vlan 3930
+ name ORANGE-HEI-IBADAN-NEW
+!
+vlan 3931
+ name ORANGE-HEI-ENUGU-NEW
+!
+vlan 3932
+ name ORANGE-BOOKSHOPHOUSE
+!
+vlan 3933
+ name ORANGE-VISA-IKOYI-500M
+!
+vlan 3935
+ name ORANGE-MAST-21ST-CENT
+!
+vlan 3937
+ name ORANGE-21ST-CENT
+!
+vlan 3940
+ name ORANGE-MASTERCARD-RACK-CENTER
+!
+vlan 3999
+ name ORANGE-VISA-OADC
+!
+vlan 4007
+ name SENTIENT-LL
+!
+vlan 4054
+ name ORANGE-HEI-UYO-LL
+!
+interface GigabitEthernet1/0/1
+ description DCN-PeA-3/0/6
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 152,166,168,222,512,515,516,530,560,805,900,901
+ switchport trunk allowed vlan add 921,922,968,1000,1090,1112-1114,1119,1123
+ switchport trunk allowed vlan add 1124,1149,1227,1290,1385,1450,1501,1504-1506
+ switchport trunk allowed vlan add 1510-1513,1526,1581,1584,1600,1601,1603,1604
+ switchport trunk allowed vlan add 1640,1661-1665,1673-1675,1677,1683-1686,1753
+ switchport trunk allowed vlan add 1777,1778,1802,1812,1827,1828,1844,1846,1877
+ switchport trunk allowed vlan add 1878,1880,1881,1883,1893,1895,1896,1898,1899
+ switchport trunk allowed vlan add 1901-1903,1917,1918,1921,1967,1974,1992,2052
+ switchport trunk allowed vlan add 2054,2056-2061,2080,2311-2315,2317,2402,2423
+ switchport trunk allowed vlan add 2428,2434,2440,2441,2450,2453,2455-2460,2510
+ switchport trunk allowed vlan add 2511,2523,2524,2701,2906,2908,2999,3035,3041
+ switchport trunk allowed vlan add 3043,3045,3046,3126,3161,3163,3440,3441,3477
+ switchport trunk allowed vlan add 3505,3507-3512,3832,3841,3842,3844,3845
+ switchport trunk allowed vlan add 3847-3849,3851,3853,3873,3921-3933,3940,4007
+ switchport trunk allowed vlan add 4054,4055
+ switchport mode trunk
+ no ip address
+ no mdix auto
+!
+interface GigabitEthernet1/0/2
+ description SMIL HI-IMPACT-IBAFO-100MB-INTERNET-PRIMARY-FIBRE-BACKHAUL-OREGUN
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ no ip address
+ no mdix auto
+!
+interface GigabitEthernet1/0/3
+ no ip address
+ no mdix auto
+!
+interface GigabitEthernet1/0/4
+ description TRUNK TO OREGUN-GLO1-NE40-5/0/0[EX-ALU-B:OREGUNPE01-Port-3/1/1]
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3,5,10-12,21,31,41,51,55,60,61,65,71,81,100,115
+ switchport trunk allowed vlan add 118,120,121,123,126,150,152,166,168,200,201
+ switchport trunk allowed vlan add 222,250,300,400,444,445,500,511,512,515,516
+ switchport trunk allowed vlan add 528,529,555,766,767,769,805,850,852,888,922
+ switchport trunk allowed vlan add 980,1000,1090,1123,1124,1142,1290,1450,1505
+ switchport trunk allowed vlan add 1506,1510-1513,1526,1584,1604,1630,1640,1802
+ switchport trunk allowed vlan add 1812,1827,1828,1846,1877,1883,1893,1895,1896
+ switchport trunk allowed vlan add 1898,1899,1901-1903,1967,2423,2440,2450,2453
+ switchport trunk allowed vlan add 2455-2460,2906,2908,2999,3042,3045,3046,3440
+ switchport trunk allowed vlan add 3441,3505,3507-3512
+ switchport mode trunk
+ no ip address
+ speed 1000
+ no mdix auto
+ spanning-tree portfast trunk
+!
+interface GigabitEthernet1/0/5
+ description CONNECTION TO huawei SWITCH- GE0/0/2-MSC6
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1-3,84,98,120,500,803,804,846,1090,1846,1893
+ switchport trunk allowed vlan add 3507,3508
+ switchport mode trunk
+ no ip address
+ no mdix auto
+!
+interface GigabitEthernet1/0/6
+ description DANGOTE IKEJA FIBER
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 118,850,1846
+ switchport mode trunk
+ no ip address
+ speed 1000
+ no mdix auto
+!
+interface GigabitEthernet1/0/7
+ no ip address
+ no mdix auto
+!
+interface GigabitEthernet1/0/8
+ description SMIL HI-IMPACT 100MB - FIBRE BACKHAUL
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1846,3507,3508
+ switchport mode trunk
+ no ip address
+ shutdown
+ no mdix auto
+!
+interface GigabitEthernet1/0/9
+ description TRUNK-TO-OREGUN_MSC6_3750_2
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 12,118,119,126,201,502,512,515,516,521,528,804
+ switchport trunk allowed vlan add 805,980,1000,1119,1142,1322,1385,1501,1504
+ switchport trunk allowed vlan add 1581,1640,1662,1663,1777,1778,1846,1878,1883
+ switchport trunk allowed vlan add 2427,2701,2999,3126,3873,3910,3935,3940,3999
+ switchport mode trunk
+ no ip address
+ no mdix auto
+!
+interface GigabitEthernet1/0/10
+ description Conoil-CONGAS-Internet-Oregun
+ switchport access vlan 121
+ switchport mode access
+ no ip address
+ no mdix auto
+!
+interface GigabitEthernet1/0/11
+ no ip address
+ no mdix auto
+!
+interface GigabitEthernet1/0/12
+ description HYPERIA IKEJA(vlan 980)
+ switchport access vlan 980
+ switchport mode access
+ no ip address
+ speed 1000
+ no mdix auto
+!
+interface GigabitEthernet1/0/13
+ description TPGS Avi Cenna Int high School 100Mb Internet
+ switchport access vlan 12
+ switchport mode access
+ no ip address
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/14
+ description COOLLINK-IKEJA(LSETF)
+ switchport access vlan 1000
+ switchport mode access
+ no ip address
+ no mdix auto
+!
+interface GigabitEthernet1/0/15
+ description JULIUS BERGERSAGAMU KM 0-ZERO-INT 10M- FIBER LAST MILE-
+ switchport access vlan 2427
+ switchport mode access
+ no ip address
+ shutdown
+ no mdix auto
+!
+interface GigabitEthernet1/0/16
+ no ip address
+ no mdix auto
+!
+interface GigabitEthernet1/0/17
+ description CONNECTION TO ZEBWEB TELEGRAPH
+ switchport access vlan 766
+ switchport mode access
+ no ip address
+ no mdix auto
+!
+interface GigabitEthernet1/0/18
+ description TPGS IKEJA SUN-100M-INTERNET_FIBER_LM_BY_CLIENT
+ switchport access vlan 1227
+ switchport mode access
+ no ip address
+ shutdown
+ no mdix auto
+!
+interface GigabitEthernet1/0/19
+ no ip address
+ speed 1000
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/20
+ description TRUNK TO NBC SECONDARY LINK
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 166,511,512,1142,1501,1603,1818
+ switchport mode trunk
+ no ip address
+ shutdown
+ no mdix auto
+!
+interface GigabitEthernet1/0/21
+ description AGGREKO INTERNET SERVICE
+ switchport access vlan 769
+ switchport mode access
+ no ip address
+ shutdown
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/22
+ description RICHARD-TEST
+ switchport access vlan 766
+ switchport mode access
+ no ip address
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/23
+ description DIAMOND BANK DRC IKEJA - OFF ISAAC JOHN
+ switchport trunk allowed vlan 521,1501,1640,3126
+ no ip address
+ no mdix auto
+!
+interface GigabitEthernet1/0/24
+ description NBC MUSHIN
+ switchport access vlan 528
+ switchport mode access
+ no ip address
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/25
+ description RCCG_INTERNET
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 500,802,1846,1893
+ switchport mode trunk
+ switchport nonegotiate
+ no ip address
+ udld port aggressive
+!
+interface GigabitEthernet1/0/26
+ description CONNECTION TO ALU-B:OREGUNPE01 || Port 3/1/1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3,5,10-12,21,31,41,51,55,60,61,65,71,81,100,115
+ switchport trunk allowed vlan add 118,120,121,123,126,150,152,166,168,200,201
+ switchport trunk allowed vlan add 222,250,300,400,444,445,500,511,512,515,516
+ switchport trunk allowed vlan add 528,529,555,766,767,769,805,850,852,888,922
+ switchport trunk allowed vlan add 980,1000,1090,1119,1123,1124,1142,1290,1450
+ switchport trunk allowed vlan add 1504-1506,1510-1513,1526,1584,1604,1630,1640
+ switchport trunk allowed vlan add 1802,1812,1827,1828,1846,1877,1883,1893,1895
+ switchport trunk allowed vlan add 1896,1898,1899,1901-1903,1967,2423,2440,2450
+ switchport trunk allowed vlan add 2453,2455-2460,2906,2908,2999,3042,3045,3046
+ switchport trunk allowed vlan add 3440,3441,3505,3507-3512
+ switchport mode trunk
+ no ip address
+ spanning-tree portfast trunk
+!
+interface GigabitEthernet1/0/27
+ description TRUNK-TO-RACK-CENTER || SECONDARY
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1-499,501-799,801-1349,1351-1639,1641-1825
+ switchport trunk allowed vlan add 1827-4094
+ switchport mode trunk
+ no ip address
+!
+interface GigabitEthernet1/0/28
+ description FAULTY-PORT
+ no ip address
+ udld port aggressive
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan5
+ ip address 10.248.248.158 255.255.255.252
+!
+interface Vlan50
+ ip address 10.240.56.41 255.255.255.252
+!
+interface Vlan65
+ ip address 174.20.20.5 255.255.255.0
+!
+interface Vlan100
+ no ip address
+ shutdown
+!
+interface Vlan112
+ no ip address
+!
+interface Vlan113
+ no ip address
+!
+interface Vlan118
+ no ip address
+!
+interface Vlan135
+ no ip address
+!
+interface Vlan166
+ ip address 197.211.49.73 255.255.255.224
+!
+interface Vlan260
+ no ip address
+!
+interface Vlan350
+ no ip address
+!
+interface Vlan515
+ ip address 192.168.101.3 255.255.255.0
+!
+interface Vlan560
+ ip address 1.1.1.2 255.255.255.0
+!
+interface Vlan766
+ ip address 197.211.35.93 255.255.255.248
+!
+interface Vlan804
+ ip address 10.248.246.98 255.255.255.192
+!
+interface Vlan827
+ no ip address
+ shutdown
+!
+interface Vlan850
+ ip address 192.168.1.2 255.255.255.0
+!
+interface Vlan968
+ ip address 192.168.69.1 255.255.255.0
+!
+interface Vlan1112
+ ip address 200.200.1.3 255.255.255.248
+!
+interface Vlan1142
+ ip address 192.168.250.10 255.255.255.0
+!
+interface Vlan1149
+ ip address 49.49.49.3 255.255.255.0
+!
+interface Vlan1227
+ no ip address
+!
+interface Vlan1450
+ no ip address
+!
+interface Vlan1512
+ ip address 4.3.3.4 255.255.255.0
+!
+interface Vlan1526
+ ip address 172.16.30.2 255.255.255.248
+ shutdown
+!
+interface Vlan1581
+ ip address 31.31.31.33 255.255.255.0
+!
+interface Vlan1630
+ ip address 197.211.51.178 255.255.255.248
+ shutdown
+!
+interface Vlan1640
+ ip address 10.230.230.249 255.255.255.0
+!
+interface Vlan1663
+ ip address 10.12.12.1 255.255.255.0
+!
+interface Vlan1665
+ ip address 192.168.100.20 255.255.255.0
+!
+interface Vlan1677
+ ip address 10.101.10.1 255.255.255.0
+!
+interface Vlan1826
+ ip address 10.240.56.89 255.255.255.252
+ shutdown
+!
+interface Vlan1827
+ ip address 10.10.11.2 255.255.255.248
+!
+interface Vlan1846
+ ip address 10.240.56.2 255.255.255.240
+!
+interface Vlan1881
+ ip address 192.168.32.252 255.255.255.0
+!
+interface Vlan1895
+ no ip address
+!
+interface Vlan1896
+ no ip address
+!
+interface Vlan1898
+ ip address 11.10.10.99 255.255.255.0
+!
+interface Vlan1902
+ no ip address
+!
+interface Vlan1974
+ ip address 123.123.123.3 255.255.255.0
+!
+interface Vlan2056
+ ip address 3.3.3.10 255.255.255.0
+!
+interface Vlan2057
+ ip address 2.2.2.3 255.255.255.0
+!
+interface Vlan2312
+ ip address 1.0.1.3 255.255.255.0
+!
+interface Vlan2315
+ no ip address
+!
+interface Vlan2402
+ ip address 160.5.90.200 255.255.255.0
+!
+interface Vlan2427
+ no ip address
+!
+interface Vlan2440
+ description DANGOTE GBOKO MPLS
+ ip address 13.13.13.14 255.255.255.0
+!
+interface Vlan2701
+ ip address 10.10.1.1 255.255.255.0
+!
+interface Vlan2792
+ ip address 192.168.78.3 255.255.255.0
+!
+interface Vlan2999
+ ip address 172.22.6.251 255.255.255.0
+!
+interface Vlan3026
+ ip address 172.35.10.245 255.255.255.0
+!
+interface Vlan3046
+ no ip address
+!
+interface Vlan3126
+ ip address 172.35.30.100 255.255.255.0
+!
+interface Vlan3161
+ no ip address
+!
+interface Vlan3507
+ no ip address
+!
+interface Vlan3508
+ ip address 41.203.77.214 255.255.255.248
+!
+interface Vlan3832
+ ip address 1.11.11.4 255.255.255.0
+!
+interface Vlan3853
+ ip address 10.10.10.13 255.255.255.0
+!
+interface Vlan3910
+ ip address 56.56.56.2 255.255.255.0
+!
+interface Vlan3932
+ ip address 1.10.10.10 255.255.255.0
+!
+interface Vlan3933
+ ip address 14.14.14.1 255.255.255.0
+!
+ip default-gateway 10.248.246.65
+ip classless
+ip route 0.0.0.0 0.0.0.0 10.248.246.65
+ip http server
+!
+snmp-server community globacom RO
+!
+line con 0
+ password Maranello
+ login
+line vty 0 4
+ exec-timeout 0 0
+ password Maranello
+ login
+line vty 5 15
+ exec-timeout 0 0
+ password Maranello
+ login
+!
+end
+
+OREGUN_MSC6_3750_1#       s

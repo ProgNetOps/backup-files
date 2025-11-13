@@ -1,0 +1,81 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 13:32.15 ? ? /home/mobaxterm ? telnet 10.248.249.110
+Connected to 10.248.249.110.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+SAKA25_3560_1>en
+Password:
+SAKA25_3560_1#sh run
+Building configuration...
+
+Current configuration : 18789 bytes
+!
+version 12.2
+no service pad
+service timestamps debug uptime
+service timestamps log uptime
+service password-encryption
+service unsupported-transceiver
+!
+hostname SAKA25_3560_1
+!
+enable secret 5 $1$OPDz$lRPw8ztPBYJvUEl6Zi9L/0
+!
+username taiwo privilege 15 secret 5 $1$Oz5O$IRVOslHw7jSAo8FqAOSmT0
+username ben privilege 15 secret 5 $1$h/L1$S7tf.ptZT4XE91Z833zzQ/
+username donald privilege 15 secret 5 $1$uF5l$z3P.uGcc5r.TKYWbPr0OP0
+username richard privilege 15 secret 5 $1$x0sD$idI5Efwd61xiZGRNsIFNK1
+username emeka privilege 15 secret 5 $1$xCyE$qSjo9D/gpKu5YXtFctDln.
+username onyeka privilege 15 secret 5 $1$KNz6$wu91qA/WrvpJXOng69AaO.
+username chinedu privilege 15 secret 5 $1$hjFo$unqqJ.OLkHJem8i3UKDyq.
+username kelechi privilege 15 secret 5 $1$ulIj$Ni8kj0HGeTA2GXWPTt1qj1
+username bizsol privilege 5 secret 5 $1$C5V/$NCfRk0AxVc93/N9fYPntZ0
+username ope privilege 15 secret 5 $1$6Yf4$z5hcPJQC0Pj7ABXCsIwmQ.
+username jonas privilege 15 secret 5 $1$vzHw$F1ug0mGbhyglBmkCOwdJu0
+username noc privilege 15 secret 5 $1$s2oy$MTtP46MDRTHv7MJAMtmV.0
+no aaa new-model
+system mtu routing 1950
+vtp mode transparent
+ip subnet-zero
+ip routing
+!
+!
+!
+!
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause l2ptguard
+errdisable recovery cause psecure-violation
+
+SAKA25_3560_1#h int des
+help int des
+     ^
+% Invalid input detected at '^' marker.
+
+SAKA25_3560_1#                   telnet: Connection closed by foreign host
+                                                                                                                        ?
+
+ ? 2025-11-13 ? ? 13:45.12 ? ? /home/mobaxterm ?

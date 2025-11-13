@@ -1,0 +1,537 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 12:26.30 ? ? /home/mobaxterm ? telnet 10.248.246.102
+Connected to 10.248.246.102.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+OREGUN_MSC6_3750_3>en
+Password:
+OREGUN_MSC6_3750_3#sh int des
+Interface                      Status         Protocol Description
+Vl1                            up             down
+Vl155                          up             down
+Vl163                          down           down
+Vl804                          up             up
+Vl805                          up             down
+Vl1000                         up             up
+Vl1322                         up             up
+Vl1501                         up             up
+Vl1635                         up             down
+Vl1636                         up             down
+Vl1638                         up             down
+Vl1751                         up             down
+Vl1752                         up             down
+Vl1893                         up             up
+Vl2114                         up             up
+Vl2792                         up             up
+Vl2891                         up             up
+Vl2892                         up             up
+Vl2893                         up             up
+Vl2967                         up             down
+Vl3126                         up             up
+Fa0                            down           down
+Gi1/0/1                        admin down     down
+Gi1/0/2                        down           down     CONNECTION INFRA FOCUS ROUTER-NOT-ACTIVE
+Gi1/0/3                        down           down     TO INFRA FOCUS ROUTER-ACTIVE
+Gi1/0/4                        up             up       MEGALIFE-SCI-IDC-AHMADU-BELLO-DC-LL |200M
+Gi1/0/5                        down           down
+Gi1/0/6                        down           down
+Gi1/0/7                        down           down
+Gi1/0/8                        down           down
+Gi1/0/9                        down           down
+Gi1/0/10                       down           down
+Gi1/0/11                       down           down
+Gi1/0/12                       down           down
+Gi1/0/13                       down           down
+Gi1/0/14                       down           down
+Gi1/0/15                       down           down
+Gi1/0/16                       down           down
+Gi1/0/17                       down           down
+Gi1/0/18                       down           down
+Gi1/0/19                       down           down
+Gi1/0/20                       down           down
+Gi1/0/21                       down           down
+Gi1/0/22                       down           down
+Gi1/0/23                       down           down     TEST
+Gi1/0/24                       up             up       CONNECTION TO 2ND CISCO SWITCH
+Gi1/1/1                        up             up       TRUNK-LAG901-DCN-RTR-F-(GE1/0/12)
+Gi1/1/2                        down           down     SMOOTH-MULTI-FIBER-INT | 1 STM
+Gi1/1/3                        down           down     FREE
+Gi1/1/4                        down           down     free
+Te1/1/1                        down           down     UPLINK TO DCN ROUTER
+Te1/1/2                        down           down     10GCXN to GLO1 HUAWEI 2/0/1
+Po1                            down           down
+Po40                           admin down     down
+OREGUN_MSC6_3750_3#   sh run
+Building configuration...
+
+Current configuration : 8726 bytes
+!
+! Last configuration change at 00:59:52 UTC Sat Mar 27 1993
+!
+version 15.0
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service unsupported-transceiver
+!
+hostname OREGUN_MSC6_3750_3
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$oYIj$ReHNKpafT6FgHwX1YLhwt/
+!
+no aaa new-model
+switch 1 provision ws-c3750x-24
+system mtu routing 1500
+ip routing
+!
+!
+!
+vtp mode transparent
+!
+!
+crypto pki trustpoint TP-self-signed-2286440576
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-2286440576
+ revocation-check none
+ rsakeypair TP-self-signed-2286440576
+!
+!
+crypto pki certificate chain TP-self-signed-2286440576
+ certificate self-signed 01
+  3082024A 308201B3 A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 32323836 34343035 3736301E 170D3933 30333031 30303031
+  32335A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D32 32383634
+  34303537 3630819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  8100E9CE E1821E03 3A81EA39 1E0737AA 0042ED72 A3A57698 141D2935 25AB130B
+  CF33F39B F57D9FE9 01B9AC38 7A3E9925 A6AA5680 C1A0CF01 5867CDB5 FE334D0E
+  D5984612 B9B216FE 553D4973 E259E4BC 7B67EA6C 398646D6 669FEC4D F442B711
+  18BC6678 9F6046E4 F5DA7758 F50D0B3A BBC15A2A 58CCDAB5 0FB1FF49 0DDD4E0F
+  09C70203 010001A3 72307030 0F060355 1D130101 FF040530 030101FF 301D0603
+  551D1104 16301482 124F5245 47554E5F 4D534336 5F333735 305F3330 1F060355
+  1D230418 30168014 D92CA9BC 9417F0B0 0C492802 59287598 1A28C10A 301D0603
+  551D0E04 160414D9 2CA9BC94 17F0B00C 49280259 2875981A 28C10A30 0D06092A
+  864886F7 0D010104 05000381 810023C1 F97BA1AD 8C645913 9D68B6EE 23D8FAE2
+  F6AFE020 2A92C018 1499F701 CD3C2B70 C93DCD83 5E6A68FA 00F6815D 1DF87835
+  0C948530 8B3BB344 15C14F72 BD049963 3BE37435 9438BD02 0729CD4E 743A6769
+  D6ECAC92 6968D078 1C0F3406 09CB8EA1 22853DA9 235305D8 42AAC685 099A86B1
+  FA4C1ACA D74EB601 4E8AF7B6 C2AB
+        quit
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+!
+!
+no errdisable detect cause gbic-invalid
+!
+vlan internal allocation policy ascending
+!
+vlan 155
+ name GLO1_MGT
+!
+vlan 444
+ name INFRA-FOCUS
+!
+vlan 501
+ name Archbishop-Vining
+!
+vlan 502
+ name GLOBUS-RACKCENTRE
+!
+vlan 521
+ name ACCESS-BANK-JO-L3
+!
+vlan 528
+ name NBC-MUSHIN
+!
+vlan 804
+ name MGNT
+!
+vlan 805
+ name NEW-SWITCH-MGT
+!
+vlan 1000
+ name MGT-TEST
+!
+vlan 1119
+ name ARIK-AIR-INT
+!
+vlan 1233
+ name SMOOTH-MULTISER-INT
+!
+vlan 1322
+ name GLOBUS-PHC
+!
+vlan 1385
+ name INTERNETSIONAL
+!
+vlan 1501
+ name BS-MGT
+!
+vlan 1633
+ name OAU-ILE-IFE
+!
+vlan 1634
+ name FED-UNI-AGRIC-FUNAAB
+!
+vlan 1635
+ name BENUE-STATE-MAKURDI
+!
+vlan 1636
+ name UNI-JOS
+!
+vlan 1638
+ name CEFOR-STM1-UNIPORT
+!
+vlan 1640
+ name ACCESS-BANK-VPLS
+!
+vlan 1660
+ name X3M-IDEAS
+!
+vlan 1662
+ name GLOBUS-ASABA
+!
+vlan 1663
+ name GLOBUS-BENIN
+!
+vlan 1665
+ name GLOBUS-BANK-KANO
+!
+vlan 1721
+ name COBLESTONE-ILEOJA
+!
+vlan 1751
+ name SOKOTO-STATE-UNIV
+!
+vlan 1752
+ name INFRA-UNI-BEN
+!
+vlan 1753
+ name BAYERO-UNI-KANO
+!
+vlan 1754
+ name INFRA-FOCUS-ONDO-MED
+!
+vlan 1778
+ name 9JA_MOREPLEX
+!
+vlan 1873
+ name RCCG-LAR003
+!
+vlan 1876
+ name WATERCRESS-HOTEL|
+!
+vlan 1878
+ name GLOBUS-ENUGU-LL
+!
+vlan 1883
+ name RCCG-RADIO-IBG027
+!
+vlan 1893
+ name RCCG-OREGUN-TEMP
+!
+vlan 2114
+ name MEGALIFE-SCI-IDC-LL
+!
+vlan 2207
+ name TELNET-LAGOS-BENIN
+!
+vlan 2792
+ name GLOBUS-BANK-EBONYI
+!
+vlan 2891
+ name GLOBUS-ABA
+!
+vlan 2892
+ name GLOBUS-MAIDUGURI
+!
+vlan 2893
+ name GLOBUS-WUSE-ABJ
+!
+vlan 2964
+ name INFRA-FOCUS-UNI-UYO
+!
+vlan 2965
+ name INFRA-FOCUS-UNN
+!
+vlan 2966
+ name INFRA-FOCUS-UNIPORT
+!
+vlan 2967
+ name INFRA-FO-FED-KEBBI
+!
+vlan 2968
+ name INFRA-FOCUS-FUTO
+!
+vlan 2969
+ name INFRA-FOCUS-UNI-YOLA
+!
+vlan 2970
+ name INFRA-FOCUS-NDA
+!
+vlan 2971
+ name REDEEMERS-UNIV-EDE
+!
+vlan 3123
+ name INFRA_FOCUS-INT-1.3G
+!
+vlan 3126
+ name ACCESS-DIAMOND-BANK
+!
+vlan 3873
+ name HI-TECH-TDS-APN
+!
+vlan 3910
+ name ORANGE-ECOB-RACKCENT
+!
+vlan 3935
+ name ORANGE-21ST-MAST_CD
+!
+!
+!
+!
+!
+!
+!
+interface Port-channel1
+!
+interface Port-channel40
+ no switchport
+ no ip address
+ shutdown
+!
+interface FastEthernet0
+ no ip address
+ no ip route-cache
+!
+interface GigabitEthernet1/0/1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 501,502,528,1385,1660,1778,1867
+ switchport mode trunk
+ shutdown
+!
+interface GigabitEthernet1/0/2
+ description CONNECTION INFRA FOCUS ROUTER-NOT-ACTIVE
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1633-1636,2964,2965
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/3
+ description TO INFRA FOCUS ROUTER-ACTIVE
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 155,805,1501,1633-1636,1638,1751-1754,2964-2971
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/4
+ description MEGALIFE-SCI-IDC-AHMADU-BELLO-DC-LL |200M
+ switchport access vlan 2114
+ switchport mode access
+ speed 1000
+ duplex full
+!
+interface GigabitEthernet1/0/5
+!
+interface GigabitEthernet1/0/6
+!
+interface GigabitEthernet1/0/7
+!
+interface GigabitEthernet1/0/8
+!
+interface GigabitEthernet1/0/9
+!
+interface GigabitEthernet1/0/10
+!
+interface GigabitEthernet1/0/11
+!
+interface GigabitEthernet1/0/12
+!
+interface GigabitEthernet1/0/13
+!
+interface GigabitEthernet1/0/14
+!
+interface GigabitEthernet1/0/15
+!
+interface GigabitEthernet1/0/16
+!
+interface GigabitEthernet1/0/17
+!
+interface GigabitEthernet1/0/18
+!
+interface GigabitEthernet1/0/19
+!
+interface GigabitEthernet1/0/20
+ no switchport
+ no ip address
+!
+interface GigabitEthernet1/0/21
+!
+interface GigabitEthernet1/0/22
+!
+interface GigabitEthernet1/0/23
+ description TEST
+ switchport access vlan 804
+ switchport mode access
+!
+interface GigabitEthernet1/0/24
+ description CONNECTION TO 2ND CISCO SWITCH
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 521,804,1000,1119,1322,1501,1640,1662,1663,1665
+ switchport trunk allowed vlan add 1721,1878,1893,2792,2891-2893,3126,3873,3910
+ switchport trunk allowed vlan add 3935
+ switchport mode trunk
+ no cdp tlv location
+ no cdp tlv server-location
+ no cdp tlv app
+!
+interface GigabitEthernet1/1/1
+ description TRUNK-LAG901-DCN-RTR-F-(GE1/0/12)
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 804,1665,1873,1878,1883,1893,2114,2792,2891-2893
+ switchport mode trunk
+!
+interface GigabitEthernet1/1/2
+ description SMOOTH-MULTI-FIBER-INT | 1 STM
+ switchport access vlan 1233
+ switchport mode access
+ speed nonegotiate
+!
+interface GigabitEthernet1/1/3
+ description FREE
+ switchport mode access
+ speed 1000
+ duplex full
+!
+interface GigabitEthernet1/1/4
+ description free
+ switchport mode access
+ speed 1000
+ duplex full
+!
+interface TenGigabitEthernet1/1/1
+ description UPLINK TO DCN ROUTER
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ speed nonegotiate
+!
+interface TenGigabitEthernet1/1/2
+ description 10GCXN to GLO1 HUAWEI 2/0/1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 521,1119,1233,1322,1501,1640,1662,1663,1665,1721
+ switchport trunk allowed vlan add 1873,1883,1893,2792,2891-2893,3126,3873,3910
+ switchport trunk allowed vlan add 3935
+ switchport mode trunk
+ speed nonegotiate
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan155
+ ip address 10.247.248.50 255.255.255.248
+!
+interface Vlan163
+ no ip address
+!
+interface Vlan804
+ ip address 10.248.246.102 255.255.255.192
+!
+interface Vlan805
+ ip address 10.248.246.17 255.255.255.192
+!
+interface Vlan1000
+ ip address 10.21.21.1 255.255.255.0
+!
+interface Vlan1322
+ ip address 34.34.34.34 255.255.255.0
+!
+interface Vlan1501
+ ip address 10.248.249.215 255.255.255.0
+!
+interface Vlan1635
+ ip address 10.10.10.5 255.255.255.0
+!
+interface Vlan1636
+ ip address 192.168.99.1 255.255.255.0
+!
+interface Vlan1638
+ no ip address
+!
+interface Vlan1751
+ ip address 192.168.3.1 255.255.255.0
+!
+interface Vlan1752
+ ip address 154.68.196.245 255.255.255.240
+!
+interface Vlan1893
+ ip address 200.200.200.4 255.255.255.248
+!
+interface Vlan2114
+ ip address 192.168.131.1 255.255.255.0
+!
+interface Vlan2792
+ ip address 192.168.78.5 255.255.255.0
+!
+interface Vlan2891
+ ip address 192.168.68.3 255.255.255.0
+!
+interface Vlan2892
+ ip address 192.168.48.3 255.255.255.0
+!
+interface Vlan2893
+ ip address 192.168.89.2 255.255.255.0
+!
+interface Vlan2967
+ no ip address
+!
+interface Vlan3126
+ ip address 4.4.4.6 255.255.255.0
+!
+ip default-gateway 10.248.246.1
+!
+ip http server
+ip http secure-server
+!
+ip route 0.0.0.0 0.0.0.0 10.248.246.65
+!
+logging esm config
+!
+snmp-server community globacom RO
+snmp-server community Globacom123* RO
+!
+!
+line con 0
+ password Maranellq
+ login
+line vty 0 4
+ password Maranellq
+ login
+line vty 5 15
+ login
+!
+end
+
+OREGUN_MSC6_3750_3#

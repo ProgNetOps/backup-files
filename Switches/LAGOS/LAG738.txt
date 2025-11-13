@@ -1,0 +1,253 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:43.48 ? ? /home/mobaxterm ? telnet 10.248.246.112
+Connected to 10.248.246.112.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<ENT-LAG738-HU-3700-DC-SW>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-LAG738-HU-3700-DC-SW]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      down    down     ISN-IKORODU | 45M
+Eth0/0/2                      up      up       TPGS-IKORODU1|10M-INTERNET-LAG738
+                                               -LGS361-(P03)-LAG171-P
+Eth0/0/3                      down    down     TPGS-IKORODU-2 | 10M
+Eth0/0/4                      down    down     TPGS-LAG-IKORODU
+Eth0/0/5                      up      up       PLATINUM-INDEX-EPIC | 20M
+Eth0/0/6                      down    down     free
+Eth0/0/7                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/7 Interface
+Eth0/0/8                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/8 Interface
+Eth0/0/9                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/9 Interface
+Eth0/0/10                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/10 Interface
+Eth0/0/11                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/11 Interface
+Eth0/0/12                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/12 Interface
+Eth0/0/13                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/13 Interface
+Eth0/0/14                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/14 Interface
+Eth0/0/15                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/15 Interface
+Eth0/0/16                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/16 Interface
+Eth0/0/17                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/17 Interface
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     LOCAL-SWITCH-LOGIN
+GE0/0/1                       up      up       UPLINK-TO-LAG738-DCN-M8-ROUTER-GE
+                                               -0/2/4
+GE0/0/2                       down    down     CYBERSPACE-IKORODU[VLAN3186]|150M
+                                               bps
+GE0/0/3                       up      up       HI-CONNECT-IKORODU-LM-CERAGON-IP2
+                                               0-DIRECT | 100M
+GE0/0/4                       down    down     HI-CONNECT2-IKORODU-RADIO- | 155M
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif804                     up      up       HUAWEI, Quidway Series, Vlanif804
+                                                Interface
+Vlanif2539                    up      down     HUAWEI, Quidway Series, Vlanif253
+                                               9 Interface
+[ENT-LAG738-HU-3700-DC-SW]    dis cur
+#
+!Software Version V100R006C05
+ sysname ENT-LAG738-HU-3700-DC-SW
+#
+ vlan batch 804 1130 1178 to 1179 1387 1615 1667 2359 2539 3186
+#
+ undo http server enable
+ undo http secure-server enable
+#
+vlan 804
+ description NEW-SWITCH-MGT
+vlan 1130
+ description TPGS-LAG-IKORODU
+vlan 1178
+ description HI-CONNECT
+vlan 1179
+ description HI-CONNECT-2
+vlan 1387
+ description TPGS-IKORODU-2
+vlan 1615
+ description ISN-IKORODU
+vlan 1667
+ description PLATINUM-INDEX-EPIC
+vlan 2359
+ description TPGS-IKORODU
+vlan 2539
+ description TPGS-IKORODU1| 10M
+vlan 3186
+ description CYBERSPACE IKORODU
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@1Sk4>~bc<'H2KE!o\y\DTQ1E%@%@
+ local-user bsnoc privilege level 15
+ local-user naveen password cipher %@%@&~8,F.lGq@~WjV:@*vR@,.2n%@%@
+ local-user naveen privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif804
+ ip address 10.248.246.112 255.255.255.192
+#
+interface Vlanif2539
+#
+interface Ethernet0/0/1
+ description ISN-IKORODU | 45M
+ port link-type access
+ port default vlan 1615
+#
+interface Ethernet0/0/2
+ description TPGS-IKORODU1|10M-INTERNET-LAG738-LGS361-(P03)-LAG171-P
+ port link-type access
+ port default vlan 2539
+#
+interface Ethernet0/0/3
+ description TPGS-IKORODU-2 | 10M
+ port link-type access
+ port default vlan 1387
+#
+interface Ethernet0/0/4
+ description TPGS-LAG-IKORODU
+ port link-type access
+ port default vlan 1130
+#
+interface Ethernet0/0/5
+ description PLATINUM-INDEX-EPIC | 20M
+ port link-type access
+ port default vlan 1667
+#
+interface Ethernet0/0/6
+ description free
+ port link-type access
+#
+interface Ethernet0/0/7
+#
+interface Ethernet0/0/8
+#
+interface Ethernet0/0/9
+#
+interface Ethernet0/0/10
+#
+interface Ethernet0/0/11
+#
+interface Ethernet0/0/12
+#
+interface Ethernet0/0/13
+#
+interface Ethernet0/0/14
+#
+interface Ethernet0/0/15
+#
+interface Ethernet0/0/16
+#
+interface Ethernet0/0/17
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ description LOCAL-SWITCH-LOGIN
+ port link-type access
+ port default vlan 804
+#
+interface GigabitEthernet0/0/1
+ description UPLINK-TO-LAG738-DCN-M8-ROUTER-GE-0/2/4
+ port link-type trunk
+ port trunk allow-pass vlan 804 1130 1178 to 1179 1387 1615 1667 2539 3186
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/2
+ description CYBERSPACE-IKORODU[VLAN3186]|150Mbps
+ port link-type access
+ port default vlan 3186
+#
+interface GigabitEthernet0/0/3
+ description HI-CONNECT-IKORODU-LM-CERAGON-IP20-DIRECT | 100M
+ port link-type trunk
+ port trunk allow-pass vlan 1178 1483
+#
+interface GigabitEthernet0/0/4
+ description HI-CONNECT2-IKORODU-RADIO- | 155M
+ port link-type access
+ port default vlan 1179
+ combo-port copper
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100006A18
+ snmp-agent community read cipher %@%@LlCi.@KPI>J59FYjsyJ3SS$=,G/*'(l-WXkXO2)zo&eLS$@S7I!v@mAq*>pVKWI1uTk=$ISS%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[ENT-LAG738-HU-3700-DC-SW]

@@ -1,0 +1,624 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:13.23 ? ? /home/mobaxterm ? telnet 10.248.249.106
+Connected to 10.248.249.106.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+ENT-3750-SW-KAN002>en
+Password:
+ENT-3750-SW-KAN002#sh int des
+Interface                      Status         Protocol Description
+Vl1                            admin down     down
+Vl229                          up             up
+Vl250                          up             up
+Vl603                          admin down     down
+Vl1027                         down           down
+Vl1028                         up             up
+Vl1115                         up             up
+Vl1255                         down           down
+Vl1409                         up             up
+Vl1437                         up             up
+Vl1438                         up             up
+Vl1494                         up             up
+Vl1501                         up             up
+Vl1503                         up             up
+Vl1619                         down           down
+Vl1893                         up             up
+Vl2059                         up             up
+Vl2060                         up             up
+Vl2079                         up             up
+Vl2121                         up             up
+Vl2251                         admin down     down
+Vl2468                         up             up       SEVEN UP KANO MPLS
+Vl3007                         up             up
+Vl3035                         up             up
+Vl3420                         up             up       HeritageBankkano
+Vl4033                         up             up
+Fa1/0/1                        down           down     NNPC RETAIL NORTH WEST REGIONAL OFFICE KANO
+Fa1/0/2                        up             up       ACCESS BANK MMWAY KANO | 20M
+Fa1/0/3                        up             up       HYPERIA-INTAKE-JBS-KANO | 50MB | V3837
+Fa1/0/4                        up             up       GLOBENODE 10MB INTERNET
+Fa1/0/5                        up             up       VODACOM-56-DUTSE
+Fa1/0/6                        admin down     down     VODACOM-56-HADEJA
+Fa1/0/7                        up             up       CYBERSPACE WUDIL
+Fa1/0/8                        up             up       UNION BANK - BANK ROAD KANO
+Fa1/0/9                        down           down     FREE
+Fa1/0/10                       up             up       FIDELITY BANK KANO
+Fa1/0/11                       up             up       IS NOVA KANO TAHIR GUEST HOUSE
+Fa1/0/12                       up             up       # ORANGE-NAMA-PRIMARY-KAN002-KAN027 #
+Fa1/0/13                       up             up       ORANGE NAMA SECONDARY (VDT LINK)
+Fa1/0/14                       up             up       APMT LAGOS KANO
+Fa1/0/15                       up             up       FIRST BANK DANBATTA-KAN002-KAN021-DBT801-DBT001-CUSTOMER||TPGS-CHALLAWA-INT-CHW001-KAN021
+Fa1/0/16                       down           down     TPG-KAN-DIA-001 | 35M
+Fa1/0/17                       up             up       SPIDERNET MULTISERVICES KANO | 10M
+Fa1/0/18                       up             up       FRSC KANO | 2MB
+Fa1/0/19                       up             up       GLOWORLD KANO 4MB
+Fa1/0/20                       up             up       POLARIS BANK (SKYE BANK) KANO | 4MB
+Fa1/0/21                       up             up       POLARIS (SKYE) BANK KAZAURE
+Fa1/0/22                       down           down     WHO-ZAMFARA-INTERNET
+Fa1/0/23                       up             up       WHO-KEBBI-INTERNET
+Fa1/0/24                       down           down     GLO IS KANO
+Gi1/0/1                        up             up       To-GLO1--KANO002-NE40
+Gi1/0/2                        up             up       TO_DCN_MPLS || Port-GE2/0/1
+ENT-3750-SW-KAN002#  sh run
+Building configuration...
+
+Current configuration : 11081 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+service unsupported-transceiver
+!
+hostname ENT-3750-SW-KAN002
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$mwgX$f65.FUCA.YcYOuBksZph40
+!
+no aaa new-model
+switch 1 provision ws-c3750v2-24ts
+system mtu routing 1950
+vtp mode transparent
+ip subnet-zero
+ip routing
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-1937455232
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1937455232
+ revocation-check none
+ rsakeypair TP-self-signed-1937455232
+!
+!
+crypto pki certificate chain TP-self-signed-1937455232
+ certificate self-signed 01
+  3082024B 308201B4 A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 31393337 34353532 3332301E 170D3933 30333031 30303031
+  30305A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 39333734
+  35353233 3230819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  8100C0C1 DE897D66 74E66051 6BE2E176 4A16C3C7 8F871E6C 3BD44FF2 B0AFA348
+  486331C9 AC6FEEBB F0B80FA9 792B3C85 254E6C06 AC0C3313 C8B38B96 842CB3AA
+  3FDF67EE F14CE2F8 886AE7C7 CEA97A7B 82083BF7 8302A5EE DF0F87FD 46E7C3B5
+  BBC5212A 64CBFBE6 E37F2586 7464AA5E 45623750 25724E65 430CA502 3F8553CF
+  BE750203 010001A3 73307130 0F060355 1D130101 FF040530 030101FF 301E0603
+  551D1104 17301582 13454E54 2D333735 302D5357 2D4B414E 3030322E 301F0603
+  551D2304 18301680 14FF122B D188DA0F 8AE10F4D CCBD07F4 FDC5B30A 23301D06
+  03551D0E 04160414 FF122BD1 88DA0F8A E10F4DCC BD07F4FD C5B30A23 300D0609
+  2A864886 F70D0101 04050003 8181005E 98EB1923 D196CFDA 88839CB0 A46EDD2C
+  367CD911 8C456E2A 4DDB2AAC FF9DC8A1 94578226 43F4BFAE 47FC7917 BB6BA4F9
+  587E7A44 8322421C 1F8AD98D 7EC62EE8 4FE5EE79 94B88257 980924F8 3A95D535
+  5B61E925 035AB9BE 4F88B7CA 8E9A3CF0 880BE56C 524B8926 4484E8E9 CC8BB20D
+  C6694C15 4B8E8CA5 0EB305FB 3C7E85
+  quit
+!
+!
+!
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause l2ptguard
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause small-frame
+errdisable recovery interval 30
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 112
+!
+vlan 229
+ name FIRS-KANO-MTO
+!
+vlan 250
+ name GLO-IS-KANO
+!
+vlan 252
+ name GTB-VPLS
+!
+vlan 603
+ name IS-NOVA-TAHIR-GH
+!
+vlan 700
+!
+vlan 905
+ name NETCOM_LAG_KATSINA
+!
+vlan 1028
+ name TPGS-Kano-Commissionary-10M
+!
+vlan 1115
+ name GTBank-VPLS
+!
+vlan 1252
+ name HASSAN-KATSINA-POLY
+!
+vlan 1266
+ name FBN-DAMATTA-L3
+!
+vlan 1277
+ name WESTMETRO-KANO-INT
+!
+vlan 1332
+ name GLOBENODE
+!
+vlan 1409
+ name VODACOM_ISA_SOKOTO
+!
+vlan 1435
+ name TPGS-KANO-DIA-001
+!
+vlan 1437
+ name voda56-dutse
+!
+vlan 1438
+!
+vlan 1492
+ name BS-NERA-4-MGT
+!
+vlan 1494
+ name NNPC-NERA-MGT
+!
+vlan 1497
+ name BS-NERA-MGT
+!
+vlan 1500
+ name ceragon-mgmt
+!
+vlan 1501
+ name bs-asw-mgmt
+!
+vlan 1503
+ name GLO1-NERA-MGT
+!
+vlan 1504
+ name TPGS-CHALLAWA-INT
+!
+vlan 1640
+ name ACCESS-BANK-VPLS
+!
+vlan 1642
+ name KADUNA-POLY-INT
+!
+vlan 1643
+ name FED-UNIV-DUTSE-INT
+!
+vlan 1644
+ name WAZIRI-UMARU-FED-POLY-B-KEBBI
+!
+vlan 1645
+ name KEBBI-INT-AIRPORT
+!
+vlan 1656
+ name UNION-KANO
+!
+vlan 1753
+ name INFRAFOCUS_BUK
+!
+vlan 1881
+ name FIDELITY_BANK_KANO
+!
+vlan 1893
+ name Visafone_ABJ
+!
+vlan 1894
+ name Visafone_KANO
+!
+vlan 1922
+ name FIRS-AZARE-MPLS
+!
+vlan 1965
+ name SPIDERNET-KANO
+!
+vlan 1967
+ name VDT-ABUJA-KANO
+!
+vlan 1981
+ name VDT-KANO-INTERNET
+!
+vlan 1996
+ name COOLLINK_LAG_ABJ
+!
+vlan 1998
+ name COOLLINK-INTERNET-KANO
+!
+vlan 2059
+ name ORANGE-NAMA-PRI
+!
+vlan 2060
+ name ORANGE-NAMA-SEC
+!
+vlan 2079
+ name APMT-KANO
+!
+vlan 2080
+ name FRSC-KANO
+!
+vlan 2121
+ name NBC-CHALLAWA
+!
+vlan 2251
+ name WHO_KATSINA_1MB
+!
+vlan 2253
+ name who-kebbi
+!
+vlan 2254
+ name who-zamfara
+!
+vlan 2319
+ name NIGER-INSURANCE-KATSINA
+!
+vlan 2468
+!
+vlan 2600
+ name ecnx
+!
+vlan 2648
+!
+vlan 2999
+ name FCMB-KANO
+!
+vlan 3007
+ name FBN-VPLS
+!
+vlan 3035
+ name SKYE_BANK_LLC
+!
+vlan 3042
+ name UBA-
+!
+vlan 3420
+ name HERITAGE-SABONGARI-KANO
+!
+vlan 3437
+!
+vlan 3456
+ name NNPC-RETAIL-KA-NW-RO
+!
+vlan 3515
+ name SYNERGY-SERVE-KANO
+!
+vlan 3837
+ name HYPERIA-JBS-KANO
+!
+vlan 3845
+ name KANO-Gloworld
+!
+vlan 4033
+ name CYBERSPACE-WUDIL
+lldp run
+!
+!
+!
+interface FastEthernet1/0/1
+ description NNPC RETAIL NORTH WEST REGIONAL OFFICE KANO
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1494,1497,1640,3456
+ switchport mode trunk
+!
+interface FastEthernet1/0/2
+ description ACCESS BANK MMWAY KANO | 20M
+ switchport access vlan 1640
+ switchport mode access
+ spanning-tree bpdufilter enable
+!
+interface FastEthernet1/0/3
+ description HYPERIA-INTAKE-JBS-KANO | 50MB | V3837
+ switchport access vlan 3837
+ switchport mode access
+!
+interface FastEthernet1/0/4
+ description GLOBENODE 10MB INTERNET
+ switchport access vlan 1332
+ switchport mode access
+!
+interface FastEthernet1/0/5
+ description VODACOM-56-DUTSE
+ switchport access vlan 1437
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/6
+ description VODACOM-56-HADEJA
+ switchport access vlan 1438
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet1/0/7
+ description CYBERSPACE WUDIL
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1503,4033
+ switchport mode trunk
+!
+interface FastEthernet1/0/8
+ description UNION BANK - BANK ROAD KANO
+ switchport access vlan 1656
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/9
+ description FREE
+ switchport mode access
+!
+interface FastEthernet1/0/10
+ description FIDELITY BANK KANO
+ switchport access vlan 1881
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/11
+ description IS NOVA KANO TAHIR GUEST HOUSE
+ switchport access vlan 603
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/12
+ description # ORANGE-NAMA-PRIMARY-KAN002-KAN027 #
+ switchport access vlan 2059
+ switchport trunk encapsulation dot1q
+ switchport mode dot1q-tunnel
+ speed 100
+ duplex full
+ l2protocol-tunnel cdp
+ l2protocol-tunnel stp
+ no cdp enable
+!
+interface FastEthernet1/0/13
+ description ORANGE NAMA SECONDARY (VDT LINK)
+ switchport access vlan 2060
+ switchport trunk encapsulation dot1q
+ switchport mode dot1q-tunnel
+ l2protocol-tunnel cdp
+ l2protocol-tunnel stp
+ no cdp enable
+ spanning-tree bpdufilter enable
+ spanning-tree bpduguard enable
+!
+interface FastEthernet1/0/14
+ description APMT LAGOS KANO
+ switchport access vlan 2079
+ switchport mode access
+!
+interface FastEthernet1/0/15
+ description FIRST BANK DANBATTA-KAN002-KAN021-DBT801-DBT001-CUSTOMER||TPGS-CHALLAWA-INT-CHW001-KAN021
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1266,1497,1504,3007
+ switchport mode trunk
+ speed 100
+ duplex full
+ spanning-tree bpdufilter enable
+ spanning-tree bpduguard enable
+!
+interface FastEthernet1/0/16
+ description TPG-KAN-DIA-001 | 35M
+ switchport access vlan 1435
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/17
+ description SPIDERNET MULTISERVICES KANO | 10M
+ switchport access vlan 1965
+ switchport mode access
+!
+interface FastEthernet1/0/18
+ description FRSC KANO | 2MB
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1492,2080
+ switchport mode trunk
+!
+interface FastEthernet1/0/19
+ description GLOWORLD KANO 4MB
+ switchport access vlan 3845
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/20
+ description POLARIS BANK (SKYE BANK) KANO | 4MB
+ switchport access vlan 3035
+ switchport mode access
+!
+interface FastEthernet1/0/21
+ description POLARIS (SKYE) BANK KAZAURE
+ switchport access vlan 3035
+ switchport mode access
+!
+interface FastEthernet1/0/22
+ description WHO-ZAMFARA-INTERNET
+ switchport access vlan 2254
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/23
+ description WHO-KEBBI-INTERNET
+ switchport access vlan 2253
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet1/0/24
+ description GLO IS KANO
+ switchport access vlan 250
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/1
+ description To-GLO1--KANO002-NE40
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 603,1252,1497,1642-1645,1753
+ switchport mode trunk
+ load-interval 30
+!
+interface GigabitEthernet1/0/2
+ description TO_DCN_MPLS || Port-GE2/0/1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ spanning-tree bpdufilter enable
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan229
+ ip address 172.31.32.212 255.255.255.248
+!
+interface Vlan250
+ no ip address
+!
+interface Vlan603
+ ip address 172.17.17.11 255.255.255.248
+ shutdown
+!
+interface Vlan1027
+ ip address 197.211.48.18 255.255.255.252
+!
+interface Vlan1028
+ no ip address
+!
+interface Vlan1115
+ ip address 10.0.181.245 255.255.255.0
+!
+interface Vlan1255
+ no ip address
+!
+interface Vlan1409
+ ip address 10.248.240.38 255.255.255.248
+!
+interface Vlan1437
+ ip address 10.248.240.14 255.255.255.248
+!
+interface Vlan1438
+ ip address 10.248.240.30 255.255.255.248
+!
+interface Vlan1494
+ ip address 10.155.201.251 255.255.255.0
+!
+interface Vlan1501
+ ip address 10.248.249.106 255.255.255.0
+!
+interface Vlan1503
+ ip address 10.155.186.100 255.255.255.0
+!
+interface Vlan1619
+ no ip address
+!
+interface Vlan1893
+ ip address 10.248.248.122 255.255.255.248
+!
+interface Vlan2059
+ ip address 3.3.2.1 255.255.255.0
+!
+interface Vlan2060
+ ip address 12.12.12.2 255.255.255.0
+!
+interface Vlan2079
+ ip address 192.168.31.2 255.255.255.0
+!
+interface Vlan2121
+ ip address 172.16.242.73 255.255.255.252
+!
+interface Vlan2251
+ ip address 197.211.42.253 255.255.255.248
+ shutdown
+!
+interface Vlan2468
+ description SEVEN UP KANO MPLS
+ ip address 192.168.10.77 255.255.255.0
+!
+interface Vlan3007
+ ip address 192.168.252.192 255.255.255.0
+!
+interface Vlan3035
+ no ip address
+!
+interface Vlan3420
+ description HeritageBankkano
+ ip address 172.16.64.35 255.255.255.248
+!
+interface Vlan4033
+ ip address 11.11.10.99 255.255.255.0
+!
+ip default-gateway 10.248.249.1
+ip classless
+ip route 0.0.0.0 0.0.0.0 10.248.249.1
+ip http server
+ip http secure-server
+!
+no cdp run
+snmp-server community globacom RO
+!
+control-plane
+!
+!
+line con 0
+ password 7 03295A19070124404206
+ login
+line vty 0 4
+ password 7 132816000A020126272B
+ login
+line vty 5 15
+ password 7 132816000A020126272B
+ login
+!
+end
+
+ENT-3750-SW-KAN002#

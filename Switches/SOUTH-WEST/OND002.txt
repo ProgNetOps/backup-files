@@ -1,0 +1,316 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 13:23.38 ? ? /home/mobaxterm ? telnet 10.248.249.181
+Connected to 10.248.249.181.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-OND-002>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-OND-002]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       WEMA BANK ONDO - (IoTech LM) | CL
+                                               IENT-OND001-OND002
+Eth0/0/2                      down    down     Univ. of Medical Sciences| OND002
+                                               -NKR801-CLIENT Ondo |10MB Interne
+                                               t
+Eth0/0/3                      up      up       UNION BANK ONDO
+Eth0/0/4                      *down   down     ADEYEMI COLLEGE OF EDUCATION 60MB
+                                                INTERNET
+Eth0/0/5                      up      up       Gloshop Ondo
+Eth0/0/6                      down    down     Osun State University Ifetedo 50M
+                                               B Internet
+Eth0/0/7                      down    down     STANBIC IBTC BANK ONDO | CERAGON
+Eth0/0/8                      *down   down     STATURN-LYCET SUSPENDED
+Eth0/0/9                      *down   down     FIRST BANK ILEOLUJI-ILE501-LILE00
+                                               1-ONDO002
+Eth0/0/10                     down    down     ZINOX_MEDICAL_SCIENCE_ONDO
+Eth0/0/11                     up      up       FIRST-BANK-ONDO-MAIN-8M-LL-LM-NER
+                                               A-DIREXCT
+Eth0/0/12                     down    down     ADEYEMI FED-UNI EDU ONDO | 100Mbp
+                                               s
+Eth0/0/13                     down    down     ADEYEMI FED-UNI EDU ONDO | 100Mbp
+                                               s
+Eth0/0/14                     down    down     OLA BANKY ONDO 10MB INTERNET
+Eth0/0/15                     down    down     BEDC-TELEMET6-ONDO-INT |10MB
+Eth0/0/16                     down    down     INFRA FOCUS UNIMED ONDO | 155M NE
+                                               RA
+Eth0/0/17                     down    down     WEMA BANK ONDO
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     MGT_TEST
+GE0/0/1                       up      up       UPLINK TO DCN IP/MPLS M8- GE 0/2/
+                                               4
+GE0/0/2                       *down   down     FAULTY PORT
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif804                     up      up       HUAWEI, Quidway Series, Vlanif804
+                                                Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+[BS-OND-002]    dis cur
+#
+!Software Version V100R006C05
+ sysname BS-OND-002
+#
+ vlan batch 804 1028 1191 1236 1486 1492 to 1497 1501 1592 1632 1640
+ vlan batch 1669 1679 1754 1817 1908 1928 1999 2259 2423 2438
+ vlan batch 3007 3042 3200 3384
+#
+vlan 804
+ description Switch Management
+vlan 1028
+ description BEDC-TELEMT6-ONDO
+vlan 1191
+ description ORION MERIDIAN RESOURCES LIMITED
+vlan 1236
+ description FIRSTBANK-ONDO-8M
+vlan 1486
+ description NEW-CERAGON-MGT
+vlan 1492
+ description BS-NERA-4-MGT
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1494
+ description NNPC-NERA-MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1496
+ description BS-CERAGON-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1501
+ description BS_MGT
+vlan 1592
+ description UNION BANK ONDO
+vlan 1632
+ description WEMA BANK ONDO
+vlan 1640
+ description ACCESS BANK
+vlan 1669
+ description OLA BANKY
+vlan 1679
+ description University of Medical Sciences Ondo
+vlan 1754
+ description INFRA-FOCUS
+vlan 1817
+ description ZINOX-UNI-MED-SCI
+vlan 1908
+ description CADBURY-ONDO
+vlan 1928
+ description ADEYEMI-UNIV-INT
+vlan 1999
+ description Gloshop Ondo
+vlan 2259
+ description Holyview_NIEPA
+vlan 2423
+ description STANBIC-IBTC ONDO
+vlan 2438
+ description STATURN
+vlan 3007
+ description FIRST BANK ONDO VPLS
+vlan 3042
+ description UBA_VPLC
+vlan 3200
+ description Osun State University Ifetedo
+vlan 3384
+ description WEMA-ONDO
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@ISE9M7'4SVFPU,=9&ix.{R*"%@%@
+ local-user bsnoc privilege level 15
+ local-user fabian password cipher %@%@+W_r*o-.;(W(TN=)@'A%$$$>%@%@
+ local-user fabian privilege level 15
+#
+interface Vlanif804
+ ip address 10.248.246.76 255.255.255.192
+#
+interface Vlanif1501
+ ip address 10.248.249.181 255.255.255.0
+#
+interface Ethernet0/0/1
+ description WEMA BANK ONDO - (IoTech LM) | CLIENT-OND001-OND002
+ port link-type access
+ port default vlan 3384
+#
+interface Ethernet0/0/2
+ description Univ. of Medical Sciences| OND002-NKR801-CLIENT Ondo |10MB Internet
+ port link-type access
+ port default vlan 1679
+#
+interface Ethernet0/0/3
+ description UNION BANK ONDO
+ port link-type access
+ port default vlan 1592
+#
+interface Ethernet0/0/4
+ description ADEYEMI COLLEGE OF EDUCATION 60MB INTERNET
+ shutdown
+ port link-type access
+ port default vlan 2438
+#
+interface Ethernet0/0/5
+ description Gloshop Ondo
+ port link-type trunk
+ port trunk allow-pass vlan 1999
+#
+interface Ethernet0/0/6
+ description Osun State University Ifetedo 50MB Internet
+ port link-type access
+ port default vlan 3200
+#
+interface Ethernet0/0/7
+ description STANBIC IBTC BANK ONDO | CERAGON
+ port link-type access
+ port default vlan 2423
+#
+interface Ethernet0/0/8
+ description STATURN-LYCET SUSPENDED
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 2438
+#
+interface Ethernet0/0/9
+ description FIRST BANK ILEOLUJI-ILE501-LILE001-ONDO002
+ shutdown
+ port link-type access
+ port default vlan 3007
+#
+interface Ethernet0/0/10
+ description ZINOX_MEDICAL_SCIENCE_ONDO
+ port link-type trunk
+ port trunk allow-pass vlan 1497 1817
+#
+interface Ethernet0/0/11
+ description FIRST-BANK-ONDO-MAIN-8M-LL-LM-NERA-DIREXCT
+ port link-type trunk
+ port trunk allow-pass vlan 1236 1495
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/12
+ description ADEYEMI FED-UNI EDU ONDO | 100Mbps
+ port link-type access
+ port default vlan 1928
+#
+interface Ethernet0/0/13
+ description ADEYEMI FED-UNI EDU ONDO | 100Mbps
+ port link-type trunk
+ port trunk allow-pass vlan 1486 1928
+#
+interface Ethernet0/0/14
+ description OLA BANKY ONDO 10MB INTERNET
+ port link-type access
+ port default vlan 1669
+#
+interface Ethernet0/0/15
+ description BEDC-TELEMET6-ONDO-INT |10MB
+ port link-type access
+ port default vlan 1028
+#
+interface Ethernet0/0/16
+ description INFRA FOCUS UNIMED ONDO | 155M NERA
+ port link-type trunk
+ port trunk allow-pass vlan 1492 1497 1754
+#
+interface Ethernet0/0/17
+ description WEMA BANK ONDO
+ port link-type access
+ port default vlan 3384
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ description MGT_TEST
+ port link-type access
+ port default vlan 1501
+#
+interface GigabitEthernet0/0/1
+ description UPLINK TO DCN IP/MPLS M8- GE 0/2/4
+ port link-type trunk
+ port trunk allow-pass vlan 804 1028 1191 1236 1486 1492 to 1497 1501 1592 1632 1640
+ port trunk allow-pass vlan 1669 1679 1754 1817 1908 1928 1999 2259 2423 2438
+ port trunk allow-pass vlan 3007 3042 3200 3384
+ stp bpdu-filter enable
+#
+interface GigabitEthernet0/0/2
+ description FAULTY PORT
+ shutdown
+ port link-type access
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.65 preference 201
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F000001000073C3
+ snmp-agent community read cipher %@%@4i'Y4@se|/FP3E.2QF8Z6pIop6+Z'*HUKW&\8pT{paIOpIr6[.eAI^kh'Uvo-X>ZCUxKI{6p%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[BS-OND-002]
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                        ?
+
+ ? 2025-11-13 ? ? 13:29.12 ? ? /home/mobaxterm ?

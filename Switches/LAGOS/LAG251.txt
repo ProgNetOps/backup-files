@@ -1,0 +1,273 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:29.35 ? ? /home/mobaxterm ? telnet 10.248.249.212
+Connected to 10.248.249.212.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Note: The max number of VTY users is 5, and the current number
+      of VTY users on line is 1.
+<BS-LAG-251>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-LAG-251]dis int des
+Interface                   Description
+Ethernet0/0/1               ALTERNATIVE PAYMENT FE-PORT
+Ethernet0/0/2               Huawei, Quidway Series, Ethernet0/0/2 Interface
+Ethernet0/0/3               FEDAN INVESTMENT | IOTECH
+Ethernet0/0/4               ADVANS_LAFAYETTE
+Ethernet0/0/5               Huawei, Quidway Series, Ethernet0/0/5 Interface
+Ethernet0/0/6               ISN_OJO_ALABA
+Ethernet0/0/7               Huawei, Quidway Series, Ethernet0/0/7 Interface
+Ethernet0/0/8               Huawei, Quidway Series, Ethernet0/0/8 Interface
+Ethernet0/0/9               Huawei, Quidway Series, Ethernet0/0/9 Interface
+Ethernet0/0/10              Huawei, Quidway Series, Ethernet0/0/10 Interface
+Ethernet0/0/11              Huawei, Quidway Series, Ethernet0/0/11 Interface
+Ethernet0/0/12              Huawei, Quidway Series, Ethernet0/0/12 Interface
+Ethernet0/0/13              Huawei, Quidway Series, Ethernet0/0/13 Interface
+Ethernet0/0/14              Huawei, Quidway Series, Ethernet0/0/14 Interface
+Ethernet0/0/15              Huawei, Quidway Series, Ethernet0/0/15 Interface
+Ethernet0/0/16              Huawei, Quidway Series, Ethernet0/0/16 Interface
+GigabitEthernet0/0/1        ALTERNATIVE PAYMENT & INTERNET SERVICE | 155MB
+GigabitEthernet0/0/2        UPLINK TO DCN IP/MPLS |  GE 2/0/10
+NULL0                       Huawei, Quidway Series, NULL0 Interface
+Vlanif1                     Huawei, Quidway Series, Vlanif1 Interface
+Vlanif1088                  Huawei, Quidway Series, Vlanif1088 Interface
+Vlanif1501                  Huawei, Quidway Series, Vlanif1501 Interface
+[BS-LAG-251]      dis cur
+#
+ sysname BS-LAG-251
+#
+ vlan batch 1 938 1088 1322 1425 1489 1492 to 1493 1495 1497 to 1498 1501
+ vlan batch 1503 1632 1961 1964 2321 2412 2629 2814 2910 3034
+ vlan batch 3042 3128 3383
+#
+ bpdu enable
+#
+ cluster enable
+ ntdp enable
+ ntdp hop 16
+ ndp enable
+#
+ undo http server enable
+#
+vlan 938
+ description FRSC-OJO
+vlan 1088
+ description ISN VLAN
+vlan 1322
+ description VDT  1XSTM1 Internet Alaba
+vlan 1425
+ description ADVANS_LAFAYETTE
+vlan 1489
+ description Ceragon Mgmt New
+vlan 1492
+ description BS-NERA-4-MGT
+vlan 1493
+ description NERA_MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1498
+ description BS-NERA-MGT
+vlan 1501
+ description BS-MGT
+vlan 1503
+ description NERA MGMT VLAN
+vlan 1632
+ description WEMA-VPLS
+vlan 1961
+ description LASU-OJO
+vlan 1964
+ description LASU-BADAGRY
+vlan 2321
+ description ALTERNATIVE PAYMENT
+vlan 2412
+ description OGITECH-INTERNET
+vlan 2629
+ description POLYSONIC
+vlan 2814
+ description FIRS
+vlan 2910
+ description Fedan Investment
+vlan 3034
+ description STERLING-VPLS
+vlan 3042
+ description UBA-VPLS
+vlan 3128
+ description BOND-ENERGY-SATELITE-TOWN
+vlan 3383
+ description WEMA_OKOKOMAIKO
+#
+interface Vlanif1
+#
+interface Vlanif1088
+ shutdown
+#
+interface Vlanif1501
+ ip address 10.248.249.212 255.255.255.0
+#
+interface Ethernet0/0/1
+ description ALTERNATIVE PAYMENT FE-PORT
+ port link-type trunk
+ port trunk allow-pass vlan 2321
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/2
+ shutdown
+ port link-type trunk
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/3
+ description FEDAN INVESTMENT | IOTECH
+ port link-type access
+ port default vlan 2910
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/4
+ description ADVANS_LAFAYETTE
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1425 1493
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/5
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/6
+ description ISN_OJO_ALABA
+ port link-type trunk
+ port trunk allow-pass vlan 1088 1503
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/7
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/8
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/9
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/10
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/11
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/12
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/13
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/14
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/15
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/16
+ port link-type access
+ ntdp enable
+ ndp enable
+#
+interface GigabitEthernet0/0/1
+ description ALTERNATIVE PAYMENT & INTERNET SERVICE | 155MB
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 2321
+ combo-port copper
+   undo negotiation auto
+   speed 1000
+ combo-port media type
+   combo-port copper
+#
+interface GigabitEthernet0/0/2
+ description UPLINK TO DCN IP/MPLS |  GE 2/0/10
+ port link-type trunk
+ port trunk allow-pass vlan 1088 1322 1425 1489 1492 to 1493 1495 1497 to 1498 1501 1503 1632
+ port trunk allow-pass vlan 1961 2321 2412 2629 2910 3042 3128 3383
+ ntdp enable
+ ndp enable
+#
+interface NULL0
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user bsnoc password cipher RB!G'1+"PX61[a"FZ7=S#!!!
+ local-user bsnoc level 15
+ local-user bsnoc ftp-directory flash:
+ local-user fabian password cipher *2+W,D'B31_Q=^Q`MAF4<1!!
+ local-user fabian level 15
+ local-user fabian ftp-directory flash:
+ local-user huawei password cipher N`C55QK<`=/Q=^Q`MAF4<1!!
+ local-user huawei level 15
+ local-user huawei ftp-directory flash:
+ local-user moses password cipher Y;FLM:7Q_/F1[a"FZ7=S#!!!
+ local-user moses level 15
+ local-user moses ftp-directory flash:
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F000001000074DC
+ snmp-agent community read  globacom
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[BS-LAG-251]
+Note: The max number of VTY users is 5, and the current number
+      of VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                                                               ?
+
+ ? 2025-11-13 ? ? 10:40.21 ? ? /home/mobaxterm ?

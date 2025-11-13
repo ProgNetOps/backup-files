@@ -1,0 +1,421 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 14:40.37 ? ? /home/mobaxterm ? telnet 10.248.246.138
+Connected to 10.248.246.138.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-YEN-004>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-YEN-004]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      down    down     NEW-CROSS
+Eth0/0/2                      up      up       SUNDRY-MARKET INT | 5M
+Eth0/0/3                      up      up       Daewoo Nig Ltd (SPDC) Gbaran|8MB
+Eth0/0/4                      up      up       SWIFT TALK YENAGOA | 50MB
+Eth0/0/5                      *down   down     BAYELSAL-UNI-MEDICAL-SCI-INT | 50
+                                               M
+Eth0/0/6                      up      up       TPGS-BYS-Yenegoa-1 |5M
+Eth0/0/7                      down    down     NNAVY_COOLLINK_VPN
+Eth0/0/8                      up      up       VDT-YENAGOA-INTERNET
+Eth0/0/9                      down    down     NNAVY_COOLFM_RADIOMGT
+Eth0/0/10                     up      up       description AITEO APAPA TO NEMBE
+Eth0/0/11                     up      up       AGIP OBAMA
+Eth0/0/12                     down    down     ISN YENEGOA
+Eth0/0/13                     up      up       |NNPC RETAIL |NNPC BRASS| suspend
+                                               ed COBWEB|DPR YENEGOA|CYBERSPACE
+                                               AKENFA | UBA MBIAMA|NEMBE-HARLEQU
+                                               INE-PHC
+Eth0/0/14                     up      up       BAYELSA GOVT HOUSE INTERNET
+Eth0/0/15                     *down   down     SMARTCITY YENAGOA(RADIO BAYELSA)
+Eth0/0/16                     up      up       NEW CROSS EKULAMA INTERNET
+Eth0/0/17                     down    down     GLOSHOP YENAGOA
+Eth0/0/18                     up      up       WESTMETRO-PCC-Bayelsa-YEN004|10M-
+                                               CUSTOMER-OWN-RADIO
+Eth0/0/19                     *down   down     NIGER DELTA UNIVERSITY NDU LAW FA
+                                               CULTY INTERNET
+Eth0/0/20                     up      up       COBRANET-YENEGOA || 2Mbps
+Eth0/0/21                     up      up       PRIME SOURCE LIMITED YENAGOA | 20
+                                               M
+Eth0/0/22                     down    down     AGIP-BRASS-4M-LL-PHC-HQ-GE1OF-YEN
+                                               004-YN007-HU-IDURTN905
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     AGIP-TEBIDABA-4M-LL-PHC-HQ-GE2 OF
+                                                BAY007 IDU (RTN950A)
+GE0/0/1                       up      up       VASCON-YENEGOA-INT|256M
+GE0/0/2                       up      up       UPLINK TO IP/MPLS NE40 GE1/1/20
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif803                     up      up       HUAWEI, Quidway Series, Vlanif803
+                                                Interface
+Vlanif1370                    up      up       HUAWEI, Quidway Series, Vlanif137
+                                               0 Interface
+Vlanif1469                    up      up       HUAWEI, Quidway Series, Vlanif146
+                                               9 Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1503                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               3 Interface
+Vlanif2999                    up      up       HUAWEI, Quidway Series, Vlanif299
+                                               9 Interface
+[BS-YEN-004]  dis cur
+#
+!Software Version V100R006C05
+ sysname BS-YEN-004
+#
+ vlan batch 504 523 654 to 655 670 674 705 750 803 1016 1085
+ vlan batch 1115 1134 1136 1211 1221 1286 1294 1370 1373 1469
+ vlan batch 1487 1493 to 1495 1497 1500 to 1501 1503 1554 to 1556 1594 1603 1632 1746
+ vlan batch 1757 2011 2022 2149 2373 2419 2424 2533 2607 2999
+ vlan batch 3004 3042 3500 3511 3513 3602 3617 4013 4023
+#
+lldp enable
+#
+vlan 504
+ description ISN_YENEGOA
+vlan 523
+ description AITEO-PH-YENAGOA
+vlan 654
+ description AGIP-OGBAINBIRI
+vlan 655
+ description AGIP-OBAMA
+vlan 670
+ description Agip-BRASS-4M-LL
+vlan 674
+ description AGIP-TEBIDABA-4M-LL-PHC-HQ
+vlan 705
+ description FIRS-YENAGOA
+vlan 750
+ description NNAVY_COOLLINK
+vlan 803
+ description new-mgmt
+vlan 1016
+ description BAYELSA-UNI-MEDICAL-SCI
+vlan 1085
+ description DPR-YENAGOA
+vlan 1115
+ description GTBANK-VPLS
+vlan 1134
+ description NAOC-YENAGOA
+vlan 1136
+ description SwiftTalk-Monitoring
+vlan 1211
+ description SMARTCITY_YENAGOA
+vlan 1221
+ description NEWCROSS-EKULAMA-INT
+vlan 1286
+ description NDU-FACULTY-LAW
+vlan 1294
+ description VASCON-YENAGOA-INT
+vlan 1370
+ description HARLEQUINE-AITEO LL
+vlan 1373
+ description PSL-CAMPSITE-YENEGOA
+vlan 1469
+ description TPGSBYS-Yenegoa 1
+vlan 1487
+ description CERAGON-MGT
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1494
+ description BS-NNPC-NERA-MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1500
+ description RADIO_MGT_VLAN
+vlan 1501
+ description BS-MGT
+vlan 1503
+ description NERA_MGT
+vlan 1554
+ description UNION-MBIAMA
+vlan 1555
+ description UNION-YENAGOA
+vlan 1556
+ description Bayelsa State School of Nursing
+vlan 1594
+ description AITEO-NEMBE-PHC
+vlan 1603
+ description RADWIN-MGMT
+vlan 1632
+ description WEMA-VPLS
+vlan 1746
+ description AITEO-MPLS
+vlan 1757
+ description Daewoo Nig Ltd (SPDC) Gbara
+vlan 2011
+ description SWIFTALK YENAGOA
+vlan 2022
+ description NEW-CROSS
+vlan 2149
+ description GLOSHOP-YENAGOA
+vlan 2373
+ description BELEMA-OIL-PH-YENA
+vlan 2419
+ description SUNDRY-MARKET-INT
+vlan 2424
+ description BAYELSA_GOVT_INT
+vlan 2533
+ description AITEO-APAPA-NEMBE
+vlan 2607
+ description WESTMETRO-PCC-Bayelsa-YEN004|10M
+vlan 2999
+ description FCMB
+vlan 3004
+ description SILVERBIRD-VPLS
+vlan 3042
+ description UBA-VPLS
+vlan 3500
+ description NNPC-NGC-BRASS
+vlan 3511
+ description NNPC-RETAIL-STATION-YENAGOA
+vlan 3513
+ description cobranet
+vlan 3602
+ description CAN_TV
+vlan 3617
+ description COBWEB-COMMUNICATION
+vlan 4013
+ description VDT-YENAGOA-INTERNET
+vlan 4023
+ description CYBERSPACE AKENFA
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user ope password cipher %@%@Twb0:9THsW}={k9^*]u)Pe9s%@%@
+ local-user ope privilege level 15
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@te;BD|}6c+XwX^;#(w9>Pe:/%@%@
+ local-user bsnoc privilege level 15
+ local-user moses password cipher %@%@]\h6>{3$%(B8LG&4PXrS]X4~%@%@
+ local-user moses privilege level 15
+ local-user donald password cipher %@%@IuC#F47]<Iu>z<5f@"P$]X.[%@%@
+ local-user donald privilege level 15
+ local-user fabian password cipher %@%@g.<cJ-NFbX~N}|$M:io5Pe<H%@%@
+ local-user fabian privilege level 15
+ local-user huawei password cipher %@%@\oT',BYMT45u4+I;_#r)S$,)%@%@
+ local-user huawei privilege level 15
+ local-user naveen password cipher %@%@Z{x@!(872&%uOL&^].%SPeA2%@%@
+ local-user naveen privilege level 15
+ local-user glo1noc password cipher %@%@[^+OG[hD/7/GWNI,<W9>PeJG%@%@
+ local-user glo1noc privilege level 15
+ local-user kelechi password cipher %@%@3T{D&r>C>#8@{G:fn:)8Pe>u%@%@
+ local-user kelechi privilege level 15
+ local-user richard password cipher %@%@lhE))I)xpGlPqd0k+;I#PeFG%@%@
+ local-user richard privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif803
+ ip address 10.248.246.138 255.255.255.192
+#
+interface Vlanif1370
+ ip address 10.10.10.22 255.255.255.0
+#
+interface Vlanif1469
+ ip address 192.168.14.2 255.255.255.0
+#
+interface Vlanif1501
+ ip address 10.248.249.183 255.255.255.0
+#
+interface Vlanif1503
+ ip address 10.155.186.60 255.255.255.0
+#
+interface Vlanif2999
+ ip address 172.22.6.214 255.255.255.0
+#
+interface Ethernet0/0/1
+ description NEW-CROSS
+ port link-type access
+ port default vlan 2022
+#
+interface Ethernet0/0/2
+ description SUNDRY-MARKET INT | 5M
+ port link-type access
+ port default vlan 2419
+#
+interface Ethernet0/0/3
+ description Daewoo Nig Ltd (SPDC) Gbaran|8MB
+ port link-type access
+ port default vlan 1757
+#
+interface Ethernet0/0/4
+ description SWIFT TALK YENAGOA | 50MB
+ port link-type trunk
+ port trunk allow-pass vlan 2011
+#
+interface Ethernet0/0/5
+ description BAYELSAL-UNI-MEDICAL-SCI-INT | 50M
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1016 1487
+#
+interface Ethernet0/0/6
+ description TPGS-BYS-Yenegoa-1 |5M
+ port link-type access
+ port default vlan 1469
+#
+interface Ethernet0/0/7
+ description NNAVY_COOLLINK_VPN
+ port link-type access
+ port default vlan 750
+#
+interface Ethernet0/0/8
+ description VDT-YENAGOA-INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 4013
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/9
+ description NNAVY_COOLFM_RADIOMGT
+ port link-type access
+ port default vlan 1500
+#
+interface Ethernet0/0/10
+ description description AITEO APAPA TO NEMBE
+ port link-type trunk
+ port trunk allow-pass vlan 1594 1746
+#
+interface Ethernet0/0/11
+ description AGIP OBAMA
+ port link-type access
+ port default vlan 655
+#
+interface Ethernet0/0/12
+ description ISN YENEGOA
+ port link-type access
+ port default vlan 1556
+#
+interface Ethernet0/0/13
+ description |NNPC RETAIL |NNPC BRASS| suspended COBWEB|DPR YENEGOA|CYBERSPACE AKENFA | UBA MBIAMA|NEMBE-HARLEQUINE-PHC
+ port link-type trunk
+ port trunk allow-pass vlan 654 to 655 1085 1370 1493 to 1495 1497 1503 2999 3042 3500 3511
+ port trunk allow-pass vlan 3601 4023
+#
+interface Ethernet0/0/14
+ description BAYELSA GOVT HOUSE INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 1503 2424
+#
+interface Ethernet0/0/15
+ description SMARTCITY YENAGOA(RADIO BAYELSA)
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1211 1503
+#
+interface Ethernet0/0/16
+ description NEW CROSS EKULAMA INTERNET
+ port link-type access
+ port default vlan 1221
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/17
+ description GLOSHOP YENAGOA
+ port link-type access
+ port default vlan 2149
+#
+interface Ethernet0/0/18
+ description WESTMETRO-PCC-Bayelsa-YEN004|10M-CUSTOMER-OWN-RADIO
+ port link-type trunk
+ port trunk allow-pass vlan 2607
+#
+interface Ethernet0/0/19
+ description NIGER DELTA UNIVERSITY NDU LAW FACULTY INTERNET
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1286
+#
+interface Ethernet0/0/20
+ description COBRANET-YENEGOA || 2Mbps
+ port link-type access
+ port default vlan 3513
+#
+interface Ethernet0/0/21
+ description PRIME SOURCE LIMITED YENAGOA | 20M
+ port link-type access
+ port default vlan 1373
+#
+interface Ethernet0/0/22
+ description AGIP-BRASS-4M-LL-PHC-HQ-GE1OF-YEN004-YN007-HU-IDURTN905
+ port link-type access
+ port default vlan 670
+#
+interface Ethernet0/0/23
+ port link-type access
+ port default vlan 1501
+#
+interface Ethernet0/0/24
+ description AGIP-TEBIDABA-4M-LL-PHC-HQ-GE2 OF BAY007 IDU (RTN950A)
+ port link-type access
+ port default vlan 674
+#
+interface GigabitEthernet0/0/1
+ description VASCON-YENEGOA-INT|256M
+ port link-type access
+ port default vlan 1294
+#
+interface GigabitEthernet0/0/2
+ description UPLINK TO IP/MPLS NE40 GE1/1/20
+ port link-type trunk
+ port trunk allow-pass vlan 504 to 505 523 654 to 655 670 674 705 803 1016 1085 1115
+ port trunk allow-pass vlan 1134 1136 1211 1221 1286 1294 1370 1373 1469 1487
+ port trunk allow-pass vlan 1493 to 1495 1497 1500 to 1501 1503 1554 to 1556 1594 1632 1746 1757 2011
+ port trunk allow-pass vlan 2022 2149 2373 2419 2424 2533 2607 2999 3004 3042
+ port trunk allow-pass vlan 3500 3511 3513 3601 to 3602 3617 4013 4023
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.129
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100006326
+ snmp-agent community read cipher %@%@]"}ALv0beYMGqa1#OI66FGe)u)W,/0M/6CFILB>Szf[7Ge,F0&lE=m'a\DZ-+9B@^H1Oe5FG%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[BS-YEN-004]

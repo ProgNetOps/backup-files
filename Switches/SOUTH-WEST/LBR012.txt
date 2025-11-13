@@ -1,0 +1,305 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:43.50 ? ? /home/mobaxterm ? telnet 10.248.246.86
+Connected to 10.248.246.86.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS_LBR012>sys
+Enter system view, return user view with Ctrl+Z.
+[BS_LBR012]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      down    down     NNPC_ORE
+Eth0/0/2                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/2 Interface
+Eth0/0/3                      up      up       TPGS ONDO SOL
+Eth0/0/4                      up      up       UBA OKITI PUPA | FBN OKITI PUPA |
+                                                STAUNT & LYCET
+Eth0/0/5                      up      up       UBA ORE | LM FIBER
+Eth0/0/6                      *down   down     STERLING BANK ORE
+Eth0/0/7                      up      up       FIRST BANK ORE-FIBER-LM
+Eth0/0/8                      *down   down     TRUSTED HANDS INTEGRATED
+Eth0/0/9                      up      up       TPGS_REX_FORESTRY
+Eth0/0/10                     up      up       VDT OMOTOSHO (CLIENT-OMP001-LBR01
+                                               0-LBR012)
+Eth0/0/11                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/11 Interface
+Eth0/0/12                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/12 Interface
+Eth0/0/13                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/13 Interface
+Eth0/0/14                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/14 Interface
+Eth0/0/15                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/15 Interface
+Eth0/0/16                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/16 Interface
+Eth0/0/17                     down    down     WEWOOD_ONDO
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/24 Interface
+GE0/0/1                       down    down     not active
+GE0/0/2                       up      up       description UPLINK TO DCN IP/MPLS
+                                                (GE-0/1/5)
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif804                     up      up       HUAWEI, Quidway Series, Vlanif804
+                                                Interface
+Vlanif1161                    *down   down     HUAWEI, Quidway Series, Vlanif116
+                                               1 Interface
+Vlanif1312                    up      down     HUAWEI, Quidway Series, Vlanif131
+                                               2 Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1583                    up      up       HUAWEI, Quidway Series, Vlanif158
+                                               3 Interface
+Vlanif3042                    up      up       HUAWEI, Quidway Series, Vlanif304
+                                               2 Interface
+[BS_LBR012]    dis cur
+#
+!Software Version V100R006C03
+ sysname BS_LBR012
+#
+ vlan batch 804 1161 1169 1247 1275 1312 1384 1492 1494 1496 to 1497
+ vlan batch 1501 1503 1583 to 1584 1632 1875 1992 2613 3007 3034 3042
+ vlan batch 3467
+#
+ undo http server enable
+#
+vlan 804
+ description MGT
+vlan 1169
+ description STAUANTON_LYCETT
+vlan 1247
+ description FBN-L3
+vlan 1275
+ description FBN-OKT-L3
+vlan 1312
+ description TPGS_REX_FORESTRY
+vlan 1384
+ description TPGS OND SOL
+vlan 1492
+ description MERA_MGT1
+vlan 1494
+ description NERA_MGT
+vlan 1496
+ description CERAGON_MGT
+vlan 1497
+ description Nera Mgt
+vlan 1501
+ description BS-MGT
+vlan 1503
+ description NERA-MGMT
+vlan 1583
+ description UNION_BANK
+vlan 1584
+ description WEWOOD_ONDO
+vlan 1632
+ description WEMA_BANK
+vlan 1875
+ description TRUSTED HANDS INTEGRATED
+vlan 1992
+ description VDT-OMOTOSHO
+vlan 2613
+ description SUMAL-FOODS
+vlan 3007
+ description FIRST_BANK
+vlan 3034
+ description STERLING BANK ORE
+vlan 3042
+ description UBA_VPLS
+vlan 3467
+ description NNPC_ORE
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %$%$I6.ASV)hJET,p"Dn.YM%3aXO%$%$
+ local-user admin service-type http
+ local-user bsnoc password cipher %$%$~h-sWG2[dI\4|'I4=&7#1&zq%$%$
+ local-user bsnoc privilege level 15
+ local-user bsnoc service-type telnet terminal ssh ftp
+ local-user huawei password cipher %$%$IrS(F}C"<L]RuN~H\DP(SULC%$%$
+ local-user huawei privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif804
+ ip address 10.248.246.86 255.255.255.192
+#
+interface Vlanif1161
+ shutdown
+ ip address 41.203.68.238 255.255.255.248
+#
+interface Vlanif1312
+#
+interface Vlanif1501
+ ip address 10.248.249.85 255.255.255.0
+#
+interface Vlanif1583
+ ip address 10.10.10.1 255.255.255.0
+#
+interface Vlanif3042
+ ip address 192.168.219.224 255.255.255.0
+#
+interface Ethernet0/0/1
+ description NNPC_ORE
+ port link-type trunk
+ port trunk allow-pass vlan 1492 1494 3467
+#
+interface Ethernet0/0/2
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3466
+#
+interface Ethernet0/0/3
+ description TPGS ONDO SOL
+ port link-type access
+ port default vlan 1384
+#
+interface Ethernet0/0/4
+ description UBA OKITI PUPA | FBN OKITI PUPA | STAUNT & LYCET
+ port link-type trunk
+ port trunk allow-pass vlan 1169 1247 1275 1492 1496 3007 3042
+#
+interface Ethernet0/0/5
+ description UBA ORE | LM FIBER
+ port link-type access
+ port default vlan 3042
+ qos lr outbound cir 2000 cbs 250000
+ qos lr inbound cir 2000 cbs 250000
+#
+interface Ethernet0/0/6
+ description STERLING BANK ORE
+ shutdown
+ port link-type access
+ port default vlan 3034
+#
+interface Ethernet0/0/7
+ description FIRST BANK ORE-FIBER-LM
+ port link-type access
+ port default vlan 1247
+#
+interface Ethernet0/0/8
+ description TRUSTED HANDS INTEGRATED
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1875
+#
+interface Ethernet0/0/9
+ description TPGS_REX_FORESTRY
+ port link-type access
+ port default vlan 1312
+#
+interface Ethernet0/0/10
+ description VDT OMOTOSHO (CLIENT-OMP001-LBR010-LBR012)
+ port link-type access
+ port default vlan 1992
+#
+interface Ethernet0/0/11
+#
+interface Ethernet0/0/12
+#
+interface Ethernet0/0/13
+#
+interface Ethernet0/0/14
+#
+interface Ethernet0/0/15
+#
+interface Ethernet0/0/16
+#
+interface Ethernet0/0/17
+ description WEWOOD_ONDO
+ port link-type trunk
+ port trunk allow-pass vlan 1497 1584
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ port link-type access
+ port default vlan 804
+#
+interface GigabitEthernet0/0/1
+ description not active
+ port link-type trunk
+ port trunk allow-pass vlan 510 804 1161 1492 1494 1497 1501 1503 1542 1632
+ port trunk allow-pass vlan 1915 1917 2611 to 2613 2826 3034 3466 3472
+#
+interface GigabitEthernet0/0/2
+ description description UPLINK TO DCN IP/MPLS (GE-0/1/5)
+ port link-type trunk
+ port trunk allow-pass vlan 510 804 1161 1169 1247 1275 1312 1384 1492 1494
+ port trunk allow-pass vlan 1496 to 1497 1501 1503 1542 1583 to 1584 1632 1875 1915 1917 1992
+ port trunk allow-pass vlan 2611 to 2613 2826 3007 3034 3042 3466 to 3467 3472
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F000001000059F3
+ snmp-agent community read cipher %$%$qJde!AV6J!Z&R`NpG}9JO(|s%$%$
+ snmp-agent community read cipher %$%$z2plOXiag(crg9UlN;d5}%yp%$%$
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode password
+ set authentication password cipher %$%$/nI%E2ZrKK@^ii;QE,A=,2)}_68(DQ{LQ8C<zD8,x#eC"8/*%$%$
+user-interface vty 0 4
+ authentication-mode aaa
+#
+port-group tralvl1494
+#
+return
+[BS_LBR012]

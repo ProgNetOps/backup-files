@@ -1,0 +1,334 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:43.47 ? ? /home/mobaxterm ? telnet 10.248.249.113
+Connected to 10.248.249.113.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<ENT-LAG-659>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-LAG-659]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       Shepherd Hills
+Eth0/0/2                      up      up       IOTECH | 45M
+Eth0/0/3                      *down   down     HI IMPACT (SOLUTION MEDIA) PRIMAR
+                                               Y FIBRE |30MB INTERNET
+Eth0/0/4                      up      up       Indian Language School 50MB INTER
+                                               NET
+Eth0/0/5                      down    down     ELIZADE ANTHONY
+Eth0/0/6                      down    down     FREE
+Eth0/0/7                      up      up       ORANGE VISA (ZENITH BANK, IKEJA)
+Eth0/0/8                      down    down     MUTUAL-BENEFITS ARET-ADAMS INTERN
+                                               ETSIONAL IOTECH-RADIO 80MB INTERN
+                                               ET
+Eth0/0/9                      up      up       TRACK VENTURES THE-PLACE (UNTAGGE
+                                               D VLAN 2456) | IOTECH | 5MB
+Eth0/0/10                     down    down     FREE
+Eth0/0/11                     down    down     AFRIONE 20MB INTERNET
+Eth0/0/12                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/12 Interface
+Eth0/0/13                     up      up       AIR PEACE MINIMAH ESTATE | 50MB
+Eth0/0/14                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/14 Interface
+Eth0/0/15                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/15 Interface
+Eth0/0/16                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/16 Interface
+Eth0/0/17                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/17 Interface
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     TEST
+Eth0/0/24                     *down   down     coolfm-oshodi
+GE0/0/1                       up      up       CONNECTION TO ARIK AIR
+GE0/0/2                       up      up       UPLINK TO DCN ROUTER  LAG-659-UPE
+                                               -NE40EX2 -GE0/3/4
+GE0/0/3                       up      up       IOTECH  | 100M
+GE0/0/4                       up      up       WORLDWIDE HEALTHCARE HO ILUPEJU -
+                                                IOTECH-RADIO | 100MB
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+[ENT-LAG-659]    dis cur
+#
+!Software Version V100R006C05
+ sysname ENT-LAG-659
+#
+ vlan batch 10 905 1119 1132 1324 1326 1345 1347 1385 to 1386 1413
+ vlan batch 1489 1492 to 1493 1496 to 1497 1499 1501 1503 to 1504 1756 1812 1872 1878
+ vlan batch 1929 1967 2212 2219 2344 2456 2459 2973 3510 3845
+ vlan batch 3847
+#
+ undo http server enable
+ undo http secure-server enable
+#
+vlan 10
+ description testing
+vlan 905
+ description BRENTWOOD-INTERNET
+vlan 1119
+ description ARIK-AIR-1
+vlan 1132
+ description IOTECH-MGT
+vlan 1324
+ description Elizade Nigeria Limited
+vlan 1326
+ description SOLUTION-MEDIA-RADIO
+vlan 1345
+ description BRISCOE TECH
+vlan 1347
+ description SOLUTION-MEDIA-FIBER
+vlan 1385
+ description INTERNETSIONAL BKUP
+vlan 1386
+ description Shepherd-hills
+vlan 1413
+ description AFRIONE
+vlan 1489
+ description CERAGON-RAD-MGT
+vlan 1492
+ description BS-NERA-MGT-4
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1496
+ description ceragon-IP_MGT
+vlan 1497
+ description NERA_MGT
+vlan 1499
+ description AIR-PEACE-MINIMAL-ESTATE-INT
+vlan 1501
+ description BS-MGT
+vlan 1503
+ description ARIK-AIR-2
+vlan 1504
+ description IOTECH-RADIO-MGT
+vlan 1756
+ description BRISCOE APN
+vlan 1812
+ description ARIK-AIR-3
+vlan 1872
+ description FIRS-ONIGBOGBON
+vlan 1878
+ description OMNI-BLU
+vlan 1929
+ description Indian language School
+vlan 1967
+ description Traffic
+vlan 2212
+ description IoTech-100Mb
+vlan 2219
+ description IoTech-45Mb
+vlan 2344
+ description WORLDWIDE HEALTHCARE ILUPEJU
+vlan 2456
+ description STRACK-VENTURES-THE-PLACE
+vlan 2459
+ description RCC-IKEJA
+vlan 2973
+ description FlowZap-Ilupeju
+vlan 3510
+ description coolfm-oshodi
+vlan 3845
+ description ORANGE-VISA-ZENITH
+vlan 3847
+ description ZENITH_ORANGE_VISA
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@>.-xPd^G*"I$b|L)B=X<Sw%6%@%@
+ local-user bsnoc privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif1501
+ ip address 10.248.249.113 255.255.255.0
+#
+interface Ethernet0/0/1
+ description Shepherd Hills
+ port link-type access
+ port default vlan 1386
+#
+interface Ethernet0/0/2
+ description IOTECH | 45M
+ port link-type access
+ port default vlan 2219
+#
+interface Ethernet0/0/3
+ description HI IMPACT (SOLUTION MEDIA) PRIMARY FIBRE |30MB INTERNET
+ shutdown
+ port link-type access
+ port default vlan 1347
+#
+interface Ethernet0/0/4
+ description Indian Language School 50MB INTERNET
+ port link-type access
+ port default vlan 1929
+#
+interface Ethernet0/0/5
+ description ELIZADE ANTHONY
+ port link-type access
+ port default vlan 1324
+#
+interface Ethernet0/0/6
+ description FREE
+ port hybrid untagged vlan 1385
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/7
+ description ORANGE VISA (ZENITH BANK, IKEJA)
+ port link-type trunk
+ port trunk allow-pass vlan 1493 3845 3847
+ stp bpdu-filter enable
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/8
+ description MUTUAL-BENEFITS ARET-ADAMS INTERNETSIONAL IOTECH-RADIO 80MB INTERNET
+ port link-type access
+ port default vlan 1385
+ stp bpdu-filter enable
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/9
+ description TRACK VENTURES THE-PLACE (UNTAGGED VLAN 2456) | IOTECH | 5MB
+ port hybrid pvid vlan 2456
+ port hybrid tagged vlan 1504
+ port hybrid untagged vlan 2456
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/10
+ description FREE
+ port link-type access
+#
+interface Ethernet0/0/11
+ description AFRIONE 20MB INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 1413 1492 to 1493
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/12
+#
+interface Ethernet0/0/13
+ description AIR PEACE MINIMAH ESTATE | 50MB
+ port link-type trunk
+ port trunk allow-pass vlan 1489 1499
+#
+interface Ethernet0/0/14
+#
+interface Ethernet0/0/15
+#
+interface Ethernet0/0/16
+#
+interface Ethernet0/0/17
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+ description TEST
+ port link-type access
+ port default vlan 1501
+#
+interface Ethernet0/0/24
+ description coolfm-oshodi
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1503
+#
+interface GigabitEthernet0/0/1
+ description CONNECTION TO ARIK AIR
+ port link-type access
+ port default vlan 1119
+#
+interface GigabitEthernet0/0/2
+ description UPLINK TO DCN ROUTER  LAG-659-UPE-NE40EX2 -GE0/3/4
+ port link-type trunk
+ port trunk allow-pass vlan 119 905 1119 1132 1324 1326 to 1327 1345 1347 1385 to 1386 1413
+ port trunk allow-pass vlan 1489 1492 to 1493 1496 to 1497 1499 1501 1503 to 1504 1756 1812 1878 1929
+ port trunk allow-pass vlan 1967 2212 2219 2344 2456 2459 2973 3510 3845 3847
+ jumboframe enable 13296
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/3
+ description IOTECH  | 100M
+ port link-type access
+ port default vlan 2212
+#
+interface GigabitEthernet0/0/4
+ description WORLDWIDE HEALTHCARE HO ILUPEJU - IOTECH-RADIO | 100MB
+ port hybrid pvid vlan 2344
+ port hybrid tagged vlan 1504
+ port hybrid untagged vlan 2344
+ jumboframe enable 13296
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100006835
+ snmp-agent community read cipher %@%@q#[;60N>$Bv}o1>xKbm<TO^9@ds(51^X%9GRoHN.egI0O^<Tra68Xv)Qq5TQ%PK$$67S^ETO%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[ENT-LAG-659]

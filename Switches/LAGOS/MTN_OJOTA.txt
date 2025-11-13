@@ -1,0 +1,302 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 12:27.11 ? ? /home/mobaxterm ? telnet 10.248.246.106
+Connected to 10.248.246.106.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+GLO_SW_MTN_OJOTA>en
+Password:
+GLO_SW_MTN_OJOTA#sh int des
+Interface                      Status         Protocol Description
+Vl1                            up             down
+Vl501                          up             up
+Vl804                          up             up
+Vl1121                         up             up
+Vl1501                         up             up
+Vl1875                         up             up
+Vl2423                         up             up       STANBIC-IBTC-BANK
+Vl3111                         up             up
+Vl3112                         up             up
+Vl3832                         up             up
+Gi1/0/1                        up             up       HERITAGE BANK MTN OJOTA
+Gi1/0/2                        up             up       ORANGE VISA OJOTA
+Gi1/0/3                        down           down
+Gi1/0/4                        down           down
+Gi1/0/5                        down           down
+Gi1/0/6                        down           down
+Gi1/0/7                        down           down
+Gi1/0/8                        down           down
+Gi1/0/9                        down           down
+Gi1/0/10                       down           down
+Gi1/0/11                       down           down
+Gi1/0/12                       down           down
+Gi1/0/13                       down           down
+Gi1/0/14                       down           down
+Gi1/0/15                       down           down
+Gi1/0/16                       down           down
+Gi1/0/17                       down           down
+Gi1/0/18                       down           down
+Gi1/0/19                       down           down
+Gi1/0/20                       down           down
+Gi1/0/21                       down           down
+Gi1/0/22                       down           down
+Gi1/0/23                       down           down
+Gi1/0/24                       up             up       Trunk to LAG901 VIA MICROWAVE
+Gi1/0/25                       up             up       STANBIC IBTC BANK VIA MTN OJOTA
+Gi1/0/26                       admin down     down     FBN CAPITAL INTERNET
+Gi1/0/27                       down           down     STANBIC_PENSIONS_MTN
+Gi1/0/28                       up             up       Trunk LAG901 VIA FIBER
+GLO_SW_MTN_OJOTA#sh run
+Building configuration...
+
+Current configuration : 4204 bytes
+!
+! Last configuration change at 16:11:22 UTC Tue Jan 21 2025
+! NVRAM config last updated at 13:38:55 UTC Fri Dec 6 2024
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service unsupported-transceiver
+!
+hostname GLO_SW_MTN_OJOTA
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$tDdq$uqIbFqhNcbfv6Hq9Z.dNI/
+!
+no aaa new-model
+switch 1 provision ws-c3750g-24ts-1u
+system mtu routing 1950
+vtp mode transparent
+ip subnet-zero
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+spanning-tree vlan 1-4094 priority 24576
+!
+vlan internal allocation policy ascending
+!
+vlan 501
+ name HERITAGE_DRC
+!
+vlan 804
+ name NEW-SWITCH-MGT
+!
+vlan 1121
+ name MGT
+!
+vlan 1501
+ name BS_MGT
+!
+vlan 1872
+ name FBN-CAPITAL
+!
+vlan 1875
+ name STANBIC-IBTC-VTU
+!
+vlan 2057
+!
+vlan 2423
+ name STANBIC-IBTC-LL
+!
+vlan 3111
+ name StanbicPension1
+!
+vlan 3112
+ name StanbicPension2
+!
+vlan 3113
+ name StanbicPension3
+!
+vlan 3114
+ name StanbicPension4
+!
+vlan 3115
+ name StanbicPension5
+!
+vlan 3832
+ name ORANGE-VISA-OJOTA
+!
+!
+!
+!
+interface GigabitEthernet1/0/1
+ description HERITAGE BANK MTN OJOTA
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 501
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/2
+ description ORANGE VISA OJOTA
+ switchport access vlan 3832
+ switchport trunk encapsulation dot1q
+ switchport mode dot1q-tunnel
+ speed 1000
+ duplex full
+ l2protocol-tunnel cdp
+ l2protocol-tunnel stp
+ no cdp enable
+!
+interface GigabitEthernet1/0/3
+!
+interface GigabitEthernet1/0/4
+!
+interface GigabitEthernet1/0/5
+!
+interface GigabitEthernet1/0/6
+!
+interface GigabitEthernet1/0/7
+!
+interface GigabitEthernet1/0/8
+!
+interface GigabitEthernet1/0/9
+!
+interface GigabitEthernet1/0/10
+!
+interface GigabitEthernet1/0/11
+!
+interface GigabitEthernet1/0/12
+!
+interface GigabitEthernet1/0/13
+!
+interface GigabitEthernet1/0/14
+!
+interface GigabitEthernet1/0/15
+!
+interface GigabitEthernet1/0/16
+!
+interface GigabitEthernet1/0/17
+!
+interface GigabitEthernet1/0/18
+!
+interface GigabitEthernet1/0/19
+!
+interface GigabitEthernet1/0/20
+!
+interface GigabitEthernet1/0/21
+!
+interface GigabitEthernet1/0/22
+!
+interface GigabitEthernet1/0/23
+!
+interface GigabitEthernet1/0/24
+ description Trunk to LAG901 VIA MICROWAVE
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 501,502,804,1121,1501,1872,1875,3111-3115,3832
+ switchport mode trunk
+ speed 100
+ duplex full
+ spanning-tree cost 100000
+!
+interface GigabitEthernet1/0/25
+ description STANBIC IBTC BANK VIA MTN OJOTA
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 2423
+ switchport mode trunk
+ speed nonegotiate
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/26
+ description FBN CAPITAL INTERNET
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1872
+ switchport mode trunk
+ shutdown
+ speed nonegotiate
+!
+interface GigabitEthernet1/0/27
+ description STANBIC_PENSIONS_MTN
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3111-3115
+ switchport mode trunk
+ speed nonegotiate
+!
+interface GigabitEthernet1/0/28
+ description Trunk LAG901 VIA FIBER
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 501,502,804,1121,1501,1872,1875,2423,3111-3115
+ switchport trunk allowed vlan add 3832
+ switchport mode trunk
+ speed nonegotiate
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan501
+ ip address 172.16.64.11 255.255.255.248
+!
+interface Vlan804
+ ip address 10.248.246.106 255.255.255.192
+!
+interface Vlan1121
+ ip address 10.241.9.4 255.255.255.0
+!
+interface Vlan1501
+ ip address 10.248.249.153 255.255.255.0
+!
+interface Vlan1875
+ ip address 192.168.89.10 255.255.255.0
+!
+interface Vlan2423
+ description STANBIC-IBTC-BANK
+ ip address 172.30.30.247 255.255.255.0
+!
+interface Vlan3111
+ ip address 4.4.4.4 255.255.255.0
+!
+interface Vlan3112
+ ip address 10.200.100.4 255.255.255.0
+!
+interface Vlan3832
+ ip address 1.11.11.1 255.255.255.0
+!
+ip default-gateway 10.248.246.65
+ip classless
+ip http server
+!
+!
+!
+snmp-server community globacom RO
+!
+control-plane
+!
+!
+line con 0
+ password Maranello
+ login
+line vty 0 4
+ password Maranello
+ login
+line vty 5 15
+ login
+!
+end
+
+GLO_SW_MTN_OJOTA#

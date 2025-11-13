@@ -1,0 +1,573 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 13:32.12 ? ? /home/mobaxterm ? telnet 10.248.249.11
+Connected to 10.248.249.11.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+PAR901_CISCO_3750_2>en
+Password:
+PAR901_CISCO_3750_2#sh int des
+Interface                      Status         Protocol Description
+Vl1                            admin down     down
+Vl24                           up             up
+Vl59                           up             up
+Vl101                          up             up
+Vl122                          admin down     down     SMARTCITY_PH
+Vl127                          up             up
+Vl201                          up             up
+Vl400                          admin down     down
+Vl556                          up             up
+Vl803                          up             down
+Vl818                          up             up
+Vl924                          down           down     PRODECCO_INTEL_INTERNET 100M
+Vl982                          up             up
+Vl996                          up             up
+Vl1494                         up             up
+Vl1501                         up             up
+Vl1503                         up             up
+Vl1868                         down           down
+Vl1960                         down           down
+Vl2422                         up             down
+Vl2431                         up             down
+Vl2600                         up             up
+Vl3539                         up             up
+Fa0                            down           down
+Gi1/0/1                        up             up       TRUNK-TO-IPD || Port 4/2/4
+Gi1/0/2                        down           down     LA SIEN BOTTLING COMPANY
+Gi1/0/3                        down           down     trunk to NNPC ZONAL OFFICE AND MEDICAL PHC
+Gi1/0/4                        admin down     down     NETCOM-PH-LAGOS
+Gi1/0/5                        down           down     Conoil-PHC-Internet
+Gi1/0/6                        up             up       SUDELETTRA INTERNET
+Gi1/0/7                        up             up       SWITCH-TRUNK-TO-2960-SWITCH
+Gi1/0/8                        down           down     SCHLUMBERGER PHC | DICNET RADIO | 30MB
+Gi1/0/9                        up             up       DAEWO-INDORAMA-INT | 60M
+Gi1/0/10                       down           down     FREE
+Gi1/0/11                       down           down     AGIP-IPNX-VPN || AGIP-100Mbps
+Gi1/0/12                       down           down     FIREBRAND INT (CERAGON)
+Gi1/0/13                       admin down     down     GLOBENODE INTERNET
+Gi1/0/14                       down           down     NNPC PHRC SECONDARY
+Gi1/0/15                       down           down     CTL-PH-2MB
+Gi1/0/16                       up             up       JOINT MARINE-SERVICES-INT | 20M
+Gi1/0/17                       down           down     SMARTCITY PH(WAVE-FM-PH)
+Gi1/0/18                       down           down
+Gi1/0/19                       down           down     EXTERRAN INTERNET
+Gi1/0/20                       down           down     PH-WAR901-SDH || STM1
+Gi1/0/21                       down           down     MEDBURY-MEDICAL-INT | 100M
+Gi1/0/22                       down           down     PRODECO TRUNK INTEL
+Gi1/0/23                       down           down     uplink-nera 5.4g bts -GN-COMMS-INTERNEt
+Gi1/0/24                       down           down     ISN GLO1 LINK
+Gi1/1/1                        down           down
+Gi1/1/2                        down           down
+Gi1/1/3                        down           down
+Gi1/1/4                        down           down
+Te1/1/1                        down           down
+Te1/1/2                        down           down
+PAR901_CISCO_3750_2# sh run
+Building configuration...
+
+Current configuration : 10368 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service unsupported-transceiver
+!
+hostname PAR901_CISCO_3750_2
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$eh0Y$FoYzUm7HF7lnmP/NLUOog1
+!
+!
+!
+no aaa new-model
+switch 1 provision ws-c3750x-24
+system mtu routing 1950
+!
+!
+vtp mode transparent
+!
+!
+crypto pki trustpoint TP-self-signed-1621439872
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1621439872
+ revocation-check none
+ rsakeypair TP-self-signed-1621439872
+!
+!
+crypto pki certificate chain TP-self-signed-1621439872
+ certificate self-signed 01
+  3082024C 308201B5 A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 31363231 34333938 3732301E 170D3933 30333031 30303031
+  32395A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 36323134
+  33393837 3230819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  8100CA51 3C29E288 BDB6DC40 9E53BA90 AFF6E342 101DBA45 757B42C7 2D3251BC
+  67B0BDBF AF74135A 567DE10C BA1355E0 988BE6CE F579D5BD 80E6A853 E34A536F
+  BB3D5AE2 7D343071 26BA9577 044C8555 831BBE43 8BCED5E9 A49C2C06 823BBFAC
+  BCEC239F 70021B6E 8F60CBCE 826A6F50 7C8E392B BC402F46 A4F487F7 294A9CBA
+  5DAF0203 010001A3 74307230 0F060355 1D130101 FF040530 030101FF 301F0603
+  551D1104 18301682 14504152 3930315F 43495343 4F5F3337 35305F32 2E301F06
+  03551D23 04183016 80141B8D 0E028317 0919F183 750C0360 C6860618 932F301D
+  0603551D 0E041604 141B8D0E 02831709 19F18375 0C0360C6 86061893 2F300D06
+  092A8648 86F70D01 01040500 03818100 49035002 F639AE71 BD089EE4 8E19B3D8
+  334C2C91 F5BA590F 05055075 BE3AD2F7 229F146C 6EDA44BB 6F109603 E6E980A4
+  FDDC17CE E98A24ED F85C3150 C97A2CBF CEDD46B4 C842B341 A8B7ED11 E66472F3
+  554F1995 5C92A2D7 40AE4DCB C4E0E688 99AD3A16 DA3926EC 5C393D2A CD59DE2A
+  8491FD74 1D52DAD1 4654FBA2 7EB04A4E
+  quit
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+!
+!
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig (STP)
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause l2ptguard
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause pppoe-ia-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause small-frame
+errdisable recovery interval 30
+!
+vlan internal allocation policy ascending
+!
+vlan 20
+ name ctl-internet
+!
+vlan 24
+!
+vlan 59
+ name spectranet
+!
+vlan 60
+ name Firebrand
+!
+vlan 65
+ name asw-mgmt-war
+!
+vlan 100
+ name netcom-ph-lag
+!
+vlan 101
+!
+vlan 115
+ name Conoil-PHC-Internet
+!
+vlan 117
+ name ConoilWarri-Internet
+!
+vlan 119
+ name Azikel-Dredging
+!
+vlan 120
+ name SAIPEM-WAR-INTERNET
+!
+vlan 122
+ name SMARTCITY-PH
+!
+vlan 123
+ name RCC-PH-GH
+!
+vlan 124
+ name GOLDEN-LOTTO-INT
+!
+vlan 125
+ name SWIFT-TALK-CALABAR
+!
+vlan 127
+ name PRODECO-INTERNET
+!
+vlan 128
+ name MEDBURY-MEDICAL-INT
+!
+vlan 129
+!
+vlan 130
+ name GLOBENODE-INTERNET
+!
+vlan 132
+ name EXTERRAN-INTERNET
+!
+vlan 135
+ name NNPC-PHRC-SEC
+!
+vlan 137
+ name ADDAX-TEST
+!
+vlan 138
+ name SUDELETTRA
+!
+vlan 141
+ name CINFORES-INTERNET
+!
+vlan 144
+ name IS-NOVA-PH
+!
+vlan 148
+ name LA-SIEN-BOTTLING
+!
+vlan 155
+ name RED-TRANSPORT
+!
+vlan 159
+ name ANCHOR-MARIC
+!
+vlan 160
+ name SCHLUMBERGER
+!
+vlan 201
+ name SWITCH-MGT
+!
+vlan 221
+ name ADDAX_ONNE
+!
+vlan 400
+ name IPNX-AGIP
+!
+vlan 422
+ name ATLANTIC_GEODYNAMIC
+!
+vlan 556
+ name JOINT-MARINE-SER
+!
+vlan 803,818
+!
+vlan 923
+ name HYPREP-INT
+!
+vlan 982
+ name ISN_LEASED_LAGOS
+!
+vlan 996
+!
+vlan 1494
+ name BS-NERA-4-MGT
+!
+vlan 1497
+ name BS-NERA-MGT
+!
+vlan 1501
+ name -BS
+!
+vlan 1503
+ name NERA_MGT
+!
+vlan 1519
+ name DAEWO-INDORAMA-INT
+!
+vlan 2422
+ name INDORAMA-LL-LAG-PH
+!
+vlan 2431
+ name swift2-warri
+!
+vlan 2600
+ name SUDELETTRA-LL
+!
+vlan 2605
+ name PRODECO-PH-WARRI
+!
+vlan 3538
+ name NNPC_MEDICAL_PHC
+!
+vlan 3539
+ name NNPC_ZONALOFFICE_PHC
+!
+!
+!
+interface FastEthernet0
+ no ip address
+!
+interface GigabitEthernet1/0/1
+ description TRUNK-TO-IPD || Port 4/2/4
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 20,24,59,60,65,100,101,115,117,119,120,122-125
+ switchport trunk allowed vlan add 130,132,135,137,138,141,144,148,155,159,221
+ switchport trunk allowed vlan add 400,422,818,982,996,1494,1497,1503,2600,2605
+ switchport trunk allowed vlan add 3538,3539
+ switchport mode trunk
+ load-interval 30
+!
+interface GigabitEthernet1/0/2
+ description LA SIEN BOTTLING COMPANY
+ switchport access vlan 148
+ switchport mode access
+!
+interface GigabitEthernet1/0/3
+ description trunk to NNPC ZONAL OFFICE AND MEDICAL PHC
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1494,3538,3539
+ switchport mode trunk
+ l2protocol-tunnel cdp
+ l2protocol-tunnel stp
+!
+interface GigabitEthernet1/0/4
+ description NETCOM-PH-LAGOS
+ switchport access vlan 100
+ switchport mode access
+ load-interval 30
+ shutdown
+!
+interface GigabitEthernet1/0/5
+ description Conoil-PHC-Internet
+ switchport access vlan 115
+ switchport mode access
+!
+interface GigabitEthernet1/0/6
+ description SUDELETTRA INTERNET
+ switchport access vlan 2600
+ switchport mode access
+ speed 100
+ duplex full
+!
+interface GigabitEthernet1/0/7
+ description SWITCH-TRUNK-TO-2960-SWITCH
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 127,128,159,160,201,556,923,1501,1519
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/8
+ description SCHLUMBERGER PHC | DICNET RADIO | 30MB
+ switchport access vlan 160
+ switchport mode access
+ speed 100
+ duplex full
+!
+interface GigabitEthernet1/0/9
+ description DAEWO-INDORAMA-INT | 60M
+ switchport access vlan 1519
+ switchport mode access
+!
+interface GigabitEthernet1/0/10
+ description FREE
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/11
+ description AGIP-IPNX-VPN || AGIP-100Mbps
+ switchport access vlan 400
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/12
+ description FIREBRAND INT (CERAGON)
+ switchport access vlan 60
+ switchport mode access
+ duplex full
+!
+interface GigabitEthernet1/0/13
+ description GLOBENODE INTERNET
+ switchport access vlan 130
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/14
+ description NNPC PHRC SECONDARY
+ switchport access vlan 135
+ switchport mode access
+!
+interface GigabitEthernet1/0/15
+ description CTL-PH-2MB
+ switchport access vlan 20
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/16
+ description JOINT MARINE-SERVICES-INT | 20M
+ switchport access vlan 556
+ switchport mode access
+!
+interface GigabitEthernet1/0/17
+ description SMARTCITY PH(WAVE-FM-PH)
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 122,1503
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/18
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 144,982
+!
+interface GigabitEthernet1/0/19
+ description EXTERRAN INTERNET
+ switchport access vlan 132
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/20
+ description PH-WAR901-SDH || STM1
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 65,996,2431
+ switchport mode trunk
+ udld port
+!
+interface GigabitEthernet1/0/21
+ description MEDBURY-MEDICAL-INT | 100M
+ switchport access vlan 128
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/22
+ description PRODECO TRUNK INTEL
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 127,1501,2605
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/23
+ description uplink-nera 5.4g bts -GN-COMMS-INTERNEt
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 60,1497
+ switchport mode trunk
+ speed 100
+ duplex full
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/24
+ description ISN GLO1 LINK
+ switchport access vlan 24
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 982
+ duplex full
+ spanning-tree bpdufilter enable
+!
+interface GigabitEthernet1/1/1
+!
+interface GigabitEthernet1/1/2
+!
+interface GigabitEthernet1/1/3
+!
+interface GigabitEthernet1/1/4
+!
+interface TenGigabitEthernet1/1/1
+!
+interface TenGigabitEthernet1/1/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan24
+ ip address 192.168.190.2 255.255.255.0
+!
+interface Vlan59
+ ip address 172.29.29.2 255.255.255.248
+!
+interface Vlan101
+ ip address 192.168.3.6 255.255.255.0
+!
+interface Vlan122
+ description SMARTCITY_PH
+ ip address 129.205.96.153 255.255.255.252
+ shutdown
+!
+interface Vlan127
+ no ip address
+!
+interface Vlan201
+ ip address 10.244.244.22 255.255.255.240
+!
+interface Vlan400
+ ip address 100.100.100.3 255.255.255.248
+ shutdown
+!
+interface Vlan556
+ ip address 123.123.123.1 255.255.255.0
+!
+interface Vlan803
+ ip address 10.248.246.180 255.255.255.192
+!
+interface Vlan818
+ ip address 10.248.248.154 255.255.255.252
+!
+interface Vlan924
+ description PRODECCO_INTEL_INTERNET 100M
+ ip address 192.165.10.1 255.255.255.252
+!
+interface Vlan982
+ no ip address
+!
+interface Vlan996
+ ip address 172.28.28.1 255.255.255.252
+!
+interface Vlan1494
+ no ip address
+!
+interface Vlan1501
+ ip address 10.248.249.11 255.255.255.0
+!
+interface Vlan1503
+ ip address 10.155.187.28 255.255.255.248
+!
+interface Vlan1868
+ ip address 10.200.201.1 255.255.255.0
+!
+interface Vlan1960
+ ip address 192.168.4.2 255.255.255.0
+!
+interface Vlan2422
+ ip address 192.168.11.20 255.255.255.0
+!
+interface Vlan2431
+ ip address 10.215.215.101 255.255.255.252
+!
+interface Vlan2600
+ ip address 192.168.250.2 255.255.255.0
+!
+interface Vlan3539
+ no ip address
+!
+ip default-gateway 10.248.249.1
+ip classless
+ip http server
+ip http secure-server
+!
+snmp-server community globacom RO
+!
+!
+line con 0
+line vty 0 4
+ password Maranello
+ logging synchronous
+ login
+line vty 5 15
+ password Maranello
+ logging synchronous
+ login
+!
+end
+
+PAR901_CISCO_3750_2#

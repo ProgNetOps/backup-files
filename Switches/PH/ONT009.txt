@@ -1,0 +1,383 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 13:23.39 ? ? /home/mobaxterm ? telnet 10.248.249.70
+Connected to 10.248.249.70.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<ENT-ONT009-3700-SW>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-ONT009-3700-SW]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       Access bank New Mk& GTB New Mk RD
+                                                ONT003
+Eth0/0/2                      up      up       Fidelity bk Obosi-GE1_1+0RTN905-O
+                                               NT009-ONT006
+Eth0/0/3                      up      up       FCMB Obosi Nera 4MB
+Eth0/0/4                      up      up       FCMB ONITSHA1, 9A New Mk. Rd
+Eth0/0/5                      up      up       FCMB Onitsha3, 53 New MKT RD
+Eth0/0/6                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/6 Interface
+Eth0/0/7                      up      up       FBN_Electromat-Onitsha_nera-ONT02
+                                               8-Ont009-RTN91P01
+Eth0/0/8                      up      up       UBA-Bridgehead, Onitsha-Solid-003
+                                               8
+Eth0/0/9                      up      up       UNION BANK BRIGHT STREET ONITSHA
+Eth0/0/10                     up      up       TPGS-GRA-ONT81B-GE1-|ONT054-ONT00
+                                               4-ONT009
+Eth0/0/11                     *down   down     TPGS-ONITSHA5-20mbs-suspended
+Eth0/0/12                     up      up       TPGS Onitsha4-5MB
+Eth0/0/13                     down    down     Ganuwa Synergy Concepts 60Mbs Int
+                                               ernet
+Eth0/0/14                     up      up       EKULO-GRP-ONITSHA | 14M
+Eth0/0/15                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/15
+Eth0/0/16                     up      up       Swiftalk Awkuzu
+Eth0/0/17                     up      up       FBN-OGIDI(ONT021-ONT005-ONT009-RT
+                                               N950GE1-Nera|Sentient Otuocha)
+Eth0/0/18                     up      up       HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     up      up       HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     IMO-OBI PALACE ONITSHA|10MBS
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     TEST PORT
+Eth0/0/24                     down    down     MGT PORT
+GE0/0/1                       up      up       SWIFT TALK NSUGBE ONT046-ONT009 L
+                                               L|155MB
+GE0/0/2                       up      up       LINK TO IMO-OBI PALACE ONITSHA|1G
+GE0/0/3                       up      up       UNIVERSITY ON THE NIGER, UMUNYA A
+                                               NAMBRA STATE
+GE0/0/4                       up      up       TRUNK-TO DCN-M8RTR-A-GE0/2/3
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif803                     up      down     HUAWEI, Quidway Series, Vlanif803
+                                                Interface
+Vlanif1030                    up      up       HUAWEI, Quidway Series, Vlanif103
+                                               0 Interface
+Vlanif1115                    up      up       HUAWEI, Quidway Series, Vlanif111
+                                               5 Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1881                    up      up       HUAWEI, Quidway Series, Vlanif188
+                                               1 Interface
+Vlanif2999                    up      up       HUAWEI, Quidway Series, Vlanif299
+                                               9 Interface
+Vlanif3042                    up      up       HUAWEI, Quidway Series, Vlanif304
+                                               2 Interface
+[ENT-ONT009-3700-SW]    dis cur
+#
+!Software Version V100R006C05
+ sysname ENT-ONT009-3700-SW
+#
+ vlan batch 803 1030 1115 1131 1188 1243 1255 1302 1335 1344
+ vlan batch 1346 to 1347 1375 1487 1492 to 1493 1495 1497 to 1498 1500 to 1501 1568 1640 1654
+ vlan batch 1663 1676 1729 1803 1830 1881 1891 1923 1938 2898
+ vlan batch 2999 3042
+#
+vlan 1030
+ description TPGS-ONITSHA-GRA_10M
+vlan 1115
+ description GTB-Onitsha
+vlan 1131
+ description Sentient Otuocha
+vlan 1188
+ description Swifttalk Awkuzu
+vlan 1243
+ description FBN-Electro-Mat-Onitsha
+vlan 1255
+ description Firstbank Ogidi
+vlan 1302
+ description VDT-Anambra
+vlan 1335
+ description Ganuwa-Sysnergy
+vlan 1344
+ description TPGS-Onitsha-5
+vlan 1346
+ description TPGS-Onitsha-4
+vlan 1347
+ description TPGS Onitsha1-New
+vlan 1375
+ description TPGS-Onitsha-1
+vlan 1487
+ description Ceragon MGT
+vlan 1492
+ description NERA-4-GMT
+vlan 1493
+ description NERA-3-MGT
+vlan 1495
+ description Nera-MGT
+vlan 1497
+ description Nera-MGT-Vlan
+vlan 1498
+ description BS-Ceragon-Mgt
+vlan 1501
+ description BS-MGT
+vlan 1640
+ description Access-Bnak
+vlan 1654
+ description Union-Bank-Brightstreet
+vlan 1663
+ description Union-bank-Nkpor-Main
+vlan 1676
+ description RS-Lotto-Onitsha
+vlan 1729
+ description IMO OBI PALACE ONITSHA
+vlan 1803
+ description Swifttalk-Ltd-Nsugbe-LL
+vlan 1830
+ description DICNET-ONITSHA
+vlan 1881
+ description Fidelit-VPLS
+vlan 1891
+ description RS-Lotto
+vlan 1923
+ description EKULO-GRP-ONITSHA
+vlan 1938
+ description UNIVERSITY ON THE NIGER, UMUNYA ANAMBRA STATE
+vlan 2898
+ description KKONTECH IDEMILI
+vlan 2999
+ description FCMB-VPLS
+vlan 3042
+ description UBA-LEASE-Lines
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@8P:-Pd{M849$c:D}=-s:Szd0%@%@
+ local-user bsnoc privilege level 15
+ local-user bsnoc service-type telnet terminal ssh ftp
+#
+interface Vlanif1
+#
+interface Vlanif803
+#
+interface Vlanif1030
+ ip address 41.203.93.54 255.255.255.248
+#
+interface Vlanif1115
+ ip address 10.0.181.244 255.255.255.0
+#
+interface Vlanif1501
+ ip address 10.248.249.70 255.255.255.0
+#
+interface Vlanif1881
+ ip address 192.168.0.100 255.255.255.0
+#
+interface Vlanif2999
+ ip address 172.22.6.173 255.255.255.0
+#
+interface Vlanif3042
+ ip address 192.168.219.85 255.255.255.0
+#
+interface Ethernet0/0/1
+ description Access bank New Mk& GTB New Mk RD ONT003
+ port link-type trunk
+ port trunk allow-pass vlan 1640
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/2
+ description Fidelity bk Obosi-GE1_1+0RTN905-ONT009-ONT006
+ port link-type trunk
+ port trunk allow-pass vlan 1493 1881
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/3
+ description FCMB Obosi Nera 4MB
+ port link-type trunk
+ port trunk allow-pass vlan 1497 2999
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/4
+ description FCMB ONITSHA1, 9A New Mk. Rd
+ port link-type trunk
+ port trunk allow-pass vlan 2999
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/5
+ description FCMB Onitsha3, 53 New MKT RD
+ port link-type trunk
+ port trunk allow-pass vlan 1493 2999
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/6
+ port link-type trunk
+ port trunk allow-pass vlan 1131 1497
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/7
+ description FBN_Electromat-Onitsha_nera-ONT028-Ont009-RTN91P01
+ port link-type trunk
+ port trunk allow-pass vlan 1243 1493
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/8
+ description UBA-Bridgehead, Onitsha-Solid-0038
+ port link-type access
+ port default vlan 3042
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/9
+ description UNION BANK BRIGHT STREET ONITSHA
+ port link-type access
+ port default vlan 1654
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/10
+ description TPGS-GRA-ONT81B-GE1-|ONT054-ONT004-ONT009
+ port link-type access
+ port default vlan 1375
+#
+interface Ethernet0/0/11
+ description TPGS-ONITSHA5-20mbs-suspended
+ shutdown
+ port link-type access
+ port default vlan 1344
+#
+interface Ethernet0/0/12
+ description TPGS Onitsha4-5MB
+ port link-type access
+ port default vlan 1346
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/13
+ description Ganuwa Synergy Concepts 60Mbs Internet
+ port link-type access
+ port default vlan 1335
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/14
+ description EKULO-GRP-ONITSHA | 14M
+ port link-type access
+ port default vlan 1923
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/15
+ description HUAWEI, Quidway Series, Ethernet0/0/15
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/16
+ description Swiftalk Awkuzu
+ port link-type trunk
+ port trunk allow-pass vlan 1188
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/17
+ description FBN-OGIDI(ONT021-ONT005-ONT009-RTN950GE1-Nera|Sentient Otuocha)
+ port link-type trunk
+ port trunk allow-pass vlan 1131 1255 1497
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+ description IMO-OBI PALACE ONITSHA|10MBS
+ port link-type access
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+ port link-type trunk
+#
+interface Ethernet0/0/23
+ description TEST PORT
+ port link-type trunk
+ port trunk allow-pass vlan 1060 1487
+#
+interface Ethernet0/0/24
+ description MGT PORT
+ port link-type access
+ port default vlan 1501
+ stp bpdu-filter enable
+#
+interface GigabitEthernet0/0/1
+ description SWIFT TALK NSUGBE ONT046-ONT009 LL|155MB
+ port link-type access
+ port default vlan 1803
+ stp bpdu-filter enable
+#
+interface GigabitEthernet0/0/2
+ description LINK TO IMO-OBI PALACE ONITSHA|1G
+ port link-type access
+ port default vlan 1729
+ stp bpdu-filter enable
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/3
+ description UNIVERSITY ON THE NIGER, UMUNYA ANAMBRA STATE
+ port link-type access
+ port default vlan 1938
+ stp bpdu-filter enable
+ jumboframe enable 13296
+#
+interface GigabitEthernet0/0/4
+ description TRUNK-TO DCN-M8RTR-A-GE0/2/3
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+ stp bpdu-filter enable
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100000412
+ snmp-agent community read cipher %@%@v8EA=^<mlWzS5uWI@O*PZv_PqWi7,b)"43^R!T41EBt~v_SZKu'17!kR&ZhWCbL(>Z=0_\Zv%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode password
+ user privilege level 15
+ set authentication password cipher %@%@EBnx>!wL>*w1$;E!]pk',"]A!S&WMfK,a)E4Gq"fI"~K"]D,%@%@
+user-interface vty 0 4
+ authentication-mode aaa
+ idle-timeout 45 45
+ protocol inbound all
+#
+return
+[ENT-ONT009-3700-SW]
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                        ?
+
+ ? 2025-11-13 ? ? 13:29.21 ? ? /home/mobaxterm ?

@@ -1,0 +1,79 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 11:50.00 ? ? /home/mobaxterm ? telnet 10.248.246.105
+Connected to 10.248.246.105.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+MSC2_3750>en
+Password:
+MSC2_3750#sh run
+Building configuration...
+
+Current configuration : 12449 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service unsupported-transceiver
+!
+hostname MSC2_3750
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$2UYC$D/rmdQHCtZMK4.yjTHbTV.
+!
+!
+!
+no aaa new-model
+switch 1 provision ws-c3750x-24
+system mtu routing 9198
+!
+!
+vtp mode transparent
+!
+!
+crypto pki trustpoint TP-self-signed-1634166656
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1634166656
+ revocation-check none
+ rsakeypair TP-self-signed-1634166656
+!
+!
+crypto pki certificate chain TP-self-signed-1634166656
+ certificate self-signed 01
+  30820242 308201AB A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 31363334 31363636 3536301E 170D3933 30333031 30303031
+  31395A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 36333431
+  36363635 3630819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  8100A0D2 21C07931 CC5AAEBB 8D5EF499 C138E334 DEA498E2 6B13FC1E 21FA2CF1
+  339CF97E 79470C24 331B6BC9 45651CA7 551B2229 20A9840E D2621C5D 0683F436
+  EDD8F3C8 1E477303 9C535E6C 2CA90EA5 BCB34B72 55813CEC C87305A4 DFB29351
+  9EC6B3EF 63933A89 BE05CB7C 0D23CEAF 8208BD1E 459A479C EA82A6BF BCB85C99
+  68DD0203 010001A3 6A306830 0F060355 1D130101 FF040530 030101FF 30150603
+
+MSC2_3750#h int des
+help int des
+     ^
+% Invalid input detected at '^' marker.
+
+MSC2_3750#

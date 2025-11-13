@@ -1,0 +1,389 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 14:54.37 ? ? /home/mobaxterm ? telnet 10.248.246.169
+Connected to 10.248.246.169.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<ENT-UGH-003>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-UGH-003]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      down    down     ZETAWEB-UGHELLI
+Eth0/0/2                      up      up       ZETAWEB-UGHELLI | CERAGON MGT
+Eth0/0/3                      *down   down     TRANSCORP UGHELLI 20MB INTERNET
+Eth0/0/4                      down    down     BETA GLASSS UGHELLI
+Eth0/0/5                      up      up       FIRST BANK
+Eth0/0/6                      up      up       FCMB  UGHELLI
+Eth0/0/7                      up      up       NNPC NGC UGHELLI
+Eth0/0/8                      up      up       MICHAEL & CECILIA IBRU UNIVERSITY
+                                                (PORT 8)
+Eth0/0/9                      up      up       ACCESS BANK OLEH
+Eth0/0/10                     up      up       WETLAND OKWAGBE
+Eth0/0/11                     up      up       IP2AIR-UGHELLI-INT | 5M
+Eth0/0/12                     up      up       TRANSCORP CERAGON MGT
+Eth0/0/13                     up      up       UBA UGHELLI
+Eth0/0/14                     up      up       FIDELITY-UGHELLI | 16M
+Eth0/0/15                     down    down     WATCHTOWER UGHELLI
+Eth0/0/16                     down    down     HERITAGE ENERGY OIL SERVICES UGHE
+                                               LLI
+Eth0/0/17                     up      up       HERITAGE ENERGY OIL SERVICES (HEO
+                                               S) OLEH
+Eth0/0/18                     down    down     NGCOM-WARRI-INT| 55M
+Eth0/0/19                     up      up       AGIP IRRI
+Eth0/0/20                     up      up       AGIP CLOUGH CREEK
+Eth0/0/21                     down    down     AGIP KWALE
+Eth0/0/22                     down    down     AGIP IPP OKPAI
+Eth0/0/23                     up      up       LILY HOSPITAL UGHELI (LL TO WAR00
+                                               3) | DICNET RADIO
+Eth0/0/24                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/24 Interface
+GE0/0/1                       down    down     HUAWEI, Quidway Series, GigabitEt
+                                               hernet0/0/1 Interface
+GE0/0/2                       up      up       HERITAGE ENERGY OIL SERVICES UGHE
+                                               LLI | 300MB
+GE0/0/3                       up      up       Link to NGcom Ughelli
+GE0/0/4                       up      up       UPLINK TO DCN IP/MPLS(GE 1/0/2)SF
+                                               P
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif803                     up      up       HUAWEI, Quidway Series, Vlanif803
+                                                Interface
+Vlanif1216                    up      down     HUAWEI, Quidway Series, Vlanif121
+                                               6 Interface
+Vlanif1245                    up      down     HUAWEI, Quidway Series, Vlanif124
+                                               5 Interface
+Vlanif1501                    *down   down     HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1881                    up      up       HUAWEI, Quidway Series, Vlanif188
+                                               1 Interface
+Vlanif1963                    up      down     HUAWEI, Quidway Series, Vlanif196
+                                               3 Interface
+Vlanif2520                    up      down     HUAWEI, Quidway Series, Vlanif252
+                                               0 Interface
+Vlanif3007                    up      up       HUAWEI, Quidway Series, Vlanif300
+                                               7 Interface
+[ENT-UGH-003]   dis cur
+#
+!Software Version V100R006C05
+ sysname ENT-UGH-003
+#
+ vlan batch 671 to 672 678 680 803 1039 1212 1216 1245 1438 1487
+ vlan batch 1492 to 1494 1497 to 1498 1500 to 1501 1574 1640 1772 1810 1881 1938 to 1939 1963
+ vlan batch 1968 2520 2999 3007 3042 3482 3558 to 3559
+#
+ undo http server enable
+ undo http secure-server enable
+#
+vlan 671
+ description AGIP-IRRI
+vlan 672
+ description AGIP-CLOUGH-CREEK
+vlan 678
+ description AGIP-KWALE
+vlan 680
+ description AGIP-IPP
+vlan 803
+ description BS-NEW-SWITCH
+vlan 1039
+ description IP2AIR-UGHELLI-INT
+vlan 1212
+ description WETLAND-VPLS
+vlan 1216
+ description LILY-HOSPITAL
+vlan 1245
+ description FBN UGHELLI|45M
+vlan 1487
+ description ip20 management
+vlan 1492
+ description NERA-MGT-VLAN
+vlan 1493
+ description NERA_MGT3
+vlan 1494
+ description NERA-MGTVLAN
+vlan 1497
+ description n NERA-MGT-VLAN
+vlan 1498
+ description CERAGON-MGT-VLAN
+vlan 1500
+ description GLO1-CERAGON-MGT
+vlan 1501
+ description BS_MGT
+vlan 1574
+ description NGCOM-UGHELLI-INT|55Mbps
+vlan 1640
+ description Acess Bank
+vlan 1772
+ description CLOUGH CREEK
+vlan 1810
+ description MICHEAL-CECILIC-INT1
+vlan 1881
+ description FIDELITY-VSI
+vlan 1938
+ description HERITAGE-ENERGY-OLEH
+vlan 1939
+ description HERITAGE-ENERGY-UGHELLI
+vlan 1963
+ description TRANSCORP-UGHELLI
+vlan 1968
+ description ZETAWEB-UGHELLI
+vlan 2520
+ description BETAGLASS-UGHELLI
+vlan 2999
+ description FCMB-UGHELLI
+vlan 3007
+ description FIRSTBANK-UGL-STM1
+vlan 3042
+ description UBA_VPLS
+vlan 3482
+ description NNPC-NGC-UGHELLI
+vlan 3558
+ description WATCH-TOWER-UGHELLI
+vlan 3559
+ description WATCH-TOWER-OLEH
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user ope password cipher %@%@(sk74}Cqr*-#%^@3~eW<.A\{%@%@
+ local-user ope privilege level 15
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@o,!T'J#24HS=uHWj)p|".A^:%@%@
+ local-user bsnoc privilege level 15
+ local-user chuks password cipher %@%@Zl2tIcs:{'sK^^G`1{|*.AeD%@%@
+ local-user chuks privilege level 15
+ local-user moses password cipher %@%@wDP0NlGk:0e%BSOSVId3.Afw%@%@
+ local-user moses privilege level 15
+ local-user donald password cipher %@%@o5$w5|oU}1a4e(+u1/d0.Add%@%@
+ local-user donald privilege level 15
+ local-user fabian password cipher %@%@8Lj08.%\'&>V:0CWe;*@.A_w%@%@
+ local-user fabian privilege level 15
+ local-user naveen password cipher %@%@3B2!+c)C5$w=Q*>gK(X~.Aav%@%@
+ local-user naveen privilege level 15
+ local-user kelechi password cipher %@%@.5\&V={HB<z23L#(F|N4.A`9%@%@
+ local-user kelechi privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif803
+ ip address 10.248.246.169 255.255.255.192
+#
+interface Vlanif1216
+#
+interface Vlanif1245
+#
+interface Vlanif1501
+ shutdown
+ ip address 10.248.249.134 255.255.255.0
+#
+interface Vlanif1881
+ ip address 192.168.40.1 255.255.255.0
+#
+interface Vlanif1963
+#
+interface Vlanif2520
+#
+interface Vlanif3007
+ ip address 192.168.252.200 255.255.255.0
+#
+interface Ethernet0/0/1
+ description ZETAWEB-UGHELLI
+ port link-type access
+ port default vlan 1968
+#
+interface Ethernet0/0/2
+ description ZETAWEB-UGHELLI | CERAGON MGT
+ port link-type access
+ port default vlan 1500
+#
+interface Ethernet0/0/3
+ description TRANSCORP UGHELLI 20MB INTERNET
+ shutdown
+ port link-type access
+ port default vlan 1963
+#
+interface Ethernet0/0/4
+ description BETA GLASSS UGHELLI
+ port link-type access
+ port default vlan 2520
+#
+interface Ethernet0/0/5
+ description FIRST BANK
+ port link-type trunk
+ port trunk allow-pass vlan 1245 1492 3007
+ stp bpdu-filter enable
+ storm-control broadcast min-rate 50 max-rate 50
+ storm-control multicast min-rate 50 max-rate 50
+ storm-control unicast min-rate 50 max-rate 50
+#
+interface Ethernet0/0/6
+ description FCMB  UGHELLI
+ port link-type trunk
+ port trunk allow-pass vlan 1493 2999
+#
+interface Ethernet0/0/7
+ description NNPC NGC UGHELLI
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3482
+#
+interface Ethernet0/0/8
+ description MICHAEL & CECILIA IBRU UNIVERSITY (PORT 8)
+ port link-type access
+ port default vlan 1810
+#
+interface Ethernet0/0/9
+ description ACCESS BANK OLEH
+ port link-type trunk
+ port trunk allow-pass vlan 1640
+#
+interface Ethernet0/0/10
+ description WETLAND OKWAGBE
+ port link-type trunk
+ port trunk allow-pass vlan 1487 1939
+#
+interface Ethernet0/0/11
+ description IP2AIR-UGHELLI-INT | 5M
+ port link-type access
+ port default vlan 1039
+#
+interface Ethernet0/0/12
+ description TRANSCORP CERAGON MGT
+ port link-type access
+ port default vlan 1498
+#
+interface Ethernet0/0/13
+ description UBA UGHELLI
+ port link-type access
+ port default vlan 3042
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/14
+ description FIDELITY-UGHELLI | 16M
+ port link-type access
+ port default vlan 1881
+#
+interface Ethernet0/0/15
+ description WATCHTOWER UGHELLI
+ port link-type access
+ port default vlan 3559
+#
+interface Ethernet0/0/16
+ description HERITAGE ENERGY OIL SERVICES UGHELLI
+ port link-type trunk
+ port trunk allow-pass vlan 1487 1492 1939
+#
+interface Ethernet0/0/17
+ description HERITAGE ENERGY OIL SERVICES (HEOS) OLEH
+ port link-type trunk
+ port trunk allow-pass vlan 1492 1938
+#
+interface Ethernet0/0/18
+ description NGCOM-WARRI-INT| 55M
+ port link-type trunk
+ port trunk allow-pass vlan 1497 1574
+#
+interface Ethernet0/0/19
+ description AGIP IRRI
+ port link-type access
+ port default vlan 671
+#
+interface Ethernet0/0/20
+ description AGIP CLOUGH CREEK
+ port link-type access
+ port default vlan 672
+#
+interface Ethernet0/0/21
+ description AGIP KWALE
+ port link-type access
+ port default vlan 678
+#
+interface Ethernet0/0/22
+ description AGIP IPP OKPAI
+ port link-type access
+ port default vlan 680
+#
+interface Ethernet0/0/23
+ description LILY HOSPITAL UGHELI (LL TO WAR003) | DICNET RADIO
+ port link-type access
+ port default vlan 1216
+#
+interface Ethernet0/0/24
+ port link-type access
+ port default vlan 803
+#
+interface GigabitEthernet0/0/1
+ port link-type trunk
+ port trunk allow-pass vlan 803
+#
+interface GigabitEthernet0/0/2
+ description HERITAGE ENERGY OIL SERVICES UGHELLI | 300MB
+ port link-type trunk
+ port trunk allow-pass vlan 1487 1492 1939
+#
+interface GigabitEthernet0/0/3
+ description Link to NGcom Ughelli
+ port link-type trunk
+ port trunk allow-pass vlan 1497 1574
+ jumboframe enable 13296
+ port media type copper
+     undo negotiation auto
+ combo-port auto
+#
+interface GigabitEthernet0/0/4
+ description UPLINK TO DCN IP/MPLS(GE 1/0/2)SFP
+ port link-type trunk
+ port trunk allow-pass vlan 671 to 672 678 680 803 1039 1212 1216 1245 1487 1492 to 1494
+ port trunk allow-pass vlan 1497 to 1498 1500 to 1501 1574 1640 1810 1881 1938 to 1939 1963 1968 2520
+ port trunk allow-pass vlan 2999 3007 3042 3482 3558 to 3559
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.129
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100005045
+ snmp-agent community read cipher %@%@-!h"5aCB[(9yf33^B`_HS}`63p"S76.>$2/Z\^1H39Q9}`9Sf3#>7V8k^96*6$A75@8%`BS}%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[ENT-UGH-003]

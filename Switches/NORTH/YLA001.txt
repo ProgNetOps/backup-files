@@ -1,0 +1,535 @@
+            +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 14:42.34 ? ? /home/mobaxterm ?                              telnet 10.248.246.207
+Connected to 10.248.246.207.
+Maranello
+en
+Maranello
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+GLO1-YLA004-SWITCH>en
+Password:
+GLO1-YLA004-SWITCH#sh int dent des
+                            ^
+% Invalid input detected at '^' marker.
+
+GLO1-YLA004-SWITCH#sh run
+Building configuration...
+
+Current configuration : 10543 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+service unsupported-transceiver
+!
+hostname GLO1-YLA004-SWITCH
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$fm5Z$4wnJrx896s8f6aCBPzoep/
+enable password 7 132816000A0201262735
+!
+!
+!
+no aaa new-model
+system mtu routing 1960
+vtp mode transparent
+!
+!
+no ip domain-lookup
+!
+!
+crypto pki trustpoint TP-self-signed-591135616
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-591135616
+ revocation-check none
+ rsakeypair TP-self-signed-591135616
+!
+!
+crypto pki certificate chain TP-self-signed-591135616
+ certificate self-signed 01
+  30820249 308201B2 A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  30312E30 2C060355 04031325 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 35393131 33353631 36301E17 0D393330 33303130 30303135
+  385A170D 32303031 30313030 30303030 5A303031 2E302C06 03550403 1325494F
+  532D5365 6C662D53 69676E65 642D4365 72746966 69636174 652D3539 31313335
+  36313630 819F300D 06092A86 4886F70D 01010105 0003818D 00308189 02818100
+  CCFA60AF 3DD86FE4 D30E12D9 83A16323 2AAEF4F0 D6450AFA 76FE0E29 7B28C721
+  2B30E844 499536EC 59F224F0 B6B873A8 27C1DCE3 55C6A9BC 69EE2DAE BA0F3792
+  AF46F392 3D8EC7B6 2225C266 133A2860 8609DAB9 F6ED0FE4 A35FA193 0B091426
+  7514260D 9EE1B902 3F2AE970 5EE41469 B1176C32 92924A25 2D81C876 B86E461F
+  02030100 01A37330 71300F06 03551D13 0101FF04 05300301 01FF301E 0603551D
+  11041730 15821347 4C4F312D 594C4130 30342D53 57495443 482E301F 0603551D
+  23041830 16801440 CA47A5D5 EF18E2E7 9BAFD170 69C1D33A 69EA2B30 1D060355
+  1D0E0416 041440CA 47A5D5EF 18E2E79B AFD17069 C1D33A69 EA2B300D 06092A86
+  4886F70D 01010405 00038181 002B57ED FC5C3F51 7FB228E2 3B853420 46B89EE2
+  664EC97B 7895DDDB 181A6D35 26BA1023 C4A2FBE8 C83C8AF1 61D3BDB1 194523DD
+  3633C7BF 57F89522 98F012F9 BC2A0A0C D8F6D6E0 27CBC9F2 6F2CE972 1DD6AEFB
+  4E4446DF 18B5BB0B 9F0E2E3D 56441EAE F4779EB5 2B865EB6 DC739CA2 FC9E22E1
+  59079ED6 3CF7BDD0 CB00FB4E 27
+  quit
+!
+!
+!
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig (STP)
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause pppoe-ia-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause small-frame
+errdisable recovery interval 30
+port-channel load-balance src-dst-mac
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+no spanning-tree vlan 3645
+spanning-tree vlan 1500 priority 24576
+!
+vlan internal allocation policy ascending
+!
+vlan 506
+ name ADAMAWA-STATE-POLY
+!
+vlan 507
+ name HEPHZIBAH-ADA-ST-COL
+!
+vlan 508
+ name SIGMA_PENSIONS
+!
+vlan 802
+ name SWITCH-MGT
+!
+vlan 990
+ name voda-yola-abj
+!
+vlan 1172
+ name AMERICAN-UNIV-NGERIA
+!
+vlan 1390
+ name HYPERIA_YOLA
+!
+vlan 1417
+ name BCN_YOLA
+!
+vlan 1423
+ name jaiz-bank
+!
+vlan 1435
+ name voda56-guyuk
+!
+vlan 1436
+ name voda56-gyawana
+!
+vlan 1440
+ name voda56-demsa
+!
+vlan 1445
+!
+vlan 1447
+ name voda56-donga
+!
+vlan 1488
+ name CERAGON-IP20-RADIO
+!
+vlan 1493
+ name BS-NERA-3-MGT
+!
+vlan 1494
+ name BS-NERA-NNPC
+!
+vlan 1495
+ name BS-NERA-2-MGT
+!
+vlan 1497
+ name BS-NERA-MGT
+!
+vlan 1500
+ name ceragon-mgmt
+!
+vlan 1501
+ name MGMT
+!
+vlan 1503
+ name NERA_MGT
+!
+vlan 1600
+ name dotmac-TECH
+!
+vlan 1622
+ name NDIC-YOLA
+!
+vlan 1640
+ name ACCESS-VPLS
+!
+vlan 1761
+ name KEYSTONEBANK_BIU
+!
+vlan 1824
+ name NBC-YOLA
+!
+vlan 1875
+ name ABTI_INTERNET
+!
+vlan 1876
+ name WEB_TRADE_YOLA
+!
+vlan 1877
+ name DANGOTE-YOLA
+!
+vlan 1880
+ name FIRS-JALINGO-MPLS
+!
+vlan 1895
+ name TPGS-WACOT
+!
+vlan 1975
+ name UNION-MICHIKA
+!
+vlan 1995
+ name UNION-YOLA
+!
+vlan 2183
+ name GLOSHOP-YOLA
+!
+vlan 2203
+ name cool-yola-abj
+!
+vlan 2204
+ name cool-jalingo
+!
+vlan 2259
+ name who-yola
+!
+vlan 2385
+ name DPR-YOLA
+!
+vlan 2423
+ name STANBIC-BANK-YOLA
+!
+vlan 2812
+ name SHELL-YOLA-UNIVER
+!
+vlan 2814
+ name SKYMAX-INTERNET
+!
+vlan 2969
+ name INFRA-FOCUS-UNI-TECH
+!
+vlan 3034
+ name Sterling_Bank_Jimeta
+!
+vlan 3035
+!
+vlan 3042
+ name UBA-VPLS
+!
+vlan 3122
+ name DOTMAC-TECH
+!
+vlan 3124
+ name SENT-TAJ-YOLA
+!
+vlan 3435
+ name NNPC-DEPOT-YOLA
+!
+vlan 3451
+ name NNPC-RET-STAT-YOLA
+!
+vlan 3644
+ name NNPC_PUM_STATION_BIU
+!
+vlan 3645
+ name dotmac
+!
+vlan 4008
+ name VDT-YOLA-INTERNET
+!
+!
+!
+interface Port-channel5
+ shutdown
+!
+interface FastEthernet0/1
+ description AMERICAN-UNI-YOLA
+ switchport access vlan 1875
+ switchport mode access
+ load-interval 30
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet0/2
+ description AME-UNI-CERAGON-MGMT
+ switchport access vlan 1390
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/3
+ description DPR YOLA
+ switchport access vlan 2385
+ switchport mode access
+!
+interface FastEthernet0/4
+ description NNPC-RETAIL-STATION-YOLA
+ switchport access vlan 3451
+ switchport mode access
+ speed 100
+ duplex full
+!
+interface FastEthernet0/5
+ description Sterling_Bank_Jimeta
+ switchport access vlan 3034
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/6
+ description GLOSHOP YOLA
+ switchport access vlan 2183
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/7
+ description VODACOM-YOLA-ABUJA
+ switchport access vlan 990
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ spanning-tree guard root
+!
+interface FastEthernet0/8
+ description VODACOM-YOLA-CERAGON-MGMT || TO-YLA514
+ switchport access vlan 1500
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+!
+interface FastEthernet0/9
+ description COOLLINK-YOLA
+ switchport access vlan 2203
+ switchport trunk allowed vlan 1-2202,2204-4094
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet0/10
+ description COOLLINK-YOLA-CERAGON-MGMT
+ switchport access vlan 1500
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/11
+ description SIGMA PENSION ABUJA-YOLA
+ switchport trunk allowed vlan 508,1503
+ switchport mode trunk
+!
+interface FastEthernet0/12
+ description VDT YOLA INTERNET 100M
+ switchport trunk allowed vlan 4008
+ switchport mode trunk
+ duplex full
+!
+interface FastEthernet0/13
+ description VDT YOLA INTERNET 100M | NEW PORT
+ switchport trunk allowed vlan 4008
+ switchport mode trunk
+ duplex full
+!
+interface FastEthernet0/14
+ description JAIZ-BANK || 2Mbps
+ switchport access vlan 1423
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/15
+ description JAIZ-BANK-CERAGON-MGMT
+ switchport access vlan 1500
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/16
+ description UBA JIMETA GALADIMA - CERAGONIP20
+ switchport trunk allowed vlan 1488,3042
+ switchport mode trunk
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/17
+ description STANBIC IBTC BANK YOLA-IOTECH-RADIO
+ switchport access vlan 2423
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/18
+ description SENT-TAJ-YOLA
+ switchport access vlan 3124
+ switchport mode access
+!
+interface FastEthernet0/19
+ description SENTIENT YOLA | 2M
+ switchport access vlan 3124
+ switchport mode access
+ spanning-tree bpdufilter enable
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/20
+ description YOLA DEPOT
+ switchport trunk allowed vlan 1494,3435
+ switchport mode trunk
+!
+interface FastEthernet0/21
+ description NDIC YOLA
+ switchport trunk allowed vlan 1493,1622
+ switchport mode trunk
+ speed 100
+ duplex full
+ spanning-tree portfast
+!
+interface FastEthernet0/22
+ description TPGS-WACOT-YOLA
+ switchport access vlan 1895
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/23
+ description UNION BANK MICHIKA | NNPC DEPOT YOLA | UBA MUBI |NNPC PUMP STATION BIU
+ switchport trunk allowed vlan 1494,1975,3042,3435,3644
+ switchport mode trunk
+!
+interface FastEthernet0/24
+ description BCN-YOLA-INTERNET || 10Mbps
+ switchport trunk allowed vlan 1417,1503
+ switchport mode trunk
+!
+interface GigabitEthernet0/1
+ description AMERICAN-UNIV-NIGERIA
+ switchport trunk allowed vlan 1172,1488
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ description DCN-MPLS-UPLINK-YLA004-M8 || PORT-GE0/1/9
+ switchport trunk allowed vlan 506-508,802,990,1172,1390,1417,1423,1435,1440
+ switchport trunk allowed vlan add 1445,1488,1493-1495,1497,1500,1501,1503,1600
+ switchport trunk allowed vlan add 1622,1640,1761,1824,1875-1877,1880,1895,1975
+ switchport trunk allowed vlan add 1995,2183,2203,2204,2259,2385,2423,2812,2814
+ switchport trunk allowed vlan add 2969,3034,3035,3042,3123,3124,3435,3451,3644
+ switchport trunk allowed vlan add 3645,4008
+ switchport mode trunk
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan50
+ ip address 172.25.25.2 255.255.255.248
+!
+interface Vlan508
+ ip address 10.100.200.4 255.255.255.0
+!
+interface Vlan802
+ ip address 10.248.246.207 255.255.255.192
+!
+interface Vlan1440
+ ip address 10.248.240.70 255.255.255.248
+!
+interface Vlan1488
+ no ip address
+!
+interface Vlan1493
+ ip address 10.155.200.204 255.255.255.0
+!
+interface Vlan1495
+ no ip address
+!
+interface Vlan1500
+ no ip address
+!
+interface Vlan1501
+ ip address 10.248.249.65 255.255.255.0
+!
+interface Vlan1503
+ ip address 10.155.187.61 255.255.255.248
+!
+interface Vlan1600
+ no ip address
+!
+interface Vlan1622
+ ip address 222.222.222.1 255.255.255.0
+!
+interface Vlan1640
+ no ip address
+!
+interface Vlan1875
+ ip address 197.211.45.180 255.255.255.248
+!
+interface Vlan1880
+ ip address 172.31.32.146 255.255.255.248
+!
+interface Vlan1995
+ no ip address
+!
+interface Vlan2259
+ ip address 197.211.34.164 255.255.255.248
+ shutdown
+!
+interface Vlan3034
+ ip address 192.185.101.117 255.255.255.0
+!
+interface Vlan3645
+ ip address 192.168.168.2 255.255.255.248
+!
+interface Vlan4008
+ no ip address
+!
+ip default-gateway 10.248.246.193
+ip http server
+ip http secure-server
+snmp-server community globacom RO
+!
+line con 0
+ password 7 0029121405550E0A032E
+ login
+line vty 0 4
+ password 7 153F0A1E05242E28243C
+ logging synchronous
+ login
+line vty 5 15
+ password 7 153F0A1E05242E28243C
+ logging synchronous
+ login
+!
+end
+
+GLO1-YLA004-SWITCH#

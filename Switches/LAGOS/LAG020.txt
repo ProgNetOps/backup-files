@@ -1,0 +1,348 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:19.24 ? ? /home/mobaxterm ? telnet 10.248.246.4
+Connected to 10.248.246.4.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-LAG-020-AJEGUNLE>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-LAG-020-AJEGUNLE]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      down    down     ALLIANCE-GLOBAL-INT
+Eth0/0/2                      *down   down     SNAKEISLAND_COOLFM
+Eth0/0/3                      up      up       CHICASON1-FLOURMILLS
+Eth0/0/4                      up      up       SAHARA IJORA TO IBAFON FARM
+Eth0/0/5                      *down   down     PTML INTERNET   |50MB
+Eth0/0/6                      *down   down     CONNECTION TO STERLING_BANK_AJEGU
+                                               NLE
+Eth0/0/7                      up      up       TPGS APAPA-3 45MB INTERNET
+Eth0/0/8                      *down   down     SEVEN UP HQ IJORA NERA RADIO BACK
+                                                UP
+Eth0/0/9                      *down   down     SEVEN UP NERA RADIO MANGAMENT POR
+                                               T
+Eth0/0/10                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/10 Interface
+Eth0/0/11                     up      up       ISN APAPA
+Eth0/0/12                     down    down     SGS INSPECTION APAPA
+Eth0/0/13                     *down   down     FLOURMILLS INTERNET
+Eth0/0/14                     down    down     SEVEN UP IJORA FIBER LM
+Eth0/0/15                     down    down     TPGS-APAPA-INT8M-CUST-LM
+Eth0/0/16                     down    down     BESTAF-SIP-VOICE
+Eth0/0/17                     down    down     BESTAF-SIP-VOICE
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     testport
+GE0/0/1                       up      up       LINK_TO_DCN_MPLS UPE GE1/0/5
+GE0/0/2                       up      up       JOTNA LTD INTERNET | 120MB| FIBER
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif313                     up      up       HUAWEI, Quidway Series, Vlanif313
+                                                Interface
+Vlanif805                     up      up       HUAWEI, Quidway Series, Vlanif805
+                                                Interface
+Vlanif1497                    up      down     HUAWEI, Quidway Series, Vlanif149
+                                               7 Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1996                    up      down     HUAWEI, Quidway Series, Vlanif199
+                                               6 Interface
+Vlanif3034                    up      up       HUAWEI, Quidway Series, Vlanif303
+                                               4 Interface
+[BS-LAG-020-AJEGUNLE]    dis cur
+#
+!Software Version V100R006C05
+ sysname BS-LAG-020-AJEGUNLE
+#
+ vlan batch 215 313 505 805 906 1489 1492 1497 1501 to 1503 1518
+ vlan batch 1593 1609 1618 1715 1753 1983 1996 2325 2446 2462
+ vlan batch 2468 2553 3034 3128 3157
+#
+ stp mode stp
+ stp instance 0 root primary
+#
+vlan 215
+ description FIRS-ORILE
+vlan 313
+ description CHICASON1-FLOURMILLS
+vlan 505
+ description ISN_APAPA
+vlan 805
+ description NEW-SWITCH-MGT
+vlan 906
+ description SEVEN-UPN-APN
+vlan 1489
+ description CERAGON-MGT2
+vlan 1492
+ description BS-NERA-4-MGT
+vlan 1497
+ description NERA_RADIO_MGT
+vlan 1501
+ description SWITCH_MGT
+vlan 1502
+ description RADIO_MGT
+vlan 1503
+ description NERA_MGT
+vlan 1518
+ description BESTAF-SIP-VOICE
+vlan 1593
+ description JOTNA- FIBER
+vlan 1609
+ description COOLLINK_FACEBOOK_SURULERE
+vlan 1618
+ description isn-apapa-new
+vlan 1715
+ description TPGS-APAPA-INT8M-CUST-LM
+vlan 1753
+ description TPGS APAPA-3
+vlan 1983
+ description SGS-INSPECTION-APAPA
+vlan 1996
+ description PTML INTERNET
+vlan 2325
+ description SEVENUP-IJORA-HQ-INT
+vlan 2446
+ description FLOURMILLS SUNTI FARMS 4M LL
+vlan 2462
+ description FIRS-APAPA
+vlan 2468
+ description SEVEN-UP-VPLS
+vlan 2553
+ description FLOURMILLS-APAPA
+vlan 3034
+ description STERLING_BANK
+vlan 3128
+ description SNAKEISLAND_COOLFM
+vlan 3157
+ description SAHARA-VPLS
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user ben password cipher %@%@X)`sH4Rg6R{,JY/-2m3SWCB{%@%@
+ local-user ben privilege level 3
+ local-user ope password cipher %@%@:w9'71,oe*H;i}.HkUjEWC2'%@%@
+ local-user ope privilege level 3
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@0$'=B<quSKYJ.g--SMZ/WC~r%@%@
+ local-user bsnoc privilege level 3
+ local-user moses password cipher %@%@w58>X&QW1%5lETJjD)j@WC7P%@%@
+ local-user moses privilege level 3
+ local-user donald password cipher %@%@i2O,T;\VA7'VP5*d/<=&WC9U%@%@
+ local-user donald privilege level 3
+ local-user fabian password cipher %@%@cM`8&$~D=7dY@7=,KLWUWC4W%@%@
+ local-user fabian privilege level 3
+ local-user naveen password cipher %@%@!@!^E&,Vi~HXzA4P|w6IWC5U%@%@
+ local-user naveen privilege level 3
+ local-user solarch password cipher %@%@-:*eNSb0EGgFyuSD73.G]l=K%@%@
+ local-user solarch privilege level 3
+ local-user adewunmi password cipher %@%@G<B{7w|%/Kv\Q|K4oun4WC;^%@%@
+ local-user adewunmi privilege level 3
+ local-user rthlagos password cipher %@%@"wAfP4(J+@V=5WYb~SH4]l<<%@%@
+ local-user rthlagos privilege level 3
+#
+interface Vlanif1
+#
+interface Vlanif313
+ ip address 100.100.100.10 255.255.255.0
+#
+interface Vlanif805
+ ip address 10.248.246.4 255.255.255.192
+#
+interface Vlanif1497
+#
+interface Vlanif1501
+ ip address 10.248.249.221 255.255.255.0
+#
+interface Vlanif1996
+#
+interface Vlanif3034
+ ip address 192.185.101.200 255.255.255.0
+#
+interface Ethernet0/0/1
+ description ALLIANCE-GLOBAL-INT
+ port link-type trunk
+ port trunk allow-pass vlan 1492 1826
+#
+interface Ethernet0/0/2
+ description SNAKEISLAND_COOLFM
+ shutdown
+ port link-type access
+ port default vlan 3128
+#
+interface Ethernet0/0/3
+ description CHICASON1-FLOURMILLS
+ port link-type access
+ port default vlan 313
+#
+interface Ethernet0/0/4
+ description SAHARA IJORA TO IBAFON FARM
+ port link-type access
+ port default vlan 3157
+#
+interface Ethernet0/0/5
+ description PTML INTERNET   |50MB
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1489 1996
+#
+interface Ethernet0/0/6
+ description CONNECTION TO STERLING_BANK_AJEGUNLE
+ shutdown
+ port link-type access
+ port default vlan 3034
+#
+interface Ethernet0/0/7
+ description TPGS APAPA-3 45MB INTERNET
+ port link-type access
+ port default vlan 1753
+#
+interface Ethernet0/0/8
+ description SEVEN UP HQ IJORA NERA RADIO BACK UP
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 906 1497 1501 2325 2468
+ stp root-protection
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/9
+ description SEVEN UP NERA RADIO MANGAMENT PORT
+ shutdown
+ port link-type access
+ port default vlan 1497
+#
+interface Ethernet0/0/10
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/11
+ description ISN APAPA
+ port link-type trunk
+ port trunk allow-pass vlan 505 1503 1618
+#
+interface Ethernet0/0/12
+ description SGS INSPECTION APAPA
+ port link-type trunk
+ port trunk allow-pass vlan 1497 1983
+#
+interface Ethernet0/0/13
+ description FLOURMILLS INTERNET
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1492 2446 2553
+#
+interface Ethernet0/0/14
+ description SEVEN UP IJORA FIBER LM
+ port link-type trunk
+ port trunk allow-pass vlan 906 1501 2325 2468
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/15
+ description TPGS-APAPA-INT8M-CUST-LM
+ port link-type access
+ port default vlan 1715
+#
+interface Ethernet0/0/16
+ description BESTAF-SIP-VOICE
+ port link-type access
+ port default vlan 1518
+#
+interface Ethernet0/0/17
+ description BESTAF-SIP-VOICE
+ port link-type access
+ port default vlan 1518
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ description testport
+ port link-type access
+ port default vlan 1501
+#
+interface GigabitEthernet0/0/1
+ description LINK_TO_DCN_MPLS UPE GE1/0/5
+ port link-type trunk
+ port trunk allow-pass vlan 23 215 313 505 805 906 1489 1492 1497 1501 to 1503
+ port trunk allow-pass vlan 1518 1592 to 1593 1609 1618 1715 1753 1983 1996 2325 2446
+ port trunk allow-pass vlan 2462 2468 2553 3034 3048 3128 3157
+#
+interface GigabitEthernet0/0/2
+ description JOTNA LTD INTERNET | 120MB| FIBER
+ port link-type access
+ port default vlan 1593
+ port media type fiber
+     undo negotiation auto
+ combo-port auto
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100002A22
+ snmp-agent community read cipher %@%@XmAqJ)5v&Z-S*/-);5SJ`E/O<odgHqM"QNDSTq,!:6oOE/R`U"Pg1'\LMUbYO|GIZ(f&/[`E%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[BS-LAG-020-AJEGUNLE]

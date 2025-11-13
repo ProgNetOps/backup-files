@@ -1,0 +1,394 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 14:54.40 ? ? /home/mobaxterm ? telnet 10.248.246.199
+Connected to 10.248.246.199.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-SOK-013>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-SOK-013]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      down    down     UNION BANK SOKOTO MAIN
+Eth0/0/2                      up      up       EURO MEGA 15MB LEASED LINE TO LAG
+                                               OS
+Eth0/0/3                      *down   down     NBC SOKOTO
+Eth0/0/4                      up      up       TPGS-DEEL3
+Eth0/0/5                      down    down     UBA ALIU JORDI ROAD, SOKOTO | IOT
+                                               ECH
+Eth0/0/6                      up      up       ACCESS BANK (OLD DIAMOND) SOKOTO
+Eth0/0/7                      up      up       UBA 10 KANO ROAD, SOKOTO | IOTECH
+Eth0/0/8                      down    down     DPR SOKOTO
+Eth0/0/9                      up      up       BS CERAGON MGT
+Eth0/0/10                     up      up       NDIC  SOKOTO
+Eth0/0/11                     up      up       STANBIC IBTC BANK SOKOTO | 4MB
+Eth0/0/12                     down    down     NNPC RETAIL STATION SOKOTO
+Eth0/0/13                     *down   down     free
+Eth0/0/14                     up      up       GLOWORLD SOKOTO
+Eth0/0/15                     up      up       ACCESS-BANK-GWADABAWA-SOKOTO
+Eth0/0/16                     *down   down     INFRA-FOCUS SOKOTO STAE UNIVERSIT
+                                               Y
+Eth0/0/17                     down    down     HOMELSAT-NIG-ARMY-SOKOTO | 100MB
+Eth0/0/18                     *down   down     ACCESS-BANK-SHAGARI
+Eth0/0/19                     up      up       SWIFTTALK-SOKOTO | 10M
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     up      up       TRUNK TO GLO1 CISCO 2960 SWITCH
+GE0/0/1                       up      up       UPLINK TO DCN IP/MPLS GE 1/1/4(UP
+                                               E-M8-GE0/1/8)
+GE0/0/2                       up      up       VDT SOKOTO INTERNET | Ge PORT | N
+                                               umber27 On Switch
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif802                     up      up       HUAWEI, Quidway Series, Vlanif802
+                                                Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1751                    up      down     HUAWEI, Quidway Series, Vlanif175
+                                               1 Interface
+Vlanif1883                    up      down     HUAWEI, Quidway Series, Vlanif188
+                                               3 Interface
+Vlanif1899                    up      down     HUAWEI, Quidway Series, Vlanif189
+                                               9 Interface
+Vlanif2423                    up      up       HUAWEI, Quidway Series, Vlanif242
+                                               3 Interface
+Vlanif2475                    up      up       HUAWEI, Quidway Series, Vlanif247
+                                               5 Interface
+[BS-SOK-013]   dis cur
+#
+!Software Version V100R006C03
+ sysname BS-SOK-013
+#
+ vlan batch 100 150 802 910 1096 1136 1282 1412 1425 1493 to 1495
+ vlan batch 1497 to 1498 1500 to 1503 1549 1582 to 1583 1621 1630 1640 1662 1751 1883
+ vlan batch 1899 1991 to 1992 2002 2383 2423 2475 2666 2921 to 2922 3035 3042
+ vlan batch 3050 3126 3408 3414 3449
+#
+ lldp enable
+#
+ undo http server enable
+#
+vlan 100
+ description asw-mgmt-glo1
+vlan 150
+ description who-internet
+vlan 802
+ description SWITCH-MGT
+vlan 910
+ description DPR-VPLS
+vlan 1096
+ description TPGS-DEEL3
+vlan 1136
+ description SWIFTTALK-RAD-MGT
+vlan 1282
+ description HOMELSAT-NIG.ARMY-SOKOTO
+vlan 1412
+ description BCN_SOKOTO
+vlan 1425
+ description WHO-SOKOTO
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1494
+ description NNPC-NERA-MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1498
+ description BS-CERAGON-MGT
+vlan 1500
+ description ceragon-mgmt
+vlan 1501
+ description BS-MGT
+vlan 1502
+ description huawei-mgmt
+vlan 1503
+ description NERA_MGT
+vlan 1549
+ description NBC-SOKOTO
+vlan 1582
+ description NDLEA-1
+vlan 1583
+ description NDLEA-2
+vlan 1621
+ description NDIC-SOKOTO
+vlan 1630
+ description TIFFNET_SOKOTO
+vlan 1640
+ description ACCESS-VPLS
+vlan 1662
+ description FIRS-SOKOTO
+vlan 1751
+ description INFRA-FOCUS-SOKOTO-STATE-UNI
+vlan 1883
+ description WACOT-SOK
+vlan 1899
+ description VDT-SOKOTO-INTERNET
+vlan 1991
+ description UNION-SOKOTO-MAIN
+vlan 1992
+ description UNION-SOKOTO-MARKET
+vlan 2002
+ description SWIFTTALK-SOKOTO
+vlan 2383
+ description DPR-INTERNET
+vlan 2423
+ description STANBIC-BANK-VPLS
+vlan 2475
+ description EURO MEGA SOKOTO
+vlan 2666
+ description VODACOM-SOKOTO
+vlan 2921
+ description GLOSHOP-SOKOTO
+vlan 2922
+ description dcn-SUPER
+vlan 3035
+ description SKYE_BANK SOKOTO
+vlan 3042
+ description UBA SOKOTO
+vlan 3050
+ description TA BANK
+vlan 3126
+ description DIAMOND-BANK-LINKS
+vlan 3408
+ description DCN-SUPERVISION
+vlan 3414
+ description HERITAGE-SOKOTO
+vlan 3449
+ description NNPC-RETAIL-ST-SOK
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %$%$I6.ASV)hJET,p"Dn.YM%3aXO%$%$
+ local-user admin service-type http
+ local-user bsnoc password cipher %$%$}v8.Voq`bLOm=SR^i*X-bzqh%$%$
+ local-user bsnoc privilege level 15
+ local-user bsnoc service-type telnet terminal ftp
+ local-user huawei password cipher %$%$/)2-:/1bwOZ/__@c97]NS6-$%$%$
+ local-user huawei privilege level 15
+ local-user huawei service-type telnet
+#
+interface Vlanif1
+#
+interface Vlanif802
+ ip address 10.248.246.199 255.255.255.192
+#
+interface Vlanif1501
+ ip address 10.248.249.147 255.255.255.0
+#
+interface Vlanif1751
+#
+interface Vlanif1883
+#
+interface Vlanif1899
+#
+interface Vlanif2423
+ ip address 172.30.30.122 255.255.255.0
+#
+interface Vlanif2475
+ ip address 172.200.200.26 255.255.255.248
+#
+interface Ethernet0/0/1
+ description UNION BANK SOKOTO MAIN
+ port link-type access
+ port default vlan 1991
+#
+interface Ethernet0/0/2
+ description EURO MEGA 15MB LEASED LINE TO LAGOS
+ port link-type access
+ port default vlan 2475
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/3
+ description NBC SOKOTO
+ shutdown
+ port link-type access
+ port default vlan 1549
+#
+interface Ethernet0/0/4
+ description TPGS-DEEL3
+ port link-type access
+ port default vlan 1096
+#
+interface Ethernet0/0/5
+ description UBA ALIU JORDI ROAD, SOKOTO | IOTECH
+ port link-type access
+ port default vlan 3042
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/6
+ description ACCESS BANK (OLD DIAMOND) SOKOTO
+ port link-type access
+ port default vlan 1640
+#
+interface Ethernet0/0/7
+ description UBA 10 KANO ROAD, SOKOTO | IOTECH
+ port link-type access
+ port default vlan 3042
+#
+interface Ethernet0/0/8
+ description DPR SOKOTO
+ port link-type trunk
+ port trunk allow-pass vlan 910 1497 2383
+#
+interface Ethernet0/0/9
+ description BS CERAGON MGT
+ port link-type access
+ port default vlan 1498
+#
+interface Ethernet0/0/10
+ description NDIC  SOKOTO
+ port link-type trunk
+ port trunk allow-pass vlan 1495 1621
+#
+interface Ethernet0/0/11
+ description STANBIC IBTC BANK SOKOTO | 4MB
+ port link-type access
+ port default vlan 2423
+#
+interface Ethernet0/0/12
+ description NNPC RETAIL STATION SOKOTO
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3449
+#
+interface Ethernet0/0/13
+ description free
+ shutdown
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/14
+ description GLOWORLD SOKOTO
+ port link-type trunk
+ port trunk allow-pass vlan 2921 to 2922 3408
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/15
+ description ACCESS-BANK-GWADABAWA-SOKOTO
+ port link-type access
+ port default vlan 1640
+ qos lr outbound cir 6144 cbs 768000
+ qos lr inbound cir 6144 cbs 768000
+#
+interface Ethernet0/0/16
+ description INFRA-FOCUS SOKOTO STAE UNIVERSITY
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1497 1751
+#
+interface Ethernet0/0/17
+ description HOMELSAT-NIG-ARMY-SOKOTO | 100MB
+ port link-type access
+ port default vlan 1282
+#
+interface Ethernet0/0/18
+ description ACCESS-BANK-SHAGARI
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1640
+ undo negotiation auto
+ speed 100
+ qos lr outbound cir 6144 cbs 768000
+ qos lr inbound cir 6144 cbs 768000
+#
+interface Ethernet0/0/19
+ description SWIFTTALK-SOKOTO | 10M
+ port link-type trunk
+ port trunk allow-pass vlan 1136 2002
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ description TRUNK TO GLO1 CISCO 2960 SWITCH
+ port link-type trunk
+ port trunk allow-pass vlan 3 251 258 910 1412 1425 1493 to 1495 1497 to 1498 1500 to 1501 1503
+ port trunk allow-pass vlan 1549 1582 to 1583 1621 1630 1640 1662 1751 1991 to 1992 2666 3035
+ port trunk allow-pass vlan 3126 3414 3449
+ multicast-suppression 50
+ broadcast-suppression 50
+#
+interface GigabitEthernet0/0/1
+ description UPLINK TO DCN IP/MPLS GE 1/1/4(UPE-M8-GE0/1/8)
+ port link-type trunk
+ port trunk allow-pass vlan 164 251 802 910 1096 1136 1282 1412 1425 1493 to 1495
+ port trunk allow-pass vlan 1497 to 1498 1500 to 1501 1503 1549 1582 to 1583 1621 1630 1640 1662 1751
+ port trunk allow-pass vlan 1883 1899 1991 to 1992 2002 2383 2423 2475 2666 2921 to 2922 3035
+ port trunk allow-pass vlan 3042 3050 3126 3408 3414 3449
+ multicast-suppression 50
+ broadcast-suppression 50
+#
+interface GigabitEthernet0/0/2
+ description VDT SOKOTO INTERNET | Ge PORT | Number27 On Switch
+ port link-type access
+ port default vlan 1899
+ multicast-suppression 50
+ broadcast-suppression 50
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.193
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100007D72
+ snmp-agent community read cipher %$%$%;^=1V\QU/B~57Zk&[XYT2)}%$%$
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode password
+ set authentication password cipher %$%$y6011++sj-.IgF#Bn%]5,%yp9u@tSUMOrVqbC5:|,a{<'+"z%$%$
+user-interface vty 0 4
+ authentication-mode aaa
+#
+port-group link-type
+#
+port-group trun
+#
+return
+[BS-SOK-013]

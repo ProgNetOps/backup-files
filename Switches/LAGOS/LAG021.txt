@@ -1,0 +1,338 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:19.26 ? ? /home/mobaxterm ? telnet 10.248.246.60
+Connected to 10.248.246.60.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:Entering character mode
+Escape character is '^]'.
+bsnoc
+Password:
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2022-04-22 14:56:10+00:00.
+Info: Lastest accessed IP: -  Time: -  Failed: 0  Password will expire in: -
+
+Info: Smart-upgrade is currently disabled. Enable Smart-upgrade to get recommended version information.
+<BS-LAG021-S5735-SW>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-LAG021-S5735-SW]dis int des
+PHY: Physical
+*down: administratively down
+#down: LBDT down
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(dl): DLDP down
+(lb): LBDT block
+(o): Observe-port forwarding down
+Interface                     PHY     Protocol Description
+GE0/0/1                       down    down     TPGS-DOPEMU-INT-LM-CLIENT-OWN
+GE0/0/2                       down    down     NYSC-LAG-INT-R-NERA
+GE0/0/3                       up      up       TPGS OKO OBA|20MB INTERNET
+GE0/0/4                       down    down     TPGS EGBEDA |20MB INTERNET
+GE0/0/5                       up      up       TPGS-KFC-LAG-AKOWONJO-INTERNET-5M
+GE0/0/6                       *down   down     ADVANZ LAFAYETTE EGBEDA INTERNET
+GE0/0/7                       down    down
+GE0/0/8                       down    down     IPEXPRESS-NYSC-AGEGE |2218| 45M
+GE0/0/9                       down    down
+GE0/0/10                      down    down
+GE0/0/11                      down    down     FIBEREDGE-EGBEDA-100M-INT-FIBER-LM
+GE0/0/12                      up      up       PLATINUM-INDEX-DAYSTAR | 20M
+GE0/0/13                      up      up       GLOWORLD(IPCC) | 4M
+GE0/0/14                      up      up       BUSINESS-TELEPORT-WISDOM-VILLA-AGEGE | 10M
+GE0/0/15                      up      up       FAN-MILK-FACTORY-OGBA-INT | 50M
+GE0/0/16                      down    down
+GE0/0/17                      down    down
+GE0/0/18                      down    down
+GE0/0/19                      down    down
+GE0/0/20                      down    down
+GE0/0/21                      down    down
+GE0/0/22                      down    down
+GE0/0/23                      down    down     SWITCH-MGT-TEST-PORT
+GE0/0/24                      down    down
+NULL0                         up      up(s)
+Vlanif1                       up      down
+Vlanif805                     up      up
+Vlanif1425                    up      up
+XGE0/0/1                      up      up       UPLINK TO LAG021-UPE-M8-GE0/1/8
+XGE0/0/2                      down    down     ONEDATA EGBEDA
+XGE0/0/3                      down    down
+XGE0/0/4                      down    down
+[BS-LAG021-S5735-SW]     dis cur
+!Software Version V200R020C10SPC500
+#
+sysname BS-LAG021-S5735-SW
+#
+vlan batch 805 1040 1334 1340 1342 1425 1495 1503 1668 1728
+vlan batch 1745 1816 1930 2024 2218 2744
+#
+authentication-profile name default_authen_profile
+authentication-profile name dot1x_authen_profile
+authentication-profile name dot1xmac_authen_profile
+authentication-profile name mac_authen_profile
+authentication-profile name multi_authen_profile
+authentication-profile name portal_authen_profile
+#
+telnet server enable
+telnet server-source all-interface
+#
+http server-source -i Vlanif1
+#
+diffserv domain default
+#
+radius-server template default
+#
+pki realm default
+ certificate-check none
+#
+free-rule-template name default_free_rule
+#
+portal-access-profile name portal_access_profile
+#
+vlan 805
+ description BS-SWITCH-MGT
+vlan 1040
+ description TPGS-KFC-LAG-AKOWONJO-INTERNET-5M
+vlan 1334
+ description TPGS OKOOBA
+vlan 1340
+ description TPGS-DOPEMU
+vlan 1342
+ description TPGS EGBEDA
+vlan 1425
+ description LAFAYET-MFB--AGEGE-LL-2M
+vlan 1495
+ description BS-NERA-MW-MGT
+vlan 1503
+ description NERA-MGMT
+vlan 1668
+ description PLATINUM-INDEX-DAYSTAR
+vlan 1728
+ description BUS-TELEPORT-WISDOM-VILLA-AGEGE
+vlan 1745
+ description NYSC-LAGOS
+vlan 1816
+ description GLOWORLD(IPCC) | 4M
+vlan 1930
+ description FIBREEDGE-EGBEDA
+vlan 2024
+ description LAFAYETTE-INT
+vlan 2218
+ description NYSC-AGEGE
+ name IPEXPRESS_NYSC
+vlan 2744
+ description FAN-MILK-FACTORY-OGBA-INT
+#
+aaa
+ authentication-scheme default
+  authentication-mode local
+ authentication-scheme radius
+  authentication-mode radius
+ authorization-scheme default
+  authorization-mode local
+ accounting-scheme default
+  accounting-mode none
+ local-aaa-user password policy administrator
+  password history record number 0
+  password expire 0
+ domain default
+  authentication-scheme radius
+  accounting-scheme default
+  radius-server default
+ domain default_admin
+  authentication-scheme default
+  accounting-scheme default
+ local-user admin password irreversible-cipher $1c$8TJ{=vYm$0$;<atLgUh@HOYW>6(u)YQj;Ik'\oeW;F'Bb<9zC)S$
+ local-user admin privilege level 15
+ local-user admin service-type http
+ local-user bsnoc password irreversible-cipher $1c$OWA\&)o0n'$)x]80'%d*%lT_mDX*y+1f4Ay7g+VQS!3hr3gvLf,$
+ local-user bsnoc privilege level 15
+ local-user bsnoc service-type telnet terminal ssh ftp
+ local-user fabian password irreversible-cipher $1c$QYJeD~p5]!$TH*2I,7iB/d<iyV3*xPT3CksAqW~[8;o4dISmg2:$
+ local-user fabian privilege level 15
+ local-user fabian service-type telnet terminal ssh ftp
+ local-user huawei password irreversible-cipher $1c$q93"0uWB47$>DV|/+Fd]1pzN7'Uo+<!^T1FZZRc<T}+2BUt+1Z7$
+ local-user huawei privilege level 15
+ local-user huawei service-type telnet
+ local-user naveen password irreversible-cipher $1c$l*#-VSuqRL$E+fQS1o{BB;(\<Bs9`J7#&A]-!Lr.MN9"~$-*nW($
+ local-user naveen privilege level 15
+ local-user naveen service-type telnet
+#
+interface Vlanif1
+#
+interface Vlanif805
+ ip address 10.248.246.60 255.255.255.192
+#
+interface Vlanif1425
+ ip address 192.168.1.253 255.255.255.0
+#
+interface GigabitEthernet0/0/1
+ description TPGS-DOPEMU-INT-LM-CLIENT-OWN
+ port link-type access
+ port default vlan 1340
+#
+interface GigabitEthernet0/0/2
+ undo negotiation auto
+ speed 100
+ description NYSC-LAG-INT-R-NERA
+ port link-type trunk
+ port trunk allow-pass vlan 1495 1745
+#
+interface GigabitEthernet0/0/3
+ description TPGS OKO OBA|20MB INTERNET
+ port link-type access
+ port default vlan 1334
+#
+interface GigabitEthernet0/0/4
+ description TPGS EGBEDA |20MB INTERNET
+ port link-type access
+ port default vlan 1342
+#
+interface GigabitEthernet0/0/5
+ description TPGS-KFC-LAG-AKOWONJO-INTERNET-5M
+ port link-type access
+ port default vlan 1040
+#
+interface GigabitEthernet0/0/6
+ description ADVANZ LAFAYETTE EGBEDA INTERNET
+ shutdown
+ port link-type access
+ port default vlan 2024
+#
+interface GigabitEthernet0/0/7
+#
+interface GigabitEthernet0/0/8
+ description IPEXPRESS-NYSC-AGEGE |2218| 45M
+ port link-type trunk
+ port trunk allow-pass vlan 1503 2218
+#
+interface GigabitEthernet0/0/9
+#
+interface GigabitEthernet0/0/10
+#
+interface GigabitEthernet0/0/11
+ description FIBEREDGE-EGBEDA-100M-INT-FIBER-LM
+ port link-type access
+ port default vlan 1930
+#
+interface GigabitEthernet0/0/12
+ description PLATINUM-INDEX-DAYSTAR | 20M
+ port link-type access
+ port default vlan 1668
+#
+interface GigabitEthernet0/0/13
+ description GLOWORLD(IPCC) | 4M
+ port link-type access
+ port default vlan 1816
+#
+interface GigabitEthernet0/0/14
+ description BUSINESS-TELEPORT-WISDOM-VILLA-AGEGE | 10M
+ port link-type access
+ port default vlan 1728
+#
+interface GigabitEthernet0/0/15
+ description FAN-MILK-FACTORY-OGBA-INT | 50M
+ port link-type access
+ port default vlan 2744
+#
+interface GigabitEthernet0/0/16
+#
+interface GigabitEthernet0/0/17
+#
+interface GigabitEthernet0/0/18
+#
+interface GigabitEthernet0/0/19
+#
+interface GigabitEthernet0/0/20
+#
+interface GigabitEthernet0/0/21
+#
+interface GigabitEthernet0/0/22
+#
+interface GigabitEthernet0/0/23
+ description SWITCH-MGT-TEST-PORT
+ port link-type access
+ port default vlan 805
+#
+interface GigabitEthernet0/0/24
+#
+interface XGigabitEthernet0/0/1
+ description UPLINK TO LAG021-UPE-M8-GE0/1/8
+ port link-type trunk
+ port trunk allow-pass vlan 805 1040 1334 1340 1342 1425 1495 1503 1668 1728
+ port trunk allow-pass vlan 1745 1816 1930 2024 2218 2744
+#
+interface XGigabitEthernet0/0/2
+ description ONEDATA EGBEDA
+ port link-type access
+ port default vlan 1346
+#
+interface XGigabitEthernet0/0/3
+#
+interface XGigabitEthernet0/0/4
+#
+interface NULL0
+#
+undo icmp name timestamp-request receive
+#
+ip route-static 0.0.0.0 0.0.0.0 10.248.246.1
+#
+snmp-agent
+snmp-agent local-engineid 800007DB0344227C99A480
+snmp-agent community read cipher %^%#Nc]3$@HDNKZO`&'XFhw@g5X"98`v`<9e&f@6y4Y%Q~+.LHec,91a"zV-X%B2T{$5;U,{pHfex_)+;vH!%^%#
+snmp-agent community read cipher %^%#MMFg#@B3\7o$C3&xIISR9OjF1/"_h-k]Gt#JX3~6}4Go=CsTMXs#8($AUD~E&deKIB/UO..S$"~,0FI$%^%#
+snmp-agent community read cipher %^%#xaGS46Ip^$*bE53W#=w(z|Fw74C(!#nU>]4Dn^(4KDZr+n!.OMaXi;LKyXADd{K2Y4]"a9zMN;8mlscR%^%#
+snmp-agent sys-info version all
+snmp-agent target-host trap address udp-domain 10.248.246.60 params securityname cipher %^%#}bNfGdw|*Ge8$a*Za'8KxGs*Y=nKPP~)+!9Cx.DU%^%#
+snmp-agent protocol source-status all-interface
+undo snmp-agent protocol source-status ipv6 all-interface
+#
+stelnet server enable
+ssh server cipher aes256_ctr aes128_ctr
+ssh server hmac sha2_256
+ssh server key-exchange dh_group16_sha512 dh_group15_sha512 dh_group14_sha256 dh_group_exchange_sha256
+ssh client cipher aes256_ctr aes128_ctr
+ssh client hmac sha2_256
+ssh client key-exchange dh_group16_sha512 dh_group15_sha512 dh_group14_sha256 dh_group_exchange_sha256
+ssh server dh-exchange min-len 2048
+#
+user-interface con 0
+ authentication-mode password
+ set authentication password cipher $1a$^d%H'*c=r)$5:/\J1H/\Eoo\6=KRTEK0qfn"`IoAQVr[DV:2XV~$
+user-interface vty 0 4
+ authentication-mode aaa
+ idle-timeout 15 0
+ protocol inbound all
+user-interface vty 16 20
+ authentication-mode aaa
+ idle-timeout 15 0
+ protocol inbound all
+#
+port-group default
+#
+port-group q
+#
+dot1x-access-profile name dot1x_access_profile
+#
+mac-access-profile name mac_access_profile
+#
+ops
+#
+return
+[BS-LAG021-S5735-SW]

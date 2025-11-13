@@ -1,0 +1,471 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:13.30 ? ? /home/mobaxterm ? telnet 10.248.246.200
+Connected to 10.248.246.200.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<ENT-SW-KAN006>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-SW-KAN006]dis int des
+Interface                   Description
+Ethernet0/0/1               UNION BANK SHARADA KANO
+Ethernet0/0/2               free
+Ethernet0/0/3               free
+Ethernet0/0/4               GLOBENODE_KIRS 4MB INTERNET
+Ethernet0/0/5               HUAWEI, Quidway Series, Ethernet0/0/5 Interface
+Ethernet0/0/6               UBA KOFAR RUWA KANO | KAN072-KAN006 | 4MB | IOTECH
+Ethernet0/0/7               free
+Ethernet0/0/8               free
+Ethernet0/0/9               BS CERAGON MGT
+Ethernet0/0/10              free
+Ethernet0/0/11              STANBIC IBTC BANK BELLO ROAD KANO
+Ethernet0/0/12              ACCESS BANK BICHI
+Ethernet0/0/13              free
+Ethernet0/0/14              STERLING BANK UNITY KANO
+Ethernet0/0/15              free
+Ethernet0/0/16              ICNL-KANO-2M-INT-R-CERAGON
+Ethernet0/0/17              free
+Ethernet0/0/18              TPGS KANO 45MB INTERNET
+Ethernet0/0/19              STANBIC IBTC BANK ROAD KANO
+Ethernet0/0/20              MANINIR E-SYSTEMS!6M INTERNET
+Ethernet0/0/21              HUAWEI, Quidway Series, Ethernet0/0/21 Interface
+Ethernet0/0/22              free
+Ethernet0/0/23              HUAWEI, Quidway Series, Ethernet0/0/23 Interface
+Ethernet0/0/24              SWITCH MGT
+GigabitEthernet0/0/1        free
+GigabitEthernet0/0/2        TRUNK-TO-DCN-IP/MPLS/UPE 2/0/9
+NULL0                       HUAWEI, Quidway Series, NULL0 Interface
+Vlanif1                     HUAWEI, Quidway Series, Vlanif1 Interface
+Vlanif802                   HUAWEI, Quidway Series, Vlanif802 Interface
+Vlanif1115                  HUAWEI, Quidway Series, Vlanif1115 Interface
+Vlanif1135                  HUAWEI, Quidway Series, Vlanif1135 Interface
+Vlanif1136                  HUAWEI, Quidway Series, Vlanif1136 Interface
+Vlanif1640                  HUAWEI, Quidway Series, Vlanif1640 Interface
+[ENT-SW-KAN006]    dis cur
+#
+!Software Version V100R005C01SPC100
+ sysname ENT-SW-KAN006
+#
+ vlan batch 5 113 184 255 301 611 802 1000 1115 1121
+ vlan batch 1135 to 1136 1175 1224 1226 1242 1266 1273 1310 1314 1389
+ vlan batch 1398 to 1399 1481 1488 1492 to 1495 1497 to 1498 1501 to 1503 1546 1564 1568 1614
+ vlan batch 1640 1657 1665 1752 to 1753 1761 1849 to 1851 1881 1921 1923 1972
+ vlan batch 1981 2083 2423 2472 2999 3007 3034 to 3035 3042 3126 3233
+ vlan batch 3425
+#
+ cluster enable
+ ntdp enable
+ ndp enable
+#
+ bpdu enable
+#
+ lldp enable
+#
+ dhcp enable
+#
+ undo http server enable
+#
+ drop illegal-mac alarm
+#
+vlan 5
+ description TEST
+vlan 255
+ description VDT-ABUJA-AIRPORT
+vlan 301
+ description FIRS-KANO1
+vlan 611
+ description IDN-INTERNET
+vlan 802
+ description SWITCH-MGT
+vlan 1000
+ description IDN-ABUJA
+vlan 1115
+ description GTB VPLS
+vlan 1121
+ description BS-SENTIENT FBN ZUBA-4M-Leased-line
+vlan 1135
+ description PASSION FM ABJ-UYO!5MLL-SWIFTTALK-LM
+vlan 1175
+ description NIG-ARMY-CYBER-WARFARE-ABUJA-INT
+vlan 1224
+ description TPGS-Abuja-22-10M
+vlan 1226
+ description CENTENARY-CITY-ABUJA
+vlan 1242
+ description FIRST BANK
+vlan 1266
+ description FN-DANATTA-L3
+vlan 1273
+ description FIRST-BANK-BICHI-L3
+vlan 1310
+ description COMMON IDENTITY NETWORK
+vlan 1314
+ description MANNIR E - SYSTEMS
+vlan 1389
+ description CKC
+vlan 1398
+ description TPGS-ABJ022-LL-LAGOS-2M
+vlan 1399
+ description WESTMETRO-ABUJA
+vlan 1481
+ description ICNL-KANO-2M-INT
+vlan 1488
+ description NEW CERAGON MGMT NORTH
+vlan 1492
+ description BS_NERA_MW-MGT-1492
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1494
+ description BS_NERA_MW-MGT-1494
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1498
+ description BS-CERAGON-MGT
+vlan 1501
+ description BS-MGT
+vlan 1502
+ description BusinessSolution_Radio-MGT
+vlan 1503
+ description BS_NERA_MW-Mgt-Glo1
+vlan 1546
+ description UNION-BANK-SHARADA
+vlan 1564
+ description CYBER SPACE GLO1
+vlan 1568
+ description NALOT-MULTISYSTEMS-FED-COL-OF-EDU-BICHI
+vlan 1614
+ description ASUU-INT
+vlan 1640
+ description ACCESS-VPLS
+vlan 1657
+ description SW GLOBAL IMMIGRATION HQ
+vlan 1665
+ description CAC-KANO
+vlan 1752
+ description TECPOINT
+vlan 1753
+ description BAYERO-UNIVERSITY-KANO
+vlan 1761
+ description KEYSTONE-VPLS
+vlan 1849
+ description UNIVERSITY OF ABUJA MAIN
+vlan 1850
+ description UNIVERSITY OF ABUJA
+vlan 1851
+ description UNIABJ_SOMS medical
+vlan 1881
+ description FIDELITY_BANK_KANO
+vlan 1921
+ description GLOBENODE_KIRS
+vlan 1923
+ description FRSC-NVIS_GWAGWA
+vlan 1972
+ description UNION BANK
+vlan 1981
+ description VDT-KANO-INTERNET
+vlan 2083
+ description IP2AIR UATH
+vlan 2423
+ description STANBIC-IBTC
+vlan 2472
+ description Euromega Abuja
+vlan 2999
+ description FCMB
+vlan 3007
+ description FBN-VPLS
+vlan 3034
+ description STERLING-VPLS
+vlan 3035
+ description MAINSTREET-LL-LINKS
+vlan 3042
+ description UBA VPLS
+vlan 3126
+ description DIAMOND BANK
+vlan 3233
+ description ACCESS-BANK-BICHI-L3
+vlan 3425
+ description NNPC PUMP STATION ABAJI
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user adewunmi password cipher !\)S/>B90$21[a"FZ7=S#!!!
+ local-user adewunmi privilege level 15
+ local-user admin password simple admin
+ local-user admin service-type http
+ local-user ben password cipher !O^D70YIQA:1[a"FZ7=S#!!!
+ local-user ben privilege level 15
+ local-user bsnoc password cipher RB!G'1+"PX61[a"FZ7=S#!!!
+ local-user bsnoc privilege level 15
+ local-user donald password cipher ^)AW.F&IO7JU4Z(*%FTCV!!!
+ local-user donald privilege level 15
+ local-user fabian password cipher *2+W,D'B31_Q=^Q`MAF4<1!!
+ local-user fabian privilege level 15
+ local-user glo1noc password cipher )&&G+$DX6#D0G`2^"@4W+A!!
+ local-user glo1noc privilege level 15
+ local-user moses password cipher Y;FLM:7Q_/F1[a"FZ7=S#!!!
+ local-user moses privilege level 15
+ local-user naveen password cipher V>4:5D3Q-L<0G`2^"@4W+A!!
+ local-user naveen privilege level 15
+ local-user ope password cipher \THX&0.I;NKQBC:RRU/-W1!!
+ local-user ope privilege level 15
+ local-user rthabj password cipher GF^V3HP4*B*U4Z(*%FTCV!!!
+ local-user rthabj privilege level 3
+ local-user solarch password cipher )9>!>*95Y,L0G`2^"@4W+A!!
+ local-user solarch privilege level 3
+#
+interface Vlanif1
+ ip address dhcp-alloc
+#
+interface Vlanif802
+ ip address 10.248.246.200 255.255.255.192
+#
+interface Vlanif1115
+ ip address 10.0.181.244 255.255.255.0
+#
+interface Vlanif1135
+ ip address 192.168.40.1 255.255.255.0
+#
+interface Vlanif1136
+ ip address 192.168.20.2 255.255.255.0
+#
+interface Vlanif1640
+ ip address 10.230.230.202 255.255.255.0
+#
+interface Ethernet0/0/1
+ description UNION BANK SHARADA KANO
+ port link-type access
+ port default vlan 1546
+ ntdp enable
+ ndp enable
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/2
+ description free
+ shutdown
+ port link-type access
+ ntdp enable
+ ndp enable
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/3
+ description free
+ port link-type access
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/4
+ description GLOBENODE_KIRS 4MB INTERNET
+ port link-type access
+ port default vlan 1921
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/5
+ shutdown
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/6
+ description UBA KOFAR RUWA KANO | KAN072-KAN006 | 4MB | IOTECH
+ port link-type access
+ port default vlan 3042
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/7
+ description free
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/8
+ description free
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/9
+ description BS CERAGON MGT
+ port link-type access
+ port default vlan 1498
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/10
+ description free
+ port link-type access
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/11
+ description STANBIC IBTC BANK BELLO ROAD KANO
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1495 2423
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/12
+ description ACCESS BANK BICHI
+ port link-type access
+ port default vlan 1640
+ stp bpdu-filter enable
+ ntdp enable
+ ndp enable
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/13
+ description free
+ port link-type access
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/14
+ description STERLING BANK UNITY KANO
+ port link-type access
+ port default vlan 3034
+ ntdp enable
+ ndp enable
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/15
+ description free
+ port link-type access
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/16
+ description ICNL-KANO-2M-INT-R-CERAGON
+ shutdown
+ port link-type access
+ port default vlan 1481
+ ntdp enable
+ ndp enable
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/17
+ description free
+ port link-type access
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/18
+ description TPGS KANO 45MB INTERNET
+ port link-type access
+ port default vlan 1752
+ ntdp enable
+ ndp enable
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/19
+ description STANBIC IBTC BANK ROAD KANO
+ port link-type trunk
+ port trunk allow-pass vlan 1495 2423
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/20
+ description MANINIR E-SYSTEMS!6M INTERNET
+ port link-type access
+ port default vlan 1314
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/21
+ shutdown
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/22
+ description free
+ port link-type access
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/23
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/24
+ description SWITCH MGT
+ port link-type access
+ port default vlan 802
+ ntdp enable
+ ndp enable
+#
+interface GigabitEthernet0/0/1
+ description free
+ ntdp enable
+ ndp enable
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/2
+ description TRUNK-TO-DCN-IP/MPLS/UPE 2/0/9
+ port link-type trunk
+ port trunk allow-pass vlan 301 802 1115 1266 1273 1314 1481 1493 1495 1497 to 1498
+ port trunk allow-pass vlan 1501 1546 1568 1640 1662 1665 1752 to 1753 1761 1881 1921
+ port trunk allow-pass vlan 1981 2423 3007 3034 to 3035 3042 3233
+ stp bpdu-filter enable
+ undo ntdp enable
+ undo ndp enable
+ port media type fiber
+     undo negotiation auto
+ combo-port auto
+ multicast-suppression 50
+ broadcast-suppression 50
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.193
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F0000010000562D
+ snmp-agent community read cipher ^D#U[\Q.+H.9]T((+V>!H\"TX$_S#6.NM(0=0\)*5WU!
+ snmp-agent sys-info version all
+ snmp-agent trap disable
+#
+user-interface con 0
+ authentication-mode aaa
+ idle-timeout 0 0
+user-interface vty 0 4
+ authentication-mode aaa
+#
+port-group default
+#
+port-group l
+#
+port-group link
+#
+port-group link-type
+#
+return
+[ENT-SW-KAN006]

@@ -1,0 +1,399 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:45.40 ? ? /home/mobaxterm ? telnet 10.248.246.34
+Connected to 10.248.246.34.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<ENT-SW-LOS-121>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-SW-LOS-121]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       Gloworld Ajah
+Eth0/0/2                      up      up       J.ALVA 20MB INTERNET
+Eth0/0/3                      up      up       LAGOS BUSINESS SCHOOL 100MB INTER
+                                               NET
+Eth0/0/4                      down    down     Patricia Technologies 30MB Intern
+                                               et
+Eth0/0/5                      up      up       FIBEREDGE GARWOOD 100MB LEASEDLIN
+                                               E TO MEDALION
+Eth0/0/6                      down    down     IPEXPRESS HARRIS_ROAD_POP | 100Mb
+                                               ps
+Eth0/0/7                      down    down     ISN-AJAH || 40Mbps
+Eth0/0/8                      down    down     FIBEREDGE-VGC-LL-15Mbps(VLAN1905)
+                                               -FIB-LM-BY-CUSTOMER
+Eth0/0/9                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/9 Interface
+Eth0/0/10                     up      up       IPEXPRESS OTONE SANGOTEDO | 1772
+Eth0/0/11                     up      up       TPGS AJAH BAZ1-LOS121|5M-INTERNET
+                                                (VLAN1317) || TPGS VGC BAZ2
+Eth0/0/12                     down    down     SWIFTTALK-LEKKI-VGC(VLAN1304)-RAD
+                                               IO-BY-CLIENT
+Eth0/0/13                     up      up       FIBEREDGE GARWOOD 65MB LEASEDLINE
+                                                TO MEDALION
+Eth0/0/14                     up      up       NUBIAN AMERICAN ADVANCED COLLEGE
+                                               M-R-SOFT | 30MB INTERNET
+Eth0/0/15                     down    down     IPEXPRESS RCCG_TOD_ILAJE || VLAN1
+                                               412 || 50Mbps
+Eth0/0/16                     down    down     ALFA O & O INT
+Eth0/0/17                     down    down     IPEXPRESS-NORTHWEST | 50M
+Eth0/0/18                     down    down     IPEXPRESS CREEK-ESTATE_AJAH | 195
+                                               7
+Eth0/0/19                     down    down     SWIFT TALK AJAH | 10MB
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/24 Interface
+GE0/0/1                       up      up       UPLINK TO DCN UPE-M8 GE 0/1/5
+GE0/0/2                       up      up       IPEXPRESS CHRISLAND VGC|VLAN-1954
+                                               | 150M
+GE0/0/3                       up      up       FIBER-EDGE PALMVILLE 200MB LEASED
+                                                LINE
+GE0/0/4                       down    down     SYSCODES AJAH[VLAN-2221]|200Mbps
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif805                     up      up       SWITCH-MGT
+Vlanif1102                    up      down     HUAWEI, Quidway Series, Vlanif110
+                                               2 Interface
+Vlanif1304                    up      up       HUAWEI, Quidway Series, Vlanif130
+                                               4 Interface
+Vlanif1317                    up      down     HUAWEI, Quidway Series, Vlanif131
+                                               7 Interface
+Vlanif1318                    up      down     HUAWEI, Quidway Series, Vlanif131
+                                               8 Interface
+Vlanif1489                    up      down     HUAWEI, Quidway Series, Vlanif148
+                                               9 Interface
+Vlanif1772                    up      down     HUAWEI, Quidway Series, Vlanif177
+                                               2 Interface
+[ENT-SW-LOS-121]    dis cur
+#
+!Software Version V100R006C05
+ sysname ENT-SW-LOS-121
+#
+ vlan batch 25 804 to 805 922 1102 1178 1233 1263 1304 1311 1317 to 1318
+ vlan batch 1325 1401 to 1402 1406 1412 to 1413 1489 1495 1497 to 1498 1501 1503 1643
+ vlan batch 1760 1772 1775 to 1776 1783 1785 1905 1921 1931 1954 to 1955 1957
+ vlan batch 1970 1972 2076 2221 2511 2804 2911
+#
+lldp enable
+#
+ undo http server enable
+ undo http secure-server enable
+#
+vlan 25
+ description NERA_MGT_GLO1
+vlan 804
+ description MGT-VLAN
+vlan 805
+ description SWITCH-MGT
+vlan 922
+ description SAIPEM-NETCOM
+vlan 1102
+ description BLUENET-LTD-LOS121|100MB-INTERNET
+vlan 1178
+ description HI-KONNECT-VGC
+vlan 1233
+ description DOTMAC-AJAH-LAG105-SAKA17-SAKA25
+vlan 1263
+ description Lagos business School
+vlan 1304
+ description SWIFTTALK-LEKKI-VGC
+vlan 1311
+ description J.ALVA
+vlan 1317
+ description TPGS AJAH BAZ1-LOS121|5M-INTERNET
+vlan 1318
+ description TPGS VGC BAZ2-LOS121|5M-INTERNET
+vlan 1325
+ description Patricia Technologies
+vlan 1401
+ description TPGS Ajah Warehouse
+vlan 1402
+ description TPGS Ajah
+vlan 1406
+ description QMB Mart Ltd
+vlan 1412
+ description IPEXPRESS RCCG_TOD_ILAJE
+vlan 1413
+ description NUBIAN-AMERICAN-COLLEGE
+vlan 1489
+ description CERAGON-IP20-MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1498
+ description BS-CERAGON-MGT
+vlan 1501
+ description BS-MGT
+vlan 1503
+ description NERA-MGT
+vlan 1643
+ description LAGOS-BENIN
+vlan 1760
+ description FIBER-EDGE
+vlan 1775
+ description IPEXPRESS SANGOTEDO
+vlan 1776
+ description ISN-AJAH(vlan 1776)
+vlan 1783
+ description HYPERIA-AJAH-SAKA25
+vlan 1785
+ description IPEXPRESS HARRIS_RD VL1785
+vlan 1905
+ description FIBEREDGE-VGC-15M
+vlan 1921
+ description ATLANTIC-HALL-INTERNET
+vlan 1931
+ description FIBEREDGE GARWOOD
+vlan 1954
+ description IPEXPRESS-STERLING_COOP
+vlan 1955
+ description IPEXPRESS-NORTHWEST
+vlan 1957
+ description IPEXPRESS-CREEK
+vlan 1970
+ description GREENSPRING-LEKKI-LEASE-LINE
+vlan 1972
+ description GREENSPRING-LEKKI-INTERNET
+vlan 2076
+ description IS_ GLOWORLD AJAH
+vlan 2221
+ description SYSCODES-AJAH
+vlan 2511
+ description Dangote LFTZ
+vlan 2804
+ description ALFA O&O
+vlan 2911
+ description SWIFT-TALK-AJAH
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user ben password cipher %@%@).5N>CDkw6JYU7)Z/\QNSMzb%@%@
+ local-user ben privilege level 15
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@2HUz8<OPrH:=F}Jq]+Z7SM|~%@%@
+ local-user bsnoc privilege level 15
+ local-user moses password cipher %@%@ROm9Jb3FAHq(|s4>GFtMSMw;%@%@
+ local-user moses privilege level 15
+ local-user fabian password cipher %@%@\PeR6{wm}Lc^^uDBav$WSMt]%@%@
+ local-user fabian privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif805
+ description SWITCH-MGT
+ ip address 10.248.246.34 255.255.255.192
+#
+interface Vlanif1102
+#
+interface Vlanif1304
+ ip address 2.2.2.2 255.255.255.0
+#
+interface Vlanif1317
+#
+interface Vlanif1318
+#
+interface Vlanif1489
+#
+interface Vlanif1772
+#
+interface Ethernet0/0/1
+ description Gloworld Ajah
+ port link-type trunk
+ port trunk allow-pass vlan 25 2076
+#
+interface Ethernet0/0/2
+ description J.ALVA 20MB INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 1311 1498
+#
+interface Ethernet0/0/3
+ description LAGOS BUSINESS SCHOOL 100MB INTERNET
+ port link-type access
+ port default vlan 1263
+#
+interface Ethernet0/0/4
+ description Patricia Technologies 30MB Internet
+ port link-type trunk
+ port trunk allow-pass vlan 1325 1497
+#
+interface Ethernet0/0/5
+ description FIBEREDGE GARWOOD 100MB LEASEDLINE TO MEDALION
+ port link-type access
+ port default vlan 1931
+#
+interface Ethernet0/0/6
+ description IPEXPRESS HARRIS_ROAD_POP | 100Mbps
+ port link-type access
+ port default vlan 1785
+#
+interface Ethernet0/0/7
+ description ISN-AJAH || 40Mbps
+ port link-type trunk
+ port trunk allow-pass vlan 1503 1776
+#
+interface Ethernet0/0/8
+ description FIBEREDGE-VGC-LL-15Mbps(VLAN1905)-FIB-LM-BY-CUSTOMER
+ port link-type access
+ port default vlan 1905
+#
+interface Ethernet0/0/9
+ port link-type trunk
+ port trunk allow-pass vlan 1102 1489
+#
+interface Ethernet0/0/10
+ description IPEXPRESS OTONE SANGOTEDO | 1772
+ port link-type trunk
+ port trunk allow-pass vlan 1503 1772
+#
+interface Ethernet0/0/11
+ description TPGS AJAH BAZ1-LOS121|5M-INTERNET (VLAN1317) || TPGS VGC BAZ2
+ port link-type access
+ port default vlan 1317
+#
+interface Ethernet0/0/12
+ description SWIFTTALK-LEKKI-VGC(VLAN1304)-RADIO-BY-CLIENT
+ port link-type access
+ port default vlan 1304
+#
+interface Ethernet0/0/13
+ description FIBEREDGE GARWOOD 65MB LEASEDLINE TO MEDALION
+ port link-type access
+ port default vlan 1931
+#
+interface Ethernet0/0/14
+ description NUBIAN AMERICAN ADVANCED COLLEGE M-R-SOFT | 30MB INTERNET
+ port link-type access
+ port default vlan 1413
+#
+interface Ethernet0/0/15
+ description IPEXPRESS RCCG_TOD_ILAJE || VLAN1412 || 50Mbps
+ port link-type access
+ port default vlan 1412
+#
+interface Ethernet0/0/16
+ description ALFA O & O INT
+ port link-type access
+ port default vlan 2804
+#
+interface Ethernet0/0/17
+ description IPEXPRESS-NORTHWEST | 50M
+ port link-type access
+ port default vlan 1955
+#
+interface Ethernet0/0/18
+ description IPEXPRESS CREEK-ESTATE_AJAH | 1957
+ port link-type trunk
+ port trunk allow-pass vlan 1503 1957
+#
+interface Ethernet0/0/19
+ description SWIFT TALK AJAH | 10MB
+ port link-type access
+ port default vlan 2911
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ port link-type access
+ port default vlan 805
+#
+interface GigabitEthernet0/0/1
+ description UPLINK TO DCN UPE-M8 GE 0/1/5
+ port link-type trunk
+ port trunk allow-pass vlan 25 131 804 to 805 922 1102 1178 1233 1263 1304 1311
+ port trunk allow-pass vlan 1317 to 1318 1325 1401 to 1402 1406 1412 to 1413 1489 1495 1497 to 1498 1501 1503
+ port trunk allow-pass vlan 1643 1714 1760 1772 1775 to 1776 1785 1905 1921 1931 1954 to 1955
+ port trunk allow-pass vlan 1957 1970 1972 2076 2804 2911
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/2
+ description IPEXPRESS CHRISLAND VGC|VLAN-1954| 150M
+ port link-type access
+ port default vlan 1954
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/3
+ description FIBER-EDGE PALMVILLE 200MB LEASED LINE
+ port link-type access
+ port default vlan 1760
+ jumboframe enable 13296
+ port media type copper
+     undo negotiation auto
+ combo-port auto
+#
+interface GigabitEthernet0/0/4
+ description SYSCODES AJAH[VLAN-2221]|200Mbps
+ port link-type access
+ port default vlan 2221
+ undo negotiation auto
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F0000010000668C
+ snmp-agent community read cipher %@%@NwiHGHR3m~WIK%!^)#F+0.-J-3yP>w(L01yevIIt)97D.-M062/|);rv)DJb6^DIs^G>-V0.%@%@
+ snmp-agent community read cipher %@%@tK"N-D1DN1!wl*3N)IcLwo`oDXhoR,71PRWXzI1djgNGo`rwAbS^#6=TiSF7HK"U(jH;`{wo%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[ENT-SW-LOS-121]
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                                                               ?
+
+ ? 2025-11-13 ? ? 10:51.14 ? ? /home/mobaxterm ?

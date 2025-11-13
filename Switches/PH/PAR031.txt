@@ -1,0 +1,494 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 13:32.09 ? ? /home/mobaxterm ? telnet 10.248.246.154
+Connected to 10.248.246.154.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<PAR031-ENT-SW-S3700>sys
+Enter system view, return user view with Ctrl+Z.
+[PAR031-ENT-SW-S3700]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       NNPC AKPAJO MEDICAL PH
+Eth0/0/2                      up      up       description NNPC-PHRC-LM-N-MW
+Eth0/0/3                      up      up       Pamo University 20MB Internet
+Eth0/0/4                      up      up       NNPC SOUTH SOUTH REGIONAL PH
+Eth0/0/5                      down    down     ALFA O&O PHC-45M-int
+Eth0/0/6                      up      up       EXTERRAN PHC INT NERA RAD
+Eth0/0/7                      down    down     TPGS-PHC-3 50MB INTERNET
+Eth0/0/8                      down    down     TPGS-PHC-11 10MB INTERNET
+Eth0/0/9                      *down   down     TPGS Port Harcourt 13| 100MB
+
+                                                               port link-type ac
+                                               cess
+Eth0/0/10                     *down   down     TPGS-100M-INT-PHC-14-VLAN-2378
+Eth0/0/11                     down    down     Alfa O&O Okoloma-INT-20M-FIBER-SH
+                                               L003-PAR061-PAR031
+Eth0/0/12                     down    down     NNPC NRL-MEGA-FILLING-STATN-PH
+Eth0/0/13                     down    down     SWITCH MGT
+Eth0/0/14                     down    down     DAEWOO-FIBER-PRI-INT | 50M
+Eth0/0/15                     up      up       ACCESS BANK OBIGBO | ACCESS-OLD D
+                                               IAMOND OBIGBO
+Eth0/0/16                     up      up       SOBAZ NIG LTD | 30MB FIBER LM
+Eth0/0/17                     down    down     NNPC_NPDC_FIELD_OFFICE_PHC
+Eth0/0/18                     up      up       Bishop Okoye Spiritian School
+Eth0/0/19                     down    down     description NNPC-IDSL-ELEME-LM-N-
+                                               MW
+Eth0/0/20                     down    down     ORANGE AEA
+Eth0/0/21                     up      up       description NNPC-ITD CENT-PHC -LM
+                                               -N-MW
+Eth0/0/22                     up      up       description NNPC-PHRC-LM-N-MW
+Eth0/0/23                     up      up       TEC POINT LATC
+Eth0/0/24                     up      up       TPGS-PHC-2(INDORAMA) INTERNET
+GE0/0/1                       up      up       UPLINK TO NERA FROM SWITCH
+GE0/0/2                       up      up       PAMO UNIVERSITY HOSPITAL
+GE0/0/3                       down    down     TPGS-PHC-3 INTERNET | 150MB
+GE0/0/4                       up      up       UPLINK TO DCN ROUTER
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif803                     up      up       HUAWEI, Quidway Series, Vlanif803
+                                                Interface
+Vlanif1017                    up      down     HUAWEI, Quidway Series, Vlanif101
+                                               7 Interface
+Vlanif1054                    up      up       HUAWEI, Quidway Series, Vlanif105
+                                               4 Interface
+Vlanif1451                    up      down     HUAWEI, Quidway Series, Vlanif145
+                                               1 Interface
+Vlanif1493                    up      down     HUAWEI, Quidway Series, Vlanif149
+                                               3 Interface
+Vlanif1531                    up      up       HUAWEI, Quidway Series, Vlanif153
+                                               1 Interface
+Vlanif2181                    up      up       HUAWEI, Quidway Series, Vlanif218
+                                               1 Interface
+Vlanif3501                    up      up       HUAWEI, Quidway Series, Vlanif350
+                                               1 Interface
+Vlanif3508                    up      up       HUAWEI, Quidway Series, Vlanif350
+                                               8 Interface
+Vlanif3551                    up      up       HUAWEI, Quidway Series, Vlanif355
+                                               1 Interface
+[PAR031-ENT-SW-S3700] dis cur
+#
+!Software Version V100R006C05
+ sysname PAR031-ENT-SW-S3700
+#
+ vlan batch 34 803 810 1017 1033 1054 1113 1115 1128 1130
+ vlan batch 1228 1234 1291 1314 1351 1371 1398 1451 1487 1493 to 1495
+ vlan batch 1498 1501 1503 1531 1556 to 1558 1569 1582 1640 1779 1824 to 1825
+ vlan batch 1839 1868 1882 1884 1984 2181 2314 2376 to 2378 2441 2451
+ vlan batch 2460 2600 to 2601 2827 2829 3042 3126 3134 3494 to 3499 3501 to 3503 3506
+ vlan batch 3508 3520 3551 3562 4055
+#
+lldp enable
+#
+ undo http server enable
+ undo http secure-server enable
+#
+vlan 803
+ description new-mgmt
+vlan 810
+ description FORTE-OIL-VPLS
+vlan 1017
+ description Alfa O&O Okoloma Gas Station-INT-20M
+vlan 1033
+ description DICNET-PORTHARCOURT - PAR031 |23M-INTERNET
+vlan 1054
+ description SOBAZ-NIG
+vlan 1113
+ description STG-ONNE-INTERNET
+vlan 1115
+ description GTBBANK-VPLS
+vlan 1128
+ description NPA-ONNE-INTERNET
+vlan 1130
+ description NOTORE-INTERNET
+vlan 1228
+ description TPGS-PNEUMA
+vlan 1234
+ description NNPC-NRL-MEGA
+vlan 1314
+ description Pamo University
+vlan 1351
+ description MONTEGO HOLDING PLC
+vlan 1371
+ description TPGS Port Harcourt 13
+vlan 1398
+ description Pellegrini Nigeria
+vlan 1451
+ description TPGS PHC-11
+vlan 1487
+ description SWITCH-MGT
+vlan 1493
+ description BS-NERA-MGT-3
+vlan 1494
+ description NERA_MGT_VLAN
+vlan 1495
+ description NERA MGT VLAN
+vlan 1498
+ description BS-CERAGON-MGT
+vlan 1501
+ description BS-MGT
+vlan 1503
+ description NERA-MGT
+vlan 1531
+ description ALFA O&O PHC
+vlan 1556
+ description UNION-ELEME-PET-PHC
+vlan 1557
+ description UNION-PPMC-ELEME-PHC
+vlan 1558
+ description UNION-OYIGBO
+vlan 1569
+ description TPGS-PHC-2
+vlan 1582
+ description UNION-BANK-ONNE
+vlan 1640
+ description ACCESS-BANK-VPLS
+vlan 1779
+ description TPGS-PHC-3
+vlan 1824
+ description TPGS-BONNY
+vlan 1825
+ description TECPOINT-PHC-BENIN
+vlan 1839
+ description DAEWOO-NIGERIA
+vlan 1868
+ description LAFARGE-ELEME
+vlan 1882
+ description EROTON-CAWTHORNE
+vlan 1884
+ description EROTON-ALAKIRI
+vlan 1984
+ description bishop Okoye Spiritian school
+vlan 2181
+ description NNPC-PHRC-PRIMARY
+vlan 2314
+ description DAEWOO INDORAMA MPLS 4M
+vlan 2376
+ description BRASSNLNG
+vlan 2377
+ description TPGS Port Harcourt 13
+vlan 2378
+ description TPGs-INT-PHC-14
+vlan 2441
+ description ORANGE-AEA
+vlan 2451
+ description MUDIAME-INTERNET
+vlan 2460
+ description cyber-onne
+vlan 2600
+ description SUDELETTRA-LL
+vlan 2601
+ description SUDELETTRA-INTERNET
+vlan 2827
+ description ZETAWEB_MULTICHOICE(RSBS)
+vlan 2829
+ description PAMO-UNI-INT
+vlan 3042
+ description UBA ELEME
+vlan 3126
+ description ACESS-OLD-DIAMOND-OBIGBO
+vlan 3134
+ description DESCEXTERRAN PHC
+vlan 3494
+ description NNPC-IDSL-ELEME
+vlan 3495
+ description NNPC-ITDCENT-PHC
+vlan 3496
+ description NNPC-PHRC
+vlan 3497
+ description NNPC-MEDICAL-AKPAJO
+vlan 3498
+ description NNPC-MEDICAL-AKPAJO-FIBER
+vlan 3499
+ description NNPC-NGC-ONNE
+vlan 3501
+ description NNPC-PPMC-AREA-OFFICE-PH
+vlan 3502
+ description NNPC-DEPOT-PH
+vlan 3503
+ description NNPC_NPDC_FIELD_OFFICE_PHC
+vlan 3506
+ description NNPC_BONNY_TERMINAL
+vlan 3508
+ description NNPC-NGC-AFAM
+vlan 3520
+ description NNPC-SOUTH-SOUTH-REGIONAL-PH
+vlan 3551
+ description NNPC-R&D-ELEME-AKPAJO
+vlan 3562
+ description Thompson and Grace
+vlan 4055
+ description ORANGE-ONNE
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@4cj<~\CE5,IWifI]pM_,[[$1%@%@
+ local-user bsnoc privilege level 15
+ local-user moses password cipher %@%@.@&j"Z-4Y,B{yQGv<"o$[["^%@%@
+ local-user moses privilege level 15
+ local-user fabian password cipher %@%@&p0M%1-7|T}NaN-QbwvCEkx6%@%@
+ local-user fabian privilege level 15
+ local-user huawei password cipher %@%@SWb;B^'be85X;)6WbOBES!7Q%@%@
+ local-user huawei privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif803
+ ip address 10.248.246.154 255.255.255.192
+#
+interface Vlanif1017
+#
+interface Vlanif1054
+ ip address 192.168.10.1 255.255.255.0
+#
+interface Vlanif1451
+#
+interface Vlanif1493
+#
+interface Vlanif1531
+ ip address 129.205.127.195 255.255.255.248
+#
+interface Vlanif2181
+ ip address 192.168.15.1 255.255.255.0
+#
+interface Vlanif3501
+ ip address 192.168.3.1 255.255.255.0
+#
+interface Vlanif3508
+ ip address 192.168.2.1 255.255.255.0
+#
+interface Vlanif3551
+ ip address 10.10.10.1 255.255.255.0
+#
+interface Ethernet0/0/1
+ description NNPC AKPAJO MEDICAL PH
+ port link-type access
+ port default vlan 3497
+#
+interface Ethernet0/0/2
+ description description NNPC-PHRC-LM-N-MW
+ port link-type access
+ port default vlan 2181
+#
+interface Ethernet0/0/3
+ description Pamo University 20MB Internet
+ port link-type access
+ port default vlan 1314
+#
+interface Ethernet0/0/4
+ description NNPC SOUTH SOUTH REGIONAL PH
+ port link-type access
+ port default vlan 3520
+#
+interface Ethernet0/0/5
+ description ALFA O&O PHC-45M-int
+ port link-type access
+ port default vlan 1531
+#
+interface Ethernet0/0/6
+ description EXTERRAN PHC INT NERA RAD
+ port link-type trunk
+ port trunk allow-pass vlan 1495 3134
+#
+interface Ethernet0/0/7
+ description TPGS-PHC-3 50MB INTERNET
+ port link-type access
+ port default vlan 1779
+ jumboframe enable 13296
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/8
+ description TPGS-PHC-11 10MB INTERNET
+ port link-type access
+ port default vlan 1451
+#
+interface Ethernet0/0/9
+ description TPGS Port Harcourt 13| 100MB                                                      port link-type access
+ shutdown
+ port link-type access
+ port default vlan 2377
+#
+interface Ethernet0/0/10
+ description TPGS-100M-INT-PHC-14-VLAN-2378
+ shutdown
+ port link-type access
+ port default vlan 2378
+#
+interface Ethernet0/0/11
+ description Alfa O&O Okoloma-INT-20M-FIBER-SHL003-PAR061-PAR031
+ port link-type trunk
+ port trunk allow-pass vlan 1017
+#
+interface Ethernet0/0/12
+ description NNPC NRL-MEGA-FILLING-STATN-PH
+ port link-type trunk
+ port trunk allow-pass vlan 1234 1487
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/13
+ description SWITCH MGT
+ port link-type access
+ port default vlan 803
+ jumboframe enable 13296
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/14
+ description DAEWOO-FIBER-PRI-INT | 50M
+ port link-type access
+ port default vlan 1839
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/15
+ description ACCESS BANK OBIGBO | ACCESS-OLD DIAMOND OBIGBO
+ port link-type trunk
+ port trunk allow-pass vlan 1487 1493 1640 3126
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/16
+ description SOBAZ NIG LTD | 30MB FIBER LM
+ port link-type access
+ port default vlan 1054
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/17
+ description NNPC_NPDC_FIELD_OFFICE_PHC
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3503
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/18
+ description Bishop Okoye Spiritian School
+ port link-type access
+ port default vlan 1984
+#
+interface Ethernet0/0/19
+ description description NNPC-IDSL-ELEME-LM-N-MW
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3494
+#
+interface Ethernet0/0/20
+ description ORANGE AEA
+ port link-type dot1q-tunnel
+ port default vlan 2441
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/21
+ description description NNPC-ITD CENT-PHC -LM-N-MW
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3495
+#
+interface Ethernet0/0/22
+ description description NNPC-PHRC-LM-N-MW
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3496
+#
+interface Ethernet0/0/23
+ description TEC POINT LATC
+ port link-type access
+ port default vlan 1228
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/24
+ description TPGS-PHC-2(INDORAMA) INTERNET
+ port link-type access
+ port default vlan 1569
+ undo negotiation auto
+ speed 100
+#
+interface GigabitEthernet0/0/1
+ description UPLINK TO NERA FROM SWITCH
+ port link-type trunk
+ port trunk allow-pass vlan 1291 1494 1503 2827 3508 3551
+ jumboframe enable 13296
+#
+interface GigabitEthernet0/0/2
+ description PAMO UNIVERSITY HOSPITAL
+ port link-type access
+ port default vlan 2829
+ jumboframe enable 13296
+#
+interface GigabitEthernet0/0/3
+ description TPGS-PHC-3 INTERNET | 150MB
+ port link-type access
+ port default vlan 1779
+ jumboframe enable 13296
+ combo-port copper
+#
+interface GigabitEthernet0/0/4
+ description UPLINK TO DCN ROUTER
+ port link-type trunk
+ port trunk allow-pass vlan 3 803 810 1017 1054 1113 1115 1128 1130 1228
+ port trunk allow-pass vlan 1234 1291 1314 1351 1398 1451 1487 1493 to 1495 1498 1501
+ port trunk allow-pass vlan 1503 1531 1556 1558 1569 1582 1640 1779 1824 to 1825 1839
+ port trunk allow-pass vlan 1868 1882 1884 1984 2181 2314 2376 to 2378 2441 2451 2460
+ port trunk allow-pass vlan 2600 to 2601 2827 2829 3042 3126 3134 3494 to 3499 3501 to 3503 3506 3508
+ port trunk allow-pass vlan 3520 3551 3562 4055
+ jumboframe enable 13296
+ port media type copper
+     undo negotiation auto
+ port media type fiber
+     undo negotiation auto
+ combo-port copper
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.129
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100000F7A
+ snmp-agent community read cipher %@%@";%6S[Ok+&67-PF]L+ZMS"<Y|cxf~&g+\%t41O)s9}|Q"<\SclrVG<qzCU>N'8:CM>MW<eS"%@%@
+ snmp-agent community read cipher %@%@)_p|#$4DV#)q|kV:A,|6~}D'^~n`3f:%d=L%^M8pGAS5}D*~HOazPR(D-Vz`\l'h4;Y/D3~}%@%@
+ snmp-agent community read cipher %@%@5,A;9zx"6)R}XB#+^n5"Ce8wQ~RUN:a*PHY9E%Dt#4mOe8zC>NO6R4vC-G*\JD@zJ+@R8&Ce%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[PAR031-ENT-SW-S3700]

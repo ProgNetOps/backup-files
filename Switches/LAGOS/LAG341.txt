@@ -1,0 +1,483 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:31.03 ? ? /home/mobaxterm ? telnet 10.248.246.6
+Connected to 10.248.246.6.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<GLO-BS-Lag341>sys
+Enter system view, return user view with Ctrl+Z.
+[GLO-BS-Lag341]dis int des
+Interface                   Description
+Ethernet0/0/1               GLOWORLD AJEGUNLE
+Ethernet0/0/2               ICNL(INLAND CONTAINER APAPA) LAGOS
+Ethernet0/0/3               faulty
+Ethernet0/0/4               AITEO-APAPACERAGON_MGT-
+Ethernet0/0/5               Conoil-Ejigbo
+Ethernet0/0/6               ORANGE ZIM APAPA - NEW PORT
+Ethernet0/0/7               MAINSTREET-HQ
+Ethernet0/0/8               National-Mirror
+Ethernet0/0/9               Flourmills_HQ
+Ethernet0/0/10              CONOIL PD EURAFRIC
+Ethernet0/0/11              TRUNK CONNECTION TO AITEO APAPA
+Ethernet0/0/12              SEVEN UP MPLS  TRUNK TO HQ
+Ethernet0/0/13              AMT NIGERIA
+Ethernet0/0/14              SPIDERNET-MARINA|20MBS
+Ethernet0/0/15              CERAGON_MGT
+Ethernet0/0/16              DOTMAC-APAPA-LAG341-SAKA17-SAKA25(vlan 1234)
+Ethernet0/0/17              NNPC APPAPA DEPO
+Ethernet0/0/18              BLENDED-TECH
+Ethernet0/0/19              CHICASON-FLOURMILLS-APAPA-C-CERAGONIP10-LAG230-LAG7
+                            18-LAG341(Huawei-bb)-2M-LL
+Ethernet0/0/20              CHICASON-DOCYARD-APAPACERAGON_MGT-
+Ethernet0/0/21              DANGOTE-APAPA-INT | 45M
+Ethernet0/0/22              FLOWZAP-APAPA-2[VLAN-3216] | 100Mbps
+Ethernet0/0/23              TRUNK test port
+Ethernet0/0/24              TEST PORT FOR NPA APAPA
+GigabitEthernet0/0/1        TRUNK TO DCN IP/MPLS-LAG341-ATN-GE0/3/0
+GigabitEthernet0/0/2        MOBIL (DOUBLE ONE) APAPA | 120MB | CERAGONIP20
+NULL0                       HUAWEI, Quidway Series, NULL0 Interface
+Vlanif313                   HUAWEI, Quidway Series, Vlanif313 Interface
+Vlanif805                   HUAWEI, Quidway Series, Vlanif805 Interface
+Vlanif1234                  HUAWEI, Quidway Series, Vlanif1234 Interface
+Vlanif1498                  HUAWEI, Quidway Series, Vlanif1498 Interface
+Vlanif1501                  HUAWEI, Quidway Series, Vlanif1501 Interface
+Vlanif2057                  HUAWEI, Quidway Series, Vlanif2057 Interface
+Vlanif2611                  HUAWEI, Quidway Series, Vlanif2611 Interface
+Vlanif2621                  HUAWEI, Quidway Series, Vlanif2621 Interface
+[GLO-BS-Lag341]     dis cur
+#
+!Software Version V100R005C01SPC100
+ sysname GLO-BS-Lag341
+#
+ vlan batch 15 25 98 200 to 201 210 302 312 to 313 805 812 902
+ vlan batch 1234 1311 1447 1489 1494 1497 to 1498 1501 to 1504 1677 1800 1934
+ vlan batch 1949 1966 2012 2057 2150 2172 2310 2402 to 2403 2405 2407 to 2409
+ vlan batch 2411 to 2412 2419 to 2422 2425 to 2426 2429 to 2432 2435 to 2439 2441 to 2446 2468 2520 to 2521 2533 2553
+ vlan batch 2611 2615 2618 2621 2625 3035 3216 3312 3410 3876
+#
+ lldp enable
+#
+ undo http server enable
+#
+vlan 15
+ description GLOWORLD-NERA-RADIO-MGT
+vlan 25
+ description GLOWORLD-O-&-M
+vlan 98
+ description AITEO-LAG-ACCRA-LL
+vlan 200
+ description ConoilGloworld-Apapa
+vlan 201
+ description Conoil-Ejigbo
+vlan 210
+ description Conoil-PD-EURAFRIC
+vlan 302
+ description ISL-Apapa
+vlan 312
+ description CHICASON-DOCKYARD
+vlan 313
+ description CHICASON1-FLOURMILLS
+vlan 805
+ description ENT-SW-VLAN
+vlan 812
+ description CONOIL-INTERNET-APAPA-HQ
+vlan 902
+ description AITEO-APAPA-INTERNET
+vlan 1234
+ description DOTMAC-APAPA-LAG341-SAKA17-SAKA25
+vlan 1311
+ description ICNL-LAGOS
+vlan 1447
+ description DANGOTE-APAPA-INT
+vlan 1489
+ description CERAGON-MGT2
+vlan 1494
+ description NNPC-NERA-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1498
+ description CERAGON_MGT_VLAN
+vlan 1501
+ description MGT
+vlan 1502
+ description IOTECH-MGT-VLAN
+vlan 1504
+ description IoTECH-MGT
+vlan 1677
+ description ORANGE-IGANMU-HEINEKEN-BACKUP
+vlan 1934
+ description AMT-NIGERIA
+vlan 1949
+ description AITEO-APAPA-MPLS
+vlan 1966
+ description SPIDERNET-MARINA|20MBS|
+vlan 2012
+ description NBC-Apapa
+vlan 2057
+ description ORANGE-ZIM-APAPA
+vlan 2150
+ description MOBIL-INTERNET-FIBER
+vlan 2172
+ description GLOWORLD-AJEGUNLE
+vlan 2310
+ description AITEO-LL-LONDON
+vlan 2402
+ description ConoilCongas-Ikeja
+vlan 2403
+ description Conoil-Mosimi-PPMC
+vlan 2405
+ description Conoil-Kaduna-PPMC
+vlan 2407
+ description CONOIL-BENIN-REFINERY
+vlan 2408
+ description CONOIL JOS
+vlan 2409
+ description CONOIL KANO PIPELINE
+vlan 2411
+ description CONOIL-NPA-WARRI
+vlan 2412
+ description CONOIL-WARRI-REFINERY
+vlan 2419
+ description National-Mirror-Internet
+vlan 2420
+ description National-Mirror-LL-ABJ
+vlan 2421
+ description Conoil-Enugu-Depot-Ogui
+vlan 2422
+ description Conoil-Enugu-Pipeline-emene
+vlan 2425
+ description CONOIL-AVIATION-SOKOTO
+vlan 2426
+ description CONOIL-JUHIL-AVIATION-IKEJA
+vlan 2429
+ description CONOIL-SULEJA
+vlan 2430
+ description CONOIL-GUSAU
+vlan 2431
+ description CONOIL-JOS2-PIPELINE
+vlan 2432
+ description CONOIL-IBADAN-APATA
+vlan 2435
+ description CONOIL-AVIATION-PHC
+vlan 2436
+ description CONOIL-AVIATION-ENUGU
+vlan 2437
+ description CONOIL-CALABAR-AVIATION
+vlan 2438
+ description CONOIL-CALABAR-PIPELINE
+vlan 2439
+ description CONOIL-MAKURDI-PIPELINE
+vlan 2441
+ description CONOIL-PPMC-ILORIN
+vlan 2442
+ description CONOIL-IKEJA-AVIATION
+vlan 2443
+ description CONOIL-BENIN-OFFICE
+vlan 2444
+ description CONOIL-ABA-IKE
+vlan 2446
+ description FLOUR_MILLS_LAGOS_HQ
+vlan 2468
+ description SEVEN-UP-VPLS
+vlan 2520
+ description CONOIL-PPMC-GOMBE
+vlan 2521
+ description NPA-APAPA-INTERNET
+vlan 2533
+ description AITEO-VPLS-APAPA-NEMBE-LEKKI
+vlan 2553
+ description FLOURMILLS-APAPA
+vlan 2611
+ description CONOIL-IBADAN-OLD
+vlan 2615
+ description CONOIL-PHC-OLD
+vlan 2618
+ description CONOIL-WARRI-OLD
+vlan 2621
+ description CONOIL-ABUJA-OLD
+vlan 2625
+ description CONOIL-IKEJA-OLD
+vlan 3035
+ description Mainstreet-LL_links
+vlan 3216
+ description FLOWZAP APAPA_2
+vlan 3410
+ description NNPC-APAPA-LPG-DEPOT
+vlan 3876
+ description CONOIL-LL-TO-SAKA-25
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password simple admin
+ local-user admin service-type http
+ local-user bsnoc password cipher RB!G'1+"PX61[a"FZ7=S#!!!
+ local-user bsnoc privilege level 3
+ local-user donald password cipher ^)AW.F&IO7JU4Z(*%FTCV!!!
+ local-user donald privilege level 3
+ local-user fabian password cipher *2+W,D'B31_Q=^Q`MAF4<1!!
+ local-user fabian privilege level 3
+ local-user moses password cipher Y;FLM:7Q_/F1[a"FZ7=S#!!!
+ local-user moses privilege level 3
+#
+interface Vlanif313
+ ip address 14.14.14.11 255.255.255.0
+#
+interface Vlanif805
+ ip address 10.248.246.6 255.255.255.192
+#
+interface Vlanif1234
+ shutdown
+ ip address 192.168.31.123 255.255.255.248
+#
+interface Vlanif1498
+#
+interface Vlanif1501
+ ip address 10.248.249.150 255.255.255.0
+#
+interface Vlanif2057
+ ip address 192.168.19.1 255.255.255.0
+#
+interface Vlanif2611
+ ip address 182.20.10.30 255.255.255.252
+#
+interface Vlanif2621
+ ip address 12.12.12.14 255.255.255.0
+#
+interface Ethernet0/0/1
+ description GLOWORLD AJEGUNLE
+ port link-type trunk
+ port trunk allow-pass vlan 15 25 2172
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/2
+ description ICNL(INLAND CONTAINER APAPA) LAGOS
+ port link-type trunk
+ port trunk allow-pass vlan 1311 1497
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/3
+ description faulty
+ shutdown
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/4
+ description AITEO-APAPACERAGON_MGT-
+ port link-type access
+ port default vlan 1498
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/5
+ description Conoil-Ejigbo
+ shutdown
+ port link-type access
+ port default vlan 201
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/6
+ description ORANGE ZIM APAPA - NEW PORT
+ port link-type dot1q-tunnel
+ port default vlan 2057
+ stp bpdu-filter enable
+ ntdp enable
+ ndp enable
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/7
+ description MAINSTREET-HQ
+ port link-type access
+ port default vlan 3035
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/8
+ description National-Mirror
+ port link-type access
+ port default vlan 902
+ ntdp enable
+ ndp enable
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/9
+ description Flourmills_HQ
+ port link-type access
+ port default vlan 2446
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/10
+ description CONOIL PD EURAFRIC
+ port link-type access
+ port default vlan 210
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/11
+ description TRUNK CONNECTION TO AITEO APAPA
+ port link-type trunk
+ port trunk allow-pass vlan 98 902 1502 1949 2310 2533
+ ntdp enable
+ ndp enable
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/12
+ description SEVEN UP MPLS  TRUNK TO HQ
+ shutdown
+ port link-type access
+ port default vlan 2468
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/13
+ description AMT NIGERIA
+ port link-type trunk
+ port trunk allow-pass vlan 1934
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/14
+ description SPIDERNET-MARINA|20MBS
+ port link-type access
+ port default vlan 1966
+ stp bpdu-filter enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/15
+ description CERAGON_MGT
+ port link-type access
+ port default vlan 1498
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/16
+ description DOTMAC-APAPA-LAG341-SAKA17-SAKA25(vlan 1234)
+ port link-type access
+ port default vlan 1234
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/17
+ description NNPC APPAPA DEPO
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3410
+#
+interface Ethernet0/0/18
+ description BLENDED-TECH
+ port link-type trunk
+ port trunk allow-pass vlan 1503 3312
+#
+interface Ethernet0/0/19
+ description CHICASON-FLOURMILLS-APAPA-C-CERAGONIP10-LAG230-LAG718-LAG341(Huawei-bb)-2M-LL
+ port link-type access
+ port default vlan 313
+#
+interface Ethernet0/0/20
+ description CHICASON-DOCYARD-APAPACERAGON_MGT-
+ port link-type access
+ port default vlan 1498
+ ntdp enable
+#
+interface Ethernet0/0/21
+ description DANGOTE-APAPA-INT | 45M
+ port link-type trunk
+ port trunk allow-pass vlan 1447 1489
+#
+interface Ethernet0/0/22
+ description FLOWZAP-APAPA-2[VLAN-3216] | 100Mbps
+ shutdown
+ port link-type access
+ port default vlan 3216
+ ntdp enable
+ ndp enable
+ undo negotiation auto
+ speed 100
+ unicast-suppression 20
+ multicast-suppression 20
+#
+interface Ethernet0/0/23
+ description TRUNK test port
+ port link-type trunk
+ port trunk allow-pass vlan 805
+#
+interface Ethernet0/0/24
+ description TEST PORT FOR NPA APAPA
+ port link-type access
+ port default vlan 2521
+#
+interface GigabitEthernet0/0/1
+ description TRUNK TO DCN IP/MPLS-LAG341-ATN-GE0/3/0
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 97 99 to 4094
+ ntdp enable
+ ndp enable
+ port media type fiber
+     undo negotiation auto
+ combo-port auto
+ multicast-suppression 10
+ broadcast-suppression 10
+#
+interface GigabitEthernet0/0/2
+ description MOBIL (DOUBLE ONE) APAPA | 120MB | CERAGONIP20
+ port link-type trunk
+ port trunk allow-pass vlan 2150
+ ntdp enable
+ ndp enable
+ port media type copper
+     undo negotiation auto
+ combo-port auto
+ unicast-suppression 20
+ multicast-suppression 20
+ broadcast-suppression 20
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F000001000068AC
+ snmp-agent community read  globacom
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ idle-timeout 0 0
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[GLO-BS-Lag341]
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                                                               ?
+
+ ? 2025-11-13 ? ? 10:36.31 ? ? /home/mobaxterm ?

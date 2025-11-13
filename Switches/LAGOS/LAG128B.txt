@@ -1,0 +1,495 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:25.25 ? ? /home/mobaxterm ? telnet 10.248.246.50
+Connected to 10.248.246.50.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<ENT-LAG128-B-HU-S3700-SW>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-LAG128-B-HU-S3700-SW]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       GLOWORLD OLUWOLE
+Eth0/0/2                      *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/2 Interface
+Eth0/0/3                      down    down     LAFAYETTE-ADV-LL-R-NERA
+Eth0/0/4                      up      up       NIGER INSURANCE
+Eth0/0/5                      up      up       WALTERSMITH-CHAIRMAN-INTERNET-LM-
+                                               CERAGON-DIRECT
+Eth0/0/6                      down    down     BS CERAGON MGT WALTER SMITH CHAR
+                                               RESIDENCE
+Eth0/0/7                      up      up       TO-WEMA-HQ-RADIO-BACKUP
+Eth0/0/8                      up      up       GTBANK IKOYI MICROWAVE BACKHAUL R
+                                               ADIO
+Eth0/0/9                      up      up       TRUNK TO DPR
+Eth0/0/10                     down    down     SOUTHER SUN RADIO BACK UP INTERNE
+                                               T
+Eth0/0/11                     down    down     GTBANK IKOYI FIBER LINK
+Eth0/0/12                     down    down     free port
+Eth0/0/13                     up      up       YOA-INSURANCE | 20M
+Eth0/0/14                     *down   down     FILE-SOL-NIGPRESS-INT-LL-R-NERA
+Eth0/0/15                     up      up       STERLING ASSET MANAGEMENT AND TRU
+                                               STEE LTD | 15MB
+Eth0/0/16                     *down   down     BS CERAGON MGT EFCC RADIO
+Eth0/0/17                     down    down     BS CERAGON MGT FBN MACATHY RADIO
+Eth0/0/18                     up      up       GLOBENODE DOLPHIN  |4MB INTERNET
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+Eth0/0/20                     up      up       CONNECTION TO AMADEUS-MARKETING-I
+                                               NT |10M
+Eth0/0/21                     up      up       FETS-IKOYI-INT  |10MB
+Eth0/0/22                     down    down     SENTIENT FEMI PEARSE VI
+Eth0/0/23                     down    down     CONNECTION TO FCMB
+Eth0/0/24                     up      up       IBILE-HOLDINGS - LAG 128B-10M-INT
+                                               ERNET-RADIO-NERA
+Eth0/0/25                     up      up       WEST METRO APEL LTD | CLIENT-LGS4
+                                               76-LAG128B | 25MB
+Eth0/0/26                     up      up       SCM CAPITAL INT SWIFTALK-RADIO |
+                                               10MB
+Eth0/0/27                     up      up       YORUBA-TENIS-CLUB-INT | 5M
+Eth0/0/28                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/28 Interface
+Eth0/0/29                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/29 Interface
+Eth0/0/30                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/30 Interface
+Eth0/0/31                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/31 Interface
+Eth0/0/32                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/32 Interface
+Eth0/0/33                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/33 Interface
+Eth0/0/34                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/34 Interface
+Eth0/0/35                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/35 Interface
+Eth0/0/36                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/36 Interface
+Eth0/0/37                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/37 Interface
+Eth0/0/38                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/38 Interface
+Eth0/0/39                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/39 Interface
+Eth0/0/40                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/40 Interface
+Eth0/0/41                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/41 Interface
+Eth0/0/42                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/42 Interface
+Eth0/0/43                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/43 Interface
+Eth0/0/44                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/44 Interface
+Eth0/0/45                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/45 Interface
+Eth0/0/46                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/46 Interface
+Eth0/0/47                     down    down     mgt port
+Eth0/0/48                     down    down     mgt port
+GE0/0/1                       down    down     GLO FIBER TRUNK TO GTB DATA CENTR
+                                               E
+GE0/0/2                       up      up       TRUNK-TO-LAG128B-UPE-M8 || GE 0/2
+                                               /2
+GE0/0/3                       down    down     HUAWEI, Quidway Series, GigabitEt
+                                               hernet0/0/3 Interface
+GE0/0/4                       down    down     HUAWEI, Quidway Series, GigabitEt
+                                               hernet0/0/4 Interface
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif530                     up      up       HUAWEI, Quidway Series, Vlanif530
+                                                Interface
+Vlanif805                     up      up       HUAWEI, Quidway Series, Vlanif805
+                                                Interface
+Vlanif1115                    up      up       HUAWEI, Quidway Series, Vlanif111
+                                               5 Interface
+Vlanif1175                    up      down     HUAWEI, Quidway Series, Vlanif117
+                                               5 Interface
+Vlanif1498                    up      up       HUAWEI, Quidway Series, Vlanif149
+                                               8 Interface
+Vlanif1501                    up      down     HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif2122                    up      down     HUAWEI, Quidway Series, Vlanif212
+                                               2 Interface
+Vlanif3043                    up      down     HUAWEI, Quidway Series, Vlanif304
+                                               3 Interface
+Vlanif3667                    up      down     HUAWEI, Quidway Series, Vlanif366
+                                               7 Interface
+[ENT-LAG128-B-HU-S3700-SW]  dis cur
+#
+!Software Version V100R006C03
+ sysname ENT-LAG128-B-HU-S3700-SW
+#
+ vlan batch 88 530 805 910 to 911 1058 1115 1118 1136 1175 to 1176 1293
+ vlan batch 1425 1428 1489 1493 1495 to 1498 1500 to 1501 1504 1506 to 1507 1719 1864
+ vlan batch 2119 2122 2318 to 2319 2323 2825 to 2826 2828 3042 to 3043 3667 3915
+#
+ undo http server enable
+#
+vlan 88
+ description switch-mgt
+vlan 530
+ description WEMA-HQ-SERVICE
+vlan 805
+ description NEW-SW-MGT-VLAN
+vlan 910
+ description DPR-VPLS
+vlan 911
+ description LAGOS-DPR
+vlan 1058
+ description FETS-IKOYI-INT
+vlan 1115
+ description GT-BANK-LL-VPLS
+vlan 1118
+ description GTBANK_DATA_CENTRE
+vlan 1136
+ description SWIFTTALK-MGT
+vlan 1175
+ description IBILE-HOLDINGS - LAG 128B-10M-INTERNET-RADIO-NERA
+vlan 1176
+ description AMADEUS-MARKETING
+vlan 1293
+ description WESTMETRO TBS
+vlan 1425
+ description -ADV-LAFAYATTE-VPLS
+vlan 1428
+ description STERLING-ASSET-MGT
+vlan 1489
+ description WEMA-NEW-CERG-MGT
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1496
+ description CERAGON-RADIO-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1498
+ description BS-CERAGON-MGT
+vlan 1500
+ description CERAGON_MGT
+vlan 1501
+ description MGT
+vlan 1504
+ description IOTECT-MGT
+vlan 1506
+ description GTB-SIP
+vlan 1507
+ description ENT-SWITCH-MGT-3
+vlan 1719
+ description SENTIENT-FEMI-PEARSE
+vlan 1864
+ description GLOBENODE DOLPHIN
+vlan 2119
+ description YOA-INSURANCE-INT
+vlan 2122
+ description NIGER-INSURANCE
+vlan 2318
+ description NIGER-INSURANCE-SOKOTO
+vlan 2319
+ description NIGER-INSURANCE-KATSINA
+vlan 2323
+ description SOUTHERN-SUN-RADIO-BACKUP
+vlan 2825
+ description SCM-CAPITAL-INT
+vlan 2826
+ description NIG-PRESS-FILE-SOLU
+vlan 2828
+ description YORUBA-TENIS-CLUB
+vlan 3042
+ description WALTER-SMITH-CHAIRMAN
+vlan 3043
+ description BS_BOND-ENERGY
+vlan 3667
+ description WESTMETRO-APEL-LTD-INT
+vlan 3915
+ description GLOWORLD OLUWOLE
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %$%$I6.ASV)hJET,p"Dn.YM%3aXO%$%$
+ local-user admin service-type http
+ local-user bsnoc password cipher %$%$F7g&'+;z}'$^sF1--Ip3S'{r%$%$
+ local-user bsnoc privilege level 15
+ local-user moses password cipher %$%$OW2rKtIn=T"_%Z0rH(03*)}t%$%$
+ local-user moses privilege level 15
+ local-user huawei password cipher %$%$l2(qA,MmEHf%>#*8Nr`=S8/&%$%$
+ local-user huawei privilege level 15
+#
+interface Vlanif530
+ ip address 192.168.140.1 255.255.255.0
+#
+interface Vlanif805
+ ip address 10.248.246.50 255.255.255.192
+#
+interface Vlanif1115
+ ip address 10.20.30.7 255.255.255.0
+#
+interface Vlanif1175
+#
+interface Vlanif1498
+ ip address 10.155.194.235 255.255.255.0
+#
+interface Vlanif1501
+#
+interface Vlanif2122
+#
+interface Vlanif3043
+#
+interface Vlanif3667
+#
+interface Ethernet0/0/1
+ description GLOWORLD OLUWOLE
+ port link-type trunk
+ port trunk allow-pass vlan 3915
+#
+interface Ethernet0/0/2
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 3038 to 3039
+ stp disable
+#
+interface Ethernet0/0/3
+ description LAFAYETTE-ADV-LL-R-NERA
+ port link-type trunk
+ port trunk allow-pass vlan 1425 1493
+ stp disable
+#
+interface Ethernet0/0/4
+ description NIGER INSURANCE
+ port link-type trunk
+ port trunk allow-pass vlan 1493 2122
+#
+interface Ethernet0/0/5
+ description WALTERSMITH-CHAIRMAN-INTERNET-LM-CERAGON-DIRECT
+ port link-type access
+ port default vlan 3042
+ stp disable
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/6
+ description BS CERAGON MGT WALTER SMITH CHAR RESIDENCE
+ port link-type access
+ port default vlan 1498
+#
+interface Ethernet0/0/7
+ description TO-WEMA-HQ-RADIO-BACKUP
+ port link-type trunk
+ port trunk allow-pass vlan 88 530 805 1489 1507
+ stp disable
+#
+interface Ethernet0/0/8
+ description GTBANK IKOYI MICROWAVE BACKHAUL RADIO
+ port link-type trunk
+ port trunk allow-pass vlan 1115 1495 1501 1506
+#
+interface Ethernet0/0/9
+ description TRUNK TO DPR
+ port link-type trunk
+ port trunk allow-pass vlan 910 to 911 1497
+#
+interface Ethernet0/0/10
+ description SOUTHER SUN RADIO BACK UP INTERNET
+ port link-type access
+ port default vlan 2323
+#
+interface Ethernet0/0/11
+ description GTBANK IKOYI FIBER LINK
+ port link-type trunk
+ port trunk allow-pass vlan 1115 1501 1506
+#
+interface Ethernet0/0/12
+ description free port
+ port link-type access
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/13
+ description YOA-INSURANCE | 20M
+ port link-type access
+ port default vlan 2119
+#
+interface Ethernet0/0/14
+ description FILE-SOL-NIGPRESS-INT-LL-R-NERA
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1497 2826
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/15
+ description STERLING ASSET MANAGEMENT AND TRUSTEE LTD | 15MB
+ port link-type access
+ port default vlan 1428
+#
+interface Ethernet0/0/16
+ description BS CERAGON MGT EFCC RADIO
+ shutdown
+ port link-type access
+ port default vlan 1498
+#
+interface Ethernet0/0/17
+ description BS CERAGON MGT FBN MACATHY RADIO
+ port link-type access
+ port default vlan 1498
+#
+interface Ethernet0/0/18
+ description GLOBENODE DOLPHIN  |4MB INTERNET
+ port link-type access
+ port default vlan 1864
+#
+interface Ethernet0/0/19
+ description HUAWEI, Quidway Series, Ethernet0
+#
+interface Ethernet0/0/20
+ description CONNECTION TO AMADEUS-MARKETING-INT |10M
+ port link-type trunk
+ port trunk allow-pass vlan 1176 1497
+#
+interface Ethernet0/0/21
+ description FETS-IKOYI-INT  |10MB
+ port link-type access
+ port default vlan 1058
+#
+interface Ethernet0/0/22
+ description SENTIENT FEMI PEARSE VI
+ port link-type trunk
+ port trunk allow-pass vlan 1719
+#
+interface Ethernet0/0/23
+ description CONNECTION TO FCMB
+ port link-type trunk
+ undo port trunk allow-pass vlan 1
+ port trunk allow-pass vlan 1500 2429 2449
+#
+interface Ethernet0/0/24
+ description IBILE-HOLDINGS - LAG 128B-10M-INTERNET-RADIO-NERA
+ port link-type access
+ port default vlan 1175
+#
+interface Ethernet0/0/25
+ description WEST METRO APEL LTD | CLIENT-LGS476-LAG128B | 25MB
+ port link-type access
+ port default vlan 3667
+#
+interface Ethernet0/0/26
+ description SCM CAPITAL INT SWIFTALK-RADIO | 10MB
+ port link-type access
+ port default vlan 2825
+#
+interface Ethernet0/0/27
+ description YORUBA-TENIS-CLUB-INT | 5M
+ port link-type access
+ port default vlan 2828
+#
+interface Ethernet0/0/28
+#
+interface Ethernet0/0/29
+#
+interface Ethernet0/0/30
+#
+interface Ethernet0/0/31
+#
+interface Ethernet0/0/32
+#
+interface Ethernet0/0/33
+#
+interface Ethernet0/0/34
+#
+interface Ethernet0/0/35
+#
+interface Ethernet0/0/36
+#
+interface Ethernet0/0/37
+#
+interface Ethernet0/0/38
+#
+interface Ethernet0/0/39
+#
+interface Ethernet0/0/40
+#
+interface Ethernet0/0/41
+#
+interface Ethernet0/0/42
+#
+interface Ethernet0/0/43
+#
+interface Ethernet0/0/44
+#
+interface Ethernet0/0/45
+#
+interface Ethernet0/0/46
+#
+interface Ethernet0/0/47
+ description mgt port
+ port link-type access
+ port default vlan 805
+#
+interface Ethernet0/0/48
+ description mgt port
+ port link-type access
+ port default vlan 1501
+#
+interface GigabitEthernet0/0/1
+ description GLO FIBER TRUNK TO GTB DATA CENTRE
+ port link-type trunk
+ port trunk allow-pass vlan 1115 1501 1506
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/2
+ description TRUNK-TO-LAG128B-UPE-M8 || GE 0/2/2
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 1999 2001 to 2428 2430 to 2448 2450 to 4094
+ multicast-suppression 50
+ broadcast-suppression 50
+#
+interface GigabitEthernet0/0/3
+#
+interface GigabitEthernet0/0/4
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100005CAD
+ snmp-agent community read cipher %$%$E=>IY"d,T;^'<WJ+OX.6aC:1%$%$
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[ENT-LAG128-B-HU-S3700-SW]

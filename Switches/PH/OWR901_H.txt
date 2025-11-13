@@ -1,0 +1,339 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 13:24.41 ? ? /home/mobaxterm ? telnet 10.248.246.158
+Connected to 10.248.246.158.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<ENT-OWR901-HU-SW-3700>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-OWR901-HU-SW-3700]dis cur
+#
+!Software Version V100R006C05
+ sysname ENT-OWR901-HU-SW-3700
+#
+ vlan batch 803 1027 1051 1056 to 1058 1145 1320 1357 1487 1492 1495
+ vlan batch 1640 1645 1735 2356 3064 3157 3604
+#
+lldp enable
+#
+vlan 803
+ description SWITCH-MGT-VLAN
+vlan 1051
+ description TAPRAP-OWERRI |30M
+vlan 1056
+ description IP2AIR-GTOWER-2
+vlan 1057
+ description IP2AIR=TORONTO
+vlan 1058
+ description IP2AIR-RENCAS
+vlan 1145
+ description IP2AIR-IKENEGBU
+vlan 1320
+ description BQUBE AGWU FLOWSTATION
+vlan 1357
+ description WALTERSMITH-600MB-INTERNET
+vlan 1487
+ description New-ceragon-mgt
+vlan 1492
+ description NERA-RAD-MGT
+vlan 1495
+ description nera-mgt-3
+vlan 1640
+ description ACCESS-BANK-VPLS
+vlan 1645
+ description VDT INTERNET OWERRI
+vlan 1735
+ description IP 2 AIR 138MB INT
+vlan 2356
+ description WALTERSMITH-FLOWSTATION-INT
+vlan 3064
+ description GRANET-TECHNOLOGIES
+vlan 3157
+ description WALTER-SMITH-IBIG-600M-INT
+vlan 3604
+ description GRANATE-TECH-100M-INT
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@oItU!e~SN5iL}dKB@vMLs:^&%@%@
+ local-user bsnoc privilege level 15
+ local-user bsnoc service-type telnet terminal ssh ftp
+ local-user huawei password cipher %@%@R9Xl1mU({VC=!)-O-l9:XBpn%@%@
+ local-user huawei privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif803
+ ip address 10.248.246.158 255.255.255.192
+#
+interface Vlanif1027
+#
+interface Vlanif1357
+ ip address 129.205.118.156 255.255.255.248
+#
+interface Vlanif3157
+#
+interface Vlanif3604
+#
+interface Ethernet0/0/1
+ description BQUBE AGWU FLOWSTATION 4MB INTERNET
+ port link-type access
+ port default vlan 1320
+#
+interface Ethernet0/0/2
+ description IP2AIR-ORJI-OWR901M8-A|5M-INTERNET
+ shutdown
+ port link-type access
+ port default vlan 1027
+#
+interface Ethernet0/0/3
+ description TAPRAP-OWERRI INTERNET|30M
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1051 1495
+#
+interface Ethernet0/0/4
+ description IP2AIR-GTOWER-2
+ shutdown
+ port link-type access
+ port default vlan 1056
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/5
+#
+interface Ethernet0/0/6
+ description faulty
+ port link-type access
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/7
+ description BQUBE AGWU FLOWSTATION 4MB INTERNET
+ port link-type access
+ port default vlan 1320
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/8
+ description IP2AIR-ORJI-OWR901M8-A|5M-INTERNET
+ shutdown
+ port link-type access
+ port default vlan 1027
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/9
+ description TAPRAP-OWERRI INTERNET|30M
+ port link-type trunk
+ port trunk allow-pass vlan 1051 1495
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/10
+ description IP2AIR-OWERRI-TORONTO | 15M
+ shutdown
+ port link-type access
+ port default vlan 1057
+#
+interface Ethernet0/0/11
+ description IP2AIR-ORJI-OWR901M8-A|5M-INTERNET
+ shutdown
+ port link-type access
+ port default vlan 1027
+#
+interface Ethernet0/0/12
+ description IP2AIR-GTOWER-2
+ shutdown
+ port link-type access
+ port default vlan 1056
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/13
+ description IP2AIR-OWERRI-RENCAS | 10M
+ shutdown
+ port link-type access
+ port default vlan 1058
+#
+interface Ethernet0/0/14
+ description IP2AIR-IKENEGBU | 15M
+ shutdown
+ port link-type access
+ port default vlan 1145
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/15
+ description ACCESS-BANK-FUTO-MINI
+ port link-type access
+ port default vlan 1640
+#
+interface Ethernet0/0/16
+ description ACCESS-BANK-OWERINTA
+ port link-type access
+ port default vlan 1640
+#
+interface Ethernet0/0/17
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ description mgt test port
+ port link-type access
+ port default vlan 803
+#
+interface GigabitEthernet0/0/1
+ description DCN-MPLS-M8-PE-A-GE-0/1/5
+ port link-type trunk
+ port trunk allow-pass vlan 803 950 1027 1051 1056 to 1058 1145 1320 1357 1487 1492
+ port trunk allow-pass vlan 1495 1640 1645 1735 1761 2356 3042 3604
+ jumboframe enable 13296
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/2
+ description VDT INTERNET OWERRI 140MB INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 1645
+ jumboframe enable 13296
+#
+interface GigabitEthernet0/0/3
+ description WALTER SMITH-IBIGWE-600M-INT-RADIO-LM
+ port link-type trunk
+ port trunk allow-pass vlan 1357 2356
+ jumboframe enable 13296
+#
+interface GigabitEthernet0/0/4
+ description IP 2 AIR 138MB INTERNET-LM-CERAGON-IP-20(GTOWER1)
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1487 1735
+ jumboframe enable 13296
+ port media type fiber
+     undo negotiation auto
+ combo-port auto
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.129
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100006991
+ snmp-agent community read cipher %@%@GGU.$eZl&4VuFL;fgr;9XGL>rH_r/h:b(&P"Ld!y}B_!GLAXljx;9UmW~"$6Ri;l]c[CLJXG%@%@
+ snmp-agent community read cipher %@%@Ljr|I%dE{Whj^g9PH-8)X]Ar{zu;X@NH_W#\.K&.x:7G]AuXoL&c9B0tjL@i=x39VowXA!X]%@%@
+ snmp-agent community read cipher %@%@v5T+@RgAQ45xo=L=eiYW7S}|Mg4J(uC`j'._vlTQS^GIS}"7em)01"cpx""$V.94#lq1}+7S%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+
+[ENT-OWR901-HU-SW-3700]   dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      down    down     BQUBE AGWU FLOWSTATION 4MB INTERN
+                                               ET
+Eth0/0/2                      *down   down     IP2AIR-ORJI-OWR901M8-A|5M-INTERNE
+                                               T
+Eth0/0/3                      *down   down     TAPRAP-OWERRI INTERNET|30M
+Eth0/0/4                      *down   down     IP2AIR-GTOWER-2
+Eth0/0/5                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/5 Interface
+Eth0/0/6                      down    down     faulty
+Eth0/0/7                      down    down     BQUBE AGWU FLOWSTATION 4MB INTERN
+                                               ET
+Eth0/0/8                      *down   down     IP2AIR-ORJI-OWR901M8-A|5M-INTERNE
+                                               T
+Eth0/0/9                      down    down     TAPRAP-OWERRI INTERNET|30M
+Eth0/0/10                     *down   down     IP2AIR-OWERRI-TORONTO | 15M
+Eth0/0/11                     *down   down     IP2AIR-ORJI-OWR901M8-A|5M-INTERNE
+                                               T
+Eth0/0/12                     *down   down     IP2AIR-GTOWER-2
+Eth0/0/13                     *down   down     IP2AIR-OWERRI-RENCAS | 10M
+Eth0/0/14                     *down   down     IP2AIR-IKENEGBU | 15M
+Eth0/0/15                     down    down     ACCESS-BANK-FUTO-MINI
+Eth0/0/16                     down    down     ACCESS-BANK-OWERINTA
+Eth0/0/17                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/17 Interface
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     mgt test port
+GE0/0/1                       up      up       DCN-MPLS-M8-PE-A-GE-0/1/5
+GE0/0/2                       up      up       VDT INTERNET OWERRI 140MB INTERNE
+                                               T
+GE0/0/3                       up      up       WALTER SMITH-IBIGWE-600M-INT-RADI
+                                               O-LM
+GE0/0/4                       *down   down     IP 2 AIR 138MB INTERNET-LM-CERAGO
+                                               N-IP-20(GTOWER1)
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif803                     up      up       HUAWEI, Quidway Series, Vlanif803
+                                                Interface
+Vlanif1027                    up      down     HUAWEI, Quidway Series, Vlanif102
+                                               7 Interface
+Vlanif1357                    up      up       HUAWEI, Quidway Series, Vlanif135
+                                               7 Interface
+Vlanif3157                    down    down     HUAWEI, Quidway Series, Vlanif315
+                                               7 Interface
+Vlanif3604                    up      down     HUAWEI, Quidway Series, Vlanif360
+                                               4 Interface
+[ENT-OWR901-HU-SW-3700]

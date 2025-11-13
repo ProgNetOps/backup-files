@@ -1,0 +1,442 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 11:49.57 ? ? /home/mobaxterm ? telnet 10.248.246.7
+Connected to 10.248.246.7.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<GLO1-LAG-394>sys
+Enter system view, return user view with Ctrl+Z.
+[GLO1-LAG-394]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      down    down     BLENDED-TECHNOLOGIES!UNKNOWN
+Eth0/0/2                      *down   down     APMT-INTERNET
+Eth0/0/3                      up      up       SAHARA ENERGY LAGOS IJORA
+Eth0/0/4                      *down   down     BANK OF INDUSTRY
+Eth0/0/5                      up      up       OLAM IGANMU 20MB INTERNET
+Eth0/0/6                      up      up       COMPOJ (NATIONAL INLAND WATERWAYS
+                                                AUTHORITY) | 50MB
+Eth0/0/7                      down    down     free port
+Eth0/0/8                      down    down     SHELL- LAGOS -MARINA-HQ-TRUNK
+Eth0/0/9                      up      up       TRUNK TO JULIUS BERGER IJORA
+Eth0/0/10                     up      up       DANGOTE-APAPA-INT | 45M
+Eth0/0/11                     up      up       WESTMETRO LAGOS 40MB INTERNET
+Eth0/0/12                     down    down     Springfield (Kewalram)|2MB INTERN
+                                               ET
+Eth0/0/13                     down    down     CERAGON MGT
+Eth0/0/14                     down    down     STERLING- MARINA-HQ
+Eth0/0/15                     up      up       PREMIUM-TRUST-BANK-APONGBON-LL
+Eth0/0/16                     up      up       - SHELL-FMH-BULK-SMS-LAG394-LAG73
+                                               7-HUAWEI-IDU-GE01-3G-rack
+Eth0/0/17                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/17 Interface
+Eth0/0/18                     up      up       WEMA- MARINA-HQ
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     FBN INSURANCE-LL-100M
+Eth0/0/21                     up      up       SHELL-FMH-4TH-FLR-ABUJA-100M-LL
+Eth0/0/22                     down    down     FREE
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/24 Interface
+GE0/0/1                       up      up       TRUNK-TO-DCN/MPLS-GE-0/1/7
+GE0/0/2                       up      up       UBA HQ MARINA - FIBER
+GE0/0/3                       up      up       UNION BANK MARINA HQ - FIBER
+GE0/0/4                       up      up       STERLING- MARINA-HQ
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif88                      up      up       HUAWEI, Quidway Series, Vlanif88
+                                               Interface
+Vlanif131                     up      up       HUAWEI, Quidway Series, Vlanif131
+                                                Interface
+Vlanif250                     down    down     HUAWEI, Quidway Series, Vlanif250
+                                                Interface
+Vlanif530                     up      down     HUAWEI, Quidway Series, Vlanif530
+                                                Interface
+Vlanif805                     up      up       HUAWEI, Quidway Series, Vlanif805
+                                                Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1573                    up      up       HUAWEI, Quidway Series, Vlanif157
+                                               3 Interface
+Vlanif1900                    up      down     HUAWEI, Quidway Series, Vlanif190
+                                               0 Interface
+Vlanif2428                    up      down     HUAWEI, Quidway Series, Vlanif242
+                                               8 Interface
+Vlanif2521                    up      down     HUAWEI, Quidway Series, Vlanif252
+                                               1 Interface
+Vlanif3034                    up      up       HUAWEI, Quidway Series, Vlanif303
+                                               4 Interface
+Vlanif3036                    up      down     HUAWEI, Quidway Series, Vlanif303
+                                               6 Interface
+Vlanif3042                    up      up       HUAWEI, Quidway Series, Vlanif304
+                                               2 Interface
+Vlanif3160                    up      up       HUAWEI, Quidway Series, Vlanif316
+                                               0 Interface
+[GLO1-LAG-394]    dis cur
+#
+!Software Version V100R006C05
+ sysname GLO1-LAG-394
+#
+ vlan batch 88 131 250 444 530 560 805 902 1007 1237
+ vlan batch 1351 1447 1489 1492 to 1493 1496 to 1497 1501 1503 1506 to 1507 1552 1573
+ vlan batch 1630 1641 1643 1647 1672 1900 2057 2079 2114 2151
+ vlan batch 2427 to 2428 2521 to 2522 2825 2907 3034 3036 3042 3157 3160 to 3162 3187
+ vlan batch 3312 3830
+#
+lldp enable
+#
+vlan 88
+ description WEMA-SW-MGT
+vlan 131
+ description STERLING-BANK-HQ-SW-MGT
+vlan 444
+ description MOBIL SERVICE
+vlan 530
+ description WEMA-MARINA-HQL3 BRANCHES
+vlan 560
+ description ORANGE-ECOBANK
+vlan 805
+ description BS-SW-NEW-MGT-VL
+vlan 902
+ description APMT-APAPA-IKOYI
+vlan 1007
+ description test vlan for jb ijora
+vlan 1237
+ description Springfield (Kewalram)
+vlan 1351
+ description JULIUS BERGER IJORA INTERNET
+vlan 1447
+ description DANGOTE-APAPA-INT
+vlan 1489
+ description RADIO-MGT
+vlan 1492
+ description MGT
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1496
+ description CERAGON-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1501
+ description ols-sw-mgt-vlan
+vlan 1503
+ description nera
+vlan 1506
+ description FBN-SIP
+vlan 1507
+ description ENT-MGT-3
+vlan 1552
+ description OLAM IGANMU
+vlan 1573
+ description Premium_Trust_Bank_Apongbon
+vlan 1630
+ description IXPN
+vlan 1641
+ description JBN-LAG-ABJ
+vlan 1643
+ description JB-NESTOIL-IJORA
+vlan 1647
+ description BANK-OF-INDUSTRY
+vlan 1672
+ description WESTMETRO
+vlan 1900
+ description UBN L3 BRANCHES
+vlan 2057
+ description ORANGE ZIM APAPA
+vlan 2079
+ description APMT LAG-KANO
+vlan 2114
+ description COMPOJ (NIWA) MARINA
+vlan 2151
+ description MOBIL-INTERNET-RADIO-BKP
+vlan 2427
+ description JBN-SHAGAMU-LL
+vlan 2428
+ description JBN-LAG-IBD-EXPR ESS
+vlan 2521
+ description FBN INSURANCE-LL-100M
+vlan 2522
+ description JULIUS-BERGER-ABJ-LAG
+vlan 2825
+ description SCM-CAPITAL-MARINA
+vlan 2907
+ description SAHARA-ENERGY-LAG-IJORA
+vlan 3034
+ description STERLING-BANK-HQ-VPLS
+vlan 3036
+ description APMT-INTERNET
+vlan 3042
+ description UBA_VLAN
+vlan 3157
+ description SAHARA-VPLS
+vlan 3160
+ description SHELL-FMH-4TH-FLR-ABUJA-100M-LL
+vlan 3161
+ description SHELL-IKEJA-TO-MARINA-LL45Mb
+vlan 3162
+ description SHELL-INTERNET
+vlan 3187
+ description SHELL-FMH-BULK-SMS
+vlan 3312
+ description blended-tech
+vlan 3830
+ description 4G-LTE-BACKHAUL
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@9&'A/&{JOTHD`I"H7nY'3Dd@%@%@
+ local-user bsnoc privilege level 15
+ local-user fabian password cipher %@%@frVk1E}`>'mRC><@G(H@3Dep%@%@
+ local-user fabian privilege level 15
+ local-user huawei password cipher %@%@+u1[P=aWwNCxc6P+'Q$&nDtV%@%@
+ local-user huawei privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif88
+ ip address 10.248.248.194 255.255.255.248
+#
+interface Vlanif131
+ ip address 171.1.1.2 255.255.255.252
+#
+interface Vlanif250
+#
+interface Vlanif530
+#
+interface Vlanif805
+ ip address 10.248.246.7 255.255.255.192
+#
+interface Vlanif1501
+ ip address 10.248.249.115 255.255.255.0
+#
+interface Vlanif1573
+ ip address 44.44.44.1 255.255.255.0
+#
+interface Vlanif1900
+#
+interface Vlanif2428
+#
+interface Vlanif2521
+#
+interface Vlanif3034
+ ip address 192.185.101.249 255.255.255.0
+#
+interface Vlanif3036
+#
+interface Vlanif3042
+ ip address 192.168.219.248 255.255.255.0
+#
+interface Vlanif3160
+ ip address 192.168.78.2 255.255.255.0
+#
+interface Ethernet0/0/1
+ description BLENDED-TECHNOLOGIES!UNKNOWN
+ port link-type trunk
+ port trunk allow-pass vlan 1503 3312
+#
+interface Ethernet0/0/2
+ description APMT-INTERNET
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 902 2079 3036
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/3
+ description SAHARA ENERGY LAGOS IJORA
+ port link-type access
+ port default vlan 3157
+#
+interface Ethernet0/0/4
+ description BANK OF INDUSTRY
+ shutdown
+ port link-type access
+ port default vlan 1647
+#
+interface Ethernet0/0/5
+ description OLAM IGANMU 20MB INTERNET
+ port link-type access
+ port default vlan 1552
+#
+interface Ethernet0/0/6
+ description COMPOJ (NATIONAL INLAND WATERWAYS AUTHORITY) | 50MB
+ port link-type trunk
+ port trunk allow-pass vlan 2114
+#
+interface Ethernet0/0/7
+ description free port
+ port link-type access
+ port default vlan 444
+ multicast-suppression 50
+ broadcast-suppression 50
+#
+interface Ethernet0/0/8
+ description SHELL- LAGOS -MARINA-HQ-TRUNK
+ port link-type access
+ port default vlan 3161
+#
+interface Ethernet0/0/9
+ description TRUNK TO JULIUS BERGER IJORA
+ port link-type trunk
+ port trunk allow-pass vlan 805 1007 1351 1641 1643 2427 to 2428 2522
+ multicast-suppression 50
+ broadcast-suppression 50
+#
+interface Ethernet0/0/10
+ description DANGOTE-APAPA-INT | 45M
+ port link-type trunk
+ port trunk allow-pass vlan 1447 1489
+#
+interface Ethernet0/0/11
+ description WESTMETRO LAGOS 40MB INTERNET
+ port link-type access
+ port default vlan 1672
+#
+interface Ethernet0/0/12
+ description Springfield (Kewalram)|2MB INTERNET
+ port link-type access
+ port default vlan 1237
+#
+interface Ethernet0/0/13
+ description CERAGON MGT
+ port link-type access
+ port default vlan 1496
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/14
+ description STERLING- MARINA-HQ
+ port link-type trunk
+ port trunk allow-pass vlan 131 3034
+#
+interface Ethernet0/0/15
+ description PREMIUM-TRUST-BANK-APONGBON-LL
+ port link-type access
+ port default vlan 1573
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/16
+ description - SHELL-FMH-BULK-SMS-LAG394-LAG737-HUAWEI-IDU-GE01-3G-rack
+ port link-type access
+ port default vlan 3187
+#
+interface Ethernet0/0/17
+ port link-type dot1q-tunnel
+#
+interface Ethernet0/0/18
+ description WEMA- MARINA-HQ
+ port link-type trunk
+ port trunk allow-pass vlan 88 530 1507
+#
+interface Ethernet0/0/19
+ port link-type trunk
+ port trunk allow-pass vlan 88
+#
+interface Ethernet0/0/20
+ description FBN INSURANCE-LL-100M
+ port link-type access
+ port default vlan 2521
+#
+interface Ethernet0/0/21
+ description SHELL-FMH-4TH-FLR-ABUJA-100M-LL
+ port link-type access
+ port default vlan 3160
+#
+interface Ethernet0/0/22
+ description FREE
+ port link-type trunk
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+#
+interface GigabitEthernet0/0/1
+ description TRUNK-TO-DCN/MPLS-GE-0/1/7
+ port link-type trunk
+ port trunk allow-pass vlan 88 131 530 560 805 900 to 902 1090 1237 1351 1447
+ port trunk allow-pass vlan 1489 1493 1496 to 1497 1501 to 1503 1507 1512 1552 1573 1600 to 1604 1630
+ port trunk allow-pass vlan 1632 1641 1643 1647 1672 to 1677 1683 to 1686 1753 1844 1900 1917
+ port trunk allow-pass vlan 1921 1992 2052 2054 2056 to 2061 2079 to 2080 2114 2151 2311 to 2315 2317
+ port trunk allow-pass vlan 2333 2412 2427 to 2428 2434 2441 2510 to 2511 2521 to 2522 2544 2701 2825
+ port trunk allow-pass vlan 2907 2999 3034 to 3036 3041 to 3042 3157 3160 to 3162 3187 3312 3830 3832
+ port trunk allow-pass vlan 3841 to 3842 3844 to 3845 3847 to 3849 3910 3932 4054 to 4055
+ jumboframe enable 13296
+#
+interface GigabitEthernet0/0/2
+ description UBA HQ MARINA - FIBER
+ port link-type trunk
+ port trunk allow-pass vlan 805 1501 3042 3160 to 3162 3830
+ jumboframe enable 13296
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/3
+ description UNION BANK MARINA HQ - FIBER
+ port link-type access
+ port default vlan 1900
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/4
+ description STERLING- MARINA-HQ
+ port link-type trunk
+ port trunk allow-pass vlan 131 3034
+ jumboframe enable 13296
+ port media type fiber
+     undo negotiation auto
+ combo-port auto
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100007D6D
+ snmp-agent community read cipher %@%@+ox$4bMGxH<u,0RJh)zL_DM2vnDGC(,7['J#cJUEfzd6DM5_Bgk"I+MPQIOz{TN2+6!2M>_D%@%@
+ snmp-agent community read cipher %@%@,q~K0rg6*G-U]dS5hF3EdyvQ4uB!@s(Fk"X2%0"9E8(PyvTd6\)g4nLan-T{bp<E~KX1v]dy%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[GLO1-LAG-394]

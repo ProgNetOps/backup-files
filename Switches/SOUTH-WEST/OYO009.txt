@@ -1,0 +1,408 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 13:25.33 ? ? /home/mobaxterm ? telnet 10.248.249.119
+Connected to 10.248.249.119.
+bsnocEntering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<ENT-SW-OYO009>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-SW-OYO009]dis int des
+Interface                   Description
+Ethernet0/0/1               UBA OYO
+Ethernet0/0/2               VDT LAGOS TO OYO | VDT INTERNET
+Ethernet0/0/3               RCC OYO GH
+Ethernet0/0/4               STANBIC IBTC BANK OYO | 4MB CERAGON
+Ethernet0/0/5               description ITX FCE SPED OYO | 70MB INTERNET
+Ethernet0/0/6               FIRST-BANK AWE
+Ethernet0/0/7               KOLA DAISI UNI KDU CYBERSPACE AKINYELE(vlan 4021)
+Ethernet0/0/8               LAFAYETTE OWODE
+Ethernet0/0/9               RCC OYO SITE (OGBOMOSHO)
+Ethernet0/0/10              LEADWAY PENSURE ISEYIN | NALOT | UBA | FBN ISEYIN
+Ethernet0/0/11              description ITX FCE SPED OYO | 70MB INTERNET
+Ethernet0/0/12              SKYE BANK AJAYI CROWTHER OYO
+Ethernet0/0/13              STANBIC_IBTC_SAKI
+Ethernet0/0/14              FIRST-BANK-CERAGON-RADIO-
+Ethernet0/0/15              ACCESS-BANK-OYO-LL-FIBER
+Ethernet0/0/16              GLOWORLD OYO
+Ethernet0/0/17              SWIFTTALK OYO 20mb-ll-OYO001-OYO009HUW-RTN950-GE04
+Ethernet0/0/18              FIBER-EDGE-SBGS-OYO
+Ethernet0/0/19              HUAWEI, Quidway Series, Ethernet0/0/19 Interface
+Ethernet0/0/20              HUAWEI, Quidway Series, Ethernet0/0/20 Interface
+Ethernet0/0/21              HUAWEI, Quidway Series, Ethernet0/0/21 Interface
+Ethernet0/0/22              TEST
+Ethernet0/0/23              HUAWEI, Quidway Series, Ethernet0/0/23 Interface
+Ethernet0/0/24              HUAWEI, Quidway Series, Ethernet0/0/24 Interface
+GigabitEthernet0/0/1        UPLINK to DCN  UPE M8 GE0/1/5
+GigabitEthernet0/0/2        HUAWEI, Quidway Series, GigabitEthernet0/0/2 Interf
+                            ace
+GigabitEthernet0/0/3        HUAWEI, Quidway Series, GigabitEthernet0/0/3 Interf
+                            ace
+GigabitEthernet0/0/4        EMMANUEL-ALAYANDE-UNI-OYO-INT ==> HUAWEI PoE(No IDU
+                            )
+NULL0                       HUAWEI, Quidway Series, NULL0 Interface
+Vlanif1                     HUAWEI, Quidway Series, Vlanif1 Interface
+Vlanif1501                  HUAWEI, Quidway Series, Vlanif1501 Interface
+[ENT-SW-OYO009]     dis cur
+#
+!Software Version V100R005C01
+ sysname ENT-SW-OYO009
+#
+ vlan batch 1 77 519 671 1248 1420 1425 1492 to 1493 1495 to 1496 1501
+ vlan batch 1503 1513 1568 1639 to 1640 1744 1803 1807 1914 1936 1996
+ vlan batch 2423 2477 2550 3007 3035 3042 3512 4021 to 4022
+#
+ cluster enable
+ ntdp enable
+ ntdp hop 16
+ ndp enable
+#
+ undo http server enable
+#
+vlan 77
+ description TEST
+vlan 519
+ description FIRS-OYO
+vlan 671
+ description VDT-LAGOS-OYO
+vlan 1248
+ description FBN AWE| OYO|4M
+vlan 1420
+ description ITX FCE SPED OyO
+vlan 1425
+ description LAFAYETTE-VPLS
+vlan 1492
+ description BS-NERA-4-MGT
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1496
+ description CERAGON-MGT
+vlan 1501
+ description BS-MGT
+vlan 1503
+ description GLO1-NERA-MGT
+vlan 1513
+ description FED-POLY-ADO-EKITI
+vlan 1568
+ description IBADAN-POLY,SHAKI (NALOT)
+vlan 1639
+ description MEED-FCE-OYO
+vlan 1640
+ description ACCEBANK-VPLS
+vlan 1744
+ description LEADWAY-PENSURE-ISEYIN
+vlan 1803
+ description RCC-OYO-GH
+vlan 1807
+ description RCC-OYO-SITE-OGBOMOSHO
+vlan 1914
+ description SWIFTTALK OYO
+vlan 1936
+ description FIBER-EDGE-SBGS-OYO
+vlan 1996
+ description GLOWORLD-OYO
+vlan 2423
+ description STANBIC-IBTC-VPLS
+vlan 2477
+ description EMMANUEL-ALAYANDE-UNIV-OYO
+vlan 2550
+ description AFE-BABALOLA-UNI-INTERNET
+vlan 3007
+ description FBN-VPLS
+vlan 3035
+ description SKYE BANK
+vlan 3042
+ description UBA-VPLS
+vlan 3512
+ description KDU-IBADAN
+vlan 4021
+ description CYBERSPACE AKINYELE
+vlan 4022
+ description VDT-OYO-INTERNET
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password simple admin
+ local-user admin service-type http
+ local-user bsnoc password cipher RB!G'1+"PX61[a"FZ7=S#!!!
+ local-user bsnoc privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif1501
+ ip address 10.248.249.119 255.255.255.0
+#
+interface Ethernet0/0/1
+ description UBA OYO
+ port link-type trunk
+ port trunk allow-pass vlan 1495 3042
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/2
+ description VDT LAGOS TO OYO | VDT INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 4022
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/3
+ description RCC OYO GH
+ port link-type access
+ port default vlan 1803
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/4
+ description STANBIC IBTC BANK OYO | 4MB CERAGON
+ port link-type access
+ port default vlan 2423
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/5
+ description description ITX FCE SPED OYO | 70MB INTERNET
+ port link-type access
+ port default vlan 1420
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/6
+ description FIRST-BANK AWE
+ port link-type access
+ port default vlan 1248
+ ntdp enable
+ ndp enable
+ bpdu enable
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/7
+ description KOLA DAISI UNI KDU CYBERSPACE AKINYELE(vlan 4021)
+ port link-type trunk
+ port trunk allow-pass vlan 1495 1503 3512 4021
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/8
+ description LAFAYETTE OWODE
+ port link-type trunk
+ port trunk allow-pass vlan 1425 1495
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/9
+ description RCC OYO SITE (OGBOMOSHO)
+ port link-type trunk
+ port trunk allow-pass vlan 1495 1807
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/10
+ description LEADWAY PENSURE ISEYIN | NALOT | UBA | FBN ISEYIN
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1492 to 1493 1495 1568 1744 3007 3042
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/11
+ description description ITX FCE SPED OYO | 70MB INTERNET
+ port link-type access
+ port default vlan 1420
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/12
+ description SKYE BANK AJAYI CROWTHER OYO
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1495 3035
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/13
+ description STANBIC_IBTC_SAKI
+ shutdown
+ port link-type access
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/14
+ description FIRST-BANK-CERAGON-RADIO-
+ port link-type access
+ port default vlan 1496
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/15
+ description ACCESS-BANK-OYO-LL-FIBER
+ port link-type access
+ port default vlan 1640
+ stp bpdu-filter enable
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/16
+ description GLOWORLD OYO
+ port link-type access
+ port default vlan 1996
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/17
+ description SWIFTTALK OYO 20mb-ll-OYO001-OYO009HUW-RTN950-GE04
+ port link-type access
+ port default vlan 1914
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/18
+ description FIBER-EDGE-SBGS-OYO
+ port link-type access
+ port default vlan 1936
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/19
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/20
+ shutdown
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/21
+ port link-type trunk
+ port trunk allow-pass vlan 150 519 671 1248 1420 1425 1492 to 1493 1495 to 1496 1501 1503
+ port trunk allow-pass vlan 1568 1639 to 1640 1744 1803 1807 1914 1936 1996 2423 2550
+ port trunk allow-pass vlan 3035 3042 3512 4021 to 4022
+ stp bpdu-filter enable
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/22
+ description TEST
+ port link-type trunk
+ port trunk allow-pass vlan 150 519 671 1248 1420 1425 1492 to 1493 1495 to 1496 1501 1503
+ port trunk allow-pass vlan 1568 1639 to 1640 1744 1803 1807 1914 1936 1996 2423 2550
+ port trunk allow-pass vlan 3035 3042 3512 4021 to 4022
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/23
+ port link-type access
+ port default vlan 1501
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/24
+ port link-type trunk
+ port trunk allow-pass vlan 1501 1513 1640 2550
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/1
+ description UPLINK to DCN  UPE M8 GE0/1/5
+ port link-type trunk
+ port trunk allow-pass vlan 150 519 671 1248 1420 1425 1492 to 1493 1495 to 1496 1501 1503
+ port trunk allow-pass vlan 1568 1639 to 1640 1744 1803 1807 1914 1936 1996 2423 2477
+ port trunk allow-pass vlan 2550 3035 3042 3512 4021 to 4022
+ stp bpdu-filter enable
+ ntdp enable
+ ndp enable
+ bpdu enable
+ jumboframe enable 13296
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/2
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/3
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/4
+ description EMMANUEL-ALAYANDE-UNI-OYO-INT ==> HUAWEI PoE(No IDU)
+ port link-type access
+ port default vlan 2477
+ ntdp enable
+ ndp enable
+ bpdu enable
+ jumboframe enable 13296
+ port media type copper
+     undo negotiation auto
+ combo-port auto
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100002106
+ snmp-agent community read cipher ^D#U[\Q.+H.9]T((+V>!H\"TX$_S#6.NM(0=0\)*5WU!
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[ENT-SW-OYO009]
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                        ?
+
+ ? 2025-11-13 ? ? 13:30.45 ? ? /home/mobaxterm ?

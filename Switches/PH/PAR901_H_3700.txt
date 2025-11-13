@@ -1,0 +1,610 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 13:32.12 ? ? /home/mobaxterm ? telnet 10.248.249.15
+Connected to 10.248.249.15.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<PAR901 HUAWEI 3700>sys
+Enter system view, return user view with Ctrl+Z.
+[PAR901 HUAWEI 3700]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       UNION BANK TRANS AMADI
+Eth0/0/2                      down    down     Total Village 75MB LL to Obite
+Eth0/0/3                      up      up       RADIO-TRUNK-PAR901_ACCESS BANK BU
+                                               GUMA,IPEXPRESS-PH
+Eth0/0/4                      up      up       SCHLUMBERGER INTERNET PHC | 30MB
+Eth0/0/5                      up      up       FCMB TRANSAMADI
+Eth0/0/6                      up      up       ACCESS BANK OLU-OBASANJO
+Eth0/0/7                      up      up       ACCESS BANK WOJI
+Eth0/0/8                      up      up       WEST METRO PHC (OPTIMUS BANK)
+Eth0/0/9                      up      up       FCMB PHC ABA ROAD, PHC
+Eth0/0/10                     up      up       "SOLAR_TURBINE"
+Eth0/0/11                     down    down     PRODECCO ELICONIA PARK TO VI LAGO
+                                               S
+Eth0/0/12                     up      up       TOTAL OBAJI-LL-100M
+Eth0/0/13                     up      up       ACCESS-BANK ABULUMAH
+Eth0/0/14                     up      up       TOTAL INDORAMA METERING
+Eth0/0/15                     up      up       TRUNK-1st-3750-SW-MGT!PRODECO-INT
+                                               ERNET | ACCESS-WOJI-L3 | VASCON-P
+                                               HC| SAVE-A-LIFE
+Eth0/0/16                     down    down     NEWCROSS-EKU-INTERNET
+Eth0/0/17                     up      up       NEWCROSS-EKU-LL-LAGOS_4M
+Eth0/0/18                     down    down     SPECIALITY-DRILLING-FLUID-INT | 6
+                                               0M
+Eth0/0/19                     down    down     CLEAN-NIG-ASSOCIATES(COMTEL-RESOU
+                                               RCES)-INT | 10M
+Eth0/0/20                     down    down     VACON-PHC-INT | 15M
+Eth0/0/21                     down    down     SAVE-A-LIFE-MISSION | 50M
+Eth0/0/22                     down    down     JOINT MARINE SERVICES)-INT | 20M
+Eth0/0/23                     *down   down     JOINT MARINE SERVICES)-INT | 20M
+Eth0/0/24                     up      up       NNPC PHC DEPOT | NNPC PHC AREA FI
+                                               ELD OFFICE
+GE0/0/1                       down    down     LINK TO PAR 004
+GE0/0/2                       up      up       TO-DCN- PE A - AR- 2/0/8 ROUTER
+GE0/0/3                       up      up       TRUNK-TO-2960
+GE0/0/4                       down    down     HUAWEI, Quidway Series, GigabitEt
+                                               hernet0/0/4 Interface
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif201                     up      up       SWITCH-MGMT-IP
+Vlanif521                     up      up       HUAWEI, Quidway Series, Vlanif521
+                                                Interface
+Vlanif803                     up      up       HUAWEI, Quidway Series, Vlanif803
+                                                Interface
+Vlanif1300                    up      up       HUAWEI, Quidway Series, Vlanif130
+                                               0 Interface
+Vlanif1301                    down    down     HUAWEI, Quidway Series, Vlanif130
+                                               1 Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1519                    up      up       HUAWEI, Quidway Series, Vlanif151
+                                               9 Interface
+Vlanif1541                    up      up       HUAWEI, Quidway Series, Vlanif154
+                                               1 Interface
+[PAR901 HUAWEI 3700]    dis cur
+#
+!Software Version V100R006C03
+ sysname PAR901 HUAWEI 3700
+#
+ vlan batch 2 to 16 18 to 22 96 to 97 127 160 200 to 201 203 223 232 300
+ vlan batch 505 520 to 523 556 558 563 569 653 665 667 to 668 670 to 673
+ vlan batch 675 to 677 705 803 832 901 to 902 923 952 to 953 980 1047 1113
+ vlan batch 1128 1130 1201 1207 1221 1288 1299 to 1302 1312 1487 1493 to 1498
+ vlan batch 1501 1503 to 1504 1510 1519 to 1520 1541 1549 1600 to 1601 1620 to 1621 1640 1664
+ vlan batch 1666 1675 1701 to 1703 1716 1718 to 1720 1734 to 1735 1758 to 1761 1818 to 1821 1840 to 1841 1847
+ vlan batch 1851 to 1852 1854 1864 1868 1882 1884 1924 1934 1959 to 1960 1970
+ vlan batch 2022 2150 2172 to 2173 2177 to 2179 2181 2331 2359 2372 to 2373 2429 2434 to 2435
+ vlan batch 2449 2452 2454 2500 to 2501 2515 2801 2999 3004 3126 3239
+ vlan batch 3304 to 3305 3317 3501 to 3502 3554 4055
+#
+ undo http server enable
+#
+vlan 12
+ description "WINROK SECOND CONN-PH"
+vlan 14
+ description "SOLAR_TURBINE"
+vlan 20
+ description NLNG
+vlan 22
+ description AGIP-INTERNET-PH
+vlan 127
+ description PRODECO-INTERNET
+vlan 160
+ description SETRACO-ELELE
+vlan 201
+ description SWITCH-MGT
+vlan 223
+ description FIRS BENIN MPLS
+vlan 232
+ description NNPC-IDSL-ELELE
+vlan 520
+ description ACCESS-BANK-WOJI-L3
+vlan 521
+ description SPECIAL-DRILL-FLUID
+vlan 522
+ description CLEAN-NIG-ASSOCIATES-INT
+vlan 523
+ description SAVE-A-LIFE-MISSION
+vlan 556
+ description JOINT MARINE SERVICES
+vlan 558
+ description NBC AHOADA
+vlan 569
+ description NBC-abakiliki
+vlan 653
+ description FIRS_Abakaliki_MPLS
+vlan 665
+ description FIRS-AWKA-MPLS
+vlan 667
+ description FIRS-ASABA-MPLS
+vlan 668
+ description FIRS-CALABAR-LL-MPLS
+vlan 670
+ description FIRS-ONITSHA-MPLS
+vlan 671
+ description FIRS-SAPALE-MPLS
+vlan 672
+ description FIRS-UMUAHIA-MPLS
+vlan 673
+ description FIRS-UYO-MPLS
+vlan 675
+ description AGIP-IDU
+vlan 676
+ description AGIP-EBOCHA
+vlan 677
+ description AGIP-OB/OB
+vlan 705
+ description FIRS-YENAGOA
+vlan 803
+ description SWITCH-MGT-VLAN
+vlan 832
+ description INDORAMA-ELEME-INTERNET
+vlan 901
+ description FIRS-REGIONAL-OFFICE
+vlan 902
+ description FIRS-NNEWI
+vlan 923
+ description HYPREP-INT
+vlan 952
+ description ZETA_WEBB_CALABAR
+vlan 953
+ description IMO-STATE-RESIDENCE
+vlan 980
+ description NBC-ORLU
+vlan 1047
+ description WEST-METRO-PHC
+vlan 1113
+ description STG-ONNE-INTERNET
+vlan 1128
+ description NPA-ONNE-INTERNET
+vlan 1130
+ description NOTORE-INTERNET
+vlan 1207
+ description SWIFT-TALK-CALABAR
+vlan 1221
+ description NEWCROSS-EKU-INTERNET
+vlan 1288
+ description TOTAL-PLC
+vlan 1299
+ description VASCON-PHC-INT
+vlan 1300
+ description TOTAL-OBITE-VPLS
+vlan 1301
+ description TOTAL-OBITE-INTERNET
+vlan 1302
+ description TOTAL-INT
+vlan 1312
+ description IPEXPRESS-PH
+vlan 1487
+ description NEW-CERAGON-MGT
+vlan 1493
+ description BS-NERA-3-MGT
+vlan 1494
+ description NNPC-MGT
+vlan 1495
+ description -NERA-MGT-VLAN
+vlan 1496
+ description BS-CERAGON-2-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1498
+ description BS-CERAGON-MGT
+vlan 1501
+ description BS-MGT
+vlan 1503
+ description NBC_BENIN
+vlan 1504
+ description NBC_BENIN_URBAN
+vlan 1510
+ description BULLWARK-INTERNET
+vlan 1519
+ description DAEWO-INDORAMA-INT
+vlan 1520
+ description ph-refining
+vlan 1541
+ description UNION-BANK-TRANSAMADI
+vlan 1549
+ description SHELL-PHC-WAR-250MbLL
+vlan 1600
+ description ORANGE-SCHLUMBERGER
+vlan 1601
+ description ORANGE-HALIBURTON
+vlan 1620
+ description PACENT-TECH-UNI-ZIK
+vlan 1621
+ description INEC-ENUGU
+vlan 1640
+ description ACCESS-BANK-LL
+vlan 1664
+ description CATHOLIC-ARCHDIOCESE-AWKA
+vlan 1666
+ description CATHOLIC-ARCHDIOCESE AWKA (GOV.LODGE)
+vlan 1675
+ description ENUGU-STATE-ELECTRICITY
+vlan 1701
+ description to_lagos
+vlan 1718
+ description TOTAL_45mbps_abj
+vlan 1734
+ description BOA-BENIN
+vlan 1735
+ description SAIPEM-WARRI
+vlan 1758
+ description TPGS PLOT 108_1
+vlan 1759
+ description TPGS PLOT 108_2
+vlan 1760
+ description TPGS PLOT 474
+vlan 1761
+ description OWERRI_SWITCH_MGT
+vlan 1818
+ description NBC ONITSHA
+vlan 1819
+ description NBC-WARRI
+vlan 1820
+ description NBC-ASABA
+vlan 1821
+ description NBC-EKET
+vlan 1840
+ description FIRS OLRU mpls
+vlan 1841
+ description PRODECO-ABUJA
+vlan 1847
+ description PRODECO-LAGOS
+vlan 1852
+ description ADOKEH-ASSOCIATES
+vlan 1854
+ description FIRS
+vlan 1864
+ description ICSL-LAG-PHC-WAN
+vlan 1868
+ description GOLDEN-LOTTO-APN
+vlan 1882
+ description EROTON-CAWTHORNE
+vlan 1884
+ description EROTON-ALAKIRI
+vlan 1924
+ description CATHOLIC-ARCHIDIOCESE
+vlan 1934
+ description AMT-NIG-LTD
+vlan 1959
+ description IMO-STATE-GOVT
+vlan 1960
+ description CISCON-INTERNET-WARRI
+vlan 1970
+ description temp-cool
+vlan 2022
+ description NEWCROSS-EKU-LL-LAGOS_4M
+vlan 2150
+ description TOTAL-ABUJA-PH-DS3-NEW
+vlan 2172
+ description NNPC-WRPC-WARRI-PRI
+vlan 2173
+ description NNPC-WRPC-WARRI-SEC
+vlan 2177
+ description NNPC-ITD-BENIN-PRIMARY
+vlan 2178
+ description NNPC-ITD-BENIN-SECONDARY
+vlan 2179
+ description ADDAX-IZOMBE
+vlan 2181
+ description NNPC-PHRC-PRIMARY
+vlan 2331
+ description SUNTRUST-VPLS
+vlan 2359
+ description SCHLUMBERGER-INTERNET
+vlan 2372
+ description BELEMA OIL LL TO LAG 2Mb
+vlan 2373
+ description BELEMA-OIL-PRODUCING-PH-YENAGOA
+vlan 2429
+ description SPACEMATRIX_OWERRI
+vlan 2434
+ description WINROK-NSITF-PH
+vlan 2435
+ description CONOIL-AVIATION-PHC
+vlan 2449
+ description UNION-FACTORY-ABA
+vlan 2452
+ description WEST-ORD-OIL
+vlan 2454
+ description RCC_EKET_INTERNET
+vlan 2500
+ description MADONNA UNIVERSITY
+vlan 2501
+ description SWIFT-TALK-UYO
+vlan 2515
+ description FIRS-ENUGU-MSTO
+vlan 2801
+ description JBR-KOKO-AMA
+vlan 2999
+ description FCMB-VPLS
+vlan 3004
+ description SILVERBIRD-VPLS
+vlan 3126
+ description ACCESS-BANK-OLD-DAIMOND
+vlan 3239
+ description ACCESS-BANK-OLU-OBASANJO-L3
+vlan 3304
+ description NBC-ENUGU-URBAN
+vlan 3305
+ description NBC-ENUGU-PLANT
+vlan 3317
+ description FIRS-MSTO-ABA
+vlan 3501
+ description NNPC PHC AREA FIELD OFFICE
+vlan 3502
+ description NNPC PHC DEPOT
+vlan 3554
+ description SETRACO-ELELE-VIA-UPR011
+vlan 4055
+ description ORANGE-GE-ONNE
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user ben password cipher %$%$\Gt6*])UU8j4FA0~0:>JSqh_%$%$
+ local-user ben privilege level 15
+ local-user ope password cipher %$%$X|<s0n0<9JefqhTkb7#>S*!u%$%$
+ local-user ope privilege level 15
+ local-user admin password cipher %$%$I6.ASV)hJET,p"Dn.YM%3aXO%$%$
+ local-user admin service-type http
+ local-user bsnoc password cipher %$%$QoW}8';B=$vpFx-"*uo;S$xo%$%$
+ local-user bsnoc privilege level 15
+ local-user moses password cipher %$%$Yzv.>k:`VR5/0w,zC4nKSWNE%$%$
+ local-user moses privilege level 15
+ local-user donald password cipher %$%$k'x!(;h|sA>uIlS%|V\6SD;2%$%$
+ local-user donald privilege level 15
+ local-user fabian password cipher %$%$o}L$Zr(cp7d3$'Kud\CUSwne%$%$
+ local-user fabian privilege level 15
+ local-user huawei password cipher %$%$wCQ;K-xU6$3{u0SV98w1S1(|%$%$
+ local-user huawei privilege level 15
+ local-user naveen password cipher %$%$*4wq-MWv;)J<[:9&bFM5Sg^U%$%$
+ local-user naveen privilege level 15
+ local-user makinde password cipher %$%$B];rGL+|ACz<|v6.@E)QS-$x%$%$
+ local-user makinde privilege level 15
+ local-user adewunmi password cipher %$%$t_Es.CYMu1!$_E!=^g.~S*!u%$%$
+ local-user adewunmi privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif201
+ description SWITCH-MGMT-IP
+ ip address 10.244.244.20 255.255.255.240
+#
+interface Vlanif521
+ ip address 192.168.1.1 255.255.255.0
+#
+interface Vlanif803
+ ip address 10.248.246.156 255.255.255.192
+#
+interface Vlanif1300
+ ip address 1.1.1.1 255.255.255.0
+#
+interface Vlanif1301
+#
+interface Vlanif1501
+ ip address 10.248.249.15 255.255.255.0
+#
+interface Vlanif1519
+ ip address 13.13.13.14 255.255.255.0
+#
+interface Vlanif1541
+ ip address 10.10.10.1 255.255.255.0
+#
+interface Ethernet0/0/1
+ description UNION BANK TRANS AMADI
+ port link-type access
+ port default vlan 1541
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/2
+ description Total Village 75MB LL to Obite
+ port link-type trunk
+ port trunk allow-pass vlan 1288 1300
+#
+interface Ethernet0/0/3
+ description RADIO-TRUNK-PAR901_ACCESS BANK BUGUMA,IPEXPRESS-PH
+ port link-type trunk
+ port trunk allow-pass vlan 1312 1497 1640
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/4
+ description SCHLUMBERGER INTERNET PHC | 30MB
+ port link-type access
+ port default vlan 2359
+#
+interface Ethernet0/0/5
+ description FCMB TRANSAMADI
+ port link-type access
+ port default vlan 2999
+#
+interface Ethernet0/0/6
+ description ACCESS BANK OLU-OBASANJO
+ port link-type access
+ port default vlan 1640
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/7
+ description ACCESS BANK WOJI
+ port link-type trunk
+ port trunk allow-pass vlan 1493 1640
+ qos lr outbound cir 10000 cbs 12000
+ qos lr inbound cir 10000 cbs 12000
+#
+interface Ethernet0/0/8
+ description WEST METRO PHC (OPTIMUS BANK)
+ port link-type access
+ port default vlan 1047
+#
+interface Ethernet0/0/9
+ description FCMB PHC ABA ROAD, PHC
+ port link-type trunk
+ port trunk allow-pass vlan 1493 2999
+#
+interface Ethernet0/0/10
+ description "SOLAR_TURBINE"
+ port link-type access
+ port default vlan 14
+#
+interface Ethernet0/0/11
+ description PRODECCO ELICONIA PARK TO VI LAGOS
+ port link-type access
+ port default vlan 1847
+#
+interface Ethernet0/0/12
+ description TOTAL OBAJI-LL-100M
+ port link-type access
+ port default vlan 1300
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/13
+ description ACCESS-BANK ABULUMAH
+ port link-type access
+ port default vlan 1640
+#
+interface Ethernet0/0/14
+ description TOTAL INDORAMA METERING
+ port link-type access
+ port default vlan 1288
+#
+interface Ethernet0/0/15
+ description TRUNK-1st-3750-SW-MGT!PRODECO-INTERNET | ACCESS-WOJI-L3 | VASCON-PHC| SAVE-A-LIFE
+ port link-type trunk
+ port trunk allow-pass vlan 127 201 520 to 523 803 923 1299 1501 1519
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/16
+ description NEWCROSS-EKU-INTERNET
+ port link-type access
+ port default vlan 1221
+#
+interface Ethernet0/0/17
+ description NEWCROSS-EKU-LL-LAGOS_4M
+ port link-type access
+ port default vlan 2022
+#
+interface Ethernet0/0/18
+ description SPECIALITY-DRILLING-FLUID-INT | 60M
+ port link-type access
+ port default vlan 521
+#
+interface Ethernet0/0/19
+ description CLEAN-NIG-ASSOCIATES(COMTEL-RESOURCES)-INT | 10M
+ port link-type access
+ port default vlan 522
+#
+interface Ethernet0/0/20
+ description VACON-PHC-INT | 15M
+ port link-type trunk
+ port trunk allow-pass vlan 1299 1487
+#
+interface Ethernet0/0/21
+ description SAVE-A-LIFE-MISSION | 50M
+ port link-type access
+ port default vlan 523
+#
+interface Ethernet0/0/22
+ description JOINT MARINE SERVICES)-INT | 20M
+ port link-type access
+ port default vlan 556
+#
+interface Ethernet0/0/23
+ description JOINT MARINE SERVICES)-INT | 20M
+ shutdown
+ port link-type access
+ port default vlan 556
+#
+interface Ethernet0/0/24
+ description NNPC PHC DEPOT | NNPC PHC AREA FIELD OFFICE
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3501 to 3502
+#
+interface GigabitEthernet0/0/1
+ description LINK TO PAR 004
+ port link-type trunk
+ port trunk allow-pass vlan 675 to 677 803 1047 1493 1496 1501 1549 2452 2500 3554
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/2
+ description TO-DCN- PE A - AR- 2/0/8 ROUTER
+ port link-type trunk
+ port trunk allow-pass vlan 803 1047 1300 1312 1487 1493 to 1497 1501 1541 1640 1719
+ port trunk allow-pass vlan 1759 1847 2359 2500 2999 3239 3501 to 3502 3554
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/3
+ description TRUNK-TO-2960
+ port link-type trunk
+ port trunk allow-pass vlan 11 14 16 18 21 127 160 200 to 201 203 232
+ port trunk allow-pass vlan 521 558 569 675 to 677 803 832 923 952 to 953 980 1047
+ port trunk allow-pass vlan 1209 1221 1302 1312 1501 1503 to 1504 1601 1620 to 1621 1664 1666
+ port trunk allow-pass vlan 1675 1702 to 1703 1719 to 1720 1734 to 1735 1818 to 1821 1852 1970 2022 2172 to 2173 2177 to 2179
+ port trunk allow-pass vlan 2452 2501 2801 3004 3304 to 3305 3317 3419 3501 to 3502 3554
+#
+interface GigabitEthernet0/0/4
+ port link-type trunk
+ port trunk allow-pass vlan 675 to 677 803 1047 1300 to 1301 1493 1496 1501 1549 2452 2500
+ port media type copper
+     undo negotiation auto
+ port media type fiber
+     undo negotiation auto
+ combo-port auto
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100004AE8
+ snmp-agent community read cipher %$%$5C|[>M_MsN:^Oi9{v{p!Sof]%$%$
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[PAR901 HUAWEI 3700]
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                        ?
+
+ ? 2025-11-13 ? ? 13:39.11 ? ? /home/mobaxterm ?

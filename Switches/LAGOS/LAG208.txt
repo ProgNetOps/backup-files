@@ -1,0 +1,344 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:25.30 ? ? /home/mobaxterm ? telnet 10.248.246.113
+Connected to 10.248.246.113.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<LAG208-S3700-DC-SW>sys
+Enter system view, return user view with Ctrl+Z.
+[LAG208-S3700-DC-SW]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       AHMADIYA
+Eth0/0/2                      down    down     FLOWZAP-OTA|VLAN-2965| 50MB
+Eth0/0/3                      down    down     IPEXPRESS DEEPER-LIFE-SCH | 50MB
+Eth0/0/4                      down    down     AIML-SIMAWA-INT |20M
+Eth0/0/5                      up      up       WAVES
+Eth0/0/6                      down    down     COOL-LINK CORMART
+Eth0/0/7                      down    down     SWIFT TALK MOWE (CLIENT'S MICROTI
+                                               C ROUTER)
+Eth0/0/8                      down    down     IOTECH-00-PB-IBG001 |50M
+Eth0/0/9                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/9 Interface
+Eth0/0/10                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/10 Interface
+Eth0/0/11                     down    down     OOU OTA|VLAN-1790|
+Eth0/0/12                     down    down     VDT OTA|VLAN-1423|
+Eth0/0/13                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/13 Interface
+Eth0/0/14                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/14 Interface
+Eth0/0/15                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/15 Interface
+Eth0/0/16                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/16 Interface
+Eth0/0/17                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/17 Interface
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/24 Interface
+GE0/0/1                       up      up       LAG208-DCN TRUNK-GE0/3/0
+GE0/0/2                       down    down     FLOWZAP OTA|VLAN-2865| 50Mbps
+GE0/0/3                       up      up       ONEDATA AHMADIYA-JANKARA
+GE0/0/4                       down    down     DEEPERLIFE-CHURCH-CAMP-HQ
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      up       HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif80                      down    down     HUAWEI, Quidway Series, Vlanif80
+                                               Interface
+Vlanif804                     up      up       HUAWEI, Quidway Series, Vlanif804
+                                                Interface
+Vlanif805                     up      down     HUAWEI, Quidway Series, Vlanif805
+                                                Interface
+Vlanif1183                    up      down     HUAWEI, Quidway Series, Vlanif118
+                                               3 Interface
+Vlanif1368                    up      down     HUAWEI, Quidway Series, Vlanif136
+                                               8 Interface
+Vlanif1444                    up      up       HUAWEI, Quidway Series, Vlanif144
+                                               4 Interface
+Vlanif1501                    down    down     HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1503                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               3 Interface
+Vlanif1716                    up      up       ###COOLLINK PBC MOWE TEST###
+[LAG208-S3700-DC-SW]      dis cur
+#
+!Software Version V100R006C05
+ sysname LAG208-S3700-DC-SW
+#
+ vlan batch 80 804 to 805 1026 1117 1183 1308 1318 1368 1423 1425
+ vlan batch 1444 1486 1501 1503 1656 1715 to 1716 1764 1786 to 1787 1790 1794
+ vlan batch 1913 2865 3187
+#
+lldp enable
+#
+vlan 804
+ description SW MGMT-2
+vlan 1026
+ description TPGS-DOMI-TECPOINT
+vlan 1117
+ description TPGS-DOMI-WH1
+vlan 1183
+ description AIML-SIMAWA-INT
+vlan 1308
+ description DEEPERLIFE-CHURCH-CAMP-HQ
+vlan 1318
+ description DEEPERLIFE-CHURCH
+vlan 1368
+ description ONEDATA-MOWE
+vlan 1423
+ description VDT-OTA
+vlan 1425
+ description IO-Tech-001-IBG001
+vlan 1444
+ description COBRANET BHN MOWE
+vlan 1486
+ description NEW-BS-CERAGON-MGMT-WEST
+vlan 1501
+ description SWITCH MGMT
+vlan 1503
+ description RADIO Managment
+vlan 1656
+ description WAVES-AGEGE
+vlan 1715
+ description COOLINK-CORMART
+vlan 1716
+ description PBC-MOWE
+vlan 1764
+ description ONEDATA AHMADIYA-JANKARA
+vlan 1787
+ description IPEXPRESS-DEEPER-LIFE-SCH
+vlan 1790
+ description OOU-IBO
+vlan 1794
+ description AHMADIYAA
+vlan 1913
+ description SWIFT TALK
+vlan 2865
+ description FLOWZAP-OTA
+vlan 3187
+ description CYBERSPACE-IJU
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user yemi password cipher %@%@,0n76uHVj9uPqg3LC"6>mbg<%@%@
+ local-user yemi privilege level 3
+ local-user yemi service-type ssh
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@X"uX6isJmC7_taK,/YM/m1Tv%@%@
+ local-user bsnoc privilege level 3
+ local-user bsnoc service-type telnet
+ local-user moses password cipher %@%@8S}.;Mevh<HlBi<Q}*$Fma4c%@%@
+ local-user moses privilege level 3
+ local-user moses service-type telnet
+ local-user huawei password cipher %@%@y'M<>Ye^q5D([!/dCsg3mcSK%@%@
+ local-user huawei privilege level 3
+ local-user huawei service-type telnet
+#
+interface Vlanif1
+ ip address 10.240.80.242 255.255.255.0
+#
+interface Vlanif80
+#
+interface Vlanif804
+ ip address 10.248.246.113 255.255.255.192
+#
+interface Vlanif805
+#
+interface Vlanif1183
+#
+interface Vlanif1368
+#
+interface Vlanif1444
+ ip address 172.30.81.30 255.255.255.0
+#
+interface Vlanif1501
+ ip address 10.248.249.245 255.255.255.0
+ ip address 10.248.249.192 255.255.255.0 sub
+ ip address 10.248.249.221 255.255.255.0 sub
+#
+interface Vlanif1503
+ ip address 10.155.186.37 255.255.255.0
+#
+interface Vlanif1716
+ description ###COOLLINK PBC MOWE TEST###
+ ip address 100.200.100.1 255.255.255.0
+#
+interface Ethernet0/0/1
+ description AHMADIYA
+ port link-type access
+ port default vlan 1794
+#
+interface Ethernet0/0/2
+ description FLOWZAP-OTA|VLAN-2965| 50MB
+ port link-type access
+ port default vlan 2865
+#
+interface Ethernet0/0/3
+ description IPEXPRESS DEEPER-LIFE-SCH | 50MB
+ port link-type trunk
+ port trunk allow-pass vlan 1503 1786 to 1787
+#
+interface Ethernet0/0/4
+ description AIML-SIMAWA-INT |20M
+ port link-type access
+ port default vlan 1183
+#
+interface Ethernet0/0/5
+ description WAVES
+ port link-type access
+ port default vlan 1656
+#
+interface Ethernet0/0/6
+ description COOL-LINK CORMART
+ port link-type trunk
+ port trunk allow-pass vlan 1503 1715
+#
+interface Ethernet0/0/7
+ description SWIFT TALK MOWE (CLIENT'S MICROTIC ROUTER)
+ port link-type access
+ port default vlan 1913
+#
+interface Ethernet0/0/8
+ description IOTECH-00-PB-IBG001 |50M
+ port link-type access
+ port default vlan 1425
+#
+interface Ethernet0/0/9
+#
+interface Ethernet0/0/10
+#
+interface Ethernet0/0/11
+ description OOU OTA|VLAN-1790|
+ port link-type trunk
+ port trunk allow-pass vlan 1486 1790
+#
+interface Ethernet0/0/12
+ description VDT OTA|VLAN-1423|
+ port link-type access
+ port default vlan 1423
+#
+interface Ethernet0/0/13
+#
+interface Ethernet0/0/14
+#
+interface Ethernet0/0/15
+#
+interface Ethernet0/0/16
+#
+interface Ethernet0/0/17
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+#
+interface GigabitEthernet0/0/1
+ description LAG208-DCN TRUNK-GE0/3/0
+ port link-type trunk
+ port trunk allow-pass vlan 804 to 805 1026 1117 1183 1308 1318 1368 1423 1425 1444
+ port trunk allow-pass vlan 1486 1503 1656 1715 to 1716 1764 1786 to 1787 1790 1794 1913 2865
+ port trunk allow-pass vlan 3187
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/2
+ description FLOWZAP OTA|VLAN-2865| 50Mbps
+ port link-type access
+ port default vlan 2865
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/3
+ description ONEDATA AHMADIYA-JANKARA
+ port link-type access
+ port default vlan 1764
+ jumboframe enable 13296
+ combo-port fiber
+#
+interface GigabitEthernet0/0/4
+ description DEEPERLIFE-CHURCH-CAMP-HQ
+ port link-type access
+ port default vlan 1308
+ port media type fiber
+     undo negotiation auto
+ combo-port fiber
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100002297
+ snmp-agent community read cipher %@%@3{%Y!AxCF;,yYf+T2THUT:`Yh}U7$pq8c+6iS9Z6!%<<:`\T<B_P1WOd:--`Y|/PiWKE`eT:%@%@
+ snmp-agent community read cipher %@%@TGAD~W<hn5T^5~D,T{cC]nJ@@x^n)8z}U%WIB<=owaUXnJC]U{qJO6P'`*h2rP:q&9m'JL]n%@%@
+ snmp-agent community read cipher %@%@b/w,=r.vs>,#R&F2+#*9mv#(<1"S30j@IDBjr[#|,<);v#+mbGh}T.HfhAn$b0!~~A46#4mv%@%@
+ snmp-agent sys-info version all
+#
+ stelnet server enable
+#
+user-interface con 0
+ authentication-mode password
+ user privilege level 15
+ set authentication password cipher %@%@R-_F9%>IkDtlIiD1s~0X,'Y6&"*z64KrP-wH9J4MW*&3'Y9,%@%@
+user-interface vty 0 4
+ authentication-mode aaa
+ history-command max-size 20
+ idle-timeout 3 0
+ screen-length 0
+ protocol inbound all
+#
+return
+[LAG208-S3700-DC-SW]

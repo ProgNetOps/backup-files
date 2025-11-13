@@ -1,0 +1,278 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 10:19.26 ? ? /home/mobaxterm ? telnet 10.248.246.49
+Connected to 10.248.246.49.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS_HUAWEI_LAG047>sys
+Enter system view, return user view with Ctrl+Z.
+[BS_HUAWEI_LAG047]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      down    down     SAIPEM-BANANA-ISLAND
+Eth0/0/2                      down    down     Suntrust CEO Banana 30MB Internet
+Eth0/0/3                      up      up       Femi Otedola  (GEREGU) 7MB Intern
+                                               et
+Eth0/0/4                      down    down     HYPERIA-BELLAVISTA-BANANA-ISLAND
+                                               | TO-DCN-SAKA17-ETH21.1235
+Eth0/0/5                      *down   down     CONOIL MD | 5MB | INTERNET | FIBE
+                                               R LM
+Eth0/0/6                      up      up       SAIPEM-BANANA-ISLAND
+Eth0/0/7                      down    down     BOURBON-INTEROIL-MD-RESIDENCE-BAN
+                                               ANA-ISLAND-INT-20M-FIBER-LM
+Eth0/0/8                      up      up       BOURBON INTEROIL
+Eth0/0/9                      up      up       MS-NEYA-KALU-INT | 10M
+Eth0/0/10                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/10 Interface
+Eth0/0/11                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/11 Interface
+Eth0/0/12                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/12 Interface
+Eth0/0/13                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/13 Interface
+Eth0/0/14                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/14 Interface
+Eth0/0/15                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/15 Interface
+Eth0/0/16                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/16 Interface
+Eth0/0/17                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/17 Interface
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/24 Interface
+GE0/0/1                       up      up       DCN_ATN950B-GE0/3/0
+GE0/0/2                       up      up       Madam_Bella_Disu_50mb_Backup
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif805                     up      up       HUAWEI, Quidway Series, Vlanif805
+                                                Interface
+Vlanif1166                    up      down     HUAWEI, Quidway Series, Vlanif116
+                                               6 Interface
+Vlanif1235                    up      down     HUAWEI, Quidway Series, Vlanif123
+                                               5 Interface
+Vlanif1303                    up      down     HUAWEI, Quidway Series, Vlanif130
+                                               3 Interface
+Vlanif3940                    up      up       HUAWEI, Quidway Series, Vlanif394
+                                               0 Interface
+[BS_HUAWEI_LAG047]    dis cur
+#
+!Software Version V100R006C05
+ sysname BS_HUAWEI_LAG047
+#
+ vlan batch 805 1166 1235 1303 1367 1385 1676 2540 2829 2987
+ vlan batch 3940
+#
+lldp enable
+#
+vlan 805
+ description switch_mgt
+vlan 1166
+ description BOURBON-INTEROIL-MD-RESIDENCE-BANANA-ISLAND-INT-20M
+vlan 1235
+ description HYPERIA-BANANA-ISLAND
+vlan 1303
+ description Suntrust CEO
+vlan 1367
+ description Madam_Bella_Disu_50mb_backup
+vlan 1385
+ description Dr Salah's-RESIDENCE-Banana-Island-LAG047|5M
+vlan 1676
+ description HYPERIA BELLAVISTA 2nd_VLAN
+vlan 2540
+ description GEREGU PLC CEO RESIDENCE
+vlan 2829
+ description MS-NEYA-KALU-INT
+vlan 2987
+ description CHAIRMANS RESIDENCE
+vlan 3940
+ description Saipem_Banana
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user ope password cipher %@%@p6AeQ*-Gj/Y;yB2Y)3NYZ\q3%@%@
+ local-user ope privilege level 15
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@N%)@6\nR)S'Slf-H/[YOS!`u%@%@
+ local-user bsnoc privilege level 15
+ local-user moses password cipher %@%@}*'G!xSR)KOG8\Nfyn)AZ\xM%@%@
+ local-user moses privilege level 15
+ local-user donald password cipher %@%@Jd^X81W[{G|&70<G9]1(Z\zs%@%@
+ local-user donald privilege level 15
+ local-user fabian password cipher %@%@(S:VGa>x35YtR%),6)YHZ\tt%@%@
+ local-user fabian privilege level 15
+ local-user naveen password cipher %@%@m[7yD45J\Wb/PgGN|`cAZ\vf%@%@
+ local-user naveen privilege level 15
+ local-user adewunmi password cipher %@%@YY-gIfqaSEfja@NwYkCWZ\|%%@%@
+ local-user adewunmi privilege level 15
+ local-user mosesprivilege password cipher %@%@&~8,F.lGq@~WjV:@*vR@,.2n%@%@
+ local-user mosesprivilege privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif805
+ ip address 10.248.246.49 255.255.255.192
+#
+interface Vlanif1166
+#
+interface Vlanif1235
+#
+interface Vlanif1303
+#
+interface Vlanif3940
+ ip address 10.1.2.1 255.255.255.0
+#
+interface Ethernet0/0/1
+ description SAIPEM-BANANA-ISLAND
+ port link-type dot1q-tunnel
+ port default vlan 3940
+#
+interface Ethernet0/0/2
+ description Suntrust CEO Banana 30MB Internet
+ port link-type access
+ port default vlan 1303
+#
+interface Ethernet0/0/3
+ description Femi Otedola  (GEREGU) 7MB Internet
+ port link-type access
+ port default vlan 2540
+#
+interface Ethernet0/0/4
+ description HYPERIA-BELLAVISTA-BANANA-ISLAND | TO-DCN-SAKA17-ETH21.1235
+ port link-type trunk
+ port trunk allow-pass vlan 1235 1676
+#
+interface Ethernet0/0/5
+ description CONOIL MD | 5MB | INTERNET | FIBER LM
+ shutdown
+ port link-type access
+ port default vlan 1385
+ stp bpdu-filter enable
+#
+interface Ethernet0/0/6
+ description SAIPEM-BANANA-ISLAND
+ port link-type dot1q-tunnel
+ port default vlan 3940
+#
+interface Ethernet0/0/7
+ description BOURBON-INTEROIL-MD-RESIDENCE-BANANA-ISLAND-INT-20M-FIBER-LM
+ port link-type access
+ port default vlan 1166
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/8
+ description BOURBON INTEROIL
+ port link-type access
+ port default vlan 1166
+#
+interface Ethernet0/0/9
+ description MS-NEYA-KALU-INT | 10M
+ port link-type access
+ port default vlan 2829
+#
+interface Ethernet0/0/10
+#
+interface Ethernet0/0/11
+#
+interface Ethernet0/0/12
+#
+interface Ethernet0/0/13
+#
+interface Ethernet0/0/14
+#
+interface Ethernet0/0/15
+#
+interface Ethernet0/0/16
+#
+interface Ethernet0/0/17
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ port link-type access
+ port default vlan 805
+#
+interface GigabitEthernet0/0/1
+ description DCN_ATN950B-GE0/3/0
+ port link-type trunk
+ port trunk allow-pass vlan 805 1166 1235 1303 1367 1385 1676 2540 2829 3940
+#
+interface GigabitEthernet0/0/2
+ description Madam_Bella_Disu_50mb_Backup
+ port link-type access
+ port default vlan 1367
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100001028
+ snmp-agent community read cipher %@%@6&b73j\7yR{{U#J'AG]Hw$$WxV8UDg2`~<J\ow+[c!j>$$ZwF*wB,}fQ~6`$'VYZaxY4$cw$%@%@
+ snmp-agent community read cipher %@%@_O[46\1jgPEjVL;\t%wAJp*kV[Pm+|c9'>g{pZTd[ftOp*nJ\F4sSn5yJ;\Dsh(U-_b.*wJp%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[BS_HUAWEI_LAG047]

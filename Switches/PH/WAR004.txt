@@ -1,0 +1,410 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                     Registered to RT (1 user)                      ¦
+     +--------------------------------------------------------------------+
+
+ ? 2025-11-13 ? ? 14:45.10 ? ? /home/mobaxterm ? telnet 10.248.249.159
+Connected to 10.248.249.159.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<ENT-WAR-004>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-WAR-004]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       DICNET WARRI 80MB INTERNET
+Eth0/0/2                      down    down     TRUSTFUND-WARRI-ABUJA-VPN ||
+Eth0/0/3                      up      up       TRUSTFUND-WARRI-ABUJA || CERAGON-
+                                               MGMT
+Eth0/0/4                      down    down     CYBERSPACE-WARRI-VPLS-INTERNET ||
+                                                CERAGON-MGMT
+Eth0/0/5                      *down   down     sentient link to Fidelity bank Wa
+                                               rri
+Eth0/0/6                      down    down     CERAGON_MGT
+Eth0/0/7                      down    down     DAEWOO WARRI MPLS4M R CERAGON DIR
+                                               ECT IP LINK
+Eth0/0/8                      up      up       NUPRC (DPR) WARRI INTERNET
+Eth0/0/9                      up      up       CYBERSPACE-WARRI-VPLS-INTERNET ||
+                                                NEW PORT
+Eth0/0/10                     *down   down     FORMER CYBERSPACE-WARRI-VPLS-INTE
+                                               RNET || SUSPECTED FAULTY PORT
+Eth0/0/11                     up      up       UBA WARRI CASH OFFICE | DICNET RA
+                                               DIO
+Eth0/0/12                     up      up       NNPC MEDICAL WARRI
+Eth0/0/13                     down    down     NGCOM-DDPA-WARRI|100Mbps
+Eth0/0/14                     down    down     NNPC OML 34-EJEBA!!NPDC WARRI
+Eth0/0/15                     down    down     NNPC WARRI ITD CENTRE
+Eth0/0/16                     down    down     NNPC WAREHOUSE WARRI
+Eth0/0/17                     up      up       DELTA STATE HOSPITAL
+Eth0/0/18                     up      up       ADANO-ENGINEERING | 20M
+Eth0/0/19                     down    down     NPDC WARRI |20MB
+Eth0/0/20                     down    down     KAYRIOTT HOTELWARRI-INT |20MB-LM-
+                                               HUAWEI
+Eth0/0/21                     *down   down     FENOG-20M-INT-R-NERA
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     NGCOM-DDPA-WARRI|100Mbps
+Eth0/0/24                     down    down     UPLINK TO LAR003 VIA HUAWEI MICRO
+                                               WAVE
+GE0/0/1                       up      up       UPLINK TO DCN IP/MPL||WAR004-UPE-
+                                               M8-GE0/2/0
+GE0/0/2                       *down   down     GREENFOOT-MERB - INT | 155Mbps
+GE0/0/3                       down    down     FLOWZAP-WARRI-1|VL2986|100Mbps
+GE0/0/4                       up      up       HERITAGE ENERGY OIL SERVICE (HEOS
+                                               ) EDJEBA ESTATE WARRI
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif890                     up      down     HUAWEI, Quidway Series, Vlanif890
+                                                Interface
+Vlanif1323                    up      down     HUAWEI, Quidway Series, Vlanif132
+                                               3 Interface
+Vlanif1494                    up      up       HUAWEI, Quidway Series, Vlanif149
+                                               4 Interface
+Vlanif1497                    *down   down     HUAWEI, Quidway Series, Vlanif149
+                                               7 Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1632                    up      up       HUAWEI, Quidway Series, Vlanif163
+                                               2 Interface
+Vlanif3488                    *down   down     HUAWEI, Quidway Series, Vlanif348
+                                               8 Interface
+[ENT-WAR-004]dis cur
+#
+!Software Version V100R006C05
+ sysname ENT-WAR-004
+#
+ vlan batch 210 550 810 862 890 910 916 1015 1068 1115
+ vlan batch 1123 1133 1179 1323 1366 1417 1452 1475 1487 to 1488 1492
+ vlan batch 1494 to 1495 1497 to 1498 1500 to 1501 1503 1511 1520 1570 1632 1640 1752
+ vlan batch 1993 2315 to 2316 2423 2824 to 2826 2841 2986 3004 3007 3035 3042
+ vlan batch 3126 3470 3476 to 3477 3479 3485 3488 3605
+#
+lldp enable
+#
+vlan 550
+ description trustfund
+vlan 810
+ description FORTE-OIL-VPLS
+vlan 862
+ description GLO-MOBILE-ADM-SUPERVISION
+vlan 890
+ description cyberspace
+vlan 910
+ description DPR-VPLS
+vlan 916
+ description DPR_INTERNET
+vlan 1015
+ description DELTA-STATE-HOSPITAL
+vlan 1068
+ description DICNET-WARRI
+vlan 1115
+ description GTB
+vlan 1123
+ description DAY WALTERMAN COLLEGE
+vlan 1323
+ description KAYRIOTT HOTELWARRI-INT |20MB
+vlan 1366
+ description DICNET-WARRI
+vlan 1417
+ description ADANO-ENGINEERING-INT
+vlan 1475
+ description GREENFOOT(WERBS)-INT
+vlan 1487
+ description Ent. new Ceragon Switch Mgt
+vlan 1492
+ description ENT-NERA-MGT
+vlan 1494
+ description BS-NERA-NNPC
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1498
+ description CERAGON_MGT
+vlan 1501
+ description BS-MGT
+vlan 1503
+ description NERA_MGT
+vlan 1511
+ description TAYLOR-COMMUNICATIONS
+vlan 1520
+ description UNION_BANK_WARRI
+vlan 1570
+ description NGCOM-DDPA-WARRI
+vlan 1632
+ description WEMA-BANK-LL
+vlan 1640
+ description ACCESS-BANK-OKE-ILEWO
+vlan 1752
+ description HEOSL EDJEBA
+vlan 1993
+ description WORD-OF-LIFE
+vlan 2315
+ description DAEWOOWARRIMPLS4M
+vlan 2316
+ description NPDC_WARRI
+vlan 2423
+ description STANBIC-IBTC-LINKS
+vlan 2824
+ description ZETAWEB_ABK
+vlan 2825
+ description BOA-ABEOKUTA
+vlan 2826
+ description NBC-ABEOKUTA
+vlan 2841
+ description VDT-ABEOKUTA-INTERNET
+vlan 2986
+ description FLOWZAP
+vlan 3007
+ description FBN-VPLS
+vlan 3035
+ description SKYE-VPLS
+vlan 3042
+ description UBA-WARRI-CASHOFFICE
+vlan 3126
+ description DIAMOND_BANK_VLAN
+vlan 3470
+ description NNPC_ABEOKUTA
+vlan 3476
+ description NNPC-MEDICAL-WARRI
+vlan 3477
+ description NNPC-ZONAL-OFFICE-WARRI
+vlan 3479
+ description NNPC-ITD-CENTRE-WARRI
+vlan 3485
+ description NNPC-OML-34-EJEBA
+vlan 3605
+ description FENOG-20M-INT
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@L7%u@c)xK@yoO*H-7Kk)SteN%@%@
+ local-user bsnoc privilege level 15
+ local-user moses password cipher %@%@jH`..g-qm(Z"u:FZF'++&crA%@%@
+ local-user moses privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif890
+#
+interface Vlanif1323
+#
+interface Vlanif1494
+ ip address 10.155.201.249 255.255.255.0
+#
+interface Vlanif1497
+ shutdown
+ ip address 10.155.198.124 255.255.255.0
+#
+interface Vlanif1501
+ ip address 10.248.249.159 255.255.255.0
+#
+interface Vlanif1632
+ ip address 133.30.2.249 255.255.255.0
+#
+interface Vlanif3488
+ shutdown
+ ip address 11.11.11.5 255.255.255.248
+#
+interface Ethernet0/0/1
+ description DICNET WARRI 80MB INTERNET
+ port link-type access
+ port default vlan 1366
+#
+interface Ethernet0/0/2
+ description TRUSTFUND-WARRI-ABUJA-VPN ||
+ port link-type access
+ port default vlan 550
+#
+interface Ethernet0/0/3
+ description TRUSTFUND-WARRI-ABUJA || CERAGON-MGMT
+ port link-type access
+ port default vlan 1500
+#
+interface Ethernet0/0/4
+ description CYBERSPACE-WARRI-VPLS-INTERNET || CERAGON-MGMT
+ port link-type access
+ port default vlan 1500
+#
+interface Ethernet0/0/5
+ description sentient link to Fidelity bank Warri
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 1179
+#
+interface Ethernet0/0/6
+ description CERAGON_MGT
+ port link-type access
+ port default vlan 1498
+#
+interface Ethernet0/0/7
+ description DAEWOO WARRI MPLS4M R CERAGON DIRECT IP LINK
+ port link-type access
+ port default vlan 2315
+#
+interface Ethernet0/0/8
+ description NUPRC (DPR) WARRI INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 916 1497
+#
+interface Ethernet0/0/9
+ description CYBERSPACE-WARRI-VPLS-INTERNET || NEW PORT
+ port link-type access
+ port default vlan 3488
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/10
+ description FORMER CYBERSPACE-WARRI-VPLS-INTERNET || SUSPECTED FAULTY PORT
+ shutdown
+ port link-type access
+ port default vlan 3488
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/11
+ description UBA WARRI CASH OFFICE | DICNET RADIO
+ port link-type access
+ port default vlan 3042
+#
+interface Ethernet0/0/12
+ description NNPC MEDICAL WARRI
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3476
+#
+interface Ethernet0/0/13
+ description NGCOM-DDPA-WARRI|100Mbps
+ port link-type access
+ port default vlan 1570
+#
+interface Ethernet0/0/14
+ description NNPC OML 34-EJEBA!!NPDC WARRI
+ port link-type trunk
+ port trunk allow-pass vlan 1494 2316 3485
+#
+interface Ethernet0/0/15
+ description NNPC WARRI ITD CENTRE
+ port link-type trunk
+ port trunk allow-pass vlan 1494 3479
+#
+interface Ethernet0/0/16
+ description NNPC WAREHOUSE WARRI
+ port link-type trunk
+ port trunk allow-pass vlan 1494
+#
+interface Ethernet0/0/17
+ description DELTA STATE HOSPITAL
+ port link-type trunk
+ port trunk allow-pass vlan 1015 1492 1495
+#
+interface Ethernet0/0/18
+ description ADANO-ENGINEERING | 20M
+ port link-type access
+ port default vlan 1417
+#
+interface Ethernet0/0/19
+ description NPDC WARRI |20MB
+ port link-type access
+ port default vlan 2316
+#
+interface Ethernet0/0/20
+ description KAYRIOTT HOTELWARRI-INT |20MB-LM-HUAWEI
+ port link-type access
+ port default vlan 1323
+#
+interface Ethernet0/0/21
+ description FENOG-20M-INT-R-NERA
+ shutdown
+ port link-type access
+ port default vlan 3605
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+ description NGCOM-DDPA-WARRI|100Mbps
+ port link-type trunk
+ port trunk allow-pass vlan 1123 1133 1497 1500 to 1501 1503 1570 2824
+#
+interface Ethernet0/0/24
+ description UPLINK TO LAR003 VIA HUAWEI MICROWAVE
+ port link-type trunk
+ port trunk allow-pass vlan 1123 1497
+#
+interface GigabitEthernet0/0/1
+ description UPLINK TO DCN IP/MPL||WAR004-UPE-M8-GE0/2/0
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/2
+ description GREENFOOT-MERB - INT | 155Mbps
+ shutdown
+ port link-type access
+ port default vlan 1475
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/3
+ description FLOWZAP-WARRI-1|VL2986|100Mbps
+ port link-type access
+ port default vlan 2986
+#
+interface GigabitEthernet0/0/4
+ description HERITAGE ENERGY OIL SERVICE (HEOS) EDJEBA ESTATE WARRI
+ port link-type trunk
+ port trunk allow-pass vlan 1487 1497 1752
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F000001000015D1
+ snmp-agent community read cipher %@%@aSBp+&JjVMeD2t)Y<~gXnYBt}R^oChz>:@Qk-%R|JKg>YBwnjx=J+^ZEg"\fjQYpup;(B#nY%@%@
+ snmp-agent community read cipher %@%@dWPwBq`)<!:2ca#u)aX='"2s;[N+3hoIk>\ix&+g8crT"2v'*Qqq+Hg"H1fy6F2W'jR02"'"%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[ENT-WAR-004]
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 0.telnet: Connection closed by foreign host
+                                                                                                                        ?
+
+ ? 2025-11-13 ? ? 14:51.01 ? ? /home/mobaxterm ?
