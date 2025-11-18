@@ -1,0 +1,239 @@
+Username:bsnoc
+Password:
+<GLO-SWITCH-SHELL>sys
+Enter system view, return user view with Ctrl+Z.
+[GLO-SWITCH-SHELL]dis int des
+Interface                   Description
+Ethernet0/0/1               HUAWEI, Quidway Series, Ethernet0/0/1 Interface
+Ethernet0/0/2               HUAWEI, Quidway Series, Ethernet0/0/2 Interface
+Ethernet0/0/3               HUAWEI, Quidway Series, Ethernet0/0/3 Interface
+Ethernet0/0/4               HUAWEI, Quidway Series, Ethernet0/0/4 Interface
+Ethernet0/0/5               HUAWEI, Quidway Series, Ethernet0/0/5 Interface
+Ethernet0/0/6               HUAWEI, Quidway Series, Ethernet0/0/6 Interface
+Ethernet0/0/7               HUAWEI, Quidway Series, Ethernet0/0/7 Interface
+Ethernet0/0/8               HUAWEI, Quidway Series, Ethernet0/0/8 Interface
+Ethernet0/0/9               HUAWEI, Quidway Series, Ethernet0/0/9 Interface
+Ethernet0/0/10              HUAWEI, Quidway Series, Ethernet0/0/10 Interface
+Ethernet0/0/11              HUAWEI, Quidway Series, Ethernet0/0/11 Interface
+Ethernet0/0/12              HUAWEI, Quidway Series, Ethernet0/0/12 Interface
+Ethernet0/0/13              HUAWEI, Quidway Series, Ethernet0/0/13 Interface
+Ethernet0/0/14              HUAWEI, Quidway Series, Ethernet0/0/14 Interface
+Ethernet0/0/15              HUAWEI, Quidway Series, Ethernet0/0/15 Interface
+Ethernet0/0/16              HUAWEI, Quidway Series, Ethernet0/0/16 Interface
+Ethernet0/0/17              HUAWEI, Quidway Series, Ethernet0/0/17 Interface
+Ethernet0/0/18              HUAWEI, Quidway Series, Ethernet0/0/18 Interface
+Ethernet0/0/19              HUAWEI, Quidway Series, Ethernet0/0/19 Interface
+Ethernet0/0/20              HUAWEI, Quidway Series, Ethernet0/0/20 Interface
+Ethernet0/0/21              HUAWEI, Quidway Series, Ethernet0/0/21 Interface
+Ethernet0/0/22              HUAWEI, Quidway Series, Ethernet0/0/22 Interface
+Ethernet0/0/23              HUAWEI, Quidway Series, Ethernet0/0/23 Interface
+Ethernet0/0/24              Management
+GigabitEthernet0/0/1        HUAWEI, Quidway Series, GigabitEthernet0/0/1 Interf
+                            ace
+GigabitEthernet0/0/2        HUAWEI, Quidway Series, GigabitEthernet0/0/2 Interf
+                            ace
+GigabitEthernet0/0/3        HUAWEI, Quidway Series, GigabitEthernet0/0/3 Interf
+                            ace
+GigabitEthernet0/0/4        HUAWEI, Quidway Series, GigabitEthernet0/0/4 Interf
+                            ace
+NULL0                       HUAWEI, Quidway Series, NULL0 Interface
+Vlanif1                     HUAWEI, Quidway Series, Vlanif1 Interface
+Vlanif1507                  HUAWEI, Quidway Series, Vlanif1507 Interface
+[GLO-SWITCH-SHELL]                 dis cur
+#
+!Software Version V100R005C01SPC100
+ sysname GLO-SWITCH-SHELL
+#
+ vlan batch 1507 3160
+#
+ cluster enable
+ ntdp enable
+ ntdp hop 16
+ ndp enable
+#
+ dhcp enable
+#
+ undo http server enable
+#
+ drop illegal-mac alarm
+#
+vlan 1507
+ description Management
+vlan 3160
+ description SHELL-ABJ-LAG-4TH-FLR-LL
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password simple admin
+ local-user admin service-type http
+ local-user bsnoc password cipher RB!G'1+"PX61[a"FZ7=S#!!!
+ local-user bsnoc privilege level 15
+#
+interface Vlanif1
+ ip address dhcp-alloc
+#
+interface Vlanif1507
+ ip address 10.248.243.9 255.255.255.0
+#
+interface Ethernet0/0/1
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/2
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/3
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/4
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/5
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/6
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/7
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/8
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/9
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/10
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/11
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/12
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/13
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/14
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/15
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/16
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/17
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/18
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/19
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/21
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/22
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/23
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/24
+ description Management
+ port link-type access
+ port default vlan 1507
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/1
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/2
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/3
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/4
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.243.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100007053
+ snmp-agent sys-info version v3
+#
+user-interface con 0
+ authentication-mode aaa
+ idle-timeout 0 0
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
