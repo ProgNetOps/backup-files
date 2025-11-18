@@ -1,0 +1,185 @@
+<GLO_SWITCH>dis cu
+#
+!Software Version V100R006C03
+ sysname GLO_SWITCH
+#
+ vlan batch 10 88 110 250 530 1489 1491 1501 1506 to 1507 2521
+ vlan batch 2701 3007 3152
+#
+ undo http server enable
+#
+vlan 10
+ description Management
+vlan 88
+ description switch-mgt
+vlan 110
+ description FIRST-BANK-GHANA
+vlan 250
+ description FIRSTBANK LAYER3 HQ
+vlan 530
+ description WEMA-HQ-LL
+vlan 1489
+ description RADIO-MGT
+vlan 1491
+ description BOWEN-UNIV-INT
+vlan 1501
+ description SWITCH-MGT
+vlan 1506
+ description SIP-VOICE-SERVICE
+vlan 1507
+ description ENT-SWITCH-MGT-3
+vlan 2521
+ description FBN INSURANCE
+vlan 2701
+ description ORANGE-FBN
+vlan 3007
+ description FIRST BANK LL LINKS
+vlan 3152
+ description FBN-STM1-TO-ABUJA
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %$%$I6.ASV)hJET,p"Dn.YM%3aXO%$%$
+ local-user admin service-type http
+ local-user bsnoc password cipher %$%$:70{C9hzHUph1DO"ep!6S3*!%$%$
+ local-user bsnoc privilege level 3
+ local-user bsnoc service-type telnet terminal ssh ftp
+ local-user huawei password cipher %$%$kK;*9Kzre+5wu6!"wR+NS[RI%$%$
+ local-user huawei privilege level 3
+ local-user solarch password cipher %$%$b)'IFPZ@R.`QbrD]#:+F]ulc%$%$
+ local-user solarch privilege level 3
+ local-user rthlagos password cipher %$%$uktURWkgP#ApwI=r!pQE]@7.%$%$
+#
+interface Vlanif1
+#
+interface Vlanif10
+ ip address 10.248.248.75 255.255.255.248
+#
+interface Vlanif88
+ ip address 10.248.248.196 255.255.255.248
+#
+interface Vlanif250
+ ip address 192.168.30.4 255.255.255.248
+#
+interface Vlanif1501
+ ip address 10.248.249.240 255.255.255.0
+#
+interface Vlanif1507
+ ip address 10.248.243.5 255.255.255.0
+#
+interface Vlanif2701
+ ip address 10.10.1.2 255.255.255.0
+#
+interface Vlanif3007
+ ip address 192.168.252.220 255.255.255.0
+#
+interface Ethernet0/0/1
+ description ### CONNECTION TO GLO VIA MW ###
+ port link-type trunk
+ port trunk allow-pass vlan 88 530 1489 1507
+#
+interface Ethernet0/0/2
+ description ORANGE-WESTERN-UNION-FBN-HQ-MARINA
+ port link-type dot1q-tunnel
+ port default vlan 2701
+#
+interface Ethernet0/0/3
+ description FIRST BANK GHANA
+ shutdown
+ port link-type access
+ port default vlan 110
+#
+interface Ethernet0/0/4
+ description FBN INSURANCE
+ port link-type access
+ port default vlan 2521
+#
+interface Ethernet0/0/5
+ description STM1 LINK TO ABUJA
+ port link-type access
+ port default vlan 3152
+#
+interface Ethernet0/0/6
+ description FBN-SIP-VOICE
+ port link-type access
+ port default vlan 1506
+#
+interface Ethernet0/0/7
+#
+interface Ethernet0/0/8
+#
+interface Ethernet0/0/9
+#
+interface Ethernet0/0/10
+#
+interface Ethernet0/0/11
+#
+interface Ethernet0/0/12
+#
+interface Ethernet0/0/13
+#
+interface Ethernet0/0/14
+#
+interface Ethernet0/0/15
+#
+interface Ethernet0/0/16
+#
+interface Ethernet0/0/17
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ description SWITCH-MGT
+ port link-type access
+ port default vlan 1501
+#
+interface GigabitEthernet0/0/1
+ description ### CONNECTION-TO-BOWEN-LAN ###
+ port link-type access
+ port default vlan 1491
+ port media type copper
+     undo negotiation auto
+ combo-port auto
+#
+interface GigabitEthernet0/0/2
+ description ### UPLINK-TO-GLO ###
+ port link-type trunk
+ port trunk allow-pass vlan 1491 1501
+ port media type copper
+     undo negotiation auto
+ port media type fiber
+     undo negotiation auto
+ combo-port auto
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100006BB3
+ snmp-agent community read cipher %$%$MKr3X+bfC=no9sE5hHISy;2)%$%$
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+user-interface vty 0 4
+ authentication-mode aaa
+#
+port-group link-type
+#
+return
+<GLO_SWITCH>
