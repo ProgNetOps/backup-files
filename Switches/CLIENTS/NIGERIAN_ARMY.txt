@@ -1,0 +1,245 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
+     +--------------------------------------------------------------------+
+
+ ? 2026-04-08 ? ? 10:44.40 ? ? /home/mobaxterm ? telnet 10.248.246.237
+Connected to 10.248.246.237.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:Entering character mode
+Escape character is '^]'.
+bsnoc
+Password:
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 3.
+      The current login time is 2025-01-23 22:09:26+00:00.
+Info: Lastest accessed IP: 192.168.6.5  Time: 2025-01-23 22:08:36  Password will expire in: -
+
+Info: Smart-upgrade is currently disabled. Enable Smart-upgrade to get recommended version information.
+<GLO-ENT-SW-NIG-ARMY-OFFICE>sys
+Enter system view, return user view with Ctrl+Z.
+[GLO-ENT-SW-NIG-ARMY-OFFICE]dis int des
+PHY: Physical
+*down: administratively down
+#down: LBDT down
+-down: link flap down
+(l): loopback
+(s): spoofing
+(E): E-Trunk down
+(b): BFD down
+(e): ETHOAM down
+(dl): DLDP down
+(lb): LBDT block
+(o): Observe-port forwarding down
+Interface                     PHY     Protocol Description
+GE0/0/1                       down    down     NIG ARMY CYBER WARFARE ABUJA INT | TEST
+                                               PORT
+GE0/0/2                       down    down
+GE0/0/3                       down    down
+GE0/0/4                       down    down
+GE0/0/5                       down    down
+GE0/0/6                       down    down
+GE0/0/7                       down    down
+GE0/0/8                       down    down
+GE0/0/9                       down    down
+GE0/0/10                      down    down
+GE0/0/11                      down    down
+GE0/0/12                      down    down
+GE0/0/13                      down    down
+GE0/0/14                      down    down
+GE0/0/15                      down    down
+GE0/0/16                      down    down
+GE0/0/17                      down    down
+GE0/0/18                      down    down
+GE0/0/19                      down    down
+GE0/0/20                      down    down
+GE0/0/21                      down    down
+GE0/0/22                      down    down
+GE0/0/23                      down    down
+GE0/0/24                      down    down     SWITCH-MGT
+NULL0                         up      up(s)
+Vlanif1                       up      down
+Vlanif802                     up      up
+XGE0/0/1                      up      up       UPLINK-TO-ABJ026
+XGE0/0/2                      up      up       NIG ARMY CYBER WARFARE ABUJA INT - XGE0/
+                                               0/2
+XGE0/0/3                      down    down
+XGE0/0/4                      down    down
+[GLO-ENT-SW-NIG-ARMY-OFFICE]            dis cur
+!Software Version V200R022C00SPC500
+#
+sysname GLO-ENT-SW-NIG-ARMY-OFFICE
+#
+vlan batch 802 1175
+#
+authentication-profile name default_authen_profile
+authentication-profile name dot1x_authen_profile
+authentication-profile name dot1xmac_authen_profile
+authentication-profile name mac_authen_profile
+authentication-profile name multi_authen_profile
+authentication-profile name portal_authen_profile
+#
+telnet server enable
+telnet server-source all-interface
+#
+radius-server template default
+#
+pki realm default
+ certificate-check none
+#
+free-rule-template name default_free_rule
+#
+portal-access-profile name portal_access_profile
+#
+vlan 802
+ description SWITCH-MGT
+vlan 1175
+ description NIG-ARMY-CYBER-WARFARE-ABUJA-INT
+#
+aaa
+ authentication-scheme default
+  authentication-mode local
+ authentication-scheme radius
+  authentication-mode radius
+ authorization-scheme default
+  authorization-mode local
+ accounting-scheme default
+  accounting-mode none
+ local-aaa-user password policy administrator
+  password history record number 0
+  password expire 0
+ domain default
+  authentication-scheme radius
+  accounting-scheme default
+  radius-server default
+ domain default_admin
+  authentication-scheme default
+  accounting-scheme default
+ local-user bsnoc password irreversible-cipher $1c$9O}UR@ChE=$VYw[4yL\]1o{wbUaI~+ChpM!H~5VG0*#_d13L|XJ$
+ local-user bsnoc privilege level 3
+ local-user bsnoc service-type telnet terminal ssh ftp
+#
+interface Vlanif1
+#
+interface Vlanif802
+ ip address 10.248.246.237 255.255.255.192
+#
+interface GigabitEthernet0/0/1
+ description NIG ARMY CYBER WARFARE ABUJA INT | TEST PORT
+ port link-type access
+ port default vlan 1175
+#
+interface GigabitEthernet0/0/2
+#
+interface GigabitEthernet0/0/3
+#
+interface GigabitEthernet0/0/4
+#
+interface GigabitEthernet0/0/5
+#
+interface GigabitEthernet0/0/6
+#
+interface GigabitEthernet0/0/7
+#
+interface GigabitEthernet0/0/8
+#
+interface GigabitEthernet0/0/9
+#
+interface GigabitEthernet0/0/10
+#
+interface GigabitEthernet0/0/11
+#
+interface GigabitEthernet0/0/12
+#
+interface GigabitEthernet0/0/13
+#
+interface GigabitEthernet0/0/14
+#
+interface GigabitEthernet0/0/15
+#
+interface GigabitEthernet0/0/16
+#
+interface GigabitEthernet0/0/17
+#
+interface GigabitEthernet0/0/18
+#
+interface GigabitEthernet0/0/19
+#
+interface GigabitEthernet0/0/20
+#
+interface GigabitEthernet0/0/21
+#
+interface GigabitEthernet0/0/22
+#
+interface GigabitEthernet0/0/23
+#
+interface GigabitEthernet0/0/24
+ description SWITCH-MGT
+ port link-type access
+ port default vlan 802
+#
+interface XGigabitEthernet0/0/1
+ description UPLINK-TO-ABJ026
+ port link-type trunk
+ port trunk allow-pass vlan 802 1175
+#
+interface XGigabitEthernet0/0/2
+ description NIG ARMY CYBER WARFARE ABUJA INT - XGE0/0/2
+ port link-type access
+ port default vlan 1175
+#
+interface XGigabitEthernet0/0/3
+#
+interface XGigabitEthernet0/0/4
+#
+interface NULL0
+#
+undo icmp name timestamp-request receive
+#
+ip route-static 0.0.0.0 0.0.0.0 10.248.246.193
+#
+snmp-agent
+snmp-agent local-engineid 8000DDED033CC786BAD440
+snmp-agent community write cipher %^%#_O1/6oqVqB2xS`9}fQa/.#q&:'5=k"tTF{T*_Dm$`gR/"`~%PJzb.0+(C7vSiQCJJnV2E'zTD)2oN1!2%^%#
+snmp-agent sys-info version all
+snmp-agent protocol source-status all-interface
+snmp-agent protocol source-status ipv6 all-interface
+#
+ssh server cipher aes256_ctr aes128_ctr
+ssh server hmac sha2_256
+ssh server key-exchange dh_group16_sha512 dh_group15_sha512 dh_group14_sha256 dh_group_exchange_sha256
+ssh client cipher aes256_ctr aes128_ctr
+ssh client hmac sha2_256
+ssh client key-exchange dh_group16_sha512 dh_group15_sha512 dh_group14_sha256 dh_group_exchange_sha256
+ssh server dh-exchange min-len 2048
+ssh server publickey rsa_sha2_512 rsa_sha2_256
+#
+user-interface con 0
+ authentication-mode aaa
+user-interface vty 0 4
+ authentication-mode aaa
+ protocol inbound all
+user-interface vty 16 20
+#
+dot1x-access-profile name dot1x_access_profile
+#
+mac-access-profile name mac_access_profile
+#
+ops
+#
+remote-unit
+#
+return
+[GLO-ENT-SW-NIG-ARMY-OFFICE]

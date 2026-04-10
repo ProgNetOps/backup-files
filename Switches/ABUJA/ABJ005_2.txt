@@ -1,5 +1,5 @@
      +--------------------------------------------------------------------+
-     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
      ¦              (X server, SSH client and network tools)              ¦
      ¦                                                                    ¦
      ¦ ? Your computer drives are accessible through the /drives path     ¦
@@ -7,59 +7,16 @@
      ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
      ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
      ¦                                                                    ¦
-     ¦                     Registered to RT (1 user)                      ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
      +--------------------------------------------------------------------+
 
- ? 2025-11-13 ? ? 07:26.06 ? ? /home/mobaxterm ? telnet 10.248.249.83
-Connected to 10.248.249.83.
-Entering character mode
-Escape character is '^]'.
-
-
-User Access Verification
-
-Password:
-BS-ABJ-005-02>en
-Password:
-BS-ABJ-005-02#sh int des
-Interface                      Status         Protocol Description
-Vl1                            up             up
-Vl1501                         up             up
-Vl1818                         up             up
-Vl2324                         up             up
-Vl2999                         up             up
-Fa0/1                          down           down     FREE PORT
-Fa0/2                          down           down     SW GLOBAL GARKI ABUJA
-Fa0/3                          down           down     ALFA-O&o-INT-TOTAL
-Fa0/4                          admin down     down     CET-POWER-INT
-Fa0/5                          up             up       SLOVAK SLOCAK EMBASSY INT FIB LM
-Fa0/6                          down           down     BAD PORT
-Fa0/7                          up             up       WEMA-BANK-DUNOKOFIA-LL-NERA
-Fa0/8                          up             up       ACCESS-BANK-DURUMI-FIB-LM
-Fa0/9                          up             up       ACCESS BANK JOS STREET FIB-LM
-Fa0/10                         up             up       NIGERIAN-ARMY-RD-MGT
-Fa0/11                         up             up       FCMB ABUJA GARKI (AKINTOLA BLVD)
-Fa0/12                         down           down     NNPC-PENSION-NERA-R
-Fa0/13                         down           down     ABJ005-SAKA18-TPGS_DURUMI
-Fa0/14                         up             up       WEMA-RALPH-SHOD-FIB-LM
-Fa0/15                         up             up       MEDICAL-LAB-SCIENTIST-INT |10M
-Fa0/16                         up             up       VASCON-ABUJA-INT | 20M
-Fa0/17                         down           down     AG PLACID-ABUJA-INT | 50M
-Fa0/18                         admin down     down     IP2AIR-GARKI-INT | 15M
-Fa0/19                         down           down     TPGS-FX6-ABUJA-LL | 10M
-Fa0/20                         up             up       ACCESS BANK ASOKORO | 20M
-Fa0/21                         admin down     down     AFREXIM-ADMIN-INT | 100M
-Fa0/22                         down           down
-Fa0/23                         down           down
-Fa0/24                         down           down
-Gi0/1                          up             up       TO-DCN-M8-RTR-GE-0/1/7
-Gi0/2                          up             up       FIRST-BANK-ABJ STM1-LL-FIB-LM
-BS-ABJ-005-02#   sh run
+ 
+BS-ABJ-005-02#sh run
 Building configuration...
 
-Current configuration : 6512 bytes
+Current configuration : 6586 bytes
 !
-! Last configuration change at 06:11:40 UTC Fri Sep 10 1993
+! Last configuration change at 22:42:45 UTC Fri Mar 5 1993
 !
 version 15.2
 no service pad
@@ -200,6 +157,9 @@ vlan 3386
 !
 vlan 3421
  name NNPC-PENSION-NERA-R
+!
+vlan 3423
+ name FIRST-REGISTRARS-ABJ
 lldp run
 !
 !
@@ -244,9 +204,7 @@ interface FastEthernet0/7
  switchport mode trunk
 !
 interface FastEthernet0/8
- description ACCESS-BANK-DURUMI-FIB-LM
- switchport access vlan 1640
- switchport mode access
+ description FAULTY PORT
 !
 interface FastEthernet0/9
  description ACCESS BANK JOS STREET FIB-LM
@@ -294,10 +252,9 @@ interface FastEthernet0/17
  switchport mode trunk
 !
 interface FastEthernet0/18
- description IP2AIR-GARKI-INT | 15M
- switchport access vlan 1077
+ description FIRST-REGISTRARS-ABUJA (IOTECH-RADIO) | 5MB
+ switchport access vlan 3423
  switchport mode access
- shutdown
 !
 interface FastEthernet0/19
  description TPGS-FX6-ABUJA-LL | 10M
@@ -318,6 +275,9 @@ interface FastEthernet0/21
  spanning-tree portfast
 !
 interface FastEthernet0/22
+ description ACCESS-BANK-DURUMI-FIB-LM
+ switchport access vlan 1640
+ switchport mode access
 !
 interface FastEthernet0/23
  switchport trunk allowed vlan 1501

@@ -1,5 +1,5 @@
      +--------------------------------------------------------------------+
-     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
      ¦              (X server, SSH client and network tools)              ¦
      ¦                                                                    ¦
      ¦ ? Your computer drives are accessible through the /drives path     ¦
@@ -7,10 +7,10 @@
      ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
      ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
      ¦                                                                    ¦
-     ¦                     Registered to RT (1 user)                      ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
      +--------------------------------------------------------------------+
 
- ? 2025-11-13 ? ? 10:25.30 ? ? /home/mobaxterm ? telnet 10.248.249.71
+ ? 2026-04-08 ? ? 08:50.57 ? ? /home/mobaxterm ? telnet 10.248.249.71
 Connected to 10.248.249.71.
 Entering character mode
 Escape character is '^]'.
@@ -27,9 +27,10 @@ Info: The max number of VTY users is 5, and the number
 Enter system view, return user view with Ctrl+Z.
 [ENT-S3700H-LAG226]dis int des
 Interface                   Description
-Ethernet0/0/1               HUAWEI, Quidway Series, Ethernet0/0/1 Interface
+Ethernet0/0/1               SWIFTTALK-LTD-OMOLE-LAGOS | 10Mbps
 Ethernet0/0/2               RAINBOW_FM
-Ethernet0/0/3               HUAWEI, Quidway Series, Ethernet0/0/3 Interface
+Ethernet0/0/3               ATREOS INTERNET | BACKUP IOTECH 155MB | PIP 197.211
+                            .49.82
 Ethernet0/0/4               RAINBOW-FM-TEST
 Ethernet0/0/5               BS CERAGON MGT
 Ethernet0/0/6               FIRS JOBIFELE
@@ -44,18 +45,19 @@ Ethernet0/0/12              TPGS-OGBA
 Ethernet0/0/13              TPGS Isheri
 Ethernet0/0/14              free
 Ethernet0/0/15              LIBERATION LTD
-Ethernet0/0/16              AACSL ACCOUNTANTS FIBER LM | 80MB
+Ethernet0/0/16              LINKORGNET CIPM IKEJA-LAG564-LGS393[VLAN-1728]|10Mb
+                            ps
 Ethernet0/0/17              COOLLINK-ACME CERAGON MGMT
 Ethernet0/0/18              COOLLINK ACME[VL2439] 50Mbps
 Ethernet0/0/19              LATTER DAYS SAINTS CHURCH | 30MB
 Ethernet0/0/20              VAS-TECH-FRSC-OJODU-INT | 45MB
 Ethernet0/0/21              NEWS-CENTRAL-AFRICA-TV-IKEJA | LAG226-LAG310
-Ethernet0/0/22              FREE
+Ethernet0/0/22              LINKORGNET TECO ALAUSA[VLAN-1729]|10Mbps
 Ethernet0/0/23              LATTER DAYS SAINTS CHURCH | 30MB
 Ethernet0/0/24              SWITCH-MGT
 GigabitEthernet0/0/1        UPLINK TO DCN /IP/MPLS-GE-0/1/8
 GigabitEthernet0/0/2        AACSL ACCOUNTANTS FIBER LM | 120Mbps
-GigabitEthernet0/0/3        UPLINK TO LAG 389
+GigabitEthernet0/0/3        UPLINK-TO-LAG389-CERAGON
 GigabitEthernet0/0/4        ATREOS INTERNET | BACKUP IOTECH 155MB | PIP 197.211
                             .49.82
 NULL0                       HUAWEI, Quidway Series, NULL0 Interface
@@ -63,6 +65,7 @@ Vlanif1                     HUAWEI, Quidway Series, Vlanif1 Interface
 Vlanif1094                  HUAWEI, Quidway Series, Vlanif1094 Interface
 Vlanif1136                  SwiftTalk-Radio-Management
 Vlanif1501                  HUAWEI, Quidway Series, Vlanif1501 Interface
+Vlanif1925                  HUAWEI, Quidway Series, Vlanif1925 Interface
 Vlanif2434                  HUAWEI, Quidway Series, Vlanif2434 Interface
 Vlanif3283                  HUAWEI, Quidway Series, Vlanif3283 Interface
 [ENT-S3700H-LAG226]dis cur
@@ -71,8 +74,9 @@ Vlanif3283                  HUAWEI, Quidway Series, Vlanif3283 Interface
  sysname ENT-S3700H-LAG226
 #
  vlan batch 213 221 648 1092 to 1094 1120 1134 to 1136 1164 1316 to 1317 1327 1353
- vlan batch 1363 1380 1414 1489 1493 to 1498 1500 to 1501 1557 1664 1684 1822 to 1823
- vlan batch 1853 1913 1915 to 1919 2432 2434 2439 2999 3138 3283 3474
+ vlan batch 1363 1380 1414 1480 1489 1493 to 1498 1500 to 1501 1557 1664 1684
+ vlan batch 1728 to 1729 1822 to 1823 1851 1853 1913 1915 to 1919 1925 1927 2432 2434
+ vlan batch 2439 2999 3138 3283 3474
 #
  cluster enable
  ntdp enable
@@ -119,6 +123,8 @@ vlan 1380
  description SHADE GAMING
 vlan 1414
  description TPGS Isheri
+vlan 1480
+ description PROLINE-OJODU
 vlan 1489
  description Ceragon-MGT
 vlan 1493
@@ -143,10 +149,16 @@ vlan 1664
  description CAC-ALAUSA
 vlan 1684
  description LATER-DAY-CHURCH
+vlan 1728
+ description LINKORGNET-CIPM
+vlan 1729
+ description LINKORGNET-TECO-ALAUSA
 vlan 1822
  description CORE-MEDIA
 vlan 1823
  description TECPOINT_BRISCOE
+vlan 1851
+ description SWIFTTALK-LIMITED-OMOLE-LAGOS
 vlan 1853
  description NEWS-CENTRAL-AFRICA-TV
 vlan 1913
@@ -161,6 +173,10 @@ vlan 1918
  description FIRS_ADENIYI_JONES
 vlan 1919
  description RCCG-MAGODO
+vlan 1925
+ description MEGA-LIFE SCIENCES RADIO
+vlan 1927
+ description MEGALIFE SCIENCES
 vlan 2432
  description JEHOVA-WITNESS-MOWE
 vlan 2434
@@ -201,6 +217,9 @@ interface Vlanif1136
 interface Vlanif1501
  ip address 10.248.249.71 255.255.255.0
 #
+interface Vlanif1925
+ ip address 11.1.1.1 255.255.255.0
+#
 interface Vlanif2434
  ip address 11.11.11.44 255.255.255.0
 #
@@ -208,6 +227,9 @@ interface Vlanif3283
  ip address 192.168.99.2 255.255.255.252
 #
 interface Ethernet0/0/1
+ description SWIFTTALK-LTD-OMOLE-LAGOS | 10Mbps
+ port link-type access
+ port default vlan 1851
  ntdp enable
  ndp enable
  bpdu enable
@@ -221,12 +243,12 @@ interface Ethernet0/0/2
  bpdu enable
 #
 interface Ethernet0/0/3
- shutdown
+ description ATREOS INTERNET | BACKUP IOTECH 155MB | PIP 197.211.49.82
+ port link-type access
+ port default vlan 1557
  ntdp enable
  ndp enable
  bpdu enable
- undo negotiation auto
- speed 100
 #
 interface Ethernet0/0/4
  description RAINBOW-FM-TEST
@@ -315,6 +337,7 @@ interface Ethernet0/0/13
 interface Ethernet0/0/14
  description free
  port link-type access
+ port default vlan 3283
  ntdp enable
  ndp enable
  bpdu enable
@@ -330,12 +353,14 @@ interface Ethernet0/0/15
  speed 100
 #
 interface Ethernet0/0/16
- description AACSL ACCOUNTANTS FIBER LM | 80MB
+ description LINKORGNET CIPM IKEJA-LAG564-LGS393[VLAN-1728]|10Mbps
  port link-type access
- port default vlan 1317
+ port default vlan 1728
  ntdp enable
  ndp enable
  bpdu enable
+ undo negotiation auto
+ speed 100
 #
 interface Ethernet0/0/17
  description COOLLINK-ACME CERAGON MGMT
@@ -378,9 +403,9 @@ interface Ethernet0/0/21
  bpdu enable
 #
 interface Ethernet0/0/22
- description FREE
+ description LINKORGNET TECO ALAUSA[VLAN-1729]|10Mbps
  port link-type access
- port default vlan 3283
+ port default vlan 1729
  ntdp enable
  ndp enable
  bpdu enable
@@ -408,9 +433,9 @@ interface GigabitEthernet0/0/1
  port link-type trunk
  undo port trunk allow-pass vlan 1
  port trunk allow-pass vlan 213 221 648 1092 to 1094 1120 1134 to 1136 1164 1317 1327 1353
- port trunk allow-pass vlan 1363 1380 1414 1489 1493 to 1498 1500 to 1501 1557 1664 1684 1822 to 1823
- port trunk allow-pass vlan 1853 1910 1913 1915 to 1919 2432 2434 2439 2999 3138 to 3139 3283
- port trunk allow-pass vlan 3474
+ port trunk allow-pass vlan 1363 1380 1414 1489 1493 to 1498 1500 to 1501 1557 1664 1684 1728 to 1729
+ port trunk allow-pass vlan 1822 to 1823 1851 1853 1910 1913 1915 to 1919 1925 1927 2432 2434
+ port trunk allow-pass vlan 2439 2999 3138 to 3139 3283 3474
  ntdp enable
  ndp enable
  bpdu enable
@@ -429,9 +454,9 @@ interface GigabitEthernet0/0/2
  undo negotiation auto
 #
 interface GigabitEthernet0/0/3
- description UPLINK TO LAG 389
+ description UPLINK-TO-LAG389-CERAGON
  port link-type trunk
- port trunk allow-pass vlan 333 1317 1380 1494 to 1498 1501 1664 1915 to 1916 1918 to 1919 3474
+ port trunk allow-pass vlan 333 1317 1380 1494 to 1498 1501 1664 1915 to 1916 1918 to 1919 1925 3474
  ntdp enable
  ndp enable
  bpdu enable
@@ -465,8 +490,3 @@ user-interface vty 0 4
 #
 return
 [ENT-S3700H-LAG226]
-Info: The max number of VTY users is 5, and the number
-      of current VTY users on line is 0.telnet: Connection closed by foreign host
-                                                                                                                                                               ?
-
- ? 2025-11-13 ? ? 10:34.50 ? ? /home/mobaxterm ?

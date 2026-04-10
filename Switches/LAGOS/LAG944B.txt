@@ -1,3 +1,106 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
+     +--------------------------------------------------------------------+
+
+ ? 2026-04-07 ? ? 11:46.19 ? ? /home/mobaxterm ? telnet 10.248.246.61
+Connected to 10.248.246.61.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-LAG-944>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-LAG-944]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       BRICKTELL-TERRACESS-INT | 10M
+Eth0/0/2                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/2 Interface
+Eth0/0/3                      down    down     IOTECH VI-1 INTERNET | VLAN 1428
+                                               | 130MB
+Eth0/0/4                      up      up       WEST METRO CORDOS (CORDROS) CAPIT
+                                               AL NERA-IDU || 50MB
+Eth0/0/5                      up      up       SARO HQ-LM-HUAWEI-RTN910
+Eth0/0/6                      down    down     BS-CERAGON-MGT
+Eth0/0/7                      down    down     HYPERIA-KOFO-ABAYOMI(vlan 1785)
+Eth0/0/8                      up      up       LADOL APAPA (VLAN 1096) CLIENT-LA
+                                               G212-LAG944-SAKA25 | 40MB
+Eth0/0/9                      up      up       NIBBS RADIO
+Eth0/0/10                     up      up       AMAZING INSPIRATION MEDIA (SAKA17
+                                               ) IOTECH-RADIO | 20MB
+Eth0/0/11                     up      up       TPGS AKIN ADESOLA 10MB INTERNET
+Eth0/0/12                     down    down     faulty port
+Eth0/0/13                     down    down     NNPC REFINERY LIASON OFFICE
+Eth0/0/14                     down    down     IP-EXPRESS-INTERNET-AHMADU-BELLO-
+                                               WAY || 20Mb
+Eth0/0/15                     up      up       NNPC ATLAS COVE
+Eth0/0/16                     down    down     IOTECH-RADIO-MGT
+Eth0/0/17                     down    down     NEWS CENTRAL MEDIA
+Eth0/0/18                     down    down     IOTECH VI-2 INTERNET | VLAN-1473
+                                               | 20MB
+Eth0/0/19                     up      up       NIIA KOFO-ABAYOMI VI FIBER (SAKA2
+                                               5) | 20MB
+Eth0/0/20                     up      up       NIGERIA ARMY (DADP) BONNY CAMP |
+                                               20MB | SWIFTTALK RADIO
+Eth0/0/21                     up      up       TPGS-KFC
+Eth0/0/22                     down    down     SWITCH-MGT
+Eth0/0/23                     down    down     TPGS_SAKA_JOJO2-5M-INTERNET
+Eth0/0/24                     up      up       POC for Satellite-l2vpn-Saka18/25
+                                               /17
+GE0/0/1                       up      up       UPLINK TO DCN IP/MPLS  LAG944-UPE
+                                               -M8-GE0/2/1
+GE0/0/2                       down    down     IGI NIGERIA BISHOP OLUWOLE | RADI
+                                               O BACKUP
+GE0/0/3                       *down   down     FAULTY PORT
+GE0/0/4                       *down   down     FAULTY PORT
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif805                     up      up       HUAWEI, Quidway Series, Vlanif805
+                                                Interface
+Vlanif807                     up      up       HUAWEI, Quidway Series, Vlanif807
+                                                Interface
+Vlanif810                     up      up       HUAWEI, Quidway Series, Vlanif810
+                                                Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+[BS-LAG-944]    dis cur
+#
+!Software Version V100R006C05
+ sysname BS-LAG-944
+#
+ vlan batch 23 100 133 150 155 160 170 179 to 180 184 231
+ vlan batch 252 510 513 560 595 602 805 807 810 813
+ vlan batch 901 1034 1093 1096 1114 to 1115 1224 to 1225 1229 1239 1265 1320 to 1322
+ vlan batch 1405 1411 1421 1423 1425 1428 1473 1489 1492 to 1498 1501
+ vlan batch 1503 to 1504 1637 1640 1668 1682 1684 to 1685 1717 1739 1785 to 1786 1874
+ vlan batch 1877 1906 1937 1978 2015 2022 2206 2416 2422 2749
+ vlan batch 2820 2826 3034 3121 to 3122 3406 3415 3417 3419 3842 3844
+ vlan batch 3848 to 3849 4005
 #
 lldp enable
 #
@@ -35,6 +138,8 @@ vlan 595
  description MOBIL-100M-INTERNET-SECONDARY
 vlan 602
  description ECOBANK-SWITCH-MGT
+vlan 805
+ description MGT-VLAN
 vlan 807
  description MOTADATA-POC-SWITCH
 vlan 810
@@ -119,6 +224,8 @@ vlan 1685
  description ORANGE-SIEMENS
 vlan 1717
  description COOLLINK-IDEJO
+vlan 1739
+ description IGI-BISHOP-OLUWOLE-BACKUP-RADIO
 vlan 1785
  description HYPERIA-KOFO
 vlan 1786
@@ -129,6 +236,8 @@ vlan 1877
  description SKY CAPITAL
 vlan 1906
  description MOBIL-EKET-LINK
+vlan 1937
+ description METRONET BROADBAND VI
 vlan 1978
  description TPGS Saka Jojo
 vlan 2015
@@ -151,10 +260,14 @@ vlan 3034
  description STERLING-VPLS
 vlan 3121
  description NIBBS
+vlan 3122
+ description WEST-METRO-CARDOS-CAPITAL
 vlan 3406
  description NNPC-ATLAS-COVE-TERMINAL
 vlan 3415
  description NNPC-NETCO-PRI
+vlan 3417
+ description AMAZING INSPIRATION MEDIA
 vlan 3419
  description NNPC-NGC/REFINERY-LIASON-OFFICE-IDEJO
 vlan 3842
@@ -180,9 +293,11 @@ aaa
  local-user bsnoc privilege level 15
  local-user moses password cipher %@%@&jTb::PeNLOfAJ3>:r(DT#\V%@%@
  local-user moses privilege level 15
-
 #
 interface Vlanif1
+#
+interface Vlanif805
+ ip address 10.248.246.61 255.255.255.192
 #
 interface Vlanif807
  ip address 10.248.245.10 255.255.255.0
@@ -199,9 +314,6 @@ interface Ethernet0/0/1
  port default vlan 1265
 #
 interface Ethernet0/0/2
- description IO-TEC-V/I-LAGOS-INT
- port link-type access
- port default vlan 1428
 #
 interface Ethernet0/0/3
  description IOTECH VI-1 INTERNET | VLAN 1428 | 130MB
@@ -209,9 +321,9 @@ interface Ethernet0/0/3
  port default vlan 1428
 #
 interface Ethernet0/0/4
- description Avante Fly 5MB Internet
- port link-type trunk
- port trunk allow-pass vlan 1497 1682
+ description WEST METRO CORDOS (CORDROS) CAPITAL NERA-IDU || 50MB
+ port link-type access
+ port default vlan 3122
  undo negotiation auto
  speed 100
 #
@@ -232,7 +344,7 @@ interface Ethernet0/0/7
  jumboframe enable 4000
 #
 interface Ethernet0/0/8
- description GEREGU POWER PLC TRUNK | LADOL-APAPA
+ description LADOL APAPA (VLAN 1096) CLIENT-LAG212-LAG944-SAKA25 | 40MB
  port link-type trunk
  port trunk allow-pass vlan 810 1096 1114 1489 1492
 #
@@ -242,15 +354,14 @@ interface Ethernet0/0/9
  port trunk allow-pass vlan 1489 3121
 #
 interface Ethernet0/0/10
- description TPGS Ikoyi-4-20M-INT
+ description AMAZING INSPIRATION MEDIA (SAKA17) IOTECH-RADIO | 20MB
  port link-type access
- port default vlan 1411
+ port default vlan 3417
 #
 interface Ethernet0/0/11
  description TPGS AKIN ADESOLA 10MB INTERNET
  port link-type access
  port default vlan 1421
-#
 #
 interface Ethernet0/0/12
  description faulty port
@@ -285,14 +396,14 @@ interface Ethernet0/0/17
  port default vlan 1637
  undo negotiation auto
  speed 100
-##
+#
 interface Ethernet0/0/18
  description IOTECH VI-2 INTERNET | VLAN-1473 | 20MB
  port link-type access
  port default vlan 1473
 #
 interface Ethernet0/0/19
- description NIIA INTERNET FIBER | 20MB
+ description NIIA KOFO-ABAYOMI VI FIBER (SAKA25) | 20MB
  port link-type access
  port default vlan 2416
  stp bpdu-filter enable
@@ -329,15 +440,16 @@ interface Ethernet0/0/24
 interface GigabitEthernet0/0/1
  description UPLINK TO DCN IP/MPLS  LAG944-UPE-M8-GE0/2/1
  port link-type trunk
- port trunk allow-pass vlan 184 810 813 901 1034 1096 1114 1229 1265 1320
- port trunk allow-pass vlan 1405 1411 1421 1423 1425 1428 1473 1492 to 1494 1501 1503 to 1504
- port trunk allow-pass vlan 1637 1640 1668 1682 1684 to 1685 1717 1785 2416 2749 2820
- port trunk allow-pass vlan 3121 3406 3415 3419 3842 3844 3848 to 3849 4005
+ port trunk allow-pass vlan 184 805 810 813 901 1034 1096 1114 1229 1265
+ port trunk allow-pass vlan 1320 1405 1411 1421 1423 1425 1428 1473 1492 to 1494 1501
+ port trunk allow-pass vlan 1503 to 1504 1637 1640 1668 1682 1684 to 1685 1717 1739 1785 1937
+ port trunk allow-pass vlan 2416 2749 2820 3121 to 3122 3406 3415 3417 3419 3842 3844
+ port trunk allow-pass vlan 3848 to 3849 4005
 #
 interface GigabitEthernet0/0/2
- description COOLLINK-IHS-IDEJO FIBRE | VLAN 1717
- port link-type access
- port default vlan 1717
+ description IGI NIGERIA BISHOP OLUWOLE | RADIO BACKUP
+ port link-type trunk
+ port trunk allow-pass vlan 1739
 #
 interface GigabitEthernet0/0/3
  description FAULTY PORT
@@ -345,29 +457,28 @@ interface GigabitEthernet0/0/3
  port link-type trunk
  jumboframe enable 4000
 #
-#
 interface GigabitEthernet0/0/4
  description FAULTY PORT
  shutdown
- port link-type trunk
- port media type copper
-     undo negotiation auto
- combo-port auto
+ port link-type access
+ undo negotiation auto
 #
 interface NULL0
 #
- ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.1
 #
  snmp-agent
  snmp-agent local-engineid 000007DB7F0000010000778C
- snmp-agent community read cipher %@%@sK;'A's*kGZ+:b)+;-E%SHW`rjk3Ajadu"16-$<4Dro9HWcS9x*M*]X4`WNYHrK@M/lXWlSH%@%@
+ snmp-agent community read cipher %@%@qFK5.Y:f,F1I6b(H<,s=V|hOo^_iD$kio=w@o'C2JKH;|hRV4WQ9$/(sJ3*v!/06B3xPh[V|%@%@
  snmp-agent community read cipher %@%@6;a9M88ke*b'F#(dOAX6U|eZzX_]%h8[-R{&ZqFZ@d&%|e]U{wTb#YnV+NdM-c=k.z&&efU|%@%@
  snmp-agent community read cipher %@%@B]wq@@JvMK6&V@Hx"h-IU|1\m0e;TF{]&.KWx\-^IeN-|1_Ual@s611eo,KN5wG3~k8V1hU|%@%@
  snmp-agent sys-info version all
 #
 user-interface con 0
-authentication-mode aaa
-user privilege level 15
+ authentication-mode aaa
+ user privilege level 15
 user-interface vty 0 4
-authentication-mode aaa
+ authentication-mode aaa
 #
+return
+[BS-LAG-944]

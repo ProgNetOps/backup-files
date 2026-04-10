@@ -1,5 +1,5 @@
      +--------------------------------------------------------------------+
-     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
      ¦              (X server, SSH client and network tools)              ¦
      ¦                                                                    ¦
      ¦ ? Your computer drives are accessible through the /drives path     ¦
@@ -7,10 +7,10 @@
      ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
      ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
      ¦                                                                    ¦
-     ¦                     Registered to RT (1 user)                      ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
      +--------------------------------------------------------------------+
 
- ? 2025-11-13 ? ? 12:26.46 ? ? /home/mobaxterm ? telnet 10.248.246.99
+ ? 2026-04-08 ? ? 08:49.36 ? ? /home/mobaxterm ? telnet 10.248.246.99
 Connected to 10.248.246.99.
 Entering character mode
 Escape character is '^]'.
@@ -44,7 +44,7 @@ Vl2792                         up             up
 Vl3126                         up             up
 Vl3999                         up             up
 Fa0                            down           down
-Gi1/0/1                        up             up       TRUNK-TO-OREGUN_MSC6_3750_1
+Gi1/0/1                        up             up       TRUNK-TO-OREGUN_MSC6_3750_1-Gi1/0/1
 Gi1/0/2                        up             up       INTERNETSIONAL FIBER LINK 80MB INTERNET
 Gi1/0/3                        down           down     WATERCRESS-HOTEL-4M-INTERNET
 Gi1/0/4                        admin down     down     SUSPECTED BAD
@@ -63,7 +63,7 @@ Gi1/0/16                       down           down
 Gi1/0/17                       down           down
 Gi1/0/18                       down           down
 Gi1/0/19                       down           down
-Gi1/0/20                       down           down
+Gi1/0/20                       down           down     TPGS-AVI-CENA IKEJA | 80MB
 Gi1/0/21                       down           down
 Gi1/0/22                       down           down
 Gi1/0/23                       down           down     CONNECTION-S3700-HUAWEI-SWITCH
@@ -77,7 +77,7 @@ Te1/1/2                        down           down
 OREGUN_MSC6_3750_2#   sh run
 Building configuration...
 
-Current configuration : 9933 bytes
+Current configuration : 10141 bytes
 !
 version 12.2
 no service pad
@@ -330,8 +330,14 @@ vlan 2893
 vlan 2999
  name FCMB-VPLS
 !
+vlan 3042
+ name UBA-VPLS
+!
 vlan 3126
  name Access-Bank
+!
+vlan 3508
+ name SML-HI-IMPACT-RADIO
 !
 vlan 3873
  name HI-TECH-TDS-APN
@@ -355,12 +361,12 @@ interface FastEthernet0
  no ip address
 !
 interface GigabitEthernet1/0/1
- description TRUNK-TO-OREGUN_MSC6_3750_1
+ description TRUNK-TO-OREGUN_MSC6_3750_1-Gi1/0/1
  switchport trunk encapsulation dot1q
  switchport trunk allowed vlan 12,118,119,126,201,502,521,528,804,805,980,1000
  switchport trunk allowed vlan add 1119,1142,1322,1385,1501,1504,1581,1640,1662
  switchport trunk allowed vlan add 1663,1777,1778,1846,1878,1883,2427,2701,2999
- switchport trunk allowed vlan add 3126,3873,3910,3935,3940,3999
+ switchport trunk allowed vlan add 3126,3508,3873,3910,3935,3940,3999
  switchport mode trunk
 !
 interface GigabitEthernet1/0/2
@@ -436,6 +442,7 @@ interface GigabitEthernet1/0/13
  switchport mode access
 !
 interface GigabitEthernet1/0/14
+ switchport mode access
 !
 interface GigabitEthernet1/0/15
 !
@@ -448,6 +455,9 @@ interface GigabitEthernet1/0/18
 interface GigabitEthernet1/0/19
 !
 interface GigabitEthernet1/0/20
+ description TPGS-AVI-CENA IKEJA | 80MB
+ switchport access vlan 12
+ switchport mode access
 !
 interface GigabitEthernet1/0/21
 !
@@ -463,8 +473,8 @@ interface GigabitEthernet1/0/24
  description CONNECTION TO 3RD CISCO SWITCH
  switchport trunk encapsulation dot1q
  switchport trunk allowed vlan 521,804,1000,1119,1322,1501,1640,1662,1663,1665
- switchport trunk allowed vlan add 1878,1883,1893,2792,2891-2893,3126,3873,3910
- switchport trunk allowed vlan add 3935
+ switchport trunk allowed vlan add 1878,1883,1893,2792,2891-2893,3042,3126,3873
+ switchport trunk allowed vlan add 3910,3935
  switchport mode trunk
 !
 interface GigabitEthernet1/1/1
@@ -473,8 +483,8 @@ interface GigabitEthernet1/1/1
  switchport trunk allowed vlan 12,118,119,126,201,501,502,512,515,516,528,804
  switchport trunk allowed vlan add 805,980,1000,1119,1142,1385,1386,1501,1504
  switchport trunk allowed vlan add 1660-1665,1667,1668,1721,1777,1778,1846,1876
- switchport trunk allowed vlan add 1878,1883,1893,2427,2701,2792,2891-2893,3873
- switchport trunk allowed vlan add 3910,3935,3940,3999
+ switchport trunk allowed vlan add 1878,1883,1893,2427,2701,2792,2891-2893,3042
+ switchport trunk allowed vlan add 3508,3873,3910,3935,3940,3999
  switchport mode trunk
  switchport nonegotiate
  speed nonegotiate

@@ -1,5 +1,5 @@
      +--------------------------------------------------------------------+
-     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
      ¦              (X server, SSH client and network tools)              ¦
      ¦                                                                    ¦
      ¦ ? Your computer drives are accessible through the /drives path     ¦
@@ -7,10 +7,10 @@
      ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
      ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
      ¦                                                                    ¦
-     ¦                     Registered to RT (1 user)                      ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
      +--------------------------------------------------------------------+
 
- ? 2025-11-13 ? ? 12:26.43 ? ? /home/mobaxterm ? telnet 10.248.246.98
+ ? 2026-04-08 ? ? 08:48.36 ? ? /home/mobaxterm ? telnet 10.248.246.98
 Connected to 10.248.246.98.
 Entering character mode
 Escape character is '^]'.
@@ -88,12 +88,12 @@ Vl3933                         up             up
 Gi1/0/1                        up             up       DCN-PeA-3/0/6
 Gi1/0/2                        down           down     SMIL HI-IMPACT-IBAFO-100MB-INTERNET-PRIMARY-FIBRE-BACKHAUL-OREGUN
 Gi1/0/3                        up             up
-Gi1/0/4                        down           down     TRUNK TO OREGUN-GLO1-NE40-5/0/0[EX-ALU-B:OREGUNPE01-Port-3/1/1]
-Gi1/0/5                        up             up       CONNECTION TO huawei SWITCH- GE0/0/2-MSC6
+Gi1/0/4                        up             up       TRUNK TO OREGUN-GLO1-NE40-5/0/0[EX-ALU-B:OREGUNPE01-Port-3/1/1]
+Gi1/0/5                        down           down     CONNECTION TO huawei SWITCH- GE0/0/2-MSC6
 Gi1/0/6                        down           down     DANGOTE IKEJA FIBER
 Gi1/0/7                        down           down
 Gi1/0/8                        admin down     down     SMIL HI-IMPACT 100MB - FIBRE BACKHAUL
-Gi1/0/9                        up             up       TRUNK-TO-OREGUN_MSC6_3750_2
+Gi1/0/9                        up             up       TRUNK-TO-OREGUN_MSC6_3750_2-Gi1/0/1
 Gi1/0/10                       down           down     Conoil-CONGAS-Internet-Oregun
 Gi1/0/11                       down           down
 Gi1/0/12                       down           down     HYPERIA IKEJA(vlan 980)
@@ -111,12 +111,12 @@ Gi1/0/23                       down           down     DIAMOND BANK DRC IKEJA - 
 Gi1/0/24                       up             up       NBC MUSHIN
 Gi1/0/25                       down           down     RCCG_INTERNET
 Gi1/0/26                       down           down     CONNECTION TO ALU-B:OREGUNPE01 || Port 3/1/1
-Gi1/0/27                       up             up       TRUNK-TO-RACK-CENTER || SECONDARY
+Gi1/0/27                       up             up       TRUNK-TO-GLO1-RACKCENTRE-POP||SECONDARY-Gi1/0/27
 Gi1/0/28                       down           down     FAULTY-PORT
-OREGUN_MSC6_3750_1#  sh run
+OREGUN_MSC6_3750_1# sh run
 Building configuration...
 
-Current configuration : 18012 bytes
+Current configuration : 18077 bytes
 !
 version 12.1
 no service pad
@@ -525,7 +525,7 @@ vlan 3507
  name SMIL-HI-IMPACT-40M
 !
 vlan 3508
- name SMIL-HI-IMPACT-60M
+ name SMIL-HI-IMPACT-RADIO
 !
 vlan 3509
  name KWASU-CONFERENCE-CEN
@@ -673,8 +673,8 @@ interface GigabitEthernet1/0/4
  switchport trunk allowed vlan add 1506,1510-1513,1526,1584,1604,1630,1640,1802
  switchport trunk allowed vlan add 1812,1827,1828,1846,1877,1883,1893,1895,1896
  switchport trunk allowed vlan add 1898,1899,1901-1903,1967,2423,2440,2450,2453
- switchport trunk allowed vlan add 2455-2460,2906,2908,2999,3042,3045,3046,3440
- switchport trunk allowed vlan add 3441,3505,3507-3512
+ switchport trunk allowed vlan add 2455-2460,2906,2908,2999,3045,3046,3440,3441
+ switchport trunk allowed vlan add 3505,3507-3512
  switchport mode trunk
  no ip address
  speed 1000
@@ -713,12 +713,13 @@ interface GigabitEthernet1/0/8
  no mdix auto
 !
 interface GigabitEthernet1/0/9
- description TRUNK-TO-OREGUN_MSC6_3750_2
+ description TRUNK-TO-OREGUN_MSC6_3750_2-Gi1/0/1
  switchport trunk encapsulation dot1q
  switchport trunk allowed vlan 12,118,119,126,201,502,512,515,516,521,528,804
  switchport trunk allowed vlan add 805,980,1000,1119,1142,1322,1385,1501,1504
  switchport trunk allowed vlan add 1581,1640,1662,1663,1777,1778,1846,1878,1883
- switchport trunk allowed vlan add 2427,2701,2999,3126,3873,3910,3935,3940,3999
+ switchport trunk allowed vlan add 2427,2701,2999,3042,3126,3508,3873,3910,3935
+ switchport trunk allowed vlan add 3940,3999
  switchport mode trunk
  no ip address
  no mdix auto
@@ -857,7 +858,7 @@ interface GigabitEthernet1/0/26
  spanning-tree portfast trunk
 !
 interface GigabitEthernet1/0/27
- description TRUNK-TO-RACK-CENTER || SECONDARY
+ description TRUNK-TO-GLO1-RACKCENTRE-POP||SECONDARY-Gi1/0/27
  switchport trunk encapsulation dot1q
  switchport trunk allowed vlan 1-499,501-799,801-1349,1351-1639,1641-1825
  switchport trunk allowed vlan add 1827-4094
@@ -1083,4 +1084,4 @@ line vty 5 15
 !
 end
 
-OREGUN_MSC6_3750_1#       s
+OREGUN_MSC6_3750_1#

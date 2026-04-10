@@ -1,0 +1,261 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
+     +--------------------------------------------------------------------+
+
+ ? 2026-04-08 ? ? 09:30.17 ? ? /home/mobaxterm ? telnet 10.248.243.11
+Connected to 10.248.243.11.
+Entering character mode
+Escape character is '^]'.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<SEPLAT-IKOYI-HQ-HUA-SW-S3700>sys
+Enter system view, return user view with Ctrl+Z.
+[SEPLAT-IKOYI-HQ-HUA-SW-S3700]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      down    down     SEPLAT_SAPELE
+Eth0/0/2                      down    down     SEPLAT_ABJ
+Eth0/0/3                      down    down     SEPLAT_OWERRI
+Eth0/0/4                      down    down     SEPLAT_LEASED_LINE
+Eth0/0/5                      down    down     SEPLAT_INTERNET
+Eth0/0/6                      down    down     SEPLAT OHAJI 50MB LEAASE LINE
+Eth0/0/7                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/7 Interface
+Eth0/0/8                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/8 Interface
+Eth0/0/9                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/9 Interface
+Eth0/0/10                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/10 Interface
+Eth0/0/11                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/11 Interface
+Eth0/0/12                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/12 Interface
+Eth0/0/13                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/13 Interface
+Eth0/0/14                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/14 Interface
+Eth0/0/15                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/15 Interface
+Eth0/0/16                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/16 Interface
+Eth0/0/17                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/17 Interface
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     MGT-TEST-PORT
+Eth0/0/24                     down    down     test
+GE0/0/1                       down    down     SEPLAT 500MB INTERNET
+GE0/0/2                       up      up       UPLINK_TO_GLO_SAKA25
+GE0/0/3                       down    down     SEPLAT_INTERNET
+GE0/0/4                       up      up       SEPLAT_IKOYI_INTERNET_100MB_VLAN9
+                                               01
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif10                      up      up       HUAWEI, Quidway Series, Vlanif10
+                                               Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1507                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               7 Interface
+Vlanif2970                    up      up       HUAWEI, Quidway Series, Vlanif297
+                                               0 Interface
+[SEPLAT-IKOYI-HQ-HUA-SW-S3700]     dis cur
+#
+!Software Version V100R006C05
+ sysname SEPLAT-IKOYI-HQ-HUA-SW-S3700
+#
+ vlan batch 10 100 900 to 901 922 1501 1507 1593 2969 to 2970
+#
+lldp enable
+#
+vlan 10
+ description SWitch-MGT
+vlan 100
+ description INTERNET
+vlan 900
+ description SEPLAT-SAPELE
+vlan 901
+ description SEPLAT-100MB-INTERNET
+vlan 922
+ description SEPLAT_FIBER
+vlan 1501
+ description MGNT
+vlan 1507
+ description NEW-MGT-VLAN
+vlan 1593
+ description SEPLAT_LAG_ABJ
+vlan 2969
+ description SEPLAT_OWR
+vlan 2970
+ description SEPLAT-OHAJI
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@FdjB&yDKjNM_`n"t@MGRS!_i%@%@
+ local-user bsnoc privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif10
+ ip address 10.248.248.13 255.255.255.240
+#
+interface Vlanif1501
+ ip address 10.248.249.37 255.255.255.0
+#
+interface Vlanif1507
+ ip address 10.248.243.11 255.255.255.0
+#
+interface Vlanif2970
+ ip address 1.2.1.3 255.255.255.0
+#
+interface Ethernet0/0/1
+ description SEPLAT_SAPELE
+ port link-type access
+ port default vlan 900
+#
+interface Ethernet0/0/2
+ description SEPLAT_ABJ
+ port link-type access
+ port default vlan 1593
+#
+interface Ethernet0/0/3
+ description SEPLAT_OWERRI
+ port link-type access
+ port default vlan 2969
+#
+interface Ethernet0/0/4
+ description SEPLAT_LEASED_LINE
+ port link-type access
+ port default vlan 922
+#
+interface Ethernet0/0/5
+ description SEPLAT_INTERNET
+ port link-type access
+ port default vlan 100
+#
+interface Ethernet0/0/6
+ description SEPLAT OHAJI 50MB LEAASE LINE
+ port link-type access
+ port default vlan 2970
+#
+interface Ethernet0/0/7
+ port link-type access
+#
+interface Ethernet0/0/8
+#
+interface Ethernet0/0/9
+#
+interface Ethernet0/0/10
+#
+interface Ethernet0/0/11
+#
+interface Ethernet0/0/12
+#
+interface Ethernet0/0/13
+#
+interface Ethernet0/0/14
+#
+interface Ethernet0/0/15
+#
+interface Ethernet0/0/16
+#
+interface Ethernet0/0/17
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+ description MGT-TEST-PORT
+ port link-type access
+ port default vlan 1507
+#
+interface Ethernet0/0/24
+ description test
+ port link-type access
+ port default vlan 1501
+#
+interface GigabitEthernet0/0/1
+ description SEPLAT 500MB INTERNET
+ port link-type access
+ port default vlan 100
+#
+interface GigabitEthernet0/0/2
+ description UPLINK_TO_GLO_SAKA25
+ port link-type trunk
+ port trunk allow-pass vlan 10 100 900 to 901 922 1501 1507 1593 2969 to 2970
+ undo negotiation auto
+#
+interface GigabitEthernet0/0/3
+ description SEPLAT_INTERNET
+ port link-type access
+ port default vlan 100
+#
+interface GigabitEthernet0/0/4
+ description SEPLAT_IKOYI_INTERNET_100MB_VLAN901
+ port link-type access
+ port default vlan 901
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.243.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100004F97
+ snmp-agent community read cipher %@%@}Ju)<Ym{q%T-\^%\K%uPydf9VwwR=a@;{!eTTD!D1CJ=df<yUy1O3^K%g)e#@X+_T~X$fEyd%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[SEPLAT-IKOYI-HQ-HUA-SW-S3700]

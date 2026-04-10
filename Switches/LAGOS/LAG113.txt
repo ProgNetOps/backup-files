@@ -1,5 +1,5 @@
      +--------------------------------------------------------------------+
-     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
      ¦              (X server, SSH client and network tools)              ¦
      ¦                                                                    ¦
      ¦ ? Your computer drives are accessible through the /drives path     ¦
@@ -7,25 +7,25 @@
      ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
      ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
      ¦                                                                    ¦
-     ¦                     Registered to RT (1 user)                      ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
      +--------------------------------------------------------------------+
 
- ? 2025-11-13 ? ? 10:19.28 ? ? /home/mobaxterm ? telnet 10.248.249.143
+ ? 2026-04-08 ? ? 08:55.23 ? ? /home/mobaxterm ? telnet 10.248.249.143
 Connected to 10.248.249.143.
+Entering character mode
+Escape character is '^]'.
 
 Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
 
 Login authentication
 
 
-Username:Entering character mode
-Escape character is '^]'.
-moses
+Username:moses
 Password:
 Info: The max number of VTY users is 10, and the number
       of current VTY users on line is 1.
-      The current login time is 2025-11-13 17:22:02+08:00.
-Info: Lastest accessed IP: 192.168.6.5  Time: 2025-11-11 17:30:29+08:00  Failed: 0
+      The current login time is 2026-04-08 15:57:54+08:00.
+Info: Lastest accessed IP: 192.168.6.39  Time: 2026-03-24 20:37:09+08:00  Failed: 1
 
 Info: Smart-upgrade is currently disabled. Enable Smart-upgrade to get recommended version information.
 <LAG113-HUA-S5335-10G-SW>sys
@@ -47,10 +47,13 @@ GE0/0/1                       down    down     COOLLINK JIBOWU_BULB |500Mbps|
 GE0/0/2                       up      up       ISN YABA-FIBER[VLAN3541]|150Mbps
 GE0/0/3                       up      up       IOTECH-BARMAN-YABA-INT | 10M
 GE0/0/4                       down    down     IPEXPRESS YABA POP || 110Mb
-GE0/0/5                       down    down
-GE0/0/6                       down    down
-GE0/0/7                       down    down
-GE0/0/8                       down    down
+GE0/0/5                       up      up       LAG113-SAKA17-OAK-PENSION-LTD-INTERNET || 10
+                                               0Mbps
+GE0/0/6                       up      up       LAG113-SAKA17-YABATECH_YABA (FIBRE PRIMARY)-
+                                               INTERNET || 345Mbps
+GE0/0/7                       down    down     LAG113-SAKA18-YABATECH_YABA (RADIO BACKUP)-I
+                                               NTERNET || 345Mbps
+GE0/0/8                       up      up       TPGS BODE THOMAS | 5MB
 GE0/0/9                       down    down
 GE0/0/10                      down    down
 GE0/0/11                      down    down
@@ -89,14 +92,15 @@ XGE0/0/1                      down    down     10G-TRUNK-TO-DCN-IP/MPLS GE0/2/1
 XGE0/0/2                      down    down
 XGE0/0/3                      down    down
 XGE0/0/4                      down    down
-[LAG113-HUA-S5335-10G-SW]     dis cur
+[LAG113-HUA-S5335-10G-SW]    dis cur
 !Software Version V200R019C10SPC500
 #
 sysname LAG113-HUA-S5335-10G-SW
 #
 vlan batch 15 25 55 166 511 to 512 1127 1134 1136 1142 1186
-vlan batch 1363 1492 to 1493 1495 1497 1500 to 1501 1559 1778 1823 1908 to 1909 1937
-vlan batch 2038 2167 to 2170 2430 2710 2894 3034 3046 3541 3839
+vlan batch 1363 1376 1492 to 1493 1495 1497 1500 to 1501 1559 1778 1823 1908 to 1909
+vlan batch 1936 to 1937 1943 2038 2167 to 2170 2430 2710 2894 3034 3046 3541
+vlan batch 3839
 #
 authentication-profile name default_authen_profile
 authentication-profile name dot1x_authen_profile
@@ -142,6 +146,8 @@ vlan 1186
  description IPEXPRESS YABA
 vlan 1363
  description GUINEA-INSURANCE
+vlan 1376
+ description TPGS-BODE-THOMAS
 vlan 1492
  description NERA MGT
 vlan 1493
@@ -164,8 +170,12 @@ vlan 1908
  description CUSTODIAN & ALLIED INSURANCE
 vlan 1909
  description SWIFTTALK YABA
+vlan 1936
+ description LAG113-SAKA17-OAK-PENSION-LTD-INTERNET || 100Mbps
 vlan 1937
  description FIBER-EDGE-MFM-YABA
+vlan 1943
+ description LAG113-SAKA17-YABATECH_YABA-INTERNET || 345Mbps
 vlan 2038
  description 2038
 vlan 2167
@@ -222,6 +232,9 @@ aaa
  local-user huawei password irreversible-cipher $1c$Ez+`$#k7}5$L7{(M5U#}%xWOfSa32s&w+;<@%v'jM2d;/+x[@zQ$
  local-user huawei privilege level 3
  local-user huawei service-type telnet terminal ssh ftp
+ local-user ademola password irreversible-cipher $1c$Bjin9U+g{($3y9FS5wT~V#1COK!xzc4J19`J8'FBU`+'TJZ5iF4$
+ local-user ademola privilege level 0
+ local-user ademola service-type telnet terminal ssh ftp
 #
 interface Vlanif1
 #
@@ -270,12 +283,24 @@ interface GigabitEthernet0/0/4
  port default vlan 1186
 #
 interface GigabitEthernet0/0/5
+ description LAG113-SAKA17-OAK-PENSION-LTD-INTERNET || 100Mbps
+ port link-type access
+ port default vlan 1936
 #
 interface GigabitEthernet0/0/6
+ description LAG113-SAKA17-YABATECH_YABA (FIBRE PRIMARY)-INTERNET || 345Mbps
+ port link-type access
+ port default vlan 1943
 #
 interface GigabitEthernet0/0/7
+ description LAG113-SAKA18-YABATECH_YABA (RADIO BACKUP)-INTERNET || 345Mbps
+ port link-type access
+ port default vlan 1943
 #
 interface GigabitEthernet0/0/8
+ description TPGS BODE THOMAS | 5MB
+ port link-type access
+ port default vlan 1376
 #
 interface GigabitEthernet0/0/9
 #
@@ -320,8 +345,9 @@ interface GigabitEthernet0/0/24
  description TRUNK-TO-DCN-IP/MPLS GE0/2/1
  port link-type trunk
  port trunk allow-pass vlan 15 25 55 166 511 to 512 1127 1134 1136 1142 1186
- port trunk allow-pass vlan 1363 1492 to 1493 1495 1497 1500 to 1501 1559 1778 1823 1908 to 1909 1937
- port trunk allow-pass vlan 2038 2167 to 2170 2430 2710 2894 3034 3046 3541 3839
+ port trunk allow-pass vlan 1363 1376 1492 to 1493 1495 1497 1500 to 1501 1559 1778 1823 1908 to 1909
+ port trunk allow-pass vlan 1936 to 1937 1943 2038 2167 to 2170 2430 2710 2894 3034 3046 3541
+ port trunk allow-pass vlan 3839
 #
 interface GigabitEthernet0/0/25
  undo negotiation auto
@@ -368,7 +394,7 @@ interface XGigabitEthernet0/0/1
  port link-type trunk
  port trunk allow-pass vlan 15 25 55 166 511 to 512 1127 1134 1136 1142 1186
  port trunk allow-pass vlan 1363 1492 to 1493 1495 1497 1500 to 1501 1559 1778 1823 1908 to 1909 1937
- port trunk allow-pass vlan 2038 2167 to 2170 2430 2710 3034 3046 3541 3839
+ port trunk allow-pass vlan 1943 2038 2167 to 2170 2430 2710 3034 3046 3541 3839
 #
 interface XGigabitEthernet0/0/2
 #
@@ -394,8 +420,7 @@ ssh client hmac sha2_256
 ssh server dh-exchange min-len 2048
 #
 user-interface con 0
- authentication-mode password
- set authentication password cipher $1a$N7Mt;~}%%9$tu!:Q<5E-X52BP@ju~pKxBNIHJQqMN@~q)%>|0NT$
+ authentication-mode aaa
 user-interface vty 0 4
  authentication-mode aaa
  idle-timeout 15 0

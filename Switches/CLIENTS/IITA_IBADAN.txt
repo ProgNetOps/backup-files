@@ -1,0 +1,255 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
+     +--------------------------------------------------------------------+
+
+PHY: Physical
+*down: administratively down
+#down: LBDT down
+-down: link flap down
+(l): loopback
+(s): spoofing
+(E): E-Trunk down
+(b): BFD down
+(e): ETHOAM down
+(dl): DLDP down
+(lb): LBDT block
+(o): Observe-port forwarding down
+Interface                     PHY     Protocol Description
+GE0/0/1                       down    down     UPLINK-IBD031-VIA-IOTECH-MICROWAVE-RADIO
+GE0/0/2                       down    down
+GE0/0/3                       down    down
+GE0/0/4                       down    down
+GE0/0/5                       down    down
+GE0/0/6                       down    down
+GE0/0/7                       down    down
+GE0/0/8                       down    down
+GE0/0/9                       down    down
+GE0/0/10                      down    down
+GE0/0/11                      down    down
+GE0/0/12                      down    down
+GE0/0/13                      down    down
+GE0/0/14                      down    down
+GE0/0/15                      down    down
+GE0/0/16                      down    down
+GE0/0/17                      down    down
+GE0/0/18                      down    down
+GE0/0/19                      down    down
+GE0/0/20                      down    down
+GE0/0/21                      down    down
+GE0/0/22                      down    down     TEST PORT
+GE0/0/23                      down    down     SWITCH MGT
+GE0/0/24                      down    down     FREE
+NULL0                         up      up(s)
+Vlanif1                       up      down
+Vlanif804                     up      up
+XGE0/0/1                      down    down     UPLINK_TO_OYO009(0/5/5)-VIA-FIBER
+XGE0/0/2                      up      up       UPLINK_TO_IBD031-VIA-FIBER
+XGE0/0/3                      up      up       IITA IBADAN 1-GIG FIBER-LAN
+XGE0/0/4                      down    down     FREE
+[IITA-IBADAN-OFFICE-XGIG-SW]  DIS CUR
+!Software Version V200R022C00SPC500
+#
+sysname IITA-IBADAN-OFFICE-XGIG-SW
+#
+vlan batch 804 1502 1774 1811 to 1813
+#
+stp mode stp
+stp bpdu-protection
+stp pathcost-standard legacy
+#
+authentication-profile name default_authen_profile
+authentication-profile name dot1x_authen_profile
+authentication-profile name dot1xmac_authen_profile
+authentication-profile name mac_authen_profile
+authentication-profile name multi_authen_profile
+authentication-profile name portal_authen_profile
+#
+telnet server enable
+telnet server-source all-interface
+#
+radius-server template default
+#
+pki realm default
+ certificate-check none
+#
+free-rule-template name default_free_rule
+#
+portal-access-profile name portal_access_profile
+#
+vlan 804
+ description MGT-VLAN
+vlan 1502
+ description IOTECH-MGT-VLAN
+vlan 1811
+ description IITA-INTERNET
+vlan 1812
+ description IITA-SECONDARY-FIBER-OYO009
+vlan 1813
+ description IITA-PRIMARY-FIBER-IBD031
+#
+aaa
+ authentication-scheme default
+  authentication-mode local
+ authentication-scheme radius
+  authentication-mode radius
+ authorization-scheme default
+  authorization-mode local
+ accounting-scheme default
+  accounting-mode none
+ local-aaa-user password policy administrator
+  password history record number 0
+  password expire 0
+ domain default
+  authentication-scheme radius
+  accounting-scheme default
+  radius-server default
+ domain default_admin
+  authentication-scheme default
+  accounting-scheme default
+ local-user bsnoc password irreversible-cipher $1c$*bL@I]@sE;$Gf;"2<BdH*.h&YN[;V-CZzR|Ft1U-+di@4-'UHWK$
+ local-user bsnoc privilege level 3
+ local-user bsnoc service-type telnet terminal ssh ftp
+ local-user fabian password irreversible-cipher $1c$E{Gt6y`i;($i~r-;.v:A~%0M$4fsSU8w[O{%2sRaM6c\L/#J{h9$
+ local-user fabian privilege level 3
+ local-user fabian service-type telnet terminal ssh ftp
+#
+interface Vlanif1
+#
+interface Vlanif804
+ ip address 10.248.246.118 255.255.255.192
+#
+interface GigabitEthernet0/0/1
+ undo negotiation auto
+ description UPLINK-IBD031-VIA-IOTECH-MICROWAVE-RADIO
+ port link-type trunk
+ port trunk allow-pass vlan 804 1502 1811
+ stp instance 0 cost 10000
+#
+interface GigabitEthernet0/0/2
+#
+interface GigabitEthernet0/0/3
+#
+interface GigabitEthernet0/0/4
+#
+interface GigabitEthernet0/0/5
+#
+interface GigabitEthernet0/0/6
+#
+interface GigabitEthernet0/0/7
+#
+interface GigabitEthernet0/0/8
+#
+interface GigabitEthernet0/0/9
+#
+interface GigabitEthernet0/0/10
+#
+interface GigabitEthernet0/0/11
+#
+interface GigabitEthernet0/0/12
+#
+interface GigabitEthernet0/0/13
+#
+interface GigabitEthernet0/0/14
+#
+interface GigabitEthernet0/0/15
+#
+interface GigabitEthernet0/0/16
+#
+interface GigabitEthernet0/0/17
+ port link-type access
+ port default vlan 1811
+#
+interface GigabitEthernet0/0/18
+#
+interface GigabitEthernet0/0/19
+#
+interface GigabitEthernet0/0/20
+#
+interface GigabitEthernet0/0/21
+#
+interface GigabitEthernet0/0/22
+ description TEST PORT
+ port link-type access
+ port default vlan 1811
+ stp edged-port enable
+#
+interface GigabitEthernet0/0/23
+ description SWITCH MGT
+ port link-type access
+#
+interface GigabitEthernet0/0/24
+ description FREE
+#
+interface XGigabitEthernet0/0/1
+ description UPLINK_TO_OYO009(0/5/5)-VIA-FIBER
+ port link-type trunk
+ port trunk allow-pass vlan 804 1811
+ stp instance 0 cost 900
+#
+interface XGigabitEthernet0/0/2
+ description UPLINK_TO_IBD031-VIA-FIBER
+ port link-type trunk
+ port trunk allow-pass vlan 804 1774 1811
+ stp instance 0 cost 200
+#
+interface XGigabitEthernet0/0/3
+ description IITA IBADAN 1-GIG FIBER-LAN
+ port link-type access
+ port default vlan 1811
+#
+interface XGigabitEthernet0/0/4
+ description FREE
+#
+interface NULL0
+#
+undo icmp name timestamp-request receive
+#
+ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+snmp-agent
+snmp-agent local-engineid 8000DDED033CC78686E980
+snmp-agent community read cipher %^%#^uY[0%'Z;=mE;.YXfe,<(-t1"q8<p$phZN6:x_c,x8(LIR\.qM,:MM;4LI0X,M0!M)5RfG">vg%&Cp3~%^%#
+snmp-agent sys-info version all
+snmp-agent protocol source-status all-interface
+undo snmp-agent protocol source-status ipv6 all-interface
+#
+ssh server cipher aes256_ctr aes128_ctr
+ssh server hmac sha2_256
+ssh server key-exchange dh_group16_sha512 dh_group15_sha512 dh_group14_sha256 dh_group_exchange_sha256
+ssh client cipher aes256_ctr aes128_ctr
+ssh client hmac sha2_256
+ssh client key-exchange dh_group16_sha512 dh_group15_sha512 dh_group14_sha256 dh_group_exchange_sha256
+ssh server dh-exchange min-len 2048
+ssh server publickey rsa_sha2_512 rsa_sha2_256
+#
+telnet client-source -i Vlanif804
+#
+user-interface con 0
+ authentication-mode password
+ set authentication password cipher $1a$mP@"H=_y-&$~vjr2|2(=Q}cfx$hzVjK;wF)7Kn8l!Zr;CQMKI(1$
+user-interface vty 0 4
+ authentication-mode aaa
+ user privilege level 3
+ protocol inbound telnet
+user-interface vty 16 20
+ authentication-mode aaa
+ protocol inbound telnet
+#
+dot1x-access-profile name dot1x_access_profile
+#
+mac-access-profile name mac_access_profile
+#
+ops
+#
+remote-unit
+#
+return
+[IITA-IBADAN-OFFICE-XGIG-SW]

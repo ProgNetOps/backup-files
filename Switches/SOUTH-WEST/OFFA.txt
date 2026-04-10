@@ -1,0 +1,276 @@
+!Software Version V100R006C05
+ sysname ENT-SW-OFFA002
+#
+ vlan batch 804 1065 1136 1138 1189 to 1190 1486 1501 1503 1534 1764
+ vlan batch 1844 1870 1896 1906 3031 3042 3131
+#
+ http server load 3700-28tp-eiweb.zip
+#
+vlan 804
+ description new-mgmt
+vlan 1065
+ description INNOVASTRA(GEN-HOSPITAL-OFFA)-OF
+vlan 1136
+ description SWIFT-TALK-MGT
+vlan 1138
+ description SENTIENT-FBN-OFFA
+vlan 1189
+ description FED-POLY-ADELEKE-CAMP-INT
+vlan 1190
+ description OFFA-POLY-MINI-CAMPUS
+vlan 1486
+ description CERAGON_MGT
+vlan 1501
+ description MGT
+vlan 1503
+ description nera-mgt
+vlan 1534
+ description UNION-OFFA-MAIN
+vlan 1764
+ description IBEDC_OFFA
+vlan 1844
+ description ALIKHAMH
+vlan 1870
+ description ivtec
+vlan 1896
+ description OSUN-OKUKU-P2P
+vlan 1906
+ description VDT_OFFA
+vlan 3031
+ description ALI-HIKMAH-MINI
+vlan 3042
+ description UBA-VPLS
+vlan 3131
+ description adesoye_college
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin privilege level 15
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@0u7m)PBg|%>9j!MD(Yw-Su%O%@%@
+ local-user bsnoc privilege level 15
+#
+interface Vlanif1
+ ip address 192.168.1.253 255.255.255.0
+#
+interface Vlanif804
+ ip address 10.248.246.67 255.255.255.192
+#
+interface Vlanif1065
+ ip address 129.205.96.242 255.255.255.252
+#
+interface Vlanif1501
+ ip address 10.248.249.171 255.255.255.0
+#
+interface Vlanif1534
+ ip address 10.10.10.1 255.255.255.0
+#
+interface Vlanif1870
+ ip address 129.205.97.214 255.255.255.248
+#
+interface Ethernet0/0/1
+ description VDT OFFA 4MB INTERNET
+ port link-type access
+ port default vlan 1906
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/2
+ description OSUN STATE UNIVERSITY TO OKUKU
+ port link-type access
+ port default vlan 1896
+#
+interface Ethernet0/0/3
+ description UNION BANK OFFA | FIBER LM
+ port link-type access
+ port default vlan 1534
+#
+interface Ethernet0/0/4
+ description ALIHIKMAH-UNI-10Mbps | IVTEC-KWARA-10Mbps
+ port link-type trunk
+ port trunk allow-pass vlan 1486 1503 1870 3031
+#
+interface Ethernet0/0/5
+ description IBEDC OFFA 4MB LEASED LINE
+ port link-type access
+ port default vlan 1764
+#
+interface Ethernet0/0/6
+ description UBA OYAN OSUN STATE (CLIENT-IRE007-OFFA002)
+ port link-type access
+ port default vlan 3042
+#
+interface Ethernet0/0/7
+ description SWITCH-LOGIN-PORT
+ port link-type access
+ port default vlan 804
+#
+interface Ethernet0/0/8
+ description FED-POLY-OFFA(MINI-CAMPUS) |125M
+ port link-type access
+ port default vlan 1189
+#
+interface Ethernet0/0/9
+#
+interface Ethernet0/0/10
+ description OSUN STATE UNIVERSITY 100MB INTERNET OKUKU
+ port link-type access
+ port default vlan 1896
+#
+interface Ethernet0/0/11
+ description INNOVASTRA(GEN-HOSPITAL-OFFA)-3Mb-INTERNET-R-CERAGONIP20
+ port link-type trunk
+ port trunk allow-pass vlan 1065 1486
+#
+interface Ethernet0/0/12
+ description SENTIENT-FBN-OFFA
+ port link-type trunk
+ port trunk allow-pass vlan 1138
+#
+interface Ethernet0/0/13
+#
+interface Ethernet0/0/14
+ description FED-POLY-OFFA(ADELEKE-CAMPUS) |125M
+ port link-type access
+ port default vlan 1189
+#
+interface Ethernet0/0/15
+ description OFFA POLYTECHNIC MINI CAMPUS
+ port link-type trunk
+ port trunk allow-pass vlan 1136 1190
+#
+interface Ethernet0/0/16
+#
+interface Ethernet0/0/17
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+ description SPARE PORT
+ port link-type trunk
+ port trunk allow-pass vlan 804 1486 1501 1503 1534 1764 1844 1870 1896 1906
+ port trunk allow-pass vlan 3031 3042 3131
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ description SWITCH-LOGIN-PORT
+ port link-type access
+ port default vlan 804
+#
+interface GigabitEthernet0/0/1
+ description FED-POLY-OFFA(MINI-CAMPUS)-SwifttTalk Radio |125M
+ port link-type trunk
+ port trunk allow-pass vlan 1136 1190
+#
+interface GigabitEthernet0/0/2
+ port link-type trunk
+#
+interface GigabitEthernet0/0/3
+ description FED-POLY-OFFA(ADELEKE-CAMPUS)-IOTech Radio |125M
+ port link-type access
+ port default vlan 1189
+#
+interface GigabitEthernet0/0/4
+ description TRUNK TO DCN IPMPLS m8-GE1/0/4
+ port link-type trunk
+ port trunk allow-pass vlan 804 1065 1136 1138 1189 to 1190 1486 1501 1503 1534 1764
+ port trunk allow-pass vlan 1844 1870 1896 1906 3031 3042 3131
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F000001000074E4
+ snmp-agent community read cipher %@%@-a,/8[Ul(=<-gBPW["#"Ss*6#C[0J.]KI>IAb/8g'7)Gs*9Sy>'QNiVE>,0OCr@Y%9f2*BSs%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 15
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[ENT-SW-OFFA002]  dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       VDT OFFA 4MB INTERNET
+Eth0/0/2                      down    down     OSUN STATE UNIVERSITY TO OKUKU
+Eth0/0/3                      up      up       UNION BANK OFFA | FIBER LM
+Eth0/0/4                      up      up       ALIHIKMAH-UNI-10Mbps | IVTEC-KWAR
+                                               A-10Mbps
+Eth0/0/5                      down    down     IBEDC OFFA 4MB LEASED LINE
+Eth0/0/6                      up      up       UBA OYAN OSUN STATE (CLIENT-IRE00
+                                               7-OFFA002)
+Eth0/0/7                      down    down     SWITCH-LOGIN-PORT
+Eth0/0/8                      down    down     FED-POLY-OFFA(MINI-CAMPUS) |125M
+Eth0/0/9                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/9 Interface
+Eth0/0/10                     up      up       OSUN STATE UNIVERSITY 100MB INTER
+                                               NET OKUKU
+Eth0/0/11                     down    down     INNOVASTRA(GEN-HOSPITAL-OFFA)-3Mb
+                                               -INTERNET-R-CERAGONIP20
+Eth0/0/12                     up      up       SENTIENT-FBN-OFFA
+Eth0/0/13                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/13 Interface
+Eth0/0/14                     down    down     FED-POLY-OFFA(ADELEKE-CAMPUS) |12
+                                               5M
+Eth0/0/15                     down    down     OFFA POLYTECHNIC MINI CAMPUS
+Eth0/0/16                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/16 Interface
+Eth0/0/17                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/17 Interface
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     SPARE PORT
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     SWITCH-LOGIN-PORT
+GE0/0/1                       up      up       FED-POLY-OFFA(MINI-CAMPUS)-Swiftt
+                                               Talk Radio |125M
+GE0/0/2                       down    down     HUAWEI, Quidway Series, GigabitEt
+                                               hernet0/0/2 Interface
+GE0/0/3                       up      up       FED-POLY-OFFA(ADELEKE-CAMPUS)-IOT
+                                               ech Radio |125M
+GE0/0/4                       up      up       TRUNK TO DCN IPMPLS m8-GE1/0/4
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      up       HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif804                     up      up       HUAWEI, Quidway Series, Vlanif804
+                                                Interface
+Vlanif1065                    up      up       HUAWEI, Quidway Series, Vlanif106
+                                               5 Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1534                    up      up       HUAWEI, Quidway Series, Vlanif153
+                                               4 Interface
+Vlanif1870                    up      up       HUAWEI, Quidway Series, Vlanif187
+                                               0 Interface
+[ENT-SW-OFFA002]

@@ -1,0 +1,239 @@
+me:Entering character mode
+Escape character is '^]'.
+bsnoc
+Password:
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2026-02-03 15:08:58+08:00.
+Info: Lastest accessed IP: 10.248.246.65  Time: 2025-11-09 16:31:01+08:00  Failed: 0
+
+Info: Smart-upgrade is currently disabled. Enable Smart-upgrade to get recommended version information.
+<ENT-ILR009-SW>sys
+Enter system view, return user view with Ctrl+Z.
+[ENT-ILR009-SW]dis int des
+PHY: Physical
+*down: administratively down
+#down: LBDT down
+(l): loopback
+(s): spoofing
+(E): E-Trunk down
+(b): BFD down
+(e): ETHOAM down
+(dl): DLDP down
+(lb): LBDT block
+(o): Observe-port forwarding down
+Interface                     PHY     Protocol Description
+GE0/0/1                       down    down
+GE0/0/2                       down    down
+GE0/0/3                       down    down
+GE0/0/4                       down    down
+GE0/0/5                       down    down
+GE0/0/6                       down    down
+GE0/0/7                       down    down
+GE0/0/8                       down    down
+GE0/0/9                       down    down
+GE0/0/10                      down    down
+GE0/0/11                      down    down
+GE0/0/12                      down    down
+GE0/0/13                      down    down
+GE0/0/14                      down    down
+GE0/0/15                      down    down
+GE0/0/16                      down    down
+GE0/0/17                      down    down
+GE0/0/18                      down    down
+GE0/0/19                      down    down
+GE0/0/20                      down    down
+GE0/0/21                      down    down
+GE0/0/22                      down    down
+GE0/0/23                      down    down
+GE0/0/24                      down    down
+GE0/0/25                      down    down
+GE0/0/26                      down    down
+GE0/0/27                      down    down
+GE0/0/28                      down    down
+GE0/0/29                      down    down
+GE0/0/30                      down    down
+GE0/0/31                      down    down
+GE0/0/32                      down    down
+MEth0/0/1                     down    down
+NULL0                         up      up(s)
+Vlanif1                       up      down
+Vlanif804                     up      up       To_Swicth MGT
+XGE0/0/1                      up      up       To_DCN-Router
+XGE0/0/2                      down    down
+XGE0/0/3                      down    down
+XGE0/0/4                      down    down
+[ENT-ILR009-SW]     dis cur
+!Software Version V200R019C10SPC500
+#
+sysname ENT-ILR009-SW
+#
+vlan batch 2 804
+#
+authentication-profile name default_authen_profile
+authentication-profile name dot1x_authen_profile
+authentication-profile name dot1xmac_authen_profile
+authentication-profile name mac_authen_profile
+authentication-profile name multi_authen_profile
+authentication-profile name portal_authen_profile
+#
+telnet server enable
+#
+diffserv domain default
+#
+radius-server template default
+#
+pki realm default
+ certificate-check none
+#
+free-rule-template name default_free_rule
+#
+portal-access-profile name portal_access_profile
+#
+aaa
+ authentication-scheme default
+  authentication-mode local
+ authentication-scheme radius
+  authentication-mode radius
+ authorization-scheme default
+  authorization-mode local
+ accounting-scheme default
+  accounting-mode none
+ local-aaa-user password policy administrator
+  password history record number 0
+  password expire 0
+ domain default
+  authentication-scheme radius
+  accounting-scheme default
+  radius-server default
+ domain default_admin
+  authentication-scheme default
+  accounting-scheme default
+ local-user admin password irreversible-cipher $1c$2I]|K;gk'*$+z^WMfw2.4VJeML-_lS>gO=2@XY67RA.$/~F(if1$
+ local-user admin privilege level 15
+ local-user admin service-type telnet terminal http
+ local-user bsnoc password irreversible-cipher $1c$q|dXDhY06<$a6s*<oecj.u2j^H=+`u)G>zS*NmvwY<5XbTHjhlX$
+ local-user bsnoc privilege level 15
+ local-user bsnoc service-type telnet terminal ftp
+ local-user mathew password irreversible-cipher $1c$IrU\*S<RC-$d;7994r710]1'c-C5eS>;f(^<^&"&3;h@;SgwaB+$
+ local-user mathew privilege level 15
+ local-user mathew service-type telnet terminal ftp
+#
+interface Vlanif1
+#
+interface Vlanif804
+ description To_Swicth MGT
+ ip address 10.248.246.122 255.255.255.192
+#
+interface MEth0/0/1
+ ip address 192.168.1.253 255.255.255.0
+#
+interface GigabitEthernet0/0/1
+#
+interface GigabitEthernet0/0/2
+#
+interface GigabitEthernet0/0/3
+#
+interface GigabitEthernet0/0/4
+#
+interface GigabitEthernet0/0/5
+#
+interface GigabitEthernet0/0/6
+#
+interface GigabitEthernet0/0/7
+#
+interface GigabitEthernet0/0/8
+#
+interface GigabitEthernet0/0/9
+#
+interface GigabitEthernet0/0/10
+#
+interface GigabitEthernet0/0/11
+#
+interface GigabitEthernet0/0/12
+#
+interface GigabitEthernet0/0/13
+#
+interface GigabitEthernet0/0/14
+#
+interface GigabitEthernet0/0/15
+#
+interface GigabitEthernet0/0/16
+#
+interface GigabitEthernet0/0/17
+#
+interface GigabitEthernet0/0/18
+#
+interface GigabitEthernet0/0/19
+#
+interface GigabitEthernet0/0/20
+#
+interface GigabitEthernet0/0/21
+#
+interface GigabitEthernet0/0/22
+#
+interface GigabitEthernet0/0/23
+#
+interface GigabitEthernet0/0/24
+#
+interface GigabitEthernet0/0/25
+#
+interface GigabitEthernet0/0/26
+#
+interface GigabitEthernet0/0/27
+#
+interface GigabitEthernet0/0/28
+#
+interface GigabitEthernet0/0/29
+#
+interface GigabitEthernet0/0/30
+#
+interface GigabitEthernet0/0/31
+#
+interface GigabitEthernet0/0/32
+#
+interface XGigabitEthernet0/0/1
+ description To_DCN-Router
+ port link-type trunk
+ port trunk allow-pass vlan 804
+#
+interface XGigabitEthernet0/0/2
+#
+interface XGigabitEthernet0/0/3
+#
+interface XGigabitEthernet0/0/4
+#
+interface NULL0
+#
+undo icmp name timestamp-request receive
+#
+ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+ssh server cipher aes256_ctr aes128_ctr
+ssh server hmac sha2_256
+ssh client cipher aes256_ctr aes128_ctr
+ssh client hmac sha2_256
+ssh server dh-exchange min-len 2048
+#
+telnet client-source -i Vlanif804
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 3
+user-interface vty 0 4
+ authentication-mode aaa
+ user privilege level 3
+ protocol inbound telnet
+user-interface vty 16 20
+ authentication-mode aaa
+ user privilege level 3
+ protocol inbound telnet
+#
+dot1x-access-profile name dot1x_access_profile
+#
+mac-access-profile name mac_access_profile
+#
+ops
+#
+return
+[ENT-ILR009-SW]

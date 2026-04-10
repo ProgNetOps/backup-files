@@ -1,5 +1,5 @@
      +--------------------------------------------------------------------+
-     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
      ¦              (X server, SSH client and network tools)              ¦
      ¦                                                                    ¦
      ¦ ? Your computer drives are accessible through the /drives path     ¦
@@ -7,10 +7,10 @@
      ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
      ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
      ¦                                                                    ¦
-     ¦                     Registered to RT (1 user)                      ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
      +--------------------------------------------------------------------+
 
- ? 2025-11-13 ? ? 07:25.17 ? ? /home/mobaxterm ? telnet 10.248.249.184
+ ? 2026-04-08 ? ? 12:05.44 ? ? /home/mobaxterm ? telnet 10.248.249.184
 Connected to 10.248.249.184.
 Entering character mode
 Escape character is '^]'.
@@ -36,22 +36,22 @@ PHY: Physical
 (d): Dampening Suppressed
 Interface                     PHY     Protocol Description
 Eth0/0/1                      up      up       ACCESS BANK ABAKALIKI
-Eth0/0/2                      up      up       DICNET/ESBS ABAKALIKI
+Eth0/0/2                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/2 Interface
 Eth0/0/3                      up      up       VDT ABAKALIKI
 Eth0/0/4                      up      up       UNION BANK-abakaliki
 Eth0/0/5                      up      up       ARROFAST ABAKALIKI 100MB INTERNET
 Eth0/0/6                      down    down     HUAWEI, Quidway Series, Ethernet0
                                                /0/6 Interface
 Eth0/0/7                      down    down     IBAAS NIGERIA COMPANY
-Eth0/0/8                      down    down     HUAWEI, Quidway Series, Ethernet0
-                                               /0/8 Interface
+Eth0/0/8                      up      up       DICNET/ESBS ABAKALIKI
 Eth0/0/9                      down    down     HUAWEI, Quidway Series, Ethernet0
                                                /0/9 Interface
 Eth0/0/10                     up      up       HUAWEI, Quidway Series, Ethernet0
                                                /0/10 Interface
 Eth0/0/11                     up      up       GLOSHOP ABAKALIKI
-Eth0/0/12                     up      up       GLOBUS BANK-ABAKALIKI-BKL0006-G1|
-                                               4MBS
+Eth0/0/12                     down    down     GLOBUS-BK ABAKALIKI-GE1-BKL006- G
+                                               E3 on BKL003 IDU AT BKL004|4mbs
 Eth0/0/13                     up      up       HUAWEI, Quidway Series, Ethernet0
                                                /0/13 Interface
 Eth0/0/14                     down    down     HUAWEI, Quidway Series, Ethernet0
@@ -89,9 +89,9 @@ Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
 !Software Version V100R006C03
  sysname BS-BKL-004
 #
- vlan batch 803 1194 1419 1487 1493 to 1496 1498 1500 to 1501 1503 1554 1560
- vlan batch 1565 to 1566 1591 1640 1733 2059 2792 2912 3126 3141 3319
- vlan batch 3515 3602 3918
+ vlan batch 803 1136 1194 1419 1487 1493 to 1496 1498 1500 to 1501 1503 1554
+ vlan batch 1560 1565 to 1566 1591 1640 1733 2059 2792 2912 3126 3141
+ vlan batch 3319 3515 3602 3918
 #
  lldp enable
 #
@@ -99,6 +99,8 @@ Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
 #
 vlan 803
  description FOR MGT
+vlan 1136
+ description Passion-FM (Swifttalk) MGT Vlan
 vlan 1194
  description TPGS-EBONYI
 vlan 1419
@@ -179,26 +181,28 @@ interface Ethernet0/0/1
  description ACCESS BANK ABAKALIKI
  port link-type access
  port default vlan 1640
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/2
- description DICNET/ESBS ABAKALIKI
  port link-type access
- port default vlan 1733
 #
 interface Ethernet0/0/3
  description VDT ABAKALIKI
  port link-type access
  port default vlan 1566
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/4
  description UNION BANK-abakaliki
  port link-type access
  port default vlan 1591
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/5
  description ARROFAST ABAKALIKI 100MB INTERNET
  port link-type access
  port default vlan 1554
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/6
  port link-type access
@@ -207,55 +211,75 @@ interface Ethernet0/0/7
  description IBAAS NIGERIA COMPANY
  port link-type trunk
  port trunk allow-pass vlan 1419 1497
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/8
+ description DICNET/ESBS ABAKALIKI
  port link-type access
+ port default vlan 1733
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/9
  port link-type trunk
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/10
  port link-type access
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/11
  description GLOSHOP ABAKALIKI
  port link-type trunk
  port trunk allow-pass vlan 3918
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/12
- description GLOBUS BANK-ABAKALIKI-BKL0006-G1|4MBS
- port link-type trunk
- port trunk allow-pass vlan 2792
+ description GLOBUS-BK ABAKALIKI-GE1-BKL006- GE3 on BKL003 IDU AT BKL004|4mbs
+ port link-type access
+ port default vlan 2792
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/13
  port link-type access
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/14
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/15
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/16
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/17
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/18
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/19
  description TPGS-EBONYI-TEU041-GE4@BKL006
  port link-type trunk
  port trunk allow-pass vlan 1194
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/20
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/21
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/22
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/23
  port link-type trunk
+ stp bpdu-filter enable
 #
 interface Ethernet0/0/24
  shutdown
+ stp bpdu-filter enable
 #
 interface GigabitEthernet0/0/1
  port link-type access
@@ -266,8 +290,8 @@ interface GigabitEthernet0/0/1
 interface GigabitEthernet0/0/2
  description UPLINK TO DCN IP/MPLS GE1/0/4
  port link-type trunk
- port trunk allow-pass vlan 1194 1501 1566 1591 1640 1733 2059 2792 2912 3515
- port trunk allow-pass vlan 3918
+ port trunk allow-pass vlan 1136 1194 1501 1566 1591 1640 1733 2059 2792 2912
+ port trunk allow-pass vlan 3515 3918
  stp bpdu-filter enable
  port media type fiber
      undo negotiation auto

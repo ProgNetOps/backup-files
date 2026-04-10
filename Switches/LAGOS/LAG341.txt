@@ -1,5 +1,5 @@
      +--------------------------------------------------------------------+
-     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
      ¦              (X server, SSH client and network tools)              ¦
      ¦                                                                    ¦
      ¦ ? Your computer drives are accessible through the /drives path     ¦
@@ -7,10 +7,10 @@
      ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
      ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
      ¦                                                                    ¦
-     ¦                     Registered to RT (1 user)                      ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
      +--------------------------------------------------------------------+
 
- ? 2025-11-13 ? ? 10:31.03 ? ? /home/mobaxterm ? telnet 10.248.246.6
+ ? 2026-04-08 ? ? 09:05.56 ? ? /home/mobaxterm ? telnet 10.248.246.6
 Connected to 10.248.246.6.
 Entering character mode
 Escape character is '^]'.
@@ -28,7 +28,7 @@ Enter system view, return user view with Ctrl+Z.
 [GLO-BS-Lag341]dis int des
 Interface                   Description
 Ethernet0/0/1               GLOWORLD AJEGUNLE
-Ethernet0/0/2               ICNL(INLAND CONTAINER APAPA) LAGOS
+Ethernet0/0/2               ICNL(INLAND CONTAINER APAPA) (SAKA17) | 20MB
 Ethernet0/0/3               faulty
 Ethernet0/0/4               AITEO-APAPACERAGON_MGT-
 Ethernet0/0/5               Conoil-Ejigbo
@@ -38,7 +38,8 @@ Ethernet0/0/8               National-Mirror
 Ethernet0/0/9               Flourmills_HQ
 Ethernet0/0/10              CONOIL PD EURAFRIC
 Ethernet0/0/11              TRUNK CONNECTION TO AITEO APAPA
-Ethernet0/0/12              SEVEN UP MPLS  TRUNK TO HQ
+Ethernet0/0/12              MEGA MANU TRADING COMPANY (GIVANAS GROUP) SWIFTALK-
+                            RADIO | 10MB
 Ethernet0/0/13              AMT NIGERIA
 Ethernet0/0/14              SPIDERNET-MARINA|20MBS
 Ethernet0/0/15              CERAGON_MGT
@@ -51,7 +52,7 @@ Ethernet0/0/20              CHICASON-DOCYARD-APAPACERAGON_MGT-
 Ethernet0/0/21              DANGOTE-APAPA-INT | 45M
 Ethernet0/0/22              FLOWZAP-APAPA-2[VLAN-3216] | 100Mbps
 Ethernet0/0/23              TRUNK test port
-Ethernet0/0/24              TEST PORT FOR NPA APAPA
+Ethernet0/0/24              free
 GigabitEthernet0/0/1        TRUNK TO DCN IP/MPLS-LAG341-ATN-GE0/3/0
 GigabitEthernet0/0/2        MOBIL (DOUBLE ONE) APAPA | 120MB | CERAGONIP20
 NULL0                       HUAWEI, Quidway Series, NULL0 Interface
@@ -69,14 +70,17 @@ Vlanif2621                  HUAWEI, Quidway Series, Vlanif2621 Interface
  sysname GLO-BS-Lag341
 #
  vlan batch 15 25 98 200 to 201 210 302 312 to 313 805 812 902
- vlan batch 1234 1311 1447 1489 1494 1497 to 1498 1501 to 1504 1677 1800 1934
+ vlan batch 1234 1312 1447 1489 1494 1497 to 1498 1501 to 1504 1677 1800 1934
  vlan batch 1949 1966 2012 2057 2150 2172 2310 2402 to 2403 2405 2407 to 2409
  vlan batch 2411 to 2412 2419 to 2422 2425 to 2426 2429 to 2432 2435 to 2439 2441 to 2446 2468 2520 to 2521 2533 2553
- vlan batch 2611 2615 2618 2621 2625 3035 3216 3312 3410 3876
+ vlan batch 2558 2611 2615 2618 2621 2625 3035 3216 3312 3410
+ vlan batch 3876
 #
  lldp enable
 #
  undo http server enable
+#
+ drop illegal-mac alarm
 #
 vlan 15
  description GLOWORLD-NERA-RADIO-MGT
@@ -104,8 +108,8 @@ vlan 902
  description AITEO-APAPA-INTERNET
 vlan 1234
  description DOTMAC-APAPA-LAG341-SAKA17-SAKA25
-vlan 1311
- description ICNL-LAGOS
+vlan 1312
+ description ICNL-APAPA
 vlan 1447
  description DANGOTE-APAPA-INT
 vlan 1489
@@ -206,6 +210,8 @@ vlan 2533
  description AITEO-VPLS-APAPA-NEMBE-LEKKI
 vlan 2553
  description FLOURMILLS-APAPA
+vlan 2558
+ description LAG341-SAKA25_MEGAMANUTRADING-INTERNET || 10Mbps
 vlan 2611
  description CONOIL-IBADAN-OLD
 vlan 2615
@@ -274,9 +280,9 @@ interface Ethernet0/0/1
  ndp enable
 #
 interface Ethernet0/0/2
- description ICNL(INLAND CONTAINER APAPA) LAGOS
+ description ICNL(INLAND CONTAINER APAPA) (SAKA17) | 20MB
  port link-type trunk
- port trunk allow-pass vlan 1311 1497
+ port trunk allow-pass vlan 1312 1497
  ntdp enable
  ndp enable
 #
@@ -351,10 +357,9 @@ interface Ethernet0/0/11
  speed 100
 #
 interface Ethernet0/0/12
- description SEVEN UP MPLS  TRUNK TO HQ
- shutdown
- port link-type access
- port default vlan 2468
+ description MEGA MANU TRADING COMPANY (GIVANAS GROUP) SWIFTALK-RADIO | 10MB
+ port link-type trunk
+ port trunk allow-pass vlan 1136 2558
  ntdp enable
  ndp enable
 #
@@ -431,9 +436,8 @@ interface Ethernet0/0/23
  port trunk allow-pass vlan 805
 #
 interface Ethernet0/0/24
- description TEST PORT FOR NPA APAPA
+ description free
  port link-type access
- port default vlan 2521
 #
 interface GigabitEthernet0/0/1
  description TRUNK TO DCN IP/MPLS-LAG341-ATN-GE0/3/0
@@ -475,9 +479,5 @@ user-interface vty 0 4
  authentication-mode aaa
 #
 return
-[GLO-BS-Lag341]
-Info: The max number of VTY users is 5, and the number
-      of current VTY users on line is 0.telnet: Connection closed by foreign host
-                                                                                                                                                               ?
 
- ? 2025-11-13 ? ? 10:36.31 ? ? /home/mobaxterm ?
+[GLO-BS-Lag341]

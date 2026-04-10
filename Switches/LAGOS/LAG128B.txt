@@ -1,5 +1,5 @@
      +--------------------------------------------------------------------+
-     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
      ¦              (X server, SSH client and network tools)              ¦
      ¦                                                                    ¦
      ¦ ? Your computer drives are accessible through the /drives path     ¦
@@ -7,10 +7,10 @@
      ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
      ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
      ¦                                                                    ¦
-     ¦                     Registered to RT (1 user)                      ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
      +--------------------------------------------------------------------+
 
- ? 2025-11-13 ? ? 10:25.25 ? ? /home/mobaxterm ? telnet 10.248.246.50
+ ? 2026-04-08 ? ? 08:59.05 ? ? /home/mobaxterm ? telnet 10.248.246.50
 Connected to 10.248.246.50.
 Entering character mode
 Escape character is '^]'.
@@ -39,7 +39,7 @@ Eth0/0/1                      up      up       GLOWORLD OLUWOLE
 Eth0/0/2                      *down   down     HUAWEI, Quidway Series, Ethernet0
                                                /0/2 Interface
 Eth0/0/3                      down    down     LAFAYETTE-ADV-LL-R-NERA
-Eth0/0/4                      up      up       NIGER INSURANCE
+Eth0/0/4                      down    down     NIGER INSURANCE
 Eth0/0/5                      up      up       WALTERSMITH-CHAIRMAN-INTERNET-LM-
                                                CERAGON-DIRECT
 Eth0/0/6                      down    down     BS CERAGON MGT WALTER SMITH CHAR
@@ -47,7 +47,7 @@ Eth0/0/6                      down    down     BS CERAGON MGT WALTER SMITH CHAR
 Eth0/0/7                      up      up       TO-WEMA-HQ-RADIO-BACKUP
 Eth0/0/8                      up      up       GTBANK IKOYI MICROWAVE BACKHAUL R
                                                ADIO
-Eth0/0/9                      up      up       TRUNK TO DPR
+Eth0/0/9                      down    down     TRUNK TO DPR
 Eth0/0/10                     down    down     SOUTHER SUN RADIO BACK UP INTERNE
                                                T
 Eth0/0/11                     down    down     GTBANK IKOYI FIBER LINK
@@ -62,7 +62,7 @@ Eth0/0/18                     up      up       GLOBENODE DOLPHIN  |4MB INTERNET
 Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
 Eth0/0/20                     up      up       CONNECTION TO AMADEUS-MARKETING-I
                                                NT |10M
-Eth0/0/21                     up      up       FETS-IKOYI-INT  |10MB
+Eth0/0/21                     *down   down     FETS-IKOYI-INT  |10MB
 Eth0/0/22                     down    down     SENTIENT FEMI PEARSE VI
 Eth0/0/23                     down    down     CONNECTION TO FCMB
 Eth0/0/24                     up      up       IBILE-HOLDINGS - LAG 128B-10M-INT
@@ -378,6 +378,7 @@ interface Ethernet0/0/20
 #
 interface Ethernet0/0/21
  description FETS-IKOYI-INT  |10MB
+ shutdown
  port link-type access
  port default vlan 1058
 #

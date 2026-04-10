@@ -1,8 +1,31 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
+     +--------------------------------------------------------------------+
+
+ ? 2026-04-08 ? ? 12:02.07 ? ? /home/mobaxterm ? telnet 10.248.249.249
+Connected to 10.248.249.249.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
 Username:bsnoc
 Password:
-<GLO-SWITCH-SHELL>sys
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<GLO_SW_SHELL_OFFICE_ABUJA>sys
 Enter system view, return user view with Ctrl+Z.
-[GLO-SWITCH-SHELL]dis int des
+[GLO_SW_SHELL_OFFICE_ABUJA]dis int des
 Interface                   Description
 Ethernet0/0/1               HUAWEI, Quidway Series, Ethernet0/0/1 Interface
 Ethernet0/0/2               HUAWEI, Quidway Series, Ethernet0/0/2 Interface
@@ -27,24 +50,24 @@ Ethernet0/0/20              HUAWEI, Quidway Series, Ethernet0/0/20 Interface
 Ethernet0/0/21              HUAWEI, Quidway Series, Ethernet0/0/21 Interface
 Ethernet0/0/22              HUAWEI, Quidway Series, Ethernet0/0/22 Interface
 Ethernet0/0/23              HUAWEI, Quidway Series, Ethernet0/0/23 Interface
-Ethernet0/0/24              Management
-GigabitEthernet0/0/1        HUAWEI, Quidway Series, GigabitEthernet0/0/1 Interf
-                            ace
-GigabitEthernet0/0/2        HUAWEI, Quidway Series, GigabitEthernet0/0/2 Interf
-                            ace
-GigabitEthernet0/0/3        HUAWEI, Quidway Series, GigabitEthernet0/0/3 Interf
-                            ace
+Ethernet0/0/24              MGT PORT
+GigabitEthernet0/0/1        UPLINK_FIBER_TRUNK_TO_GLOBACOM_ABJ007
+GigabitEthernet0/0/2        RENAISSANCE_ABUJA_GROUND_FLOOR_100MB (VLAN3160)
+GigabitEthernet0/0/3        SHELL_(SNEPCO)_ABUJA_2ND_FLOOR_EKO-ATLANTIC_100MB (
+                            VLAN3165)
 GigabitEthernet0/0/4        HUAWEI, Quidway Series, GigabitEthernet0/0/4 Interf
                             ace
 NULL0                       HUAWEI, Quidway Series, NULL0 Interface
 Vlanif1                     HUAWEI, Quidway Series, Vlanif1 Interface
+Vlanif1501                  HUAWEI, Quidway Series, Vlanif1501 Interface
 Vlanif1507                  HUAWEI, Quidway Series, Vlanif1507 Interface
-[GLO-SWITCH-SHELL]                 dis cur
+Vlanif3165                  HUAWEI, Quidway Series, Vlanif3165 Interface
+[GLO_SW_SHELL_OFFICE_ABUJA] dis cur
 #
 !Software Version V100R005C01SPC100
- sysname GLO-SWITCH-SHELL
+ sysname GLO_SW_SHELL_OFFICE_ABUJA
 #
- vlan batch 1507 3160
+ vlan batch 1501 1507 3160 3165
 #
  cluster enable
  ntdp enable
@@ -57,10 +80,14 @@ Vlanif1507                  HUAWEI, Quidway Series, Vlanif1507 Interface
 #
  drop illegal-mac alarm
 #
+vlan 1501
+ description SWITCH-MGT
 vlan 1507
  description Management
 vlan 3160
  description SHELL-ABJ-LAG-4TH-FLR-LL
+vlan 3165
+ description SHELL-ABUJA-EKO-ATLANTIC_100M
 #
 aaa
  authentication-scheme default
@@ -76,8 +103,14 @@ aaa
 interface Vlanif1
  ip address dhcp-alloc
 #
+interface Vlanif1501
+ ip address 10.248.249.249 255.255.255.0
+#
 interface Vlanif1507
  ip address 10.248.243.9 255.255.255.0
+#
+interface Vlanif3165
+ ip address 10.10.10.1 255.255.255.0
 #
 interface Ethernet0/0/1
  ntdp enable
@@ -195,24 +228,33 @@ interface Ethernet0/0/23
  bpdu enable
 #
 interface Ethernet0/0/24
- description Management
+ description MGT PORT
  port link-type access
- port default vlan 1507
+ port default vlan 1501
  ntdp enable
  ndp enable
  bpdu enable
 #
 interface GigabitEthernet0/0/1
+ description UPLINK_FIBER_TRUNK_TO_GLOBACOM_ABJ007
+ port link-type trunk
+ port trunk allow-pass vlan 1501 3160 3165
  ntdp enable
  ndp enable
  bpdu enable
 #
 interface GigabitEthernet0/0/2
+ description RENAISSANCE_ABUJA_GROUND_FLOOR_100MB (VLAN3160)
+ port link-type access
+ port default vlan 3160
  ntdp enable
  ndp enable
  bpdu enable
 #
 interface GigabitEthernet0/0/3
+ description SHELL_(SNEPCO)_ABUJA_2ND_FLOOR_EKO-ATLANTIC_100MB (VLAN3165)
+ port link-type access
+ port default vlan 3165
  ntdp enable
  ndp enable
  bpdu enable
@@ -224,11 +266,12 @@ interface GigabitEthernet0/0/4
 #
 interface NULL0
 #
- ip route-static 0.0.0.0 0.0.0.0 10.248.243.1
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
 #
  snmp-agent
  snmp-agent local-engineid 000007DB7F00000100007053
- snmp-agent sys-info version v3
+ snmp-agent community read cipher ^D#U[\Q.+H.9]T((+V>!H\"TX$_S#6.NM(0=0\)*5WU!
+ snmp-agent sys-info version all
 #
 user-interface con 0
  authentication-mode aaa
@@ -237,3 +280,4 @@ user-interface vty 0 4
  authentication-mode aaa
 #
 return
+[GLO_SW_SHELL_OFFICE_ABUJA]

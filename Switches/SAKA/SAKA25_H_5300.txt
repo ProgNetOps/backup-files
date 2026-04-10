@@ -1,5 +1,5 @@
      +--------------------------------------------------------------------+
-     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
      ¦              (X server, SSH client and network tools)              ¦
      ¦                                                                    ¦
      ¦ ? Your computer drives are accessible through the /drives path     ¦
@@ -7,156 +7,36 @@
      ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
      ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
      ¦                                                                    ¦
-     ¦                     Registered to RT (1 user)                      ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
      +--------------------------------------------------------------------+
 
- ? 2025-11-13 ? ? 07:22.07 ? ? /home/mobaxterm ? telnet 10.248.248.14
-Connected to 10.248.248.14.
 
-Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
-
-Login authentication
-
-
-Username:Entering character mode
-Escape character is '^]'.
-bsnoc
-Password:
-Info: The max number of VTY users is 10, and the number
-      of current VTY users on line is 1.
-      The current login time is 2025-11-13 13:40:06-05:13.
-<SAKA25-HU-S5310-CORE-SW>sys
-Enter system view, return user view with Ctrl+Z.
-[SAKA25-HU-S5310-CORE-SW]dis int des
-PHY: Physical
-*down: administratively down
-(l): loopback
-(s): spoofing
-(E): E-Trunk down
-(b): BFD down
-(e): ETHOAM down
-(dl): DLDP down
-(d): Dampening Suppressed
-Interface                     PHY     Protocol Description
-Eth-Trunk21                   up      up       GLO1 HUAWEI NE ROUTER
-Eth-Trunk21.507               up      down     TPGS-FCML |1OMB
-Eth-Trunk21.1235              up      down     TPGS_ALABA
-Eth-Trunk21.1784              up      down     BEYOND LIMITS  ACADEMY |10MB
-Eth-Trunk21.1785              up      down     SOE TRADING (DE-QUALITY GARDENS)
-                                                |10MB
-GE0/0/1                       up      up       Marine Platform 15Mb Internet
-GE0/0/2                       down    down     TRUSTFUND PENSION BISHOP KALE
-GE0/0/3                       up      up       CONNECTION-TO-SAKA25PE01(PORT 2/1
-                                               /7)-ALU-PE
-GE0/0/4                       up      up       trunk_facing_glo1_DCN_Routr_4_pay
-                                               mentgatway
-GE0/0/5                       down    down     IGI INSURANCE-BISH-OLUWOLE-RADIO
-                                               | 110M
-GE0/0/6                       up      up       HYPERIA OCEAN PARADE
-GE0/0/7                       up      up       Trunk to Cisco_2960_2
-GE0/0/8                       up      up       ORANGE-MOBIL-200M-LL
-GE0/0/9                       up      up       NIBS-SECONDARY-INT-FIBER |310M
-GE0/0/10                      up      up       INDUSTRIAL & GENERAL INSURANCE (I
-                                               GI) | 50MB INTERNET
-GE0/0/11                      up      up       CONNECTION-GLOMOBILE-SERVICES
-GE0/0/12                      up      up       MCKINSEY & CO INT | 200M
-GE0/0/13                      up      up       BQUBE LAGOS 130MB-INTERNET!!L3VPN
-                                               -Eastern Obollo Akwa Ibom (STERLI
-                                               NG OIL)
-GE0/0/14                      up      up       IGI-BISH-OLUWOLE-FIBER-INT | 110M
-GE0/0/15                      up      up       SAHARA-NEW-HQ-INT | 155M
-GE0/0/16                      up      up       GlobeNode Ozumba VI |5OMB
-GE0/0/17                      up      up       TRUNK GLO-LAGOS-EXPERIENCE-CENTER
-GE0/0/18                      down    down     OLAM INTERNET 8M
-GE0/0/19                      up      up       TRUNK TO CISCO 3560
-GE0/0/19.250                  up      down     FIRST BANK HQ LAYER 3
-GE0/0/20                      up      up       Trunk to DCN PE-B GE1/0/14
-GE0/0/21                      up      up       CONNECTION-ADC(EKO-ATLANTIC)
-GE0/0/22                      up      up       ACCESS-BANK-HQ-BACKHAUL-LIGALI
-GE0/0/23                      up      up       UPLINK TO SEPLAT IKOYI
-GE0/0/24                      down    down     TRUNK TO GLO POP & ALLIANCE FRANC
-                                               AISE (MIKE ADENUGA CENTER)
-MEth0/0/1                     down    down
-NULL0                         up      up(s)
-Vlanif1                       up      down
-Vlanif2                       up      up
-Vlanif10                      up      up
-Vlanif20                      up      up
-Vlanif55                      up      up
-Vlanif88                      up      up
-Vlanif92                      up      up       TELNET TO 192.168.5.11 TO PAYMENT
-                                                GATEWAY
-Vlanif115                     up      up
-Vlanif126                     up      up
-Vlanif131                     up      up
-Vlanif222                     up      down
-Vlanif250                     up      up
-Vlanif518                     up      up
-Vlanif523                     up      up
-Vlanif530                     up      up
-Vlanif566                     up      up
-Vlanif804                     up      down
-Vlanif805                     up      up
-Vlanif809                     up      up       ALTERNATIVE-MGT-ADC-GLO-SWITCH
-Vlanif1049                    up      down
-Vlanif1065                    up      up
-Vlanif1117                    up      up
-Vlanif1137                    up      up
-Vlanif1181                    up      up
-Vlanif1211                    up      up
-Vlanif1258                    up      down
-Vlanif1266                    up      up
-Vlanif1296                    up      down
-Vlanif1312                    up      down
-Vlanif1318                    up      up
-Vlanif1355                    up      up
-Vlanif1501                    up      up
-Vlanif1503                    up      up
-Vlanif1578                    up      up
-Vlanif1581                    up      up
-Vlanif1640                    up      up
-Vlanif1748                    up      up
-Vlanif1781                    *down   down
-Vlanif1825                    up      up
-Vlanif1867                    up      down
-Vlanif1900                    up      up
-Vlanif2150                    up      down
-Vlanif2786                    up      up
-Vlanif2970                    up      up
-Vlanif3181                    up      up
-Vlanif3849                    up      up
-XGE0/0/1                      up      up       TRUNK TO SAKA25-NE40EX8-AR-C-GE3/
-                                               0/1
-XGE0/0/2                      up      up       TO-GLO1-HUAWEI-IPD-UPSTAIRS
-XGE0/0/3                      up      up       COOL_FM_10G
-XGE0/0/4                      up      up       CONNECTION-GLO1-HUAWEI-ROUTER-UPS
-                                               TAIRS(NE40E-X16A-1/1/5)-PHYSICAL-
-                                               LABEl-5/0/3
-[SAKA25-HU-S5310-CORE-SW]  dis cur
+[ENT-S5310-HUA-CORE-SW-SAKA25]  dis cur
 !Software Version V200R003C00SPC300
 #
-sysname SAKA25-HU-S5310-CORE-SW
+sysname ENT-S5310-HUA-CORE-SW-SAKA25
 #
 vlan batch 2 9 to 10 20 55 60 88 92 to 93 98 100 105
 vlan batch 112 115 117 to 118 126 131 to 134 141 143 145 to 147 155 to 156 166 to 167
-vlan batch 180 to 181 189 to 190 199 201 222 232 244 250 300 315 to 316
-vlan batch 501 to 511 513 to 520 523 to 525 530 566 585 600 602 670 804 to 805
-vlan batch 809 811 to 812 900 916 922 930 987 1019 1021 1024 to 1034
-vlan batch 1036 1039 1048 to 1049 1051 1058 to 1060 1064 to 1065 1067 to 1068 1081 1093 1096 to 1100
-vlan batch 1102 to 1105 1111 1114 1116 to 1117 1119 1127 to 1128 1132 to 1137 1163 1166 to 1167 1175 to 1176
-vlan batch 1178 to 1183 1186 1191 1211 1223 to 1224 1226 to 1227 1229 to 1230 1232 to 1258 1261 to 1263 1265 to 1275
-vlan batch 1277 1279 to 1286 1288 to 1289 1291 1293 to 1294 1296 to 1299 1303 1308 to 1314 1316 to 1324 1326 to 1355
-vlan batch 1360 to 1361 1363 to 1365 1367 to 1369 1371 to 1407 1411 to 1417 1419 to 1421 1423 to 1424 1426 1428 to 1429 1443
-vlan batch 1473 1481 to 1483 1486 to 1489 1491 1494 1499 to 1501 1503 1506 to 1507 1543 1551 to 1552
-vlan batch 1554 1556 to 1559 1576 to 1579 1581 1593 1599 1603 1632 1640 1644
-vlan batch 1651 to 1665 1667 to 1674 1676 to 1679 1681 to 1682 1684 1689 1692 to 1694 1710 to 1712 1731 to 1732 1748
-vlan batch 1750 1753 to 1754 1756 to 1757 1762 1765 1772 to 1773 1775 to 1779 1781 1783 to 1786 1788 to 1790
-vlan batch 1796 1820 to 1821 1823 to 1825 1839 1848 1853 1864 1867 1875 1896
-vlan batch 1900 1904 to 1909 1911 1927 to 1930 1967 to 1969 1971 1976 to 1979 1982 to 1983 1985 2057 to 2058
-vlan batch 2060 2085 2114 2122 2127 to 2128 2144 2150 to 2151 2175 2263 2267
-vlan batch 2321 to 2322 2415 to 2416 2437 to 2438 2511 2521 2533 2539 to 2540 2554 2701 2708
-vlan batch 2786 to 2787 2830 2901 2969 to 2970 2986 to 2989 3007 3105 3126 3164 to 3167 3181
-vlan batch 3195 3200 3221 3241 3671 3771 3849 3871 3874 3916
+vlan batch 180 to 181 189 to 190 199 201 222 232 244 250 300 315 to 317
+vlan batch 501 to 511 513 to 520 523 to 525 530 to 531 566 585 600 602 670 804 to 805
+vlan batch 809 811 to 812 900 to 901 916 922 930 934 987 1019 1021
+vlan batch 1024 to 1034 1036 1039 1048 to 1049 1051 1058 to 1060 1064 to 1065 1067 to 1068 1081 1093
+vlan batch 1096 to 1100 1102 to 1105 1111 1114 1116 to 1117 1119 1127 to 1128 1132 to 1137 1163 1166 to 1167
+vlan batch 1175 to 1176 1178 to 1183 1186 1191 1211 to 1212 1223 to 1224 1226 to 1227 1229 to 1230 1232 to 1258 1261 to 1263
+vlan batch 1265 to 1275 1277 1279 to 1286 1288 to 1289 1291 1293 to 1294 1296 to 1299 1303 1308 to 1314 1316 to 1324
+vlan batch 1326 to 1355 1360 to 1361 1363 to 1365 1367 to 1369 1371 to 1407 1411 to 1417 1419 to 1421 1423 to 1424 1426 1428 to 1429
+vlan batch 1443 1473 1481 to 1483 1486 to 1489 1491 1494 1499 to 1501 1503 1506 to 1507 1543
+vlan batch 1551 to 1552 1554 1556 to 1559 1576 to 1579 1581 1593 1599 1603 1632 1640
+vlan batch 1644 1651 to 1665 1667 to 1674 1676 to 1679 1681 to 1682 1684 1689 1692 to 1694 1710 to 1712 1731 to 1732
+vlan batch 1748 1750 1753 to 1754 1756 to 1757 1762 1765 1772 to 1773 1775 to 1779 1781 1783 to 1786
+vlan batch 1788 to 1790 1796 1820 to 1821 1823 to 1825 1839 1848 1853 1864 1867 1875
+vlan batch 1896 1900 1904 to 1909 1911 1927 to 1930 1967 to 1969 1971 1976 to 1979 1982 to 1983 1985
+vlan batch 2057 to 2058 2060 2085 2114 2122 2127 to 2128 2144 2150 to 2151 2175 2263
+vlan batch 2267 2321 to 2322 2415 to 2416 2437 to 2438 2511 2521 2533 2539 to 2540 2554 2701
+vlan batch 2708 2786 to 2787 2830 2901 2969 to 2970 2986 to 2989 3007 3105 3126 3164 to 3167
+vlan batch 3181 3195 3200 3221 3241 3671 3771 3849 3871 3874
+vlan batch 3916
 #
 lldp enable
 #
@@ -194,7 +74,7 @@ vlan 105
 vlan 112
  description PRODECO-LAGOS-HQ-INT
 vlan 115
- description trustfund
+ description AXAMANSARD-INT
  name TRUST-FUND
 vlan 117
  description AXA-MANSARD-HQ-INT
@@ -252,6 +132,8 @@ vlan 315
  description CHICASON
 vlan 316
  description IGI-BISH-OLUWOLE-INT
+vlan 317
+ description IOTECH-LA-TOUR-V.I.
 vlan 501
  description BQUBE Lagos
 vlan 502
@@ -296,6 +178,8 @@ vlan 525
  description NIBS-SECONDARY-INT-FIBER
 vlan 530
  description Wema Radio Backup
+vlan 531
+ description CONOIL-INTERNET-30MB
 vlan 566
  description DELLOITE-LAGOS-HQ-INT
 vlan 585
@@ -317,7 +201,9 @@ vlan 811
 vlan 812
  description CONOIL-HQ-INT
 vlan 900
- description SEPLAT
+ description SEPLAT-SAPELE
+vlan 901
+ description SEPLAT_IKOYI INTERNET-LEG-ON-A-TEMPRARY-BASIS
 vlan 916
  description CONNECTION-PE-B-PRTG-RTR
 vlan 922
@@ -452,6 +338,8 @@ vlan 1191
  description ABRAHAM-ADESANYA-POLY-INT
 vlan 1211
  description PANOCEAN-BENIN-LL
+vlan 1212
+ description PANOCEAN-PHC-LL
 vlan 1223
  description ALPHA-QUANTUM-LAG375B-INTERNET|40MB
 vlan 1224
@@ -830,7 +718,7 @@ vlan 1503
 vlan 1506
  description LAMBERT-ELEC-SIP
 vlan 1507
- description ENT-SW-MGT-3
+ description ENT-SWITCH-MGT-3
 vlan 1543
  description JOGOR-INT
 vlan 1551
@@ -854,7 +742,7 @@ vlan 1577
 vlan 1578
  description ZETAWEB-ILLUPEJU
 vlan 1579
- description RCC-JABI-GUEST-HOUSE
+ description AXAMANSARD-LL
 vlan 1581
  description ORANGE-MOBIL-IKOYI-200M-LL
 vlan 1593
@@ -1185,27 +1073,19 @@ aaa
  domain default_admin
  local-user ben password cipher %@%@[mTt:KXL;*#Q:2/C"iGShV[5%@%@
  local-user ben privilege level 15
- local-user ope password cipher %@%@@-,0$Tb(M(H\JANq|-w!\ZSb%@%@
- local-user ope privilege level 15
  local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
  local-user admin service-type http
  local-user bsnoc password irreversible-cipher %@%@D~"15A7_d1kJ<cCgd:$Dc:\-$L1(D/#6_0Sl0Y44*Ea':\0c%@%@
  local-user bsnoc privilege level 3
  local-user bsnoc service-type telnet terminal ssh ftp
- local-user chuks password cipher %@%@1{F%=[^YNF\o:4@"jQD<\ZWz%@%@
- local-user chuks privilege level 15
  local-user moses password cipher %@%@C3`q+;P;ZO[(%KT{jmA2\ZX]%@%@
  local-user moses privilege level 15
  local-user donald password cipher %@%@q@+I$w8QkO;Sh9T<2u9H\ZYC%@%@
  local-user donald privilege level 15
  local-user fabian password cipher %@%@K3(YV5O~x0BkS~Ojl)gN\ZUq%@%@
  local-user fabian privilege level 15
- local-user naveen password cipher %@%@oQjj>{cKH#Do{{Kaz.'=\ZVb%@%@
- local-user naveen privilege level 15
  local-user kelechi password cipher %@%@Z%,q*S\Ps@N0ce3b]@nP\ZV6%@%@
  local-user kelechi privilege level 15
- local-user adewunmi password cipher %@%@jaBe<GgN@4t%o[.ZLLQXULRg%@%@
- local-user adewunmi privilege level 15
 #
 interface Vlanif1
 #
@@ -1255,9 +1135,6 @@ interface Vlanif566
  ip address 125.1.1.1 255.255.255.0
 #
 interface Vlanif804
-#
-interface Vlanif805
- ip address 10.248.246.44 255.255.255.192
 #
 interface Vlanif809
  description ALTERNATIVE-MGT-ADC-GLO-SWITCH
@@ -1343,10 +1220,12 @@ interface MEth0/0/1
 #
 load-balance-profile 1341
 #
+interface Eth-Trunk20
+#
 interface Eth-Trunk21
  description GLO1 HUAWEI NE ROUTER
  port link-type trunk
- port trunk allow-pass vlan 2 to 803 805 to 1363 1365 to 1639 1641 to 1906 1908 to 2899 2901 to 4094
+ port trunk allow-pass vlan 2 to 803 805 to 1363 1365 to 1500 1502 to 1639 1641 to 1906 1908 to 2899 2901 to 4094
  stp disable
  stp bpdu-filter enable
  jumboframe enable 9600
@@ -1458,17 +1337,19 @@ interface GigabitEthernet0/0/17
  port default vlan 134
 #
 interface GigabitEthernet0/0/18
- description OLAM INTERNET 8M
+ undo negotiation auto
+ description IOTECH-LA-TOUR-V.I. IOTECH-RADIO | 100MB
  port link-type access
+ port default vlan 317
 #
 interface GigabitEthernet0/0/19
  description TRUNK TO CISCO 3560
  port link-type trunk
- port trunk allow-pass vlan 55 88 93 98 105 112 131 156 166 189
- port trunk allow-pass vlan 232 250 501 506 to 507 511 515 517 523 530 566
- port trunk allow-pass vlan 805 916 1137 1211 1364 1371 1489 1501 1507 1579
- port trunk allow-pass vlan 1640 1820 1848 1900 1907 2057 2151 2708 3007 3126
- port trunk allow-pass vlan 3221 3241 3849
+ port trunk allow-pass vlan 55 88 93 98 105 112 115 131 to 133 156 166
+ port trunk allow-pass vlan 189 232 250 501 506 to 507 511 515 517 523 530 to 531
+ port trunk allow-pass vlan 566 805 916 934 1137 1211 to 1212 1364 1371 1489 1501
+ port trunk allow-pass vlan 1507 1579 1640 1820 1848 1900 1907 2057 2151 2708
+ port trunk allow-pass vlan 3007 3126 3221 3241 3849
  storm-control broadcast min-rate 50 max-rate 50
  storm-control multicast min-rate 50 max-rate 50
 #
@@ -1503,14 +1384,14 @@ interface GigabitEthernet0/0/22
 interface GigabitEthernet0/0/23
  port media type fiber
   undo negotiation auto
- description UPLINK TO SEPLAT IKOYI
+ description SEPLAT IKOYI HQ TRUNK
  port link-type trunk
- port trunk allow-pass vlan 10 100 900 922 1501 1593 2969 to 2970 3404
+ port trunk allow-pass vlan 10 100 900 to 901 922 1501 1507 1593 2969 to 2970 3404
 #
 interface GigabitEthernet0/0/24
- description TRUNK TO GLO POP & ALLIANCE FRANCAISE (MIKE ADENUGA CENTER)
+ description AXA-MANSARD HQ
  port link-type trunk
- port trunk allow-pass vlan 133 1501 2114 3671 3771 3871
+ port trunk allow-pass vlan 115 1579
 #
 interface XGigabitEthernet0/0/1
  description TRUNK TO SAKA25-NE40EX8-AR-C-GE3/0/1
@@ -1519,7 +1400,7 @@ interface XGigabitEthernet0/0/1
  port trunk allow-pass vlan 505 511 517 530 670 804 to 805 1019 to 1021 1024 to 1034 1036 1039
  port trunk allow-pass vlan 1048 to 1049 1051 1058 to 1060 1064 to 1065 1067 to 1068 1081 1093 1096 to 1100 1102 to 1105 1114
  port trunk allow-pass vlan 1116 to 1117 1119 1127 to 1128 1132 to 1137 1163 1166 to 1167 1175 to 1176 1178 to 1183 1186 1191
- port trunk allow-pass vlan 1211 1223 to 1224 1226 to 1227 1229 to 1230 1232 to 1258 1261 to 1263 1265 to 1275 1277 1279 to 1286 1288 to 1289
+ port trunk allow-pass vlan 1211 to 1212 1223 to 1224 1226 to 1227 1229 to 1230 1232 to 1258 1261 to 1263 1265 to 1275 1277 1279 to 1286 1288 to 1289
  port trunk allow-pass vlan 1291 1293 to 1294 1296 to 1299 1303 1308 to 1314 1316 to 1328 1330 to 1338 1340 to 1345 1347 to 1355 1360 to 1361
  port trunk allow-pass vlan 1363 to 1365 1367 to 1369 1371 to 1407 1411 to 1417 1419 to 1421 1423 to 1424 1426 1428 to 1429 1443 1473
  port trunk allow-pass vlan 1481 to 1483 1486 to 1489 1491 1494 1499 1503 1506 to 1507 1543 to 1544 1551 to 1552 1554
@@ -1536,7 +1417,7 @@ interface XGigabitEthernet0/0/1
  storm-control multicast min-rate 50 max-rate 50
 #
 interface XGigabitEthernet0/0/2
- description TO-GLO1-HUAWEI-IPD-UPSTAIRS
+ description TO-GLO1-ROUTER-NE40-SAKA25-GE3/0/8
  eth-trunk 21
 #
 interface XGigabitEthernet0/0/3
@@ -1568,4 +1449,111 @@ user-interface vty 0 4
 user-interface vty 16 20
 #
 return
-[SAKA25-HU-S5310-CORE-SW]                                                                                                                           
+[ENT-S5310-HUA-CORE-SW-SAKA25]sh int des                                                                      ^                                                 Error: Unrecognized command found at '^' position.
+[ENT-S5310-HUA-CORE-SW-SAKA25]dis int des
+PHY: Physical
+*down: administratively down
+(l): loopback
+(s): spoofing
+(E): E-Trunk down
+(b): BFD down
+(e): ETHOAM down
+(dl): DLDP down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth-Trunk20                   down    down
+Eth-Trunk21                   up      up       GLO1 HUAWEI NE ROUTER
+Eth-Trunk21.507               up      down     TPGS-FCML |1OMB
+Eth-Trunk21.1235              up      down     TPGS_ALABA
+Eth-Trunk21.1784              up      down     BEYOND LIMITS  ACADEMY |10MB
+Eth-Trunk21.1785              up      down     SOE TRADING (DE-QUALITY GARDENS)
+                                                |10MB
+GE0/0/1                       up      up       Marine Platform 15Mb Internet
+GE0/0/2                       down    down     TRUSTFUND PENSION BISHOP KALE
+GE0/0/3                       up      up       CONNECTION-TO-SAKA25PE01(PORT 2/1
+                                               /7)-ALU-PE
+GE0/0/4                       up      up       trunk_facing_glo1_DCN_Routr_4_pay
+                                               mentgatway
+GE0/0/5                       down    down     IGI INSURANCE-BISH-OLUWOLE-RADIO
+                                               | 110M
+GE0/0/6                       up      up       HYPERIA OCEAN PARADE
+GE0/0/7                       up      up       Trunk to Cisco_2960_2
+GE0/0/8                       up      up       ORANGE-MOBIL-200M-LL
+GE0/0/9                       up      up       NIBS-SECONDARY-INT-FIBER |310M
+GE0/0/10                      down    down     INDUSTRIAL & GENERAL INSURANCE (I
+                                               GI) | 50MB INTERNET
+GE0/0/11                      up      up       CONNECTION-GLOMOBILE-SERVICES
+GE0/0/12                      up      up       MCKINSEY & CO INT | 200M
+GE0/0/13                      up      up       BQUBE LAGOS 130MB-INTERNET!!L3VPN
+                                               -Eastern Obollo Akwa Ibom (STERLI
+                                               NG OIL)
+GE0/0/14                      up      up       IGI-BISH-OLUWOLE-FIBER-INT | 110M
+GE0/0/15                      up      up       SAHARA-NEW-HQ-INT | 155M
+GE0/0/16                      up      up       GlobeNode Ozumba VI |5OMB
+GE0/0/17                      up      up       TRUNK GLO-LAGOS-EXPERIENCE-CENTER
+GE0/0/18                      up      up       IOTECH-LA-TOUR-V.I. IOTECH-RADIO
+                                               | 100MB
+GE0/0/19                      up      up       TRUNK TO CISCO 3560
+GE0/0/19.250                  up      down     FIRST BANK HQ LAYER 3
+GE0/0/20                      up      up       Trunk to DCN PE-B GE1/0/14
+GE0/0/21                      down    down     CONNECTION-ADC(EKO-ATLANTIC)
+GE0/0/22                      up      up       ACCESS-BANK-HQ-BACKHAUL-LIGALI
+GE0/0/23                      up      up       SEPLAT IKOYI HQ TRUNK
+GE0/0/24                      up      up       AXA-MANSARD HQ
+MEth0/0/1                     down    down
+NULL0                         up      up(s)
+Vlanif1                       up      down
+Vlanif2                       up      up
+Vlanif10                      up      up
+Vlanif20                      up      up
+Vlanif55                      up      up
+Vlanif88                      up      up
+Vlanif92                      up      up       TELNET TO 192.168.5.11 TO PAYMENT
+                                                GATEWAY
+Vlanif115                     up      up
+Vlanif126                     up      up
+Vlanif131                     up      up
+Vlanif222                     up      down
+Vlanif250                     up      up
+Vlanif518                     up      up
+Vlanif523                     up      up
+Vlanif530                     up      up
+Vlanif566                     up      up
+Vlanif804                     up      down
+Vlanif809                     up      up       ALTERNATIVE-MGT-ADC-GLO-SWITCH
+Vlanif1049                    up      down
+Vlanif1065                    up      up
+Vlanif1117                    up      up
+Vlanif1137                    up      up
+Vlanif1181                    up      up
+Vlanif1211                    up      up
+Vlanif1258                    up      down
+Vlanif1266                    up      up
+Vlanif1296                    up      down
+Vlanif1312                    up      down
+Vlanif1318                    up      up
+Vlanif1355                    up      up
+Vlanif1501                    up      up
+Vlanif1503                    up      up
+Vlanif1578                    up      up
+Vlanif1581                    up      up
+Vlanif1640                    up      up
+Vlanif1748                    up      up
+Vlanif1781                    *down   down
+Vlanif1825                    up      up
+Vlanif1867                    up      down
+Vlanif1900                    up      up
+Vlanif2150                    up      down
+Vlanif2786                    up      up
+Vlanif2970                    up      up
+Vlanif3181                    up      up
+Vlanif3849                    up      up
+XGE0/0/1                      up      up       TRUNK TO SAKA25-NE40EX8-AR-C-GE3/
+                                               0/1
+XGE0/0/2                      up      up       TO-GLO1-ROUTER-NE40-SAKA25-GE3/0/
+                                               8
+XGE0/0/3                      up      up       COOL_FM_10G
+XGE0/0/4                      up      up       CONNECTION-GLO1-HUAWEI-ROUTER-UPS
+                                               TAIRS(NE40E-X16A-1/1/5)-PHYSICAL-
+                                               LABEl-5/0/3
+[ENT-S5310-HUA-CORE-SW-SAKA25]

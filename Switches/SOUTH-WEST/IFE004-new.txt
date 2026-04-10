@@ -1,0 +1,264 @@
+
+Enter system view, return user view with Ctrl+Z.
+[ENT-IFE-SW]dis cur
+#
+!Software Version V100R006C05
+ sysname ENT-IFE-SW
+#
+ vlan batch 400 804 1115 1146 1157 1170 1235 1351 1426 1486
+ vlan batch 1492 to 1493 1495 1497 to 1498 1500 to 1501 1503 1632 to 1633 1640 to 1641 1811 1872 to 1873 1993
+ vlan batch 2423 2999 3035 3042 3105 to 3106 3126 3381
+#
+ undo http server enable
+ undo http secure-server enable
+#
+vlan 400
+ description ODUDUWA_MINI_CAMPUS
+vlan 804
+ description TEM-SWITCH-MGT
+vlan 1115
+ description GTB_OAU
+vlan 1146
+ description OAU_IFE
+vlan 1157
+ description JABU_INTERNET
+vlan 1170
+ description OAU IFE CDL-INTERNET
+vlan 1235
+ description JABU_INTERNET
+vlan 1351
+ description TPGS-IFE2
+vlan 1426
+ description VDT-LAGOS-IFE
+vlan 1486
+ description CERAGON-MGT
+vlan 1492
+ description BS-NERA-4-MGT
+vlan 1493
+ description NERA-MGT
+vlan 1495
+ description BS-NERA-2-MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1498
+ description BS-CERAGON-MGT
+vlan 1500
+ description GLO1-CERAGON MGT
+vlan 1501
+ description BS-MGT
+vlan 1503
+ description NERA MGMT
+vlan 1632
+ description WEMA-BANK-LL-LINKS
+vlan 1633
+ description OAU-INFRA-FOCUS
+vlan 1640
+ description ACCESS-BANK-VPLS
+vlan 1641
+ description OSUN IPETU CAMPUS
+vlan 1811
+ description NBC-ASEJIRE
+vlan 1872
+ description idn-ifee
+vlan 1873
+ description TECPOINT-IFE
+vlan 1993
+ description VDT-ILE-IFE-INTERNET
+vlan 2423
+ description STANBIC_IBTC_BANK
+vlan 2999
+ description FCMB-VPLS
+vlan 3035
+ description POLARISBANK-OBA-ADEREMI-IFE039
+vlan 3042
+ description UBA-VPLS
+vlan 3105
+ description ODUDUWA_MAIN_CAMPUS
+vlan 3106
+ description ODUDUWA_MINI_CAMPUS
+vlan 3126
+ description DIAMOND-VPLS
+vlan 3381
+ description WEMA_OAU
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@wUZtG'w\v'd+k*$.N}]Wc7mQ%@%@
+ local-user bsnoc privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif1115
+#
+interface Vlanif1493
+ shutdown
+ ip address 10.155.200.158 255.255.255.0
+#
+interface Vlanif1501
+ ip address 10.248.249.81 255.255.255.0
+#
+interface Vlanif1503
+#
+interface Vlanif1640
+ ip address 10.230.230.232 255.255.255.0
+#
+interface Vlanif1641
+ ip address 12.12.12.9 255.255.255.0
+#
+interface Vlanif1873
+ shutdown
+ ip address 129.205.111.189 255.255.255.248
+#
+interface Ethernet0/0/1
+ description ODUDUWA_MAIN_CAMPUS IPETUMODU
+ port link-type trunk
+ port trunk allow-pass vlan 400 3105
+#
+interface Ethernet0/0/2
+ description ODUDUWA_MINI_CAMPUS
+ port link-type access
+ port default vlan 400
+#
+interface Ethernet0/0/3
+ description ACCESS BANK OAU
+ port link-type access
+ port default vlan 1640
+#
+interface Ethernet0/0/4
+ description OAU_IFE_500MbPs_FIBER
+ port link-type access
+ port default vlan 1146
+#
+interface Ethernet0/0/5
+ description BS CERAGON MGT
+ port link-type access
+ port default vlan 1498
+#
+interface Ethernet0/0/6
+ description JABU_INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 804 1115 1157 1170 1235 1351 1426 1493 1495 1497 to 1498
+ port trunk allow-pass vlan 1500 to 1501 1632 to 1633 1640 to 1641 1811 1872 to 1873 1993 2273 2423 2999 3035
+ port trunk allow-pass vlan 3042 3105 to 3106 3126 3202 3381
+#
+interface Ethernet0/0/7
+ description TPGS IFE-2 | 30MB
+ port link-type access
+ port default vlan 1351
+#
+interface Ethernet0/0/8
+ description TPGS IFE-2 | 30MB **OLD PORT**
+ port link-type access
+ port default vlan 1351
+#
+interface Ethernet0/0/9
+ description OAU IFE CDL-INTERNET | VLAN1170 | 80MB
+ port link-type trunk
+ port trunk allow-pass vlan 1170 1500 1503
+ qos lr outbound cir 80000 cbs 10000000
+ qos lr inbound cir 80000 cbs 10000000
+#
+interface Ethernet0/0/10
+ description IDN-IFE-INTERNET ||
+ port link-type access
+ port default vlan 1872
+#
+interface Ethernet0/0/11
+ description UBA OAU ILE IFE | CERAGON IP 10
+ port link-type access
+ port default vlan 3042
+#
+interface Ethernet0/0/12
+ description ACCESS BANK  APOMU
+ port link-type trunk
+ port trunk allow-pass vlan 1486 1497 1640
+#
+interface Ethernet0/0/13
+ description NBC-ASEJIRE | OSUN-IKIRE-CAMPUS
+ port link-type trunk
+ port trunk allow-pass vlan 1493 1811 3202
+#
+interface Ethernet0/0/14
+ port link-type trunk
+ port trunk allow-pass vlan 400 3105
+#
+interface Ethernet0/0/15
+ description OAU IFE CDL-INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 1170 1500 1503
+ qos lr outbound cir 80000 cbs 10000000
+ qos lr inbound cir 80000 cbs 10000000
+#
+interface Ethernet0/0/16
+ description OAU IFE CDL-CERAGON MGT
+ port link-type access
+ port default vlan 1500
+#
+interface Ethernet0/0/17
+ description OSUN IPETU CAMPUS
+ port link-type access
+ port default vlan 1641
+#
+interface Ethernet0/0/18
+ description FCMB ILE IFE
+ port link-type trunk
+ port trunk allow-pass vlan 1492 2999
+#
+interface Ethernet0/0/19
+ description INFRA FOCUS OAU IFE
+ port link-type trunk
+ port trunk allow-pass vlan 1495 1633
+#
+interface Ethernet0/0/20
+ shutdown
+ port link-type access
+ port default vlan 3105
+#
+interface Ethernet0/0/21
+ description VDT ILE-IFE INTERNET
+ port link-type trunk
+ port trunk allow-pass vlan 3035 3042 3105 to 3106 3126 3202 3381
+#
+interface Ethernet0/0/22
+ description TECPOINT-IFE1 - IFE2-TRUNK
+ port link-type trunk
+ port trunk allow-pass vlan 1351 1873
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ description MANAGEMENT
+ port link-type access
+ port default vlan 1501
+#
+interface GigabitEthernet0/0/1
+ description OAU_IFE_500MbPs_FIBER
+ port link-type trunk
+ port trunk allow-pass vlan 804 1146 1501
+#
+interface GigabitEthernet0/0/2
+ description TRUNK TO DCN
+ port link-type trunk
+ port trunk allow-pass vlan 804 1115 1157 1170 1235 1351 1426 1486 1493 1495
+ port trunk allow-pass vlan 1497 to 1498 1500 to 1501 1632 to 1633 1640 to 1641 1811 1872 1993 2273 2423 2999
+ port trunk allow-pass vlan 3035 3042 3105 to 3106 3126 3202 3381
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+user-interface con 0
+ authentication-mode aaa
+ user privilege level 3
+user-interface vty 0 4
+ authentication-mode aaa
+ user privilege level 3
+#
+return
+[ENT-IFE-SW]

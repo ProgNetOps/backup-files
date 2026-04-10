@@ -1,0 +1,274 @@
+
+Password:
+IBEDC-HQ-RADIO>en
+Password:
+IBEDC-HQ-RADIO#sh int des
+Interface                      Status         Protocol Description
+Vl1                            admin down     down
+Vl804                          up             up
+Vl1501                         up             up
+Vl1754                         up             up
+Vl1758                         up             up
+Fa0/1                          down           down     TRUNK TO IBEDC LEASED LINES
+Fa0/2                          down           down     TRUNK TO IBEDC 100MB  INTERNET
+Fa0/3                          down           down     IBEDC-APN-SERVICE
+Fa0/4                          down           down
+Fa0/5                          down           down
+Fa0/6                          down           down
+Fa0/7                          down           down
+Fa0/8                          down           down
+Fa0/9                          down           down
+Fa0/10                         down           down
+Fa0/11                         down           down
+Fa0/12                         down           down
+Fa0/13                         down           down
+Fa0/14                         down           down
+Fa0/15                         down           down
+Fa0/16                         down           down
+Fa0/17                         down           down
+Fa0/18                         down           down
+Fa0/19                         down           down
+Fa0/20                         down           down
+Fa0/21                         down           down
+Fa0/22                         down           down
+Fa0/23                         down           down     MGT-PORT
+Fa0/24                         down           down     TRUNK TO GLOBACOM RADIO
+Gi0/1                          up             up       TRUNK TO GLOBACOM FIBER
+Gi0/2                          up             up       TRUNK TO IBEDC HQ IBADAN
+IBEDC-HQ-RADIO#dis cur
+% Ambiguous command:  "dis cur"
+IBEDC-HQ-RADIO#sh
+IBEDC-HQ-RADIO#show run
+Building configuration...
+
+Current configuration : 4690 bytes
+!
+! Last configuration change at 04:26:33 UTC Mon Aug 16 1993
+!
+version 15.0
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service unsupported-transceiver
+!
+hostname IBEDC-HQ-RADIO
+!
+boot-start-marker
+boot-end-marker
+!
+!
+username IBEDC-HQ
+no aaa new-model
+system mtu routing 1500
+vtp mode transparent
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-2227970432
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-2227970432
+ revocation-check none
+ rsakeypair TP-self-signed-2227970432
+!
+!
+crypto pki certificate chain TP-self-signed-2227970432
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 32323237 39373034 3332301E 170D3933 30333031 30303030
+  35375A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D32 32323739
+  37303433 3230819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  8100ED45 6732B3EF 15D24011 C74D53F4 934179A9 35750CAA A354F9AB 0FF32D5A
+  CE2B9D56 634F52B7 2B95C5A2 EC7162E9 ABA26E6C 8DF7F42D 9821A484 9F2E97F4
+  914E21E4 F70D186D 6135A401 7A6AE757 9D1FF2BD 4CAE1139 07168F46 1C95869D
+  A262F761 84C38597 281804D0 28C21FF3 62119F43 402DEE55 7D87B584 BBD36AAD
+  82430203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603
+  551D2304 18301680 14FC955E DE624718 F28C5FAB 9D13D007 AA7145A7 BD301D06
+  03551D0E 04160414 FC955EDE 624718F2 8C5FAB9D 13D007AA 7145A7BD 300D0609
+  2A864886 F70D0101 05050003 818100DA 634C5BBF D59BA478 E99B63C6 D3DDEA4D
+  D7A58A1A 6273B0A4 1B2291E8 D631D8CE 397C2B59 5F49BA1B 21F2715E 9114939B
+  B8D1EEAD 35E8DAF8 6FF04439 57E5F009 4004839F 768940EA 5042E22F EB27C3EA
+  FCC132F8 3D7D0D1D 71DDF8DF 39D133EE 81EAC3A1 A38B2F88 D80683A4 47FC6F6F
+  992EF619 03FFC759 B812727B A9075B
+        quit
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 10,100
+!
+vlan 804
+ name NEW-SWITCH-MGMT
+!
+vlan 1359
+ name IBEDC-INTERNET
+!
+vlan 1486
+ name CERAGON_RADIO_MGT
+!
+vlan 1501
+ name OLD-SWITCH-MGMT
+!
+vlan 1753
+ name IBEDC-VPLS
+!
+vlan 1754
+ name IBEDC_IKI_HUB
+!
+vlan 1755
+ name IBEDC_IKI-CENTER
+!
+vlan 1756
+ name IBEDC_EDE-STORE
+!
+vlan 1757
+ name IBEDC_EDE-HUB
+!
+vlan 1758
+ name IBEDC-ILORIN
+!
+vlan 1759
+ name IBEDC-BABOKO
+!
+vlan 1760
+ name IBEDC-OGBOMOSHO
+!
+vlan 1761
+ name IBEDC-NEW-BUSSA
+!
+vlan 1762
+ name IBEDC-OMUARAN
+!
+vlan 1763
+ name IBEDC-JEBBA
+!
+vlan 1764
+ name IBEDC-OFFA
+!
+vlan 3903
+ name IBEDC-APN
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+ description TRUNK TO IBEDC LEASED LINES
+ switchport trunk allowed vlan 1753-1764
+ switchport mode trunk
+!
+interface FastEthernet0/2
+ description TRUNK TO IBEDC 100MB  INTERNET
+ switchport access vlan 1359
+ switchport mode access
+!
+interface FastEthernet0/3
+ description IBEDC-APN-SERVICE
+ switchport access vlan 3903
+ switchport mode access
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+ description MGT-PORT
+ switchport access vlan 804
+ switchport mode access
+!
+interface FastEthernet0/24
+ description TRUNK TO GLOBACOM RADIO
+ switchport trunk allowed vlan 804,1359,1486,1501,1753-1764,3903
+ switchport mode trunk
+ speed 100
+ duplex full
+ spanning-tree cost 2000
+!
+interface GigabitEthernet0/1
+ description TRUNK TO GLOBACOM FIBER
+ switchport trunk allowed vlan 804,1359,1486,1501,1753-1764,3903
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ description TRUNK TO IBEDC HQ IBADAN
+ switchport trunk allowed vlan 1359,1486,1753-1764,3903
+ switchport mode trunk
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan804
+ ip address 10.248.246.93 255.255.255.192
+!
+interface Vlan1501
+ ip address 10.248.249.166 255.255.255.0
+!
+interface Vlan1754
+ ip address 10.10.10.1 255.255.255.0
+!
+interface Vlan1758
+ ip address 192.168.45.1 255.255.255.0
+!
+ip default-gateway 10.248.249.1
+ip http server
+ip http secure-server
+snmp-server community globacom RO
+!
+!
+line con 0
+ password Maranellq
+ login
+line vty 0 4
+ password Maranellq
+ login
+line vty 5 15
+ login
+!
+end
+
+IBEDC-HQ-RADIO#

@@ -1,0 +1,398 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
+     +--------------------------------------------------------------------+
+
+ ? 2026-04-08 ? ? 09:26.43 ? ? /home/mobaxterm ? telnet 10.248.249.105
+Connected to 10.248.249.105.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+GLO1-2960-LAG302-ASW>en
+Password:
+GLO1-2960-LAG302-ASW#sh int des
+Interface                      Status         Protocol Description
+Vl1                            admin down     down
+Vl992                          up             up
+Vl1403                         up             up
+Vl1408                         admin down     down
+Vl1501                         up             up
+Vl1502                         up             up
+Vl1560                         up             up
+Vl1682                         admin down     down
+Vl1683                         admin down     down
+Vl1822                         up             up
+Vl1912                         admin down     down
+Vl2173                         up             up
+Vl2255                         up             up
+Fa0/1                          up             up       LINKORGNET-SYNAGOGUE-IKOTUN[VLAN-1804]|5Mbps
+Fa0/2                          down           down     SWIFT-KADUNA-CERAGON-MGMT || RADIO-TO-KAD002
+Fa0/3                          admin down     down     VODACOM TALATA MAFARA
+Fa0/4                          down           down     SWIFT-KADUNA-LAGOS || RADIO-TO-KAD002
+Fa0/5                          down           down     TRUSTFUND PENSION LL(KADUNA-ABUJA)
+Fa0/6                          up             up       SENTIENT-NETWORKS-ISHERI-OLOFIN
+Fa0/7                          down           down     TRUSTFUND RADIO MGT
+Fa0/8                          down           down     WHO KADUNA INTERNET
+Fa0/9                          down           down     WHO KADUNA RADIO MGT
+Fa0/10                         down           down     DOD-KADUNA-LAG-VPN
+Fa0/11                         down           down     SCC_QUARRY_2MB_INTERNET
+Fa0/12                         down           down     ZETAWEB-MCN-KAD || 3MBPS
+Fa0/13                         down           down
+Fa0/14                         down           down
+Fa0/15                         down           down
+Fa0/16                         down           down
+Fa0/17                         down           down
+Fa0/18                         down           down     BA-OLAM-CROWN-FLOOR-MILL-KAD
+Fa0/19                         down           down
+Fa0/20                         down           down     MOBILE-OND-ADM
+Fa0/21                         down           down
+Fa0/22                         down           down     GLO MOBILE ADM SUPERVISION
+Fa0/23                         down           down
+Fa0/24                         down           down     VODACOM-CERAGON-MGMT
+Gi0/1                          up             up       GLO-DCN-MPLS-LINK || DCN-Port-GE2/0/9
+Gi0/2                          up             up       TRUNK-TO-BS_ENTERPRISE-LINKS
+GLO1-2960-LAG302-ASW#   sh run
+Building configuration...
+
+Current configuration : 6308 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+service unsupported-transceiver
+!
+hostname GLO1-2960-LAG302-ASW
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$l1Fc$0sajVSRq2esQeueNe8Gvo1
+!
+no aaa new-model
+system mtu routing 1960
+vtp mode transparent
+ip subnet-zero
+!
+!
+!
+!
+!
+!
+!
+!
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause small-frame
+errdisable recovery interval 30
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 805
+ name SWITCH-MGMT-SOUTH
+!
+vlan 864
+ name GLO-MOBILE-ADM-SUPERVISION
+!
+vlan 975
+ name vodacom
+!
+vlan 992
+ name vodacom-kaduna
+!
+vlan 1403
+ name VODACOM_TALATAMAFARA
+!
+vlan 1408
+ name voda56-donguwar
+!
+vlan 1500
+ name ceragon-mgmt
+!
+vlan 1501
+ name asw-mgmt
+!
+vlan 1502
+ name NEW_RADIO_MGT_VLAN
+!
+vlan 1503
+ name NERA_MGT
+!
+vlan 1560
+ name SCC_QUARRY
+!
+vlan 1682
+ name swift-kad
+!
+vlan 1683
+ name TRUSTFUND_PENSION
+!
+vlan 1776
+ name SPECTRANET-IDIMU
+!
+vlan 1804
+ name LINKORGNET-SYNAGOGUE
+!
+vlan 1822
+ name zetaweb-kaduna
+!
+vlan 1862
+!
+vlan 1901
+ name SWIFT-IKOTUN
+!
+vlan 1912
+!
+vlan 2065
+ name TPGS_AFL05
+!
+vlan 2173
+ name BA-OLAM-CROWN-FLOOR-MILL-KAD
+!
+vlan 2255
+ name WHO_KADUNA_INTERNET
+!
+vlan 3128
+ name SENTIENT-ISHERI-OLOFIN
+!
+vlan 3919
+ name LAFRED
+lldp run
+!
+!
+!
+interface FastEthernet0/1
+ description LINKORGNET-SYNAGOGUE-IKOTUN[VLAN-1804]|5Mbps
+ switchport access vlan 1804
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/2
+ description SWIFT-KADUNA-CERAGON-MGMT || RADIO-TO-KAD002
+ switchport access vlan 1500
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/3
+ description VODACOM TALATA MAFARA
+ switchport access vlan 1403
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet0/4
+ description SWIFT-KADUNA-LAGOS || RADIO-TO-KAD002
+ switchport access vlan 1682
+ switchport mode access
+ load-interval 30
+ spanning-tree portfast
+!
+interface FastEthernet0/5
+ description TRUSTFUND PENSION LL(KADUNA-ABUJA)
+ switchport access vlan 1683
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/6
+ description SENTIENT-NETWORKS-ISHERI-OLOFIN
+ switchport access vlan 3128
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/7
+ description TRUSTFUND RADIO MGT
+ switchport access vlan 1502
+ switchport mode access
+!
+interface FastEthernet0/8
+ description WHO KADUNA INTERNET
+ switchport access vlan 2255
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/9
+ description WHO KADUNA RADIO MGT
+ switchport access vlan 1502
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/10
+ description DOD-KADUNA-LAG-VPN
+ switchport access vlan 1912
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/11
+ description SCC_QUARRY_2MB_INTERNET
+ switchport trunk allowed vlan 1503,1560
+ switchport mode trunk
+!
+interface FastEthernet0/12
+ description ZETAWEB-MCN-KAD || 3MBPS
+ switchport trunk allowed vlan 1503,1822
+ switchport mode trunk
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+ description BA-OLAM-CROWN-FLOOR-MILL-KAD
+ switchport access vlan 2173
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+ description MOBILE-OND-ADM
+ switchport mode trunk
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+ description GLO MOBILE ADM SUPERVISION
+ switchport trunk allowed vlan 864
+ switchport mode trunk
+!
+interface FastEthernet0/23
+ switchport access vlan 1501
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/24
+ description VODACOM-CERAGON-MGMT
+ switchport access vlan 1500
+ switchport mode access
+ speed 100
+ duplex full
+ spanning-tree portfast
+!
+interface GigabitEthernet0/1
+ description GLO-DCN-MPLS-LINK || DCN-Port-GE2/0/9
+ switchport mode trunk
+ storm-control broadcast level 50.00
+ storm-control multicast level 50.00
+!
+interface GigabitEthernet0/2
+ description TRUNK-TO-BS_ENTERPRISE-LINKS
+ switchport trunk allowed vlan 992,1500,1776,1804,1901,2065,3128,3919
+ switchport mode trunk
+!
+interface Vlan1
+ no ip address
+ no ip route-cache
+ shutdown
+!
+interface Vlan992
+ ip address 10.200.100.3 255.255.255.248
+ no ip route-cache
+!
+interface Vlan1403
+ ip address 10.248.240.6 255.255.255.248
+ no ip route-cache
+!
+interface Vlan1408
+ ip address 172.16.200.150 255.255.255.248
+ no ip route-cache
+ shutdown
+!
+interface Vlan1501
+ ip address 10.248.249.105 255.255.255.0
+ no ip route-cache
+!
+interface Vlan1502
+ ip address 10.155.184.5 255.255.255.0
+ no ip route-cache
+!
+interface Vlan1560
+ no ip address
+ no ip route-cache
+!
+interface Vlan1682
+ ip address 172.31.31.10 255.255.255.248
+ no ip route-cache
+ shutdown
+!
+interface Vlan1683
+ ip address 172.16.30.1 255.255.255.248
+ no ip route-cache
+ shutdown
+!
+interface Vlan1822
+ ip address 172.16.29.2 255.255.255.248
+ no ip route-cache
+!
+interface Vlan1912
+ ip address 10.248.242.142 255.255.255.248
+ no ip route-cache
+ shutdown
+!
+interface Vlan2173
+ no ip address
+ no ip route-cache
+!
+interface Vlan2255
+ no ip address
+ no ip route-cache
+!
+ip default-gateway 10.248.249.1
+ip http server
+snmp-server community globacom RO
+snmp-server community Globacom@123 RO
+!
+control-plane
+!
+!
+line con 0
+ password 7 0029121405550E0A032E
+ logging synchronous
+ login
+line vty 0 4
+ password 7 0029121405550E0A032E
+ logging synchronous
+ login
+line vty 5 15
+ password 7 0029121405550E0A032E
+ logging synchronous
+ login
+!
+end
+
+GLO1-2960-LAG302-ASW#

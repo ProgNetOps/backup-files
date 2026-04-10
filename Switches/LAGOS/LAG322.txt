@@ -1,0 +1,108 @@
+<ENT-SW-LAG322>DIS current-configuration
+#
+!Software Version V100R006C03
+ sysname ENT-SW-LAG322
+#
+ vlan batch 805 3126
+#
+ http server load flash:/s3300-28tp-ei-v100r006c03.web.zip
+#
+vlan 805
+ description SWITCH MANAGEMENT
+vlan 3126
+ description SAFRON HOTEL GRA IKEJA
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %$%$>q+|96LR8KDR[NGmg12QS\SJ%$%$
+ local-user admin privilege level 15
+ local-user admin service-type web http
+ local-user bsnoc password cipher %$%${/LFLis0+<dlI|.cS[/OS{ri%$%$
+ local-user bsnoc privilege level 15
+#
+interface Vlanif1
+ ip address 192.168.1.253 255.255.255.0
+#
+interface Vlanif805
+ ip address 10.248.246.44 255.255.255.192
+#
+interface Ethernet0/0/1
+ description SAFRON HOTEL GRA IKEJA
+ port link-type access
+ port default vlan 3126
+#
+interface Ethernet0/0/2
+#
+interface Ethernet0/0/3
+#
+interface Ethernet0/0/4
+#
+interface Ethernet0/0/5
+#
+interface Ethernet0/0/6
+#
+interface Ethernet0/0/7
+#
+interface Ethernet0/0/8
+#
+interface Ethernet0/0/9
+#
+interface Ethernet0/0/10
+#
+interface Ethernet0/0/11
+#
+interface Ethernet0/0/12
+#
+interface Ethernet0/0/13
+#
+interface Ethernet0/0/14
+#
+interface Ethernet0/0/15
+#
+interface Ethernet0/0/16
+#
+interface Ethernet0/0/17
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ description SWITCH MANAGEMENT TEST PORT
+ port link-type access
+ port default vlan 805
+#
+interface GigabitEthernet0/0/1
+ description LAG322-ATN950D-CPE-GE0/5/6
+ port link-type trunk
+ port trunk allow-pass vlan 805 3126
+#
+interface GigabitEthernet0/0/2
+#
+interface GigabitEthernet0/0/3
+#
+interface GigabitEthernet0/0/4
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.1
+#
+user-interface con 0
+ authentication-mode aaa
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+<ENT-SW-LAG322>

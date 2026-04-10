@@ -1,5 +1,5 @@
      +--------------------------------------------------------------------+
-     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
      ¦              (X server, SSH client and network tools)              ¦
      ¦                                                                    ¦
      ¦ ? Your computer drives are accessible through the /drives path     ¦
@@ -7,24 +7,14 @@
      ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
      ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
      ¦                                                                    ¦
-     ¦                     Registered to RT (1 user)                      ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
      +--------------------------------------------------------------------+
 
- ? 2025-11-13 ? ? 11:50.00 ? ? /home/mobaxterm ? telnet 10.248.246.105
-Connected to 10.248.246.105.
-Entering character mode
-Escape character is '^]'.
 
-
-User Access Verification
-
-Password:
-MSC2_3750>en
-Password:
 MSC2_3750#sh run
 Building configuration...
 
-Current configuration : 12449 bytes
+Current configuration : 12983 bytes
 !
 version 12.2
 no service pad
@@ -70,10 +60,747 @@ crypto pki certificate chain TP-self-signed-1634166656
   EDD8F3C8 1E477303 9C535E6C 2CA90EA5 BCB34B72 55813CEC C87305A4 DFB29351
   9EC6B3EF 63933A89 BE05CB7C 0D23CEAF 8208BD1E 459A479C EA82A6BF BCB85C99
   68DD0203 010001A3 6A306830 0F060355 1D130101 FF040530 030101FF 30150603
+  551D1104 0E300C82 0A4D5343 325F3337 35302E30 1F060355 1D230418 30168014
+  53F17BE5 2E51D72F CC7C5F03 610F190E 4B688012 301D0603 551D0E04 16041453
+  F17BE52E 51D72FCC 7C5F0361 0F190E4B 68801230 0D06092A 864886F7 0D010104
+  05000381 8100160E A10B9CB5 CF3B1A4A 1B3CD420 7432A649 190BE9FC A5A06B7D
+  BC877D26 58A27337 98E3944A 060944DA 8892ACEB 69F1C232 665C351A 467E8A5F
+  883EA45A 560AA753 299F4651 FA62D89F 9B54AEA1 273BC22D 6C972955 AB64F643
+  DB5A22FE 3BE0A7B8 BCD39ED5 2438A7F5 F637C7E9 267CE21C D46E3AF2 51B41DEC
+  CBCC309A 21CD
+  quit
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+vlan 91
+ name DCN_VLAN
+!
+vlan 155
+ name GLO1_MGT
+!
+vlan 444
+ name INFRA-FOCUS
+!
+vlan 501
+ name HERITAGE-OJOTA-MTN
+!
+vlan 509
+ name HERITAGE-BANK-LL
+!
+vlan 560
+!
+vlan 791
+ name EMPIRIX-PROBE
+!
+vlan 804
+ name MGNT
+!
+vlan 1099
+ name STERLING-HEALTH
+!
+vlan 1115
+ name GTBANK-VPLS
+!
+vlan 1121
+ name SW-MGT
+!
+vlan 1124
+ name VIRGIN-ATLANTIC-NEW
+!
+vlan 1136
+ name SWIFTTALK-MGT
+!
+vlan 1281
+ name Heritage_Umuahia
+!
+vlan 1282
+ name VIC_LAWRENCE(LIRS)
+!
+vlan 1290
+ name BNP-MAESTRO
+!
+vlan 1363
+ name AACSL_ACCOUNTANTS
+!
+vlan 1372
+ name TPGS-IKEJA-005
+!
+vlan 1396
+ name TPGS_OREGUN_LL
+!
+vlan 1400
+ name ISN_IKEJA
+!
+vlan 1416
+ name TPGS_ALAUSA
+!
+vlan 1417
+ name TPGS_BANK_ANTHONY
+!
+vlan 1422
+ name IO-Tech-002-LAG901
+!
+vlan 1489
+ name CERAGON-MGT
+!
+vlan 1492
+ name BS-NERA-4-MGT
+!
+vlan 1495
+ name BS-NERA-2-MGT
+!
+vlan 1496
+ name CERAGON_MGT
+!
+vlan 1497
+ name NERA-MANAGEMENT
+!
+vlan 1498
+ name BS-CERAGON-MGT
+!
+vlan 1500
+ name CERAGON-RADIO-MGMT
+!
+vlan 1501
+ name NERA_MGT
+!
+vlan 1502
+ name new_nera_mgt
+!
+vlan 1503
+ name nera-mgmt
+!
+vlan 1504
+ name IOTECH-MGT
+!
+vlan 1510
+ name MULTICHOICE-SIP1
+!
+vlan 1511
+ name MULTICHOICE-SIP2
+!
+vlan 1541
+ name STERCOM
+!
+vlan 1616
+ name isn-ikeja-new
+!
+vlan 1617
+ name ISN-GRA-IKEJA-2
+!
+vlan 1620
+ name ISN-GRA-IKEJA_2
+!
+vlan 1633
+ name OAU-ILE-IFE
+!
+vlan 1634
+ name FED-UNI-AGRIC-FUNAAB
+!
+vlan 1635
+ name BENUE-STATE-MAKURDI
+!
+vlan 1636
+ name UNI-JOS
+!
+vlan 1638
+ name INFRA-UNIPORT
+!
+vlan 1640
+ name ACCESS-VPLS
+!
+vlan 1745
+ name NONAME
+!
+vlan 1747
+ name RITEFOODS-OPEBI
+!
+vlan 1749
+ name TPGS-OJOTA-LEASED-LL
+!
+vlan 1751
+ name SOKOTO-STATE-UNIV
+!
+vlan 1752
+ name INFRA-UNI-BEN
+!
+vlan 1753
+ name BAYERO-UNI-KANO
+!
+vlan 1754
+ name INFRA-FOCUS-ONDO-MED
+!
+vlan 1774
+ name ipexpress
+!
+vlan 1776
+ name TPGS-OJOTA
+!
+vlan 1777
+ name TPGS_OREGUN_INTERNET
+!
+vlan 1778
+ name 9JA_MORPLEX-200M-INT
+!
+vlan 1779
+ name TPGS-MARYLAND-2
+!
+vlan 1823
+ name TECPOINT_BRISCOE
+!
+vlan 1826
+ name TECPOINT-IKEJA-BENIN
+!
+vlan 1853
+ name NEWS-CENTRAL-AFRICA
+!
+vlan 1871
+ name ISL_IKEJA_20MB_INTERNET
+!
+vlan 1872
+ name FBN-CAPITAL-INTERNET
+!
+vlan 1873
+ name Gloworld_Allen
+!
+vlan 1874
+ name GLOSHOP_IJEBU
+!
+vlan 1875
+ name STANBIC-IBTC-VTU
+!
+vlan 1876
+ name WINNERS-GOLDEN-BET-NIG
+!
+vlan 1899
+ name SERVETECH-INTERNET
+!
+vlan 1996
+ name GLOWORLD-OYO
+!
+vlan 1997
+ name Gloworld_Alagbaka
+!
+vlan 1998
+ name Gloworld_Lafe
+!
+vlan 1999
+ name Gloworld_Ondo
+!
+vlan 2173
+ name GLOSHOP-IKORODU
+!
+vlan 2174
+ name GLOSHOP-OTA
+!
+vlan 2175
+ name GLOWORLD-ILORIN
+!
+vlan 2207
+ name TELNET-LAGOS-BENIN
+!
+vlan 2423
+ name STANBIC-IBTC-LL
+!
+vlan 2431
+ name WatchTower_Oregun
+!
+vlan 2468
+ name SEVEN_UP_IKEJA_MPLS
+!
+vlan 2771
+ name PROVIDUS-BANK-LEKKI
+!
+vlan 2825
+ name IGI-IKEJA
+!
+vlan 2895
+ name IPEXPRESS-BT-HEALTH
+!
+vlan 2916
+ name GLOWORLD-AGO-IWOYE
+!
+vlan 2920
+ name GLOWORLD-OSOGBO
+!
+vlan 2922
+ name GLOWORLD-SANGO-IBD
+!
+vlan 2923
+ name GLOWORLD-ABEOKUTA
+!
+vlan 2924
+ name GLOWORLD-ADO
+!
+vlan 2964
+ name INFRA-FOCUS-UNI-UYO
+!
+vlan 2965
+ name INFRA-FOCUS-UNN
+!
+vlan 2966
+ name INFRA-FOCUS-UNIPORT
+!
+vlan 2967
+ name INFRA-FO-FED-KEBBI
+!
+vlan 2968
+ name INFRA-FOCUS-FUTO
+!
+vlan 2969
+ name INFRA-FOCUS-UNI-YOLA
+!
+vlan 2970
+ name INFRA-FOCUS-NDA
+!
+vlan 2971
+ name INFRA-REDEEMERS-EDE
+!
+vlan 2999
+ name FCMB-VPLS
+!
+vlan 3034
+ name STERLING-VPLS
+!
+vlan 3111
+ name StanbicPension1
+!
+vlan 3112
+ name StanbicPension2
+!
+vlan 3113
+ name StanbicPension3
+!
+vlan 3114
+ name StanbicPension4
+!
+vlan 3115
+ name StanbicPension5
+!
+vlan 3161
+ name SHELL-IKEJA-TO-MARINA-LL
+!
+vlan 3410
+ name HERITAGE-KADUNA
+!
+vlan 3411
+ name HERITAGE-JOS-2
+!
+vlan 3413
+ name HERITAGE-MINNA
+!
+vlan 3414
+ name HERITAGE-SOKOTO
+!
+vlan 3416
+ name HERITAGE-ILORIN
+!
+vlan 3418
+ name HERITAGE-ABEOKUTA
+!
+vlan 3421
+ name HERITAGE-AKURE
+!
+vlan 3423
+ name HERITAGE-AKURE-SECRETARIAT
+!
+vlan 3426
+ name HERITAGE-AJASIN
+!
+vlan 3428
+ name HERITAGE-FUTA
+!
+vlan 3429
+ name HERITAGE-ONDO-STR.
+!
+vlan 3430
+ name HERITAGE-OKITIPUPA
+!
+vlan 3431
+ name HERITAGE-OWO
+!
+vlan 3435
+ name HERITAGE-MUSHIN
+!
+vlan 3437
+ name GLOSHOP-IBADAN-RING
+!
+vlan 3438
+ name GLOSHOP-CHALLENGE
+!
+vlan 3474
+ name NGC_IKEJA
+!
+vlan 3477
+ name NASCON-NAT-SALT-CO
+!
+vlan 3832
+ name ORANGE-VISA-OJOTA
+!
+vlan 3853
+ name Orange-Vir-Atl
+!
+lldp run
+!
+!
+interface FastEthernet0
+ no ip address
+!
+interface GigabitEthernet1/0/1
+ description MULTI-CHOICE-SIP-TRUNK
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1492,1510,1511
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/2
+ description STERCOM
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1492,1541
+ switchport mode trunk
+ shutdown
+!
+interface GigabitEthernet1/0/3
+ description NATIONAL SALT COMPANY OF NIG (NASCON) | 20MB IOTECH
+ switchport access vlan 3477
+ switchport mode access
+!
+interface GigabitEthernet1/0/4
+ description IPEXPRESS-INTERNET || OREGUN-80Mbps
+ switchport access vlan 1774
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/5
+ description JEHOVA-WatchTower_Oregun-TERMINATED
+ switchport access vlan 2431
+ switchport mode access
+ shutdown
+ speed 100
+ duplex full
+!
+interface GigabitEthernet1/0/6
+ description TPGS OJOTA-3 LEASED LINE
+ switchport access vlan 1749
+ switchport mode access
+!
+interface GigabitEthernet1/0/7
+ description ISN-IKEJA
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1500,1503,1616,1617,1871
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/8
+ description RADIO_LINK_TO_MTN_OJOTA
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 155,444,501,509,1121,1281,1501,1872,1875,2423
+ switchport trunk allowed vlan add 2523,3111-3115,3832
+ switchport mode trunk
+ spanning-tree cost 100000
+!
+interface GigabitEthernet1/0/9
+ description TPGS-MARYLAND-2 45MB INTERNET
+ switchport access vlan 1779
+ switchport mode access
+!
+interface GigabitEthernet1/0/10
+ description TPGS-IKEJA-005 100MB INTERNET
+ switchport access vlan 1372
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/0/11
+ description 9JA_MORPLEX-STM1-INT-RADIO-BACKUP
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1489,1778
+ switchport mode trunk
+ duplex full
+!
+interface GigabitEthernet1/0/12
+ description TPGS_ALAUSA
+ switchport access vlan 1416
+ switchport mode access
+!
+interface GigabitEthernet1/0/13
+ description # ORANGE-VIRGIN-ATLANTIC-NEW #
+ switchport access vlan 3853
+ switchport trunk encapsulation dot1q
+ switchport mode dot1q-tunnel
+ shutdown
+ no cdp enable
+!
+interface GigabitEthernet1/0/14
+ description TPGS_BANK_ANTHONY 10M INTERNET
+ switchport access vlan 1417
+ switchport mode access
+!
+interface GigabitEthernet1/0/15
+ description TPGS_OREGUN_LL-INTERNET
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1396,1777
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/16
+ description IPEXPRESS_BT-HEALTH-LASUTH-SAKA18|VLAN2895|85M
+ location civic-location-id none
+ switchport access vlan 2895
+ switchport mode access
+!
+interface GigabitEthernet1/0/17
+ description VIRGIN-ATLANTIC-TEST
+ switchport access vlan 3853
+ switchport trunk encapsulation dot1q
+ switchport mode dot1q-tunnel
+ no cdp enable
+!
+interface GigabitEthernet1/0/18
+ description AACSL ACCOUNTANTS
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1363,1489
+ switchport mode trunk
+ speed 1000
+ duplex full
+!
+interface GigabitEthernet1/0/19
+ description NEWS-CENTRAL-AFRICA-TV
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1489,1853
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/20
+ description IOTECH-002-PB-LAG901 |30M
+ switchport access vlan 1422
+ switchport mode access
+!
+interface GigabitEthernet1/0/21
+ description ISN_GRA_IKEJA-2[VL1620]|150Mbps
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1500,1620
+ switchport mode trunk
+ duplex full
+!
+interface GigabitEthernet1/0/22
+ description IGI-IKEJA-INT | 10M
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1136,2825
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/23
+ description TPGS-MARYLAND-2  60M INTERNET
+ switchport access vlan 1779
+ switchport mode access
+!
+interface GigabitEthernet1/0/24
+ description RITEFOODS-OPEBI[VLAN1745]| 75Mbps
+ switchport access vlan 1747
+ switchport mode access
+!
+interface GigabitEthernet1/1/1
+ description TRUNK TO DCN || PE-C-GE-2/0/4
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ speed nonegotiate
+!
+interface GigabitEthernet1/1/2
+ description UPLINK_TO_HUAWEI_S2300_SW_GE0/0/1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ speed nonegotiate
+!
+interface GigabitEthernet1/1/3
+ description FIBRE_LINK_TO_MTN_OJOTA
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 155,444,501,509,804,1121,1281,1501,1872,1875
+ switchport trunk allowed vlan add 2423,2523,3111-3115,3832
+ switchport mode trunk
+ speed nonegotiate
+!
+interface GigabitEthernet1/1/4
+ description STANBIC-MTN-AJAO_ESTATE-UPLINK-FIBER
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 2423
+ speed nonegotiate
+!
+interface TenGigabitEthernet1/1/1
+!
+interface TenGigabitEthernet1/1/2
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan155
+ ip address 10.247.248.50 255.255.255.248
+!
+interface Vlan804
+ ip address 10.248.246.105 255.255.255.192
+!
+interface Vlan1121
+ ip address 10.241.9.3 255.255.255.0
+!
+interface Vlan1124
+ ip address 11.11.11.9 255.255.255.0
+!
+interface Vlan1363
+ no ip address
+!
+interface Vlan1489
+ ip address 10.155.205.100 255.255.255.0
+!
+interface Vlan1492
+ ip address 10.155.197.133 255.255.255.0
+!
+interface Vlan1510
+ ip address 100.100.104.89 255.255.255.252
+!
+interface Vlan1511
+ ip address 100.100.104.93 255.255.255.252
+!
+interface Vlan1635
+ ip address 10.10.100.1 255.255.255.0
+!
+interface Vlan1671
+ no ip address
+!
+interface Vlan1751
+ ip address 192.168.3.1 255.255.255.0
+!
+interface Vlan1752
+ ip address 192.168.15.1 255.255.255.0
+!
+interface Vlan1774
+ ip address 41.203.77.12 255.255.255.248
+ shutdown
+!
+interface Vlan1777
+ no ip address
+!
+interface Vlan1778
+ ip address 129.205.120.85 255.255.255.240
+!
+interface Vlan1823
+ ip address 10.10.1.209 255.255.255.0
+!
+interface Vlan1826
+ no ip address
+!
+interface Vlan1874
+ no ip address
+!
+interface Vlan2423
+ ip address 172.30.30.246 255.255.255.0
+!
+interface Vlan2966
+ no ip address
+!
+interface Vlan2999
+ ip address 172.22.6.250 255.255.255.0
+!
+interface Vlan3111
+ ip address 4.4.4.4 255.255.255.0
+!
+interface Vlan3112
+ no ip address
+!
+interface Vlan3113
+ no ip address
+!
+interface Vlan3114
+ no ip address
+!
+interface Vlan3115
+ ip address 10.200.200.2 255.255.255.0
+!
+interface Vlan3832
+ ip address 1.11.11.3 255.255.255.0
+!
+interface Vlan3853
+ ip address 10.10.10.10 255.255.255.0
+!
+ip default-gateway 10.248.246.65
+ip classless
+ip http server
+ip http secure-server
+!
+tftp-server nvram:startup-config
+snmp-server community globacom RO
+!
+!
+line con 0
+ password Maranellq
+ login
+line vty 0 4
+ password Maranellq
+ login
+line vty 5 15
+ login
+!
+end
 
-MSC2_3750#h int des
-help int des
-     ^
-% Invalid input detected at '^' marker.
-
+MSC2_3750#         sh int des
+Interface                      Status         Protocol Description
+Vl1                            up             up
+Vl155                          up             up
+Vl804                          up             up
+Vl1121                         up             up
+Vl1124                         up             up
+Vl1363                         up             up
+Vl1489                         up             up
+Vl1492                         up             up
+Vl1510                         up             up
+Vl1511                         up             up
+Vl1635                         up             up
+Vl1671                         down           down
+Vl1751                         up             up
+Vl1752                         up             up
+Vl1774                         admin down     down
+Vl1777                         up             up
+Vl1778                         up             up
+Vl1823                         up             up
+Vl1826                         up             up
+Vl1874                         up             up
+Vl2423                         up             up
+Vl2966                         up             up
+Vl2999                         up             up
+Vl3111                         up             up
+Vl3112                         up             up
+Vl3113                         up             up
+Vl3114                         up             up
+Vl3115                         up             up
+Vl3832                         up             up
+Vl3853                         up             up
+Fa0                            down           down
+Gi1/0/1                        up             up       MULTI-CHOICE-SIP-TRUNK
+Gi1/0/2                        admin down     down     STERCOM
+Gi1/0/3                        up             up       NATIONAL SALT COMPANY OF NIG (NASCON) | 20MB IOTECH
+Gi1/0/4                        up             up       IPEXPRESS-INTERNET || OREGUN-80Mbps
+Gi1/0/5                        admin down     down     JEHOVA-WatchTower_Oregun-TERMINATED
+Gi1/0/6                        down           down     TPGS OJOTA-3 LEASED LINE
+Gi1/0/7                        up             up       ISN-IKEJA
+Gi1/0/8                        down           down     RADIO_LINK_TO_MTN_OJOTA
+Gi1/0/9                        down           down     TPGS-MARYLAND-2 45MB INTERNET
+Gi1/0/10                       admin down     down     TPGS-IKEJA-005 100MB INTERNET
+Gi1/0/11                       up             up       9JA_MORPLEX-STM1-INT-RADIO-BACKUP
+Gi1/0/12                       up             up       TPGS_ALAUSA
+Gi1/0/13                       admin down     down     # ORANGE-VIRGIN-ATLANTIC-NEW #
+Gi1/0/14                       up             up       TPGS_BANK_ANTHONY 10M INTERNET
+Gi1/0/15                       down           down     TPGS_OREGUN_LL-INTERNET
+Gi1/0/16                       up             up       IPEXPRESS_BT-HEALTH-LASUTH-SAKA18|VLAN2895|85M
+Gi1/0/17                       up             up       VIRGIN-ATLANTIC-TEST
+Gi1/0/18                       up             up       AACSL ACCOUNTANTS
+Gi1/0/19                       up             up       NEWS-CENTRAL-AFRICA-TV
+Gi1/0/20                       down           down     IOTECH-002-PB-LAG901 |30M
+Gi1/0/21                       up             up       ISN_GRA_IKEJA-2[VL1620]|150Mbps
+Gi1/0/22                       down           down     IGI-IKEJA-INT | 10M
+Gi1/0/23                       up             up       TPGS-MARYLAND-2  60M INTERNET
+Gi1/0/24                       up             up       RITEFOODS-OPEBI[VLAN1745]| 75Mbps
+Gi1/1/1                        up             up       TRUNK TO DCN || PE-C-GE-2/0/4
+Gi1/1/2                        up             up       UPLINK_TO_HUAWEI_S2300_SW_GE0/0/1
+Gi1/1/3                        up             up       FIBRE_LINK_TO_MTN_OJOTA
+Gi1/1/4                        down           down     STANBIC-MTN-AJAO_ESTATE-UPLINK-FIBER
+Te1/1/1                        down           down
+Te1/1/2                        down           down
 MSC2_3750#

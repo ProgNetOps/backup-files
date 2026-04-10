@@ -1,5 +1,5 @@
      +--------------------------------------------------------------------+
-     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
      ¦              (X server, SSH client and network tools)              ¦
      ¦                                                                    ¦
      ¦ ? Your computer drives are accessible through the /drives path     ¦
@@ -7,10 +7,10 @@
      ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
      ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
      ¦                                                                    ¦
-     ¦                     Registered to RT (1 user)                      ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
      +--------------------------------------------------------------------+
 
- ? 2025-11-13 ? ? 10:19.24 ? ? /home/mobaxterm ? telnet 10.248.246.4
+ ? 2026-04-08 ? ? 08:59.59 ? ? /home/mobaxterm ? telnet 10.248.246.4
 Connected to 10.248.246.4.
 Entering character mode
 Escape character is '^]'.
@@ -71,7 +71,7 @@ Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
                                                /0/23 Interface
 Eth0/0/24                     down    down     testport
 GE0/0/1                       up      up       LINK_TO_DCN_MPLS UPE GE1/0/5
-GE0/0/2                       up      up       JOTNA LTD INTERNET | 120MB| FIBER
+GE0/0/2                       down    down     JOTNA LTD INTERNET | 120MB| FIBER
 NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
                                                erface
 Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
@@ -88,7 +88,7 @@ Vlanif1996                    up      down     HUAWEI, Quidway Series, Vlanif199
                                                6 Interface
 Vlanif3034                    up      up       HUAWEI, Quidway Series, Vlanif303
                                                4 Interface
-[BS-LAG-020-AJEGUNLE]    dis cur
+[BS-LAG-020-AJEGUNLE]       dis cur
 #
 !Software Version V100R006C05
  sysname BS-LAG-020-AJEGUNLE
@@ -99,6 +99,8 @@ Vlanif3034                    up      up       HUAWEI, Quidway Series, Vlanif303
 #
  stp mode stp
  stp instance 0 root primary
+#
+lldp enable
 #
 vlan 215
  description FIRS-ORILE
@@ -163,8 +165,6 @@ aaa
  domain default_admin
  local-user ben password cipher %@%@X)`sH4Rg6R{,JY/-2m3SWCB{%@%@
  local-user ben privilege level 3
- local-user ope password cipher %@%@:w9'71,oe*H;i}.HkUjEWC2'%@%@
- local-user ope privilege level 3
  local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
  local-user admin service-type http
  local-user bsnoc password cipher %@%@0$'=B<quSKYJ.g--SMZ/WC~r%@%@

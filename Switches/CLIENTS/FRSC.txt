@@ -1,0 +1,278 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
+     +--------------------------------------------------------------------+
+
+ ? 2026-04-08 ? ? 11:07.32 ? ? /home/mobaxterm ? telnet 10.248.246.227
+Connected to 10.248.246.227.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+Password:
+GLO-SW@-FRSC-VASTECH-ABUJA>en
+Password:
+GLO-SW@-FRSC-VASTECH-ABUJA#sh int des
+Interface                      Status         Protocol Description
+Vl1                            up             down
+Vl802                          up             up
+Vl1000                         up             up
+Vl1116                         up             up
+Vl1929                         up             up
+Fa0/1                          down           down     TRUNK CONNECTION TO FRSC BRANCH  ROUTER
+Fa0/2                          up             up       VAS Technologies Ltd  APN POC
+Fa0/3                          down           down
+Fa0/4                          down           down
+Fa0/5                          down           down
+Fa0/6                          down           down
+Fa0/7                          down           down
+Fa0/8                          down           down
+Fa0/9                          down           down
+Fa0/10                         down           down
+Fa0/11                         down           down
+Fa0/12                         down           down
+Fa0/13                         down           down     TRUNK CONNECTION TO FRSC BRANCH  ROUTER
+Fa0/14                         down           down
+Fa0/15                         down           down
+Fa0/16                         down           down
+Fa0/17                         down           down
+Fa0/18                         down           down
+Fa0/19                         down           down
+Fa0/20                         down           down
+Fa0/21                         down           down
+Fa0/22                         down           down
+Fa0/23                         down           down
+Fa0/24                         down           down
+Gi0/1                          up             up       TRUNK CONNECTION TO GLO-CERAGON-IP-20 RADIO
+Gi0/2                          down           down     CONNECTION FRSC INTERNET   ROUTER
+GLO-SW@-FRSC-VASTECH-ABUJA# sh run
+Building configuration...
+
+Current configuration : 4687 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname GLO-SW@-FRSC-VASTECH-ABUJA
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$AQQH$nnsscK/qAoVkZOw.Y8TAn/
+!
+!
+!
+no aaa new-model
+system mtu routing 1500
+vtp mode transparent
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-83178240
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-83178240
+ revocation-check none
+ rsakeypair TP-self-signed-83178240
+!
+!
+crypto pki certificate chain TP-self-signed-83178240
+ certificate self-signed 01
+  3082023C 308201A5 A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  2F312D30 2B060355 04031324 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 38333137 38323430 301E170D 39333033 30313030 30313536
+  5A170D32 30303130 31303030 3030305A 302F312D 302B0603 55040313 24494F53
+  2D53656C 662D5369 676E6564 2D436572 74696669 63617465 2D383331 37383234
+  3030819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 8100B1CF
+  B4687047 CD1DBA0A 6D85E80E EA349AC9 5148820C D74FDF5F 5CB6BE49 AD681CF2
+  92174856 E6EBB97C 2AD4F8D1 0A359142 560AAA11 FD18503B 50720921 D40305A3
+  F56F22D0 BD0F2880 0EBAB6B1 9C0079B9 BD5E09DB A0C4C694 BE1B8234 56EA27B8
+  91267333 566BB045 5D16A8F3 99CBBCAD 140C9A3A 7894A529 2C743BA7 CD750203
+  010001A3 68306630 0F060355 1D130101 FF040530 030101FF 30130603 551D1104
+  0C300A82 08465253 435F4851 2E301F06 03551D23 04183016 80144606 937E2789
+  B674E157 619487ED 87FC3937 1574301D 0603551D 0E041604 14460693 7E2789B6
+  74E15761 9487ED87 FC393715 74300D06 092A8648 86F70D01 01040500 03818100
+  1962E993 00A1C0A8 B4E8380E 5002878A C56B5DB8 CCE67A21 46F6B993 4CDC2744
+  A3531A33 B3DF16B2 E5A4EF3F 6398EE2C D8A1826A 674CC84C C743E777 4718F37B
+  91CDED60 FECCC9D9 090025F4 A76D6F1A DED1954E 28A45A1C DF1C2346 0613C449
+  375215CD 9D548C8B E7F7B6BD AA949CDA 6CD4D5F4 BBF5B73C 513A49BC E3FFF802
+  quit
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 802
+ name BS_SW_MGT
+!
+vlan 1000
+ name test
+!
+vlan 1116
+ name VAS-Technologies
+!
+vlan 1270
+ name FRSC-INTERNET
+!
+vlan 1626
+ name FRSC-NVIS-AWKA
+!
+vlan 1689
+ name FRSC-IBADAN
+!
+vlan 1750
+ name FRSC-NVIS-OJODU
+!
+vlan 1761
+ name FRSC-ACADEMY-UDI
+!
+vlan 1923
+ name FRSC-NVIS-GWAGWALADA
+!
+vlan 1927
+ name FRSC_MABUSHI
+!
+vlan 1929
+ name FRSC-RSHQ-ABUJA
+!
+vlan 1967
+ name frsc-ijebu-ode
+!
+vlan 1968
+ name FRSC-Sagamu
+!
+vlan 1979
+ name FRSC-Jos
+!
+vlan 2060
+ name frsc-Abeokuta
+!
+vlan 2080
+ name FRSC-Kano
+!
+vlan 2175
+ name frsc-otta
+!
+vlan 2830
+ name FRSC-Oshogbo
+!
+!
+!
+interface FastEthernet0/1
+ description TRUNK CONNECTION TO FRSC BRANCH  ROUTER
+ switchport trunk allowed vlan 1626,1689,1750,1761,1923,1927,1929,1967,1968
+ switchport trunk allowed vlan add 1979,2060,2080,2175,2830
+ switchport mode trunk
+!
+interface FastEthernet0/2
+ description VAS Technologies Ltd  APN POC
+ switchport access vlan 1116
+ switchport mode access
+!
+interface FastEthernet0/3
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+ description TRUNK CONNECTION TO FRSC BRANCH  ROUTER
+ switchport trunk allowed vlan 1626,1689,1750,1761,1923,1927,1929,1967,1968
+ switchport trunk allowed vlan add 1979,2060,2080,2175,2830
+ switchport mode trunk
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+ description TRUNK CONNECTION TO GLO-CERAGON-IP-20 RADIO
+ switchport trunk allowed vlan 192,802,1000,1116,1270,1626,1689,1750,1761,1923
+ switchport trunk allowed vlan add 1927,1929,1967,1968,1979,2060,2080,2175,2830
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ description CONNECTION FRSC INTERNET   ROUTER
+ switchport trunk allowed vlan 1270
+ switchport mode trunk
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan802
+ ip address 10.248.246.227 255.255.255.192
+!
+interface Vlan1000
+ no ip address
+!
+interface Vlan1116
+ no ip address
+!
+interface Vlan1929
+ no ip address
+!
+ip default-gateway 10.248.246.193
+ip http server
+ip http secure-server
+snmp-server community globacom RO
+!
+line con 0
+ password 7 0526071D20424B051514
+ login
+line vty 0 4
+ password 7 0526071D20424B051514
+ login
+line vty 5 15
+ login
+!
+end
+
+GLO-SW@-FRSC-VASTECH-ABUJA#

@@ -1,0 +1,635 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
+     +--------------------------------------------------------------------+
+
+ ? 2026-04-08 ? ? 12:16.36 ? ? /home/mobaxterm ? telnet 10.248.248.82
+Connected to 10.248.248.82.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+GLO1-2960-ABJ007-ASW03>en
+Password:
+GLO1-2960-ABJ007-ASW03#sh run
+Building configuration...
+
+Current configuration : 11037 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+service unsupported-transceiver
+!
+hostname GLO1-2960-ABJ007-ASW03
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$LOdB$TE2m3SOvmsm0DYYO4eUr0/
+!
+!
+!
+no aaa new-model
+switch 1 provision ws-c2960s-24ts-l
+!
+!
+no ip domain-lookup
+vtp mode transparent
+!
+!
+crypto pki trustpoint TP-self-signed-600679552
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-600679552
+ revocation-check none
+ rsakeypair TP-self-signed-600679552
+!
+!
+crypto pki certificate chain TP-self-signed-600679552
+ certificate self-signed 01
+  3082024D 308201B6 A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  30312E30 2C060355 04031325 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 36303036 37393535 32301E17 0D393330 33303130 30303233
+  375A170D 32303031 30313030 30303030 5A303031 2E302C06 03550403 1325494F
+  532D5365 6C662D53 69676E65 642D4365 72746966 69636174 652D3630 30363739
+  35353230 819F300D 06092A86 4886F70D 01010105 0003818D 00308189 02818100
+  DA51E2FA CAD2E2D4 CF6A9148 C3F3A48C 41C59F18 D8064FFC 52ED73D8 D5A1DA0F
+  8DCB05F9 E6F6BBB2 B528DDF8 A90229CF 45E9D9BC 8C127B14 6FFC7B02 42214514
+  7B17D36C AB9882C2 1E10984A 3ECDDD73 6819D5B1 B0CA6520 5AF4568E A43A4255
+  3C7BB3E1 58E55E00 0389193D 9D4A4BFB 2EC089A9 353287AB 07EADBFA 76810D2F
+  02030100 01A37730 75300F06 03551D13 0101FF04 05300301 01FF3022 0603551D
+  11041B30 19821747 4C4F312D 32393630 2D41424A 3030372D 41535730 332E301F
+  0603551D 23041830 16801472 7AED6A2B 390F39DE B36BA077 515C5A08 4A352E30
+  1D060355 1D0E0416 0414727A ED6A2B39 0F39DEB3 6BA07751 5C5A084A 352E300D
+  06092A86 4886F70D 01010405 00038181 00244C92 B6F4B8FD C6C540B9 2656C4EF
+  95E438FD 563C3E67 E04D84B8 BE43B4C6 D7DE9F5B 3830B267 67A5BFB0 D96D26CC
+  306E44EC AA61EB56 AD4FE000 E2FE4500 48541A3F 389E9D0A 589F4F43 5862807E
+  57C8B03A 5D5095E5 BD670F50 BDBC06E6 3D70F4F9 C08216DF 9F67FBB9 E9E3971E
+  F5AF64B9 B61D4F5D 098842F1 43D138CB 27
+  quit
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+no spanning-tree vlan 56
+!
+!
+!
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig (STP)
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause pppoe-ia-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause small-frame
+errdisable recovery interval 30
+!
+vlan internal allocation policy ascending
+!
+vlan 30
+ name CMC-ERNST&YOUNG
+!
+vlan 31
+ name CMC-ORACLE
+!
+vlan 40
+ name ycom-abuja
+!
+vlan 41-46
+!
+vlan 47
+ name fct-minister-2
+!
+vlan 50
+ name office-nsa
+!
+vlan 53
+ name hyperia-internet
+!
+vlan 55
+ name nasarawa-uni
+!
+vlan 56
+ name moi-polls
+!
+vlan 58
+ name notap
+!
+vlan 60
+ name test-l2-abj
+!
+vlan 65
+ name daar-comms
+!
+vlan 100
+ name asw-mgmt
+!
+vlan 150
+ name who-sokoto
+!
+vlan 155
+ name EL-AMIN-INT-SCHOOL
+!
+vlan 162
+ name WINROK-KEFFI
+!
+vlan 251
+ name VDT-ABUJA-SOKOTO
+!
+vlan 350
+ name cyber-abj-lag
+!
+vlan 351
+ name CYBERSPACE-ABUJA_LAG
+!
+vlan 514
+ name DAAR_LAG_ABJ
+!
+vlan 596
+ name SLOVAK_EMBASSY
+!
+vlan 599
+ name WHO_ABUJA
+!
+vlan 601
+ name COBRANET_ABUJA
+!
+vlan 615
+!
+vlan 620
+ name vod56-samaru
+!
+vlan 625
+ name voda56-karu
+!
+vlan 630
+ name voda56-lafia
+!
+vlan 633
+ name ISN_WTC
+!
+vlan 890
+ name cyberspace-vpls
+!
+vlan 899
+ name ANDROMEDIA
+!
+vlan 934
+ name MULTICHOICE_ABUJA
+!
+vlan 936
+ name MULTICHOICE_ABUJA-2
+!
+vlan 952
+ name MIYETTI_LAW_FIRM
+!
+vlan 996
+ name ZAMARU-ZARIA
+!
+vlan 1100
+ name maroc-mgmt
+!
+vlan 1212
+ name hypertech
+!
+vlan 1234
+ name TATA-OTIS-ABUJA
+!
+vlan 1315
+ name daar-voice
+!
+vlan 1316
+ name daar-data
+!
+vlan 1317
+ name daar-video
+!
+vlan 1500
+ name CERAGON-MGMT
+!
+vlan 1501
+!
+vlan 1502
+ name huawei-mgmt
+!
+vlan 1503
+ name NERA_MGT
+!
+vlan 1564
+ name cyberspace-abj26
+!
+vlan 1612
+ name isn-wtc-new
+!
+vlan 1685
+!
+vlan 1906
+ name is-abj-lag
+!
+vlan 2100
+ name macroc-int
+!
+vlan 2121
+!
+vlan 2327
+ name WHO
+!
+vlan 2425
+ name SHS-ABUJA
+!
+vlan 2426
+ name IGI_NIGERIA_ABUJA
+!
+vlan 2540
+ name VODACOM_SULEJA
+!
+vlan 2647
+ name ICSL-CBD-ABUJA
+!
+vlan 2666
+ name VODACOM_SOKOTO_SWAP
+!
+vlan 3128
+ name VERSO_CONSULTING
+!
+vlan 3129
+!
+vlan 3172
+ name MCN_ABJ-ACME(LAG313)
+!
+vlan 3192
+ name simbanet
+!
+lldp run
+!
+!
+interface FastEthernet0
+ no ip address
+!
+interface GigabitEthernet1/0/1
+ description CERAGON-RADIO-MGMT-[EX-VODACOM-KARU-625]
+ switchport access vlan 1500
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/2
+ description VODACOM-56-LAFIA
+ switchport access vlan 630
+ switchport mode access
+ no cdp enable
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/3
+ description VODACOM-56-SAMARU-ZARIA
+ switchport access vlan 620
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/4
+ description VODACOM-56-SULEJA
+ switchport access vlan 2540
+ switchport mode access
+ load-interval 30
+ no cdp enable
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/5
+ description YCOM-ABUJA-INTERNET
+ switchport access vlan 40
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/6
+ description DAAR-COMMS-INTERNET || GLO-1
+ location civic-location-id none
+ switchport trunk allowed vlan 65,100,514,996,1315-1317
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/7
+ description WHO ABUJA
+ switchport trunk allowed vlan 1503,2327
+ switchport mode trunk
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/8
+ description ISN ABUJA WTC
+ switchport access vlan 1612
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/9
+ description ICSL-CBD-ABUJA[VLAN-2647]|25Mbps
+ switchport access vlan 2647
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/10
+ description CMC-TOTAL-ERNST&YOUNG | VLAN 30 | 30MBPS
+ switchport access vlan 30
+ switchport mode access
+!
+interface GigabitEthernet1/0/11
+ description IGI NIGERIA ABUJA INTERNET[2426]|15Mbps
+ switchport access vlan 2426
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/12
+ description TATA-OTIS-ABUJA[VLAN1234]|30Mbps
+ location civic-location-id none
+ switchport access vlan 1234
+ switchport mode access
+!
+interface GigabitEthernet1/0/13
+ description MAROC-PRIMARY || FORMER-ANDROMEDIA
+ switchport trunk allowed vlan 1100,2100
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/14
+ description GLOBAL-NETWORK-NASARAWA
+ switchport access vlan 44
+ switchport mode access
+ speed 100
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/15
+ description HYPERIA-INTERNET || 20Mbps
+ switchport access vlan 53
+ switchport mode access
+ shutdown
+ no cdp enable
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/16
+ description SMART-HOSPITALTY-SHS-ABUJA-INTERNET[VLAN-2425]|25Mbps
+ switchport access vlan 2425
+ switchport mode access
+!
+interface GigabitEthernet1/0/17
+ description OFFICE-OF-NSA || 10Mbps
+ switchport access vlan 50
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/18
+ description CONNECTION TO WINROK KEFFI
+ switchport access vlan 162
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/19
+ description EL AMIN INTERNATIONAL SCHOOL
+ switchport access vlan 155
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/20
+ description VDT ABUJA SOKOTO
+ switchport trunk allowed vlan 251
+ switchport mode trunk
+ no cdp enable
+!
+interface GigabitEthernet1/0/21
+ description HYPERTECH-KADUNA || 2Mbps
+ switchport access vlan 1212
+ switchport mode access
+ no cdp enable
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/22
+ description CONNECTION TO ZETAWEB MULTICHOICE ABUJA
+ switchport trunk allowed vlan 934,3172
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/23
+ description VERSO CONSULTING
+ switchport access vlan 3128
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/24
+ description VODACOM-SOKOTO-45MBSWAP
+ switchport access vlan 31
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/25
+ description GLO1-ABJ007PE01 || port 1/2/9(old Port5/1/5)
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/26
+ description uplink to Huawe NE40 2/1/19
+ switchport access vlan 2425
+ switchport trunk allowed vlan 30,100,934,1234,1500,1564,2425
+ switchport mode trunk
+ speed nonegotiate
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/27
+ description CYBERSPACE ABJ-LAG,UNIABUJA
+ switchport trunk allowed vlan 351,1564
+ switchport mode trunk
+ no cdp enable
+!
+interface GigabitEthernet1/0/28
+ description CMC-VODAFONE ORACLE TIGRIS
+ switchport access vlan 31
+ switchport mode access
+ speed nonegotiate
+ no cdp enable
+ spanning-tree portfast
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan30
+ ip address 197.211.47.34 255.255.255.252
+ shutdown
+!
+interface Vlan31
+ ip address 197.211.45.154 255.255.255.252
+ shutdown
+!
+interface Vlan40
+ ip address 197.211.44.4 255.255.255.248
+ shutdown
+!
+interface Vlan56
+ ip address 197.211.49.243 255.255.255.248
+!
+interface Vlan60
+ ip address 172.16.30.1 255.255.255.248
+ shutdown
+!
+interface Vlan65
+ no ip address
+!
+interface Vlan66
+ no ip address
+!
+interface Vlan100
+ ip address 10.248.248.82 255.255.255.248
+!
+interface Vlan177
+ ip address 192.168.7.1 255.255.255.0
+!
+interface Vlan351
+ ip address 1.1.2.2 255.255.255.252
+ shutdown
+!
+interface Vlan514
+ no ip address
+!
+interface Vlan615
+ no ip address
+!
+interface Vlan625
+ ip address 10.35.209.145 255.255.255.252
+ shutdown
+!
+interface Vlan633
+ no ip address
+!
+interface Vlan890
+ ip address 197.211.54.19 255.255.255.240
+ shutdown
+!
+interface Vlan934
+ ip address 10.249.249.101 255.255.255.248
+!
+interface Vlan936
+ ip address 11.11.11.2 255.255.255.252
+ shutdown
+!
+interface Vlan1500
+ no ip address
+!
+interface Vlan1501
+ ip address 10.248.249.139 255.255.255.0
+!
+interface Vlan1503
+ no ip address
+!
+interface Vlan1564
+ ip address 172.28.30.1 255.255.255.248
+ shutdown
+!
+interface Vlan2540
+ ip address 10.35.210.38 255.255.255.252
+ shutdown
+!
+interface Vlan2666
+ ip address 10.35.5.6 255.255.255.252
+ shutdown
+!
+interface Vlan3129
+ ip address 10.248.242.115 255.255.255.248
+ shutdown
+!
+interface Vlan3172
+ ip address 192.168.237.20 255.255.255.0
+!
+ip default-gateway 10.248.248.81
+ip http server
+ip http secure-server
+tftp-server nvram:startup-config
+snmp-server community globacom RO
+!
+line con 0
+ password 7 03295A19070124404206
+ logging synchronous
+ login
+line vty 0 4
+ password 7 03295A19070124404206
+ logging synchronous
+ login
+line vty 5 15
+ password 7 153F0A1E05242E28243C
+ logging synchronous
+ login
+!
+end
+
+GLO1-2960-ABJ007-ASW03# sh int des
+Interface                      Status         Protocol Description
+Vl1                            admin down     down
+Vl30                           admin down     down
+Vl31                           admin down     down
+Vl40                           admin down     down
+Vl56                           up             down
+Vl60                           admin down     down
+Vl65                           up             up
+Vl66                           down           down
+Vl100                          up             up
+Vl177                          down           down
+Vl351                          admin down     down
+Vl514                          up             up
+Vl615                          up             down
+Vl625                          admin down     down
+Vl633                          up             down
+Vl890                          admin down     down
+Vl934                          up             up
+Vl936                          admin down     down
+Vl1500                         up             up
+Vl1501                         up             down
+Vl1503                         up             down
+Vl1564                         admin down     down
+Vl2540                         admin down     down
+Vl2666                         admin down     down
+Vl3129                         admin down     down
+Vl3172                         up             up
+Fa0                            down           down
+Gi1/0/1                        up             up       CERAGON-RADIO-MGMT-[EX-VODACOM-KARU-625]
+Gi1/0/2                        down           down     VODACOM-56-LAFIA
+Gi1/0/3                        up             up       VODACOM-56-SAMARU-ZARIA
+Gi1/0/4                        down           down     VODACOM-56-SULEJA
+Gi1/0/5                        up             up       YCOM-ABUJA-INTERNET
+Gi1/0/6                        up             up       DAAR-COMMS-INTERNET || GLO-1
+Gi1/0/7                        down           down     WHO ABUJA
+Gi1/0/8                        down           down     ISN ABUJA WTC
+Gi1/0/9                        down           down     ICSL-CBD-ABUJA[VLAN-2647]|25Mbps
+Gi1/0/10                       up             up       CMC-TOTAL-ERNST&YOUNG | VLAN 30 | 30MBPS
+Gi1/0/11                       down           down     IGI NIGERIA ABUJA INTERNET[2426]|15Mbps
+Gi1/0/12                       up             up       TATA-OTIS-ABUJA[VLAN1234]|30Mbps
+Gi1/0/13                       down           down     MAROC-PRIMARY || FORMER-ANDROMEDIA
+Gi1/0/14                       up             up       GLOBAL-NETWORK-NASARAWA
+Gi1/0/15                       admin down     down     HYPERIA-INTERNET || 20Mbps
+Gi1/0/16                       up             up       SMART-HOSPITALTY-SHS-ABUJA-INTERNET[VLAN-2425]|25Mbps
+Gi1/0/17                       down           down     OFFICE-OF-NSA || 10Mbps
+Gi1/0/18                       up             up       CONNECTION TO WINROK KEFFI
+Gi1/0/19                       up             up       EL AMIN INTERNATIONAL SCHOOL
+Gi1/0/20                       up             up       VDT ABUJA SOKOTO
+Gi1/0/21                       up             up       HYPERTECH-KADUNA || 2Mbps
+Gi1/0/22                       up             up       CONNECTION TO ZETAWEB MULTICHOICE ABUJA
+Gi1/0/23                       up             up       VERSO CONSULTING
+Gi1/0/24                       down           down     VODACOM-SOKOTO-45MBSWAP
+Gi1/0/25                       down           down     GLO1-ABJ007PE01 || port 1/2/9(old Port5/1/5)
+Gi1/0/26                       up             up       uplink to Huawe NE40 2/1/19
+Gi1/0/27                       up             up       CYBERSPACE ABJ-LAG,UNIABUJA
+Gi1/0/28                       up             up       CMC-VODAFONE ORACLE TIGRIS
+GLO1-2960-ABJ007-ASW03#

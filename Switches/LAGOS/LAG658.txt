@@ -1,5 +1,5 @@
      +--------------------------------------------------------------------+
-     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
      ¦              (X server, SSH client and network tools)              ¦
      ¦                                                                    ¦
      ¦ ? Your computer drives are accessible through the /drives path     ¦
@@ -7,10 +7,10 @@
      ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
      ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
      ¦                                                                    ¦
-     ¦                     Registered to RT (1 user)                      ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
      +--------------------------------------------------------------------+
 
- ? 2025-11-13 ? ? 10:43.46 ? ? /home/mobaxterm ? telnet 10.248.246.62
+ ? 2026-04-08 ? ? 09:05.48 ? ? /home/mobaxterm ? telnet 10.248.246.62
 Connected to 10.248.246.62.
 Entering character mode
 Escape character is '^]'.
@@ -50,7 +50,7 @@ Eth0/0/9                      down    down     PURECHEM-trunk-ll-INTERNET
 Eth0/0/10                     up      up       GTBANK DRC GBAGADA
 Eth0/0/11                     up      up       NNPC-MEDICAL-MAINLAND
 Eth0/0/12                     down    down     TPGS-Ilupeju-5-INT
-Eth0/0/13                     up      up       ZETAWEB ILUPEJU CERAGON RADIO MGM
+Eth0/0/13                     down    down     ZETAWEB ILUPEJU CERAGON RADIO MGM
                                                T
 Eth0/0/14                     up      up       PAN AFRICA EQUIPMENT
 Eth0/0/15                     down    down     PAN-AFRICA-RADIO
@@ -68,7 +68,7 @@ Eth0/0/22                     *down   down     ADVANZ LAFAYET MUSHIN | 10MB INTE
                                                RNET
 Eth0/0/23                     up      up       UNILORIN-LIAION-INT | 10M
 Eth0/0/24                     up      up       SHS_ISOLO[VLAN-1835] 10Mbps
-GE0/0/1                       up      up       WAVE5-WIRELESS-MATORI | 155M
+GE0/0/1                       *down   down     WAVE5-WIRELESS-MATORI | 155M
 GE0/0/2                       up      up       TRUNK-TO DCN-GLOMOBILE || GE0/3/2
 GE0/0/3                       down    down     TPGS-ILUPEJU-INT| Moved to Router
 GE0/0/4                       up      up       ZETAWEB ILUPEJU RADIO
@@ -402,6 +402,7 @@ interface Ethernet0/0/24
 #
 interface GigabitEthernet0/0/1
  description WAVE5-WIRELESS-MATORI | 155M
+ shutdown
  port link-type access
  port default vlan 1654
  jumboframe enable 13296

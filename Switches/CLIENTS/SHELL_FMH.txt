@@ -1,0 +1,268 @@
+
+Connected to 10.248.246.35.
+
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
+
+Login authentication
+
+
+Username:Entering character mode
+Escape character is '^]'.
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2024-05-02 17:10:37+00:00.
+Info: Lastest accessed IP: 192.168.6.5  Time: 2024-05-02 17:08:56  Password will expire in: -
+
+Info: Smart-upgrade is currently disabled. Enable Smart-upgrade to get recommended version information.
+<SHELL-BOI-ENT-SW-5700>sys
+Enter system view, return user view with Ctrl+Z.
+[SHELL-BOI-ENT-SW-5700]dis cur
+!Software Version V200R021C00SPC100
+#
+sysname SHELL-BOI-ENT-SW-5700
+#
+vlan batch 805 1501 2411 to 2413 3162 to 3163
+#
+authentication-profile name default_authen_profile
+authentication-profile name dot1x_authen_profile
+authentication-profile name dot1xmac_authen_profile
+authentication-profile name mac_authen_profile
+authentication-profile name multi_authen_profile
+authentication-profile name portal_authen_profile
+#
+telnet server enable
+telnet server-source all-interface
+#
+diffserv domain default
+#
+radius-server template default
+#
+pki realm default
+ certificate-check none
+#
+free-rule-template name default_free_rule
+#
+portal-access-profile name portal_access_profile
+#
+vlan 805
+ description BS-NEW-SW-MGT-VLAN
+vlan 1501
+ description BIZ-SW-MGT
+vlan 2411
+ description SHELL_FREEMAN_HOUSE_1(21CENTURY-FMH-LL)
+vlan 2412
+ description SHELL_FREEMAN_HOUSE_(ABUJA-FMH-LL)
+vlan 2413
+ description SHELL_FREEMAN_HOUSE_2(EKO-ATLANTIC-2-FMH-LL)
+vlan 3162
+ description SHELL-INTERNET
+vlan 3163
+ description SHELL-BOI-INT-NEW
+#
+aaa
+ authentication-scheme default
+  authentication-mode local
+ authentication-scheme radius
+  authentication-mode radius
+ authorization-scheme default
+  authorization-mode local
+ accounting-scheme default
+  accounting-mode none
+ local-aaa-user password policy administrator
+  password history record number 0
+  password expire 0
+ domain default
+  authentication-scheme radius
+  accounting-scheme default
+  radius-server default
+ domain default_admin
+  authentication-scheme default
+  accounting-scheme default
+ local-user bsnoc password irreversible-cipher $1c$"_<y,"ziSK$qw[\P}x1C)a5~:/5{|~)q.9E'{x`|S{0CwO4s@{Q$
+ local-user bsnoc privilege level 3
+ local-user bsnoc service-type telnet terminal ssh ftp
+#
+interface Vlanif1
+#
+interface Vlanif805
+ ip address 10.248.246.35 255.255.255.192
+#
+interface Vlanif1501
+ ip address 10.248.249.226 255.255.255.0
+#
+interface Vlanif2411
+ description FREEMAN_1
+ ip address 10.1.1.1 255.255.255.0
+#
+interface Vlanif2413
+ description FREEMAN_2
+ ip address 10.2.2.1 255.255.255.0
+#
+interface Vlanif3163
+ ip address 10.10.10.2 255.255.255.252
+#
+interface GigabitEthernet0/0/1
+ description SHELL_FREEMAN_HOUSE_1(21CENTURY-FMH-LL)
+ port link-type access
+ port default vlan 2411
+#
+interface GigabitEthernet0/0/2
+ description SHELL FMH-BOI 2G INTERNET | VLAN 3163
+ port link-type access
+ port default vlan 2413
+#
+interface GigabitEthernet0/0/3
+ description SHELL_ABUJA_OFFICE(ABUJA-FMH-LL)
+ port link-type access
+ port default vlan 2412
+#
+interface GigabitEthernet0/0/4
+ description free
+ port link-type access
+#
+interface GigabitEthernet0/0/5
+#
+interface GigabitEthernet0/0/6
+#
+interface GigabitEthernet0/0/7
+#
+interface GigabitEthernet0/0/8
+#
+interface GigabitEthernet0/0/9
+#
+interface GigabitEthernet0/0/10
+#
+interface GigabitEthernet0/0/11
+#
+interface GigabitEthernet0/0/12
+#
+interface GigabitEthernet0/0/13
+#
+interface GigabitEthernet0/0/14
+#
+interface GigabitEthernet0/0/15
+#
+interface GigabitEthernet0/0/16
+#
+interface GigabitEthernet0/0/17
+#
+interface GigabitEthernet0/0/18
+#
+interface GigabitEthernet0/0/19
+#
+interface GigabitEthernet0/0/20
+#
+interface GigabitEthernet0/0/21
+#
+interface GigabitEthernet0/0/22
+#
+interface GigabitEthernet0/0/23
+#
+interface GigabitEthernet0/0/24
+ description ***LOCAL-LOGIN-NMS-PORT***
+ port link-type access
+ port default vlan 805
+#
+interface XGigabitEthernet0/0/1
+ description UPLINK TO LAG394 DCN 10G PORT
+ port link-type trunk
+ port trunk allow-pass vlan 316 805 1501 2411 to 2413 2416 3162 to 3163
+#
+interface XGigabitEthernet0/0/2
+ description CONNECTION-TO-SHELL-BOI-ROUTER-2G-INTERNET
+ port link-type access
+ port default vlan 3163
+#
+interface XGigabitEthernet0/0/3
+#
+interface XGigabitEthernet0/0/4
+#
+interface NULL0
+#
+undo icmp name timestamp-request receive
+#
+ip route-static 0.0.0.0 0.0.0.0 10.248.246.1
+#
+snmp-agent
+snmp-agent local-engineid 800007DB0304E7953A0E30
+snmp-agent community write cipher %^%#c"Up5J%B82Isg=V0+1-@`=iXJdFAeEw`qZ.au=bQA9H9&f@a8@`;E9*PNc_ODMO%V#e2YXX0=t=)|m+G%^%#
+snmp-agent sys-info version all
+snmp-agent protocol source-status all-interface
+snmp-agent protocol source-status ipv6 all-interface
+#
+sftp server enable
+stelnet server enable
+ssh server cipher aes256_ctr aes128_ctr
+ssh server hmac sha2_256
+ssh server key-exchange dh_group16_sha512 dh_group15_sha512 dh_group14_sha256 dh_group_exchange_sha256
+ssh client cipher aes256_ctr aes128_ctr
+ssh client hmac sha2_256
+ssh client key-exchange dh_group16_sha512 dh_group15_sha512 dh_group14_sha256 dh_group_exchange_sha256
+ssh server dh-exchange min-len 2048
+ssh server publickey rsa_sha2_512 rsa_sha2_256
+#
+user-interface con 0
+ authentication-mode aaa
+user-interface vty 0 4
+ authentication-mode aaa
+ protocol inbound all
+user-interface vty 16 20
+#
+dot1x-access-profile name dot1x_access_profile
+#
+mac-access-profile name mac_access_profile
+#
+ops
+#
+return
+[SHELL-BOI-ENT-SW-5700]dis int des
+PHY: Physical
+*down: administratively down
+#down: LBDT down
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(dl): DLDP down
+(lb): LBDT block
+(o): Observe-port forwarding down
+Interface                     PHY     Protocol Description
+GE0/0/1                       up      up       SHELL_FREEMAN_HOUSE_1(21CENTURY-FMH-LL)
+GE0/0/2                       up      up       SHELL FMH-BOI 2G INTERNET | VLAN 3163
+GE0/0/3                       down    down     SHELL_ABUJA_OFFICE(ABUJA-FMH-LL)
+GE0/0/4                       down    down     free
+GE0/0/5                       down    down
+GE0/0/6                       down    down
+GE0/0/7                       down    down
+GE0/0/8                       down    down
+GE0/0/9                       down    down
+GE0/0/10                      down    down
+GE0/0/11                      down    down
+GE0/0/12                      down    down
+GE0/0/13                      down    down
+GE0/0/14                      down    down
+GE0/0/15                      down    down
+GE0/0/16                      down    down
+GE0/0/17                      down    down
+GE0/0/18                      down    down
+GE0/0/19                      down    down
+GE0/0/20                      down    down
+GE0/0/21                      down    down
+GE0/0/22                      down    down
+GE0/0/23                      down    down
+GE0/0/24                      down    down     ***LOCAL-LOGIN-NMS-PORT***
+NULL0                         up      up(s)
+Vlanif1                       up      down
+Vlanif805                     up      up
+Vlanif1501                    up      up
+Vlanif2411                    up      up       FREEMAN_1
+Vlanif2413                    up      up       FREEMAN_2
+Vlanif3163                    up      up
+XGE0/0/1                      up      up       UPLINK TO LAG394 DCN 10G PORT
+XGE0/0/2                      down    down     CONNECTION-TO-SHELL-BOI-ROUTER-2G-INTERNET
+XGE0/0/3                      down    down
+XGE0/0/4                      down    down
+[SHELL-BOI-ENT-SW-5700]

@@ -1,0 +1,492 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
+     +--------------------------------------------------------------------+
+
+
+SWITCH_C2960_ADEOLA_ODEKU#sh run
+Building configuration...
+
+Current configuration : 8540 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service unsupported-transceiver
+!
+hostname SWITCH_C2960_ADEOLA_ODEKU
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$SNLG$8up2.tAx3VqttenttS8Ji1
+!
+username Maranellq password 0 Maranellq
+username bsnoc password 0 bsnoc12#$
+!
+!
+no aaa new-model
+switch 1 provision ws-c2960s-24ts-l
+!
+!
+vtp mode transparent
+!
+!
+crypto pki trustpoint TP-self-signed-4060007040
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-4060007040
+ revocation-check none
+ rsakeypair TP-self-signed-4060007040
+!
+!
+crypto pki certificate chain TP-self-signed-4060007040
+ certificate self-signed 01
+  30820252 308201BB A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 34303630 30303730 3430301E 170D3933 30333031 30303032
+  34345A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D34 30363030
+  30373034 3030819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  8100AF07 C9A28919 DCAA130E 1FE8E8AF 48D0546A 9B7CEC10 C45B0ED7 0D98869F
+  E2B86821 7D727887 D5BA4533 4D5482DE 3A49097D 2D1C754B F3D6C724 13DF4E8F
+  3C127CFB D09159DB EF763171 E85B65D4 BA3A3ED9 9F6ECD5C FCA339D3 7BB48136
+  40DFAE40 067DC6FB E1AC13B1 0D6EA34C A751B534 827B8EF8 2F2C4F39 F67D78CA
+  36310203 010001A3 7A307830 0F060355 1D130101 FF040530 030101FF 30250603
+  551D1104 1E301C82 1A535749 5443485F 43323936 305F4144 454F4C41 5F4F4445
+  4B552E30 1F060355 1D230418 30168014 8E91360E 4F0A4F03 65391979 96CEC470
+  97454940 301D0603 551D0E04 1604148E 91360E4F 0A4F0365 39197996 CEC47097
+  45494030 0D06092A 864886F7 0D010104 05000381 810046BA CDAC85B8 3B0F28B8
+  61F0339E F86317A9 FA95F3A2 9280F60F C48D3CBC D9346547 73070A3A F84FA085
+  0CCA2C8B 25DE24AA EA27D01D E20EBE34 6EA843E3 0A4F8DBE 2C71D246 20E3D866
+  8690A0F7 13D6BD6D F1D27035 2BEA81FB 2AB73034 32972923 DD14331D FF19EE5D
+  488DB097 43FAD2D6 4FF1AA67 21FEBC35 D7C27C2B 87CC
+  quit
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+!
+!
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig (STP)
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause psecure-violation
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery interval 30
+!
+vlan internal allocation policy ascending
+!
+vlan 10,20
+!
+vlan 21
+ name IS-ENT-OFFICE-LAN
+!
+vlan 27
+ name SAKA25-UPSTAIRS-MGT
+!
+vlan 33
+ name BS-INT
+!
+vlan 66
+ name BS-NOC
+!
+vlan 88
+ name UBN-REMOTE-MGT
+!
+vlan 89
+ name FBN-REMOTE-MGT
+!
+vlan 91
+ name RM
+!
+vlan 93
+ name BS-INTERNET-FROM-SAKA-25
+!
+vlan 94
+ name BS_BACHBONE_SWITC
+!
+vlan 95
+ name ACCESS-BANK-MONITOR
+!
+vlan 96
+ name ACCESS-CAMP-MONITOR
+!
+vlan 112
+ name WEMA_BANK_LAYER3
+!
+vlan 131
+ name INT
+!
+vlan 179
+ name BUS-SOL-OFFICE-INT
+!
+vlan 189
+ name SWITCH-NMS-PE-B
+!
+vlan 215
+ name FIRS-ORILE
+!
+vlan 412
+ name CACTI-SERVER-WAN
+!
+vlan 413
+ name CACTI-LAN
+!
+vlan 415
+ name NNPC
+!
+vlan 420
+ name ADDAX
+!
+vlan 444
+ name SW_MGT
+!
+vlan 500
+ name NBC_NMS
+!
+vlan 505
+ name ISN_APAPA
+!
+vlan 512
+ name PRODECO-APAPA
+!
+vlan 588
+ name HERITAGE-MONITORING
+!
+vlan 610
+!
+vlan 611
+ name KeystoneTEST
+!
+vlan 804
+ name new-sw-mgt-vlan
+!
+vlan 807
+ name MODATA-SWITCH
+!
+vlan 906
+ name SEVEN-UPN-APN
+!
+vlan 1115
+ name GTB-VLAN
+!
+vlan 1214
+ name CONOIL-MGT-SAKA-RTR
+!
+vlan 1496
+ name BS-CERAGON-2-MGT
+!
+vlan 1497
+ name NERA-MGT
+!
+vlan 1501
+ name SWITCH-MGT-4
+!
+vlan 1504
+ name ENT-SWITCH-MGT3
+!
+vlan 1632
+ name WEMA-VPLS
+!
+vlan 1640
+ name ACCESS-VPLS
+!
+vlan 1761
+ name KEYSTONE-VPLS
+!
+vlan 1881
+ name FIDELITY-BANK
+!
+vlan 1900
+ name UNION
+!
+vlan 2015
+ name METROTIK
+!
+vlan 2423
+ name STANBIC-IBTC-VPLS
+!
+vlan 2999
+ name FCMB
+!
+vlan 3007
+ name FBN-VPLA
+!
+vlan 3034
+ name STERLING-VPLS
+!
+vlan 3035
+ name SKYE-VPLS
+!
+vlan 3042
+ name UBA-VPLS
+!
+vlan 3126
+ name DIAMOND-VPLS
+!
+lldp run
+!
+!
+interface FastEthernet0
+ no ip address
+!
+interface GigabitEthernet1/0/1
+ description FABIAN DESKTOP
+ switchport access vlan 444
+ switchport mode access
+!
+interface GigabitEthernet1/0/2
+ description FABIAN LAPTOP
+ switchport access vlan 444
+ switchport mode access
+!
+interface GigabitEthernet1/0/3
+ switchport access vlan 444
+ switchport mode access
+!
+interface GigabitEthernet1/0/4
+ description REGION
+ switchport access vlan 444
+ switchport mode access
+!
+interface GigabitEthernet1/0/5
+ description Test
+ switchport access vlan 20
+ switchport mode access
+!
+interface GigabitEthernet1/0/6
+ description GES-SPOC-ARCHIVE
+ switchport access vlan 444
+ switchport mode access
+!
+interface GigabitEthernet1/0/7
+ switchport access vlan 444
+ switchport mode access
+!
+interface GigabitEthernet1/0/8
+ description WIRELESS
+ switchport access vlan 444
+ switchport mode access
+!
+interface GigabitEthernet1/0/9
+ description ACCESS_POINT_FOR_THE_NOC
+ switchport access vlan 444
+ switchport mode access
+ speed 1000
+ duplex full
+!
+interface GigabitEthernet1/0/10
+ description MONITORING SCREEN(SMART_SCREEN)
+ switchport access vlan 444
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/11
+ description CHIOMA-DESKTOP
+ switchport access vlan 444
+ switchport mode access
+!
+interface GigabitEthernet1/0/12
+ description INTERNET-TV1-TO-SERVER
+ switchport access vlan 444
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/13
+ description ENT-OFFICE-LAN-2
+ switchport access vlan 20
+ switchport mode access
+!
+interface GigabitEthernet1/0/14
+ description METROKIT
+ switchport access vlan 2015
+ switchport mode access
+!
+interface GigabitEthernet1/0/15
+ switchport access vlan 444
+ switchport mode access
+ speed 100
+ duplex full
+!
+interface GigabitEthernet1/0/16
+ description ENT-OFFICE-LAN-2
+ switchport access vlan 20
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/17
+ description MONITORING-SCREEN-REGION
+ switchport access vlan 444
+ switchport mode access
+!
+interface GigabitEthernet1/0/18
+ description Switch Screen
+ switchport access vlan 444
+ switchport mode access
+!
+interface GigabitEthernet1/0/19
+ description NNPC NMS
+ switchport access vlan 444
+ switchport mode access
+!
+interface GigabitEthernet1/0/20
+ description ENT-OFFICE-LAN
+ switchport trunk allowed vlan 20,21
+ switchport mode trunk
+ speed 1000
+ duplex full
+!
+interface GigabitEthernet1/0/21
+ description Desktop Loop 3
+ switchport access vlan 444
+ switchport mode access
+!
+interface GigabitEthernet1/0/22
+ description TEST
+ switchport access vlan 1501
+ switchport mode access
+!
+interface GigabitEthernet1/0/23
+ description WEMA BANK
+ switchport access vlan 112
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/24
+ description TRUNK-TO-OFFICE-CISCO-ROUTER
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/25
+ description TRUNK-TO-SAKA25-3750 GE1/1/3
+ switchport mode trunk
+ speed nonegotiate
+!
+interface GigabitEthernet1/0/26
+ description ANIL-OFFICE-CONNECTION
+ switchport trunk allowed vlan 20,179
+ switchport mode trunk
+ speed 1000
+ duplex full
+!
+interface GigabitEthernet1/0/27
+ description ENT-OFFICE-LAN
+ switchport trunk allowed vlan 20
+ switchport mode trunk
+ speed nonegotiate
+!
+interface GigabitEthernet1/0/28
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan20
+ ip address 192.168.0.3 255.255.254.0
+!
+interface Vlan91
+ no ip address
+!
+interface Vlan94
+ ip address 10.248.248.252 255.255.255.248
+ shutdown
+!
+interface Vlan444
+ ip address 192.168.6.7 255.255.255.0
+!
+interface Vlan804
+ ip address 10.248.246.124 255.255.255.192
+!
+interface Vlan1115
+ ip address 10.0.181.230 255.255.255.0
+!
+interface Vlan1501
+ ip address 10.248.249.136 255.255.255.0
+!
+interface Vlan1504
+ ip address 10.248.244.10 255.255.255.0
+!
+interface Vlan1881
+ ip address 192.168.32.200 255.255.255.0
+!
+interface Vlan3035
+ ip address 10.15.118.250 255.255.255.0
+!
+ip default-gateway 192.168.6.1
+ip http server
+ip http secure-server
+!
+line con 0
+ password bsnoc12#$
+ logging synchronous
+ login
+line vty 0 4
+ password bsnoc12#$
+ logging synchronous
+ login
+line vty 5 15
+ login
+!
+end
+
+SWITCH_C2960_ADEOLA_ODEKU#sh int des
+Interface                      Status         Protocol Description
+Vl1                            up             up
+Vl20                           up             up
+Vl91                           up             up
+Vl94                           admin down     down
+Vl444                          up             up
+Vl804                          up             up
+Vl1115                         up             up
+Vl1501                         up             up
+Vl1504                         up             up
+Vl1881                         up             up
+Vl3035                         up             up
+Fa0                            down           down
+Gi1/0/1                        up             up       FABIAN DESKTOP
+Gi1/0/2                        up             up       FABIAN LAPTOP
+Gi1/0/3                        down           down
+Gi1/0/4                        up             up       REGION
+Gi1/0/5                        down           down     Test
+Gi1/0/6                        up             up       GES-SPOC-ARCHIVE
+Gi1/0/7                        down           down
+Gi1/0/8                        down           down     WIRELESS
+Gi1/0/9                        down           down     ACCESS_POINT_FOR_THE_NOC
+Gi1/0/10                       up             up       MONITORING SCREEN(SMART_SCREEN)
+Gi1/0/11                       up             up       CHIOMA-DESKTOP
+Gi1/0/12                       down           down     INTERNET-TV1-TO-SERVER
+Gi1/0/13                       down           down     ENT-OFFICE-LAN-2
+Gi1/0/14                       down           down     METROKIT
+Gi1/0/15                       down           down
+Gi1/0/16                       up             up       ENT-OFFICE-LAN-2
+Gi1/0/17                       down           down     MONITORING-SCREEN-REGION
+Gi1/0/18                       up             up       Switch Screen
+Gi1/0/19                       up             up       NNPC NMS
+Gi1/0/20                       up             up       ENT-OFFICE-LAN
+Gi1/0/21                       down           down     Desktop Loop 3
+Gi1/0/22                       down           down     TEST
+Gi1/0/23                       down           down     WEMA BANK
+Gi1/0/24                       up             up       TRUNK-TO-OFFICE-CISCO-ROUTER
+Gi1/0/25                       up             up       TRUNK-TO-SAKA25-3750 GE1/1/3
+Gi1/0/26                       up             up       ANIL-OFFICE-CONNECTION
+Gi1/0/27                       down           down     ENT-OFFICE-LAN
+Gi1/0/28                       down           down
+SWITCH_C2960_ADEOLA_ODEKU#

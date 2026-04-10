@@ -1,5 +1,5 @@
      +--------------------------------------------------------------------+
-     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
      ¦              (X server, SSH client and network tools)              ¦
      ¦                                                                    ¦
      ¦ ? Your computer drives are accessible through the /drives path     ¦
@@ -7,10 +7,10 @@
      ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
      ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
      ¦                                                                    ¦
-     ¦                     Registered to RT (1 user)                      ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
      +--------------------------------------------------------------------+
 
- ? 2025-11-13 ? ? 07:24.18 ? ? /home/mobaxterm ? telnet 10.248.246.142
+ ? 2026-04-08 ? ? 12:05.10 ? ? /home/mobaxterm ? telnet 10.248.246.142
 Connected to 10.248.246.142.
 Entering character mode
 Escape character is '^]'.
@@ -50,7 +50,9 @@ Eth0/0/8                      up      up       UNION ABA FACTORY | ACCESS ABA-OG
                                                BOR
 Eth0/0/9                      down    down     GLOBUS BANK ABA | 4MB SWIFTTALK R
                                                ADIO
-Eth0/0/10                     down    down     free
+Eth0/0/10                     down    down     ARCHBISHOP CHARLES HEEREY COLLEGE
+                                                OF NURSING SCIENCE,ABA - DICNET-
+                                               RADIO | 40MB
 Eth0/0/11                     *down   down     UNION OKIGWE
 Eth0/0/12                     down    down     FIRS ABA MSTO
 Eth0/0/13                     *down   down     INNOVATION GROWTH
@@ -61,7 +63,7 @@ Eth0/0/15                     *down   down     IP2AIR-ABIA-|4M-INTERNET-CLIENT-A
                                                BA007-RTN950A-IDU-GE02
 Eth0/0/16                     down    down     VODACOM ABA CERAGON_MGT
 Eth0/0/17                     up      up       Trunk to ABA034 | WEMA_ARIARA
-Eth0/0/18                     up      up       HERITAGE BANK AZIKIWE RD, ABA
+Eth0/0/18                     down    down     HERITAGE BANK AZIKIWE RD, ABA
 Eth0/0/19                     up      up       TPGS-ABA1-TEST
 Eth0/0/20                     up      up       TPGS_AB_ABA005
 Eth0/0/21                     down    down     ZINOX ABA STATE POLYTECNIC
@@ -71,7 +73,8 @@ Eth0/0/22                     up      up       NNPC ABA DEPOT|ACCESS (DIAMOND) A
 Eth0/0/23                     down    down     GLOWORLD ABA
 Eth0/0/24                     down    down     INTERNET-SOLNS-PZ || 8Mbps
 GE0/0/1                       down    down     GREAT RIVER SYSTEM STM1
-GE0/0/2                       up      up       NIG-BRITISH-UNI-ABA-INT | 500M
+GE0/0/2                       up      up       NIGERIA BRITISH UNIVERSITY ABA |
+                                               500MB
 GE0/0/3                       up      up       VDT-ABA-INTERNET-110M
 GE0/0/4                       up      up       UPLINK TO DCN IP/MPLS GE 0/1/6
 NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
@@ -92,8 +95,6 @@ Vlanif2153                    up      up       HUAWEI, Quidway Series, Vlanif215
                                                3 Interface
 Vlanif2312                    up      up       HUAWEI, Quidway Series, Vlanif231
                                                2 Interface
-Vlanif2423                    up      up       HUAWEI, Quidway Series, Vlanif242
-                                               3 Interface
 Vlanif3319                    up      up       HUAWEI, Quidway Series, Vlanif331
                                                9 Interface
 Vlanif3389                    up      up       HUAWEI, Quidway Series, Vlanif338
@@ -108,8 +109,8 @@ Vlanif4015                    up      down     HUAWEI, Quidway Series, Vlanif401
  vlan batch 20 150 415 521 803 1036 1044 1111 1115 1133
  vlan batch 1230 1376 1397 1411 1455 1483 1487 1493 to 1498 1500 to 1501 1503
  vlan batch 1640 1712 1824 1940 1997 to 1999 2153 2202 2312 2411 2423
- vlan batch 2444 2449 2468 2521 2833 2891 3007 3042 3126 3317 to 3319
- vlan batch 3389 3412 3507 3918 4015
+ vlan batch 2444 2449 2468 2521 2833 2891 3007 3042 3123 3126
+ vlan batch 3317 to 3319 3389 3412 3507 3918 4015
 #
  undo http server enable
  undo http secure-server enable
@@ -204,6 +205,8 @@ vlan 3007
  description FirstBank_Abriba
 vlan 3042
  description UBA-VPLS
+vlan 3123
+ description ARCHBISHOP CHARLES HEEREY COLLEGE OF NURSING SCIENC
 vlan 3126
  description DIAMOND-VPLS
 vlan 3317
@@ -231,8 +234,6 @@ aaa
  domain default_admin
  local-user ben password cipher %@%@a6ojC%y{3Mc{yl#hB~Y.r=T#%@%@
  local-user ben privilege level 15
- local-user ope password cipher %@%@va,zPaW$"7m_\TGB=MYFV;=N%@%@
- local-user ope privilege level 15
  local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
  local-user admin service-type http
  local-user bsnoc password cipher %@%@_7r(HPv^FN>AlX!ak5ONXMR>%@%@
@@ -249,8 +250,6 @@ aaa
  local-user naveen privilege level 15
  local-user rthphc password cipher %@%@XlGFE9G7/0VI~lUM}|I/O)JQ%@%@
  local-user rthphc privilege level 3
- local-user kelechi password cipher %@%@{Hb!;/w8s$T}6'+O4Kh-V;B'%@%@
- local-user kelechi privilege level 15
  local-user solarch password cipher %@%@]iAoI\|e<Li>Y6>'*spDO)HV%@%@
  local-user solarch privilege level 3
  local-user adewunmi password cipher %@%@-ePGByy2I.iJBN=Z,6=%XMQk%@%@
@@ -277,9 +276,6 @@ interface Vlanif2153
 #
 interface Vlanif2312
  ip address 1.0.1.1 255.255.255.0
-#
-interface Vlanif2423
- ip address 172.30.30.100 255.255.255.0
 #
 interface Vlanif3319
  ip address 41.203.83.69 255.255.255.248
@@ -336,8 +332,9 @@ interface Ethernet0/0/9
  port default vlan 2891
 #
 interface Ethernet0/0/10
- description free
+ description ARCHBISHOP CHARLES HEEREY COLLEGE OF NURSING SCIENCE,ABA - DICNET-RADIO | 40MB
  port link-type access
+ port default vlan 3123
 #
 interface Ethernet0/0/11
  description UNION OKIGWE
@@ -423,7 +420,7 @@ interface GigabitEthernet0/0/1
  port default vlan 2202
 #
 interface GigabitEthernet0/0/2
- description NIG-BRITISH-UNI-ABA-INT | 500M
+ description NIGERIA BRITISH UNIVERSITY ABA | 500MB
  port link-type access
  port default vlan 1940
  undo negotiation auto
@@ -442,8 +439,8 @@ interface GigabitEthernet0/0/4
  port trunk allow-pass vlan 20 521 803 997 1036 1044 1111 1115 1133 1230
  port trunk allow-pass vlan 1376 1397 1411 1455 1483 1487 1493 to 1498 1500 to 1501 1503 1640
  port trunk allow-pass vlan 1712 1824 1940 1997 to 1999 2153 2202 2312 2411 2423 2444
- port trunk allow-pass vlan 2449 2468 2507 2521 2833 2891 3042 3126 3317 to 3319 3389
- port trunk allow-pass vlan 3412 3507 4015
+ port trunk allow-pass vlan 2449 2468 2507 2521 2833 2891 3042 3123 3126 3317 to 3319
+ port trunk allow-pass vlan 3389 3412 3507 4015
  jumboframe enable 13296
  port media type copper
      undo negotiation auto
@@ -457,7 +454,7 @@ interface NULL0
 #
  snmp-agent
  snmp-agent local-engineid 000007DB7F000001000076D8
- snmp-agent community read cipher %@%@W)~S&u[>(3R-N9HaY+9NY~{S.$HTQM'fh87ZL^P@a^X>~{VY"q!55,<0hX`=_PB#YYuP{_Y~%@%@
+ snmp-agent community read cipher %@%@BOpeLL.$F1B6KOU|k%S<D9=WB.{t,2u]p*:&0m##HfL79=ZDx`xKW4<9<)Ola!&lL\N<=cD9%@%@
  snmp-agent sys-info version all
 #
 user-interface con 0

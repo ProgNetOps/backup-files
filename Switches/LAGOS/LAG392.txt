@@ -1,5 +1,5 @@
      +--------------------------------------------------------------------+
-     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
      ¦              (X server, SSH client and network tools)              ¦
      ¦                                                                    ¦
      ¦ ? Your computer drives are accessible through the /drives path     ¦
@@ -7,105 +7,118 @@
      ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
      ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
      ¦                                                                    ¦
-     ¦                     Registered to RT (1 user)                      ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
      +--------------------------------------------------------------------+
 
- ? 2025-11-13 ? ? 10:31.05 ? ? /home/mobaxterm ? telnet 10.248.246.13
+ ? 2026-04-08 ? ? 08:58.07 ? ? /home/mobaxterm ? telnet 10.248.246.13
 Connected to 10.248.246.13.
-Entering character mode
-Escape character is '^]'.
 
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
 
 Login authentication
 
 
-Username:bsnoc
+Username:Entering character mode
+Escape character is '^]'.
+bsnoc
 Password:
-Info: The max number of VTY users is 5, and the number
+Info: The max number of VTY users is 10, and the number
       of current VTY users on line is 1.
-<BS-LAG-392>sys
+      The current login time is 2026-04-08 15:59:56+08:00.
+Info: Lastest accessed IP: 10.48.34.36  Time: 2026-04-02 15:50:48+08:00  Failed: 0
+
+Info: Smart-upgrade is currently disabled. Enable Smart-upgrade to get recommended version information.
+<LAG-392_HUA-S-5335> sys
 Enter system view, return user view with Ctrl+Z.
-[BS-LAG-392]dis int des
+[LAG-392_HUA-S-5335] dis int des
 PHY: Physical
 *down: administratively down
-^down: standby
+#down: LBDT down
 (l): loopback
 (s): spoofing
+(E): E-Trunk down
 (b): BFD down
 (e): ETHOAM down
-(d): Dampening Suppressed
+(dl): DLDP down
+(lb): LBDT block
+(o): Observe-port forwarding down
 Interface                     PHY     Protocol Description
-Eth0/0/1                      *down   down     FUG PENSION
-Eth0/0/2                      *down   down     AXA MANSARD EBUTE METTA LL NERA R
-                                               ADIO
-Eth0/0/3                      up      up       ORANGE HEINEKEN-IGAMU-HQ
-Eth0/0/4                      down    down     FORTE OIL  4MB INTERNET
-Eth0/0/5                      *down   down     NIGERIA RAILWAY CORPORATION (DUAL
-                                                LINK)
-Eth0/0/6                      down    down     ceragon mgt
-Eth0/0/7                      down    down     STerling Bank Willoughby Ebute Me
-                                               tta
-Eth0/0/8                      up      up       SUNFLAG  IGANMU 15MB INTERNET
-Eth0/0/9                      up      up       ALLIANZ INSURANCE PRI
-Eth0/0/10                     *down   down     AXA_MANSARD-LL-R-NERA
-Eth0/0/11                     down    down     HUAWEI, Quidway Series, Ethernet0
-                                               /0/11 Interface
-Eth0/0/12                     up      up       CONOIL HQ APAPA - NERA 10.155.198
-                                               .219
-Eth0/0/13                     up      up       IO-TECH-SURULERE-INT |55M
-Eth0/0/14                     down    down     IPEXPRESS CONVENANT CENTRE IGANMU
-                                                INTERNET | 45M
-Eth0/0/15                     up      up       SAHARA-IJORA-INT | 100M
-Eth0/0/16                     up      up       IPEXPRESS CONVENANT CENTRE IGANMU
-                                                INTERNET | 45M
-Eth0/0/17                     down    down     HUAWEI, Quidway Series, Ethernet0
-                                               /0/17 Interface
-Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
-                                               /0/18 Interface
-Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
-                                               /0/19 Interface
-Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
-                                               /0/20 Interface
-Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
-                                               /0/21 Interface
-Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
-                                               /0/22 Interface
-Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
-                                               /0/23 Interface
-Eth0/0/24                     down    down     HUAWEI, Quidway Series, Ethernet0
-                                               /0/24 Interface
-GE0/0/1                       down    down     HUAWEI, Quidway Series, GigabitEt
-                                               hernet0/0/1 Interface
-GE0/0/2                       up      up       UPLINK TO DCN IP/MPLS GE 0/1/1
-NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
-                                               erface
-Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
-                                               nterface
-Vlanif15                      up      up       HUAWEI, Quidway Series, Vlanif15
-                                               Interface
-Vlanif805                     up      up       HUAWEI, Quidway Series, Vlanif805
-                                                Interface
-Vlanif812                     up      down     HUAWEI, Quidway Series, Vlanif812
-                                                Interface
-Vlanif1365                    up      up       HUAWEI, Quidway Series, Vlanif136
-                                               5 Interface
-Vlanif1497                    up      up       HUAWEI, Quidway Series, Vlanif149
-                                               7 Interface
-Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
-                                               1 Interface
-Vlanif3007                    up      down     HUAWEI, Quidway Series, Vlanif300
-                                               7 Interface
-[BS-LAG-392]    dis cur
+GE0/0/1                       down    down
+GE0/0/2                       down    down     TATA-OLAM IGANMU-FIBER[VLAN-2256]|100Mbps
+GE0/0/3                       down    down
+GE0/0/4                       up      up       TATA-OLAM IGANMU-RADIO[VLAN-2257]|100Mbps
+GE0/0/5                       down    down
+GE0/0/6                       down    down     TATA-OLAM IGANMU-RADIO[VLAN-2257]|100Mbps
+GE0/0/7                       down    down
+GE0/0/8                       down    down     TATA-OLAM IGANMU-RADIO[VLAN-2256]|100Mbps-te
+                                               st
+GE0/0/9                       down    down     FIRST REGISTRARS LAGOS HQ FIBER | 50MB
+GE0/0/10                      up      up       FIRST REGISTRARS LAGOS HQ RADIO | 50MB
+GE0/0/11                      down    down
+GE0/0/12                      down    down
+GE0/0/13                      down    down
+GE0/0/14                      down    down
+GE0/0/15                      down    down
+GE0/0/16                      down    down
+GE0/0/17                      down    down
+GE0/0/18                      down    down
+GE0/0/19                      down    down
+GE0/0/20                      down    down
+GE0/0/21                      down    down
+GE0/0/22                      down    down
+GE0/0/23                      down    down
+GE0/0/24                      down    down
+GE0/0/25                      down    down     ORANGE HEINEKEN-IGAMU-HQ
+GE0/0/26                      up      up       SUNFLAG  IGANMU 15MB INTERNET
+GE0/0/27                      up      up       ALLIANZ INSURANCE PRI
+GE0/0/28                      up      up       CONOIL HQ APAPA - NERA 10.155.198.219
+GE0/0/29                      up      up       IO-TECH-SURULERE-INT |55M
+GE0/0/30                      up      up       SAHARA-IJORA-INTERNET IOTECH-RADIO | 100MB
+GE0/0/31                      up      up       IPEXPRESS CONVENANT CENTRE IGANMU INTERNET |
+                                                45M
+GE0/0/32                      up      up       UPLINK TO DCN IP/MPLS GE 0/1/1
+MEth0/0/1                     down    down
+NULL0                         up      up(s)
+Vlanif1                       up      down
+Vlanif15                      up      up
+Vlanif805                     up      up
+Vlanif812                     up      down
+Vlanif1365                    up      up
+Vlanif1497                    up      up
+Vlanif1501                    up      up
+Vlanif3007                    up      down
+XGE0/0/1                      down    down     TATA-OLAM IGANMU-RADIO[VLAN-2257]|100Mbps
+XGE0/0/2                      down    down
+XGE0/0/3                      down    down
+XGE0/0/4                      down    down
+[LAG-392_HUA-S-5335]             dis cur
+!Software Version V200R019C10SPC500
 #
-!Software Version V100R006C03
- sysname BS-LAG-392
+sysname LAG-392_HUA-S-5335
 #
- vlan batch 2 15 805 812 1105 1114 1123 1365 1369 1492 to 1493
- vlan batch 1495 to 1497 1501 1503 1522 1578 to 1579 1677 to 1678 1784 2402 to 2403 2405 to 2406 2433
- vlan batch 2554 2611 2615 2621 to 2622 2625 2703 to 2704 3007 3034 3129 3152
- vlan batch 3876
+vlan batch 15 805 812 1105 1114 1365 1369 1492 to 1493 1495 to 1497 1501
+vlan batch 1503 1522 1578 to 1579 1677 to 1678 1784 2256 to 2257 2433 2554 2703 to 2704 3007
+vlan batch 3034 3129 3152 3421 3876
 #
- undo http server enable
+authentication-profile name default_authen_profile
+authentication-profile name dot1x_authen_profile
+authentication-profile name dot1xmac_authen_profile
+authentication-profile name mac_authen_profile
+authentication-profile name multi_authen_profile
+authentication-profile name portal_authen_profile
+#
+telnet server enable
+#
+diffserv domain default
+#
+radius-server template default
+#
+pki realm default
+ certificate-check none
+#
+free-rule-template name default_free_rule
+#
+portal-access-profile name portal_access_profile
 #
 vlan 15
  description Conoil_Mgt
@@ -147,6 +160,10 @@ vlan 1678
  description SAHARA-IJORA-INT
 vlan 1784
  description IPEXPRESS CONVENANT IGANMU
+vlan 2256
+ description TATA-OLAM-IGANMU-FIBER
+vlan 2257
+ description TATA-OLAM-IGANMU-RADIO
 vlan 2433
  description JEHOVA-WITNESS-AGBARHO
 vlan 2554
@@ -163,27 +180,40 @@ vlan 3129
  description SIMBANET_45MB_INTERNET
 vlan 3152
  description FirstBanK STM1 TO ABUJA
+vlan 3421
+ description FIRST-REGISTRARS-LAGOS
 #
 aaa
  authentication-scheme default
+  authentication-mode local
+ authentication-scheme radius
+  authentication-mode radius
  authorization-scheme default
+  authorization-mode local
  accounting-scheme default
+  accounting-mode none
+ local-aaa-user password policy administrator
+  password history record number 0
+  password expire 0
  domain default
+  authentication-scheme radius
+  accounting-scheme default
+  radius-server default
  domain default_admin
- local-user ope password cipher %$%$bJL6:^$Jq.N']y3CD'O+ff]T%$%$
- local-user ope privilege level 15
- local-user admin password cipher %$%$I6.ASV)hJET,p"Dn.YM%3aXO%$%$
- local-user admin service-type http
- local-user bsnoc password cipher %$%$0#cC#NRDm63Mh3ES2~z$f)}t%$%$
+  authentication-scheme default
+  accounting-scheme default
+ local-user admin password irreversible-cipher $1c$>k;UQ^47"D$D!y~O3Eu5TaBST:(l^yOO!#9MPnN,D=5aU(d=\O9$
+ local-user admin privilege level 15
+ local-user admin service-type terminal http
+ local-user bsnoc password irreversible-cipher $1c$[D3=B-JgJL$h3%*,_&t&RvG`z;DWD59:A`kVmYfH~5LSi$rE6CD$
  local-user bsnoc privilege level 15
- local-user moses password cipher %$%$~~pT1K3bN48X~f99N!M;00'{%$%$
- local-user moses privilege level 15
- local-user fabian password cipher %$%$&D-:BZ)#2YB\["X<y"M=fne\%$%$
- local-user fabian privilege level 15
- local-user naveen password cipher %$%$WOOeEiOX7T}bN3Qc`'rGfXOF%$%$
- local-user naveen privilege level 15
- local-user adewunmi password cipher %$%$o^NZ8,1T-1OT8HU:W6,8fPG>%$%$
- local-user adewunmi privilege level 15
+ local-user bsnoc service-type telnet
+ local-user ademola password irreversible-cipher $1c$VO~t7m$.DU$AeXoQ7)Z[4\c]pVlU|8Dv+uKRx*K''eG7_Wu't`*$
+ local-user ademola privilege level 15
+ local-user ademola service-type telnet terminal
+ local-user idrisoye password irreversible-cipher $1c$];j>6arOuR$k4#D2~!&9>Vw'`V("3OXJd)v3#P"](U,'q8"pD]=$
+ local-user idrisoye privilege level 15
+ local-user idrisoye service-type telnet terminal
 #
 interface Vlanif1
 #
@@ -206,138 +236,165 @@ interface Vlanif1501
 #
 interface Vlanif3007
 #
-interface Ethernet0/0/1
- description FUG PENSION
- shutdown
- port link-type access
- port default vlan 2703
+interface MEth0/0/1
+ ip address 192.168.1.253 255.255.255.0
 #
-interface Ethernet0/0/2
- description AXA MANSARD EBUTE METTA LL NERA RADIO
- shutdown
- port link-type access
- port default vlan 1522
+interface GigabitEthernet0/0/1
 #
-interface Ethernet0/0/3
+interface GigabitEthernet0/0/2
+ description TATA-OLAM IGANMU-FIBER[VLAN-2256]|100Mbps
+ port link-type access
+ port default vlan 2256
+#
+interface GigabitEthernet0/0/3
+#
+interface GigabitEthernet0/0/4
+ undo negotiation auto
+ description TATA-OLAM IGANMU-RADIO[VLAN-2257]|100Mbps
+ port link-type access
+ port default vlan 2257
+#
+interface GigabitEthernet0/0/5
+#
+interface GigabitEthernet0/0/6
+ description TATA-OLAM IGANMU-RADIO[VLAN-2257]|100Mbps
+ port link-type access
+ port default vlan 2257
+#
+interface GigabitEthernet0/0/7
+#
+interface GigabitEthernet0/0/8
+ description TATA-OLAM IGANMU-RADIO[VLAN-2256]|100Mbps-test
+ port link-type access
+ port default vlan 2256
+#
+interface GigabitEthernet0/0/9
+ description FIRST REGISTRARS LAGOS HQ FIBER | 50MB
+ port link-type access
+ port default vlan 3421
+#
+interface GigabitEthernet0/0/10
+ description FIRST REGISTRARS LAGOS HQ RADIO | 50MB
+ port link-type access
+ port default vlan 3421
+#
+interface GigabitEthernet0/0/11
+#
+interface GigabitEthernet0/0/12
+#
+interface GigabitEthernet0/0/13
+#
+interface GigabitEthernet0/0/14
+#
+interface GigabitEthernet0/0/15
+#
+interface GigabitEthernet0/0/16
+#
+interface GigabitEthernet0/0/17
+#
+interface GigabitEthernet0/0/18
+#
+interface GigabitEthernet0/0/19
+#
+interface GigabitEthernet0/0/20
+#
+interface GigabitEthernet0/0/21
+#
+interface GigabitEthernet0/0/22
+#
+interface GigabitEthernet0/0/23
+#
+interface GigabitEthernet0/0/24
+#
+interface GigabitEthernet0/0/25
  description ORANGE HEINEKEN-IGAMU-HQ
  port link-type trunk
  port trunk allow-pass vlan 1495 1677
- undo negotiation auto
- speed 100
 #
-interface Ethernet0/0/4
- description FORTE OIL  4MB INTERNET
- port link-type access
- port default vlan 1114
-#
-interface Ethernet0/0/5
- description NIGERIA RAILWAY CORPORATION (DUAL LINK)
- shutdown
- port link-type trunk
- port trunk allow-pass vlan 1492 2554
- undo negotiation auto
- speed 100
-#
-interface Ethernet0/0/6
- description ceragon mgt
- port link-type access
- port default vlan 1496
-#
-interface Ethernet0/0/7
- description STerling Bank Willoughby Ebute Metta
- port link-type access
- port default vlan 3034
-#
-interface Ethernet0/0/8
+interface GigabitEthernet0/0/26
  description SUNFLAG  IGANMU 15MB INTERNET
  port link-type trunk
  port trunk allow-pass vlan 1365 1369 1493
- undo negotiation auto
- speed 100
 #
-interface Ethernet0/0/9
+interface GigabitEthernet0/0/27
  description ALLIANZ INSURANCE PRI
  port link-type trunk
  port trunk allow-pass vlan 1492
- undo negotiation auto
- speed 100
 #
-interface Ethernet0/0/10
- description AXA_MANSARD-LL-R-NERA
- shutdown
- port link-type trunk
- port trunk allow-pass vlan 1493 1579
-#
-interface Ethernet0/0/11
-#
-interface Ethernet0/0/12
+interface GigabitEthernet0/0/28
  description CONOIL HQ APAPA - NERA 10.155.198.219
  port link-type trunk
  port trunk allow-pass vlan 2 15 812 1123 1497 1501 2402 to 2403 2405 to 2406 2611 2615
  port trunk allow-pass vlan 2621 to 2622 2625 3876
 #
-interface Ethernet0/0/13
+interface GigabitEthernet0/0/29
  description IO-TECH-SURULERE-INT |55M
  port link-type access
  port default vlan 1105
 #
-interface Ethernet0/0/14
- description IPEXPRESS CONVENANT CENTRE IGANMU INTERNET | 45M
- port link-type trunk
- port trunk allow-pass vlan 1503 1784
-#
-interface Ethernet0/0/15
- description SAHARA-IJORA-INT | 100M
+interface GigabitEthernet0/0/30
+ description SAHARA-IJORA-INTERNET IOTECH-RADIO | 100MB
  port link-type access
  port default vlan 1678
 #
-interface Ethernet0/0/16
+interface GigabitEthernet0/0/31
  description IPEXPRESS CONVENANT CENTRE IGANMU INTERNET | 45M
  port link-type trunk
  port trunk allow-pass vlan 1503 1784
 #
-interface Ethernet0/0/17
-#
-interface Ethernet0/0/18
-#
-interface Ethernet0/0/19
-#
-interface Ethernet0/0/20
-#
-interface Ethernet0/0/21
-#
-interface Ethernet0/0/22
-#
-interface Ethernet0/0/23
-#
-interface Ethernet0/0/24
-#
-interface GigabitEthernet0/0/1
-#
-interface GigabitEthernet0/0/2
+interface GigabitEthernet0/0/32
+ undo negotiation auto
  description UPLINK TO DCN IP/MPLS GE 0/1/1
  port link-type trunk
  port trunk allow-pass vlan 2 15 805 812 1105 1114 to 1115 1123 1365 1369 1492 to 1493
- port trunk allow-pass vlan 1495 to 1497 1501 1503 1522 1578 to 1579 1677 to 1678 1784 2402 to 2403 2405 to 2406 2433
- port trunk allow-pass vlan 2554 2611 2615 2621 to 2622 2625 2703 to 2704 3007 3034 3125 3129
- port trunk allow-pass vlan 3876
- undo negotiation auto
+ port trunk allow-pass vlan 1495 to 1497 1501 1503 1522 1578 to 1579 1677 to 1678 1784 2256 to 2257 2402 to 2403 2405 to 2406
+ port trunk allow-pass vlan 2433 2554 2611 2615 2621 to 2622 2625 2703 to 2704 3007 3034 3125
+ port trunk allow-pass vlan 3129 3421 3876
+#
+interface XGigabitEthernet0/0/1
+ description TATA-OLAM IGANMU-RADIO[VLAN-2257]|100Mbps
+ port link-type access
+ port default vlan 2257
+#
+interface XGigabitEthernet0/0/2
+#
+interface XGigabitEthernet0/0/3
+#
+interface XGigabitEthernet0/0/4
 #
 interface NULL0
 #
- ip route-static 0.0.0.0 0.0.0.0 10.248.246.1
+undo icmp name timestamp-request receive
 #
- snmp-agent
- snmp-agent local-engineid 000007DB7F00000100006BB3
- snmp-agent community read cipher %$%$t>V)TsiJ"=a$=92{5q;@j=4+%$%$
- snmp-agent sys-info version all
+ip route-static 0.0.0.0 0.0.0.0 10.248.246.1
+#
+snmp-agent
+snmp-agent local-engineid 800007DB03BC76C52108C0
+snmp-agent community write cipher %^%#vXdq>oPHd4Yb]%9PnuP3KV+v@n3F8Qrh,pER%ZPG>2Ze4iPoxF|3bI;I\RlD.f~dN.#\VB&W+]X4DY{R%^%#
+snmp-agent sys-info version all
+#
+ssh server cipher aes256_ctr aes128_ctr
+ssh server hmac sha2_256
+ssh client cipher aes256_ctr aes128_ctr
+ssh client hmac sha2_256
+ssh server dh-exchange min-len 2048
 #
 user-interface con 0
- authentication-mode aaa
+ authentication-mode password
+ set authentication password cipher $1a$oluf,NMeP7$BRjI6%>1o>g1%3;2z)!HB11XFH%XTV[PYEKhz5o'$
 user-interface vty 0 4
  authentication-mode aaa
+ protocol inbound all
+user-interface vty 16 20
+ authentication-mode aaa
+ user privilege level 15
+ protocol inbound telnet
 #
-port-group link-type
+dot1x-access-profile name dot1x_access_profile
+#
+mac-access-profile name mac_access_profile
+#
+ops
 #
 return
-[BS-LAG-392]
+[LAG-392_HUA-S-5335]

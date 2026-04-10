@@ -1,5 +1,5 @@
      +--------------------------------------------------------------------+
-     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
      ¦              (X server, SSH client and network tools)              ¦
      ¦                                                                    ¦
      ¦ ? Your computer drives are accessible through the /drives path     ¦
@@ -7,10 +7,10 @@
      ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
      ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
      ¦                                                                    ¦
-     ¦                     Registered to RT (1 user)                      ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
      +--------------------------------------------------------------------+
 
- ? 2025-11-13 ? ? 07:25.52 ? ? /home/mobaxterm ? telnet 10.248.249.29
+ ? 2026-04-08 ? ? 12:06.07 ? ? /home/mobaxterm ? telnet 10.248.249.29
 Connected to 10.248.249.29.
 Entering character mode
 Escape character is '^]'.
@@ -54,13 +54,13 @@ Fa0/6                          up             up       SAPPHITEL LIMITED ABUJA |
 Fa0/7                          up             up       SOCIETY FOR FAMILY HEALTH ABUJA | 60MB INTERNET
 Fa0/8                          down           down
 Fa0/9                          up             up       ECOWAS Parliament
-Fa0/10                         up             up       DELOITE_ABUJA
+Fa0/10                         up             up       DELOITTE ABUJA-LAGOS LEASED LINE
 Fa0/11                         admin down     down     AFREXIM BANK GUEST HOUSE ABJ005 | 20MB
 Fa0/12                         down           down
 Fa0/13                         down           down     COOL-FM--45MB
 Fa0/14                         up             up       FRENCH EMBASSY 10MB ABUJA
 Fa0/15                         down           down     UNION-BANK-AREA8-ABUJA
-Fa0/16                         down           down     AMSCO ESTATE GALADIMAWA ABUJA | SWIFT-TALK
+Fa0/16                         admin down     down     AMSCO ESTATE GALADIMAWA ABUJA | SWIFT-TALK
 Fa0/17                         down           down
 Fa0/18                         up             up       SHERATON-ABUJA
 Fa0/19                         up             up       SW GLOBAL GARKI-AREA11 ABUJA | 45MB
@@ -71,10 +71,10 @@ Fa0/23                         down           down
 Fa0/24                         down           down     TRUSTFUND-ABJ-KADUNA || 1Mbps
 Gi0/1                          up             up       || DCN-PORT-GE 0/1/8
 Gi0/2                          up             up       TRUNK TO HU-10-GIG-SWITCH GE0/0/3
-BS-ABJ-005-01#  sh run
+BS-ABJ-005-01#     sh run
 Building configuration...
 
-Current configuration : 9861 bytes
+Current configuration : 9890 bytes
 !
 version 12.2
 no service pad
@@ -432,7 +432,7 @@ interface FastEthernet0/9
  switchport mode access
 !
 interface FastEthernet0/10
- description DELOITE_ABUJA
+ description DELOITTE ABUJA-LAGOS LEASED LINE
  switchport trunk allowed vlan 1000,1001
  switchport mode trunk
 !
@@ -467,6 +467,7 @@ interface FastEthernet0/16
  location civic-location-id none
  switchport access vlan 2514
  switchport mode access
+ shutdown
 !
 interface FastEthernet0/17
 !

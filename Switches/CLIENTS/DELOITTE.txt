@@ -1,0 +1,219 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
+     +--------------------------------------------------------------------+
+
+ ? 2026-04-08 ? ? 11:06.16 ? ? /home/mobaxterm ? telnet 10.248.246.28
+Connected to 10.248.246.28.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+GLO-BS-DELOITTE>en
+Password:
+GLO-BS-DELOITTE#sh run
+Building configuration...
+
+Current configuration : 2584 bytes
+!
+version 12.2
+no service pad
+service timestamps debug uptime
+service timestamps log uptime
+service password-encryption
+service unsupported-transceiver
+!
+hostname GLO-BS-DELOITTE
+!
+enable secret 5 $1$JdI5$JwQOLpyX7YHJMlCPpWyNT.
+!
+no aaa new-model
+system mtu routing 1500
+vtp mode transparent
+ip subnet-zero
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 560
+ name DELOITTE-INTERNET
+!
+vlan 566
+ name DELOITTE_INTERNET
+!
+vlan 805
+ name ENT-SW-MGT
+!
+vlan 968
+ name DELOITTE-LAG-PH
+!
+vlan 1000
+ name DELOITTE-LAG-ABJ
+!
+!
+interface FastEthernet0/1
+ description DELOITTE INTERNET
+ switchport access vlan 566
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/2
+ description DELOITTE LAGOS - ABUJA !! LAG-PHC
+ switchport trunk allowed vlan 968,1000
+ switchport mode trunk
+!
+interface FastEthernet0/3
+!
+interface FastEthernet0/4
+ description Test_PORT
+ switchport access vlan 560
+ switchport mode access
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+ description UPLINK TO GLO NETWORK
+ switchport trunk allowed vlan 560,566,968,1000
+ switchport mode trunk
+!
+interface GigabitEthernet0/1
+ description UPLINK TO GLO NETWORK
+ switchport trunk allowed vlan 560,566,805,968,1000
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet0/2
+ description DELOITTE STM1 INTERNET
+ switchport access vlan 566
+ switchport mode access
+ spanning-tree portfast
+!
+interface Vlan1
+ no ip address
+ no ip route-cache
+!
+interface Vlan100
+ no ip address
+ no ip route-cache
+!
+interface Vlan805
+ ip address 10.248.246.28 255.255.255.192
+ no ip route-cache
+!
+interface Vlan968
+ ip address 12.12.12.13 255.255.255.0
+ no ip route-cache
+!
+interface Vlan1000
+ ip address 13.13.13.13 255.255.255.0
+ no ip route-cache
+!
+ip default-gateway 10.248.246.1
+ip http server
+ip http secure-server
+snmp-server community globacom RO
+!
+control-plane
+!
+!
+line con 0
+ password 7 1234040513050908263A
+ login
+line vty 0 4
+ password 7 1234040513050908263A
+ login
+line vty 5 15
+ login
+!
+end
+
+GLO-BS-DELOITTE#   sh int des
+Interface                      Status         Protocol Description
+Vl1                            up             down
+Vl100                          down           down
+Vl805                          up             up
+Vl968                          up             up
+Vl1000                         up             up
+Fa0/1                          down           down     DELOITTE INTERNET
+Fa0/2                          up             up       DELOITTE LAGOS - ABUJA !! LAG-PHC
+Fa0/3                          down           down
+Fa0/4                          down           down     Test_PORT
+Fa0/5                          down           down
+Fa0/6                          down           down
+Fa0/7                          down           down
+Fa0/8                          down           down
+Fa0/9                          down           down
+Fa0/10                         down           down
+Fa0/11                         down           down
+Fa0/12                         down           down
+Fa0/13                         down           down
+Fa0/14                         down           down
+Fa0/15                         down           down
+Fa0/16                         down           down
+Fa0/17                         down           down
+Fa0/18                         down           down
+Fa0/19                         down           down
+Fa0/20                         down           down
+Fa0/21                         down           down
+Fa0/22                         down           down
+Fa0/23                         down           down
+Fa0/24                         up             up       UPLINK TO GLO NETWORK
+Gi0/1                          up             up       UPLINK TO GLO NETWORK
+Gi0/2                          up             up       DELOITTE STM1 INTERNET
+GLO-BS-DELOITTE#

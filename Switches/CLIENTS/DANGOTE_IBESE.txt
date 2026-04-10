@@ -1,0 +1,244 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
+     +--------------------------------------------------------------------+
+
+ ? 2026-04-08 ? ? 11:58.39 ? ? /home/mobaxterm ? telnet 10.248.246.32
+Connected to 10.248.246.32.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+GLOBACOM-2960-SW-DANGOTE-IBESE>en
+Password:
+GLOBACOM-2960-SW-DANGOTE-IBESE#sh run
+Building configuration...
+
+Current configuration : 4283 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service unsupported-transceiver
+!
+hostname GLOBACOM-2960-SW-DANGOTE-IBESE
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$lgxf$nO7..iKNRPn1gR6eb9RxC.
+!
+!
+!
+no aaa new-model
+system mtu routing 1500
+vtp mode transparent
+authentication mac-move permit
+ip subnet-zero
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-233444096
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-233444096
+ revocation-check none
+ rsakeypair TP-self-signed-233444096
+!
+!
+crypto pki certificate chain TP-self-signed-233444096
+ certificate self-signed 01
+  30820255 308201BE A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  30312E30 2C060355 04031325 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 32333334 34343039 36301E17 0D393330 33303130 30303035
+  325A170D 32303031 30313030 30303030 5A303031 2E302C06 03550403 1325494F
+  532D5365 6C662D53 69676E65 642D4365 72746966 69636174 652D3233 33343434
+  30393630 819F300D 06092A86 4886F70D 01010105 0003818D 00308189 02818100
+  C539E1BA B576C6D3 79C0EF30 F2CB9531 D6D74476 EE8578CF 124F54E8 2ED30C47
+  7F20448F 48047D76 C34C4FC7 5D926AA2 A90582A3 FF766E56 EA4D214E 7BB75577
+  4B31A279 F364AC1D B902A209 C90C1AE5 DB57EDC0 E7D67092 BD830275 0B5A6DCD
+  7C1AA4D6 45B062B0 ABC14298 9406CD1B 43CD5C15 8BAC6243 BCE83A59 DBBC3FAF
+  02030100 01A37F30 7D300F06 03551D13 0101FF04 05300301 01FF302A 0603551D
+  11042330 21821F47 4C4F4241 434F4D2D 32393630 2D53572D 44414E47 4F54452D
+  49424553 452E301F 0603551D 23041830 168014D6 59022746 C48F9107 C2E9C1DB
+  C4AA7A11 72C08930 1D060355 1D0E0416 0414D659 022746C4 8F9107C2 E9C1DBC4
+  AA7A1172 C089300D 06092A86 4886F70D 01010405 00038181 00378888 6AA84D2E
+  07A36605 0CDE1E9A 8E3C0ED4 4138D521 EB1D77C9 E5B19032 4BF4F177 4B6130DB
+  08AA4009 721B782D 89A81B12 7C08391F E6039439 14EC851F C2084022 F3370F94
+  A8D7B237 AB5ED9D9 C2137662 C57D9AC6 B76A57D9 DE4E44AE 07913FA3 D755E2B0
+  4C93AF5E 32415986 BC55D916 86E3927C 550DD95E DD1F0911 F2
+  quit
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree etherchannel guard misconfig
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 805
+ name GLO-NEW-SWITCH-MGT
+!
+vlan 1501
+ name BS-MGT
+!
+vlan 1898
+ name DANGOTE-IBESE
+!
+vlan 3854
+ name DANGOTE-IBES-L3-MPLS
+!
+!
+!
+interface FastEthernet0/1
+ description DANGOTE IBESE
+ switchport access vlan 1898
+ switchport mode access
+!
+interface FastEthernet0/2
+ description DANGOTE IBESE_FACING_IGB801
+ switchport trunk allowed vlan 805,1501,1898,3854
+ switchport mode trunk
+!
+interface FastEthernet0/3
+ description DANGOTE IBESE
+ switchport access vlan 3854
+ switchport mode access
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+ switchport access vlan 1501
+ switchport mode access
+!
+interface GigabitEthernet0/1
+ description DANGOTE IBESE_FACING_IGB801-RTR-GE-0/2/8-DIRECLY
+ switchport trunk allowed vlan 805,1898
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ description TO-DANGOTE IBESE-ROUTER-175M
+ switchport trunk allowed vlan 1898
+ switchport mode trunk
+ media-type rj45
+ speed auto 1000
+ duplex full
+!
+interface Vlan1
+ no ip address
+ no ip route-cache
+ shutdown
+!
+interface Vlan805
+ ip address 10.248.246.32 255.255.255.192
+ no ip route-cache
+!
+interface Vlan1501
+ ip address 10.248.249.116 255.255.255.0
+ no ip route-cache
+!
+interface Vlan1898
+ ip address 3.3.3.5 255.255.255.0
+ no ip route-cache
+!
+ip default-gateway 10.248.246.1
+ip http server
+ip http secure-server
+ip sla enable reaction-alerts
+snmp-server community Globacom123* RO
+!
+line con 0
+ password Maranellq
+ login
+line vty 0 4
+ password Maranellq
+ login
+line vty 5 15
+ login
+!
+end
+
+GLOBACOM-2960-SW-DANGOTE-IBESE#       sh int des
+Interface                      Status         Protocol Description
+Vl1                            admin down     down
+Vl805                          up             up
+Vl1501                         up             down
+Vl1898                         up             up
+Fa0/1                          down           down     DANGOTE IBESE
+Fa0/2                          down           down     DANGOTE IBESE_FACING_IGB801
+Fa0/3                          down           down     DANGOTE IBESE
+Fa0/4                          down           down
+Fa0/5                          down           down
+Fa0/6                          down           down
+Fa0/7                          down           down
+Fa0/8                          down           down
+Fa0/9                          down           down
+Fa0/10                         down           down
+Fa0/11                         down           down
+Fa0/12                         down           down
+Fa0/13                         down           down
+Fa0/14                         down           down
+Fa0/15                         down           down
+Fa0/16                         down           down
+Fa0/17                         down           down
+Fa0/18                         down           down
+Fa0/19                         down           down
+Fa0/20                         down           down
+Fa0/21                         down           down
+Fa0/22                         down           down
+Fa0/23                         down           down
+Fa0/24                         down           down
+Gi0/1                          up             up       DANGOTE IBESE_FACING_IGB801-RTR-GE-0/2/8-DIRECLY
+Gi0/2                          up             up       TO-DANGOTE IBESE-ROUTER-175M
+GLOBACOM-2960-SW-DANGOTE-IBESE#

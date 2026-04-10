@@ -1,0 +1,283 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
+     +--------------------------------------------------------------------+
+
+ ? 2026-04-08 ? ? 11:02.15 ? ? /home/mobaxterm ? telnet 10.248.249.76
+Connected to 10.248.249.76.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<JULIUS-BERGER-HQ-ABUJA>sys
+Enter system view, return user view with Ctrl+Z.
+[JULIUS-BERGER-HQ-ABUJA]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/1 Interface
+Eth0/0/2                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/2 Interface
+Eth0/0/3                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/3 Interface
+Eth0/0/4                      down    down     JBN TO GERMANY
+Eth0/0/5                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/5 Interface
+Eth0/0/6                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/6 Interface
+Eth0/0/7                      down    down     Julius_Berger_Uyo_6MB
+Eth0/0/8                      down    down     Julius_Berger_Uyo_6MB
+Eth0/0/9                      down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/9 Interface
+Eth0/0/10                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/10 Interface
+Eth0/0/11                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/11 Interface
+Eth0/0/12                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/12 Interface
+Eth0/0/13                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/13 Interface
+Eth0/0/14                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/14 Interface
+Eth0/0/15                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/15 Interface
+Eth0/0/16                     down    down     JB-WARRI
+Eth0/0/17                     down    down     JULIUS-BERG-BONNY-BODO
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/19 Interface
+Eth0/0/20                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/20 Interface
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/24 Interface
+GE0/0/1                       up      up       UPLINK TO GLO NETWORK
+GE0/0/2                       up      up       CONNECTION TO JULIUS BERGER ROUTE
+                                               R
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif1224                    up      down     HUAWEI, Quidway Series, Vlanif122
+                                               4 Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1630                    up      down     HUAWEI, Quidway Series, Vlanif163
+                                               0 Interface
+Vlanif1872                    up      up       HUAWEI, Quidway Series, Vlanif187
+                                               2 Interface
+Vlanif1874                    up      up       HUAWEI, Quidway Series, Vlanif187
+                                               4 Interface
+[JULIUS-BERGER-HQ-ABUJA]             dis cur
+#
+!Software Version V100R006C03
+ sysname JULIUS-BERGER-HQ-ABUJA
+#
+ vlan batch 1210 1221 1223 to 1224 1501 1611 1630 1641 1720 1867 1872
+ vlan batch 1874 2455 2522 2544 2800 to 2802
+#
+ undo http server enable
+#
+vlan 1210
+ description JB LEASED LINE TO JB CALABAR 2Mb
+vlan 1221
+ description LEASED LINE FROM CALABAR
+vlan 1223
+ description JULIUS-BERGER-BENIN
+vlan 1224
+ description JULIUS-BERGER-BENIN-2
+vlan 1501
+ description mManagement Vlan
+vlan 1611
+ description JULIUS BERGER INTERNET
+vlan 1630
+ description JBN TO GERMANY
+vlan 1641
+ description JBN-ABJ-LAG
+vlan 1720
+ description JB_UYO
+vlan 1867
+ description JULIUS-BERG-BONNY-BODO
+vlan 1872
+ description JB-LL-WARRI-4M
+vlan 1874
+ description JB-BONNY-BODO
+vlan 2522
+ description JULIUS-BERGER-ABJ-LAG
+vlan 2544
+ description LAGOS-IJORA-ABUJA
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %$%$I6.ASV)hJET,p"Dn.YM%3aXO%$%$
+ local-user admin service-type http
+ local-user bsnoc password cipher %$%$#Q%IH^d&GUK~,[JA^iR28TKB%$%$
+ local-user bsnoc privilege level 3
+ local-user bsnoc service-type telnet terminal ssh ftp
+ local-user huawei password cipher %$%$66*zJAa:UCa-~C;-eA%.SKB9%$%$
+ local-user huawei privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif1224
+#
+interface Vlanif1501
+ ip address 10.248.249.76 255.255.255.0
+#
+interface Vlanif1630
+#
+interface Vlanif1872
+ ip address 13.13.13.3 255.255.255.0
+#
+interface Vlanif1874
+ ip address 192.168.7.1 255.255.255.0
+#
+interface Ethernet0/0/1
+ port link-type access
+ port default vlan 1611
+#
+interface Ethernet0/0/2
+ port link-type access
+ port default vlan 1611
+#
+interface Ethernet0/0/3
+ port link-type access
+ port default vlan 1630
+#
+interface Ethernet0/0/4
+ description JBN TO GERMANY
+ port link-type access
+ port default vlan 1630
+#
+interface Ethernet0/0/5
+ port link-type access
+ port default vlan 1641
+#
+interface Ethernet0/0/6
+ port link-type access
+ port default vlan 1641
+#
+interface Ethernet0/0/7
+ description Julius_Berger_Uyo_6MB
+ port link-type access
+ port default vlan 1720
+#
+interface Ethernet0/0/8
+ description Julius_Berger_Uyo_6MB
+ port link-type access
+ port default vlan 1720
+#
+interface Ethernet0/0/9
+ port link-type access
+ port default vlan 2800
+#
+interface Ethernet0/0/10
+ port link-type access
+ port default vlan 2800
+#
+interface Ethernet0/0/11
+ port link-type access
+ port default vlan 2801
+#
+interface Ethernet0/0/12
+ port link-type access
+ port default vlan 2801
+#
+interface Ethernet0/0/13
+ port link-type access
+ port default vlan 2802
+#
+interface Ethernet0/0/14
+ port link-type access
+ port default vlan 2802
+#
+interface Ethernet0/0/15
+ port link-type access
+ port default vlan 2802
+#
+interface Ethernet0/0/16
+ description JB-WARRI
+ port link-type access
+ port default vlan 1872
+#
+interface Ethernet0/0/17
+ description JULIUS-BERG-BONNY-BODO
+ port link-type access
+ port default vlan 1874
+#
+interface Ethernet0/0/18
+#
+interface Ethernet0/0/19
+#
+interface Ethernet0/0/20
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+#
+interface GigabitEthernet0/0/1
+ description UPLINK TO GLO NETWORK
+ port link-type trunk
+ port trunk allow-pass vlan 1210 1221 to 1224 1501 1611 1630 1641 1720 1867 1872 1874
+ port trunk allow-pass vlan 2522 2800 to 2802
+ multicast-suppression 50
+ broadcast-suppression 50
+#
+interface GigabitEthernet0/0/2
+ description CONNECTION TO JULIUS BERGER ROUTER
+ port link-type trunk
+ port trunk allow-pass vlan 1210 1221 to 1224 1611 1630 1641 1720 1867 1872 1874 2522
+ port trunk allow-pass vlan 2800 to 2802
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100007D72
+ snmp-agent community read cipher %$%$)wgWC^RW5C2Y<7P&rf#7S8/&%$%$
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode password
+ set authentication password cipher %$%$uk\]G&h9H7-bu\#QG;OQ,*!uPep,N[%yBHGn7-U{xO()"0'"%$%$
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[JULIUS-BERGER-HQ-ABUJA]

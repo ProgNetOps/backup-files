@@ -1,0 +1,296 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
+     +--------------------------------------------------------------------+
+
+ ? 2026-04-08 ? ? 11:01.31 ? ? /home/mobaxterm ? telnet 10.248.249.228
+Connected to 10.248.249.228.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+NNPC-CHQ>en
+Password:
+NNPC-CHQ#sh int des
+Interface                      Status         Protocol Description
+Vl1                            up             up
+Vl200                          up             up
+Vl806                          up             up
+Vl1501                         up             up
+Vl3420                         up             up
+Fa0                            down           down
+Gi1/0/1                        up             up       UPLINK TO GLO FIBER NETWORK
+Gi1/0/2                        down           down     NNPC TEMPORARY 450 UPGRADE
+Gi1/0/3                        down           down     NNPC TEMPORARY 450 UPGRADE
+Gi1/0/4                        up             up
+Gi1/0/5                        down           down
+Gi1/0/6                        down           down
+Gi1/0/7                        down           down
+Gi1/0/8                        down           down
+Gi1/0/9                        down           down     CONNECTION TO NNPC CPE 1 IWAN PRIMARY ROUTER
+Gi1/0/10                       down           down     CONNECTION TO NNPC CPE 2 IWAN BACKUP ROUTER
+Gi1/0/11                       down           down
+Gi1/0/12                       down           down
+Gi1/0/13                       down           down
+Gi1/0/14                       down           down
+Gi1/0/15                       down           down
+Gi1/0/16                       down           down
+Gi1/0/17                       down           down
+Gi1/0/18                       down           down
+Gi1/0/19                       down           down
+Gi1/0/20                       down           down
+Gi1/0/21                       up             up
+Gi1/0/22                       down           down
+Gi1/0/23                       up             up       Cisco Prime Infra NMS Server - Primary Port
+Gi1/0/24                       down           down     Cisco Prime Infra NMS Server - Backup Port
+Gi1/1/1                        up             up       NNPC CHQ PRIMARY ROUTER CE1
+Gi1/1/2                        up             up       NNPC CHQ PRIMARY ROUTER CE1 LAN CONNECTION
+Gi1/1/3                        up             up       NNPC CHQ LAN CONNECTION TO CE2 BACKUP ROUTER
+Gi1/1/4                        down           down     NNPC TEMPORARY 450 UPGRADE
+Te1/1/1                        down           down
+Te1/1/2                        down           down
+NNPC-CHQ# sh run
+Building configuration...
+
+Current configuration : 5483 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname NNPC-CHQ
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$iRbB$STpKTGde2YqTGlWzUyqZB/
+!
+!
+!
+no aaa new-model
+switch 1 provision ws-c3750x-24
+system mtu routing 1500
+!
+!
+no ip domain-lookup
+vtp mode transparent
+!
+!
+crypto pki trustpoint HTTPS_SS_CERT_KEYPAIR
+ enrollment selfsigned
+ serial-number
+ revocation-check none
+ rsakeypair HTTPS_SS_CERT_KEYPAIR
+!
+!
+crypto pki certificate chain HTTPS_SS_CERT_KEYPAIR
+ certificate self-signed 01
+  3082025D 308201C6 A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  3F311230 10060355 04031309 4E4E5043 2D434851 2E312930 0F060355 04051308
+  33313934 46313830 30160609 2A864886 F70D0109 0216094E 4E50432D 4348512E
+  301E170D 39343037 32373232 30353431 5A170D32 30303130 31303030 3030305A
+  303F3112 30100603 55040313 094E4E50 432D4348 512E3129 300F0603 55040513
+  08333139 34463138 30301606 092A8648 86F70D01 09021609 4E4E5043 2D434851
+  2E30819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 8100BADB
+  31D448EC 5DE4366E 85C93646 9998E6D0 617A36EC 91AD2711 F41BC91C E33B05AE
+  9991DA8E 2FB42FD7 1B85A048 AD7D4A86 CC64074A C9316822 C0EB90E2 A621D6DE
+  86F80918 583EB43E 7E954025 F2B9F4C5 6FE3C075 0B54B280 CADCBD52 B5ABDAB6
+  0607D382 9A09A951 27B1C613 AA47CB41 705B3CE1 A89C4E5D 9FCC9E89 79EB0203
+  010001A3 69306730 0F060355 1D130101 FF040530 030101FF 30140603 551D1104
+  0D300B82 094E4E50 432D4348 512E301F 0603551D 23041830 1680147B A5B84DA3
+  EC5F2654 F440CE92 1CD7C0A9 87B37D30 1D060355 1D0E0416 04147BA5 B84DA3EC
+  5F2654F4 40CE921C D7C0A987 B37D300D 06092A86 4886F70D 01010405 00038181
+  004FACAC A3119C29 5B6441F8 DCE78D51 CECE7527 4A00A3FD 47E501C2 F45BBAE7
+  B6F51701 E3F600E8 3AF01161 A8C45867 F3561423 D47CE8CC 9B9093EB C80BF75E
+  4C660361 CD48393B DD023FBD 9374D64D E3D26CB9 2F6E5383 B0890909 FCC8B936
+  36C3654F F9B92F2E 71D90E21 C3C1DA6C 39A62392 340B689F D59A6565 92900180 C2
+  quit
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+vlan 4
+ name COMMON-GLO-LAN
+!
+vlan 100
+ name CON-TO-NNPC-LAN
+!
+vlan 150
+ name SWITCH-MGT
+!
+vlan 200
+ name NMS
+!
+vlan 806
+ name GLO-NNPC-SOLAR-NMS
+!
+vlan 1501
+ name MANAGEMENT
+!
+vlan 2179
+ name NNPC-MPLS
+!
+vlan 3420
+ name NNPC-INTERNET
+!
+!
+!
+interface FastEthernet0
+ no ip address
+!
+interface GigabitEthernet1/0/1
+ description UPLINK TO GLO FIBER NETWORK
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 806,1501,2179,3420
+ switchport mode trunk
+ no cdp enable
+!
+interface GigabitEthernet1/0/2
+ description NNPC TEMPORARY 450 UPGRADE
+ switchport access vlan 3420
+ switchport mode access
+!
+interface GigabitEthernet1/0/3
+ description NNPC TEMPORARY 450 UPGRADE
+ switchport access vlan 3420
+ switchport mode access
+!
+interface GigabitEthernet1/0/4
+!
+interface GigabitEthernet1/0/5
+!
+interface GigabitEthernet1/0/6
+!
+interface GigabitEthernet1/0/7
+!
+interface GigabitEthernet1/0/8
+!
+interface GigabitEthernet1/0/9
+ description CONNECTION TO NNPC CPE 1 IWAN PRIMARY ROUTER
+ switchport access vlan 4
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/10
+ description CONNECTION TO NNPC CPE 2 IWAN BACKUP ROUTER
+ switchport access vlan 4
+ switchport mode access
+ duplex full
+ spanning-tree bpdufilter enable
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/11
+!
+interface GigabitEthernet1/0/12
+!
+interface GigabitEthernet1/0/13
+!
+interface GigabitEthernet1/0/14
+!
+interface GigabitEthernet1/0/15
+!
+interface GigabitEthernet1/0/16
+!
+interface GigabitEthernet1/0/17
+!
+interface GigabitEthernet1/0/18
+!
+interface GigabitEthernet1/0/19
+!
+interface GigabitEthernet1/0/20
+!
+interface GigabitEthernet1/0/21
+ switchport access vlan 200
+ switchport mode access
+!
+interface GigabitEthernet1/0/22
+ switchport access vlan 200
+ switchport mode access
+!
+interface GigabitEthernet1/0/23
+ description Cisco Prime Infra NMS Server - Primary Port
+ switchport access vlan 200
+ switchport mode access
+!
+interface GigabitEthernet1/0/24
+ description Cisco Prime Infra NMS Server - Backup Port
+ switchport access vlan 200
+ switchport mode access
+!
+interface GigabitEthernet1/1/1
+ description NNPC CHQ PRIMARY ROUTER CE1
+ switchport access vlan 3420
+ switchport mode access
+!
+interface GigabitEthernet1/1/2
+ description NNPC CHQ PRIMARY ROUTER CE1 LAN CONNECTION
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 4,100,150,200
+ switchport mode trunk
+!
+interface GigabitEthernet1/1/3
+ description NNPC CHQ LAN CONNECTION TO CE2 BACKUP ROUTER
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 4,100,150,200
+ switchport mode trunk
+!
+interface GigabitEthernet1/1/4
+ description NNPC TEMPORARY 450 UPGRADE
+ switchport access vlan 3420
+ switchport mode access
+!
+interface TenGigabitEthernet1/1/1
+!
+interface TenGigabitEthernet1/1/2
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan200
+ ip address 129.205.102.187 255.255.255.240
+!
+interface Vlan806
+ ip address 192.168.101.3 255.255.255.240
+!
+interface Vlan1501
+ ip address 10.248.249.228 255.255.255.0
+!
+interface Vlan3420
+ ip address 197.211.40.254 255.255.255.248
+!
+ip default-gateway 10.248.249.1
+ip classless
+ip http server
+ip http port 62455
+ip http secure-server
+!
+tftp-server nvram:startup-config
+snmp-server community globacom RO
+!
+!
+line con 0
+line vty 0 4
+ password 7 13160E011F09090A7A767B
+ login
+line vty 5 15
+ login
+!
+end
+
+NNPC-CHQ#

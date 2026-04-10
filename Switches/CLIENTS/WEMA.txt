@@ -1,0 +1,255 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
+     +--------------------------------------------------------------------+
+
+ ? 2026-04-10 ? ? 08:20.59 ? ? /home/mobaxterm ? telnet 10.248.248.195
+Connected to 10.248.248.195.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+WEMA-BANK-HQ>en
+Password:
+WEMA-BANK-HQ#sh int des
+Interface                      Status         Protocol Description
+Vl1                            admin down     down
+Vl10                           down           down
+Vl88                           up             up
+Vl805                          up             up
+Vl1507                         up             up
+Vl1532                         down           down
+Vl1632                         up             up
+Fa0/1                          up             up       UPLINK-TO-GLOBACOM-VIA-FIBER
+Fa0/2                          admin down     down     TDM
+Fa0/3                          down           down     MPLS LINKS
+Fa0/4                          up             up       CONNECTION-TO-WEMA-BANK-HQ-ROUTER
+Fa0/5                          up             up       RADIO-BACKUP-LAG128B
+Fa0/6                          down           down
+Fa0/7                          down           down
+Fa0/8                          down           down
+Fa0/9                          down           down
+Fa0/10                         down           down
+Fa0/11                         down           down
+Fa0/12                         down           down
+Fa0/13                         down           down
+Fa0/14                         down           down
+Fa0/15                         down           down
+Fa0/16                         down           down
+Fa0/17                         down           down
+Fa0/18                         down           down
+Fa0/19                         down           down
+Fa0/20                         down           down
+Fa0/21                         down           down
+Fa0/22                         down           down
+Fa0/23                         down           down
+Fa0/24                         down           down
+Gi0/1                          down           down
+Gi0/2                          down           down
+WEMA-BANK-HQ#              sh run
+Building configuration...
+
+Current configuration : 4269 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname WEMA-BANK-HQ
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$YneB$bwniQYHfiUpfWeR2ZTjyK.
+!
+!
+!
+no aaa new-model
+system mtu routing 1950
+vtp mode transparent
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-4246067456
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-4246067456
+ revocation-check none
+ rsakeypair TP-self-signed-4246067456
+!
+!
+crypto pki certificate chain TP-self-signed-4246067456
+ certificate self-signed 01
+  30820245 308201AE A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 34323436 30363734 3536301E 170D3933 30333031 30303233
+  32375A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D34 32343630
+  36373435 3630819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  8100BC80 47330D56 8CF63AB7 AE1497E9 9A1C6C28 B12CF4B5 7B116694 D6108E67
+  CA82EFD5 04CC31F3 9A492DA3 C4DC5AC2 581091F8 FA35D881 98232E50 4FF7948B
+  2F8050A7 41CA4D02 047A6525 B96AAECC 59BC87E8 F4385ABA 54744339 75BE2EF0
+  2864D3B8 037B760D F0EC65CE ADB8D5DE 1075AFCF 07C1EF67 43E407AB 1ED2B155
+  46470203 010001A3 6D306B30 0F060355 1D130101 FF040530 030101FF 30180603
+  551D1104 11300F82 0D57454D 412D4241 4E4B2D48 512E301F 0603551D 23041830
+  168014A9 DF6A34CD 21E2F35D 409098EF 57D4F8D6 C8354E30 1D060355 1D0E0416
+  0414A9DF 6A34CD21 E2F35D40 9098EF57 D4F8D6C8 354E300D 06092A86 4886F70D
+  01010405 00038181 00803B06 DE9F69CE AD98BAC9 E5D3CC13 6F0A5A35 B768C53A
+  C47AA334 B906CB61 F029FDE5 42485406 75E316D3 18320A9F 29DC05F3 70B48A26
+  E1852903 4723D158 1BDF8CF9 1A0A1B6B BAE719A1 F6BEFA04 6165F934 585F351A
+  D15FB87A 78D0A73C C29E086F 97D180E9 84292E6A B34323CE 9656F297 1DDE2676
+  FFA8D56F 2E38A1D4 10
+  quit
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 88
+ name BS-MGT
+!
+vlan 90
+ name WB-IMO-ABEOKUTA
+!
+vlan 530
+ name MPLS_LAYER3
+!
+vlan 805
+ name Switch-mgmt-Radio
+!
+vlan 1489
+ name RADIO-MGT
+!
+vlan 1507
+ name GLO-SWITH-MGT3
+!
+vlan 1632
+ name WEMA-MPLS-LL
+!
+!
+!
+interface FastEthernet0/1
+ description UPLINK-TO-GLOBACOM-VIA-FIBER
+ switchport trunk allowed vlan 88,530,1507,1632
+ switchport mode trunk
+ spanning-tree bpdufilter enable
+!
+interface FastEthernet0/2
+ description TDM
+ switchport trunk allowed vlan 10,20,30,40,50,60,70,80,90,100,110,120,131,132
+ switchport trunk allowed vlan add 134,135,150
+ switchport mode trunk
+ shutdown
+ spanning-tree bpdufilter enable
+!
+interface FastEthernet0/3
+ description MPLS LINKS
+ switchport access vlan 1632
+ switchport mode access
+ spanning-tree bpdufilter enable
+!
+interface FastEthernet0/4
+ description CONNECTION-TO-WEMA-BANK-HQ-ROUTER
+ switchport access vlan 530
+ switchport mode access
+!
+interface FastEthernet0/5
+ description RADIO-BACKUP-LAG128B
+ switchport trunk allowed vlan 88,530,805,1489,1507
+ switchport mode trunk
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ no ip address
+!
+interface Vlan88
+ ip address 10.248.248.195 255.255.255.248
+!
+interface Vlan805
+ ip address 10.248.246.31 255.255.255.192
+!
+interface Vlan1507
+ ip address 10.248.243.5 255.255.255.0
+!
+interface Vlan1532
+ no ip address
+!
+interface Vlan1632
+ ip address 133.30.2.251 255.255.255.0
+!
+ip default-gateway 10.248.248.193
+ip http server
+ip http secure-server
+!
+line con 0
+ password Maranellq
+ login
+line vty 0 4
+ password 7 03295A19070124404218
+ login
+line vty 5 15
+ login
+!
+end
+
+WEMA-BANK-HQ#

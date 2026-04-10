@@ -1,0 +1,1984 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
+     +--------------------------------------------------------------------+
+
+ 
+GLO-1_SAKA25_3750_1#  sh run
+Building configuration...
+
+Current configuration : 16713 bytes
+!
+version 12.2
+no service pad
+service timestamps debug uptime
+service timestamps log uptime
+service password-encryption
+service unsupported-transceiver
+!
+hostname GLO-1_SAKA25_3750_1
+!
+no logging console
+enable secret 5 $1$CLvB$hGLyqslIXuMvYnyQz4lWD.
+!
+username taiwo privilege 15 secret 5 $1$VbFn$6w9JMn9ly/GCVsso2J5VH.
+username ben privilege 15 secret 5 $1$SAtX$gAAk7oxaiM6uVNlCmo1d71
+username donald privilege 15 secret 5 $1$9xSj$euvhwZFJC3AEo0IPPSi2O0
+username richard privilege 15 secret 5 $1$vH18$W8d.Izklciqwo4Gfa8d3W.
+username emeka privilege 15 secret 5 $1$0.dH$vpLoO15vuunkXGJZ10Cd3/
+username onyeka privilege 15 secret 5 $1$5tbf$3IM7m81auXSDRfr6J83hh/
+username chinedu privilege 15 secret 5 $1$rqze$SGDCtKQg84VYnImI4aqIu/
+username jonas privilege 15 secret 5 $1$zCuV$duQFlvHlgiegHURBwqvWi/
+username noc privilege 15 secret 5 $1$1.aE$fz6.YvNvHrFWLF7Kh0Pfk.
+username bizsol privilege 15 secret 5 $1$aIPu$PVr/twVfvj0ZgUNc3NxRq0
+no aaa new-model
+switch 2 provision ws-c3750-24ts
+vtp mode transparent
+ip subnet-zero
+ip routing
+no ip domain-lookup
+!
+!
+!
+!
+!
+!
+no file verify auto
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+no spanning-tree vlan 3,10,44,98,110,130,133,144,151,167,180,233,244,322,422
+no spanning-tree vlan 720,1093,1492,1494,1610,1748,2533,3041
+!
+vlan internal allocation policy ascending
+!
+vlan 2
+!
+vlan 3
+ name new-mgt
+!
+vlan 10
+ name TT
+!
+vlan 19
+!
+vlan 23
+ name SIAE-BASE-STATION
+!
+vlan 44
+ name EMERGENCY-SUPERVISION
+!
+vlan 80
+!
+vlan 98
+ name ACCESSBANK_SWITCH_MANAGEMENT
+!
+vlan 100,105-108
+!
+vlan 110
+ name NES-AFRICA
+!
+vlan 118
+ name SAHARA_INTERNET
+!
+vlan 119
+ name SAHARA_MMA_LL
+!
+vlan 125
+ name ADDAX-LEASED-CIRCUIT
+!
+vlan 126
+ name addax-2
+!
+vlan 130
+!
+vlan 133
+ name MIKE-ADENUGA-CENTRE
+!
+vlan 140
+!
+vlan 141
+ name E-TRANZACT-INTERNET
+!
+vlan 144
+ name ACCESS-BANK-INTERNET
+!
+vlan 150-151
+!
+vlan 167
+ name TECHPOINT-GLOBAL
+!
+vlan 180
+ name SIAE_TEST
+!
+vlan 201
+!
+vlan 233
+ name ECP
+!
+vlan 237
+ name LEE-ENGINEERING
+!
+vlan 241
+ name NOTORE-LAGOS-INT
+!
+vlan 244
+ name AITEO-INTERNET
+!
+vlan 300-301
+!
+vlan 322
+ name XCITE-LEKKI
+!
+vlan 350
+ name FIRS_Mobolaji_BankAnthony
+!
+vlan 351
+ name FIRS_ilupeju
+!
+vlan 352
+ name FIRS_isolo
+!
+vlan 353
+ name FIRS_Festac
+!
+vlan 354
+ name FIRS_Adeniyi_jones
+!
+vlan 355
+ name FIRS_Apapa
+!
+vlan 356
+ name FIRS_Jobi_fele
+!
+vlan 357
+ name FIRS_Awolowo_road
+!
+vlan 358
+ name FIRS_Alaba
+!
+vlan 359
+ name FIRS_Surulere
+!
+vlan 360
+ name FIRS_Ikorodu
+!
+vlan 361
+ name FIRS_Ajah
+!
+vlan 362
+ name FIRS_Agege
+!
+vlan 363
+ name FIRS_VI
+!
+vlan 364
+ name FIRS_Yaba
+!
+vlan 366
+ name FIRS_Oyo
+!
+vlan 367
+ name FIRS_SAGAMU
+!
+vlan 368
+ name FIRS_Oshogbo
+!
+vlan 369
+ name FIRS_Agidingbi
+!
+vlan 370
+ name FIRS_AKURE
+!
+vlan 371
+ name FIRS_IKARE
+!
+vlan 372
+ name FIRS_ORILE
+!
+vlan 373
+ name FIRS_IDEJO
+!
+vlan 374
+ name FIRS_OTA
+!
+vlan 375
+ name FIRS_Ado-Ekiti
+!
+vlan 376
+ name FIRS_Abeokuta
+!
+vlan 377
+ name FIRS-BAR-BEACH
+!
+vlan 400
+ name OLAM-NETCOM
+!
+vlan 402
+ name OLAM-NETCOMM
+!
+vlan 422
+ name WHEATBAKER-INTERNET
+!
+vlan 500-508,510-511,600
+!
+vlan 601
+ name Union_Calabar_Main
+!
+vlan 602
+ name Union_Dugbe_Ibadan
+!
+vlan 605
+ name Parklane_Onitsha
+!
+vlan 606
+ name Union_Akapapava_Benin
+!
+vlan 609
+ name Union_ELEME_PETROCHEMICALS
+!
+vlan 610
+ name Union_Offa_Main
+!
+vlan 611
+ name MMWay_Jos
+!
+vlan 612
+ name Mbiama_Yenogoa
+!
+vlan 613
+ name ogirioko_Markurdi
+!
+vlan 614
+ name Union_Abba_Owerri
+!
+vlan 615
+ name Bank_Road_Jos
+!
+vlan 616
+ name Union_Kingsway_PHC
+!
+vlan 617
+ name Unon_Factory_Road
+!
+vlan 618
+ name Union_Obioma_Yenogoa
+!
+vlan 619
+ name Union_WArri
+!
+vlan 620-625
+!
+vlan 626
+ name Union_Enugu
+!
+vlan 629
+ name Union_UAC_abuja
+!
+vlan 630
+ name UNIONBANK_BIRNIKEBBI
+!
+vlan 631
+ name UNIONBANK
+!
+vlan 632
+ name UNION_BANK
+!
+vlan 633
+ name Union_Bank_Kano
+!
+vlan 634
+ name Union_IGBO_Ukwu
+!
+vlan 635
+ name Union_CADASTRAL_Zone_Abuja
+!
+vlan 636
+ name Union_Oneh
+!
+vlan 637
+ name Union_Yola
+!
+vlan 638
+ name Union_Abakiliki
+!
+vlan 639
+ name Union_Oko
+!
+vlan 640
+ name Union_Gombe
+!
+vlan 641
+ name Union_Oghara_Sapele
+!
+vlan 642
+ name Union_Umuahia
+!
+vlan 643
+ name Union_Umuocham
+!
+vlan 644
+ name Union_Oshogbo
+!
+vlan 645
+ name UNION_BANK_OKOPEDI
+!
+vlan 646
+ name UNION_BANK_KADUNA
+!
+vlan 647
+ name UNION_BANK_OYINGBO_PHC
+!
+vlan 648
+ name UNION_BANK_ONNE_PHC
+!
+vlan 649
+ name UNION_BANK_UYO
+!
+vlan 650
+ name Union_Tinapa
+!
+vlan 651
+ name Union_PH_ROAD_ABA
+!
+vlan 652
+ name Union_Okigwe
+!
+vlan 653
+ name Union_Trans_Amadi
+!
+vlan 654
+ name Union_Sokoto_Main
+!
+vlan 655
+ name Union_Sokoto_Market
+!
+vlan 656
+ name Union_Gusau
+!
+vlan 658
+ name Union_Katsina_Market
+!
+vlan 659
+ name UNION_BANK_ORLU
+!
+vlan 660
+ name UNION_BANK_OWERRI
+!
+vlan 661
+ name UNION_BANK_ARIKAIR_CASHPOINT_ABU
+!
+vlan 662
+ name UNION_BANK_ALIADE_MAKURDI
+!
+vlan 700
+ name Adekunle_Ajasin_uni
+!
+vlan 701
+ name Media_monitoring_APN
+!
+vlan 720
+ name AKER-SOLUTIONS
+!
+vlan 940
+!
+vlan 1093
+ name Pillar_Oil
+!
+vlan 1492
+ name BS-NERA-4-MGT
+!
+vlan 1494
+ name BS-NERA-NNPC-MGT
+!
+vlan 1496
+ name BS-CERAGON-2-MGT
+!
+vlan 1610
+ name SAHARA-ENEGRY-ll
+!
+vlan 1640
+ name ACCESS_BANK_IJB
+!
+vlan 1748
+ name AITEO-IKOYI
+!
+vlan 1851,1900
+!
+vlan 2057
+ name ORANGE-ZIM
+!
+vlan 2533
+ name AITEO-ENERGY-VPLS
+!
+vlan 2907
+ name SAH-ENERGY-LAG-IJORA
+!
+vlan 3041
+ name ORANGE-HUAWEI
+!
+vlan 3157
+ name SAHARA-VPLS
+!
+interface FastEthernet2/0/1
+ description TO-HU-SW@SAKA25
+ switchport access vlan 1900
+ switchport mode access
+!
+interface FastEthernet2/0/2
+ description TECPOINT NESG IKOYI 60Mbps
+ switchport access vlan 167
+ switchport mode access
+!
+interface FastEthernet2/0/3
+ description XCITE LEKKI
+ switchport access vlan 322
+ switchport mode access
+ shutdown
+!
+interface FastEthernet2/0/4
+ description MIKE ADENUGA CENTRE
+ switchport access vlan 133
+ switchport mode access
+ shutdown
+!
+interface FastEthernet2/0/5
+ description ETRANSZACT 45MB INTERNET PRIMARY
+ switchport access vlan 141
+ switchport mode access
+ speed 100
+ duplex full
+!
+interface FastEthernet2/0/6
+ speed 100
+!
+interface FastEthernet2/0/7
+ description PILLAR OIL 6MB INTERNET
+ switchport access vlan 1093
+ switchport mode access
+ shutdown
+!
+interface FastEthernet2/0/8
+ description NEW_AGG_SLOT 7 Port 1
+ switchport access vlan 501
+!
+interface FastEthernet2/0/9
+ description AKER SOLUTIONS
+ switchport access vlan 720
+ switchport mode access
+ shutdown
+!
+interface FastEthernet2/0/10
+ description NEW_AGG_SLOT 9 Port 1
+ switchport access vlan 503
+!
+interface FastEthernet2/0/11
+ description Union_Bank_3rd_Aggr_6416
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet2/0/12
+ description TEK EXPERTS SUPERVISION
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1492,1496
+ switchport mode trunk
+!
+interface FastEthernet2/0/13
+ description trunk to Access_Bank
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 98,100,144,1640
+ duplex full
+!
+interface FastEthernet2/0/14
+ description EMERGING CAPITAL PARTNERS
+ switchport access vlan 233
+ switchport mode access
+ shutdown
+!
+interface FastEthernet2/0/15
+ description NOTORE INTERNET
+ switchport access vlan 241
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet2/0/16
+ description LEE ENGINEERING
+ switchport access vlan 237
+ switchport mode access
+!
+interface FastEthernet2/0/17
+ description CONNECTION TO ADDAX LAGOS
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 2,125,126
+ switchport mode trunk
+!
+interface FastEthernet2/0/18
+ description ZTE_MGT
+ switchport access vlan 1492
+ switchport trunk encapsulation dot1q
+ switchport mode access
+!
+interface FastEthernet2/0/19
+ description FIRS_2ND_aggregator
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 10,366-381
+ switchport mode trunk
+!
+interface FastEthernet2/0/20
+ description UNION_BANK_LOOP_AGG_ 6416_bridge mode_1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet2/0/21
+ description LOOP_AGG_ 6416_bridge mode_2
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet2/0/22
+ description WHEATBAKER INTERNET
+ switchport access vlan 422
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet2/0/23
+ description TRUNK TO CISCO 2960 to 5300
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 141,167,244,1748,2533
+ switchport mode trunk
+!
+interface FastEthernet2/0/24
+ description AITEO ENERGY LEKKI
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 244,1748,2533
+ switchport mode trunk
+!
+interface GigabitEthernet2/0/1
+ description TRUNK-to-IPD@SAKA25-1/1/11 || GE2/1/5
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1-109,111-140,142-4094
+ switchport mode trunk
+ speed nonegotiate
+!
+interface GigabitEthernet2/0/2
+ description CONNECTION TO SAHARA OIL
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3,44,118,119,1610,2907,3157
+ switchport mode trunk
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan2
+ ip address 10.248.248.226 255.255.255.248
+!
+interface Vlan3
+ ip address 10.248.248.123 255.255.255.248
+!
+interface Vlan10
+ ip address 10.248.248.18 255.255.255.248
+!
+interface Vlan11
+ no ip address
+!
+interface Vlan19
+ no ip address
+!
+interface Vlan23
+ ip address 129.205.97.204 255.255.255.248
+!
+interface Vlan50
+ ip address 172.200.20.1 255.255.255.0
+!
+interface Vlan100
+ ip address 172.222.224.1 255.255.255.248
+ shutdown
+!
+interface Vlan105
+ ip address 172.222.224.17 255.255.255.252
+ shutdown
+!
+interface Vlan106
+ ip address 172.222.224.21 255.255.255.252
+ shutdown
+!
+interface Vlan107
+ ip address 172.222.224.25 255.255.255.252
+ shutdown
+!
+interface Vlan108
+ ip address 172.222.224.29 255.255.255.252
+ shutdown
+!
+interface Vlan118
+ no ip address
+!
+interface Vlan119
+ ip address 192.168.4.11 255.255.255.0
+!
+interface Vlan241
+ no ip address
+!
+interface Vlan244
+ ip address 41.203.88.251 255.255.255.248
+!
+interface Vlan300
+ ip address 10.11.11.1 255.255.255.248
+!
+interface Vlan301
+ ip address 10.11.12.1 255.255.255.248
+!
+interface Vlan350
+ no ip address
+ shutdown
+!
+interface Vlan351
+ no ip address
+ shutdown
+!
+interface Vlan352
+ no ip address
+ shutdown
+!
+interface Vlan353
+ no ip address
+ shutdown
+!
+interface Vlan354
+ no ip address
+ shutdown
+!
+interface Vlan355
+ no ip address
+ shutdown
+!
+interface Vlan356
+ no ip address
+ shutdown
+!
+interface Vlan357
+ no ip address
+ shutdown
+!
+interface Vlan358
+ no ip address
+ shutdown
+!
+interface Vlan359
+ no ip address
+ shutdown
+!
+interface Vlan360
+ no ip address
+ shutdown
+!
+interface Vlan361
+ no ip address
+ shutdown
+!
+interface Vlan362
+ no ip address
+ shutdown
+!
+interface Vlan363
+ no ip address
+ shutdown
+!
+interface Vlan364
+ no ip address
+ shutdown
+!
+interface Vlan371
+ description FIRS_IKARE
+ no ip address
+ shutdown
+!
+interface Vlan372
+ description FIRS_ORILE
+ no ip address
+ shutdown
+!
+interface Vlan373
+ no ip address
+ shutdown
+!
+interface Vlan374
+ description FIRS_OTA
+ no ip address
+ shutdown
+!
+interface Vlan376
+ description FIRS_Abeokuta
+ no ip address
+ shutdown
+!
+interface Vlan402
+ no ip address
+!
+interface Vlan500
+ no ip address
+ shutdown
+!
+interface Vlan501
+ no ip address
+ shutdown
+!
+interface Vlan502
+ no ip address
+ shutdown
+!
+interface Vlan503
+ no ip address
+ shutdown
+!
+interface Vlan504
+ ip address 192.168.199.17 255.255.255.252
+!
+interface Vlan505
+ no ip address
+ shutdown
+!
+interface Vlan506
+ no ip address
+!
+interface Vlan507
+ no ip address
+!
+interface Vlan510
+
+GLO-1_SAKA25_3750_1#sh run
+Building configuration...
+
+Current configuration : 16713 bytes
+!
+version 12.2
+no service pad
+service timestamps debug uptime
+service timestamps log uptime
+service password-encryption
+service unsupported-transceiver
+!
+hostname GLO-1_SAKA25_3750_1
+!
+no logging console
+enable secret 5 $1$CLvB$hGLyqslIXuMvYnyQz4lWD.
+!
+username taiwo privilege 15 secret 5 $1$VbFn$6w9JMn9ly/GCVsso2J5VH.
+username ben privilege 15 secret 5 $1$SAtX$gAAk7oxaiM6uVNlCmo1d71
+username donald privilege 15 secret 5 $1$9xSj$euvhwZFJC3AEo0IPPSi2O0
+username richard privilege 15 secret 5 $1$vH18$W8d.Izklciqwo4Gfa8d3W.
+username emeka privilege 15 secret 5 $1$0.dH$vpLoO15vuunkXGJZ10Cd3/
+username onyeka privilege 15 secret 5 $1$5tbf$3IM7m81auXSDRfr6J83hh/
+username chinedu privilege 15 secret 5 $1$rqze$SGDCtKQg84VYnImI4aqIu/
+username jonas privilege 15 secret 5 $1$zCuV$duQFlvHlgiegHURBwqvWi/
+username noc privilege 15 secret 5 $1$1.aE$fz6.YvNvHrFWLF7Kh0Pfk.
+username bizsol privilege 15 secret 5 $1$aIPu$PVr/twVfvj0ZgUNc3NxRq0
+no aaa new-model
+switch 2 provision ws-c3750-24ts
+vtp mode transparent
+ip subnet-zero
+ip routing
+no ip domain-lookup
+!
+!
+!
+!
+!
+!
+no file verify auto
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+no spanning-tree vlan 3,10,44,98,110,130,133,144,151,167,180,233,244,322,422
+no spanning-tree vlan 720,1093,1492,1494,1610,1748,2533,3041
+!
+vlan internal allocation policy ascending
+!
+vlan 2
+!
+vlan 3
+ name new-mgt
+!
+vlan 10
+ name TT
+!
+vlan 19
+!
+vlan 23
+ name SIAE-BASE-STATION
+!
+vlan 44
+ name EMERGENCY-SUPERVISION
+!
+vlan 80
+!
+vlan 98
+ name ACCESSBANK_SWITCH_MANAGEMENT
+!
+vlan 100,105-108
+!
+vlan 110
+ name NES-AFRICA
+!
+vlan 118
+ name SAHARA_INTERNET
+!
+vlan 119
+ name SAHARA_MMA_LL
+!
+vlan 125
+ name ADDAX-LEASED-CIRCUIT
+!
+vlan 126
+ name addax-2
+!
+vlan 130
+!
+vlan 133
+ name MIKE-ADENUGA-CENTRE
+!
+vlan 140
+!
+vlan 141
+ name E-TRANZACT-INTERNET
+!
+vlan 144
+ name ACCESS-BANK-INTERNET
+!
+vlan 150-151
+!
+vlan 167
+ name TECHPOINT-GLOBAL
+!
+vlan 180
+ name SIAE_TEST
+!
+vlan 201
+!
+vlan 233
+ name ECP
+!
+vlan 237
+ name LEE-ENGINEERING
+!
+vlan 241
+ name NOTORE-LAGOS-INT
+!
+vlan 244
+ name AITEO-INTERNET
+!
+vlan 300-301
+!
+vlan 322
+ name XCITE-LEKKI
+!
+vlan 350
+ name FIRS_Mobolaji_BankAnthony
+!
+vlan 351
+ name FIRS_ilupeju
+!
+vlan 352
+ name FIRS_isolo
+!
+vlan 353
+ name FIRS_Festac
+!
+vlan 354
+ name FIRS_Adeniyi_jones
+!
+vlan 355
+ name FIRS_Apapa
+!
+vlan 356
+ name FIRS_Jobi_fele
+!
+vlan 357
+ name FIRS_Awolowo_road
+!
+vlan 358
+ name FIRS_Alaba
+!
+vlan 359
+ name FIRS_Surulere
+!
+vlan 360
+ name FIRS_Ikorodu
+!
+vlan 361
+ name FIRS_Ajah
+!
+vlan 362
+ name FIRS_Agege
+!
+vlan 363
+ name FIRS_VI
+!
+vlan 364
+ name FIRS_Yaba
+!
+vlan 366
+ name FIRS_Oyo
+!
+vlan 367
+ name FIRS_SAGAMU
+!
+vlan 368
+ name FIRS_Oshogbo
+!
+vlan 369
+ name FIRS_Agidingbi
+!
+vlan 370
+ name FIRS_AKURE
+!
+vlan 371
+ name FIRS_IKARE
+!
+vlan 372
+ name FIRS_ORILE
+!
+vlan 373
+ name FIRS_IDEJO
+!
+vlan 374
+ name FIRS_OTA
+!
+vlan 375
+ name FIRS_Ado-Ekiti
+!
+vlan 376
+ name FIRS_Abeokuta
+!
+vlan 377
+ name FIRS-BAR-BEACH
+!
+vlan 400
+ name OLAM-NETCOM
+!
+vlan 402
+ name OLAM-NETCOMM
+!
+vlan 422
+ name WHEATBAKER-INTERNET
+!
+vlan 500-508,510-511,600
+!
+vlan 601
+ name Union_Calabar_Main
+!
+vlan 602
+ name Union_Dugbe_Ibadan
+!
+vlan 605
+ name Parklane_Onitsha
+!
+vlan 606
+ name Union_Akapapava_Benin
+!
+vlan 609
+ name Union_ELEME_PETROCHEMICALS
+!
+vlan 610
+ name Union_Offa_Main
+!
+vlan 611
+ name MMWay_Jos
+!
+vlan 612
+ name Mbiama_Yenogoa
+!
+vlan 613
+ name ogirioko_Markurdi
+!
+vlan 614
+ name Union_Abba_Owerri
+!
+vlan 615
+ name Bank_Road_Jos
+!
+vlan 616
+ name Union_Kingsway_PHC
+!
+vlan 617
+ name Unon_Factory_Road
+!
+vlan 618
+ name Union_Obioma_Yenogoa
+!
+vlan 619
+ name Union_WArri
+!
+vlan 620-625
+!
+vlan 626
+ name Union_Enugu
+!
+vlan 629
+ name Union_UAC_abuja
+!
+vlan 630
+ name UNIONBANK_BIRNIKEBBI
+!
+vlan 631
+ name UNIONBANK
+!
+vlan 632
+ name UNION_BANK
+!
+vlan 633
+ name Union_Bank_Kano
+!
+vlan 634
+ name Union_IGBO_Ukwu
+!
+vlan 635
+ name Union_CADASTRAL_Zone_Abuja
+!
+vlan 636
+ name Union_Oneh
+!
+vlan 637
+ name Union_Yola
+!
+vlan 638
+ name Union_Abakiliki
+!
+vlan 639
+ name Union_Oko
+!
+vlan 640
+ name Union_Gombe
+!
+vlan 641
+ name Union_Oghara_Sapele
+!
+vlan 642
+ name Union_Umuahia
+!
+vlan 643
+ name Union_Umuocham
+!
+vlan 644
+ name Union_Oshogbo
+!
+vlan 645
+ name UNION_BANK_OKOPEDI
+!
+vlan 646
+ name UNION_BANK_KADUNA
+!
+vlan 647
+ name UNION_BANK_OYINGBO_PHC
+!
+vlan 648
+ name UNION_BANK_ONNE_PHC
+!
+vlan 649
+ name UNION_BANK_UYO
+!
+vlan 650
+ name Union_Tinapa
+!
+vlan 651
+ name Union_PH_ROAD_ABA
+!
+vlan 652
+ name Union_Okigwe
+!
+vlan 653
+ name Union_Trans_Amadi
+!
+vlan 654
+ name Union_Sokoto_Main
+!
+vlan 655
+ name Union_Sokoto_Market
+!
+vlan 656
+ name Union_Gusau
+!
+vlan 658
+ name Union_Katsina_Market
+!
+vlan 659
+ name UNION_BANK_ORLU
+!
+vlan 660
+ name UNION_BANK_OWERRI
+!
+vlan 661
+ name UNION_BANK_ARIKAIR_CASHPOINT_ABU
+!
+vlan 662
+ name UNION_BANK_ALIADE_MAKURDI
+!
+vlan 700
+ name Adekunle_Ajasin_uni
+!
+vlan 701
+ name Media_monitoring_APN
+!
+vlan 720
+ name AKER-SOLUTIONS
+!
+vlan 940
+!
+vlan 1093
+ name Pillar_Oil
+!
+vlan 1492
+ name BS-NERA-4-MGT
+!
+vlan 1494
+ name BS-NERA-NNPC-MGT
+!
+vlan 1496
+ name BS-CERAGON-2-MGT
+!
+vlan 1610
+ name SAHARA-ENEGRY-ll
+!
+vlan 1640
+ name ACCESS_BANK_IJB
+!
+vlan 1748
+ name AITEO-IKOYI
+!
+vlan 1851,1900
+!
+vlan 2057
+ name ORANGE-ZIM
+!
+vlan 2533
+ name AITEO-ENERGY-VPLS
+!
+vlan 2907
+ name SAH-ENERGY-LAG-IJORA
+!
+vlan 3041
+ name ORANGE-HUAWEI
+!
+vlan 3157
+ name SAHARA-VPLS
+!
+interface FastEthernet2/0/1
+ description TO-HU-SW@SAKA25
+ switchport access vlan 1900
+ switchport mode access
+!
+interface FastEthernet2/0/2
+ description TECPOINT NESG IKOYI 60Mbps
+ switchport access vlan 167
+ switchport mode access
+!
+interface FastEthernet2/0/3
+ description XCITE LEKKI
+ switchport access vlan 322
+ switchport mode access
+ shutdown
+!
+interface FastEthernet2/0/4
+ description MIKE ADENUGA CENTRE
+ switchport access vlan 133
+ switchport mode access
+ shutdown
+!
+interface FastEthernet2/0/5
+ description ETRANSZACT 45MB INTERNET PRIMARY
+ switchport access vlan 141
+ switchport mode access
+ speed 100
+ duplex full
+!
+interface FastEthernet2/0/6
+ speed 100
+!
+interface FastEthernet2/0/7
+ description PILLAR OIL 6MB INTERNET
+ switchport access vlan 1093
+ switchport mode access
+ shutdown
+!
+interface FastEthernet2/0/8
+ description NEW_AGG_SLOT 7 Port 1
+ switchport access vlan 501
+!
+interface FastEthernet2/0/9
+ description AKER SOLUTIONS
+ switchport access vlan 720
+ switchport mode access
+ shutdown
+!
+interface FastEthernet2/0/10
+ description NEW_AGG_SLOT 9 Port 1
+ switchport access vlan 503
+!
+interface FastEthernet2/0/11
+ description Union_Bank_3rd_Aggr_6416
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet2/0/12
+ description TEK EXPERTS SUPERVISION
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1492,1496
+ switchport mode trunk
+!
+interface FastEthernet2/0/13
+ description trunk to Access_Bank
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 98,100,144,1640
+ duplex full
+!
+interface FastEthernet2/0/14
+ description EMERGING CAPITAL PARTNERS
+ switchport access vlan 233
+ switchport mode access
+ shutdown
+!
+interface FastEthernet2/0/15
+ description NOTORE INTERNET
+ switchport access vlan 241
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+!
+interface FastEthernet2/0/16
+ description LEE ENGINEERING
+ switchport access vlan 237
+ switchport mode access
+!
+interface FastEthernet2/0/17
+ description CONNECTION TO ADDAX LAGOS
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 2,125,126
+ switchport mode trunk
+!
+interface FastEthernet2/0/18
+ description ZTE_MGT
+ switchport access vlan 1492
+ switchport trunk encapsulation dot1q
+ switchport mode access
+!
+interface FastEthernet2/0/19
+ description FIRS_2ND_aggregator
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 10,366-381
+ switchport mode trunk
+!
+interface FastEthernet2/0/20
+ description UNION_BANK_LOOP_AGG_ 6416_bridge mode_1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet2/0/21
+ description LOOP_AGG_ 6416_bridge mode_2
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface FastEthernet2/0/22
+ description WHEATBAKER INTERNET
+ switchport access vlan 422
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet2/0/23
+ description TRUNK TO CISCO 2960 to 5300
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 141,167,244,1748,2533
+ switchport mode trunk
+!
+interface FastEthernet2/0/24
+ description AITEO ENERGY LEKKI
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 244,1748,2533
+ switchport mode trunk
+!
+interface GigabitEthernet2/0/1
+ description TRUNK-to-IPD@SAKA25-1/1/11 || GE2/1/5
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1-109,111-140,142-4094
+ switchport mode trunk
+ speed nonegotiate
+!
+interface GigabitEthernet2/0/2
+ description CONNECTION TO SAHARA OIL
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 3,44,118,119,1610,2907,3157
+ switchport mode trunk
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan2
+ ip address 10.248.248.226 255.255.255.248
+!
+interface Vlan3
+ ip address 10.248.248.123 255.255.255.248
+!
+interface Vlan10
+ ip address 10.248.248.18 255.255.255.248
+!
+interface Vlan11
+ no ip address
+!
+interface Vlan19
+ no ip address
+!
+interface Vlan23
+ ip address 129.205.97.204 255.255.255.248
+!
+interface Vlan50
+ ip address 172.200.20.1 255.255.255.0
+!
+interface Vlan100
+ ip address 172.222.224.1 255.255.255.248
+ shutdown
+!
+interface Vlan105
+ ip address 172.222.224.17 255.255.255.252
+ shutdown
+!
+interface Vlan106
+ ip address 172.222.224.21 255.255.255.252
+ shutdown
+!
+interface Vlan107
+ ip address 172.222.224.25 255.255.255.252
+ shutdown
+!
+interface Vlan108
+ ip address 172.222.224.29 255.255.255.252
+ shutdown
+!
+interface Vlan118
+ no ip address
+!
+interface Vlan119
+ ip address 192.168.4.11 255.255.255.0
+!
+interface Vlan241
+ no ip address
+!
+interface Vlan244
+ ip address 41.203.88.251 255.255.255.248
+!
+interface Vlan300
+ ip address 10.11.11.1 255.255.255.248
+!
+interface Vlan301
+ ip address 10.11.12.1 255.255.255.248
+!
+interface Vlan350
+ no ip address
+ shutdown
+!
+interface Vlan351
+ no ip address
+ shutdown
+!
+interface Vlan352
+ no ip address
+ shutdown
+!
+interface Vlan353
+ no ip address
+ shutdown
+!
+interface Vlan354
+ no ip address
+ shutdown
+!
+interface Vlan355
+ no ip address
+ shutdown
+!
+interface Vlan356
+ no ip address
+ shutdown
+!
+interface Vlan357
+ no ip address
+ shutdown
+!
+interface Vlan358
+ no ip address
+ shutdown
+!
+interface Vlan359
+ no ip address
+ shutdown
+!
+interface Vlan360
+ no ip address
+ shutdown
+!
+interface Vlan361
+ no ip address
+ shutdown
+!
+interface Vlan362
+ no ip address
+ shutdown
+!
+interface Vlan363
+ no ip address
+ shutdown
+!
+interface Vlan364
+ no ip address
+ shutdown
+!
+interface Vlan371
+ description FIRS_IKARE
+ no ip address
+ shutdown
+!
+interface Vlan372
+ description FIRS_ORILE
+ no ip address
+ shutdown
+!
+interface Vlan373
+ no ip address
+ shutdown
+!
+interface Vlan374
+ description FIRS_OTA
+ no ip address
+ shutdown
+!
+interface Vlan376
+ description FIRS_Abeokuta
+ no ip address
+ shutdown
+!
+interface Vlan402
+ no ip address
+!
+interface Vlan500
+ no ip address
+ shutdown
+!
+interface Vlan501
+ no ip address
+ shutdown
+!
+interface Vlan502
+ no ip address
+ shutdown
+!
+interface Vlan503
+ no ip address
+ shutdown
+!
+interface Vlan504
+ ip address 192.168.199.17 255.255.255.252
+!
+interface Vlan505
+ no ip address
+ shutdown
+!
+interface Vlan506
+ no ip address
+!
+interface Vlan507
+ no ip address
+!
+interface Vlan510
+ no ip address
+!
+interface Vlan600
+ no ip address
+!
+interface Vlan601
+ description Union_Calabar_Main
+ no ip address
+ shutdown
+!
+interface Vlan602
+ description Dugbe_Ibadan
+ no ip address
+ shutdown
+!
+interface Vlan605
+ description parklane_Onitsha
+ no ip address
+ shutdown
+!
+interface Vlan606
+ description Union_Akapapava_Benin
+ no ip address
+ shutdown
+!
+interface Vlan609
+ description Union_ELEME_PETROCHEMICALS
+ no ip address
+ shutdown
+!
+interface Vlan610
+ description UNION_OFFA_MAIN
+ no ip address
+ shutdown
+!
+interface Vlan611
+ description UNION_MMW_JOS
+ no ip address
+ shutdown
+!
+interface Vlan612
+ description UNION_Mbiama
+ no ip address
+ shutdown
+!
+interface Vlan613
+ description Ogirioko_Markurdi
+ no ip address
+ shutdown
+!
+interface Vlan614
+ description Union_Abba_Owerri
+ no ip address
+ shutdown
+!
+interface Vlan615
+ description Bank_road_Jos
+ no ip address
+ shutdown
+!
+interface Vlan616
+ description UNION_Kingsway
+ no ip address
+ shutdown
+!
+interface Vlan617
+ description Union_Bank_FactoryRoad
+ no ip address
+ shutdown
+!
+interface Vlan618
+ description Union_Obioma_Yengoa
+ no ip address
+ shutdown
+!
+interface Vlan619
+ description Union_Warri
+ no ip address
+ shutdown
+!
+interface Vlan620
+ description Union_Nnewi
+ no ip address
+ shutdown
+!
+interface Vlan621
+ description Union_Ogbede
+ no ip address
+ shutdown
+!
+interface Vlan622
+ description UNION_BANK_AWKA
+ no ip address
+ shutdown
+!
+interface Vlan623
+ description Union_Orafite
+ no ip address
+ shutdown
+!
+interface Vlan624
+ description Union_Benin
+ no ip address
+ shutdown
+!
+interface Vlan625
+ description Union_Ilorin
+ no ip address
+ shutdown
+!
+interface Vlan626
+ description Union_Enugukwu
+ no ip address
+ shutdown
+!
+interface Vlan627
+ description Union_Akure_Main
+ no ip address
+ shutdown
+!
+interface Vlan628
+ description Union_Oba_Adesida_Akure
+ no ip address
+ shutdown
+!
+interface Vlan629
+ description Union_UAC_Abuja
+ no ip address
+ shutdown
+!
+interface Vlan630
+ description Union_BirniKebi
+ no ip address
+ shutdown
+!
+interface Vlan631
+ description Union_Akpapava_2
+ no ip address
+ shutdown
+!
+interface Vlan632
+ no ip address
+ shutdown
+!
+interface Vlan633
+ description Union_Kano_4MB
+ no ip address
+ shutdown
+!
+interface Vlan634
+ description Union_IGBO_Ukwu
+ no ip address
+ shutdown
+!
+interface Vlan635
+ description Union_Cadastral_zone_abuja
+ no ip address
+ shutdown
+!
+interface Vlan636
+ description Union_Oneh
+ no ip address
+ shutdown
+!
+interface Vlan637
+ description Union_Yola
+ no ip address
+ shutdown
+!
+interface Vlan638
+ description Union_Abakiliki
+ no ip address
+ shutdown
+!
+interface Vlan639
+ description Union_Oko
+ no ip address
+ shutdown
+!
+interface Vlan640
+ description Union_Gombe
+ no ip address
+ shutdown
+!
+interface Vlan641
+ description Union_Oghara_Sapele
+ no ip address
+ shutdown
+!
+interface Vlan642
+ description Union_Umuahia
+ no ip address
+ shutdown
+!
+interface Vlan643
+ description Union_Umuocham
+ no ip address
+ shutdown
+!
+interface Vlan644
+ description Union_Oshogbo
+ no ip address
+ shutdown
+!
+interface Vlan645
+ description Union_Okopedi
+ no ip address
+ shutdown
+!
+interface Vlan646
+ description UNION_BANK_KADUNA
+ no ip address
+ shutdown
+!
+interface Vlan647
+ description UNION_BANK_OYINGBO_PHC
+ no ip address
+ shutdown
+!
+interface Vlan648
+ description UNION_BANK_ONNE_PHC
+ no ip address
+ shutdown
+!
+interface Vlan649
+ description UNION_BANK_UYO
+ no ip address
+ shutdown
+!
+interface Vlan650
+ description Union_Tinapa
+ no ip address
+ shutdown
+!
+interface Vlan651
+ description Union_PH_ROAD_ABA
+ no ip address
+ shutdown
+!
+interface Vlan652
+ description Union_Okigwe
+ no ip address
+ shutdown
+!
+interface Vlan653
+ description Union_Trans_Amadi
+ no ip address
+ shutdown
+!
+interface Vlan654
+ description Union_Sokoto_Main
+ no ip address
+ shutdown
+!
+interface Vlan655
+ description Union_Sokoto_Market
+ no ip address
+ shutdown
+!
+interface Vlan656
+ description Union_Gusau
+ no ip address
+ shutdown
+!
+interface Vlan700
+ no ip address
+!
+interface Vlan701
+ no ip address
+!
+interface Vlan800
+ ip address 172.30.31.2 255.255.255.0
+!
+interface Vlan940
+ no ip address
+!
+interface Vlan1093
+ no ip address
+!
+interface Vlan1492
+ ip address 10.155.197.70 255.255.255.0
+!
+interface Vlan1610
+ ip address 192.168.7.1 255.255.255.0
+!
+interface Vlan1748
+ ip address 200.10.10.1 255.255.255.248
+!
+interface Vlan1851
+ ip address 10.120.120.1 255.255.255.0
+!
+interface Vlan1900
+ no ip address
+ shutdown
+!
+interface Vlan2533
+ ip address 192.168.99.45 255.255.255.0
+!
+interface Vlan3041
+ no ip address
+!
+interface Vlan3157
+ ip address 10.10.10.13 255.255.255.0
+!
+router rip
+ version 2
+ redistribute connected
+ redistribute static
+ network 172.31.0.0
+ network 172.222.0.0
+ network 192.168.199.0
+ no auto-summary
+!
+ip default-gateway 10.248.248.225
+ip classless
+ip route 0.0.0.0 0.0.0.0 10.248.248.225
+ip route 10.240.79.0 255.255.255.0 10.248.248.17
+ip route 10.240.80.0 255.255.255.0 10.248.248.17
+ip route 10.255.15.0 255.255.255.0 172.222.224.2 name ACCESS-BANK
+ip route 10.255.16.0 255.255.255.0 172.222.224.2 name ACCESS-BANK
+ip route 41.203.68.0 255.255.255.0 10.248.248.17
+ip route 41.203.80.0 255.255.255.0 10.248.248.17
+ip http server
+ip http secure-server
+!
+snmp-server community Globacom123* RO
+!
+control-plane
+!
+!
+line con 0
+ password 7 0029121405550E0A0330
+ login local
+line vty 0 4
+ password 7 132816000A020126272B
+ login
+line vty 5 15
+ password 7 04760A140E2F49420516
+ login
+!
+end
+
+GLO-1_SAKA25_3750_1#                        sh int des
+Interface                      Status         Protocol Description
+Vl1                            admin down     down
+Vl2                            up             up
+Vl3                            up             up
+Vl10                           up             up
+Vl11                           down           down
+Vl19                           up             up
+Vl23                           up             up
+Vl50                           down           down
+Vl100                          admin down     down
+Vl105                          admin down     down
+Vl106                          admin down     down
+Vl107                          admin down     down
+Vl108                          admin down     down
+Vl118                          up             up
+Vl119                          up             up
+Vl241                          up             up
+Vl244                          up             up
+Vl300                          up             up
+Vl301                          up             up
+Vl350                          admin down     down
+Vl351                          admin down     down
+Vl352                          admin down     down
+Vl353                          admin down     down
+Vl354                          admin down     down
+Vl355                          admin down     down
+Vl356                          admin down     down
+Vl357                          admin down     down
+Vl358                          admin down     down
+Vl359                          admin down     down
+Vl360                          admin down     down
+Vl361                          admin down     down
+Vl362                          admin down     down
+Vl363                          admin down     down
+Vl364                          admin down     down
+Vl371                          admin down     down     FIRS_IKARE
+Vl372                          admin down     down     FIRS_ORILE
+Vl373                          admin down     down
+Vl374                          admin down     down     FIRS_OTA
+Vl376                          admin down     down     FIRS_Abeokuta
+Vl402                          up             up
+Vl500                          admin down     down
+Vl501                          admin down     down
+Vl502                          admin down     down
+Vl503                          admin down     down
+Vl504                          up             up
+Vl505                          admin down     down
+Vl506                          up             up
+Vl507                          up             up
+Vl510                          up             up
+Vl600                          up             up
+Vl601                          admin down     down     Union_Calabar_Main
+Vl602                          admin down     down     Dugbe_Ibadan
+Vl605                          admin down     down     parklane_Onitsha
+Vl606                          admin down     down     Union_Akapapava_Benin
+Vl609                          admin down     down     Union_ELEME_PETROCHEMICALS
+Vl610                          admin down     down     UNION_OFFA_MAIN
+Vl611                          admin down     down     UNION_MMW_JOS
+Vl612                          admin down     down     UNION_Mbiama
+Vl613                          admin down     down     Ogirioko_Markurdi
+Vl614                          admin down     down     Union_Abba_Owerri
+Vl615                          admin down     down     Bank_road_Jos
+Vl616                          admin down     down     UNION_Kingsway
+Vl617                          admin down     down     Union_Bank_FactoryRoad
+Vl618                          admin down     down     Union_Obioma_Yengoa
+Vl619                          admin down     down     Union_Warri
+Vl620                          admin down     down     Union_Nnewi
+Vl621                          admin down     down     Union_Ogbede
+Vl622                          admin down     down     UNION_BANK_AWKA
+Vl623                          admin down     down     Union_Orafite
+Vl624                          admin down     down     Union_Benin
+Vl625                          admin down     down     Union_Ilorin
+Vl626                          admin down     down     Union_Enugukwu
+Vl627                          admin down     down     Union_Akure_Main
+Vl628                          admin down     down     Union_Oba_Adesida_Akure
+Vl629                          admin down     down     Union_UAC_Abuja
+Vl630                          admin down     down     Union_BirniKebi
+Vl631                          admin down     down     Union_Akpapava_2
+Vl632                          admin down     down
+Vl633                          admin down     down     Union_Kano_4MB
+Vl634                          admin down     down     Union_IGBO_Ukwu
+Vl635                          admin down     down     Union_Cadastral_zone_abuja
+Vl636                          admin down     down     Union_Oneh
+Vl637                          admin down     down     Union_Yola
+Vl638                          admin down     down     Union_Abakiliki
+Vl639                          admin down     down     Union_Oko
+Vl640                          admin down     down     Union_Gombe
+Vl641                          admin down     down     Union_Oghara_Sapele
+Vl642                          admin down     down     Union_Umuahia
+Vl643                          admin down     down     Union_Umuocham
+Vl644                          admin down     down     Union_Oshogbo
+Vl645                          admin down     down     Union_Okopedi
+Vl646                          admin down     down     UNION_BANK_KADUNA
+Vl647                          admin down     down     UNION_BANK_OYINGBO_PHC
+Vl648                          admin down     down     UNION_BANK_ONNE_PHC
+Vl649                          admin down     down     UNION_BANK_UYO
+Vl650                          admin down     down     Union_Tinapa
+Vl651                          admin down     down     Union_PH_ROAD_ABA
+Vl652                          admin down     down     Union_Okigwe
+Vl653                          admin down     down     Union_Trans_Amadi
+Vl654                          admin down     down     Union_Sokoto_Main
+Vl655                          admin down     down     Union_Sokoto_Market
+Vl656                          admin down     down     Union_Gusau
+Vl700                          up             up
+Vl701                          up             up
+Vl800                          down           down
+Vl940                          up             up
+Vl1093                         up             up
+Vl1492                         up             up
+Vl1610                         up             up
+Vl1748                         up             up
+Vl1851                         up             up
+Vl1900                         admin down     down
+Vl2533                         up             up
+Vl3041                         up             up
+Vl3157                         up             up
+Fa2/0/1                        up             up       TO-HU-SW@SAKA25
+Fa2/0/2                        up             up       TECPOINT NESG IKOYI 60Mbps
+Fa2/0/3                        admin down     down     XCITE LEKKI
+Fa2/0/4                        admin down     down     MIKE ADENUGA CENTRE
+Fa2/0/5                        down           down     ETRANSZACT 45MB INTERNET PRIMARY
+Fa2/0/6                        down           down
+Fa2/0/7                        admin down     down     PILLAR OIL 6MB INTERNET
+Fa2/0/8                        down           down     NEW_AGG_SLOT 7 Port 1
+Fa2/0/9                        admin down     down     AKER SOLUTIONS
+Fa2/0/10                       down           down     NEW_AGG_SLOT 9 Port 1
+Fa2/0/11                       down           down     Union_Bank_3rd_Aggr_6416
+Fa2/0/12                       down           down     TEK EXPERTS SUPERVISION
+Fa2/0/13                       down           down     trunk to Access_Bank
+Fa2/0/14                       admin down     down     EMERGING CAPITAL PARTNERS
+Fa2/0/15                       admin down     down     NOTORE INTERNET
+Fa2/0/16                       down           down     LEE ENGINEERING
+Fa2/0/17                       down           down     CONNECTION TO ADDAX LAGOS
+Fa2/0/18                       down           down     ZTE_MGT
+Fa2/0/19                       down           down     FIRS_2ND_aggregator
+Fa2/0/20                       down           down     UNION_BANK_LOOP_AGG_ 6416_bridge mode_1
+Fa2/0/21                       down           down     LOOP_AGG_ 6416_bridge mode_2
+Fa2/0/22                       down           down     WHEATBAKER INTERNET
+Fa2/0/23                       up             up       TRUNK TO CISCO 2960 to 5300
+Fa2/0/24                       up             up       AITEO ENERGY LEKKI
+Gi2/0/1                        up             up       TRUNK-to-IPD@SAKA25-1/1/11 || GE2/1/5
+Gi2/0/2                        down           down     CONNECTION TO SAHARA OIL
+GLO-1_SAKA25_3750_1#

@@ -1,0 +1,252 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
+     +--------------------------------------------------------------------+
+
+ ? 2026-04-08 ? ? 12:01.32 ? ? /home/mobaxterm ? telnet 10.248.249.222
+Connected to 10.248.249.222.
+Entering character mode
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password:
+GLO-SWITCH-AT-GTB-HQ>en
+Password:
+GLO-SWITCH-AT-GTB-HQ#sh int des
+Interface                      Status         Protocol Description
+Vl1                            up             down
+Vl1115                         up             up
+Vl1501                         up             up
+Fa0/1                          down           down
+Fa0/2                          down           down
+Fa0/3                          down           down     free
+Fa0/4                          up             up       GTB HQ
+Fa0/5                          down           down     SIP-VOICE-SERVICE-TO-GTB-SIP-BOX
+Fa0/6                          up             up       SIP-VOICE-SERVICE-TO-GTB-SIP-BOX
+Fa0/7                          down           down
+Fa0/8                          down           down
+Fa0/9                          down           down
+Fa0/10                         down           down
+Fa0/11                         down           down
+Fa0/12                         down           down
+Fa0/13                         down           down
+Fa0/14                         down           down
+Fa0/15                         down           down
+Fa0/16                         down           down
+Fa0/17                         down           down
+Fa0/18                         down           down
+Fa0/19                         down           down
+Fa0/20                         down           down
+Fa0/21                         down           down
+Fa0/22                         down           down
+Fa0/23                         down           down
+Fa0/24                         down           down
+Gi0/1                          down           down     PRIMARY_FIBER_LINK
+Gi0/2                          up             up       RADIO_BACKUP_LINK
+GLO-SWITCH-AT-GTB-HQ# sh run
+Building configuration...
+
+Current configuration : 4271 bytes
+!
+! Last configuration change at 20:14:38 UTC Sat Mar 12 1994
+!
+version 15.0
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service unsupported-transceiver
+!
+hostname GLO-SWITCH-AT-GTB-HQ
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+system mtu routing 1500
+vtp mode transparent
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-1286659712
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1286659712
+ revocation-check none
+ rsakeypair TP-self-signed-1286659712
+!
+!
+crypto pki certificate chain TP-self-signed-1286659712
+ certificate self-signed 02
+  3082022B 30820194 A0030201 02020102 300D0609 2A864886 F70D0101 05050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 31323836 36353937 3132301E 170D3934 30313231 32323230
+  34395A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 32383636
+  35393731 3230819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  81008F35 1518EA94 034D2F7C 91F7B873 0FB7EEFB 8CEFD2EE A549DF0E FA2040E2
+  7153F5DE 4082C934 1A62773E 360FCFC1 9A360606 BF671259 6416523B C8FAD8CC
+  154A2EF7 1C7DB18F 0BEABD92 4F02478D 792747BA B38BF0E1 77F8724E 85F301C4
+  6136C972 6C718361 B256AEC4 AB46A3B5 506AD7AE F2B14669 C80F2E1F A73A9E65
+  C2A10203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603
+  551D2304 18301680 14274E07 E7C459AF E6DE0245 EFFC474C 37F497C4 BA301D06
+  03551D0E 04160414 274E07E7 C459AFE6 DE0245EF FC474C37 F497C4BA 300D0609
+  2A864886 F70D0101 05050003 81810030 DE95A66D 47C39F88 99C50D9F 26BCCBB2
+  B351EDFD 2E99FAD9 8CCD80D1 CC6C307A 8E2FA03A 324E5634 7FED974A AD275459
+  28DE515F DBA66DA5 2A5E5649 F3CDB93A B54F0BEE 68B5C350 A66FA667 1E588D43
+  DFD9A981 95B71135 32297371 3EBBC16B 472FD0F1 38298DC6 E09BB2BC 094111EA
+  859F6D9F F4D27254 90BFB67F EE4CB4
+        quit
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+spanning-tree vlan 1115,1495,1501 priority 36864
+!
+vlan internal allocation policy ascending
+!
+vlan 150
+!
+vlan 1115
+ name GTB_VPLS
+!
+vlan 1495
+ name NERA_MGT
+!
+vlan 1501
+ name BS_MGT
+!
+vlan 1506
+ name SIP-VOICE-SERVICE
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+ switchport trunk allowed vlan 1115,1495,1501
+ speed 100
+ duplex full
+!
+interface FastEthernet0/2
+ switchport trunk allowed vlan 1115,1495,1501
+ speed 100
+ duplex full
+ spanning-tree cost 10000
+!
+interface FastEthernet0/3
+ description free
+ switchport mode access
+ speed 100
+ duplex full
+!
+interface FastEthernet0/4
+ description GTB HQ
+ switchport access vlan 1115
+ switchport mode access
+ speed 100
+ duplex full
+!
+interface FastEthernet0/5
+ description SIP-VOICE-SERVICE-TO-GTB-SIP-BOX
+ switchport access vlan 1506
+ switchport mode access
+!
+interface FastEthernet0/6
+ description SIP-VOICE-SERVICE-TO-GTB-SIP-BOX
+ switchport access vlan 1506
+ switchport mode access
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+ description PRIMARY_FIBER_LINK
+ switchport trunk allowed vlan 1115,1495,1501,1506
+ switchport mode trunk
+ spanning-tree bpdufilter enable
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/2
+ description RADIO_BACKUP_LINK
+ switchport trunk allowed vlan 1115,1495,1501,1506
+ switchport mode trunk
+ spanning-tree bpdufilter enable
+ spanning-tree bpduguard enable
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan1115
+ ip address 10.0.181.200 255.255.255.0
+!
+interface Vlan1501
+ ip address 10.248.249.222 255.255.255.0
+!
+ip default-gateway 10.248.249.1
+ip http server
+ip http secure-server
+snmp-server community globacom RO
+!
+!
+line con 0
+ password Maranello
+ login
+line vty 0 4
+ password Maranello
+ login
+line vty 5 15
+ password Maranello
+ login
+!
+end
+
+GLO-SWITCH-AT-GTB-HQ#

@@ -1,0 +1,815 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
+     +--------------------------------------------------------------------+
+
+
+[ENT-5700-NEW-SW-SAKA25_3]dis cur
+!Software Version V200R024C00SPC500
+#
+sysname ENT-5700-NEW-SW-SAKA25_3
+#
+vlan batch 2 to 4008 4054 to 4055 4059
+#
+authentication-profile name default_authen_profile
+authentication-profile name dot1x_authen_profile
+authentication-profile name dot1xmac_authen_profile
+authentication-profile name mac_authen_profile
+authentication-profile name multi_authen_profile
+authentication-profile name portal_authen_profile
+#
+telnet server enable
+telnet server-source all-interface
+#
+radius-server template default
+#
+pki realm default
+ certificate-check none
+#
+free-rule-template name default_free_rule
+#
+portal-access-profile name portal_access_profile
+#
+vlan 2
+ description LAG131-SW-MGT
+vlan 5
+ description ODEKU-5-DNS
+vlan 10
+ description MGT
+vlan 45
+ description SAKA-3750_4-MGT
+vlan 55
+ description NBC-SWITCH-MGT
+vlan 66
+ description RADIO-P2P-IPD
+vlan 88
+ description WEMA-GLO-SW-MGT
+vlan 89
+ description FBN-REMOTE-MGT
+vlan 91
+ description SWITCH-NMS-ENT-NOC
+vlan 93
+ description ENT-INTERNET
+vlan 94
+ description ENT-ACCESS-BB
+vlan 95
+ description ACCESS-BANK-MONITORING
+vlan 96
+ description ACCESS-CAMP-MONITORING
+vlan 97
+ description WEMA-BANK-MONITORING
+vlan 98
+ description ACCESS-MGT-SWITCH
+vlan 100
+ description SWIFT-UNITY
+vlan 110
+ description FIRST-BANK-GHANA
+vlan 112
+ description PRODECCO-INTELS
+vlan 113
+ description COMPOMJ-SYSTEM-INT
+vlan 115
+ description AXA-MANSARD-HQ-INT
+vlan 117
+ description CORAL-PAY-INT
+vlan 120
+ description STACO-INSURANCE
+vlan 125
+ description ADDAX
+vlan 126
+ description ADDAX-RACK
+vlan 131
+ description CISCO-3560-MGT
+vlan 135
+ description ADROIT
+vlan 140
+ description APOSTOLIC-FAITH
+vlan 141
+ description ARM-LIFE
+vlan 143
+ description NNPC-MEDICAL-MURI-FIBER
+vlan 144
+ description NNPC-MEDICAL-MURI-IOTECH
+vlan 145
+ description ENT-PRTG-PUBLIC
+vlan 160
+ description Q-LIFE-CLINIC
+vlan 166
+ description NBC-INTERNET
+vlan 170
+ description CISCON-INTERNET-LAGOS
+vlan 176
+ description NNPC-NETCO-BACKUP
+vlan 179
+ description ENT-ODEKU-ANIL-INTERNET
+vlan 184
+ description TECPOINT-GLOBAL-SOLUTION
+vlan 185
+ description KRISPY-KREME
+vlan 189
+ description ENT-NMS
+vlan 191
+ description SEVENUP-INTERNET
+vlan 200
+ description PRTG-LAN2
+vlan 210
+ description NNPC-NMS-PRTG
+vlan 211
+ description ADDAX-NMS-PRTG
+vlan 212
+ description NBC-NMS-PRTG
+vlan 225
+ description PRTG-LAN-CONNECTION
+vlan 250
+ description FIRSTBANK-LAYER3-HQ
+vlan 335
+ description POLARIS-BANK
+vlan 413
+ description CACTI-SERVER
+vlan 415
+ description NNPC-NMS
+vlan 420
+ description ADDAX-NMS
+vlan 434
+ description MORNING-SIDE-SUITES
+vlan 444
+ description PRTG-PROXY-SERVER
+vlan 510
+ description SARO-VPLS
+vlan 519
+ description FIRS-OYO
+vlan 524
+ description PREMEIUM-BANK-HQ-INT
+vlan 525
+ description CONOIL-INTERNET-30MB
+vlan 530
+ description WEMA-HQ-MPLS
+vlan 531
+ description STERLING-ASSET-IKOYI
+vlan 588
+ description Heritage-Monitoring
+vlan 611
+ description test-key
+vlan 622
+ description YOA-INSURANCE
+vlan 800
+ description ECP_Internet
+vlan 804
+ description new-sw-mgt
+vlan 810
+ description FORTE-OIL-VPLS
+vlan 811
+ description ZEBWEB_SAKAJOJO
+vlan 905
+ description ad
+vlan 910
+ description DPR-VPLS
+vlan 911
+ description DPR-INTERNET
+vlan 914
+ description CONNECTION-PRTG-RTR
+vlan 916
+ description CONNECTION-PE-B
+vlan 917
+ description SWIFT_UNITYBANK
+vlan 918
+ description BABCOCK_INTLSCH
+vlan 991
+ description vodacom-iba
+vlan 999
+ description int-gw
+vlan 1071
+ description SENTIENT-OBUDU
+vlan 1073
+ description SENTIENT-AROCHUKWU
+vlan 1086
+ description SENTI-FID-AQUA-RAPHA
+vlan 1090
+ description Orange_Virgin
+vlan 1111
+ description DCN-TEST-VLAN
+vlan 1112
+ description SENTIENT-FCMB
+vlan 1113
+ description SENTIENT-LL04
+vlan 1114
+ description SENTIENT-LL05
+vlan 1115
+ description GTBank-VPLS
+vlan 1116
+ description SENTIENT-FBN-ABA-EHI
+vlan 1117
+ description SENTIENT-TAJ-BAUCHI
+vlan 1118
+ description SENTIENT-lAFENWA-LL-8M
+vlan 1119
+ description SENTIENT-ABIRIBA
+vlan 1120
+ description SENTIENT-KACHIA
+vlan 1121
+ description SENT-WEMA-OKESHA-NEW
+vlan 1122
+ description TPGS-LANDMARK
+vlan 1123
+ description SENTIENT-KOGI
+vlan 1124
+ description SENTIENT-KATSINA-ALA
+vlan 1126
+ description SENTIENT-FBN-ZUBA
+vlan 1127
+ description SENTIENT-EKITI
+vlan 1128
+ description SENTIENT-GOMBE
+vlan 1129
+ description SENTIENT-AWOYAYA
+vlan 1130
+ description SENTIENT-TAJ-KATSINA
+vlan 1131
+ description SENTIENT-OTUOCHA
+vlan 1132
+ description puzzle-group
+vlan 1133
+ description SENTIENT-DAMATURU
+vlan 1134
+ description SENT-FBN-SAMINAKA
+vlan 1135
+ description SENT-FBN-EKWULOBIA
+vlan 1136
+ description SENT-FBN-MAYAMA
+vlan 1137
+ description SENT-FBN-IJESHA
+vlan 1138
+ description SENTIENT-FBN-OFFA
+vlan 1139
+ description SENTIENT-TAJ-MUBI
+vlan 1141
+ description SENTIENT-KUBWA
+vlan 1143
+ description SENTIENT-FBN-BIDA
+vlan 1144
+ description SENTI-TAJ-POTISKUM
+vlan 1145
+ description SENTIENT-FBN-OGOJA
+vlan 1147
+ description CONN-SURF-SMILE-SIP
+vlan 1153
+ description SENTIENT-FBN-KABBA-NEW
+vlan 1179
+ description SENTIENT-WARRI2
+vlan 1211
+ description PANOCEAN-LAG131
+vlan 1214
+ description CONOIL-MGT-SAKA-RTR
+vlan 1230
+ description sheraton-abj
+vlan 1238
+ description FBN-OBUBRA
+vlan 1248
+ description FBN-OYO
+vlan 1255
+ description FBN-OGIDI
+vlan 1257
+ description FBN-DEIDEI
+vlan 1265
+ description FBN-BASSA
+vlan 1275
+ description FBN-OKITI-PUPA
+vlan 1356
+ description IOTECH-ONIRU
+vlan 1364
+ description APPZONE-INT
+vlan 1443
+ description SENTIENT-FIDEL-ESUT
+vlan 1471
+ description UNION_BANK_OJU
+vlan 1486
+ description ENT-CERA-IP-20-MGT1
+vlan 1487
+ description ENT-CERA-IP-20-MGT2
+vlan 1488
+ description ENT-CERA-IP-20-MGT3
+vlan 1489
+ description ENT-CERA-IP-20-MGT4
+vlan 1492
+ description NERA1-MGT
+vlan 1493
+ description BS-NERA-4-MGT
+vlan 1494
+ description NNPC-NERA
+vlan 1495
+ description Nera_Mgt
+vlan 1496
+ description CERAGON_MGT
+vlan 1497
+ description BS-NERA-MGT
+vlan 1498
+ description BS-CERAGON-MGT
+vlan 1500
+ description ZETAWEB_MGMTBS_MGMT
+vlan 1501
+ description BS_MGMT
+vlan 1502
+ description NBC-MARINA
+vlan 1504
+ description ENT-SWITCH-MGT3
+vlan 1507
+ description ENT-SW-MGT-3
+vlan 1512
+ description ORANGE-SITA-AIRPORT
+vlan 1516
+ description european-comm
+vlan 1520
+ description UNION-WARRI
+vlan 1521
+ description UNION-MAKURDI-MAIN
+vlan 1522
+ description UNIONBANK-RD-MAKURDI
+vlan 1523
+ description UNION-OGIRIOKO
+vlan 1524
+ description UNION-ALIADE-MAKURDI
+vlan 1525
+ description UNION-SOKOION-BAUCHI-COMM
+vlan 1526
+ description UNION-YANDOKA
+vlan 1527
+ description UNION-BAUCHI-COMM
+vlan 1529
+ description SENTIENT-FID-NNEWI
+vlan 1530
+ description UNION-ABJ-ANNEX
+vlan 1531
+ description UNION-OKIGWE
+vlan 1532
+ description UNION-ORLU
+vlan 1533
+ description UNION-OSHOGBO
+vlan 1534
+ description UNION-OFFA-MAIN
+vlan 1535
+ description UNION-MAITAMA
+vlan 1536
+ description UNION-KADUNA
+vlan 1537
+ description UNION-AKURE-MRKT
+vlan 1538
+ description UNION-OBA-ADESHIDA
+vlan 1539
+ description UNION-AKURE-MAIN
+vlan 1541
+ description UNION-TRANSAMADI
+vlan 1542
+ description UNION-FED-SEC
+vlan 1543
+ description UNION-WUSE-2
+vlan 1544
+ description UNION-UAC-ABUJA
+vlan 1545
+ description UNION-NAT
+vlan 1546
+ description UNION-SHARADA
+vlan 1547
+ description UNION-BANK-RD-JOS
+vlan 1548
+ description UNION-MMWAY-JOS
+vlan 1549
+ description UNION-IBADAN
+vlan 1550
+ description UNION-AKPAVAVA-BEN
+vlan 1551
+ description UNION-MISSION-RD
+vlan 1552
+ description UNION-AKPAVAVA-2-BEN
+vlan 1554
+ description UNION-MBIAMA
+vlan 1555
+ description UNION-OBIOMA-YENEGOA
+vlan 1556
+ description UNION-ELEME-PETRO
+vlan 1557
+ description UNION-PPMC-ELEME
+vlan 1558
+ description UNION-OYIGBO-PH
+vlan 1559
+ description UNION-KINGSWAY
+vlan 1561
+ description UNION-AREA-8-ABJ
+vlan 1562
+ description UNION-OKO
+vlan 1563
+ description UNION-PARKLANE-ONIT
+vlan 1564
+ description UNION-AWKA
+vlan 1567
+ description ORANGE-NAMA-SEC
+vlan 1578
+ description UNIO des UNION-ODO-IRELE
+vlan 1586
+ description NDO
+vlan 1593
+ description UNION-BANK-ASABA#
+vlan 1629
+ description SENTIENT-FBN-BENIN
+vlan 1651
+ description NLPC-INTERNET
+vlan 1655
+ description UNION-OGIDI
+vlan 1663
+ description UNION-2ND-OKPARA-AVE
+vlan 1672
+ description ORAN-HEINEK-SANGO
+vlan 1686
+ description ORANGE-IRIBA
+vlan 1712
+ description AMBROSE-ALI-UNI
+vlan 1761
+ description NBC-OTA
+vlan 1815
+ description NBC-OSHOGBO
+vlan 1854
+ description SENTIENT-FIDEL-AWK des FRENCH-EMBASSY-LAGOS
+vlan 1919
+ description Union_Okigwerd_ow
+vlan 2022
+ description SWISS-EMBASSY
+vlan 2059
+ description ORANGE-WORLD-BANK
+vlan 2062
+ description des SENTIENT-TORO
+vlan 2151
+ description SENTIENT-WEMA-OKEA
+vlan 2170
+ description NNPC-MOSIMI-HA
+vlan 2178
+ description NNPC-IKOYI-PRI
+vlan 2213
+ description FLORIDAN-HOTEL-IKA des ORANGE-HEINKE-ENU
+vlan 2399
+ description NIGERIA-BREWERIES
+vlan 2422
+ description -COLGATE
+vlan 2441
+ description Orange_Aur#
+vlan 2510
+ description Orange 2617
+vlan 2551
+ description ALHIKMAH-MAIN
+vlan 2701
+ description ORANGE#
+vlan 2708
+ description PRIME_Ades FBN-IGBOKODA
+vlan 3006
+ description SMAH-MAIN
+vlan 3031
+ description APMT-INT
+vlan 3038
+ description SENT-MINP-NIGER
+vlan 3042
+ description SENT-MINP-NIGER
+vlan 3130
+ description UNION-CALA-MA
+vlan 3138
+ description redeemer
+vlan 3156
+ description WEMA_SAGAMU
+vlan 3190
+ description WEMA_APATA
+vlan 3370
+ description WEMA_GARKI_DUNOKOFIA
+vlan 3371
+ description WEMA-ILORIN
+vlan 3376
+ description WEMA_IFO
+vlan 3378
+ description WEMA_BANK_ILARO
+vlan 3379
+ description WEMA_IJI
+vlan 3380
+ description WEMvlan 3381
+vlan 3381
+ description WEMA_UYO
+vlan 3386
+ description WEMABANK-IKERE-LL-5M
+vlan 3389
+ description WEMA-ABA
+vlan 3390
+ description WEMA-DRC-MAINONE
+vlan 3391
+ description WEMA-IYIN-EKITI
+vlan 3392
+ description WEMABANK-IK des UNION-MASAKA
+vlan 3492
+ description SENTIENT-MALUMF-Eno
+vlan 3529
+ description SENTIENALUMFASHI
+vlan 3843
+ description SENTIENdes SENTIENT_INTERNET
+vlan 4008
+ description SENTIENT-AGENEBODE
+vlan 4055
+ description FALCK
+vlan 4059
+ description FALCK-PRIME-ATLANTIC
+#
+aaa
+ authentication-scheme default
+  authentication-mode local
+ authentication-scheme radius
+  authentication-mode radius
+ authorization-scheme default
+  authorization-mode local
+ accounting-scheme default
+  accounting-mode none
+ local-aaa-user password policy administrator
+  password history record number 0
+  password expire 0
+ domain default
+  authentication-scheme radius
+  accounting-scheme default
+  radius-server default
+ domain default_admin
+  authentication-scheme default
+  accounting-scheme default
+ local-user bsnoc password irreversible-cipher $1c$,r-Z6k^QL+$eh*NU+_,ZL{G]W=U%%5+^.V)UF!DcH{|c`;qwVj)$
+ local-user bsnoc privilege level 3
+ local-user bsnoc service-type telnet terminal ssh ftp
+#
+interface Vlanif1
+#
+interface Vlanif2
+ ip address 10.248.248.228 255.255.255.248
+#
+interface Vlanif5
+ ip address 195.1.1.3 255.255.255.248
+#
+interface Vlanif10
+ ip address 10.248.248.74 255.255.255.248
+#
+interface GigabitEthernet0/0/1
+ description TRUNK_TO_GLO1_SAKA25PE01_ALU_RTR | OLD-1/1/2 NEW-2/1/3
+ port link-type trunk
+ port trunk allow-pass vlan 2 10 to 11 21 24 31 41 45 51 61 66
+ port trunk allow-pass vlan 71 81 93 to 94 98 100 117 120 to 121 123 125 to 127 130 to 131
+ port trunk allow-pass vlan 133 135 to 136 138 140 to 141 143 145 149 to 151 160 170 174
+ port trunk allow-pass vlan 176 184 to 185 199 to 200 210 to 212 222 to 4059
+#
+interface GigabitEthernet0/0/2
+ description MGT-PORT-VLAN0-10
+ port link-type access
+ port default vlan 10
+#
+interface GigabitEthernet0/0/3
+ undo negotiation auto
+ port link-type trunk
+#
+interface GigabitEthernet0/0/4
+ port link-type access
+#
+interface GigabitEthernet0/0/5
+ description TRUNK-TO-SAKA25-3750-UPSTAIRS (GE 1/0/17)
+ port link-type trunk
+ port trunk allow-pass vlan 5 23 66 94 110 131 135 145 171 200
+ port trunk allow-pass vlan 210 to 212 225 413 444 460 502 914 916 999 1497
+ port trunk allow-pass vlan 1881 2203 3004
+#
+interface GigabitEthernet0/0/6
+ description BELLA-VISTA-BANANA-ISLAND || ADDAX
+ port link-type trunk
+ port trunk allow-pass vlan 3 to 109 111 113 to 114 116 to 559 561 to 1631 1633 to 1639 1641 to 1847 1849 to 1905 1907 to 2205 2207 to 3006
+ port trunk allow-pass vlan 3008 to 4006 4008 to 4094
+#
+interface GigabitEthernet0/0/7
+ description TO BSG PRTG SERVER NIC-1 (LAN-INTERFACE) (10.192.192.X)
+ port link-type access
+ port default vlan 225
+#
+interface GigabitEthernet0/0/8
+ undo negotiation auto
+ speed 100
+ description COMPOJ-SYSTEM-LTD-INTERNET
+ port link-type access
+ port default vlan 113
+#
+interface GigabitEthernet0/0/9
+ description CACTI NIC-1
+ port link-type access
+ port default vlan 413
+#
+interface GigabitEthernet0/0/10
+ description TRUNK TO BSG PRTG SERVER ROUTER PORT Gi0/1
+ port link-type trunk
+ port trunk allow-pass vlan 66 94 145 200 210 to 212 225 413 444 914 916
+ port trunk allow-pass vlan 3004
+#
+interface GigabitEthernet0/0/11
+ port link-type access
+#
+interface GigabitEthernet0/0/12
+ port link-type access
+#
+interface GigabitEthernet0/0/13
+ description STERLING ASSET MGT AND TRUSTEES LTD IKOYI
+ port link-type access
+ port default vlan 531
+#
+interface GigabitEthernet0/0/14
+ description SENTIENT FIBER TO SURA OFFICE | FIBER LM
+ port link-type trunk
+ port trunk allow-pass vlan 1072 to 1073 1086 1112 1116 to 1121 1124 1126 to 1128 1130 1135 to 1139 1141 1143 to 1145
+ port trunk allow-pass vlan 1153 1179 1443 1529 1629 1685 1719 1824 1848 1854
+ port trunk allow-pass vlan 1883 to 1884 1888 1973 to 1974 2016 2062 2065 to 2066 2068 2174 2299 2387
+ port trunk allow-pass vlan 2397 2399 2551 3124 to 3126 3128 3163 3191 to 3192 3221 3241 3529 to 3530
+ port trunk allow-pass vlan 3542 to 3543 3843 4005 4007 to 4008
+#
+interface GigabitEthernet0/0/15
+ undo negotiation auto
+ speed 100
+ description ARM INTERNET
+ port link-type access
+ port default vlan 141
+#
+interface GigabitEthernet0/0/16
+ undo negotiation auto
+ speed 100
+ description TO-DCN-SWITCH-FOR-RM&HUW SERVER MONITORING- Port 1/0/40-DCN_Core_
+ shutdown
+ port link-type access
+#
+interface GigabitEthernet0/0/17
+ port link-type access
+#
+interface GigabitEthernet0/0/18
+ undo negotiation auto
+ speed 100
+ description TRUNK PORT TO ALCATEL-7529 SWITCH PORT-1/5
+ port link-type trunk
+ port trunk allow-pass vlan 131 133 135 150 174 411 415 420 500 510
+ port trunk allow-pass vlan 513 588 810 to 811 955 1114 1500 1630 1643 1900 2423
+ port trunk allow-pass vlan 3004 3034 to 3035 3126
+ stp edged-port enable
+#
+interface GigabitEthernet0/0/19
+ port link-type access
+ stp edged-port enable
+#
+interface GigabitEthernet0/0/20
+ undo negotiation auto
+ description TRUNK-TO-ENT-NOC-ADEOLA-ODEKU
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 111 113 to 114 116 to 4094
+ stp edged-port enable
+#
+interface GigabitEthernet0/0/21
+ undo negotiation auto
+ description NEW-TRUNK-TO-GLO1-SAKA25-NE40E || GE1/1/16 (HUAWEI-PE)
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+ stp edged-port disable
+#
+interface GigabitEthernet0/0/22
+ undo negotiation auto
+ description UPLINK TO LAG131 (10.248.248.76) GE0/2
+ port link-type trunk
+ port trunk allow-pass vlan 2 10 117 143 to 144 150 160 170 176 184 to 185 560
+ port trunk allow-pass vlan 595 901 1122 1211 1356 1494 1497 to 1498 1501 1684 to 1685 1723
+ port trunk allow-pass vlan 1906 2101 to 2102 2206 2414 2422 2708 3400 3415 3651 to 3652 3751 to 3752
+ port trunk allow-pass vlan 3851 to 3852
+ stp edged-port enable
+#
+interface GigabitEthernet0/0/23
+ undo negotiation auto
+ description CONNECTION TO CISCO-3560
+ port link-type trunk
+ port trunk allow-pass vlan 55 88 98 112 115 131 140 166 189 191
+ port trunk allow-pass vlan 250 524 530 610 to 611 622 900 916 1211 1214 1364
+ port trunk allow-pass vlan 1486 to 1489 1492 to 1494 1497 1501 1507 1579 1640 1673 to 1674 1684 to 1685 1761
+ port trunk allow-pass vlan 1810 1820 1889 1900 1907 2022 2057 2151 2266 2701
+ port trunk allow-pass vlan 2708 2999 3004 3007 3034 to 3035 3042 3126 3134 3221 3241
+ port trunk allow-pass vlan 3849
+#
+interface GigabitEthernet0/0/24
+ description TRUNK-TO-DCN-PE-A (GE 1/1/11)
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 111 113 to 114 116 to 4094
+#
+interface XGigabitEthernet0/0/1
+ port link-type access
+#
+interface XGigabitEthernet0/0/2
+ port link-type access
+ stp edged-port enable
+#
+interface XGigabitEthernet0/0/3
+#
+interface XGigabitEthernet0/0/4
+#
+interface NULL0
+#
+undo icmp name timestamp-request receive
+#
+ip route-static 0.0.0.0 0.0.0.0 10.248.248.73
+ip route-static 10.185.0.0 255.255.0.0 10.185.101.1
+ip route-static 192.168.6.0 255.255.255.0 10.248.248.250
+#
+snmp-agent
+snmp-agent local-engineid 8000DDED033CC786DDCDE0
+snmp-agent community read cipher %^%#$d2{Le%;k<I}kN-M!=}6gRJA-"u!y3:97HJZ#(P0=4.9J+.];:#OZ,VL7q&!KW>h>]Q\n+Nd9rWfI"i2%^%#
+snmp-agent sys-info version all
+undo snmp-agent protocol source-status all-interface
+undo snmp-agent protocol source-status ipv6 all-interface
+#
+ssh server cipher aes256_ctr aes128_ctr
+ssh server hmac sha2_256
+ssh server key-exchange dh_group16_sha512 dh_group15_sha512 dh_group14_sha256 dh_group_exchange_sha256
+ssh client cipher aes256_ctr aes128_ctr
+ssh client hmac sha2_256
+ssh client key-exchange dh_group16_sha512 dh_group15_sha512 dh_group14_sha256 dh_group_exchange_sha256
+ssh server dh-exchange min-len 2048
+ssh server publickey rsa_sha2_512 rsa_sha2_256
+#
+telnet client-source -i Vlanif10
+#
+user-interface con 0
+ authentication-mode aaa
+user-interface vty 0 4
+ authentication-mode aaa
+ user privilege level 3
+ protocol inbound telnet
+user-interface vty 16 20
+ authentication-mode aaa
+ user privilege level 3
+ protocol inbound telnet
+#
+dot1x-access-profile name dot1x_access_profile
+#
+mac-access-profile name mac_access_profile
+#
+ops
+#
+remote-unit
+#
+return
+[ENT-5700-NEW-SW-SAKA25_3]                                    dis int des
+PHY: Physical
+*down: administratively down
+#down: LBDT down
+-down: link flap down
+(l): loopback
+(s): spoofing
+(E): E-Trunk down
+(b): BFD down
+(e): ETHOAM down
+(dl): DLDP down
+(lb): LBDT block
+(o): Observe-port forwarding down
+Interface                     PHY     Protocol Description
+GE0/0/1                       up      up       TRUNK_TO_GLO1_SAKA25PE01_ALU_RTR | OLD-
+                                               1/1/2 NEW-2/1/3
+GE0/0/2                       down    down     MGT-PORT-VLAN0-10
+GE0/0/3                       down    down
+GE0/0/4                       down    down
+GE0/0/5                       up      up       TRUNK-TO-SAKA25-3750-UPSTAIRS (GE 1/0/1
+                                               7)
+GE0/0/6                       down    down     BELLA-VISTA-BANANA-ISLAND || ADDAX
+GE0/0/7                       up      up       TO BSG PRTG SERVER NIC-1 (LAN-INTERFACE
+                                               ) (10.192.192.X)
+GE0/0/8                       up      up       COMPOJ-SYSTEM-LTD-INTERNET
+GE0/0/9                       down    down     CACTI NIC-1
+GE0/0/10                      up      up       TRUNK TO BSG PRTG SERVER ROUTER PORT Gi
+                                               0/1
+GE0/0/11                      down    down
+GE0/0/12                      down    down
+GE0/0/13                      up      up       STERLING ASSET MGT AND TRUSTEES LTD IKO
+                                               YI
+GE0/0/14                      up      up       SENTIENT FIBER TO SURA OFFICE | FIBER L
+                                               M
+GE0/0/15                      down    down     ARM INTERNET
+GE0/0/16                      *down   down     TO-DCN-SWITCH-FOR-RM&HUW SERVER MONITOR
+                                               ING- Port 1/0/40-DCN_Core_
+GE0/0/17                      down    down
+GE0/0/18                      up      up       TRUNK PORT TO ALCATEL-7529 SWITCH PORT-
+                                               1/5
+GE0/0/19                      down    down
+GE0/0/20                      up      up       TRUNK-TO-ENT-NOC-ADEOLA-ODEKU
+GE0/0/21                      up      up       NEW-TRUNK-TO-GLO1-SAKA25-NE40E || GE1/1
+                                               /16 (HUAWEI-PE)
+GE0/0/22                      up      up       UPLINK TO LAG131 (10.248.248.76) GE0/2
+GE0/0/23                      up      up       CONNECTION TO CISCO-3560
+GE0/0/24                      up      up       TRUNK-TO-DCN-PE-A (GE 1/1/11)
+NULL0                         up      up(s)
+Vlanif1                       up      down
+Vlanif2                       up      up
+Vlanif5                       up      up
+Vlanif10                      up      up
+XGE0/0/1                      down    down
+XGE0/0/2                      down    down
+XGE0/0/3                      down    down
+XGE0/0/4                      down    down
+[ENT-5700-NEW-SW-SAKA25_3]

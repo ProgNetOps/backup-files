@@ -1,5 +1,5 @@
      +--------------------------------------------------------------------+
-     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
      ¦              (X server, SSH client and network tools)              ¦
      ¦                                                                    ¦
      ¦ ? Your computer drives are accessible through the /drives path     ¦
@@ -7,24 +7,11 @@
      ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
      ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
      ¦                                                                    ¦
-     ¦                     Registered to RT (1 user)                      ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
      +--------------------------------------------------------------------+
 
- ? 2025-11-13 ? ? 14:54.43 ? ? /home/mobaxterm ? telnet 10.248.248.22
-Connected to 10.248.248.22.
-Entering character mode
-Escape character is '^]'.
 
-
-User Access Verification
-
-Password:
-BS_SAKA_25_3750_4>en
-Password:
-BS_SAKA_25_3750_4#sh run
-Building configuration...
-
-Current configuration : 28953 bytes
+Current configuration : 29003 bytes
 !
 version 12.2
 no service pad
@@ -83,12 +70,12 @@ crypto pki certificate chain TP-self-signed-1615539456
 spanning-tree mode pvst
 spanning-tree extend system-id
 no spanning-tree vlan 9-10,45,55,93,100,112-113,130,201,205,212,221,231,233,237
-no spanning-tree vlan 241,300,311-315,408,504-505,515-516,518,530,560,603,633
-no spanning-tree vlan 634,768,805,812-813,900,902,909-910,912,915-916,920,942
-no spanning-tree vlan 943,968,982,984,987,989,994,1071-1073,1081-1085,1092-1093
-no spanning-tree vlan 1097,1114-1115,1118,1121-1123,1162-1164,1169,1214,1219
-no spanning-tree vlan 1234-1235,1237,1239-1240,1245,1287,1303,1311,1322,1412
-no spanning-tree vlan 1413-1419,1440-1441,1457-1458,1462,1471,1486-1489,1492
+no spanning-tree vlan 241,300,311-315,408,504-505,515-516,518,530-531,560,603
+no spanning-tree vlan 633-634,768,805,812-813,900,902,909-910,912,915-916,920
+no spanning-tree vlan 942-943,968,982,984,987,989,994,1071-1073,1081-1085,1092
+no spanning-tree vlan 1093,1097,1114-1115,1118,1121-1123,1162-1164,1169,1214
+no spanning-tree vlan 1219,1234-1235,1237,1239-1240,1245,1287,1303,1311,1322
+no spanning-tree vlan 1412-1419,1440-1441,1457-1458,1462,1471,1486-1489,1492
 no spanning-tree vlan 1493-1497,1512,1524,1534,1563,1568,1578,1580,1609,1611
 no spanning-tree vlan 1612-1620,1622,1629,1677,1687,1711,1714-1717,1744,1747
 no spanning-tree vlan 1768-1769,1807,1812,1814-1815,1821-1824,1828,1830-1836
@@ -264,6 +251,9 @@ vlan 518
 !
 vlan 530
  name IWAY_AFRICA
+!
+vlan 531
+ name CONOIL_INTERNET_30MB
 !
 vlan 560
  name ORANGE-ECOBANK
@@ -1333,7 +1323,7 @@ interface GigabitEthernet1/0/15
 interface GigabitEthernet1/0/16
  description CONNECTION TO GRE TUNNEL TERMINATION ROU- CISCO 1900 @ SAKA25
  switchport trunk encapsulation dot1q
- switchport trunk allowed vlan 805,1214,3830,3843,3871,3876,3877
+ switchport trunk allowed vlan 531,805,1214,3830,3843,3871,3876,3877
  switchport mode trunk
 !
 interface GigabitEthernet1/0/17
@@ -1366,9 +1356,9 @@ interface GigabitEthernet1/0/20
 interface GigabitEthernet1/0/21
  description TRUNK-CISCO-3560-SWITCH
  switchport trunk encapsulation dot1q
- switchport trunk allowed vlan 112,560,566,805,1214,1486-1489,1492-1495,1497
- switchport trunk allowed vlan add 1522,1578,1579,1810,1889,2057,2266,2999,3035
- switchport trunk allowed vlan add 3841,3932
+ switchport trunk allowed vlan 112,531,560,566,805,1214,1486-1489,1492-1495
+ switchport trunk allowed vlan add 1497,1522,1578,1579,1810,1889,2057,2266,2999
+ switchport trunk allowed vlan add 3035,3841,3932
  switchport mode trunk
  spanning-tree portfast
 !
@@ -1391,7 +1381,7 @@ interface GigabitEthernet1/0/23
  switchport trunk allowed vlan add 1458,1462,1496,1498,1503,1512,1524,1568
  switchport trunk allowed vlan add 1611-1620,1622,1632,1641,1675,1677,1687,1744
  switchport trunk allowed vlan add 1747,1803,1807,1812,1814,1815,1821-1824,1826
- switchport trunk allowed vlan add 1828,1834,1871,1881,1900,1948,1966,1967
+ switchport trunk allowed vlan add 1828,1834,1870,1871,1881,1900,1948,1966,1967
  switchport trunk allowed vlan add 1971-1975,1988,2073,2122,2208,2251,2261,2269
  switchport trunk allowed vlan add 2323,2325,2511,2523,2524,2533,2538,2539,2910
  switchport trunk allowed vlan add 2990,3009,3042,3043,3125,3129,3134,3138,3152
@@ -1646,7 +1636,7 @@ line vty 5 15
 !
 end
 
-BS_SAKA_25_3750_4#    sh int des
+BS_SAKA_25_3750_4#       sh int des
 Interface                      Status         Protocol Description
 Vl1                            up             up
 Vl45                           up             up
@@ -1715,14 +1705,14 @@ Gi1/0/16                       up             up       CONNECTION TO GRE TUNNEL 
 Gi1/0/17                       down           down
 Gi1/0/18                       down           down     HYPERIA OCEAN PARADE
 Gi1/0/19                       up             up       TRUNK-TO-COOLFM-MICROTIK-1
-Gi1/0/20                       up             up       TRUNK-TO-COOLFM-MICROTIK-2
+Gi1/0/20                       down           down     TRUNK-TO-COOLFM-MICROTIK-2
 Gi1/0/21                       up             up       TRUNK-CISCO-3560-SWITCH
 Gi1/0/22                       admin down     down     TRUNK-TO-FIDELITY-BANK
 Gi1/0/23                       up             up       TRUNK-TO-GLO1-SAKA25PE01 | PORT 2/1/9
 Gi1/0/24                       up             up       TRUNK-TO-GLOMOBILE || PeB-GE1/1/11
 Gi1/1/1                        up             up       DELOITTE LAGOS HQ
 Gi1/1/2                        up             up       TRUNK-TO-GLOMOBILE || PE B-GE 1/0/6
-Gi1/1/3                        up             up       SHELL_IKOYI_DRC
+Gi1/1/3                        down           down     SHELL_IKOYI_DRC
 Gi1/1/4                        up             up       "TRUNK-TO-GLO1-IPD || PORT-1/2/3 || NEW-2/1/2 MIKROTIK"
 Te1/1/1                        down           down
 Te1/1/2                        down           down

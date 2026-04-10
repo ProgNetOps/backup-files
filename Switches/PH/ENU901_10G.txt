@@ -1,0 +1,337 @@
+
+Password:
+Info: The max number of VTY users is 5, and the number
+      of current VTY users on line is 1.
+<BS-ENU901-Switch>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-ENU901-Switch]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      up      up       FCMB ENUGU 1 GARDEN AVENUE
+Eth0/0/2                      up      up       CYBERSECURITY UNTH, SENTIENT-FBN-
+                                               ORJI-RIVER
+Eth0/0/3                      up      up       Stanbic PENSION ENUGU
+Eth0/0/4                      up      up       UNION BANK OKPARA AVENUE (PEACE P
+                                               ARK)
+Eth0/0/5                      up      up       TPGS-ENUGU-POLOPARK-10m-Internet
+Eth0/0/6                      up      up       UNION-BANK Ogbete
+Eth0/0/7                      up      up       ISN Ericsson|TPGS|10mbs|5mbs
+Eth0/0/8                      up      up       Caritas!Access-bk-Nike!Access-bk-
+                                               Agbani!Enugu-mul-Gloshop!Sentient
+                                               -FBN-Emene!Madona-Akpugo!Enugu st
+                                               ate Poly-Iwolo
+Eth0/0/9                      up      up       SKYE BANK Enugu
+Eth0/0/10                     up      up       TPGS-ENUGU-5mbs-internet-vlan 164
+                                               9
+Eth0/0/11                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/11 Interface
+Eth0/0/12                     up      up       ISN-ENUGU-LAG!8mbs
+Eth0/0/13                     up      up       SPIDERNET RADIO bacKUP LINK
+Eth0/0/14                     up      up       NNPC RETAIL SOUTH EAST REgional o
+                                               ffice Enugu
+Eth0/0/15                     up      up       Techpoint-NESTLE-10mbs
+Eth0/0/16                     up      up       UNION BK UDI|MADUKA-UNIV-DICNET|I
+                                               GBO-ETITI-LGA-ENU901-ENU019-1+0-G
+                                               E4
+Eth0/0/17                     down    down     ICSL-ENUGU-LAG-VPN|10MBS
+Eth0/0/18                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/18 Interface
+Eth0/0/19                     up      up       ZETAWEB-MCN-ENUGU-LAG|10mbs
+Eth0/0/20                     up      up       FCMB-ESUT|UNION BANK AGBANI|CYBER
+                                               SECURITY-MFB-AGBANI|SENTIENT-FIDE
+                                               LITY-ESUT|ENU901-ENU501-GE4
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     *down   down     FINE BROTHERS ENUGU 10MBS
+GE0/0/1                       down    down     HUAWEI, Quidway Series, GigabitEt
+                                               hernet0/0/1 Interface
+GE0/0/2                       down    down     SPIDERNET
+GE0/0/3                       up      up       HUAWEI, Quidway Series, GigabitEt
+                                               hernet0/0/3 Interface
+GE0/0/4                       up      up       TRUNK-DCN-ENUGU-NE40E-AR-BGE2/1/4
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1878                    up      up       HUAWEI, Quidway Series, Vlanif187
+                                               8 Interface
+[BS-ENU901-Switch]   dis cur
+#
+!Software Version V100R006C05
+ sysname BS-ENU901-Switch
+#
+ vlan batch 310 924 935 1024 1054 1218 1348 1385 1443 1487
+ vlan batch 1492 to 1496 1498 1501 1503 1553 1563 1599 1606 1640 1649
+ vlan batch 1657 1667 1671 to 1672 1762 1781 1824 1878 1881 2016 2065
+ vlan batch 2523 2999 3035 3419 3519 3621 3844 4028 4044
+#
+ undo http server enable
+ undo http secure-server enable
+#
+vlan 310
+ description STANBIC PENSION ENUGU
+vlan 924
+ description ICSL-Enugu-Lagos
+vlan 935
+ description ICSL-Enugu
+vlan 1024
+ description Maduka Univ|Dicnet
+vlan 1054
+ description TPGS-KFC
+vlan 1218
+ description Igbo-Etiti-LGA
+vlan 1348
+ description Techpoint-Nest-Enugu-Lag
+vlan 1385
+ description Fine Brothers Enugu
+vlan 1443
+ description Sentient-network-Fidelity bank ESUT
+vlan 1487
+ description New Ceragon Mgt
+vlan 1492
+ description BS-Nera Mgt
+vlan 1493
+ description BS-Nera MGT
+vlan 1494
+ description BS-Nera Mgt
+vlan 1495
+ description BS-Nera-MGT
+vlan 1496
+ description BS-Ceragon Mgt
+vlan 1498
+ description Ceragon Mgt
+vlan 1501
+ description BS_MGT
+vlan 1503
+ description BE-NERA_MGT
+vlan 1553
+ description Enugu State Polytechnic Iwolo
+vlan 1563
+ description Union bank Udi
+vlan 1599
+ description SPIDERNET-ENUGU
+vlan 1606
+ description ISN-ERICSSON
+vlan 1640
+ description Access-bank
+vlan 1649
+ description TPGS-Enugu
+vlan 1657
+ description TPGS ENUGU-POLOPARK
+vlan 1667
+ description union bank 1St Okpara Avenue(Peace-park)
+vlan 1671
+ description Union-bank Agbani
+vlan 1672
+ description Union-bank Ogbete
+vlan 1762
+ description FRSC-Academy Udi
+vlan 1781
+ description BTS LEASE CIRCUIT
+vlan 1824
+ description Zetaweb-Enugu
+vlan 1878
+ description GLOBUS-BANK-ENUGU
+vlan 1881
+ description Fidelity bank Agbani
+vlan 2016
+ description SENTIENT-FBN-EMENE
+vlan 2065
+ description SENTIENT-FBN-OJI-RIVER
+vlan 2523
+ description Madonna University Akpugo
+vlan 2999
+ description FCMB-VPLS
+vlan 3035
+ description Skye bank Enugu
+vlan 3419
+ description Heritage bank Garden Avenue Enugu
+vlan 3519
+ description NNPC Regional Office Enugu
+vlan 3621
+ description Trans Ekulu Rhainic
+vlan 3844
+ description ENUGU GLO MAUL SHOPRITE
+vlan 4028
+ description CYBERSPACE UNTH
+vlan 4044
+ description CYBERSECURITY AGBANI MFB
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
+ local-user admin service-type http
+ local-user bsnoc password cipher %@%@v`o;)oVa6$w&XhWBQ)~FWN@I%@%@
+ local-user bsnoc privilege level 15
+#
+interface Vlanif1
+#
+interface Vlanif1501
+ ip address 10.248.249.23 255.255.255.0
+#
+interface Vlanif1878
+ ip address 192.168.17.1 255.255.255.0
+#
+interface Ethernet0/0/1
+ description FCMB ENUGU 1 GARDEN AVENUE
+ port link-type trunk
+ port trunk allow-pass vlan 1493 2999
+#
+interface Ethernet0/0/2
+ description CYBERSECURITY UNTH, SENTIENT-FBN-ORJI-RIVER
+ port link-type trunk
+ port trunk allow-pass vlan 2065 4028
+#
+interface Ethernet0/0/3
+ description Stanbic PENSION ENUGU
+ port link-type access
+ port default vlan 310
+#
+interface Ethernet0/0/4
+ description UNION BANK OKPARA AVENUE (PEACE PARK)
+ port link-type access
+ port default vlan 1667
+#
+interface Ethernet0/0/5
+ description TPGS-ENUGU-POLOPARK-10m-Internet
+ port link-type access
+ port default vlan 1657
+#
+interface Ethernet0/0/6
+ description UNION-BANK Ogbete
+ port link-type access
+ port default vlan 1672
+#
+interface Ethernet0/0/7
+ description ISN Ericsson|TPGS|10mbs|5mbs
+ port link-type trunk
+ port trunk allow-pass vlan 1503 1606 1649
+#
+interface Ethernet0/0/8
+ description Caritas!Access-bk-Nike!Access-bk-Agbani!Enugu-mul-Gloshop!Sentient-FBN-Emene!Madona-Akpugo!Enugu state Poly-Iwolo
+ port link-type trunk
+ port trunk allow-pass vlan 1487 1553 1640 2016 2523 2919 3844
+#
+interface Ethernet0/0/9
+ description SKYE BANK Enugu
+ port link-type trunk
+ port trunk allow-pass vlan 1495 3035
+#
+interface Ethernet0/0/10
+ description TPGS-ENUGU-5mbs-internet-vlan 1649
+ port link-type access
+ port default vlan 1649
+#
+interface Ethernet0/0/11
+ port link-type trunk
+ port trunk allow-pass vlan 1493
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/12
+ description ISN-ENUGU-LAG!8mbs
+ port link-type trunk
+ port trunk allow-pass vlan 1503 1620
+#
+interface Ethernet0/0/13
+ description SPIDERNET RADIO bacKUP LINK
+ port link-type access
+ port default vlan 1599
+#
+interface Ethernet0/0/14
+ description NNPC RETAIL SOUTH EAST REgional office Enugu
+ port link-type trunk
+ port trunk allow-pass vlan 1493 3519
+#
+interface Ethernet0/0/15
+ description Techpoint-NESTLE-10mbs
+ port link-type access
+ port default vlan 1348
+#
+interface Ethernet0/0/16
+ description UNION BK UDI|MADUKA-UNIV-DICNET|IGBO-ETITI-LGA-ENU901-ENU019-1+0-GE4
+ port link-type trunk
+ port trunk allow-pass vlan 1024 1218 1497 1563 1881 3621
+#
+interface Ethernet0/0/17
+ description ICSL-ENUGU-LAG-VPN|10MBS
+ port link-type trunk
+ port trunk allow-pass vlan 923 to 924 935 1503
+#
+interface Ethernet0/0/18
+ port link-type trunk
+#
+interface Ethernet0/0/19
+ description ZETAWEB-MCN-ENUGU-LAG|10mbs
+ port link-type trunk
+ port trunk allow-pass vlan 1503 1824
+#
+interface Ethernet0/0/20
+ description FCMB-ESUT|UNION BANK AGBANI|CYBERSECURITY-MFB-AGBANI|SENTIENT-FIDELITY-ESUT|ENU901-ENU501-GE4
+ port link-type trunk
+ port trunk allow-pass vlan 1443 1671 2999 4044
+#
+interface Ethernet0/0/21
+#
+interface Ethernet0/0/22
+#
+interface Ethernet0/0/23
+#
+interface Ethernet0/0/24
+ description FINE BROTHERS ENUGU 10MBS
+ shutdown
+ port link-type trunk
+#
+interface GigabitEthernet0/0/1
+ port link-type trunk
+#
+interface GigabitEthernet0/0/2
+ description SPIDERNET
+ port link-type access
+ port default vlan 1599
+#
+interface GigabitEthernet0/0/3
+ port link-type trunk
+ combo-port copper
+#
+interface GigabitEthernet0/0/4
+ description TRUNK-DCN-ENUGU-NE40E-AR-BGE2/1/4
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+ combo-port copper
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100000C61
+ snmp-agent community read cipher %@%@#_4{)&pl#<Ka2dP\C[)B@&7'O({^Ud(fJ~usbO%[*GS!&7*@m(0oD\ncj/q:2C)y7'D;73@&%@%@
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode password
+ user privilege level 15
+ set authentication password cipher %@%@{m4tTN>3Z$plJuRaFS4+WRal"{0!I8#-)VT"o)(3SnT@RaoW%@%@
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[BS-ENU901-Switch]

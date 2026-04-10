@@ -1,0 +1,1017 @@
+
+#
+!Software Version V100R005C01SPC100
+ sysname BS-OMU801
+#
+ vlan batch 804 909 1110 1221 1270 1375 1486 1492 1497 1501
+ vlan batch 1640 1762 1774 3007 3042 4026
+#
+ cluster enable
+ ntdp enable
+ ntdp hop 16
+ ndp enable
+#
+ dhcp enable
+#
+ undo http server enable
+#
+ drop illegal-mac alarm
+#
+vlan 804
+ description SWITCH-MGT
+vlan 909
+ description THOMAS-ADEWUNMI-COLLEGE
+vlan 1110
+ description LANDMARK-UNIVERSITY-STM1
+vlan 1221
+ description new-landmark
+vlan 1270
+ description FIRST-BANK-EGBE-L3
+vlan 1375
+ description Thomas Adewunmi University
+vlan 1486
+ description CERAGON_MGT
+vlan 1492
+ description BS-NERA-4-MGT
+vlan 1497
+ description NERA RADIO MANAGMENT
+vlan 1501
+ description MANAGEMENT_VLAN
+vlan 1640
+ description Access Bank
+vlan 1762
+ description IBEDC OMU_ARAN
+vlan 1774
+ description VDT OMU ARAN
+vlan 3007
+ description FIRST BANK MOPA
+vlan 3042
+ description UBA-VPLS
+vlan 4026
+ description VDT OMUARAN-OMU801-INTERNET||20M
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password simple admin
+ local-user admin service-type http
+ local-user bsnoc password cipher RB!G'1+"PX61[a"FZ7=S#!!!
+ local-user bsnoc privilege level 15
+#
+interface Vlanif1
+ ip address dhcp-alloc
+#
+interface Vlanif804
+ ip address 10.248.246.68 255.255.255.192
+#
+interface Vlanif1110
+ ip address 41.203.88.4 255.255.255.248
+#
+interface Vlanif1486
+ ip address 10.155.202.231 255.255.255.0
+#
+interface Vlanif1497
+ ip address 10.155.198.102 255.255.255.0
+#
+interface Vlanif1501
+ ip address 10.248.249.121 255.255.255.0
+#
+interface Vlanif1762
+ ip address 10.100.100.2 255.255.255.0
+#
+interface Vlanif4026
+#
+interface Ethernet0/0/1
+ description THOMAS ADEWUNMI COLLEGE
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 909 1497
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/2
+ description UBA ODO ORE
+ port link-type trunk
+ port trunk allow-pass vlan 1492 3042
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/3
+ description VDT OMU ARAN 2MB
+ port link-type access
+ port default vlan 1774
+ ntdp enable
+ ndp enable
+ bpdu enable
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/4
+ description - FIRST-BANK-EGBE |ACCESS BANK EGBE!!UBA ODO OREs
+ port link-type trunk
+ port trunk allow-pass vlan 1492 1497 3042
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/5
+ description IBEDC OMU_ARAN
+ port link-type trunk
+ port trunk allow-pass vlan 1486 1762
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/6
+ description THOMAS ADEWUNMI UNIVERSITY 10MB INTERNET-FIBER-LM
+ port link-type access
+ port default vlan 1375
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/7
+ description VDT OMUARAN-OMU801-INTERNET||20M
+ port link-type access
+ port default vlan 4026
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/8
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/9
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/10
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/11
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/12
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/13
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/14
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/15
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/16
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/17
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/18
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/19
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/21
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/22
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/23
+ port link-type access
+ port default vlan 1501
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/24
+ port link-type trunk
+ port trunk allow-pass vlan 1501
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/1
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/2
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/3
+ description ETACT-LANDMARK-UNI || 2xSTM1
+ port link-type access
+ port default vlan 1221
+ ntdp enable
+ ndp enable
+ bpdu enable
+ multicast-suppression 50
+ broadcast-suppression 50
+#
+interface GigabitEthernet0/0/4
+ description UPLINK TO DCN IP/MPLS GE0/2/7
+ port link-type trunk
+ port trunk allow-pass vlan 804 909 1110 1221 1270 1375 1486 1492 1497 1501
+ port trunk allow-pass vlan 1640 1762 1774 3007 3042 4026
+ ntdp enable
+ ndp enable
+ bpdu enable
+ port media type fiber
+     undo negotiation auto
+ combo-port auto
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100002835
+ snmp-agent sys-info version v3
+#
+user-interface con 0
+ authentication-mode aaa
+ idle-timeout 0 0
+user-interface vty 0 4
+ authentication-mode aaa
+ user privilege level 3
+#
+return
+[BS-OMU801]     q
+<BS-OMU801>save
+The current configuration will be written to the device.
+Are you sure to continue?[Y/N]y
+Now saving the current configuration to the slot 0 .
+Info: Save the configuration successfully.
+<BS-OMU801>
+<BS-OMU801>
+<BS-OMU801>
+<BS-OMU801>
+<BS-OMU801>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-OMU801]int ethr
+[BS-OMU801]int ether
+[BS-OMU801]int Ethernet 0/0/4
+[BS-OMU801-Ethernet0/0/4]
+Apr  7 2026 13:28:01+01:00 BS-OMU801 DS/4/DATASYNC_CFGCHANGE:OID 1.3.6.1.4.1.2011.5.25.191.3.1 configurations have been changed. The current change number is 201, the change loop count is 0, and the maximum number of records is 4095.
+[BS-OMU801-Ethernet0/0/4]undo port trun
+[BS-OMU801-Ethernet0/0/4]undo port trunk all
+[BS-OMU801-Ethernet0/0/4]undo port trunk allow-pass vla
+[BS-OMU801-Ethernet0/0/4]undo port trunk allow-pass vlan 1501
+Error: The trunk port does not join the VLAN.
+[BS-OMU801-Ethernet0/0/4]undo port link
+[BS-OMU801-Ethernet0/0/4]undo port link-type
+Error: Please renew the default configurations.
+[BS-OMU801-Ethernet0/0/4]undo port trunk allow-pass vlan
+                                                         ^
+Error:Incomplete command found at '^' position.
+[BS-OMU801-Ethernet0/0/4]int Ethernet 0/0/24
+[BS-OMU801-Ethernet0/0/24]undo port trunk allow-pass vlan 1501
+[BS-OMU801-Ethernet0/0/24]
+Apr  7 2026 13:29:11+01:00 BS-OMU801 DS/4/DATASYNC_CFGCHANGE:OID 1.3.6.1.4.1.2011.5.25.191.3.1 configurations have been changed. The current change number is 203, the change loop count is 0, and the maximum number of records is 4095.undo port link
+[BS-OMU801-Ethernet0/0/24]undo port link-type
+[BS-OMU801-Ethernet0/0/24]
+Apr  7 2026 13:29:21+01:00 BS-OMU801 DS/4/DATASYNC_CFGCHANGE:OID 1.3.6.1.4.1.2011.5.25.191.3.1 configurations have been changed. The current change number is 204, the change loop count is 0, and the maximum number of records is 4095.
+[BS-OMU801-Ethernet0/0/24]port link
+[BS-OMU801-Ethernet0/0/24]port link-type acc
+[BS-OMU801-Ethernet0/0/24]port link-type access
+[BS-OMU801-Ethernet0/0/24]por
+Apr  7 2026 13:29:31+01:00 BS-OMU801 DS/4/DATASYNC_CFGCHANGE:OID 1.3.6.1.4.1.2011.5.25.191.3.1 configurations have been changed. The current change number is 205, the change loop count is 0, and the maximum number of records is 409
+                          ^
+Error:Ambiguous command found at '^' position.
+[BS-OMU801-Ethernet0/0/24]port def
+[BS-OMU801-Ethernet0/0/24]port default vl
+[BS-OMU801-Ethernet0/0/24]port default vlan 804
+[BS-OMU801-Ethernet0/0/24]q
+[BS-OMU801]q
+<BS-OMU801>save
+The current configuration will be written to the device.
+Are you sure to continue?[Y/N]
+Apr  7 2026 13:29:51+01:00 BS-OMU801 DS/4/DATASYNC_CFGCHANGE:OID 1.3.6.1.4.1.2011.5.25.191.3.1 configurations have been changed. The current change number is 206, the change loop count is 0, and the maximum number of records is 4095.y
+Now saving the current configuration to the slot 0 .
+Info: Save the configuration successfully.
+<BS-OMU801>
+<BS-OMU801>
+<BS-OMU801>save
+The current configuration will be written to the device.
+Are you sure to continue?[Y/N]y
+Now saving the current configuration to the slot 0 .
+Info: Save the configuration successfully.
+<BS-OMU801>sys
+Enter system view, return user view with Ctrl+Z.
+[BS-OMU801]dis int des
+Interface                   Description
+Ethernet0/0/1               THOMAS ADEWUNMI COLLEGE
+Ethernet0/0/2               UBA ODO ORE
+Ethernet0/0/3               VDT OMU ARAN 2MB
+Ethernet0/0/4               - FIRST-BANK-EGBE |ACCESS BANK EGBE!!UBA ODO OREs
+Ethernet0/0/5               IBEDC OMU_ARAN
+Ethernet0/0/6               THOMAS ADEWUNMI UNIVERSITY 10MB INTERNET-FIBER-LM
+Ethernet0/0/7               VDT OMUARAN-OMU801-INTERNET||20M
+Ethernet0/0/8               HUAWEI, Quidway Series, Ethernet0/0/8 Interface
+Ethernet0/0/9               HUAWEI, Quidway Series, Ethernet0/0/9 Interface
+Ethernet0/0/10              HUAWEI, Quidway Series, Ethernet0/0/10 Interface
+Ethernet0/0/11              HUAWEI, Quidway Series, Ethernet0/0/11 Interface
+Ethernet0/0/12              HUAWEI, Quidway Series, Ethernet0/0/12 Interface
+Ethernet0/0/13              HUAWEI, Quidway Series, Ethernet0/0/13 Interface
+Ethernet0/0/14              HUAWEI, Quidway Series, Ethernet0/0/14 Interface
+Ethernet0/0/15              HUAWEI, Quidway Series, Ethernet0/0/15 Interface
+Ethernet0/0/16              HUAWEI, Quidway Series, Ethernet0/0/16 Interface
+Ethernet0/0/17              HUAWEI, Quidway Series, Ethernet0/0/17 Interface
+Ethernet0/0/18              HUAWEI, Quidway Series, Ethernet0/0/18 Interface
+Ethernet0/0/19              HUAWEI, Quidway Series, Ethernet0/0/19 Interface
+Ethernet0/0/20              HUAWEI, Quidway Series, Ethernet0/0/20 Interface
+Ethernet0/0/21              HUAWEI, Quidway Series, Ethernet0/0/21 Interface
+Ethernet0/0/22              HUAWEI, Quidway Series, Ethernet0/0/22 Interface
+Ethernet0/0/23              HUAWEI, Quidway Series, Ethernet0/0/23 Interface
+Ethernet0/0/24              HUAWEI, Quidway Series, Ethernet0/0/24 Interface
+GigabitEthernet0/0/1        HUAWEI, Quidway Series, GigabitEthernet0/0/1 Interf
+                            ace
+GigabitEthernet0/0/2        HUAWEI, Quidway Series, GigabitEthernet0/0/2 Interf
+                            ace
+GigabitEthernet0/0/3        ETACT-LANDMARK-UNI || 2xSTM1
+GigabitEthernet0/0/4        UPLINK TO DCN IP/MPLS GE0/2/7
+NULL0                       HUAWEI, Quidway Series, NULL0 Interface
+Vlanif1                     HUAWEI, Quidway Series, Vlanif1 Interface
+Vlanif804                   HUAWEI, Quidway Series, Vlanif804 Interface
+Vlanif1110                  HUAWEI, Quidway Series, Vlanif1110 Interface
+Vlanif1486                  HUAWEI, Quidway Series, Vlanif1486 Interface
+Vlanif1497                  HUAWEI, Quidway Series, Vlanif1497 Interface
+Vlanif1501                  HUAWEI, Quidway Series, Vlanif1501 Interface
+Vlanif1762                  HUAWEI, Quidway Series, Vlanif1762 Interface
+Vlanif4026                  HUAWEI, Quidway Series, Vlanif4026 Interface
+[BS-OMU801]dis cur
+#
+!Software Version V100R005C01SPC100
+ sysname BS-OMU801
+#
+ vlan batch 804 909 1110 1221 1270 1375 1486 1492 1497 1501
+ vlan batch 1640 1762 1774 3007 3042 4026
+#
+ cluster enable
+ ntdp enable
+ ntdp hop 16
+ ndp enable
+#
+ dhcp enable
+#
+ undo http server enable
+#
+ drop illegal-mac alarm
+#
+vlan 804
+ description SWITCH-MGT
+vlan 909
+ description THOMAS-ADEWUNMI-COLLEGE
+vlan 1110
+ description LANDMARK-UNIVERSITY-STM1
+vlan 1221
+ description new-landmark
+vlan 1270
+ description FIRST-BANK-EGBE-L3
+vlan 1375
+ description Thomas Adewunmi University
+vlan 1486
+ description CERAGON_MGT
+vlan 1492
+ description BS-NERA-4-MGT
+vlan 1497
+ description NERA RADIO MANAGMENT
+vlan 1501
+ description MANAGEMENT_VLAN
+vlan 1640
+ description Access Bank
+vlan 1762
+ description IBEDC OMU_ARAN
+vlan 1774
+ description VDT OMU ARAN
+vlan 3007
+ description FIRST BANK MOPA
+vlan 3042
+ description UBA-VPLS
+vlan 4026
+ description VDT OMUARAN-OMU801-INTERNET||20M
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password simple admin
+ local-user admin service-type http
+ local-user bsnoc password cipher RB!G'1+"PX61[a"FZ7=S#!!!
+ local-user bsnoc privilege level 15
+#
+interface Vlanif1
+ ip address dhcp-alloc
+#
+interface Vlanif804
+ ip address 10.248.246.68 255.255.255.192
+#
+interface Vlanif1110
+ ip address 41.203.88.4 255.255.255.248
+#
+interface Vlanif1486
+ ip address 10.155.202.231 255.255.255.0
+#
+interface Vlanif1497
+ ip address 10.155.198.102 255.255.255.0
+#
+interface Vlanif1501
+ ip address 10.248.249.121 255.255.255.0
+#
+interface Vlanif1762
+ ip address 10.100.100.2 255.255.255.0
+#
+interface Vlanif4026
+#
+interface Ethernet0/0/1
+ description THOMAS ADEWUNMI COLLEGE
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 909 1497
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/2
+ description UBA ODO ORE
+ port link-type trunk
+ port trunk allow-pass vlan 1492 3042
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/3
+ description VDT OMU ARAN 2MB
+ port link-type access
+ port default vlan 1774
+ ntdp enable
+ ndp enable
+ bpdu enable
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/4
+ description - FIRST-BANK-EGBE |ACCESS BANK EGBE!!UBA ODO OREs
+ port link-type trunk
+ port trunk allow-pass vlan 1492 1497 3042
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/5
+ description IBEDC OMU_ARAN
+ port link-type trunk
+ port trunk allow-pass vlan 1486 1762
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/6
+ description THOMAS ADEWUNMI UNIVERSITY 10MB INTERNET-FIBER-LM
+ port link-type access
+ port default vlan 1375
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/7
+ description VDT OMUARAN-OMU801-INTERNET||20M
+ port link-type access
+ port default vlan 4026
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/8
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/9
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/10
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/11
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/12
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/13
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/14
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/15
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/16
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/17
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/18
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/19
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/21
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/22
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/23
+ port link-type access
+ port default vlan 1501
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/24
+ port link-type access
+ port default vlan 804
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/1
+ ntdp enable
+  ---- More ----
+Apr  7 2026 13:31:06+01:00 BS-OMU801 %%01IFNET/4/IF_STATE(l)[30]:Interface Ethernet0/0/24 has turned into UP state.
+Apr  7 2026 13:31:06+01:00 BS-OMU801 %%01IFNET/4/IF_STATE(l)[31]:Interface Vlanif804 has turned into UP state.
+Apr  7 2026 13:31:06+01:00 BS-OMU801 %%01IFNET/4/LINKNO_STATE(l)[32]:The line protocol on the interface Vlanif804 has entered the UP state.
+Apr  7 2026 13:31:20+01:00 BS-OMU801 %%01IFNET/4/IF_STATE(l)[33]:Interface Ethernet0/0/24 has turned into DOWN state.
+Apr  7 2026 13:31:20+01:00 BS-OMU801 %%01IFNET/4/IF_STATE(l)[34]:Interface Vlanif804 has turned into DOWN state.
+Apr  7 2026 13:31:20+01:00 BS-OMU801 %%01IFNET/4/LINKNO_STATE(l)[35]:The line protocol on the interface Vlanif804 has entered the DOWN state.
+Apr  7 2026 13:31:24+01:00 BS-OMU801 %%01IFNET/4/IF_STATE(l)[36]:Interface Ethernet0/0/24 has turned into UP state.
+Apr  7 2026 13:31:24+01:00 BS-OMU801 %%01IFNET/4/IF_STATE(l)[37]:Interface Vlanif804 has turned into UP state.
+Apr  7 2026 13:31:24+01:00 BS-OMU801 %%01IFNET/4/LINKNO_STATE(l)[38]:The line protocol on the interface Vlanif804 has entered the UP state.
+Apr  7 2026 13:31:29+01:00 BS-OMU801 %%01SHELL/4/TELNETFAILED(l)[39]:Failed to login through telnet. (Ip=10.248.246.69, UserName=bsnoc, Times=1)
+Apr  7 2026 13:31:33+01:00 BS-OMU801 %%01SHELL/4/TELNETFAILED(l)[40]:Failed to login through telnet. (Ip=10.248.246.69, UserName=**, Times=2)
+Apr  7 2026 13:31:35+01:00 BS-OMU801 %%01SHELL/4/TELNETFAILED(l)[41]:Failed to login through telnet ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/2
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/3
+ description ETACT-LANDMARK-UNI || 2xSTM1
+ port link-type access
+ port default vlan 1221
+ ntdp enable
+ ndp enable
+ bpdu enable
+ multicast-suppression 50
+ broadcast-suppression 50
+#
+interface GigabitEthernet0/0/4
+ description UPLINK TO DCN IP/MPLS GE0/2/7
+ port link-type trunk
+ port trunk allow-pass vlan 804 909 1110 1221 1270 1375 1486 1492 1497 1501
+ port trunk allow-pass vlan 1640 1762 1774 3007 3042 4026
+ ntdp enable
+ ndp enable
+ bpdu enable
+ port media type fiber
+     undo negotiation auto
+ combo-port auto
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100002835
+ snmp-agent sys-info version v3
+#
+user-interface con 0
+ authentication-mode aaa
+ idle-timeout 0 0
+user-interface vty 0 4
+ authentication-mode aaa
+ user privilege level 3
+#
+return
+
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]
+[BS-OMU801]dis cur
+#
+!Software Version V100R005C01SPC100
+ sysname BS-OMU801
+#
+ vlan batch 804 909 1110 1221 1270 1375 1486 1492 1497 1501
+ vlan batch 1640 1762 1774 3007 3042 4026
+#
+ cluster enable
+ ntdp enable
+ ntdp hop 16
+ ndp enable
+#
+ dhcp enable
+#
+ undo http server enable
+#
+ drop illegal-mac alarm
+#
+vlan 804
+ description SWITCH-MGT
+vlan 909
+ description THOMAS-ADEWUNMI-COLLEGE
+vlan 1110
+ description LANDMARK-UNIVERSITY-STM1
+vlan 1221
+ description new-landmark
+vlan 1270
+ description FIRST-BANK-EGBE-L3
+vlan 1375
+ description Thomas Adewunmi University
+vlan 1486
+ description CERAGON_MGT
+vlan 1492
+ description BS-NERA-4-MGT
+vlan 1497
+ description NERA RADIO MANAGMENT
+vlan 1501
+ description MANAGEMENT_VLAN
+vlan 1640
+ description Access Bank
+vlan 1762
+ description IBEDC OMU_ARAN
+vlan 1774
+ description VDT OMU ARAN
+vlan 3007
+ description FIRST BANK MOPA
+vlan 3042
+ description UBA-VPLS
+vlan 4026
+ description VDT OMUARAN-OMU801-INTERNET||20M
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password simple admin
+ local-user admin service-type http
+ local-user bsnoc password cipher RB!G'1+"PX61[a"FZ7=S#!!!
+ local-user bsnoc privilege level 15
+#
+interface Vlanif1
+ ip address dhcp-alloc
+#
+interface Vlanif804
+ ip address 10.248.246.68 255.255.255.192
+#
+interface Vlanif1110
+ ip address 41.203.88.4 255.255.255.248
+#
+interface Vlanif1486
+ ip address 10.155.202.231 255.255.255.0
+#
+interface Vlanif1497
+ ip address 10.155.198.102 255.255.255.0
+#
+interface Vlanif1501
+ ip address 10.248.249.121 255.255.255.0
+#
+interface Vlanif1762
+ ip address 10.100.100.2 255.255.255.0
+#
+interface Vlanif4026
+#
+interface Ethernet0/0/1
+ description THOMAS ADEWUNMI COLLEGE
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 909 1497
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/2
+ description UBA ODO ORE
+ port link-type trunk
+ port trunk allow-pass vlan 1492 3042
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/3
+ description VDT OMU ARAN 2MB
+ port link-type access
+ port default vlan 1774
+ ntdp enable
+ ndp enable
+ bpdu enable
+ undo negotiation auto
+ speed 100
+#
+interface Ethernet0/0/4
+ description - FIRST-BANK-EGBE |ACCESS BANK EGBE!!UBA ODO OREs
+ port link-type trunk
+ port trunk allow-pass vlan 1492 1497 3042
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/5
+ description IBEDC OMU_ARAN
+ port link-type trunk
+ port trunk allow-pass vlan 1486 1762
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/6
+ description THOMAS ADEWUNMI UNIVERSITY 10MB INTERNET-FIBER-LM
+ port link-type access
+ port default vlan 1375
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/7
+ description VDT OMUARAN-OMU801-INTERNET||20M
+ port link-type access
+ port default vlan 4026
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/8
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/9
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/10
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/11
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/12
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/13
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/14
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/15
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/16
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/17
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/18
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/19
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/21
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/22
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/23
+ port link-type access
+ port default vlan 1501
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/24
+ port link-type access
+ port default vlan 804
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/1
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/2
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/3
+ description ETACT-LANDMARK-UNI || 2xSTM1
+ port link-type access
+ port default vlan 1221
+ ntdp enable
+ ndp enable
+ bpdu enable
+ multicast-suppression 50
+ broadcast-suppression 50
+#
+interface GigabitEthernet0/0/4
+ description UPLINK TO DCN IP/MPLS GE0/2/7
+ port link-type trunk
+ port trunk allow-pass vlan 804 909 1110 1221 1270 1375 1486 1492 1497 1501
+ port trunk allow-pass vlan 1640 1762 1774 3007 3042 4026
+ ntdp enable
+ ndp enable
+ bpdu enable
+ port media type fiber
+     undo negotiation auto
+ combo-port auto
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.65
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100002835
+ snmp-agent sys-info version v3
+#
+user-interface con 0
+ authentication-mode aaa
+ idle-timeout 0 0
+user-interface vty 0 4
+ authentication-mode aaa
+ user privilege level 3
+#
+return
+[BS-OMU801]

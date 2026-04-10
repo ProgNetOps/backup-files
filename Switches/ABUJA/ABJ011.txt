@@ -1,24 +1,3 @@
-     +--------------------------------------------------------------------+
-     ¦                  • MobaXterm Professional v25.0 •                  ¦
-     ¦              (X server, SSH client and network tools)              ¦
-     ¦                                                                    ¦
-     ¦ ? Your computer drives are accessible through the /drives path     ¦
-     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
-     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
-     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
-     ¦                                                                    ¦
-     ¦                     Registered to RT (1 user)                      ¦
-     +--------------------------------------------------------------------+
-
- ? 2025-11-13 ? ? 07:41.44 ? ? /home/mobaxterm ? telnet 10.248.249.224
-Connected to 10.248.249.224.
-Entering character mode
-Escape character is '^]'.
-
-Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
-
-Login authentication
-
 
 Username:bsnoc
 Password:

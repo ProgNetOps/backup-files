@@ -1,0 +1,257 @@
+     +--------------------------------------------------------------------+
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
+     ¦              (X server, SSH client and network tools)              ¦
+     ¦                                                                    ¦
+     ¦ ? Your computer drives are accessible through the /drives path     ¦
+     ¦ ? Your DISPLAY is set to 192.168.6.5:0.0                           ¦
+     ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
+     ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
+     ¦                                                                    ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
+     +--------------------------------------------------------------------+
+
+ ? 2026-04-08 ? ? 11:59.51 ? ? /home/mobaxterm ? telnet 10.248.243.4
+Connected to 10.248.243.4.
+Entering character mode
+Escape character is '^]'.
+
+
+Login authentication
+
+
+Username:bsnoc
+Password:
+Note: The max number of VTY users is 5, and the current number
+      of VTY users on line is 1.
+<GLO_FBN_MDXI>sys
+Enter system view, return user view with Ctrl+Z.
+[GLO_FBN_MDXI]dis int des
+Interface                   Description
+Ethernet0/0/1               FBN-TRE-SBC-CONNECTION|FBN-RSAC| FBN-SIP-VOICE CONN
+                            ECTION
+Ethernet0/0/2               FBN-RSAC-SBC-CONNECTION
+Ethernet0/0/3               Huawei, Quidway Series, Ethernet0/0/3 Interface
+Ethernet0/0/4               Huawei, Quidway Series, Ethernet0/0/4 Interface
+Ethernet0/0/5               Huawei, Quidway Series, Ethernet0/0/5 Interface
+Ethernet0/0/6               Huawei, Quidway Series, Ethernet0/0/6 Interface
+Ethernet0/0/7               Huawei, Quidway Series, Ethernet0/0/7 Interface
+Ethernet0/0/8               Huawei, Quidway Series, Ethernet0/0/8 Interface
+Ethernet0/0/9               Huawei, Quidway Series, Ethernet0/0/9 Interface
+Ethernet0/0/10              Huawei, Quidway Series, Ethernet0/0/10 Interface
+Ethernet0/0/11              Huawei, Quidway Series, Ethernet0/0/11 Interface
+Ethernet0/0/12              Huawei, Quidway Series, Ethernet0/0/12 Interface
+Ethernet0/0/13              Huawei, Quidway Series, Ethernet0/0/13 Interface
+Ethernet0/0/14              Huawei, Quidway Series, Ethernet0/0/14 Interface
+Ethernet0/0/15              free
+Ethernet0/0/16              SWITCH-MGT
+GigabitEthernet0/0/1        Trunk to Globacom
+GigabitEthernet0/0/2        FBN-L3-DRC-CONN
+NULL0                       Huawei, Quidway Series, NULL0 Interface
+Vlanif1                     Huawei, Quidway Series, Vlanif1 Interface
+Vlanif804                   Huawei, Quidway Series, Vlanif804 Interface
+Vlanif807                   Huawei, Quidway Series, Vlanif807 Interface
+
+[GLO_FBN_MDXI]is cur
+              ^
+Error:Unrecognized command found at '^' position.
+[GLO_FBN_MDXI]DIS CUR
+#
+ sysname GLO_FBN_MDXI
+#
+ vlan batch 1 131 610 804 to 805 807 1089 1093 1501 1506 to 1507 1761
+ vlan batch 3007
+#
+ bpdu enable
+#
+ cluster enable
+ ntdp enable
+ ntdp hop 16
+ ndp enable
+#
+ undo http server enable
+#
+vlan 131
+ description MANAGEMENT FROM SAKA 3560
+vlan 610
+ description INTERNET VLAN
+vlan 804
+ description SW-MGT
+vlan 805
+ description ENT-SWITCH-3
+vlan 807
+ description TEMP-SWITCH-NGT
+vlan 1089
+ description FBN-TRE-SBC-CONN
+vlan 1093
+ description FBN-RSAC-SBC-CONN
+vlan 1501
+ description MGT-SAKA25
+vlan 1506
+ description FBN-SBC-SIP-VOICE
+vlan 1507
+ description SWITCH-MGT-3
+vlan 1761
+ description KEYSTONE BRANCHES
+vlan 3007
+ description FBN-DRC-L3
+#
+interface Vlanif1
+#
+interface Vlanif804
+ ip address 10.248.246.108 255.255.255.192
+#
+interface Vlanif807
+ ip address 10.248.247.2 255.255.255.192
+#
+interface Vlanif1093
+#
+interface Vlanif1501
+ ip address 10.248.249.170 255.255.255.0
+#
+interface Vlanif1507
+ ip address 10.248.243.4 255.255.255.0
+#
+interface Vlanif1761
+ ip address 10.99.6.100 255.255.255.0
+#
+interface Vlanif3007
+#
+interface Ethernet0/0/1
+ description FBN-TRE-SBC-CONNECTION|FBN-RSAC| FBN-SIP-VOICE CONNECTION
+ port link-type trunk
+ port trunk allow-pass vlan 1089 1093 1506
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/2
+ description FBN-RSAC-SBC-CONNECTION
+ port link-type access
+ port default vlan 1093
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/3
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/4
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/5
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/6
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/7
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/8
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/9
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/10
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/11
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/12
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/13
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/14
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/15
+ description free
+ port default vlan 1
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/16
+ description SWITCH-MGT
+ port link-type access
+ port default vlan 805
+ ntdp enable
+ ndp enable
+#
+interface GigabitEthernet0/0/1
+ description Trunk to Globacom
+ port link-type trunk
+ port trunk allow-pass vlan 804 807 1089 1093 1501 1506 to 1507 3007
+ combo-port fiber
+   negotiation auto
+ combo-port media type
+   combo-port auto
+ ntdp enable
+ ndp enable
+#
+interface GigabitEthernet0/0/2
+ description FBN-L3-DRC-CONN
+ port link-type trunk
+ port trunk allow-pass vlan 3007
+ combo-port fiber
+   negotiation auto
+ combo-port media type
+   combo-port auto
+ ntdp enable
+ ndp enable
+#
+interface NULL0
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user bsnoc password cipher RB!G'1+"PX61[a"FZ7=S#!!!
+ local-user bsnoc level 3
+ local-user bsnoc ftp-directory flash:
+ local-user bsnoc service-type telnet terminal ssh ftp
+ local-user huawei password cipher N`C55QK<`=/Q=^Q`MAF4<1!!
+ local-user huawei level 3
+ local-user huawei ftp-directory flash:
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.248.243.1
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F000001000074DC
+ snmp-agent community read  globacom
+ snmp-agent sys-info version all
+#
+user-interface con 0
+ authentication-mode aaa
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return
+[GLO_FBN_MDXI]

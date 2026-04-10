@@ -1,5 +1,5 @@
      +--------------------------------------------------------------------+
-     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
      ¦              (X server, SSH client and network tools)              ¦
      ¦                                                                    ¦
      ¦ ? Your computer drives are accessible through the /drives path     ¦
@@ -7,10 +7,10 @@
      ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
      ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
      ¦                                                                    ¦
-     ¦                     Registered to RT (1 user)                      ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
      +--------------------------------------------------------------------+
 
- ? 2025-11-13 ? ? 07:30.09 ? ? /home/mobaxterm ? telnet 10.248.246.230
+ ? 2026-04-08 ? ? 12:17.19 ? ? /home/mobaxterm ? telnet 10.248.246.230
 Connected to 10.248.246.230.
 Entering character mode
 Escape character is '^]'.
@@ -74,20 +74,20 @@ Fa1/0/13                       up             up       Ovivi Ventures Limited| 1
 Fa1/0/14                       up             up       Ovivi Ventures-WUSE2-ABUJA2|30Mb-INTERNET-FIBER-LM
 Fa1/0/15                       up             up       SENTIENT FBN ZUBA-ABJ007-ABJ027-OSN-MSTP
 Fa1/0/16                       up             up       TRUNK-TO-FHA-SWITCH
-Fa1/0/17                       down           down     AFDB SIP - SWIFTALK RADIO | 2MB
+Fa1/0/17                       up             up       AFDB SIP - SWIFTALK RADIO | 2MB
 Fa1/0/18                       up             up       TPGS-EATNGO-VLAN1564-15M-INTERNET-AND-TPGSWUSE2-VLAN1565-10M-INTERN
-Fa1/0/19                       up             up       NIG CUSTOMS SERVICE | BOARDWAVES LL-ABJ-AWKA
+Fa1/0/19                       up             up       DENMARK DANNISH EMBASSY - FIBER
 Fa1/0/20                       up             up       SW GLOBAL-WUSE-ABJ007 |45M-INTERNET-FIBER-LM
 Fa1/0/21                       up             up       PDS-ABUJA-BACKUP-TO CLIENT MICROTICK_ROUTER
 Fa1/0/22                       up             up       CHRISTIAN BROADCASTING NETWORK 60M-INT-R-HUAWEI- ABJ013-ABJ007
 Fa1/0/23                       up             up       GERMAN_EMBASSY-INT | 20M
-Fa1/0/24                       up             up       DIZENGOFF ABUJA LL (ITALIAN EMBASSY) | 4M
+Fa1/0/24                       up             up       ITALIAN EMBASSY (DIZENGOFF) ABUJA LL IOTECH-RADIO | 4MB
 Gi1/0/1                        up             up       CONNECTION TO GLO1 HUAWEI G2/1/11
 Gi1/0/2                        up             up       TRUNK TO DCN NE40 PE-E 3/1/3
-BS_ABJ_007_3750_2ND# sh run
+BS_ABJ_007_3750_2ND#sh run
 Building configuration...
 
-Current configuration : 12394 bytes
+Current configuration : 12449 bytes
 !
 version 12.2
 no service pad
@@ -396,11 +396,17 @@ vlan 1845
 vlan 1914
  name GUINNESS-ABUJA
 !
+vlan 1933
+ name FRSC-KADO-LL-ABJ012
+!
 vlan 1985
  name Gitto-Construction
 !
 vlan 2082
  name TPGS-ABUJA-16
+!
+vlan 2240
+ name DANNISH-EMBASSY
 !
 vlan 2423
  name Stanbic-Ibtc-bank
@@ -535,11 +541,10 @@ interface FastEthernet1/0/18
  spanning-tree portfast
 !
 interface FastEthernet1/0/19
- description NIG CUSTOMS SERVICE | BOARDWAVES LL-ABJ-AWKA
+ description DENMARK DANNISH EMBASSY - FIBER
  location civic-location-id none
- switchport trunk encapsulation dot1q
- switchport trunk allowed vlan 802,1176,1438,1494
- switchport mode trunk
+ switchport access vlan 2240
+ switchport mode access
  spanning-tree portfast
 !
 interface FastEthernet1/0/20
@@ -570,7 +575,7 @@ interface FastEthernet1/0/23
  spanning-tree bpduguard enable
 !
 interface FastEthernet1/0/24
- description DIZENGOFF ABUJA LL (ITALIAN EMBASSY) | 4M
+ description ITALIAN EMBASSY (DIZENGOFF) ABUJA LL IOTECH-RADIO | 4MB
  switchport access vlan 1773
  switchport mode access
 !
@@ -583,7 +588,8 @@ interface GigabitEthernet1/0/2
  description TRUNK TO DCN NE40 PE-E 3/1/3
  switchport trunk encapsulation dot1q
  switchport trunk allowed vlan 802,1126,1136,1176,1315,1438,1488,1494,1506,1507
- switchport trunk allowed vlan add 1564,1565,1577,1640,1658,1675,1773,3035,3042
+ switchport trunk allowed vlan add 1564,1565,1577,1640,1658,1675,1773,1933,3035
+ switchport trunk allowed vlan add 3042
  switchport mode trunk
  switchport nonegotiate
 !

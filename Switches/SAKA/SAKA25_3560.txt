@@ -1,0 +1,1048 @@
+     +--------------------------------------------------------------------+
+                          MobaXterm Professional v25.2                     
+                    (X server, SSH client and network tools)               
+                                                                           
+       ? Your computer drives are accessible through the /drives path      
+       ? Your DISPLAY is set to 192.168.6.5:0.0                            
+       ? When using SSH, your remote DISPLAY is automatically forwarded    
+       ? Each command status is specified by a special symbol (? or ?)     
+                                                                           
+                      Registered to NoNaMeUser (99 users)                  
+     +--------------------------------------------------------------------+
+     ^
+
+
+SAKA25_3560_1#sh run
+Building configuration...
+
+Current configuration : 18874 bytes
+!
+version 12.2
+no service pad
+service timestamps debug uptime
+service timestamps log uptime
+service password-encryption
+service unsupported-transceiver
+!
+hostname SAKA25_3560_1
+!
+enable secret 5 $1$OPDz$lRPw8ztPBYJvUEl6Zi9L/0
+!
+username taiwo privilege 15 secret 5 $1$Oz5O$IRVOslHw7jSAo8FqAOSmT0
+username ben privilege 15 secret 5 $1$h/L1$S7tf.ptZT4XE91Z833zzQ/
+username donald privilege 15 secret 5 $1$uF5l$z3P.uGcc5r.TKYWbPr0OP0
+username richard privilege 15 secret 5 $1$x0sD$idI5Efwd61xiZGRNsIFNK1
+username emeka privilege 15 secret 5 $1$xCyE$qSjo9D/gpKu5YXtFctDln.
+username onyeka privilege 15 secret 5 $1$KNz6$wu91qA/WrvpJXOng69AaO.
+username chinedu privilege 15 secret 5 $1$hjFo$unqqJ.OLkHJem8i3UKDyq.
+username bizsol privilege 5 secret 5 $1$C5V/$NCfRk0AxVc93/N9fYPntZ0
+username jonas privilege 15 secret 5 $1$vzHw$F1ug0mGbhyglBmkCOwdJu0
+username noc privilege 15 secret 5 $1$s2oy$MTtP46MDRTHv7MJAMtmV.0
+no aaa new-model
+system mtu routing 1950
+vtp mode transparent
+ip subnet-zero
+ip routing
+!
+!
+!
+!
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause l2ptguard
+errdisable recovery cause psecure-violation
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause unicast-flood
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery interval 30
+no file verify auto
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+no spanning-tree vlan 12,33,88,93,98,112,115,117,125,189,501,504,506,516-517
+no spanning-tree vlan 523-524,531,566,683,716,805,906,916,1100,1137,1211-1212
+no spanning-tree vlan 1214,1364,1371,1486-1489,1492-1496,1498,1500,1507,1522
+no spanning-tree vlan 1578-1579,1640,1720-1721,1810,1848,1889-1890,1907,2151
+no spanning-tree vlan 2266,2325,2708,2999,3007,3035,3221,3241,3848,3871,3932
+spanning-tree vlan 1-4094 priority 28672
+!
+vlan internal allocation policy ascending
+!
+vlan 12,20,23,25-26
+!
+vlan 33
+ name WINLOT-APN
+!
+vlan 47
+ name lag129-mgmt
+!
+vlan 49
+ name zeta-oniru
+!
+vlan 51
+ name MGT-NBC-LEASED-LINE_ORANGE
+!
+vlan 55
+ name NBC-SWITCH-MGT
+!
+vlan 60
+ name nbc-apn
+!
+vlan 88
+ name Switch-Management
+!
+vlan 90
+!
+vlan 93
+ name ENT-NOC-INT
+!
+vlan 94,96
+!
+vlan 98
+ name SWITCH-MGT
+!
+vlan 100
+ name nov-crez
+!
+vlan 101
+ name NBC-IDDO-FIBER-TEST
+!
+vlan 107
+!
+vlan 110
+ name nov-katia
+!
+vlan 111
+!
+vlan 112
+ name PRODECO-HQ-INT
+!
+vlan 115
+ name AXAMANSARD-INTERNET
+!
+vlan 117
+ name CORAL-PAY-INT
+!
+vlan 120
+!
+vlan 125
+ name SILVERBIRD-BAR-BEACH
+!
+vlan 128
+ name GOLDEN-CHANCE-LAGOS
+!
+vlan 131-132
+!
+vlan 133
+ name ZETA-WEB-MULTICHOICE-2
+!
+vlan 138
+ name Baptist_Theological_Internet
+!
+vlan 140
+ name GLO-IS
+!
+vlan 145-146
+!
+vlan 156
+ name CONOIL-MAT-INT
+!
+vlan 160
+!
+vlan 166
+ name NBC-INTERNET
+!
+vlan 178-179,181
+!
+vlan 189
+ name ENT-NMS
+!
+vlan 191-194,199,222
+!
+vlan 232
+ name AMIN_INT
+!
+vlan 235
+ name DIAMOND-APN
+!
+vlan 250
+ name FIRSTBANK-LAYER3-HQ
+!
+vlan 300
+ name STERLING-BANK
+!
+vlan 301
+ name zeta-epay2
+!
+vlan 448
+!
+vlan 504
+ name TPGS-Victoria-Island-3
+!
+vlan 506
+ name ALPHA_QUANTUM
+!
+vlan 507
+ name TPGS-FCML-10M
+!
+vlan 511
+ name NBC-LL
+!
+vlan 515
+ name STERLING_OIL
+!
+vlan 516
+!
+vlan 517
+ name RUSSELSMITH-VI-LAG129|50MB-INTER
+!
+vlan 518
+ name SHERATON_FOURPOINTS
+!
+vlan 523
+ name PRIME-ATLANTIC-INT
+!
+vlan 524
+ name PREMEIUM-TRUST-BANK-INT
+!
+vlan 530
+ name Wema_Radio_Backup
+!
+vlan 531
+ name CONOIL_INTERNET_30MB
+!
+vlan 555
+!
+vlan 560
+ name ORANGE-ECOBANK
+!
+vlan 566
+ name DELLOITE-INT-HQ
+!
+vlan 610
+ name Keystone-Internet
+!
+vlan 620
+ name OK_FOOD
+!
+vlan 622
+ name YOA_INSURANCE
+!
+vlan 625
+ name STERLING-BANK-INTERNET
+!
+vlan 630,635,640-645,647,670
+!
+vlan 680
+ name ENL
+!
+vlan 681-682
+!
+vlan 683
+ name EKULO_BRDACC_INT
+!
+vlan 715
+ name FOURPOINT-MGT
+!
+vlan 716
+ name ISN_AVENUETOWERS
+!
+vlan 805,906
+!
+vlan 916
+ name CONNECTION-PE-B-PRTG-RTR
+!
+vlan 934
+ name LAG_ABJ_MULTILINKS_LL
+!
+vlan 1090
+ name ORANGE-VIRGINAIRLINES
+!
+vlan 1100
+ name NOV-KATIA-INTERNET
+!
+vlan 1137
+ name PANOCEAN-WARRI_LAGOS-4M-LL
+!
+vlan 1142
+ name NBC-IDDO-TO-IKEJA
+!
+vlan 1208
+ name AGIP-LAG-ABJ-LL
+!
+vlan 1211
+ name PAN-OCEAN-BENIN
+!
+vlan 1212
+ name PAN-OCEAN-PHC
+!
+vlan 1214
+ name CONOIL-MGT-SAKA-RTR
+!
+vlan 1364
+ name APPZONE-INT
+!
+vlan 1371
+ name TOTAL-E&P-LL-200MB
+!
+vlan 1486
+ name ENT-CERA-IP-20-MGT1
+!
+vlan 1487
+ name ENT-CERA-IP-20-MGT2
+!
+vlan 1488
+ name ENT-CERA-IP-20-MGT3
+!
+vlan 1489
+ name ENT-CERA-IP-20-MGT4
+!
+vlan 1492
+ name BS-NERA-MGT-4
+!
+vlan 1493
+ name BS-NERA-3-MGT
+!
+vlan 1494
+ name BS-NERA-MGT-NNPC
+!
+vlan 1495
+ name BS-NERA-2-MGT
+!
+vlan 1496
+ name BS-CERAGON-2
+!
+vlan 1497
+ name NERA-MGT
+!
+vlan 1498
+ name BS-CERAGON-MGT
+!
+vlan 1500
+ name Ceragon
+!
+vlan 1501
+ name BS_MGMT
+!
+vlan 1507
+ name ENT-SW-MGT-3
+!
+vlan 1512
+ name ORANGE-SITA_AIRPORT
+!
+vlan 1522
+ name AXA-MANSARD-INSURANCE
+!
+vlan 1578
+ name AXA-MANSARD-EBUTE
+!
+vlan 1579
+ name AXAMANSARD-LL
+!
+vlan 1600
+ name ORANGE-SCHLUMBERGER
+!
+vlan 1601
+ name ORANGE-HALIBURTON
+!
+vlan 1640
+ name Access_Bank_VPLS
+!
+vlan 1673
+ name ORANGE-HEINEKEN-KADUNA
+!
+vlan 1675
+ name ORANGE-HEINEKEN-CBD-ABUJA
+!
+vlan 1676
+ name ORANGE-HEINEKEN-OTA
+!
+vlan 1677
+ name ORANGE-IGANMU-FIBER
+!
+vlan 1683
+ name ORANGE-HEINEKEN-KADUNA-BYPASS
+!
+vlan 1685
+ name ORANGE-SIEMENS
+!
+vlan 1703
+!
+vlan 1720
+ name COOLLINK_KARIMU_IKOTUN
+!
+vlan 1721
+ name FRIGOGLASS_INTERNET
+!
+vlan 1753
+ name ORANGE_LEASED_LINE
+!
+vlan 1761
+ name KEYSTONE-LINKS
+!
+vlan 1810
+ name MICHEAL-CECELIA-UNIV
+!
+vlan 1820
+ name PAN-AFRICAN-INT
+!
+vlan 1843
+ name TOTAL-LAG-ABJ
+!
+vlan 1844
+ name ORANGE-HEINEKEN-BENIN
+!
+vlan 1848
+ name SENITENT-FIDELITY
+!
+vlan 1889
+ name FRENCH-EMB-INT-LAG
+!
+vlan 1890
+!
+vlan 1900
+ name UNION-HQ
+!
+vlan 1901
+!
+vlan 1907
+ name VDT-SEME
+!
+vlan 1917
+ name ORANGE-MASTER-CARD
+!
+vlan 1992
+ name ORANGE-SCHLUMBERGER-VI
+!
+vlan 2022
+ name NEW-CROSS-LL
+!
+vlan 2056
+ name ORANGE-HEINEKEN-ONITSHA
+!
+vlan 2057
+ name SWISS-EMBASSY
+!
+vlan 2059
+ name ORANGE-NAMA-PRI
+!
+vlan 2060
+ name ORANGE-NAMA-SEC
+!
+vlan 2080
+ name ORA-HEINEKEN-IJEBU-ODE
+!
+vlan 2151
+ name MOBIL-INT(BACKUP)
+!
+vlan 2266
+ name DENMARK-EMBASSY-LAGOS
+!
+vlan 2311
+ name ORANGE-HEINEKEN-IBADAN
+!
+vlan 2312
+ name ORANGE-HEINEKEN-ABA
+!
+vlan 2313
+ name ORANGEHEINEKENENUGUAMABREW
+!
+vlan 2314
+ name ORANGEHEINEKENKADKAKURI
+!
+vlan 2315
+ name ORAN-HEINEKEN-IBADAN
+!
+vlan 2317
+ name ORANGE-HEINEKEN-ENU-10M
+!
+vlan 2325
+!
+vlan 2441
+ name ORANGE-COLGATE-PH
+!
+vlan 2511
+ name ORANGE-GIVUDAN
+!
+vlan 2701
+ name ORANGE-FBN
+!
+vlan 2708
+ name PRIME_ATLANT-INT-50M
+!
+vlan 2999
+ name FCMB-VPLS
+!
+vlan 3001
+ name zeta-epay1
+!
+vlan 3004
+ name SILVERBIRD-VPLS
+!
+vlan 3007
+ name FirstBank-DR-Mainone
+!
+vlan 3034
+ name STERLING_BANK
+!
+vlan 3035
+ name POLARIS-SKYE-BANK
+!
+vlan 3041
+ name ORANGE-HUAWEI
+!
+vlan 3042
+ name UBA-VPLS
+!
+vlan 3126
+ name DIAMOND-VPLS
+!
+vlan 3134
+ name ELCREST-LAG-OPUAMA
+!
+vlan 3221
+ name SENTIENT_POLARIS
+!
+vlan 3241
+ name SENTIENT_FBN
+!
+vlan 3501
+!
+vlan 3832
+ name ORANGE-VISA-MTN
+!
+vlan 3841
+ name ORANGE-VISA-INTERSWITCH
+!
+vlan 3842
+ name ORANGE-VISA-IDOW-TAY
+!
+vlan 3844
+ name ORANGE-ETRANSZACT
+!
+vlan 3845
+ name ORANGE-VISA-ZENITH
+!
+vlan 3847
+ name ORANGE-VISA-ZENITHBANK-IKEJA
+!
+vlan 3848
+ name ORANGE_VISA_ZENITH_HQ
+!
+vlan 3849
+ name ORANGE-MICROSOFT
+!
+vlan 3851
+ name ORANGE-SAIPEM
+!
+vlan 3910
+ name ORANGE-GSK-AGBARA
+!
+vlan 3932
+ name ORANGE-BOOKSHOPHOUSE
+!
+vlan 4054
+ name ORANGE-HEINEKEN-UYO
+!
+interface GigabitEthernet0/1
+ description ZETA-EPAY1-3001
+ switchport access vlan 3001
+ switchport mode access
+ load-interval 30
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet0/2
+ description STERLING-HQ-VPRN207 || MOST-LIKELY
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1,101,131,300,350,625,3034
+ switchport mode trunk
+ load-interval 30
+!
+interface GigabitEthernet0/3
+ description ZETA-EPAY2-301
+ switchport access vlan 301
+ switchport mode access
+ load-interval 30
+ shutdown
+ spanning-tree portfast
+!
+interface GigabitEthernet0/4
+ description CONX-TO-2960(Loop)-SWITCH
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1-1506,1508-4094
+ switchport mode trunk
+!
+interface GigabitEthernet0/5
+ description TRUNK TO KEYSTONE 155Mbps INTERNET
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 131,610,1501,1761
+ switchport mode trunk
+ shutdown
+ speed 1000
+ spanning-tree portfast
+!
+interface GigabitEthernet0/6
+ description Trunk to Huawei_5300
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 55,88,93,98,112,115,131-133,156,166,189,232,250
+ switchport trunk allowed vlan add 501,504,506,507,511,517,523,530,531,566,805
+ switchport trunk allowed vlan add 916,934,1137,1211,1212,1364,1371,1489,1501
+ switchport trunk allowed vlan add 1522,1578,1579,1640,1820,1848,1900,1907,2057
+ switchport trunk allowed vlan add 2151,2708,3007,3126,3221,3241,3849
+ switchport mode trunk
+!
+interface GigabitEthernet0/7
+ description CONNECTION-TO-OLD-PRTG
+ switchport access vlan 131
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet0/8
+ description TRUNK TO 3RD 3750
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 55,88,93,98,112,115,131,140,166,189,191,250,501
+ switchport trunk allowed vlan add 524,530,610,611,622,900,916,1214,1364
+ switchport trunk allowed vlan add 1486-1489,1492-1494,1497,1501,1507,1579,1640
+ switchport trunk allowed vlan add 1673,1674,1684,1685,1761,1810,1820,1848,1889
+ switchport trunk allowed vlan add 1900,1907,2022,2057,2151,2266,2701,2708,2999
+ switchport trunk allowed vlan add 3004,3007,3034,3035,3042,3126,3134,3221,3241
+ switchport trunk allowed vlan add 3849
+ switchport mode trunk
+ no cdp enable
+!
+interface GigabitEthernet0/9
+ description RAD CONNECTION TO STERLING BANK
+ switchport access vlan 166
+ switchport mode access
+ no cdp enable
+!
+interface GigabitEthernet0/10
+ description UPLINK-NBC-IDDO-HQ
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 51,55,60,101,166,511,512,1142,1501,1603,1818
+ switchport mode trunk
+!
+interface GigabitEthernet0/11
+ description CONNECTION TO GFL-C-SW-2960
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 1901
+ switchport mode trunk
+!
+interface GigabitEthernet0/12
+ description 7up_APN
+ switchport access vlan 541
+ switchport mode access
+!
+interface GigabitEthernet0/13
+ description YOA_Internet_SIAE
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 250,622
+ switchport mode trunk
+ shutdown
+!
+interface GigabitEthernet0/14
+ description YOA_Internet_Radwin
+ switchport access vlan 622
+ switchport mode access
+!
+interface GigabitEthernet0/15
+ description ZETA-WEB-MULTICHOICE-RADIO MGMT
+ switchport access vlan 1500
+ switchport mode access
+!
+interface GigabitEthernet0/16
+ description TRUNK TO 4TH 3750 SWITCH
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 112,531,560,566,805,1214,1486-1489,1492-1495
+ switchport trunk allowed vlan add 1497,1522,1578,1579,1810,1889,2057,2266,2999
+ switchport trunk allowed vlan add 3035,3841,3932
+ switchport mode trunk
+ no cdp enable
+ spanning-tree portfast
+!
+interface GigabitEthernet0/17
+ description YOA_Internet
+ switchport access vlan 622
+ switchport mode access
+ speed 100
+ duplex full
+!
+interface GigabitEthernet0/18
+ description ORANGE-HUAWEI
+ switchport access vlan 3041
+ switchport trunk encapsulation dot1q
+ switchport mode dot1q-tunnel
+ bandwidth 350000
+ shutdown
+ l2protocol-tunnel cdp
+ l2protocol-tunnel stp
+!
+interface GigabitEthernet0/19
+ description KEWALRAM-SPRINGVIEW || 6Mbps
+ switchport access vlan 610
+ switchport mode access
+!
+interface GigabitEthernet0/20
+ description CONNECTION TO SHERATON FOUR POINTS
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 518,715
+ switchport mode trunk
+ load-interval 30
+ shutdown
+ speed 100
+!
+interface GigabitEthernet0/21
+ description UNION HQ AT MARINA
+ switchport access vlan 1900
+ switchport mode access
+!
+interface GigabitEthernet0/22
+ description STERLING TECHNOLOGIES
+ switchport access vlan 145
+ switchport mode access
+ spanning-tree portfast
+!
+interface GigabitEthernet0/23
+ description TRUNK TO PREMIER-LOTTO
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 145,146
+ switchport mode trunk
+!
+interface GigabitEthernet0/24
+ description ZETA-WEB-MULTICHOICE-RADIO
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 47,132,133,934
+ switchport mode trunk
+ load-interval 30
+ udld port
+!
+interface GigabitEthernet0/25
+ description BAD PORT
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 131,133,1371,1501,1843
+ speed nonegotiate
+ no cdp enable
+!
+interface GigabitEthernet0/26
+ description TOTAL EKO HOTELS
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 131,133,1371,1501,1843
+ switchport mode trunk
+ speed nonegotiate
+ no cdp enable
+!
+interface GigabitEthernet0/27
+ description CONNECTION TO IPD-1/1/13 || NEW-2/1/10
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 11,17,20,23,25,26,30,33,47,49,55,60,77,90,93,94
+ switchport trunk allowed vlan add 96,97,100,101,107-111,121,125,128,131,133
+ switchport trunk allowed vlan add 138-140,146,160,161,166,171,178,179,191,200
+ switchport trunk allowed vlan add 232,235,250,301,350,414,415,429,448,510,511
+ switchport trunk allowed vlan add 513,515,517,518,530,540,541,560,610,620,622
+ switchport trunk allowed vlan add 625,630,635,640-645,647,670,680-683,715,716
+ switchport trunk allowed vlan add 901,906,934,1090,1100,1142,1500,1512
+ switchport trunk allowed vlan add 1600-1604,1673-1677,1683-1686,1703,1720,1721
+ switchport trunk allowed vlan add 1753,1761,1818,1843-1845,1877,1900,1901,1917
+ switchport trunk allowed vlan add 1918,1921,1967,1992,2052,2056-2061,2080
+ switchport trunk allowed vlan add 2311-2315,2317,2325,2434,2441,2510,2511,2523
+ switchport trunk allowed vlan add 2524,3001,3004,3034,3041,3042,3126,3134,3501
+ switchport trunk allowed vlan add 3832,3842,3844,3845,3847,3848,3851,3910,4054
+ switchport trunk allowed vlan add 4055
+ switchport mode trunk
+!
+interface GigabitEthernet0/28
+ description TRUNK-TO-LAG-129-HUAWEI-3700SW
+ switchport trunk encapsulation dot1q
+ switchport trunk allowed vlan 47,49,100,107,110,125,131-133,232,235,501,504
+ switchport trunk allowed vlan add 506,507,517,523,524,683,716,805,934,1100
+ switchport trunk allowed vlan add 1137,1211,1212,1495,1497,1501,1720,1721,1992
+ switchport trunk allowed vlan add 2022,3004,3035,3126,3134
+ switchport mode trunk
+ udld port
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan11
+ description MEDIA-MORNITORING
+ no ip address
+!
+interface Vlan20
+ no ip address
+!
+interface Vlan47
+ ip address 10.248.248.204 255.255.255.248
+!
+interface Vlan51
+ description MGT NBC LEASED LINE_ORANGE
+ ip address 10.250.250.25 255.255.255.252
+!
+interface Vlan90
+ ip address 10.240.50.2 255.255.255.240
+!
+interface Vlan101
+ ip address 1.1.4.2 255.255.255.0
+!
+interface Vlan111
+ ip address 10.241.222.2 255.255.255.248
+!
+interface Vlan131
+ ip address 10.241.233.37 255.255.255.0
+!
+interface Vlan133
+ ip address 18.18.18.2 255.255.255.0
+!
+interface Vlan146
+ ip address 172.30.6.4 255.255.255.248
+ shutdown
+!
+interface Vlan166
+ ip address 192.168.53.2 255.255.255.252
+!
+interface Vlan170
+ description APN
+ no ip address
+!
+interface Vlan171
+ ip address 172.30.1.196 255.255.255.0
+!
+interface Vlan191
+ description SEVEN up VLAN
+ ip address 172.30.30.2 255.255.255.248
+!
+interface Vlan232
+ ip address 197.211.50.76 255.255.255.248
+!
+interface Vlan300
+ ip address 10.240.80.1 255.255.255.0
+!
+interface Vlan301
+ no ip address
+ shutdown
+!
+interface Vlan414
+ ip address 172.32.10.10 255.255.255.0
+!
+interface Vlan530
+ no ip address
+!
+interface Vlan610
+ description CONNECTION TO KEYSTONE BANK INTERNET
+ no ip address
+!
+interface Vlan622
+ no ip address
+!
+interface Vlan647
+ ip address 41.203.95.252 255.255.255.248
+!
+interface Vlan682
+ no ip address
+!
+interface Vlan934
+ ip address 10.249.249.99 255.255.255.248
+!
+interface Vlan1137
+ ip address 12.12.12.14 255.255.255.0
+!
+interface Vlan1142
+ ip address 192.168.250.2 255.255.255.0
+!
+interface Vlan1208
+ ip address 2.2.2.2 255.255.255.0
+!
+interface Vlan1211
+ ip address 10.20.20.1 255.255.255.0
+!
+interface Vlan1371
+ ip address 1.1.1.2 255.255.255.0
+!
+interface Vlan1501
+ ip address 10.248.249.110 255.255.255.0
+!
+interface Vlan1640
+ ip address 10.230.230.205 255.255.255.0
+!
+interface Vlan1683
+ ip address 192.168.88.20 255.255.255.0
+!
+interface Vlan1703
+ ip address 10.170.170.1 255.255.255.0
+!
+interface Vlan1761
+ no ip address
+!
+interface Vlan1843
+ ip address 10.180.180.1 255.255.255.248
+!
+interface Vlan1901
+ ip address 10.240.57.1 255.255.255.252
+!
+interface Vlan2022
+ ip address 192.168.1.67 255.255.255.0
+!
+interface Vlan2057
+ ip address 192.168.102.3 255.255.255.0
+!
+interface Vlan3034
+ description STERLING _BANK
+ ip address 192.185.101.188 255.255.255.0
+!
+interface Vlan3134
+ no ip address
+!
+interface Vlan3363
+ no ip address
+!
+interface Vlan3849
+ ip address 10.10.10.7 255.255.255.0
+!
+interface Vlan3932
+ ip address 1.10.10.15 255.255.255.0
+!
+interface Vlan4055
+ ip address 192.168.91.20 255.255.255.0
+!
+ip default-gateway 10.241.233.1
+ip classless
+ip route 0.0.0.0 0.0.0.0 10.248.249.1
+ip route 10.100.32.0 255.255.255.0 192.168.0.35
+ip route 10.240.111.0 255.255.255.0 10.241.222.1
+ip route 172.22.0.0 255.255.0.0 172.30.3.1 name APN-CONXN2-SIMs
+ip route 172.222.222.0 255.255.255.252 192.168.200.1
+ip route 172.222.222.4 255.255.255.252 192.168.200.9
+ip route 172.222.222.8 255.255.255.252 192.168.200.5
+ip route 192.168.200.0 255.255.255.252 10.240.57.2
+no ip http server
+ip http port 62030
+!
+access-list 20 permit 115.75.181.153
+access-list 20 permit 62.171.190.27
+access-list 20 permit 37.49.227.183
+access-list 20 permit 37.49.227.175
+access-list 20 permit 37.49.227.170
+access-list 20 permit 37.49.227.168
+access-list 20 permit 203.45.239.110
+access-list 20 permit 204.89.62.210
+access-list 20 permit 109.123.241.103
+access-list 20 permit 207.254.235.90
+access-list 20 permit 185.194.216.34
+access-list 20 permit 105.244.148.170
+access-list 20 permit 14.161.38.58
+access-list 20 permit 38.242.251.152
+access-list 20 permit 62.171.181.153
+access-list 20 permit 115.79.137.99
+access-list 20 permit 185.169.252.49
+access-list 20 permit 207.180.212.114
+access-list 20 permit 144.91.111.66
+access-list 20 permit 115.79.192.18
+access-list 20 permit 5.189.162.239
+access-list 20 permit 167.86.107.108
+access-list 20 permit 171.244.23.190
+snmp-server community globacom RW
+!
+control-plane
+!
+!
+line con 0
+ password 7 1234040513050908263A
+ login local
+line vty 0 4
+ password 7 0722205E4F071C091B1D
+ login
+ length 0
+line vty 5 15
+ password 7 0722205E4F071C091B1D
+ login
+!
+end
+
+SAKA25_3560_1#  sh int des
+Interface                      Status         Protocol Description
+Vl1                            admin down     down
+Vl11                           down           down     MEDIA-MORNITORING
+Vl20                           up             up
+Vl47                           up             up
+Vl51                           up             up       MGT NBC LEASED LINE_ORANGE
+Vl90                           up             up
+Vl101                          up             up
+Vl111                          up             up
+Vl131                          up             up
+Vl133                          up             up
+Vl146                          admin down     down
+Vl166                          up             up
+Vl170                          down           down     APN
+Vl171                          down           down
+Vl191                          up             up       SEVEN up VLAN
+Vl232                          up             up
+Vl300                          up             up
+Vl301                          admin down     down
+Vl414                          down           down
+Vl530                          up             up
+Vl610                          up             up       CONNECTION TO KEYSTONE BANK INTERNET
+Vl622                          up             up
+Vl647                          up             up
+Vl682                          up             up
+Vl934                          up             up
+Vl1137                         up             up
+Vl1142                         up             up
+Vl1208                         up             up
+Vl1211                         up             up
+Vl1371                         up             up
+Vl1501                         up             up
+Vl1640                         up             up
+Vl1683                         up             up
+Vl1703                         up             up
+Vl1761                         up             up
+Vl1843                         up             up
+Vl1901                         up             up
+Vl2022                         up             up
+Vl2057                         up             up
+Vl3034                         up             up       STERLING _BANK
+Vl3134                         up             up
+Vl3363                         down           down
+Vl3849                         up             up
+Vl3932                         up             up
+Vl4055                         down           down
+Gi0/1                          admin down     down     ZETA-EPAY1-3001
+Gi0/2                          down           down     STERLING-HQ-VPRN207 || MOST-LIKELY
+Gi0/3                          admin down     down     ZETA-EPAY2-301
+Gi0/4                          up             up       CONX-TO-2960(Loop)-SWITCH
+Gi0/5                          admin down     down     TRUNK TO KEYSTONE 155Mbps INTERNET
+Gi0/6                          up             up       Trunk to Huawei_5300
+Gi0/7                          down           down     CONNECTION-TO-OLD-PRTG
+Gi0/8                          up             up       TRUNK TO 3RD 3750
+Gi0/9                          down           down     RAD CONNECTION TO STERLING BANK
+Gi0/10                         down           down     UPLINK-NBC-IDDO-HQ
+Gi0/11                         down           down     CONNECTION TO GFL-C-SW-2960
+Gi0/12                         down           down     7up_APN
+Gi0/13                         admin down     down     YOA_Internet_SIAE
+Gi0/14                         down           down     YOA_Internet_Radwin
+Gi0/15                         down           down     ZETA-WEB-MULTICHOICE-RADIO MGMT
+Gi0/16                         up             up       TRUNK TO 4TH 3750 SWITCH
+Gi0/17                         down           down     YOA_Internet
+Gi0/18                         admin down     down     ORANGE-HUAWEI
+Gi0/19                         down           down     KEWALRAM-SPRINGVIEW || 6Mbps
+Gi0/20                         admin down     down     CONNECTION TO SHERATON FOUR POINTS
+Gi0/21                         down           down     UNION HQ AT MARINA
+Gi0/22                         down           down     STERLING TECHNOLOGIES
+Gi0/23                         up             up       TRUNK TO PREMIER-LOTTO
+Gi0/24                         down           down     ZETA-WEB-MULTICHOICE-RADIO
+Gi0/25                         down           down     BAD PORT
+Gi0/26                         up             up       TOTAL EKO HOTELS
+Gi0/27                         up             up       CONNECTION TO IPD-1/1/13 || NEW-2/1/10
+Gi0/28                         up             up       TRUNK-TO-LAG-129-HUAWEI-3700SW
+SAKA25_3560_1#

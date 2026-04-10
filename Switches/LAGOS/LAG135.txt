@@ -1,5 +1,5 @@
      +--------------------------------------------------------------------+
-     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
      ¦              (X server, SSH client and network tools)              ¦
      ¦                                                                    ¦
      ¦ ? Your computer drives are accessible through the /drives path     ¦
@@ -7,14 +7,15 @@
      ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
      ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
      ¦                                                                    ¦
-     ¦                     Registered to RT (1 user)                      ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
      +--------------------------------------------------------------------+
 
- ? 2025-11-13 ? ? 10:25.28 ? ? /home/mobaxterm ? telnet 10.248.249.26
+ ? 2026-04-08 ? ? 09:05.48 ? ? /home/mobaxterm ? telnet 10.248.249.26
 Connected to 10.248.249.26.
 Entering character mode
 Escape character is '^]'.
 
+Warning: Telnet is not a secure protocol, and it is recommended to use Stelnet.
 
 Login authentication
 
@@ -23,87 +24,168 @@ Username:bsnoc
 Password:
 Info: The max number of VTY users is 5, and the number
       of current VTY users on line is 1.
-<BS-LAG-135>sys
+<BS-LAG135-SW>sys
 Enter system view, return user view with Ctrl+Z.
-[BS-LAG-135]dis int des
-Interface                   Description
-Ethernet0/0/1               Conoil-Mosimi
-Ethernet0/0/2               SUNFLAG IKORODU 15MBINTERNET- cust NERA-LAG769-LAG1
-                            35
-Ethernet0/0/3               LASPOTECH-INTERNET
-Ethernet0/0/4               TRUNK_2_LAG396_FACING_NNPC_MOSIMI
-Ethernet0/0/5               STANBIC-IBTC-IKORODU
-Ethernet0/0/6               WEMA BANK OWODE
-Ethernet0/0/7               ZETAWEB-NGC-IKORODU
-Ethernet0/0/8               IS NOVA IKORODU
-Ethernet0/0/9               SUNFLAG IKORODU 15MBINTERNET- cust NERA-LAG769-LAG1
-                            35
-Ethernet0/0/10              NERA MGT
-Ethernet0/0/11              ISN-NOVA-IKORODU
-Ethernet0/0/12              ISN-NOVA-IKORODU || NERA-MGMT
-Ethernet0/0/13              CERAGON_MGT
-Ethernet0/0/14              GLOSHOP IKORODU
-Ethernet0/0/15              GLOSHOP IKORODU
-Ethernet0/0/16              IPEXPRESS-SURU-EXPRESS |2217| 45M
-Ethernet0/0/17              WEMA BANK IKORODU
-Ethernet0/0/18              IPEXPRESS-HARUNA-BUSSTOP | 100MBPS
-Ethernet0/0/19              TATA-OLAM DANGOTE IBESHE[VL2241] 20Mbps
-Ethernet0/0/20              HUAWEI, Quidway Series, Ethernet0/0/20 Interface
-Ethernet0/0/21              HUAWEI, Quidway Series, Ethernet0/0/21 Interface
-Ethernet0/0/22              HUAWEI, Quidway Series, Ethernet0/0/22 Interface
-Ethernet0/0/23              HUAWEI, Quidway Series, Ethernet0/0/23 Interface
-Ethernet0/0/24              SWIFT-TALK-IKORODU-INT
-GigabitEthernet0/0/1        TRUNK_2_LAG396_FACING_NNPC_MOSIMI !! DATA-VISIBILIT
-                            Y-10M-INT - LGS172-LAG197-LAG396-LAG135- FIBER LM F
-                            ROM LGS172
-GigabitEthernet0/0/2        UPLINK TO DCN UPE GE 0/2/6
-NULL0                       HUAWEI, Quidway Series, NULL0 Interface
-Vlanif1                     HUAWEI, Quidway Series, Vlanif1 Interface
-Vlanif1501                  HUAWEI, Quidway Series, Vlanif1501 Interface
-Vlanif1503                  HUAWEI, Quidway Series, Vlanif1503 Interface
-Vlanif1615                  HUAWEI, Quidway Series, Vlanif1615 Interface
-Vlanif1782                  HUAWEI, Quidway Series, Vlanif1782 Interface
-Vlanif2170                  HUAWEI, Quidway Series, Vlanif2170 Interface
-Vlanif2423                  HUAWEI, Quidway Series, Vlanif2423 Interface
-Vlanif3037                  HUAWEI, Quidway Series, Vlanif3037 Interface
-[BS-LAG-135]     dis cur
+[BS-LAG135-SW]dis int des
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      *down   down     Conoil-Mosimi
+Eth0/0/2                      *down   down     SUNFLAG IKORODU 15MBINTERNET- cus
+                                               t NERA-LAG769-LAG135
+Eth0/0/3                      up      up       STANBIC IBTC BANK IKORODU - NERA-
+                                               IDU
+Eth0/0/4                      *down   down     TRUNK_2_LAG396_FACING_NNPC_MOSIMI
+Eth0/0/5                      *down   down     faulty
+Eth0/0/6                      *down   down     WEMA BANK OWODE
+Eth0/0/7                      *down   down     ZETAWEB-NGC-IKORODU
+Eth0/0/8                      *down   down     IS NOVA IKORODU
+Eth0/0/9                      down    down     SUNFLAG IKORODU 15MBINTERNET- cus
+                                               t NERA-LAG769-LAG135
+Eth0/0/10                     down    down     NERA MGT
+Eth0/0/11                     up      up       ISN-NOVA-IKORODU
+Eth0/0/12                     down    down     ISN-NOVA-IKORODU || NERA-MGMT
+Eth0/0/13                     down    down     CERAGON_MGT
+Eth0/0/14                     down    down     GLOSHOP IKORODU
+Eth0/0/15                     down    down     GLOSHOP IKORODU
+Eth0/0/16                     down    down     IPEXPRESS-SURU-EXPRESS |2217| 45M
+Eth0/0/17                     *down   down     WEMA BANK IKORODU
+Eth0/0/18                     down    down     IPEXPRESS-HARUNA-BUSSTOP | 100MBP
+                                               S
+Eth0/0/19                     up      up       TATA-OLAM DANGOTE IBESHE[VL2241]
+                                               20Mbps
+Eth0/0/20                     up      up       PROLINE OGOLONTO IKORODU[VLAN-147
+                                               8]|50Mbps
+Eth0/0/21                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     down    down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     up      up       SWIFT-TALK-IKORODU-INT
+GE0/0/1                       down    down     TRUNK_2_LAG396_FACING_NNPC_MOSIMI
+                                                !! DATA-VISIBILITY-10M-INT - LGS
+                                               1
+
+
+                                                          72-LAG197-LAG396-LAG13
+                                               5- FIBER LM FROM LGS172
+GE0/0/2                       up      up       UPLINK TO DCN UPE GE 0/2/6
+GE0/0/3                       up      up       IPEXPRESS-HARUNA-BUSSTOP | 100MBP
+                                               S
+GE0/0/4                       down    down     PROLINE IPAKODO IKORODU[VLAN-1472
+                                               ]|500Mbps
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif88                      down    down     HUAWEI, Quidway Series, Vlanif88
+                                               Interface
+Vlanif131                     down    down     HUAWEI, Quidway Series, Vlanif131
+                                                Interface
+Vlanif250                     down    down     HUAWEI, Quidway Series, Vlanif250
+                                                Interface
+Vlanif530                     down    down     HUAWEI, Quidway Series, Vlanif530
+                                                Interface
+Vlanif805                     down    down     HUAWEI, Quidway Series, Vlanif805
+                                                Interface
+Vlanif1501                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               1 Interface
+Vlanif1503                    up      up       HUAWEI, Quidway Series, Vlanif150
+                                               3 Interface
+Vlanif1573                    down    down     HUAWEI, Quidway Series, Vlanif157
+                                               3 Interface
+Vlanif1615                    up      up       HUAWEI, Quidway Series, Vlanif161
+                                               5 Interface
+Vlanif1782                    *down   down     HUAWEI, Quidway Series, Vlanif178
+                                               2 Interface
+Vlanif1900                    down    down     HUAWEI, Quidway Series, Vlanif190
+                                               0 Interface
+Vlanif2170                    up      up       HUAWEI, Quidway Series, Vlanif217
+                                               0 Interface
+Vlanif2423                    up      up       HUAWEI, Quidway Series, Vlanif242
+                                               3 Interface
+Vlanif2428                    down    down     HUAWEI, Quidway Series, Vlanif242
+                                               8 Interface
+Vlanif2521                    down    down     HUAWEI, Quidway Series, Vlanif252
+                                               1 Interface
+Vlanif3034                    down    down     HUAWEI, Quidway Series, Vlanif303
+                                               4 Interface
+Vlanif3036                    down    down     HUAWEI, Quidway Series, Vlanif303
+                                               6 Interface
+Vlanif3037                    up      up       HUAWEI, Quidway Series, Vlanif303
+                                               7 Interface
+Vlanif3042                    down    down     HUAWEI, Quidway Series, Vlanif304
+                                               2 Interface
+Vlanif3160                    down    down     HUAWEI, Quidway Series, Vlanif316
+                                               0 Interface
+[BS-LAG135-SW]     dis cur
 #
-!Software Version V100R005C01SPC100
- sysname BS-LAG-135
+!Software Version V100R006C05
+ sysname BS-LAG135-SW
 #
- ipv6
+ vlan batch 10 88 131 250 444 530 560 805 902 1007
+ vlan batch 1237 1277 to 1278 1351 1364 1447 1472 1478 1489 1492 to 1498 1501
+ vlan batch 1503 1506 to 1507 1552 1573 1615 1630 1632 1641 1643 1647
+ vlan batch 1672 1741 1782 1900 1916 to 1917 1967 2057 2079 2089 2114
+ vlan batch 2151 2170 to 2171 2173 2199 2217 2241 2403 2423 2427 to 2428 2521 to 2522
+ vlan batch 2825 2907 3007 3034 3036 to 3037 3042 3157 3160 to 3162 3187 3312
+ vlan batch 3377 3401 3418 3462 to 3464 3536 3641 3830
 #
- vlan batch 10 1277 to 1278 1364 1492 1494 to 1495 1497 to 1498 1501 1503 1615 1632
- vlan batch 1782 1916 to 1917 1967 2089 2170 to 2171 2173 2199 2217 2241 2403
- vlan batch 2423 3007 3037 3377 3401 3418 3462 to 3464 3536 3641
-#
- cluster enable
- ntdp enable
- ntdp hop 16
- ndp enable
-#
- bpdu enable
-#
- lldp enable
-#
- dhcp enable
-#
- undo http server enable
+lldp enable
 #
 vlan 10
  description NNPC_MGT_VLAN
+vlan 88
+ description WEMA-SW-MGT
+vlan 131
+ description STERLING-BANK-HQ-SW-MGT
+vlan 444
+ description MOBIL SERVICE
+vlan 530
+ description WEMA-MARINA-HQL3 BRANCHES
+vlan 560
+ description ORANGE-ECOBANK
+vlan 805
+ description BS-SW-NEW-MGT-VL
+vlan 902
+ description APMT-APAPA-IKOYI
+vlan 1007
+ description test vlan for jb ijora
+vlan 1237
+ description Springfield (Kewalram)
 vlan 1277
  description DATA-VISIBILITY-10M-INT - LGS172-LAG197-LAG396-LAG135- FIBER LM FROM LGS172
 vlan 1278
  description FBN-MOSIMI-L3
+vlan 1351
+ description JULIUS BERGER IJORA INTERNET
 vlan 1364
  description SUNFLAG IKORODU
+vlan 1447
+ description DANGOTE-APAPA-INT
+vlan 1472
+ description PROLINE-IKORODU
+vlan 1478
+ description PROLINE-OGOLONTO-IKORODU
+vlan 1489
+ description RADIO-MGT
 vlan 1492
  description BS-NERA-4-MGT
+vlan 1493
+ description BS-NERA-3-MGT
 vlan 1494
  description NNPC-NERA-MGT
 vlan 1495
  description BS-NERA-2-MGT
+vlan 1496
+ description CERAGON-MGT
 vlan 1497
  description NERA MGT
 vlan 1498
@@ -112,20 +194,50 @@ vlan 1501
  description MGT
 vlan 1503
  description nera-mgmt
+vlan 1506
+ description FBN-SIP
+vlan 1507
+ description ENT-MGT-3
+vlan 1552
+ description OLAM IGANMU
+vlan 1573
+ description Premium_Trust_Bank_Apongbon
 vlan 1615
  description isn-ikorod-new
+vlan 1630
+ description IXPN
 vlan 1632
  description WEMA BANK LLC
+vlan 1641
+ description JBN-LAG-ABJ
+vlan 1643
+ description JB-NESTOIL-IJORA
+vlan 1647
+ description BANK-OF-INDUSTRY
+vlan 1672
+ description WESTMETRO
+vlan 1741
+ description LAG394-SAKA17_IOTECH-LAGOS-INTERNET || 50Mbps
 vlan 1782
  description IPEXPRESS-HARUNA-BUSSTOP
+vlan 1900
+ description UBN L3 BRANCHES
 vlan 1916
  description ZETAWEB_NGC
 vlan 1917
  description SWIFTTALK-IKORODU
 vlan 1967
  description IS NOVA IKORODU
+vlan 2057
+ description ORANGE ZIM APAPA
+vlan 2079
+ description APMT LAG-KANO
 vlan 2089
  description GLOSHOP IKORODU
+vlan 2114
+ description COMPOJ (NIWA) MARINA
+vlan 2151
+ description MOBIL-INTERNET-RADIO-BKP
 vlan 2170
  description NNPC-PPMC-MOSIMI-PRIMARY
 vlan 2171
@@ -142,10 +254,40 @@ vlan 2403
  description Conoil-MOsimi
 vlan 2423
  description STANBIC-IBTC-VPLS
+vlan 2427
+ description JBN-SHAGAMU-LL
+vlan 2428
+ description JBN-LAG-IBD-EXPR ESS
+vlan 2521
+ description FBN INSURANCE-LL-100M
+vlan 2522
+ description JULIUS-BERGER-ABJ-LAG
+vlan 2825
+ description SCM-CAPITAL-MARINA
+vlan 2907
+ description SAHARA-ENERGY-LAG-IJORA
 vlan 3007
  description FBN-LL-LINKS
+vlan 3034
+ description STERLING-BANK-HQ-VPLS
+vlan 3036
+ description APMT-INTERNET
 vlan 3037
  description FIRS-IKORODU
+vlan 3042
+ description UBA_VLAN
+vlan 3157
+ description SAHARA-VPLS
+vlan 3160
+ description SHELL-FMH-4TH-FLR-ABUJA-100M-LL
+vlan 3161
+ description SHELL-IKEJA-TO-MARINA-LL45Mb
+vlan 3162
+ description SHELL-INTERNET
+vlan 3187
+ description SHELL-FMH-BULK-SMS
+vlan 3312
+ description blended-tech
 vlan 3377
  description WEMA_IKORODU
 vlan 3401
@@ -162,6 +304,8 @@ vlan 3536
  description NNPC-DRC-MOSIMI-BKP
 vlan 3641
  description NNPC-PPMC-MOSIMI
+vlan 3830
+ description 4G-LTE-BACKHAUL
 #
 aaa
  authentication-scheme default
@@ -169,25 +313,38 @@ aaa
  accounting-scheme default
  domain default
  domain default_admin
- local-user admin password simple admin
+ local-user admin password cipher %@%@5d~9:M^ipCfL\iB)EQd>3Uwe%@%@
  local-user admin service-type http
- local-user bsnoc password cipher RB!G'1+"PX61[a"FZ7=S#!!!
- local-user bsnoc privilege level 3
- local-user donald password cipher ^)AW.F&IO7JU4Z(*%FTCV!!!
- local-user donald privilege level 3
- local-user fabian password cipher *2+W,D'B31_Q=^Q`MAF4<1!!
- local-user fabian privilege level 3
- local-user moses password cipher Y;FLM:7Q_/F1[a"FZ7=S#!!!
- local-user moses privilege level 3
+ local-user bsnoc password cipher %@%@9&'A/&{JOTHD`I"H7nY'3Dd@%@%@
+ local-user bsnoc privilege level 15
+ local-user fabian password cipher %@%@frVk1E}`>'mRC><@G(H@3Dep%@%@
+ local-user fabian privilege level 15
+ local-user huawei password cipher %@%@+u1[P=aWwNCxc6P+'Q$&nDtV%@%@
+ local-user huawei privilege level 15
 #
 interface Vlanif1
- ip address dhcp-alloc
+#
+interface Vlanif88
+ ip address 10.248.248.194 255.255.255.248
+#
+interface Vlanif131
+ ip address 171.1.1.2 255.255.255.252
+#
+interface Vlanif250
+#
+interface Vlanif530
+#
+interface Vlanif805
+ ip address 10.248.246.7 255.255.255.192
 #
 interface Vlanif1501
  ip address 10.248.249.26 255.255.255.0
 #
 interface Vlanif1503
  ip address 10.155.186.14 255.255.255.0
+#
+interface Vlanif1573
+ ip address 44.44.44.1 255.255.255.0
 #
 interface Vlanif1615
  ip address 100.100.1.1 255.255.255.0
@@ -196,22 +353,37 @@ interface Vlanif1782
  shutdown
  ip address 197.211.39.178 255.255.255.252
 #
+interface Vlanif1900
+#
 interface Vlanif2170
  ip address 10.10.5.1 255.255.255.0
 #
 interface Vlanif2423
  ip address 172.30.30.177 255.255.255.0
 #
+interface Vlanif2428
+#
+interface Vlanif2521
+#
+interface Vlanif3034
+ ip address 192.185.101.249 255.255.255.0
+#
+interface Vlanif3036
+#
 interface Vlanif3037
  ip address 172.31.16.90 255.255.255.248
+#
+interface Vlanif3042
+ ip address 192.168.219.248 255.255.255.0
+#
+interface Vlanif3160
+ ip address 192.168.78.2 255.255.255.0
 #
 interface Ethernet0/0/1
  description Conoil-Mosimi
  shutdown
  port link-type access
  port default vlan 2403
- ntdp enable
- ndp enable
 #
 interface Ethernet0/0/2
  description SUNFLAG IKORODU 15MBINTERNET- cust NERA-LAG769-LAG135
@@ -219,193 +391,165 @@ interface Ethernet0/0/2
  port link-type trunk
  port trunk allow-pass vlan 1364 1497
  stp bpdu-filter enable
- ntdp enable
- ndp enable
+ undo negotiation auto
+ speed 100
 #
 interface Ethernet0/0/3
- description LASPOTECH-INTERNET
- port link-type access
- port default vlan 2199
- ntdp enable
- ndp enable
+ description STANBIC IBTC BANK IKORODU - NERA-IDU
+ port link-type trunk
+ port trunk allow-pass vlan 1497 2423
 #
 interface Ethernet0/0/4
  description TRUNK_2_LAG396_FACING_NNPC_MOSIMI
+ shutdown
  port link-type trunk
- undo port trunk allow-pass vlan 1
  port trunk allow-pass vlan 10 1501 2170 to 2171
- stp bpdu-filter enable
- ntdp enable
- ndp enable
 #
 interface Ethernet0/0/5
- description STANBIC-IBTC-IKORODU
+ description faulty
+ shutdown
  port link-type trunk
- port trunk allow-pass vlan 1497 2423
- stp bpdu-filter enable
- ntdp enable
- ndp enable
 #
 interface Ethernet0/0/6
  description WEMA BANK OWODE
  shutdown
  port link-type trunk
- port trunk allow-pass vlan 1492 1632
- ntdp enable
- ndp enable
+ port trunk allow-pass vlan 1492 1632 2114
 #
 interface Ethernet0/0/7
  description ZETAWEB-NGC-IKORODU
  shutdown
  port link-type access
  port default vlan 1916
- stp bpdu-filter enable
- ntdp enable
- ndp enable
+ multicast-suppression 50
+ broadcast-suppression 50
 #
 interface Ethernet0/0/8
  description IS NOVA IKORODU
  shutdown
  port link-type access
- ntdp enable
- ndp enable
+ port default vlan 3161
 #
 interface Ethernet0/0/9
  description SUNFLAG IKORODU 15MBINTERNET- cust NERA-LAG769-LAG135
  port link-type trunk
- port trunk allow-pass vlan 1364 1497
- ntdp enable
- ndp enable
+ port trunk allow-pass vlan 805 1007 1351 1364 1497 1641 1643 2427
+ multicast-suppression 50
+ broadcast-suppression 50
 #
 interface Ethernet0/0/10
  description NERA MGT
  port link-type access
  port default vlan 1497
- ntdp enable
- ndp enable
 #
 interface Ethernet0/0/11
  description ISN-NOVA-IKORODU
  port link-type access
  port default vlan 1615
- ntdp enable
- ndp enable
 #
 interface Ethernet0/0/12
  description ISN-NOVA-IKORODU || NERA-MGMT
  port link-type access
- ntdp enable
- ndp enable
+ port default vlan 1503
 #
 interface Ethernet0/0/13
  description CERAGON_MGT
  port link-type access
  port default vlan 1498
- ntdp enable
- ndp enable
 #
 interface Ethernet0/0/14
  description GLOSHOP IKORODU
  port link-type access
  port default vlan 2173
- ntdp enable
- ndp enable
 #
 interface Ethernet0/0/15
  description GLOSHOP IKORODU
  port link-type access
  port default vlan 2089
- ntdp enable
- ndp enable
 #
 interface Ethernet0/0/16
  description IPEXPRESS-SURU-EXPRESS |2217| 45M
  port link-type access
  port default vlan 2217
- ntdp enable
- ndp enable
 #
 interface Ethernet0/0/17
  description WEMA BANK IKORODU
  shutdown
  port link-type access
  port default vlan 3377
- stp bpdu-filter enable
- ntdp enable
- ndp enable
 #
 interface Ethernet0/0/18
  description IPEXPRESS-HARUNA-BUSSTOP | 100MBPS
  port link-type trunk
  port trunk allow-pass vlan 1503 1782
- ntdp enable
- ndp enable
 #
 interface Ethernet0/0/19
  description TATA-OLAM DANGOTE IBESHE[VL2241] 20Mbps
  port link-type trunk
- port trunk allow-pass vlan 1503 2241
- ntdp enable
- ndp enable
+ port trunk allow-pass vlan 1503 2217 2241
 #
 interface Ethernet0/0/20
- ntdp enable
- ndp enable
+ description PROLINE OGOLONTO IKORODU[VLAN-1478]|50Mbps
+ port link-type access
+ port default vlan 1478
 #
 interface Ethernet0/0/21
- ntdp enable
- ndp enable
 #
 interface Ethernet0/0/22
- ntdp enable
- ndp enable
 #
 interface Ethernet0/0/23
- ntdp enable
- ndp enable
 #
 interface Ethernet0/0/24
  description SWIFT-TALK-IKORODU-INT
  port link-type access
  port default vlan 1917
- stp bpdu-filter enable
- ntdp enable
- ndp enable
 #
 interface GigabitEthernet0/0/1
- description TRUNK_2_LAG396_FACING_NNPC_MOSIMI !! DATA-VISIBILITY-10M-INT - LGS172-LAG197-LAG396-LAG135- FIBER LM FROM LGS172
+ description TRUNK_2_LAG396_FACING_NNPC_MOSIMI !! DATA-VISIBILITY-10M-INT - LGS1                                                                                                             72-LAG197-LAG396-LAG135- FIBER LM FROM LGS172
  port link-type trunk
- undo port trunk allow-pass vlan 1
- port trunk allow-pass vlan 10 1277 to 1278 1494 to 1495 1501 1503 1782 2170 to 2171 2241 3007 3401
- port trunk allow-pass vlan 3418 3462 to 3464 3536 3641
- stp bpdu-filter enable
- ntdp enable
- ndp enable
+ port trunk allow-pass vlan 88 131 393 530 560 805 900 to 902 1090 1110 1237
+ port trunk allow-pass vlan 1277 to 1278 1351 1364 1447 1492 1494 to 1495 1497 to 1498 1501 to 1503 1615 1632
+ port trunk allow-pass vlan 1782 1916 to 1917 1967 2089 2110 2170 to 2171 2173 2199 2217 2241
+ port trunk allow-pass vlan 2403 2423 3007 3037 3377 3401 3418 3462 to 3464 3536 3641
+ port trunk allow-pass vlan 3832 3841 to 3842 3844 to 3845 3847 to 3849 3910
 #
 interface GigabitEthernet0/0/2
  description UPLINK TO DCN UPE GE 0/2/6
  port link-type trunk
- port trunk allow-pass vlan 1110 1277 to 1278 1364 1492 1494 to 1495 1497 to 1498 1501 to 1503 1615 1632 1782
- port trunk allow-pass vlan 1916 to 1917 1967 2089 2110 2170 to 2171 2173 2199 2217 2241 2403
- port trunk allow-pass vlan 2423 3007 3037 3377 3401 3418 3462 to 3464 3536 3641
- ntdp enable
- ndp enable
+ port trunk allow-pass vlan 2 1110 1277 to 1278 1364 1472 1478 1492 1494 to 1495 1497 to 1498 1501 to 1503
+ port trunk allow-pass vlan 1615 1632 1782 1916 to 1917 1967 2089 2110 2170 to 2171 2173 2199
+ port trunk allow-pass vlan 2217 2241 2403 2423 3007 3037 3377 3401 3418 3462 to 3464
+ port trunk allow-pass vlan 3536 3641
+#
+interface GigabitEthernet0/0/3
+ description IPEXPRESS-HARUNA-BUSSTOP | 100MBPS
+ port link-type trunk
+ port trunk allow-pass vlan 1503 1782
+ combo-port copper
+#
+interface GigabitEthernet0/0/4
+ description PROLINE IPAKODO IKORODU[VLAN-1472]|500Mbps
+ port link-type access
+ port default vlan 1472
+ combo-port fiber
 #
 interface NULL0
 #
+ ip route-static 0.0.0.0 0.0.0.0 10.248.246.1
  ip route-static 0.0.0.0 0.0.0.0 10.248.249.1
 #
  snmp-agent
- snmp-agent local-engineid 000007DB7FFFFFFF00003926
- snmp-agent community read  globacom
+ snmp-agent local-engineid 000007DB7F00000100007D6D
+ snmp-agent community read cipher %@%@+ox$4bMGxH<u,0RJh)zL_DM2vnDGC(,7['J#cJUEfzd6DM5_Bgk"I+MPQIOz{TN2+6!2M>_D%@%@
+ snmp-agent community read cipher %@%@,q~K0rg6*G-U]dS5hF3EdyvQ4uB!@s(Fk"X2%0"9E8(PyvTd6\)g4nLan-T{bp<E~KX1v]dy%@%@
+ snmp-agent community read cipher %@%@08RG)2.Tt83jQWT;zoO<SN|+)\K`@Xs[CB]9'JGpZ}>ON|.Sz79CB@!.~.6uxZ#2dK@R|7SN%@%@
  snmp-agent sys-info version all
 #
 user-interface con 0
- idle-timeout 0 0
+ authentication-mode aaa
+ user privilege level 15
 user-interface vty 0 4
  authentication-mode aaa
 #
-port-group link-type
-#
 return
-[BS-LAG-135]
+[BS-LAG135-SW]

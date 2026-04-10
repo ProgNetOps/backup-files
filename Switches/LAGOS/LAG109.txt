@@ -1,5 +1,5 @@
      +--------------------------------------------------------------------+
-     ¦                  • MobaXterm Professional v25.0 •                  ¦
+     ¦                  • MobaXterm Professional v25.2 •                  ¦
      ¦              (X server, SSH client and network tools)              ¦
      ¦                                                                    ¦
      ¦ ? Your computer drives are accessible through the /drives path     ¦
@@ -7,10 +7,10 @@
      ¦ ? When using SSH, your remote DISPLAY is automatically forwarded   ¦
      ¦ ? Each command status is specified by a special symbol (? or ?)    ¦
      ¦                                                                    ¦
-     ¦                     Registered to RT (1 user)                      ¦
+     ¦                Registered to NoNaMeUser (99 users)                 ¦
      +--------------------------------------------------------------------+
 
- ? 2025-11-13 ? ? 08:18.40 ? ? /home/mobaxterm ? telnet 10.248.248.66
+ ? 2026-04-07 ? ? 11:44.05 ? ? /home/mobaxterm ? telnet 10.248.248.66
 Connected to 10.248.248.66.
 Entering character mode
 Escape character is '^]'.
@@ -53,8 +53,8 @@ Ethernet0/0/22              NNPC NIPEX IKOYI SECONDARY
 Ethernet0/0/23              COOLLINK-OOAK-VILLA-VPN ||
 Ethernet0/0/24              WHEAT BAKER INTERNET
 GigabitEthernet0/0/1        NETCOM-IKOYI-SAIPEM-LAKEPOINT-TOWERS
-GigabitEthernet0/0/2        ERIN-PROJECT | 155M
-GigabitEthernet0/0/3        UPLINK TO SECOND HUAWEI SWITCH
+GigabitEthernet0/0/2        ERIN PROJECT (SYMMON'S PLACE)
+GigabitEthernet0/0/3        UPLINK TO SECOND SWITCH GE0/0/1
 GigabitEthernet0/0/4        TRUNK-TO-GLOMOBILE || GE-2/0/0
 NULL0                       Huawei, Quidway Series, NULL0 Interface
 Vlanif1                     Huawei, Quidway Series, Vlanif1 Interface
@@ -73,19 +73,19 @@ Vlanif2508                  Huawei, Quidway Series, Vlanif2508 Interface
 Vlanif2641                  Huawei, Quidway Series, Vlanif2641 Interface
 Vlanif3643                  Huawei, Quidway Series, Vlanif3643 Interface
 Vlanif3916                  Huawei, Quidway Series, Vlanif3916 Interface
-[Glo_BS_LAG109_Ikoyi]    dis cur
+[Glo_BS_LAG109_Ikoyi]     dis cur
 #
  sysname Glo_BS_LAG109_Ikoyi
 #
  vlan batch 1 20 222 312 to 313 315 555 560 768 805 900
  vlan batch 902 912 920 to 922 941 968 987 1000 1043 1085 to 1087 1114
  vlan batch 1116 1236 to 1237 1257 1287 1318 1330 1343 to 1344 1353 1360 to 1361 1367 to 1368
- vlan batch 1444 1449 1478 1489 1494 1496 to 1498 1500 to 1504 1526 1551 1581 to 1582
- vlan batch 1593 1642 1661 1745 1748 1779 1867 1870 to 1871 1873 to 1874 1889
- vlan batch 1906 1908 to 1909 1964 1979 1988 2055 2057 2079 2178 2253
- vlan batch 2266 2420 2508 2511 to 2512 2641 2812 2952 2954 2956 2958
- vlan batch 2960 2969 3038 to 3039 3126 to 3127 3130 to 3131 3133 3135 3137 3168 to 3169 3274
- vlan batch 3402 to 3405 3408 to 3409 3411 3416 3643 3645 to 3646 3882 3912 3916
+ vlan batch 1444 1449 1478 1489 1494 1496 to 1498 1500 to 1504 1507 1526 1551
+ vlan batch 1581 to 1582 1593 1642 1661 1745 1748 1779 1867 1870 to 1871 1873 to 1874
+ vlan batch 1889 1906 1908 to 1909 1964 1979 1988 2055 2057 2079 2178
+ vlan batch 2253 2266 2420 2508 2511 to 2512 2641 2812 2952 2954 2956
+ vlan batch 2958 2960 2969 3038 to 3039 3126 to 3127 3130 to 3131 3133 3135 3137 3168 to 3169
+ vlan batch 3274 3402 to 3405 3408 to 3409 3411 3416 3643 3645 to 3646 3882 3912 3916
 #
  cluster enable
  ntdp enable
@@ -198,6 +198,8 @@ vlan 1503
  description NERA-MGT
 vlan 1504
  description IOTEC-MGT.
+vlan 1507
+ description OPERA-MEDIA-WORKS-LTD-SIP
 vlan 1526
  description zeta-2-banana
 vlan 1551
@@ -544,7 +546,8 @@ interface GigabitEthernet0/0/1
  ndp enable
 #
 interface GigabitEthernet0/0/2
- description ERIN-PROJECT | 155M
+ description ERIN PROJECT (SYMMON'S PLACE)
+ shutdown
  port link-type access
  port default vlan 1478
  bpdu enable
@@ -552,7 +555,7 @@ interface GigabitEthernet0/0/2
  ndp enable
 #
 interface GigabitEthernet0/0/3
- description UPLINK TO SECOND HUAWEI SWITCH
+ description UPLINK TO SECOND SWITCH GE0/0/1
  port link-type trunk
  port trunk allow-pass vlan 1 to 4094
  combo-port fiber
@@ -569,12 +572,12 @@ interface GigabitEthernet0/0/4
  port trunk allow-pass vlan 20 312 to 315 560 768 805 900 902 912 920 to 922 941
  port trunk allow-pass vlan 968 987 1000 1043 1085 to 1087 1114 1116 1236 to 1237 1257 1287
  port trunk allow-pass vlan 1318 1330 1343 to 1344 1353 1360 to 1361 1367 to 1368 1444 1449 1478 1489
- port trunk allow-pass vlan 1494 1496 to 1498 1500 to 1501 1503 to 1504 1526 1551 1581 to 1582 1593 1642 1661
- port trunk allow-pass vlan 1692 1745 1748 1779 1867 1870 to 1871 1873 to 1874 1889 1906 1908 to 1909
- port trunk allow-pass vlan 1964 to 1965 1979 1988 2055 2057 2079 2178 2253 2266 2420
- port trunk allow-pass vlan 2508 2511 to 2512 2641 2812 2952 2954 2956 2958 2960 2969
- port trunk allow-pass vlan 3038 to 3039 3042 3125 to 3127 3130 to 3131 3133 3135 3137 3168 to 3169 3274 3402 to 3405
- port trunk allow-pass vlan 3408 to 3409 3411 3416 3643 3645 to 3646 3882 3912 3916
+ port trunk allow-pass vlan 1494 1496 to 1498 1500 to 1501 1503 to 1504 1507 1526 1551 1581 to 1582 1593 1642
+ port trunk allow-pass vlan 1661 1692 1745 1748 1779 1867 1870 to 1871 1873 to 1874 1889 1906
+ port trunk allow-pass vlan 1908 to 1909 1964 to 1965 1979 1988 2055 2057 2079 2178 2253 2266
+ port trunk allow-pass vlan 2420 2508 2511 to 2512 2641 2812 2952 2954 2956 2958 2960
+ port trunk allow-pass vlan 2969 3038 to 3039 3042 3125 to 3127 3130 to 3131 3133 3135 3137 3168 to 3169 3274
+ port trunk allow-pass vlan 3402 to 3405 3408 to 3409 3411 3416 3643 3645 to 3646 3882 3912 3916
  bpdu enable
  ntdp enable
  ndp enable
